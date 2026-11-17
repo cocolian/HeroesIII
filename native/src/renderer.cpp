@@ -27,6 +27,15 @@ Desktop::Desktop(std::filesystem::path root,bool hidden,std::filesystem::path sa
  windowFlags=SDL_WINDOW_ALLOW_HIGHDPI|SDL_WINDOW_FULLSCREEN_DESKTOP;
 #endif
  window_=SDL_CreateWindow("英雄无敌 III · C++ 原生版",SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,initialWidth,initialHeight,windowFlags|(hidden?SDL_WINDOW_HIDDEN:SDL_WINDOW_SHOWN));if(!window_)throw std::runtime_error(SDL_GetError());SDL_SetWindowMinimumSize(window_,640,480);
+#ifndef __IPHONEOS__
+ // Explicitly set the running icon as well as the bundle's Finder icon;
+ // developer launchers can execute the binary without Launch Services.
+ if(!hidden){
+  auto iconPath=root_/"native/assets/app-icon.png";
+  if(char*base=SDL_GetBasePath()){auto bundled=std::filesystem::path(base)/"app-icon.png";SDL_free(base);if(std::filesystem::is_regular_file(bundled))iconPath=std::move(bundled);}
+  if(auto*icon=IMG_Load(iconPath.string().c_str())){SDL_SetWindowIcon(window_,icon);SDL_FreeSurface(icon);}
+ }
+#endif
  fullscreen_=(SDL_GetWindowFlags(window_)&SDL_WINDOW_FULLSCREEN_DESKTOP)!=0;
  renderer_=SDL_CreateRenderer(window_,-1,SDL_RENDERER_ACCELERATED|SDL_RENDERER_PRESENTVSYNC);if(!renderer_){SDL_SetHint(SDL_HINT_RENDER_BATCHING,"0");renderer_=SDL_CreateRenderer(window_,-1,SDL_RENDERER_SOFTWARE);}if(!renderer_)throw std::runtime_error(SDL_GetError());SDL_RenderSetLogicalSize(renderer_,0,0);SDL_SetRenderDrawBlendMode(renderer_,SDL_BLENDMODE_BLEND);
  for(const std::string&candidate:std::vector<std::string>{"/System/Library/Fonts/STHeiti Medium.ttc","/System/Library/Fonts/STHeiti Light.ttc",(root_/"assets/fonts/NotoSansSC.ttf").string(),"/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"})if(std::filesystem::exists(candidate)){fontPath_=candidate;break;}if(fontPath_.empty())throw std::runtime_error("缺少中文字体，请重新安装完整应用");

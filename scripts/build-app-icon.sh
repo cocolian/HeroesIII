@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 project_dir=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
-source_icon="$project_dir/assets/app-icon/app-icon-v2.png"
+source_icon="$project_dir/native/assets/app-icon.png"
 iconset="$project_dir/native/macos/Assets/HeroesIII.iconset"
 mkdir -p "$iconset"
 for points in 16 32 128 256 512; do
