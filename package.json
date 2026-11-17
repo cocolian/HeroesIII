@@ -1,0 +1,12 @@
+{
+  "name": "heroes-iii-retina",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check src/engine.js && node --check src/app.js && node --check src/art.js && node --check src/classic-screens.js && node --check server.mjs"
+  }
+}

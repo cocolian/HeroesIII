@@ -1,0 +1,696 @@
+{
+  "scope": "Classic Complete / Shadow of Death creature abilities",
+  "meaning": {
+    "implemented": "Behavior is connected; original-game comparison is still required.",
+    "partial": "Only effects relevant to currently supported systems are connected.",
+    "missing": "Metadata is present; game behavior is not connected.",
+    "metadata-only": "A classification used by other systems; those systems are not fully connected."
+  },
+  "abilities": [
+    {
+      "type": "ADDITIONAL_ATTACK",
+      "state": "implemented",
+      "units": [
+        3,
+        7,
+        19,
+        87
+      ]
+    },
+    {
+      "type": "ADDITIONAL_RETALIATION",
+      "state": "implemented",
+      "units": [
+        4
+      ]
+    },
+    {
+      "type": "ATTACKS_ALL_ADJACENT",
+      "state": "missing",
+      "units": [
+        110,
+        111,
+        122,
+        123
+      ]
+    },
+    {
+      "type": "BLOCKS_RETALIATION",
+      "state": "implemented",
+      "units": [
+        38,
+        39,
+        47,
+        54,
+        55,
+        62,
+        63,
+        73,
+        110,
+        111,
+        113,
+        122,
+        123
+      ]
+    },
+    {
+      "type": "CASTS",
+      "state": "missing",
+      "units": [
+        13,
+        37,
+        51,
+        91,
+        115,
+        117,
+        119,
+        121,
+        125,
+        135,
+        137
+      ]
+    },
+    {
+      "type": "CATAPULT",
+      "state": "missing",
+      "units": [
+        94,
+        95
+      ]
+    },
+    {
+      "type": "CATAPULT_EXTRA_SHOTS",
+      "state": "missing",
+      "units": [
+        95
+      ]
+    },
+    {
+      "type": "CHANGES_SPELL_COST_FOR_ALLY",
+      "state": "implemented",
+      "units": [
+        34,
+        35
+      ]
+    },
+    {
+      "type": "CHANGES_SPELL_COST_FOR_ENEMY",
+      "state": "implemented",
+      "units": [
+        20,
+        21
+      ]
+    },
+    {
+      "type": "CHARGE_IMMUNITY",
+      "state": "implemented",
+      "units": [
+        0,
+        1
+      ]
+    },
+    {
+      "type": "COMBAT_EVENT_TRIGGER",
+      "state": "partial",
+      "units": [
+        53,
+        63,
+        107,
+        125
+      ]
+    },
+    {
+      "type": "CREATURE_ENCHANT_POWER",
+      "state": "missing",
+      "units": [
+        37,
+        91,
+        115,
+        117,
+        119,
+        121
+      ]
+    },
+    {
+      "type": "CREATURE_SPELL_POWER",
+      "state": "missing",
+      "units": [
+        137
+      ]
+    },
+    {
+      "type": "DOUBLE_DAMAGE_CHANCE",
+      "state": "missing",
+      "units": [
+        67
+      ]
+    },
+    {
+      "type": "DRAGON_NATURE",
+      "state": "metadata-only",
+      "units": [
+        26,
+        27,
+        68,
+        69,
+        82,
+        83,
+        137,
+        138,
+        139,
+        140
+      ]
+    },
+    {
+      "type": "ENCHANTER",
+      "state": "missing",
+      "units": [
+        135
+      ]
+    },
+    {
+      "type": "ENEMY_DEFENCE_REDUCTION",
+      "state": "implemented",
+      "units": [
+        96,
+        97
+      ]
+    },
+    {
+      "type": "FEARFUL",
+      "state": "missing",
+      "units": [
+        140
+      ]
+    },
+    {
+      "type": "FLYING",
+      "state": "implemented",
+      "units": [
+        4,
+        5,
+        12,
+        13,
+        20,
+        21,
+        26,
+        27,
+        30,
+        31,
+        36,
+        37,
+        52,
+        53,
+        54,
+        55,
+        60,
+        61,
+        62,
+        63,
+        68,
+        69,
+        72,
+        73,
+        80,
+        81,
+        82,
+        83,
+        92,
+        93,
+        102,
+        103,
+        108,
+        109,
+        112,
+        113,
+        119,
+        124,
+        125,
+        137,
+        138,
+        140
+      ]
+    },
+    {
+      "type": "GARGOYLE",
+      "state": "partial",
+      "units": [
+        30,
+        31
+      ]
+    },
+    {
+      "type": "HATE",
+      "state": "implemented",
+      "units": [
+        12,
+        13,
+        36,
+        37,
+        41,
+        52,
+        53,
+        54,
+        55,
+        83,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121
+      ]
+    },
+    {
+      "type": "HP_REGENERATION",
+      "state": "implemented",
+      "units": [
+        60,
+        61,
+        134
+      ]
+    },
+    {
+      "type": "JOUSTING",
+      "state": "implemented",
+      "units": [
+        10,
+        11
+      ]
+    },
+    {
+      "type": "KING",
+      "state": "metadata-only",
+      "units": [
+        12,
+        13,
+        26,
+        27,
+        40,
+        41,
+        54,
+        55,
+        68,
+        69,
+        82,
+        83,
+        96,
+        97,
+        110,
+        111,
+        124,
+        125,
+        137,
+        138,
+        139,
+        140
+      ]
+    },
+    {
+      "type": "LEVEL_SPELL_IMMUNITY",
+      "state": "partial",
+      "units": [
+        26,
+        27,
+        82,
+        83,
+        123,
+        140
+      ]
+    },
+    {
+      "type": "LUCK",
+      "state": "implemented",
+      "units": [
+        54,
+        55,
+        128
+      ]
+    },
+    {
+      "type": "MAGIC_MIRROR",
+      "state": "missing",
+      "units": [
+        137
+      ]
+    },
+    {
+      "type": "MAGIC_RESISTANCE",
+      "state": "partial",
+      "units": [
+        16,
+        17,
+        139
+      ]
+    },
+    {
+      "type": "MANA_CHANNELING",
+      "state": "missing",
+      "units": [
+        43
+      ]
+    },
+    {
+      "type": "MANA_DRAIN",
+      "state": "implemented",
+      "units": [
+        61
+      ]
+    },
+    {
+      "type": "MIND_IMMUNITY",
+      "state": "partial",
+      "units": [
+        40,
+        41,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122
+      ]
+    },
+    {
+      "type": "MORALE",
+      "state": "implemented",
+      "units": [
+        12,
+        13,
+        68,
+        69,
+        78,
+        79
+      ]
+    },
+    {
+      "type": "MORE_DAMAGE_FROM_SPELL",
+      "state": "partial",
+      "units": [
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121
+      ]
+    },
+    {
+      "type": "NON_LIVING",
+      "state": "partial",
+      "units": [
+        32,
+        33,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        126,
+        127
+      ]
+    },
+    {
+      "type": "NO_DISTANCE_PENALTY",
+      "state": "implemented",
+      "units": [
+        136
+      ]
+    },
+    {
+      "type": "NO_MELEE_PENALTY",
+      "state": "implemented",
+      "units": [
+        9,
+        34,
+        35,
+        41,
+        74,
+        75,
+        76,
+        77,
+        135
+      ]
+    },
+    {
+      "type": "NO_TERRAIN_PENALTY",
+      "state": "missing",
+      "units": [
+        132
+      ]
+    },
+    {
+      "type": "NO_WALL_PENALTY",
+      "state": "missing",
+      "units": [
+        34,
+        35,
+        135,
+        136
+      ]
+    },
+    {
+      "type": "RANDOM_SPELLCASTER",
+      "state": "missing",
+      "units": [
+        37
+      ]
+    },
+    {
+      "type": "RETURN_AFTER_STRIKE",
+      "state": "missing",
+      "units": [
+        72,
+        73
+      ]
+    },
+    {
+      "type": "SHOOTER",
+      "state": "implemented",
+      "units": [
+        2,
+        3,
+        8,
+        9,
+        18,
+        19,
+        29,
+        34,
+        35,
+        41,
+        44,
+        45,
+        64,
+        65,
+        74,
+        75,
+        76,
+        77,
+        88,
+        89,
+        94,
+        95,
+        100,
+        101,
+        115,
+        117,
+        128,
+        135,
+        136
+      ]
+    },
+    {
+      "type": "SKELETON_TRANSFORMER_TARGET",
+      "state": "metadata-only",
+      "units": [
+        26,
+        27,
+        82,
+        83,
+        110,
+        111,
+        137,
+        138,
+        139,
+        140
+      ]
+    },
+    {
+      "type": "SPECIAL_CRYSTAL_GENERATION",
+      "state": "missing",
+      "units": [
+        139
+      ]
+    },
+    {
+      "type": "SPECIFIC_SPELL_POWER",
+      "state": "missing",
+      "units": [
+        13,
+        51,
+        93,
+        138
+      ]
+    },
+    {
+      "type": "SPELLCASTER",
+      "state": "missing",
+      "units": [
+        13,
+        51,
+        91,
+        115,
+        117,
+        119,
+        121,
+        137
+      ]
+    },
+    {
+      "type": "SPELL_AFTER_ATTACK",
+      "state": "missing",
+      "units": [
+        22,
+        23,
+        24,
+        25,
+        59,
+        66,
+        67,
+        69,
+        76,
+        77,
+        81,
+        93,
+        102,
+        103,
+        104,
+        105,
+        109,
+        131,
+        138
+      ]
+    },
+    {
+      "type": "SPELL_DAMAGE_REDUCTION",
+      "state": "partial",
+      "units": [
+        32,
+        33,
+        126,
+        127
+      ]
+    },
+    {
+      "type": "SPELL_IMMUNITY",
+      "state": "partial",
+      "units": [
+        70,
+        71,
+        114,
+        115,
+        116,
+        117,
+        120,
+        121
+      ]
+    },
+    {
+      "type": "SPELL_LIKE_ATTACK",
+      "state": "missing",
+      "units": [
+        45,
+        64,
+        65
+      ]
+    },
+    {
+      "type": "SPELL_RESISTANCE_AURA",
+      "state": "missing",
+      "units": [
+        24,
+        25
+      ]
+    },
+    {
+      "type": "SPELL_SCHOOL_IMMUNITY",
+      "state": "partial",
+      "units": [
+        52,
+        53,
+        118,
+        119,
+        124,
+        125
+      ]
+    },
+    {
+      "type": "THREE_HEADED_ATTACK",
+      "state": "missing",
+      "units": [
+        47
+      ]
+    },
+    {
+      "type": "TWO_HEX_ATTACK_BREATH",
+      "state": "missing",
+      "units": [
+        26,
+        27,
+        82,
+        83,
+        124,
+        125,
+        138,
+        140
+      ]
+    },
+    {
+      "type": "UNDEAD",
+      "state": "partial",
+      "units": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        131
+      ]
+    },
+    {
+      "type": "UNLIMITED_RETALIATIONS",
+      "state": "implemented",
+      "units": [
+        5
+      ]
+    },
+    {
+      "type": "VISIONS",
+      "state": "missing",
+      "units": [
+        133
+      ]
+    }
+  ]
+}

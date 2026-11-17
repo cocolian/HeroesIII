@@ -1,0 +1,719 @@
+{
+  "edition": "Classic Complete / Shadow of Death",
+  "meaning": {
+    "connected": "Core behavior is connected; this is not proof of original-game parity.",
+    "guild": "Town guild generation, spell book and Wisdom learning are connected; original executable comparison remains outstanding.",
+    "partial": "Original affect DEF frames play on successful targets, including mass casts; hero casting and exact timing/placement remain incomplete.",
+    "cast-mapped": "The original cast sound is mapped to SpellCast; complete timing, mixing and creature-caster behavior are not verified.",
+    "missing": "The corresponding behavior or acquisition route is not implemented."
+  },
+  "limitations": [
+    "No spell is marked fully verified against the original executable.",
+    "Titan lightning is implemented for controlled tests, but its combination artifact and acquisition are missing.",
+    "Creature casters, spell artifacts, hero specialties and complete resistance interactions are unfinished.",
+    "Only Mirth, Sorrow, Fortune and Misfortune have affect animation playback; hero casting, projectiles, all other effects and exact timing/placement are unfinished.",
+    "Available original cast sounds are mapped separately from animation coverage; a mapping is not proof of complete audio fidelity."
+  ],
+  "spells": [
+    {
+      "key": "summonBoat",
+      "originalId": 0,
+      "scope": "adventure",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 35
+    },
+    {
+      "key": "scuttleBoat",
+      "originalId": 1,
+      "scope": "adventure",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 36
+    },
+    {
+      "key": "visions",
+      "originalId": 2,
+      "scope": "adventure",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 37
+    },
+    {
+      "key": "viewEarth",
+      "originalId": 3,
+      "scope": "adventure",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 38
+    },
+    {
+      "key": "disguise",
+      "originalId": 4,
+      "scope": "adventure",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 39
+    },
+    {
+      "key": "viewAir",
+      "originalId": 5,
+      "scope": "adventure",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 40
+    },
+    {
+      "key": "fly",
+      "originalId": 6,
+      "scope": "adventure",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 41
+    },
+    {
+      "key": "waterWalk",
+      "originalId": 7,
+      "scope": "adventure",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 42
+    },
+    {
+      "key": "dimensionDoor",
+      "originalId": 8,
+      "scope": "adventure",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 43
+    },
+    {
+      "key": "townPortal",
+      "originalId": 9,
+      "scope": "adventure",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 44
+    },
+    {
+      "key": "quicksand",
+      "originalId": 10,
+      "scope": "combat",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 45
+    },
+    {
+      "key": "landMine",
+      "originalId": 11,
+      "scope": "combat",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 46
+    },
+    {
+      "key": "forceField",
+      "originalId": 12,
+      "scope": "combat",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 47
+    },
+    {
+      "key": "fireWall",
+      "originalId": 13,
+      "scope": "combat",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 48
+    },
+    {
+      "key": "earthquake",
+      "originalId": 14,
+      "scope": "combat",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 49
+    },
+    {
+      "key": "magicArrow",
+      "originalId": 15,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 0
+    },
+    {
+      "key": "iceBolt",
+      "originalId": 16,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 9
+    },
+    {
+      "key": "lightningBolt",
+      "originalId": 17,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 8
+    },
+    {
+      "key": "implosion",
+      "originalId": 18,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 10
+    },
+    {
+      "key": "chainLightning",
+      "originalId": 19,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 11
+    },
+    {
+      "key": "frostRing",
+      "originalId": 20,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 12
+    },
+    {
+      "key": "fireball",
+      "originalId": 21,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 13
+    },
+    {
+      "key": "inferno",
+      "originalId": 22,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 14
+    },
+    {
+      "key": "meteorShower",
+      "originalId": 23,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 15
+    },
+    {
+      "key": "deathRipple",
+      "originalId": 24,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 16
+    },
+    {
+      "key": "destroyUndead",
+      "originalId": 25,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 17
+    },
+    {
+      "key": "armageddon",
+      "originalId": 26,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 18
+    },
+    {
+      "key": "shield",
+      "originalId": 27,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 4
+    },
+    {
+      "key": "airShield",
+      "originalId": 28,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 20
+    },
+    {
+      "key": "fireShield",
+      "originalId": 29,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 21
+    },
+    {
+      "key": "protectAir",
+      "originalId": 30,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 22
+    },
+    {
+      "key": "protectFire",
+      "originalId": 31,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 23
+    },
+    {
+      "key": "protectWater",
+      "originalId": 32,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 24
+    },
+    {
+      "key": "protectEarth",
+      "originalId": 33,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 25
+    },
+    {
+      "key": "antiMagic",
+      "originalId": 34,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 26
+    },
+    {
+      "key": "dispel",
+      "originalId": 35,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 34
+    },
+    {
+      "key": "magicMirror",
+      "originalId": 36,
+      "scope": "combat",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 50
+    },
+    {
+      "key": "cure",
+      "originalId": 37,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 1
+    },
+    {
+      "key": "resurrection",
+      "originalId": 38,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 51
+    },
+    {
+      "key": "animateDead",
+      "originalId": 39,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 52
+    },
+    {
+      "key": "sacrifice",
+      "originalId": 40,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 53
+    },
+    {
+      "key": "bless",
+      "originalId": 41,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 6
+    },
+    {
+      "key": "curse",
+      "originalId": 42,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 7
+    },
+    {
+      "key": "bloodlust",
+      "originalId": 43,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 27
+    },
+    {
+      "key": "precision",
+      "originalId": 44,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 28
+    },
+    {
+      "key": "weakness",
+      "originalId": 45,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 29
+    },
+    {
+      "key": "stoneSkin",
+      "originalId": 46,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 5
+    },
+    {
+      "key": "disruptingRay",
+      "originalId": 47,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 30
+    },
+    {
+      "key": "prayer",
+      "originalId": 48,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 31
+    },
+    {
+      "key": "mirth",
+      "originalId": 49,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "partial",
+      "sound": "cast-mapped",
+      "nativeId": 54
+    },
+    {
+      "key": "sorrow",
+      "originalId": 50,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "partial",
+      "sound": "cast-mapped",
+      "nativeId": 55
+    },
+    {
+      "key": "fortune",
+      "originalId": 51,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "partial",
+      "sound": "cast-mapped",
+      "nativeId": 56
+    },
+    {
+      "key": "misfortune",
+      "originalId": 52,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "partial",
+      "sound": "cast-mapped",
+      "nativeId": 57
+    },
+    {
+      "key": "haste",
+      "originalId": 53,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 2
+    },
+    {
+      "key": "slow",
+      "originalId": 54,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 3
+    },
+    {
+      "key": "slayer",
+      "originalId": 55,
+      "scope": "combat",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 58
+    },
+    {
+      "key": "frenzy",
+      "originalId": 56,
+      "scope": "combat",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 59
+    },
+    {
+      "key": "titanBolt",
+      "originalId": 57,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "missing",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 19
+    },
+    {
+      "key": "counterstrike",
+      "originalId": 58,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 32
+    },
+    {
+      "key": "berserk",
+      "originalId": 59,
+      "scope": "combat",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 60
+    },
+    {
+      "key": "hypnotize",
+      "originalId": 60,
+      "scope": "combat",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 61
+    },
+    {
+      "key": "forgetfulness",
+      "originalId": 61,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 33
+    },
+    {
+      "key": "blind",
+      "originalId": 62,
+      "scope": "combat",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 62
+    },
+    {
+      "key": "teleport",
+      "originalId": 63,
+      "scope": "combat",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 63
+    },
+    {
+      "key": "removeObstacle",
+      "originalId": 64,
+      "scope": "combat",
+      "effects": "missing",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "missing",
+      "nativeId": 64
+    },
+    {
+      "key": "clone",
+      "originalId": 65,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 65
+    },
+    {
+      "key": "fireElemental",
+      "originalId": 66,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 66
+    },
+    {
+      "key": "earthElemental",
+      "originalId": 67,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 67
+    },
+    {
+      "key": "waterElemental",
+      "originalId": 68,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 68
+    },
+    {
+      "key": "airElemental",
+      "originalId": 69,
+      "scope": "combat",
+      "effects": "connected",
+      "learning": "guild",
+      "animation": "missing",
+      "sound": "cast-mapped",
+      "nativeId": 69
+    }
+  ]
+}

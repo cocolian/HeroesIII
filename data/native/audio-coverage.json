@@ -1,0 +1,333 @@
+{
+  "source": "references/demo/source.json",
+  "sources": [
+    "references/demo/source.json",
+    "references/windows-demo/source.json"
+  ],
+  "soundCount": 951,
+  "musicCount": 27,
+  "unitMappings": 141,
+  "missingUnitSounds": [
+    {
+      "unit": 117,
+      "action": "attack",
+      "file": "icelattk.wav"
+    },
+    {
+      "unit": 117,
+      "action": "defend",
+      "file": "iceldfnd.wav"
+    },
+    {
+      "unit": 117,
+      "action": "killed",
+      "file": "icelkill.wav"
+    },
+    {
+      "unit": 117,
+      "action": "move",
+      "file": "icelmove.wav"
+    },
+    {
+      "unit": 117,
+      "action": "shoot",
+      "file": "icelshot.wav"
+    },
+    {
+      "unit": 117,
+      "action": "wince",
+      "file": "icelwnce.wav"
+    },
+    {
+      "unit": 119,
+      "action": "attack",
+      "file": "enerattk.wav"
+    },
+    {
+      "unit": 119,
+      "action": "defend",
+      "file": "enerdfnd.wav"
+    },
+    {
+      "unit": 119,
+      "action": "killed",
+      "file": "enerkill.wav"
+    },
+    {
+      "unit": 119,
+      "action": "move",
+      "file": "enermove.wav"
+    },
+    {
+      "unit": 119,
+      "action": "wince",
+      "file": "enerwnce.wav"
+    },
+    {
+      "unit": 122,
+      "action": "attack",
+      "file": "psycattk.wav"
+    },
+    {
+      "unit": 122,
+      "action": "defend",
+      "file": "psycdfnd.wav"
+    },
+    {
+      "unit": 122,
+      "action": "killed",
+      "file": "psyckill.wav"
+    },
+    {
+      "unit": 122,
+      "action": "move",
+      "file": "psycmove.wav"
+    },
+    {
+      "unit": 122,
+      "action": "wince",
+      "file": "psycwnce.wav"
+    },
+    {
+      "unit": 123,
+      "action": "attack",
+      "file": "mgelattk.wav"
+    },
+    {
+      "unit": 123,
+      "action": "defend",
+      "file": "mgeldfnd.wav"
+    },
+    {
+      "unit": 123,
+      "action": "killed",
+      "file": "mgelkill.wav"
+    },
+    {
+      "unit": 123,
+      "action": "move",
+      "file": "mgelmove.wav"
+    },
+    {
+      "unit": 123,
+      "action": "wince",
+      "file": "mgelwnce.wav"
+    },
+    {
+      "unit": 124,
+      "action": "attack",
+      "file": "firbattk.wav"
+    },
+    {
+      "unit": 124,
+      "action": "defend",
+      "file": "firbdfnd.wav"
+    },
+    {
+      "unit": 124,
+      "action": "killed",
+      "file": "firbkill.wav"
+    },
+    {
+      "unit": 124,
+      "action": "move",
+      "file": "firbmove.wav"
+    },
+    {
+      "unit": 124,
+      "action": "wince",
+      "file": "firbwnce.wav"
+    },
+    {
+      "unit": 125,
+      "action": "attack",
+      "file": "phoeattk.wav"
+    },
+    {
+      "unit": 125,
+      "action": "defend",
+      "file": "phoedfnd.wav"
+    },
+    {
+      "unit": 125,
+      "action": "killed",
+      "file": "phoekill.wav"
+    },
+    {
+      "unit": 125,
+      "action": "move",
+      "file": "phoemove.wav"
+    },
+    {
+      "unit": 125,
+      "action": "wince",
+      "file": "phoewnce.wav"
+    },
+    {
+      "unit": 134,
+      "action": "attack",
+      "file": "trllattk.wav"
+    },
+    {
+      "unit": 134,
+      "action": "defend",
+      "file": "trlldfnd.wav"
+    },
+    {
+      "unit": 134,
+      "action": "killed",
+      "file": "trllkill.wav"
+    },
+    {
+      "unit": 134,
+      "action": "move",
+      "file": "trllmove.wav"
+    },
+    {
+      "unit": 134,
+      "action": "wince",
+      "file": "trllwnce.wav"
+    },
+    {
+      "unit": 135,
+      "action": "attack",
+      "file": "enchattk.wav"
+    },
+    {
+      "unit": 135,
+      "action": "defend",
+      "file": "enchdfnd.wav"
+    },
+    {
+      "unit": 135,
+      "action": "killed",
+      "file": "enchkill.wav"
+    },
+    {
+      "unit": 135,
+      "action": "move",
+      "file": "enchmove.wav"
+    },
+    {
+      "unit": 135,
+      "action": "shoot",
+      "file": "enchshot.wav"
+    },
+    {
+      "unit": 135,
+      "action": "wince",
+      "file": "enchwnce.wav"
+    },
+    {
+      "unit": 137,
+      "action": "attack",
+      "file": "faerattk.wav"
+    },
+    {
+      "unit": 137,
+      "action": "defend",
+      "file": "faerdfnd.wav"
+    },
+    {
+      "unit": 137,
+      "action": "killed",
+      "file": "faerkill.wav"
+    },
+    {
+      "unit": 137,
+      "action": "move",
+      "file": "faermove.wav"
+    },
+    {
+      "unit": 137,
+      "action": "shoot",
+      "file": "faershot.wav"
+    },
+    {
+      "unit": 137,
+      "action": "wince",
+      "file": "faerwnce.wav"
+    },
+    {
+      "unit": 138,
+      "action": "attack",
+      "file": "rustattk.wav"
+    },
+    {
+      "unit": 138,
+      "action": "defend",
+      "file": "rustdfnd.wav"
+    },
+    {
+      "unit": 138,
+      "action": "killed",
+      "file": "rustkill.wav"
+    },
+    {
+      "unit": 138,
+      "action": "move",
+      "file": "rustmove.wav"
+    },
+    {
+      "unit": 138,
+      "action": "wince",
+      "file": "rustwnce.wav"
+    },
+    {
+      "unit": 139,
+      "action": "attack",
+      "file": "crysattk.wav"
+    },
+    {
+      "unit": 139,
+      "action": "defend",
+      "file": "crysdfnd.wav"
+    },
+    {
+      "unit": 139,
+      "action": "killed",
+      "file": "cryskill.wav"
+    },
+    {
+      "unit": 139,
+      "action": "move",
+      "file": "crysmove.wav"
+    },
+    {
+      "unit": 139,
+      "action": "wince",
+      "file": "cryswnce.wav"
+    },
+    {
+      "unit": 140,
+      "action": "attack",
+      "file": "azurattk.wav"
+    },
+    {
+      "unit": 140,
+      "action": "defend",
+      "file": "azurdfnd.wav"
+    },
+    {
+      "unit": 140,
+      "action": "killed",
+      "file": "azurkill.wav"
+    },
+    {
+      "unit": 140,
+      "action": "move",
+      "file": "azurmove.wav"
+    },
+    {
+      "unit": 140,
+      "action": "wince",
+      "file": "azurwnce.wav"
+    }
+  ],
+  "missingSpellSounds": [],
+  "missingRequiredMusic": [],
+  "limitations": [
+    "Original cue timing, fades, all map ambient emitters and complete scenario/campaign audio require independent comparison.",
+    "Demo music is incomplete; absent original tracks are not replaced with unrelated music."
+  ]
+}

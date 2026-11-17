@@ -1,0 +1,5203 @@
+{
+  "source": "references/demo/inventory.json",
+  "layoutFacts": "references/rules/sources.json",
+  "screenshots": "references/town-interface-references.json",
+  "fortPreviewBackgrounds": [
+    {
+      "faction": "castle",
+      "file": "tpcascas.pcx",
+      "dedicatedFortAsset": true
+    },
+    {
+      "faction": "rampart",
+      "file": "tpcasram.pcx",
+      "dedicatedFortAsset": true
+    },
+    {
+      "faction": "tower",
+      "file": "tpcastow.pcx",
+      "dedicatedFortAsset": true
+    },
+    {
+      "faction": "inferno",
+      "file": "tpcasinf.pcx",
+      "dedicatedFortAsset": true
+    },
+    {
+      "faction": "necropolis",
+      "file": "tpcasnec.pcx",
+      "dedicatedFortAsset": true
+    },
+    {
+      "faction": "dungeon",
+      "file": "tpcasdun.pcx",
+      "dedicatedFortAsset": true
+    },
+    {
+      "faction": "stronghold",
+      "file": "tpcasstr.pcx",
+      "dedicatedFortAsset": true
+    },
+    {
+      "faction": "fortress",
+      "file": "tpcasfor.pcx",
+      "dedicatedFortAsset": true
+    },
+    {
+      "faction": "conflux",
+      "file": "crbkgele.pcx",
+      "dedicatedFortAsset": false
+    }
+  ],
+  "limitations": [
+    "Missing hall backgrounds use a neutral wood strip until original assets are found.",
+    "Foreground-derived interaction masks and outlines are approximate.",
+    "Missing faction fort previews temporarily reuse their recruitment backgrounds.",
+    "Original text, right-click help, stationed heroes, town switching and full window states remain incomplete."
+  ],
+  "towns": {
+    "castle": {
+      "hallBackground": "tpthbkcs.pcx",
+      "hallIcons": "hallcstl.def",
+      "hallSlots": [
+        [
+          [
+            "villageHall",
+            "townHall",
+            "cityHall",
+            "capitol"
+          ],
+          [
+            "fort",
+            "citadel",
+            "castle"
+          ],
+          [
+            "tavern",
+            "special3"
+          ],
+          [
+            "blacksmith"
+          ]
+        ],
+        [
+          [
+            "marketplace",
+            "resourceSilo"
+          ],
+          [
+            "mageGuild1",
+            "mageGuild2",
+            "mageGuild3",
+            "mageGuild4"
+          ],
+          [
+            "shipyard",
+            "special1"
+          ]
+        ],
+        [
+          [
+            "special2"
+          ],
+          [
+            "horde1",
+            "horde1Upgr"
+          ]
+        ],
+        [
+          [
+            "dwellingLvl1",
+            "dwellingUpLvl1"
+          ],
+          [
+            "dwellingLvl2",
+            "dwellingUpLvl2"
+          ],
+          [
+            "dwellingLvl3",
+            "dwellingUpLvl3"
+          ],
+          [
+            "dwellingLvl4",
+            "dwellingUpLvl4"
+          ]
+        ],
+        [
+          [
+            "dwellingLvl5",
+            "dwellingUpLvl5"
+          ],
+          [
+            "dwellingLvl6",
+            "dwellingUpLvl6"
+          ],
+          [
+            "dwellingLvl7",
+            "dwellingUpLvl7"
+          ]
+        ]
+      ],
+      "layers": {
+        "extraAnimation": {
+          "mask": "assets/demo/town-ui/masks/castle-extraanimation.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-extraanimation.png",
+          "width": 24,
+          "height": 38,
+          "original": false,
+          "areaSource": "tbcsext2.def",
+          "borderSource": null
+        },
+        "mageGuild1": {
+          "mask": "assets/demo/town-ui/masks/castle-mageguild1.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-mageguild1.png",
+          "width": 93,
+          "height": 103,
+          "original": true,
+          "areaSource": "tzcsmag1.pcx",
+          "borderSource": "tocsmag1.pcx"
+        },
+        "mageGuild2": {
+          "mask": "assets/demo/town-ui/masks/castle-mageguild2.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-mageguild2.png",
+          "width": 93,
+          "height": 134,
+          "original": true,
+          "areaSource": "tzcsmag2.pcx",
+          "borderSource": "tocsmag2.pcx"
+        },
+        "mageGuild3": {
+          "mask": "assets/demo/town-ui/masks/castle-mageguild3.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-mageguild3.png",
+          "width": 96,
+          "height": 162,
+          "original": true,
+          "areaSource": "tzcsm301.pcx",
+          "borderSource": "tocsm301.pcx"
+        },
+        "mageGuild4": {
+          "mask": "assets/demo/town-ui/masks/castle-mageguild4.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-mageguild4.png",
+          "width": 96,
+          "height": 193,
+          "original": true,
+          "areaSource": "tzcsm401.pcx",
+          "borderSource": "tocsm401.pcx"
+        },
+        "tavern": {
+          "mask": "assets/demo/town-ui/masks/castle-tavern.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-tavern.png",
+          "width": 105,
+          "height": 144,
+          "original": true,
+          "areaSource": "tzcstav1.pcx",
+          "borderSource": "tocstav1.pcx"
+        },
+        "shipyard": {
+          "mask": "assets/demo/town-ui/masks/castle-shipyard.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-shipyard.png",
+          "width": 140,
+          "height": 104,
+          "original": true,
+          "areaSource": "tzcsdkms.pcx",
+          "borderSource": "tocsdkms.pcx"
+        },
+        "fort": {
+          "mask": "assets/demo/town-ui/masks/castle-fort.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-fort.png",
+          "width": 205,
+          "height": 124,
+          "original": true,
+          "areaSource": "tzcscas1.pcx",
+          "borderSource": "tocscas1.pcx"
+        },
+        "citadel": {
+          "mask": "assets/demo/town-ui/masks/castle-citadel.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-citadel.png",
+          "width": 322,
+          "height": 181,
+          "original": true,
+          "areaSource": "tzcscas2.pcx",
+          "borderSource": "tocscas2.pcx"
+        },
+        "castle": {
+          "mask": "assets/demo/town-ui/masks/castle-castle.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-castle.png",
+          "width": 322,
+          "height": 210,
+          "original": true,
+          "areaSource": "tzcscas3.pcx",
+          "borderSource": "tocscas3.pcx"
+        },
+        "villageHall": {
+          "mask": "assets/demo/town-ui/masks/castle-villagehall.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-villagehall.png",
+          "width": 216,
+          "height": 129,
+          "original": true,
+          "areaSource": "tzcsh101.pcx",
+          "borderSource": "tocsh101.pcx"
+        },
+        "townHall": {
+          "mask": "assets/demo/town-ui/masks/castle-townhall.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-townhall.png",
+          "width": 216,
+          "height": 171,
+          "original": true,
+          "areaSource": "tzcsh201.pcx",
+          "borderSource": "tocsh201.pcx"
+        },
+        "cityHall": {
+          "mask": "assets/demo/town-ui/masks/castle-cityhall.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-cityhall.png",
+          "width": 216,
+          "height": 183,
+          "original": true,
+          "areaSource": "tzcsh301.pcx",
+          "borderSource": "tocsh301.pcx"
+        },
+        "capitol": {
+          "mask": "assets/demo/town-ui/masks/castle-capitol.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-capitol.png",
+          "width": 216,
+          "height": 193,
+          "original": true,
+          "areaSource": "tzcsh401.pcx",
+          "borderSource": "tocsh401.pcx"
+        },
+        "marketplace": {
+          "mask": "assets/demo/town-ui/masks/castle-marketplace.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-marketplace.png",
+          "width": 291,
+          "height": 110,
+          "original": true,
+          "areaSource": "tzcsmrk1.pcx",
+          "borderSource": "tocsmrk1.pcx"
+        },
+        "resourceSilo": {
+          "mask": "assets/demo/town-ui/masks/castle-resourcesilo.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-resourcesilo.png",
+          "width": 42,
+          "height": 75,
+          "original": true,
+          "areaSource": "tzcsmrk2.pcx",
+          "borderSource": "tocsmrk2.pcx"
+        },
+        "blacksmith": {
+          "mask": "assets/demo/town-ui/masks/castle-blacksmith.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-blacksmith.png",
+          "width": 153,
+          "height": 123,
+          "original": true,
+          "areaSource": "tzcsblak.pcx",
+          "borderSource": "tocsblak.pcx"
+        },
+        "special1": {
+          "mask": "assets/demo/town-ui/masks/castle-special1.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-special1.png",
+          "width": 96,
+          "height": 116,
+          "original": true,
+          "areaSource": "tzcslt01.pcx",
+          "borderSource": "tocslt01.pcx"
+        },
+        "horde1": {
+          "mask": "assets/demo/town-ui/masks/castle-horde1.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-horde1.png",
+          "width": 100,
+          "height": 125,
+          "original": true,
+          "areaSource": "tzcsgr1h.pcx",
+          "borderSource": "tocsgr1h.pcx"
+        },
+        "horde1Upgr": {
+          "mask": "assets/demo/town-ui/masks/castle-horde1upgr.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-horde1upgr.png",
+          "width": 100,
+          "height": 143,
+          "original": true,
+          "areaSource": "tzcsgr2h.pcx",
+          "borderSource": "tocsgr2h.pcx"
+        },
+        "ship": {
+          "mask": "assets/demo/town-ui/masks/castle-ship.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-ship.png",
+          "width": 140,
+          "height": 104,
+          "original": true,
+          "areaSource": "tzcsdkmn.pcx",
+          "borderSource": "tocsdkmn.pcx"
+        },
+        "special2": {
+          "mask": "assets/demo/town-ui/masks/castle-special2.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-special2.png",
+          "width": 120,
+          "height": 58,
+          "original": true,
+          "areaSource": "tzcscavm.pcx",
+          "borderSource": "tocscavm.pcx"
+        },
+        "special3": {
+          "mask": "assets/demo/town-ui/masks/castle-special3.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-special3.png",
+          "width": 105,
+          "height": 176,
+          "original": true,
+          "areaSource": "tzcstav2.pcx",
+          "borderSource": "tocstav2.pcx"
+        },
+        "grail": {
+          "mask": "assets/demo/town-ui/masks/castle-grail.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-grail.png",
+          "width": 60,
+          "height": 89,
+          "original": true,
+          "areaSource": "tzcsholy.pcx",
+          "borderSource": "tocsholy.pcx"
+        },
+        "dwellingLvl1": {
+          "mask": "assets/demo/town-ui/masks/castle-dwellinglvl1.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-dwellinglvl1.png",
+          "width": 61,
+          "height": 85,
+          "original": true,
+          "areaSource": "tzcspik1.pcx",
+          "borderSource": "tocspik1.pcx"
+        },
+        "dwellingLvl2": {
+          "mask": "assets/demo/town-ui/masks/castle-dwellinglvl2.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-dwellinglvl2.png",
+          "width": 113,
+          "height": 56,
+          "original": true,
+          "areaSource": "tzcscrs1.pcx",
+          "borderSource": "tocscrs1.pcx"
+        },
+        "dwellingLvl3": {
+          "mask": "assets/demo/town-ui/masks/castle-dwellinglvl3.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-dwellinglvl3.png",
+          "width": 100,
+          "height": 121,
+          "original": true,
+          "areaSource": "tzcsgr1n.pcx",
+          "borderSource": "tocsgr1n.pcx"
+        },
+        "dwellingLvl4": {
+          "mask": "assets/demo/town-ui/masks/castle-dwellinglvl4.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-dwellinglvl4.png",
+          "width": 143,
+          "height": 64,
+          "original": true,
+          "areaSource": "tzcsswd1.pcx",
+          "borderSource": "tocsswd1.pcx"
+        },
+        "dwellingLvl5": {
+          "mask": "assets/demo/town-ui/masks/castle-dwellinglvl5.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-dwellinglvl5.png",
+          "width": 138,
+          "height": 49,
+          "original": true,
+          "areaSource": "tzcsmon1.pcx",
+          "borderSource": "tocsmon1.pcx"
+        },
+        "dwellingLvl6": {
+          "mask": "assets/demo/town-ui/masks/castle-dwellinglvl6.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-dwellinglvl6.png",
+          "width": 287,
+          "height": 108,
+          "original": true,
+          "areaSource": "tzcscav1.pcx",
+          "borderSource": "tocsc101.pcx"
+        },
+        "dwellingLvl7": {
+          "mask": "assets/demo/town-ui/masks/castle-dwellinglvl7.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-dwellinglvl7.png",
+          "width": 286,
+          "height": 116,
+          "original": true,
+          "areaSource": "tzcsang1.pcx",
+          "borderSource": "tocsang1.pcx"
+        },
+        "dwellingUpLvl1": {
+          "mask": "assets/demo/town-ui/masks/castle-dwellinguplvl1.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-dwellinguplvl1.png",
+          "width": 64,
+          "height": 111,
+          "original": true,
+          "areaSource": "tzcspik2.pcx",
+          "borderSource": "tocspik2.pcx"
+        },
+        "dwellingUpLvl2": {
+          "mask": "assets/demo/town-ui/masks/castle-dwellinguplvl2.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-dwellinguplvl2.png",
+          "width": 113,
+          "height": 71,
+          "original": true,
+          "areaSource": "tzcscrs2.pcx",
+          "borderSource": "tocscrs2.pcx"
+        },
+        "dwellingUpLvl3": {
+          "mask": "assets/demo/town-ui/masks/castle-dwellinguplvl3.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-dwellinguplvl3.png",
+          "width": 100,
+          "height": 143,
+          "original": true,
+          "areaSource": "tzcsgr2n.pcx",
+          "borderSource": "tocsgr2n.pcx"
+        },
+        "dwellingUpLvl4": {
+          "mask": "assets/demo/town-ui/masks/castle-dwellinguplvl4.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-dwellinguplvl4.png",
+          "width": 143,
+          "height": 80,
+          "original": true,
+          "areaSource": "tzcsswd2.pcx",
+          "borderSource": "tocsswd2.pcx"
+        },
+        "dwellingUpLvl5": {
+          "mask": "assets/demo/town-ui/masks/castle-dwellinguplvl5.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-dwellinguplvl5.png",
+          "width": 138,
+          "height": 87,
+          "original": true,
+          "areaSource": "tzcsmon2.pcx",
+          "borderSource": "tocsmon2.pcx"
+        },
+        "dwellingUpLvl6": {
+          "mask": "assets/demo/town-ui/masks/castle-dwellinguplvl6.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-dwellinguplvl6.png",
+          "width": 301,
+          "height": 108,
+          "original": true,
+          "areaSource": "tzcscav2.pcx",
+          "borderSource": "tocscav2.pcx"
+        },
+        "dwellingUpLvl7": {
+          "mask": "assets/demo/town-ui/masks/castle-dwellinguplvl7.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-dwellinguplvl7.png",
+          "width": 286,
+          "height": 116,
+          "original": true,
+          "areaSource": "tzcsang2.pcx",
+          "borderSource": "tocsang2.pcx"
+        }
+      }
+    },
+    "rampart": {
+      "hallBackground": "tpthbkrm.pcx",
+      "hallIcons": "hallramp.def",
+      "hallSlots": [
+        [
+          [
+            "villageHall",
+            "townHall",
+            "cityHall",
+            "capitol"
+          ],
+          [
+            "fort",
+            "citadel",
+            "castle"
+          ],
+          [
+            "tavern"
+          ],
+          [
+            "blacksmith"
+          ]
+        ],
+        [
+          [
+            "marketplace",
+            "resourceSilo"
+          ],
+          [
+            "mageGuild1",
+            "mageGuild2",
+            "mageGuild3",
+            "mageGuild4",
+            "mageGuild5"
+          ],
+          [
+            "special1",
+            "special2"
+          ]
+        ],
+        [
+          [
+            "special3"
+          ],
+          [
+            "horde2",
+            "horde2Upgr"
+          ],
+          [
+            "horde1",
+            "horde1Upgr"
+          ]
+        ],
+        [
+          [
+            "dwellingLvl1",
+            "dwellingUpLvl1"
+          ],
+          [
+            "dwellingLvl2",
+            "dwellingUpLvl2"
+          ],
+          [
+            "dwellingLvl3",
+            "dwellingUpLvl3"
+          ],
+          [
+            "dwellingLvl4",
+            "dwellingUpLvl4"
+          ]
+        ],
+        [
+          [
+            "dwellingLvl5",
+            "dwellingUpLvl5"
+          ],
+          [
+            "dwellingLvl6",
+            "dwellingUpLvl6"
+          ],
+          [
+            "dwellingLvl7",
+            "dwellingUpLvl7"
+          ]
+        ]
+      ],
+      "layers": {
+        "extraAnimation": {
+          "mask": "assets/demo/town-ui/masks/rampart-extraanimation.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-extraanimation.png",
+          "width": 234,
+          "height": 138,
+          "original": false,
+          "areaSource": "tbrmext2.def",
+          "borderSource": null
+        },
+        "mageGuild1": {
+          "mask": "assets/demo/town-ui/masks/rampart-mageguild1.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-mageguild1.png",
+          "width": 163,
+          "height": 96,
+          "original": false,
+          "areaSource": "tbrmmage.def",
+          "borderSource": null
+        },
+        "mageGuild2": {
+          "mask": "assets/demo/town-ui/masks/rampart-mageguild2.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-mageguild2.png",
+          "width": 179,
+          "height": 118,
+          "original": false,
+          "areaSource": "tbrmmag2.def",
+          "borderSource": null
+        },
+        "mageGuild3": {
+          "mask": "assets/demo/town-ui/masks/rampart-mageguild3.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-mageguild3.png",
+          "width": 199,
+          "height": 143,
+          "original": false,
+          "areaSource": "tbrmmag3.def",
+          "borderSource": null
+        },
+        "mageGuild4": {
+          "mask": "assets/demo/town-ui/masks/rampart-mageguild4.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-mageguild4.png",
+          "width": 211,
+          "height": 167,
+          "original": false,
+          "areaSource": "tbrmmag4.def",
+          "borderSource": null
+        },
+        "mageGuild5": {
+          "mask": "assets/demo/town-ui/masks/rampart-mageguild5.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-mageguild5.png",
+          "width": 233,
+          "height": 192,
+          "original": false,
+          "areaSource": "tbrmmag5.def",
+          "borderSource": null
+        },
+        "tavern": {
+          "mask": "assets/demo/town-ui/masks/rampart-tavern.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-tavern.png",
+          "width": 134,
+          "height": 75,
+          "original": false,
+          "areaSource": "tbrmtvrn.def",
+          "borderSource": null
+        },
+        "fort": {
+          "mask": "assets/demo/town-ui/masks/rampart-fort.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-fort.png",
+          "width": 303,
+          "height": 175,
+          "original": false,
+          "areaSource": "tbrmcstl.def",
+          "borderSource": null
+        },
+        "citadel": {
+          "mask": "assets/demo/town-ui/masks/rampart-citadel.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-citadel.png",
+          "width": 303,
+          "height": 188,
+          "original": false,
+          "areaSource": "tbrmcas2.def",
+          "borderSource": null
+        },
+        "castle": {
+          "mask": "assets/demo/town-ui/masks/rampart-castle.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-castle.png",
+          "width": 303,
+          "height": 188,
+          "original": false,
+          "areaSource": "tbrmcas3.def",
+          "borderSource": null
+        },
+        "villageHall": {
+          "mask": "assets/demo/town-ui/masks/rampart-villagehall.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-villagehall.png",
+          "width": 215,
+          "height": 124,
+          "original": false,
+          "areaSource": "tbrmhall.def",
+          "borderSource": null
+        },
+        "townHall": {
+          "mask": "assets/demo/town-ui/masks/rampart-townhall.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-townhall.png",
+          "width": 241,
+          "height": 149,
+          "original": false,
+          "areaSource": "tbrmhal2.def",
+          "borderSource": null
+        },
+        "cityHall": {
+          "mask": "assets/demo/town-ui/masks/rampart-cityhall.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-cityhall.png",
+          "width": 262,
+          "height": 180,
+          "original": false,
+          "areaSource": "tbrmhal3.def",
+          "borderSource": null
+        },
+        "capitol": {
+          "mask": "assets/demo/town-ui/masks/rampart-capitol.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-capitol.png",
+          "width": 266,
+          "height": 180,
+          "original": false,
+          "areaSource": "tbrmhal4.def",
+          "borderSource": null
+        },
+        "marketplace": {
+          "mask": "assets/demo/town-ui/masks/rampart-marketplace.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-marketplace.png",
+          "width": 151,
+          "height": 73,
+          "original": false,
+          "areaSource": "tbrmmark.def",
+          "borderSource": null
+        },
+        "resourceSilo": {
+          "mask": "assets/demo/town-ui/masks/rampart-resourcesilo.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-resourcesilo.png",
+          "width": 67,
+          "height": 50,
+          "original": false,
+          "areaSource": "tbrmsilo.def",
+          "borderSource": null
+        },
+        "blacksmith": {
+          "mask": "assets/demo/town-ui/masks/rampart-blacksmith.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-blacksmith.png",
+          "width": 177,
+          "height": 89,
+          "original": false,
+          "areaSource": "tbrmblak.def",
+          "borderSource": null
+        },
+        "special1": {
+          "mask": "assets/demo/town-ui/masks/rampart-special1.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-special1.png",
+          "width": 222,
+          "height": 77,
+          "original": false,
+          "areaSource": "tbrmspec.def",
+          "borderSource": null
+        },
+        "horde1": {
+          "mask": "assets/demo/town-ui/masks/rampart-horde1.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-horde1.png",
+          "width": 95,
+          "height": 80,
+          "original": false,
+          "areaSource": "tbrmhrd1.def",
+          "borderSource": null
+        },
+        "horde1Upgr": {
+          "mask": "assets/demo/town-ui/masks/rampart-horde1upgr.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-horde1upgr.png",
+          "width": 95,
+          "height": 91,
+          "original": false,
+          "areaSource": "tbrmhrd2.def",
+          "borderSource": null
+        },
+        "special2": {
+          "mask": "assets/demo/town-ui/masks/rampart-special2.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-special2.png",
+          "width": 222,
+          "height": 77,
+          "original": false,
+          "areaSource": "tbrmext0.def",
+          "borderSource": null
+        },
+        "special3": {
+          "mask": "assets/demo/town-ui/masks/rampart-special3.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-special3.png",
+          "width": 26,
+          "height": 21,
+          "original": false,
+          "areaSource": "tbrmext1.def",
+          "borderSource": null
+        },
+        "horde2": {
+          "mask": "assets/demo/town-ui/masks/rampart-horde2.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-horde2.png",
+          "width": 226,
+          "height": 140,
+          "original": false,
+          "areaSource": "tbrmhrd3.def",
+          "borderSource": null
+        },
+        "horde2Upgr": {
+          "mask": "assets/demo/town-ui/masks/rampart-horde2upgr.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-horde2upgr.png",
+          "width": 263,
+          "height": 140,
+          "original": false,
+          "areaSource": "tbrmhrd4.def",
+          "borderSource": null
+        },
+        "grail": {
+          "mask": "assets/demo/town-ui/masks/rampart-grail.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-grail.png",
+          "width": 115,
+          "height": 125,
+          "original": false,
+          "areaSource": "tbrmholy.def",
+          "borderSource": null
+        },
+        "extraTownHall": {
+          "mask": "assets/demo/town-ui/masks/rampart-extratownhall.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-extratownhall.png",
+          "width": 127,
+          "height": 139,
+          "original": false,
+          "areaSource": "tbrmext3.def",
+          "borderSource": null
+        },
+        "extraCityHall": {
+          "mask": "assets/demo/town-ui/masks/rampart-extracityhall.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-extracityhall.png",
+          "width": 201,
+          "height": 74,
+          "original": false,
+          "areaSource": "tbrmext4.def",
+          "borderSource": null
+        },
+        "extraCapitol": {
+          "mask": "assets/demo/town-ui/masks/rampart-extracapitol.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-extracapitol.png",
+          "width": 111,
+          "height": 83,
+          "original": false,
+          "areaSource": "tbrmext5.def",
+          "borderSource": null
+        },
+        "dwellingLvl1": {
+          "mask": "assets/demo/town-ui/masks/rampart-dwellinglvl1.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-dwellinglvl1.png",
+          "width": 226,
+          "height": 138,
+          "original": false,
+          "areaSource": "tbrmdw_0.def",
+          "borderSource": null
+        },
+        "dwellingLvl2": {
+          "mask": "assets/demo/town-ui/masks/rampart-dwellinglvl2.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-dwellinglvl2.png",
+          "width": 95,
+          "height": 80,
+          "original": false,
+          "areaSource": "tbrmdw_1.def",
+          "borderSource": null
+        },
+        "dwellingLvl3": {
+          "mask": "assets/demo/town-ui/masks/rampart-dwellinglvl3.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-dwellinglvl3.png",
+          "width": 132,
+          "height": 99,
+          "original": false,
+          "areaSource": "tbrmdw_2.def",
+          "borderSource": null
+        },
+        "dwellingLvl4": {
+          "mask": "assets/demo/town-ui/masks/rampart-dwellinglvl4.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-dwellinglvl4.png",
+          "width": 144,
+          "height": 128,
+          "original": false,
+          "areaSource": "tbrmdw_3.def",
+          "borderSource": null
+        },
+        "dwellingLvl5": {
+          "mask": "assets/demo/town-ui/masks/rampart-dwellinglvl5.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-dwellinglvl5.png",
+          "width": 205,
+          "height": 136,
+          "original": false,
+          "areaSource": "tbrmdw_4.def",
+          "borderSource": null
+        },
+        "dwellingLvl6": {
+          "mask": "assets/demo/town-ui/masks/rampart-dwellinglvl6.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-dwellinglvl6.png",
+          "width": 219,
+          "height": 109,
+          "original": false,
+          "areaSource": "tbrmdw_5.def",
+          "borderSource": null
+        },
+        "dwellingLvl7": {
+          "mask": "assets/demo/town-ui/masks/rampart-dwellinglvl7.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-dwellinglvl7.png",
+          "width": 188,
+          "height": 117,
+          "original": false,
+          "areaSource": "tbrmdw_6.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl1": {
+          "mask": "assets/demo/town-ui/masks/rampart-dwellinguplvl1.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-dwellinguplvl1.png",
+          "width": 238,
+          "height": 138,
+          "original": false,
+          "areaSource": "tbrmup_0.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl2": {
+          "mask": "assets/demo/town-ui/masks/rampart-dwellinguplvl2.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-dwellinguplvl2.png",
+          "width": 95,
+          "height": 91,
+          "original": false,
+          "areaSource": "tbrmup_1.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl3": {
+          "mask": "assets/demo/town-ui/masks/rampart-dwellinguplvl3.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-dwellinguplvl3.png",
+          "width": 135,
+          "height": 99,
+          "original": false,
+          "areaSource": "tbrmup_2.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl4": {
+          "mask": "assets/demo/town-ui/masks/rampart-dwellinguplvl4.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-dwellinguplvl4.png",
+          "width": 144,
+          "height": 173,
+          "original": false,
+          "areaSource": "tbrmup_3.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl5": {
+          "mask": "assets/demo/town-ui/masks/rampart-dwellinguplvl5.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-dwellinguplvl5.png",
+          "width": 247,
+          "height": 136,
+          "original": false,
+          "areaSource": "tbrmup_4.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl6": {
+          "mask": "assets/demo/town-ui/masks/rampart-dwellinguplvl6.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-dwellinguplvl6.png",
+          "width": 219,
+          "height": 109,
+          "original": false,
+          "areaSource": "tbrmup_5.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl7": {
+          "mask": "assets/demo/town-ui/masks/rampart-dwellinguplvl7.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-dwellinguplvl7.png",
+          "width": 298,
+          "height": 138,
+          "original": false,
+          "areaSource": "tbrmup_6.def",
+          "borderSource": null
+        }
+      }
+    },
+    "tower": {
+      "hallBackground": "tpthbktw.pcx",
+      "hallIcons": "halltowr.def",
+      "hallSlots": [
+        [
+          [
+            "villageHall",
+            "townHall",
+            "cityHall",
+            "capitol"
+          ],
+          [
+            "fort",
+            "citadel",
+            "castle"
+          ],
+          [
+            "tavern"
+          ],
+          [
+            "blacksmith"
+          ]
+        ],
+        [
+          [
+            "marketplace",
+            "resourceSilo"
+          ],
+          [
+            "mageGuild1",
+            "mageGuild2",
+            "mageGuild3",
+            "mageGuild4",
+            "mageGuild5"
+          ],
+          [
+            "special3"
+          ],
+          [
+            "special4"
+          ]
+        ],
+        [
+          [
+            "special1"
+          ],
+          [
+            "special2"
+          ],
+          [
+            "horde1",
+            "horde1Upgr"
+          ]
+        ],
+        [
+          [
+            "dwellingLvl1",
+            "dwellingUpLvl1"
+          ],
+          [
+            "dwellingLvl2",
+            "dwellingUpLvl2"
+          ],
+          [
+            "dwellingLvl3",
+            "dwellingUpLvl3"
+          ],
+          [
+            "dwellingLvl4",
+            "dwellingUpLvl4"
+          ]
+        ],
+        [
+          [
+            "dwellingLvl5",
+            "dwellingUpLvl5"
+          ],
+          [
+            "dwellingLvl6",
+            "dwellingUpLvl6"
+          ],
+          [
+            "dwellingLvl7",
+            "dwellingUpLvl7"
+          ]
+        ]
+      ],
+      "layers": {
+        "mageGuild1": {
+          "mask": "assets/demo/town-ui/masks/tower-mageguild1.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-mageguild1.png",
+          "width": 171,
+          "height": 152,
+          "original": false,
+          "areaSource": "tbtwmage.def",
+          "borderSource": null
+        },
+        "mageGuild2": {
+          "mask": "assets/demo/town-ui/masks/tower-mageguild2.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-mageguild2.png",
+          "width": 178,
+          "height": 169,
+          "original": false,
+          "areaSource": "tbtwmag2.def",
+          "borderSource": null
+        },
+        "mageGuild3": {
+          "mask": "assets/demo/town-ui/masks/tower-mageguild3.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-mageguild3.png",
+          "width": 178,
+          "height": 186,
+          "original": false,
+          "areaSource": "tbtwmag3.def",
+          "borderSource": null
+        },
+        "mageGuild4": {
+          "mask": "assets/demo/town-ui/masks/tower-mageguild4.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-mageguild4.png",
+          "width": 178,
+          "height": 203,
+          "original": false,
+          "areaSource": "tbtwmag4.def",
+          "borderSource": null
+        },
+        "mageGuild5": {
+          "mask": "assets/demo/town-ui/masks/tower-mageguild5.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-mageguild5.png",
+          "width": 178,
+          "height": 220,
+          "original": false,
+          "areaSource": "tbtwmag5.def",
+          "borderSource": null
+        },
+        "tavern": {
+          "mask": "assets/demo/town-ui/masks/tower-tavern.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-tavern.png",
+          "width": 122,
+          "height": 94,
+          "original": false,
+          "areaSource": "tbtwtvrn.def",
+          "borderSource": null
+        },
+        "fort": {
+          "mask": "assets/demo/town-ui/masks/tower-fort.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-fort.png",
+          "width": 107,
+          "height": 278,
+          "original": false,
+          "areaSource": "tbtwcstl.def",
+          "borderSource": null
+        },
+        "citadel": {
+          "mask": "assets/demo/town-ui/masks/tower-citadel.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-citadel.png",
+          "width": 139,
+          "height": 301,
+          "original": false,
+          "areaSource": "tbtwcas2.def",
+          "borderSource": null
+        },
+        "castle": {
+          "mask": "assets/demo/town-ui/masks/tower-castle.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-castle.png",
+          "width": 139,
+          "height": 301,
+          "original": false,
+          "areaSource": "tbtwcas3.def",
+          "borderSource": null
+        },
+        "villageHall": {
+          "mask": "assets/demo/town-ui/masks/tower-villagehall.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-villagehall.png",
+          "width": 177,
+          "height": 75,
+          "original": false,
+          "areaSource": "tbtwhall.def",
+          "borderSource": null
+        },
+        "townHall": {
+          "mask": "assets/demo/town-ui/masks/tower-townhall.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-townhall.png",
+          "width": 264,
+          "height": 139,
+          "original": false,
+          "areaSource": "tbtwhal2.def",
+          "borderSource": null
+        },
+        "cityHall": {
+          "mask": "assets/demo/town-ui/masks/tower-cityhall.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-cityhall.png",
+          "width": 264,
+          "height": 277,
+          "original": false,
+          "areaSource": "tbtwhal3.def",
+          "borderSource": null
+        },
+        "capitol": {
+          "mask": "assets/demo/town-ui/masks/tower-capitol.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-capitol.png",
+          "width": 264,
+          "height": 277,
+          "original": false,
+          "areaSource": "tbtwhal4.def",
+          "borderSource": null
+        },
+        "marketplace": {
+          "mask": "assets/demo/town-ui/masks/tower-marketplace.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-marketplace.png",
+          "width": 186,
+          "height": 73,
+          "original": false,
+          "areaSource": "tbtwmark.def",
+          "borderSource": null
+        },
+        "resourceSilo": {
+          "mask": "assets/demo/town-ui/masks/tower-resourcesilo.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-resourcesilo.png",
+          "width": 27,
+          "height": 94,
+          "original": false,
+          "areaSource": "tbtwsilo.def",
+          "borderSource": null
+        },
+        "blacksmith": {
+          "mask": "assets/demo/town-ui/masks/tower-blacksmith.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-blacksmith.png",
+          "width": 140,
+          "height": 146,
+          "original": false,
+          "areaSource": "tbtwblak.def",
+          "borderSource": null
+        },
+        "special1": {
+          "mask": "assets/demo/town-ui/masks/tower-special1.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-special1.png",
+          "width": 68,
+          "height": 85,
+          "original": false,
+          "areaSource": "tbtwspec.def",
+          "borderSource": null
+        },
+        "horde1": {
+          "mask": "assets/demo/town-ui/masks/tower-horde1.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-horde1.png",
+          "width": 57,
+          "height": 95,
+          "original": false,
+          "areaSource": "tbtwhrd1.def",
+          "borderSource": null
+        },
+        "horde1Upgr": {
+          "mask": "assets/demo/town-ui/masks/tower-horde1upgr.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-horde1upgr.png",
+          "width": 57,
+          "height": 114,
+          "original": false,
+          "areaSource": "tbtwhrd2.def",
+          "borderSource": null
+        },
+        "special2": {
+          "mask": "assets/demo/town-ui/masks/tower-special2.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-special2.png",
+          "width": 45,
+          "height": 191,
+          "original": false,
+          "areaSource": "tbtwext0.def",
+          "borderSource": null
+        },
+        "special3": {
+          "mask": "assets/demo/town-ui/masks/tower-special3.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-special3.png",
+          "width": 27,
+          "height": 92,
+          "original": false,
+          "areaSource": "tbtwext1.def",
+          "borderSource": null
+        },
+        "special4": {
+          "mask": "assets/demo/town-ui/masks/tower-special4.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-special4.png",
+          "width": 178,
+          "height": 45,
+          "original": false,
+          "areaSource": "tbtwext2.def",
+          "borderSource": null
+        },
+        "grail": {
+          "mask": "assets/demo/town-ui/masks/tower-grail.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-grail.png",
+          "width": 90,
+          "height": 218,
+          "original": false,
+          "areaSource": "tbtwholy.def",
+          "borderSource": null
+        },
+        "dwellingLvl1": {
+          "mask": "assets/demo/town-ui/masks/tower-dwellinglvl1.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-dwellinglvl1.png",
+          "width": 53,
+          "height": 71,
+          "original": false,
+          "areaSource": "tbtwdw_0.def",
+          "borderSource": null
+        },
+        "dwellingLvl2": {
+          "mask": "assets/demo/town-ui/masks/tower-dwellinglvl2.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-dwellinglvl2.png",
+          "width": 53,
+          "height": 95,
+          "original": false,
+          "areaSource": "tbtwdw_1.def",
+          "borderSource": null
+        },
+        "dwellingLvl3": {
+          "mask": "assets/demo/town-ui/masks/tower-dwellinglvl3.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-dwellinglvl3.png",
+          "width": 108,
+          "height": 127,
+          "original": false,
+          "areaSource": "tbtwdw_2.def",
+          "borderSource": null
+        },
+        "dwellingLvl4": {
+          "mask": "assets/demo/town-ui/masks/tower-dwellinglvl4.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-dwellinglvl4.png",
+          "width": 52,
+          "height": 122,
+          "original": false,
+          "areaSource": "tbtwdw_3.def",
+          "borderSource": null
+        },
+        "dwellingLvl5": {
+          "mask": "assets/demo/town-ui/masks/tower-dwellinglvl5.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-dwellinglvl5.png",
+          "width": 85,
+          "height": 84,
+          "original": false,
+          "areaSource": "tbtwdw_4.def",
+          "borderSource": null
+        },
+        "dwellingLvl6": {
+          "mask": "assets/demo/town-ui/masks/tower-dwellinglvl6.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-dwellinglvl6.png",
+          "width": 105,
+          "height": 66,
+          "original": false,
+          "areaSource": "tbtwdw_5.def",
+          "borderSource": null
+        },
+        "dwellingLvl7": {
+          "mask": "assets/demo/town-ui/masks/tower-dwellinglvl7.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-dwellinglvl7.png",
+          "width": 173,
+          "height": 86,
+          "original": false,
+          "areaSource": "tbtwdw_6.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl1": {
+          "mask": "assets/demo/town-ui/masks/tower-dwellinguplvl1.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-dwellinguplvl1.png",
+          "width": 64,
+          "height": 71,
+          "original": false,
+          "areaSource": "tbtwup_0.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl2": {
+          "mask": "assets/demo/town-ui/masks/tower-dwellinguplvl2.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-dwellinguplvl2.png",
+          "width": 53,
+          "height": 114,
+          "original": false,
+          "areaSource": "tbtwup_1.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl3": {
+          "mask": "assets/demo/town-ui/masks/tower-dwellinguplvl3.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-dwellinguplvl3.png",
+          "width": 108,
+          "height": 127,
+          "original": false,
+          "areaSource": "tbtwup_2.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl4": {
+          "mask": "assets/demo/town-ui/masks/tower-dwellinguplvl4.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-dwellinguplvl4.png",
+          "width": 52,
+          "height": 143,
+          "original": false,
+          "areaSource": "tbtwup_3.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl5": {
+          "mask": "assets/demo/town-ui/masks/tower-dwellinguplvl5.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-dwellinguplvl5.png",
+          "width": 85,
+          "height": 151,
+          "original": false,
+          "areaSource": "tbtwup_4.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl6": {
+          "mask": "assets/demo/town-ui/masks/tower-dwellinguplvl6.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-dwellinguplvl6.png",
+          "width": 105,
+          "height": 117,
+          "original": false,
+          "areaSource": "tbtwup_5.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl7": {
+          "mask": "assets/demo/town-ui/masks/tower-dwellinguplvl7.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-dwellinguplvl7.png",
+          "width": 173,
+          "height": 139,
+          "original": false,
+          "areaSource": "tbtwup_6.def",
+          "borderSource": null
+        }
+      }
+    },
+    "inferno": {
+      "hallBackground": "tpthbkin.pcx",
+      "hallIcons": "hallinfr.def",
+      "hallSlots": [
+        [
+          [
+            "villageHall",
+            "townHall",
+            "cityHall",
+            "capitol"
+          ],
+          [
+            "fort",
+            "citadel",
+            "castle"
+          ],
+          [
+            "tavern"
+          ],
+          [
+            "blacksmith"
+          ]
+        ],
+        [
+          [
+            "marketplace",
+            "resourceSilo"
+          ],
+          [
+            "mageGuild1",
+            "mageGuild2",
+            "mageGuild3",
+            "mageGuild4",
+            "mageGuild5"
+          ],
+          [
+            "special4"
+          ],
+          [
+            "special2"
+          ]
+        ],
+        [
+          [
+            "special3"
+          ],
+          [
+            "horde1",
+            "horde1Upgr"
+          ],
+          [
+            "horde2",
+            "horde2Upgr"
+          ]
+        ],
+        [
+          [
+            "dwellingLvl1",
+            "dwellingUpLvl1"
+          ],
+          [
+            "dwellingLvl2",
+            "dwellingUpLvl2"
+          ],
+          [
+            "dwellingLvl3",
+            "dwellingUpLvl3"
+          ],
+          [
+            "dwellingLvl4",
+            "dwellingUpLvl4"
+          ]
+        ],
+        [
+          [
+            "dwellingLvl5",
+            "dwellingUpLvl5"
+          ],
+          [
+            "dwellingLvl6",
+            "dwellingUpLvl6"
+          ],
+          [
+            "dwellingLvl7",
+            "dwellingUpLvl7"
+          ]
+        ]
+      ],
+      "layers": {
+        "mageGuild1": {
+          "mask": "assets/demo/town-ui/masks/inferno-mageguild1.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-mageguild1.png",
+          "width": 124,
+          "height": 94,
+          "original": false,
+          "areaSource": "tbinmage.def",
+          "borderSource": null
+        },
+        "mageGuild2": {
+          "mask": "assets/demo/town-ui/masks/inferno-mageguild2.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-mageguild2.png",
+          "width": 132,
+          "height": 123,
+          "original": false,
+          "areaSource": "tbinmag2.def",
+          "borderSource": null
+        },
+        "mageGuild3": {
+          "mask": "assets/demo/town-ui/masks/inferno-mageguild3.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-mageguild3.png",
+          "width": 132,
+          "height": 141,
+          "original": false,
+          "areaSource": "tbinmag3.def",
+          "borderSource": null
+        },
+        "mageGuild4": {
+          "mask": "assets/demo/town-ui/masks/inferno-mageguild4.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-mageguild4.png",
+          "width": 132,
+          "height": 168,
+          "original": false,
+          "areaSource": "tbinmag4.def",
+          "borderSource": null
+        },
+        "mageGuild5": {
+          "mask": "assets/demo/town-ui/masks/inferno-mageguild5.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-mageguild5.png",
+          "width": 132,
+          "height": 189,
+          "original": false,
+          "areaSource": "tbinmag5.def",
+          "borderSource": null
+        },
+        "tavern": {
+          "mask": "assets/demo/town-ui/masks/inferno-tavern.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-tavern.png",
+          "width": 94,
+          "height": 70,
+          "original": false,
+          "areaSource": "tbintvrn.def",
+          "borderSource": null
+        },
+        "fort": {
+          "mask": "assets/demo/town-ui/masks/inferno-fort.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-fort.png",
+          "width": 250,
+          "height": 238,
+          "original": false,
+          "areaSource": "tbincstl.def",
+          "borderSource": null
+        },
+        "citadel": {
+          "mask": "assets/demo/town-ui/masks/inferno-citadel.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-citadel.png",
+          "width": 250,
+          "height": 238,
+          "original": false,
+          "areaSource": "tbincas2.def",
+          "borderSource": null
+        },
+        "castle": {
+          "mask": "assets/demo/town-ui/masks/inferno-castle.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-castle.png",
+          "width": 250,
+          "height": 263,
+          "original": false,
+          "areaSource": "tbincas3.def",
+          "borderSource": null
+        },
+        "villageHall": {
+          "mask": "assets/demo/town-ui/masks/inferno-villagehall.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-villagehall.png",
+          "width": 226,
+          "height": 90,
+          "original": false,
+          "areaSource": "tbinhall.def",
+          "borderSource": null
+        },
+        "townHall": {
+          "mask": "assets/demo/town-ui/masks/inferno-townhall.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-townhall.png",
+          "width": 226,
+          "height": 90,
+          "original": false,
+          "areaSource": "tbinhal2.def",
+          "borderSource": null
+        },
+        "cityHall": {
+          "mask": "assets/demo/town-ui/masks/inferno-cityhall.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-cityhall.png",
+          "width": 226,
+          "height": 90,
+          "original": false,
+          "areaSource": "tbinhal3.def",
+          "borderSource": null
+        },
+        "capitol": {
+          "mask": "assets/demo/town-ui/masks/inferno-capitol.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-capitol.png",
+          "width": 226,
+          "height": 132,
+          "original": false,
+          "areaSource": "tbinhal4.def",
+          "borderSource": null
+        },
+        "marketplace": {
+          "mask": "assets/demo/town-ui/masks/inferno-marketplace.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-marketplace.png",
+          "width": 144,
+          "height": 72,
+          "original": false,
+          "areaSource": "tbinmark.def",
+          "borderSource": null
+        },
+        "resourceSilo": {
+          "mask": "assets/demo/town-ui/masks/inferno-resourcesilo.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-resourcesilo.png",
+          "width": 76,
+          "height": 38,
+          "original": false,
+          "areaSource": "tbinsilo.def",
+          "borderSource": null
+        },
+        "blacksmith": {
+          "mask": "assets/demo/town-ui/masks/inferno-blacksmith.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-blacksmith.png",
+          "width": 116,
+          "height": 120,
+          "original": false,
+          "areaSource": "tbinblak.def",
+          "borderSource": null
+        },
+        "horde1": {
+          "mask": "assets/demo/town-ui/masks/inferno-horde1.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-horde1.png",
+          "width": 88,
+          "height": 62,
+          "original": false,
+          "areaSource": "tbinhrd1.def",
+          "borderSource": null
+        },
+        "horde1Upgr": {
+          "mask": "assets/demo/town-ui/masks/inferno-horde1upgr.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-horde1upgr.png",
+          "width": 88,
+          "height": 97,
+          "original": false,
+          "areaSource": "tbinhrd2.def",
+          "borderSource": null
+        },
+        "special2": {
+          "mask": "assets/demo/town-ui/masks/inferno-special2.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-special2.png",
+          "width": 336,
+          "height": 64,
+          "original": false,
+          "areaSource": "tbinext0.def",
+          "borderSource": null
+        },
+        "special3": {
+          "mask": "assets/demo/town-ui/masks/inferno-special3.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-special3.png",
+          "width": 64,
+          "height": 64,
+          "original": false,
+          "areaSource": "tbinext1.def",
+          "borderSource": null
+        },
+        "special4": {
+          "mask": "assets/demo/town-ui/masks/inferno-special4.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-special4.png",
+          "width": 84,
+          "height": 124,
+          "original": false,
+          "areaSource": "tbinext2.def",
+          "borderSource": null
+        },
+        "horde2": {
+          "mask": "assets/demo/town-ui/masks/inferno-horde2.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-horde2.png",
+          "width": 149,
+          "height": 62,
+          "original": false,
+          "areaSource": "tbinhrd3.def",
+          "borderSource": null
+        },
+        "horde2Upgr": {
+          "mask": "assets/demo/town-ui/masks/inferno-horde2upgr.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-horde2upgr.png",
+          "width": 150,
+          "height": 90,
+          "original": false,
+          "areaSource": "tbinhrd4.def",
+          "borderSource": null
+        },
+        "grail": {
+          "mask": "assets/demo/town-ui/masks/inferno-grail.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-grail.png",
+          "width": 256,
+          "height": 182,
+          "original": false,
+          "areaSource": "tbinholy.def",
+          "borderSource": null
+        },
+        "dwellingLvl1": {
+          "mask": "assets/demo/town-ui/masks/inferno-dwellinglvl1.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-dwellinglvl1.png",
+          "width": 88,
+          "height": 62,
+          "original": false,
+          "areaSource": "tbindw_0.def",
+          "borderSource": null
+        },
+        "dwellingLvl2": {
+          "mask": "assets/demo/town-ui/masks/inferno-dwellinglvl2.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-dwellinglvl2.png",
+          "width": 138,
+          "height": 126,
+          "original": false,
+          "areaSource": "tbindw_1.def",
+          "borderSource": null
+        },
+        "dwellingLvl3": {
+          "mask": "assets/demo/town-ui/masks/inferno-dwellinglvl3.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-dwellinglvl3.png",
+          "width": 110,
+          "height": 38,
+          "original": false,
+          "areaSource": "tbindw_2.def",
+          "borderSource": null
+        },
+        "dwellingLvl4": {
+          "mask": "assets/demo/town-ui/masks/inferno-dwellinglvl4.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-dwellinglvl4.png",
+          "width": 96,
+          "height": 92,
+          "original": false,
+          "areaSource": "tbindw_3.def",
+          "borderSource": null
+        },
+        "dwellingLvl5": {
+          "mask": "assets/demo/town-ui/masks/inferno-dwellinglvl5.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-dwellinglvl5.png",
+          "width": 192,
+          "height": 56,
+          "original": false,
+          "areaSource": "tbindw_4.def",
+          "borderSource": null
+        },
+        "dwellingLvl6": {
+          "mask": "assets/demo/town-ui/masks/inferno-dwellinglvl6.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-dwellinglvl6.png",
+          "width": 280,
+          "height": 24,
+          "original": false,
+          "areaSource": "tbindw_5.def",
+          "borderSource": null
+        },
+        "dwellingLvl7": {
+          "mask": "assets/demo/town-ui/masks/inferno-dwellinglvl7.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-dwellinglvl7.png",
+          "width": 188,
+          "height": 94,
+          "original": false,
+          "areaSource": "tbindw_6.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl1": {
+          "mask": "assets/demo/town-ui/masks/inferno-dwellinguplvl1.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-dwellinguplvl1.png",
+          "width": 88,
+          "height": 97,
+          "original": false,
+          "areaSource": "tbinup_0.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl2": {
+          "mask": "assets/demo/town-ui/masks/inferno-dwellinguplvl2.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-dwellinguplvl2.png",
+          "width": 138,
+          "height": 162,
+          "original": false,
+          "areaSource": "tbinup_1.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl3": {
+          "mask": "assets/demo/town-ui/masks/inferno-dwellinguplvl3.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-dwellinguplvl3.png",
+          "width": 136,
+          "height": 90,
+          "original": false,
+          "areaSource": "tbinup_2.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl4": {
+          "mask": "assets/demo/town-ui/masks/inferno-dwellinguplvl4.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-dwellinguplvl4.png",
+          "width": 96,
+          "height": 92,
+          "original": false,
+          "areaSource": "tbinup_3.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl5": {
+          "mask": "assets/demo/town-ui/masks/inferno-dwellinguplvl5.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-dwellinguplvl5.png",
+          "width": 191,
+          "height": 107,
+          "original": false,
+          "areaSource": "tbinup_4.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl6": {
+          "mask": "assets/demo/town-ui/masks/inferno-dwellinguplvl6.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-dwellinguplvl6.png",
+          "width": 280,
+          "height": 91,
+          "original": false,
+          "areaSource": "tbinup_5.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl7": {
+          "mask": "assets/demo/town-ui/masks/inferno-dwellinguplvl7.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-dwellinguplvl7.png",
+          "width": 188,
+          "height": 142,
+          "original": false,
+          "areaSource": "tbinup_6.def",
+          "borderSource": null
+        }
+      }
+    },
+    "necropolis": {
+      "hallBackground": "tpthbknc.pcx",
+      "hallIcons": "hallnecr.def",
+      "hallSlots": [
+        [
+          [
+            "villageHall",
+            "townHall",
+            "cityHall",
+            "capitol"
+          ],
+          [
+            "fort",
+            "citadel",
+            "castle"
+          ],
+          [
+            "tavern"
+          ],
+          [
+            "blacksmith"
+          ]
+        ],
+        [
+          [
+            "marketplace",
+            "resourceSilo"
+          ],
+          [
+            "mageGuild1",
+            "mageGuild2",
+            "mageGuild3",
+            "mageGuild4",
+            "mageGuild5"
+          ],
+          [
+            "special2"
+          ],
+          [
+            "shipyard"
+          ]
+        ],
+        [
+          [
+            "special1"
+          ],
+          [
+            "special3"
+          ],
+          [
+            "horde1",
+            "horde1Upgr"
+          ]
+        ],
+        [
+          [
+            "dwellingLvl1",
+            "dwellingUpLvl1"
+          ],
+          [
+            "dwellingLvl2",
+            "dwellingUpLvl2"
+          ],
+          [
+            "dwellingLvl3",
+            "dwellingUpLvl3"
+          ],
+          [
+            "dwellingLvl4",
+            "dwellingUpLvl4"
+          ]
+        ],
+        [
+          [
+            "dwellingLvl5",
+            "dwellingUpLvl5"
+          ],
+          [
+            "dwellingLvl6",
+            "dwellingUpLvl6"
+          ],
+          [
+            "dwellingLvl7",
+            "dwellingUpLvl7"
+          ]
+        ]
+      ],
+      "layers": {
+        "extraAnimation": {
+          "mask": "assets/demo/town-ui/masks/necropolis-extraanimation.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-extraanimation.png",
+          "width": 732,
+          "height": 95,
+          "original": false,
+          "areaSource": "tbncext2.def",
+          "borderSource": null
+        },
+        "mageGuild1": {
+          "mask": "assets/demo/town-ui/masks/necropolis-mageguild1.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-mageguild1.png",
+          "width": 144,
+          "height": 93,
+          "original": true,
+          "areaSource": "tznmag1.pcx",
+          "borderSource": "tonmag1.pcx"
+        },
+        "mageGuild2": {
+          "mask": "assets/demo/town-ui/masks/necropolis-mageguild2.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-mageguild2.png",
+          "width": 144,
+          "height": 112,
+          "original": true,
+          "areaSource": "tznmag2.pcx",
+          "borderSource": "tonmag2.pcx"
+        },
+        "mageGuild3": {
+          "mask": "assets/demo/town-ui/masks/necropolis-mageguild3.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-mageguild3.png",
+          "width": 144,
+          "height": 131,
+          "original": true,
+          "areaSource": "tznmag3.pcx",
+          "borderSource": "tonmag3.pcx"
+        },
+        "mageGuild4": {
+          "mask": "assets/demo/town-ui/masks/necropolis-mageguild4.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-mageguild4.png",
+          "width": 145,
+          "height": 147,
+          "original": true,
+          "areaSource": "tznmag4.pcx",
+          "borderSource": "tonmag4.pcx"
+        },
+        "mageGuild5": {
+          "mask": "assets/demo/town-ui/masks/necropolis-mageguild5.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-mageguild5.png",
+          "width": 142,
+          "height": 174,
+          "original": true,
+          "areaSource": "tznmag5.pcx",
+          "borderSource": "tonmag5.pcx"
+        },
+        "tavern": {
+          "mask": "assets/demo/town-ui/masks/necropolis-tavern.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-tavern.png",
+          "width": 199,
+          "height": 68,
+          "original": true,
+          "areaSource": "tzntav.pcx",
+          "borderSource": "tontav.pcx"
+        },
+        "shipyard": {
+          "mask": "assets/demo/town-ui/masks/necropolis-shipyard.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-shipyard.png",
+          "width": 183,
+          "height": 109,
+          "original": true,
+          "areaSource": "tznshpba.pcx",
+          "borderSource": "tonshpba.pcx"
+        },
+        "fort": {
+          "mask": "assets/demo/town-ui/masks/necropolis-fort.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-fort.png",
+          "width": 200,
+          "height": 196,
+          "original": true,
+          "areaSource": "tzncas1.pcx",
+          "borderSource": "toncas1.pcx"
+        },
+        "citadel": {
+          "mask": "assets/demo/town-ui/masks/necropolis-citadel.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-citadel.png",
+          "width": 237,
+          "height": 196,
+          "original": true,
+          "areaSource": "tzncas2.pcx",
+          "borderSource": "toncas2.pcx"
+        },
+        "castle": {
+          "mask": "assets/demo/town-ui/masks/necropolis-castle.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-castle.png",
+          "width": 342,
+          "height": 251,
+          "original": true,
+          "areaSource": "tzncas3.pcx",
+          "borderSource": "toncas3.pcx"
+        },
+        "villageHall": {
+          "mask": "assets/demo/town-ui/masks/necropolis-villagehall.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-villagehall.png",
+          "width": 174,
+          "height": 158,
+          "original": true,
+          "areaSource": "tznhal1.pcx",
+          "borderSource": "tonhal1.pcx"
+        },
+        "townHall": {
+          "mask": "assets/demo/town-ui/masks/necropolis-townhall.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-townhall.png",
+          "width": 155,
+          "height": 176,
+          "original": true,
+          "areaSource": "tznhal2.pcx",
+          "borderSource": "tonhal2.pcx"
+        },
+        "cityHall": {
+          "mask": "assets/demo/town-ui/masks/necropolis-cityhall.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-cityhall.png",
+          "width": 158,
+          "height": 207,
+          "original": true,
+          "areaSource": "tznhal3.pcx",
+          "borderSource": "tonhal3.pcx"
+        },
+        "capitol": {
+          "mask": "assets/demo/town-ui/masks/necropolis-capitol.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-capitol.png",
+          "width": 154,
+          "height": 205,
+          "original": true,
+          "areaSource": "tznhal4.pcx",
+          "borderSource": "tonhal4.pcx"
+        },
+        "marketplace": {
+          "mask": "assets/demo/town-ui/masks/necropolis-marketplace.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-marketplace.png",
+          "width": 99,
+          "height": 48,
+          "original": true,
+          "areaSource": "tznmrk1.pcx",
+          "borderSource": "tonmrk1.pcx"
+        },
+        "resourceSilo": {
+          "mask": "assets/demo/town-ui/masks/necropolis-resourcesilo.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-resourcesilo.png",
+          "width": 93,
+          "height": 77,
+          "original": true,
+          "areaSource": "tznmrk2.pcx",
+          "borderSource": "tonmrk2.pcx"
+        },
+        "blacksmith": {
+          "mask": "assets/demo/town-ui/masks/necropolis-blacksmith.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-blacksmith.png",
+          "width": 114,
+          "height": 55,
+          "original": true,
+          "areaSource": "tznsmita.pcx",
+          "borderSource": "tonsmita.pcx"
+        },
+        "special1": {
+          "mask": "assets/demo/town-ui/masks/necropolis-special1.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-special1.png",
+          "width": 216,
+          "height": 231,
+          "original": true,
+          "areaSource": "tznshrda.pcx",
+          "borderSource": "tonshrda.pcx"
+        },
+        "horde1": {
+          "mask": "assets/demo/town-ui/masks/necropolis-horde1.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-horde1.png",
+          "width": 196,
+          "height": 130,
+          "original": true,
+          "areaSource": "tznske1h.pcx",
+          "borderSource": "tonske1h.pcx"
+        },
+        "horde1Upgr": {
+          "mask": "assets/demo/town-ui/masks/necropolis-horde1upgr.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-horde1upgr.png",
+          "width": 212,
+          "height": 130,
+          "original": true,
+          "areaSource": "tznske2h.pcx",
+          "borderSource": "tonske2h.pcx"
+        },
+        "ship": {
+          "mask": "assets/demo/town-ui/masks/necropolis-ship.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-ship.png",
+          "width": 183,
+          "height": 109,
+          "original": true,
+          "areaSource": "tznshpna.pcx",
+          "borderSource": "tonshpna.pcx"
+        },
+        "special2": {
+          "mask": "assets/demo/town-ui/masks/necropolis-special2.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-special2.png",
+          "width": 79,
+          "height": 150,
+          "original": true,
+          "areaSource": "tznnecra.pcx",
+          "borderSource": "tonnecra.pcx"
+        },
+        "special3": {
+          "mask": "assets/demo/town-ui/masks/necropolis-special3.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-special3.png",
+          "width": 87,
+          "height": 37,
+          "original": true,
+          "areaSource": "tznskelt.pcx",
+          "borderSource": "tonskelt.pcx"
+        },
+        "grail": {
+          "mask": "assets/demo/town-ui/masks/necropolis-grail.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-grail.png",
+          "width": 128,
+          "height": 178,
+          "original": true,
+          "areaSource": "tznholya.pcx",
+          "borderSource": "tonholya.pcx"
+        },
+        "extraTownHall": {
+          "mask": "assets/demo/town-ui/masks/necropolis-extratownhall.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-extratownhall.png",
+          "width": 177,
+          "height": 106,
+          "original": false,
+          "areaSource": "tbncext3.def",
+          "borderSource": null
+        },
+        "extraCityHall": {
+          "mask": "assets/demo/town-ui/masks/necropolis-extracityhall.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-extracityhall.png",
+          "width": 87,
+          "height": 62,
+          "original": false,
+          "areaSource": "tbncext4.def",
+          "borderSource": null
+        },
+        "extraCapitol": {
+          "mask": "assets/demo/town-ui/masks/necropolis-extracapitol.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-extracapitol.png",
+          "width": 181,
+          "height": 51,
+          "original": false,
+          "areaSource": "tbncext5.def",
+          "borderSource": null
+        },
+        "dwellingLvl1": {
+          "mask": "assets/demo/town-ui/masks/necropolis-dwellinglvl1.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-dwellinglvl1.png",
+          "width": 183,
+          "height": 108,
+          "original": true,
+          "areaSource": "tznskel1.pcx",
+          "borderSource": "tonskel1.pcx"
+        },
+        "dwellingLvl2": {
+          "mask": "assets/demo/town-ui/masks/necropolis-dwellinglvl2.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-dwellinglvl2.png",
+          "width": 132,
+          "height": 74,
+          "original": true,
+          "areaSource": "tznzomb1.pcx",
+          "borderSource": "tonzomb1.pcx"
+        },
+        "dwellingLvl3": {
+          "mask": "assets/demo/town-ui/masks/necropolis-dwellinglvl3.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-dwellinglvl3.png",
+          "width": 144,
+          "height": 187,
+          "original": true,
+          "areaSource": "tznwigh1.pcx",
+          "borderSource": "tonwigh1.pcx"
+        },
+        "dwellingLvl4": {
+          "mask": "assets/demo/town-ui/masks/necropolis-dwellinglvl4.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-dwellinglvl4.png",
+          "width": 188,
+          "height": 64,
+          "original": true,
+          "areaSource": "tznvam1.pcx",
+          "borderSource": "tonvam1.pcx"
+        },
+        "dwellingLvl5": {
+          "mask": "assets/demo/town-ui/masks/necropolis-dwellinglvl5.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-dwellinglvl5.png",
+          "width": 129,
+          "height": 85,
+          "original": true,
+          "areaSource": "tznlich1.pcx",
+          "borderSource": "tonlich1.pcx"
+        },
+        "dwellingLvl6": {
+          "mask": "assets/demo/town-ui/masks/necropolis-dwellinglvl6.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-dwellinglvl6.png",
+          "width": 125,
+          "height": 192,
+          "original": true,
+          "areaSource": "tznbkn1.pcx",
+          "borderSource": "tonbkn1.pcx"
+        },
+        "dwellingLvl7": {
+          "mask": "assets/demo/town-ui/masks/necropolis-dwellinglvl7.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-dwellinglvl7.png",
+          "width": 137,
+          "height": 164,
+          "original": true,
+          "areaSource": "tznbon1.pcx",
+          "borderSource": "tonbon1.pcx"
+        },
+        "dwellingUpLvl1": {
+          "mask": "assets/demo/town-ui/masks/necropolis-dwellinguplvl1.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-dwellinguplvl1.png",
+          "width": 193,
+          "height": 117,
+          "original": true,
+          "areaSource": "tznskel2.pcx",
+          "borderSource": "tonskel2.pcx"
+        },
+        "dwellingUpLvl2": {
+          "mask": "assets/demo/town-ui/masks/necropolis-dwellinguplvl2.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-dwellinguplvl2.png",
+          "width": 134,
+          "height": 77,
+          "original": true,
+          "areaSource": "tznzomb2.pcx",
+          "borderSource": "tonzomb2.pcx"
+        },
+        "dwellingUpLvl3": {
+          "mask": "assets/demo/town-ui/masks/necropolis-dwellinguplvl3.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-dwellinguplvl3.png",
+          "width": 147,
+          "height": 195,
+          "original": true,
+          "areaSource": "tznwigh2.pcx",
+          "borderSource": "tonwigh2.pcx"
+        },
+        "dwellingUpLvl4": {
+          "mask": "assets/demo/town-ui/masks/necropolis-dwellinguplvl4.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-dwellinguplvl4.png",
+          "width": 183,
+          "height": 83,
+          "original": true,
+          "areaSource": "tznvam2.pcx",
+          "borderSource": "tonvam2.pcx"
+        },
+        "dwellingUpLvl5": {
+          "mask": "assets/demo/town-ui/masks/necropolis-dwellinguplvl5.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-dwellinguplvl5.png",
+          "width": 114,
+          "height": 120,
+          "original": true,
+          "areaSource": "tznlich2.pcx",
+          "borderSource": "tonlich2.pcx"
+        },
+        "dwellingUpLvl6": {
+          "mask": "assets/demo/town-ui/masks/necropolis-dwellinguplvl6.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-dwellinguplvl6.png",
+          "width": 125,
+          "height": 193,
+          "original": true,
+          "areaSource": "tznbkn2.pcx",
+          "borderSource": "tonbkn2.pcx"
+        },
+        "dwellingUpLvl7": {
+          "mask": "assets/demo/town-ui/masks/necropolis-dwellinguplvl7.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-dwellinguplvl7.png",
+          "width": 138,
+          "height": 168,
+          "original": true,
+          "areaSource": "tznbon2.pcx",
+          "borderSource": "tonbon2.pcx"
+        }
+      }
+    },
+    "dungeon": {
+      "hallBackground": "tpthbkdg.pcx",
+      "hallIcons": "halldung.def",
+      "hallSlots": [
+        [
+          [
+            "villageHall",
+            "townHall",
+            "cityHall",
+            "capitol"
+          ],
+          [
+            "fort",
+            "citadel",
+            "castle"
+          ],
+          [
+            "tavern"
+          ],
+          [
+            "blacksmith"
+          ]
+        ],
+        [
+          [
+            "marketplace",
+            "resourceSilo"
+          ],
+          [
+            "mageGuild1",
+            "mageGuild2",
+            "mageGuild3",
+            "mageGuild4",
+            "mageGuild5"
+          ],
+          [
+            "special2"
+          ],
+          [
+            "special3"
+          ]
+        ],
+        [
+          [
+            "special1"
+          ],
+          [
+            "special4"
+          ],
+          [
+            "horde1",
+            "horde1Upgr"
+          ]
+        ],
+        [
+          [
+            "dwellingLvl1",
+            "dwellingUpLvl1"
+          ],
+          [
+            "dwellingLvl2",
+            "dwellingUpLvl2"
+          ],
+          [
+            "dwellingLvl3",
+            "dwellingUpLvl3"
+          ],
+          [
+            "dwellingLvl4",
+            "dwellingUpLvl4"
+          ]
+        ],
+        [
+          [
+            "dwellingLvl5",
+            "dwellingUpLvl5"
+          ],
+          [
+            "dwellingLvl6",
+            "dwellingUpLvl6"
+          ],
+          [
+            "dwellingLvl7",
+            "dwellingUpLvl7"
+          ]
+        ]
+      ],
+      "layers": {
+        "mageGuild1": {
+          "mask": "assets/demo/town-ui/masks/dungeon-mageguild1.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-mageguild1.png",
+          "width": 88,
+          "height": 80,
+          "original": true,
+          "areaSource": "tzdmag1.pcx",
+          "borderSource": "todmag1.pcx"
+        },
+        "mageGuild2": {
+          "mask": "assets/demo/town-ui/masks/dungeon-mageguild2.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-mageguild2.png",
+          "width": 88,
+          "height": 102,
+          "original": true,
+          "areaSource": "tzdmag2.pcx",
+          "borderSource": "todmag2.pcx"
+        },
+        "mageGuild3": {
+          "mask": "assets/demo/town-ui/masks/dungeon-mageguild3.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-mageguild3.png",
+          "width": 88,
+          "height": 122,
+          "original": true,
+          "areaSource": "tzdmag3.pcx",
+          "borderSource": "todmag3.pcx"
+        },
+        "mageGuild4": {
+          "mask": "assets/demo/town-ui/masks/dungeon-mageguild4.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-mageguild4.png",
+          "width": 88,
+          "height": 138,
+          "original": true,
+          "areaSource": "tzdmag4.pcx",
+          "borderSource": "todmag4.pcx"
+        },
+        "mageGuild5": {
+          "mask": "assets/demo/town-ui/masks/dungeon-mageguild5.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-mageguild5.png",
+          "width": 88,
+          "height": 184,
+          "original": true,
+          "areaSource": "tzdmag5.pcx",
+          "borderSource": "todmag5.pcx"
+        },
+        "tavern": {
+          "mask": "assets/demo/town-ui/masks/dungeon-tavern.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-tavern.png",
+          "width": 74,
+          "height": 66,
+          "original": true,
+          "areaSource": "tzdtav.pcx",
+          "borderSource": "todtav.pcx"
+        },
+        "fort": {
+          "mask": "assets/demo/town-ui/masks/dungeon-fort.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-fort.png",
+          "width": 198,
+          "height": 164,
+          "original": true,
+          "areaSource": "tzdcas1.pcx",
+          "borderSource": "todcas1.pcx"
+        },
+        "citadel": {
+          "mask": "assets/demo/town-ui/masks/dungeon-citadel.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-citadel.png",
+          "width": 198,
+          "height": 244,
+          "original": true,
+          "areaSource": "tzdcas2.pcx",
+          "borderSource": "todcas2.pcx"
+        },
+        "castle": {
+          "mask": "assets/demo/town-ui/masks/dungeon-castle.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-castle.png",
+          "width": 198,
+          "height": 244,
+          "original": true,
+          "areaSource": "tzdcas3.pcx",
+          "borderSource": "todcas3.pcx"
+        },
+        "villageHall": {
+          "mask": "assets/demo/town-ui/masks/dungeon-villagehall.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-villagehall.png",
+          "width": 178,
+          "height": 64,
+          "original": true,
+          "areaSource": "tzdhall1.pcx",
+          "borderSource": "todhall1.pcx"
+        },
+        "townHall": {
+          "mask": "assets/demo/town-ui/masks/dungeon-townhall.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-townhall.png",
+          "width": 178,
+          "height": 74,
+          "original": true,
+          "areaSource": "tzdhall2.pcx",
+          "borderSource": "todhall2.pcx"
+        },
+        "cityHall": {
+          "mask": "assets/demo/town-ui/masks/dungeon-cityhall.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-cityhall.png",
+          "width": 178,
+          "height": 74,
+          "original": true,
+          "areaSource": "tzdhall3.pcx",
+          "borderSource": "todhall3.pcx"
+        },
+        "capitol": {
+          "mask": "assets/demo/town-ui/masks/dungeon-capitol.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-capitol.png",
+          "width": 178,
+          "height": 94,
+          "original": true,
+          "areaSource": "tzdhall4.pcx",
+          "borderSource": "todhall4.pcx"
+        },
+        "marketplace": {
+          "mask": "assets/demo/town-ui/masks/dungeon-marketplace.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-marketplace.png",
+          "width": 190,
+          "height": 56,
+          "original": true,
+          "areaSource": "tzdmark.pcx",
+          "borderSource": "todmark.pcx"
+        },
+        "resourceSilo": {
+          "mask": "assets/demo/town-ui/masks/dungeon-resourcesilo.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-resourcesilo.png",
+          "width": 70,
+          "height": 34,
+          "original": true,
+          "areaSource": "tzdsilo.pcx",
+          "borderSource": "todsilo.pcx"
+        },
+        "blacksmith": {
+          "mask": "assets/demo/town-ui/masks/dungeon-blacksmith.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-blacksmith.png",
+          "width": 88,
+          "height": 94,
+          "original": true,
+          "areaSource": "tzdsmith.pcx",
+          "borderSource": "todsmith.pcx"
+        },
+        "special1": {
+          "mask": "assets/demo/town-ui/masks/dungeon-special1.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-special1.png",
+          "width": 54,
+          "height": 80,
+          "original": true,
+          "areaSource": "tzdart.pcx",
+          "borderSource": "todart.pcx"
+        },
+        "horde1": {
+          "mask": "assets/demo/town-ui/masks/dungeon-horde1.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-horde1.png",
+          "width": 148,
+          "height": 48,
+          "original": true,
+          "areaSource": "tzdtr1ha.pcx",
+          "borderSource": "todtr1ha.pcx"
+        },
+        "horde1Upgr": {
+          "mask": "assets/demo/town-ui/masks/dungeon-horde1upgr.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-horde1upgr.png",
+          "width": 148,
+          "height": 74,
+          "original": true,
+          "areaSource": "tzdtr2ha.pcx",
+          "borderSource": "todtr2ha.pcx"
+        },
+        "special2": {
+          "mask": "assets/demo/town-ui/masks/dungeon-special2.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-special2.png",
+          "width": 144,
+          "height": 34,
+          "original": true,
+          "areaSource": "tzdvor1a.pcx",
+          "borderSource": "todvor1a.pcx"
+        },
+        "special3": {
+          "mask": "assets/demo/town-ui/masks/dungeon-special3.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-special3.png",
+          "width": 100,
+          "height": 100,
+          "original": true,
+          "areaSource": "tzdporta.pcx",
+          "borderSource": "todporta.pcx"
+        },
+        "special4": {
+          "mask": "assets/demo/town-ui/masks/dungeon-special4.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-special4.png",
+          "width": 134,
+          "height": 76,
+          "original": true,
+          "areaSource": "tzdacad.pcx",
+          "borderSource": "todacad.pcx"
+        },
+        "grail": {
+          "mask": "assets/demo/town-ui/masks/dungeon-grail.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-grail.png",
+          "width": 238,
+          "height": 186,
+          "original": true,
+          "areaSource": "tzdholy.pcx",
+          "borderSource": "todholy.pcx"
+        },
+        "dwellingLvl1": {
+          "mask": "assets/demo/town-ui/masks/dungeon-dwellinglvl1.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-dwellinglvl1.png",
+          "width": 148,
+          "height": 48,
+          "original": true,
+          "areaSource": "tzdtrg1a.pcx",
+          "borderSource": "todtrg1a.pcx"
+        },
+        "dwellingLvl2": {
+          "mask": "assets/demo/town-ui/masks/dungeon-dwellinglvl2.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-dwellinglvl2.png",
+          "width": 80,
+          "height": 88,
+          "original": true,
+          "areaSource": "tzdhar1.pcx",
+          "borderSource": "todhar1.pcx"
+        },
+        "dwellingLvl3": {
+          "mask": "assets/demo/town-ui/masks/dungeon-dwellinglvl3.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-dwellinglvl3.png",
+          "width": 102,
+          "height": 66,
+          "original": true,
+          "areaSource": "tzdbeh1a.pcx",
+          "borderSource": "todbeh1a.pcx"
+        },
+        "dwellingLvl4": {
+          "mask": "assets/demo/town-ui/masks/dungeon-dwellinglvl4.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-dwellinglvl4.png",
+          "width": 104,
+          "height": 84,
+          "original": true,
+          "areaSource": "tzdmed1.pcx",
+          "borderSource": "todmed1.pcx"
+        },
+        "dwellingLvl5": {
+          "mask": "assets/demo/town-ui/masks/dungeon-dwellinglvl5.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-dwellinglvl5.png",
+          "width": 96,
+          "height": 60,
+          "original": true,
+          "areaSource": "tzdmin1.pcx",
+          "borderSource": "todmin1.pcx"
+        },
+        "dwellingLvl6": {
+          "mask": "assets/demo/town-ui/masks/dungeon-dwellinglvl6.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-dwellinglvl6.png",
+          "width": 158,
+          "height": 88,
+          "original": true,
+          "areaSource": "tzdman1.pcx",
+          "borderSource": "todman1.pcx"
+        },
+        "dwellingLvl7": {
+          "mask": "assets/demo/town-ui/masks/dungeon-dwellinglvl7.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-dwellinglvl7.png",
+          "width": 250,
+          "height": 90,
+          "original": true,
+          "areaSource": "tzddra1a.pcx",
+          "borderSource": "toddra1a.pcx"
+        },
+        "dwellingUpLvl1": {
+          "mask": "assets/demo/town-ui/masks/dungeon-dwellinguplvl1.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-dwellinguplvl1.png",
+          "width": 148,
+          "height": 74,
+          "original": true,
+          "areaSource": "tzdtrg2a.pcx",
+          "borderSource": "todtrg2a.pcx"
+        },
+        "dwellingUpLvl2": {
+          "mask": "assets/demo/town-ui/masks/dungeon-dwellinguplvl2.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-dwellinguplvl2.png",
+          "width": 80,
+          "height": 88,
+          "original": true,
+          "areaSource": "tzdhar2.pcx",
+          "borderSource": "todhar2.pcx"
+        },
+        "dwellingUpLvl3": {
+          "mask": "assets/demo/town-ui/masks/dungeon-dwellinguplvl3.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-dwellinguplvl3.png",
+          "width": 102,
+          "height": 118,
+          "original": true,
+          "areaSource": "tzdbeh2a.pcx",
+          "borderSource": "todbeh2a.pcx"
+        },
+        "dwellingUpLvl4": {
+          "mask": "assets/demo/town-ui/masks/dungeon-dwellinguplvl4.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-dwellinguplvl4.png",
+          "width": 104,
+          "height": 84,
+          "original": true,
+          "areaSource": "tzdmed2.pcx",
+          "borderSource": "todmed2.pcx"
+        },
+        "dwellingUpLvl5": {
+          "mask": "assets/demo/town-ui/masks/dungeon-dwellinguplvl5.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-dwellinguplvl5.png",
+          "width": 128,
+          "height": 74,
+          "original": true,
+          "areaSource": "tzdmin2.pcx",
+          "borderSource": "todmin2.pcx"
+        },
+        "dwellingUpLvl6": {
+          "mask": "assets/demo/town-ui/masks/dungeon-dwellinguplvl6.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-dwellinguplvl6.png",
+          "width": 158,
+          "height": 88,
+          "original": true,
+          "areaSource": "tzdman2.pcx",
+          "borderSource": "todman2.pcx"
+        },
+        "dwellingUpLvl7": {
+          "mask": "assets/demo/town-ui/masks/dungeon-dwellinguplvl7.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-dwellinguplvl7.png",
+          "width": 250,
+          "height": 90,
+          "original": true,
+          "areaSource": "tzddra2a.pcx",
+          "borderSource": "toddra2a.pcx"
+        }
+      }
+    },
+    "stronghold": {
+      "hallBackground": "tpthbktw.pcx",
+      "hallIcons": "hallstrn.def",
+      "hallSlots": [
+        [
+          [
+            "villageHall",
+            "townHall",
+            "cityHall",
+            "capitol"
+          ],
+          [
+            "fort",
+            "citadel",
+            "castle"
+          ],
+          [
+            "tavern"
+          ],
+          [
+            "blacksmith"
+          ]
+        ],
+        [
+          [
+            "marketplace",
+            "resourceSilo"
+          ],
+          [
+            "mageGuild1",
+            "mageGuild2",
+            "mageGuild3"
+          ],
+          [
+            "special4"
+          ],
+          [
+            "special1"
+          ]
+        ],
+        [
+          [
+            "special2"
+          ],
+          [
+            "special3"
+          ],
+          [
+            "horde1",
+            "horde1Upgr"
+          ]
+        ],
+        [
+          [
+            "dwellingLvl1",
+            "dwellingUpLvl1"
+          ],
+          [
+            "dwellingLvl2",
+            "dwellingUpLvl2"
+          ],
+          [
+            "dwellingLvl3",
+            "dwellingUpLvl3"
+          ],
+          [
+            "dwellingLvl4",
+            "dwellingUpLvl4"
+          ]
+        ],
+        [
+          [
+            "dwellingLvl5",
+            "dwellingUpLvl5"
+          ],
+          [
+            "dwellingLvl6",
+            "dwellingUpLvl6"
+          ],
+          [
+            "dwellingLvl7",
+            "dwellingUpLvl7"
+          ]
+        ]
+      ],
+      "layers": {
+        "extraAnimation": {
+          "mask": "assets/demo/town-ui/masks/stronghold-extraanimation.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-extraanimation.png",
+          "width": 34,
+          "height": 108,
+          "original": false,
+          "areaSource": "tbstext3.def",
+          "borderSource": null
+        },
+        "mageGuild1": {
+          "mask": "assets/demo/town-ui/masks/stronghold-mageguild1.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-mageguild1.png",
+          "width": 82,
+          "height": 78,
+          "original": false,
+          "areaSource": "tbstmage.def",
+          "borderSource": null
+        },
+        "mageGuild2": {
+          "mask": "assets/demo/town-ui/masks/stronghold-mageguild2.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-mageguild2.png",
+          "width": 81,
+          "height": 108,
+          "original": false,
+          "areaSource": "tbstmag2.def",
+          "borderSource": null
+        },
+        "mageGuild3": {
+          "mask": "assets/demo/town-ui/masks/stronghold-mageguild3.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-mageguild3.png",
+          "width": 81,
+          "height": 144,
+          "original": false,
+          "areaSource": "tbstmag3.def",
+          "borderSource": null
+        },
+        "tavern": {
+          "mask": "assets/demo/town-ui/masks/stronghold-tavern.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-tavern.png",
+          "width": 156,
+          "height": 92,
+          "original": false,
+          "areaSource": "tbsttvrn.def",
+          "borderSource": null
+        },
+        "fort": {
+          "mask": "assets/demo/town-ui/masks/stronghold-fort.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-fort.png",
+          "width": 208,
+          "height": 76,
+          "original": false,
+          "areaSource": "tbstcstl.def",
+          "borderSource": null
+        },
+        "citadel": {
+          "mask": "assets/demo/town-ui/masks/stronghold-citadel.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-citadel.png",
+          "width": 208,
+          "height": 110,
+          "original": false,
+          "areaSource": "tbstcas2.def",
+          "borderSource": null
+        },
+        "castle": {
+          "mask": "assets/demo/town-ui/masks/stronghold-castle.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-castle.png",
+          "width": 210,
+          "height": 110,
+          "original": false,
+          "areaSource": "tbstcas3.def",
+          "borderSource": null
+        },
+        "villageHall": {
+          "mask": "assets/demo/town-ui/masks/stronghold-villagehall.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-villagehall.png",
+          "width": 248,
+          "height": 108,
+          "original": false,
+          "areaSource": "tbsthall.def",
+          "borderSource": null
+        },
+        "townHall": {
+          "mask": "assets/demo/town-ui/masks/stronghold-townhall.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-townhall.png",
+          "width": 248,
+          "height": 142,
+          "original": false,
+          "areaSource": "tbsthal2.def",
+          "borderSource": null
+        },
+        "cityHall": {
+          "mask": "assets/demo/town-ui/masks/stronghold-cityhall.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-cityhall.png",
+          "width": 248,
+          "height": 166,
+          "original": false,
+          "areaSource": "tbsthal3.def",
+          "borderSource": null
+        },
+        "capitol": {
+          "mask": "assets/demo/town-ui/masks/stronghold-capitol.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-capitol.png",
+          "width": 248,
+          "height": 220,
+          "original": false,
+          "areaSource": "tbsthal4.def",
+          "borderSource": null
+        },
+        "marketplace": {
+          "mask": "assets/demo/town-ui/masks/stronghold-marketplace.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-marketplace.png",
+          "width": 196,
+          "height": 66,
+          "original": false,
+          "areaSource": "tbstmark.def",
+          "borderSource": null
+        },
+        "resourceSilo": {
+          "mask": "assets/demo/town-ui/masks/stronghold-resourcesilo.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-resourcesilo.png",
+          "width": 31,
+          "height": 82,
+          "original": false,
+          "areaSource": "tbstsilo.def",
+          "borderSource": null
+        },
+        "blacksmith": {
+          "mask": "assets/demo/town-ui/masks/stronghold-blacksmith.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-blacksmith.png",
+          "width": 124,
+          "height": 82,
+          "original": false,
+          "areaSource": "tbstblak.def",
+          "borderSource": null
+        },
+        "special1": {
+          "mask": "assets/demo/town-ui/masks/stronghold-special1.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-special1.png",
+          "width": 86,
+          "height": 42,
+          "original": false,
+          "areaSource": "tbstspec.def",
+          "borderSource": null
+        },
+        "horde1": {
+          "mask": "assets/demo/town-ui/masks/stronghold-horde1.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-horde1.png",
+          "width": 132,
+          "height": 58,
+          "original": false,
+          "areaSource": "tbsthrd1.def",
+          "borderSource": null
+        },
+        "horde1Upgr": {
+          "mask": "assets/demo/town-ui/masks/stronghold-horde1upgr.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-horde1upgr.png",
+          "width": 132,
+          "height": 78,
+          "original": false,
+          "areaSource": "tbsthrd2.def",
+          "borderSource": null
+        },
+        "special2": {
+          "mask": "assets/demo/town-ui/masks/stronghold-special2.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-special2.png",
+          "width": 73,
+          "height": 62,
+          "original": false,
+          "areaSource": "tbstext0.def",
+          "borderSource": null
+        },
+        "special3": {
+          "mask": "assets/demo/town-ui/masks/stronghold-special3.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-special3.png",
+          "width": 63,
+          "height": 84,
+          "original": false,
+          "areaSource": "tbstext1.def",
+          "borderSource": null
+        },
+        "special4": {
+          "mask": "assets/demo/town-ui/masks/stronghold-special4.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-special4.png",
+          "width": 80,
+          "height": 182,
+          "original": false,
+          "areaSource": "tbstext2.def",
+          "borderSource": null
+        },
+        "grail": {
+          "mask": "assets/demo/town-ui/masks/stronghold-grail.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-grail.png",
+          "width": 98,
+          "height": 262,
+          "original": false,
+          "areaSource": "tbstholy.def",
+          "borderSource": null
+        },
+        "dwellingLvl1": {
+          "mask": "assets/demo/town-ui/masks/stronghold-dwellinglvl1.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-dwellinglvl1.png",
+          "width": 132,
+          "height": 58,
+          "original": false,
+          "areaSource": "tbstdw_0.def",
+          "borderSource": null
+        },
+        "dwellingLvl2": {
+          "mask": "assets/demo/town-ui/masks/stronghold-dwellinglvl2.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-dwellinglvl2.png",
+          "width": 156,
+          "height": 64,
+          "original": false,
+          "areaSource": "tbstdw_1.def",
+          "borderSource": null
+        },
+        "dwellingLvl3": {
+          "mask": "assets/demo/town-ui/masks/stronghold-dwellinglvl3.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-dwellinglvl3.png",
+          "width": 92,
+          "height": 86,
+          "original": false,
+          "areaSource": "tbstdw_2.def",
+          "borderSource": null
+        },
+        "dwellingLvl4": {
+          "mask": "assets/demo/town-ui/masks/stronghold-dwellinglvl4.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-dwellinglvl4.png",
+          "width": 112,
+          "height": 70,
+          "original": false,
+          "areaSource": "tbstdw_3.def",
+          "borderSource": null
+        },
+        "dwellingLvl5": {
+          "mask": "assets/demo/town-ui/masks/stronghold-dwellinglvl5.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-dwellinglvl5.png",
+          "width": 144,
+          "height": 174,
+          "original": false,
+          "areaSource": "tbstdw_4.def",
+          "borderSource": null
+        },
+        "dwellingLvl6": {
+          "mask": "assets/demo/town-ui/masks/stronghold-dwellinglvl6.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-dwellinglvl6.png",
+          "width": 178,
+          "height": 112,
+          "original": false,
+          "areaSource": "tbstdw_5.def",
+          "borderSource": null
+        },
+        "dwellingLvl7": {
+          "mask": "assets/demo/town-ui/masks/stronghold-dwellinglvl7.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-dwellinglvl7.png",
+          "width": 176,
+          "height": 178,
+          "original": false,
+          "areaSource": "tbstdw_6.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl1": {
+          "mask": "assets/demo/town-ui/masks/stronghold-dwellinguplvl1.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-dwellinguplvl1.png",
+          "width": 132,
+          "height": 78,
+          "original": false,
+          "areaSource": "tbstup_0.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl2": {
+          "mask": "assets/demo/town-ui/masks/stronghold-dwellinguplvl2.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-dwellinguplvl2.png",
+          "width": 156,
+          "height": 84,
+          "original": false,
+          "areaSource": "tbstup_1.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl3": {
+          "mask": "assets/demo/town-ui/masks/stronghold-dwellinguplvl3.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-dwellinguplvl3.png",
+          "width": 92,
+          "height": 160,
+          "original": false,
+          "areaSource": "tbstup_2.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl4": {
+          "mask": "assets/demo/town-ui/masks/stronghold-dwellinguplvl4.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-dwellinguplvl4.png",
+          "width": 112,
+          "height": 138,
+          "original": false,
+          "areaSource": "tbstup_3.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl5": {
+          "mask": "assets/demo/town-ui/masks/stronghold-dwellinguplvl5.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-dwellinguplvl5.png",
+          "width": 152,
+          "height": 190,
+          "original": false,
+          "areaSource": "tbstup_4.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl6": {
+          "mask": "assets/demo/town-ui/masks/stronghold-dwellinguplvl6.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-dwellinguplvl6.png",
+          "width": 184,
+          "height": 180,
+          "original": false,
+          "areaSource": "tbstup_5.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl7": {
+          "mask": "assets/demo/town-ui/masks/stronghold-dwellinguplvl7.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-dwellinguplvl7.png",
+          "width": 176,
+          "height": 178,
+          "original": false,
+          "areaSource": "tbstup_6.def",
+          "borderSource": null
+        }
+      }
+    },
+    "fortress": {
+      "hallBackground": "tpthbkfr.pcx",
+      "hallIcons": "hallfort.def",
+      "hallSlots": [
+        [
+          [
+            "villageHall",
+            "townHall",
+            "cityHall",
+            "capitol"
+          ],
+          [
+            "fort",
+            "citadel",
+            "castle"
+          ],
+          [
+            "tavern"
+          ],
+          [
+            "blacksmith"
+          ]
+        ],
+        [
+          [
+            "marketplace",
+            "resourceSilo"
+          ],
+          [
+            "mageGuild1",
+            "mageGuild2",
+            "mageGuild3"
+          ],
+          [
+            "shipyard"
+          ]
+        ],
+        [
+          [
+            "special1"
+          ],
+          [
+            "special2",
+            "special3"
+          ],
+          [
+            "horde1",
+            "horde1Upgr"
+          ]
+        ],
+        [
+          [
+            "dwellingLvl1",
+            "dwellingUpLvl1"
+          ],
+          [
+            "dwellingLvl2",
+            "dwellingUpLvl2"
+          ],
+          [
+            "dwellingLvl3",
+            "dwellingUpLvl3"
+          ],
+          [
+            "dwellingLvl4",
+            "dwellingUpLvl4"
+          ]
+        ],
+        [
+          [
+            "dwellingLvl5",
+            "dwellingUpLvl5"
+          ],
+          [
+            "dwellingLvl6",
+            "dwellingUpLvl6"
+          ],
+          [
+            "dwellingLvl7",
+            "dwellingUpLvl7"
+          ]
+        ]
+      ],
+      "layers": {
+        "extraAnimation": {
+          "mask": "assets/demo/town-ui/masks/fortress-extraanimation.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-extraanimation.png",
+          "width": 282,
+          "height": 147,
+          "original": false,
+          "areaSource": "tbfrext2.def",
+          "borderSource": null
+        },
+        "mageGuild1": {
+          "mask": "assets/demo/town-ui/masks/fortress-mageguild1.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-mageguild1.png",
+          "width": 136,
+          "height": 102,
+          "original": false,
+          "areaSource": "tbfrmage.def",
+          "borderSource": null
+        },
+        "mageGuild2": {
+          "mask": "assets/demo/town-ui/masks/fortress-mageguild2.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-mageguild2.png",
+          "width": 136,
+          "height": 125,
+          "original": false,
+          "areaSource": "tbfrmag2.def",
+          "borderSource": null
+        },
+        "mageGuild3": {
+          "mask": "assets/demo/town-ui/masks/fortress-mageguild3.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-mageguild3.png",
+          "width": 136,
+          "height": 167,
+          "original": false,
+          "areaSource": "tbfrmag3.def",
+          "borderSource": null
+        },
+        "tavern": {
+          "mask": "assets/demo/town-ui/masks/fortress-tavern.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-tavern.png",
+          "width": 166,
+          "height": 126,
+          "original": false,
+          "areaSource": "tbfrtvrn.def",
+          "borderSource": null
+        },
+        "shipyard": {
+          "mask": "assets/demo/town-ui/masks/fortress-shipyard.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-shipyard.png",
+          "width": 175,
+          "height": 80,
+          "original": false,
+          "areaSource": "tbfrdock.def",
+          "borderSource": null
+        },
+        "fort": {
+          "mask": "assets/demo/town-ui/masks/fortress-fort.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-fort.png",
+          "width": 369,
+          "height": 169,
+          "original": false,
+          "areaSource": "tbfrcstl.def",
+          "borderSource": null
+        },
+        "citadel": {
+          "mask": "assets/demo/town-ui/masks/fortress-citadel.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-citadel.png",
+          "width": 369,
+          "height": 189,
+          "original": false,
+          "areaSource": "tbfrcas2.def",
+          "borderSource": null
+        },
+        "castle": {
+          "mask": "assets/demo/town-ui/masks/fortress-castle.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-castle.png",
+          "width": 369,
+          "height": 232,
+          "original": false,
+          "areaSource": "tbfrcas3.def",
+          "borderSource": null
+        },
+        "villageHall": {
+          "mask": "assets/demo/town-ui/masks/fortress-villagehall.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-villagehall.png",
+          "width": 252,
+          "height": 87,
+          "original": false,
+          "areaSource": "tbfrhall.def",
+          "borderSource": null
+        },
+        "townHall": {
+          "mask": "assets/demo/town-ui/masks/fortress-townhall.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-townhall.png",
+          "width": 252,
+          "height": 118,
+          "original": false,
+          "areaSource": "tbfrhal2.def",
+          "borderSource": null
+        },
+        "cityHall": {
+          "mask": "assets/demo/town-ui/masks/fortress-cityhall.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-cityhall.png",
+          "width": 252,
+          "height": 164,
+          "original": false,
+          "areaSource": "tbfrhal3.def",
+          "borderSource": null
+        },
+        "capitol": {
+          "mask": "assets/demo/town-ui/masks/fortress-capitol.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-capitol.png",
+          "width": 252,
+          "height": 213,
+          "original": false,
+          "areaSource": "tbfrhal4.def",
+          "borderSource": null
+        },
+        "marketplace": {
+          "mask": "assets/demo/town-ui/masks/fortress-marketplace.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-marketplace.png",
+          "width": 155,
+          "height": 116,
+          "original": false,
+          "areaSource": "tbfrmark.def",
+          "borderSource": null
+        },
+        "resourceSilo": {
+          "mask": "assets/demo/town-ui/masks/fortress-resourcesilo.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-resourcesilo.png",
+          "width": 58,
+          "height": 48,
+          "original": false,
+          "areaSource": "tbfrsilo.def",
+          "borderSource": null
+        },
+        "blacksmith": {
+          "mask": "assets/demo/town-ui/masks/fortress-blacksmith.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-blacksmith.png",
+          "width": 95,
+          "height": 102,
+          "original": false,
+          "areaSource": "tbfrblak.def",
+          "borderSource": null
+        },
+        "special1": {
+          "mask": "assets/demo/town-ui/masks/fortress-special1.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-special1.png",
+          "width": 80,
+          "height": 60,
+          "original": false,
+          "areaSource": "tbfrspec.def",
+          "borderSource": null
+        },
+        "horde1": {
+          "mask": "assets/demo/town-ui/masks/fortress-horde1.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-horde1.png",
+          "width": 144,
+          "height": 147,
+          "original": false,
+          "areaSource": "tbfrhrd1.def",
+          "borderSource": null
+        },
+        "horde1Upgr": {
+          "mask": "assets/demo/town-ui/masks/fortress-horde1upgr.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-horde1upgr.png",
+          "width": 159,
+          "height": 200,
+          "original": false,
+          "areaSource": "tbfrhrd2.def",
+          "borderSource": null
+        },
+        "ship": {
+          "mask": "assets/demo/town-ui/masks/fortress-ship.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-ship.png",
+          "width": 286,
+          "height": 80,
+          "original": false,
+          "areaSource": "tbfrboat.def",
+          "borderSource": null
+        },
+        "special2": {
+          "mask": "assets/demo/town-ui/masks/fortress-special2.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-special2.png",
+          "width": 388,
+          "height": 113,
+          "original": false,
+          "areaSource": "tbfrext0.def",
+          "borderSource": null
+        },
+        "special3": {
+          "mask": "assets/demo/town-ui/masks/fortress-special3.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-special3.png",
+          "width": 387,
+          "height": 126,
+          "original": false,
+          "areaSource": "tbfrext1.def",
+          "borderSource": null
+        },
+        "grail": {
+          "mask": "assets/demo/town-ui/masks/fortress-grail.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-grail.png",
+          "width": 132,
+          "height": 114,
+          "original": false,
+          "areaSource": "tbfrholy.def",
+          "borderSource": null
+        },
+        "dwellingLvl1": {
+          "mask": "assets/demo/town-ui/masks/fortress-dwellinglvl1.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-dwellinglvl1.png",
+          "width": 144,
+          "height": 100,
+          "original": false,
+          "areaSource": "tbfrdw_0.def",
+          "borderSource": null
+        },
+        "dwellingLvl2": {
+          "mask": "assets/demo/town-ui/masks/fortress-dwellinglvl2.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-dwellinglvl2.png",
+          "width": 177,
+          "height": 98,
+          "original": false,
+          "areaSource": "tbfrdw_1.def",
+          "borderSource": null
+        },
+        "dwellingLvl3": {
+          "mask": "assets/demo/town-ui/masks/fortress-dwellinglvl3.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-dwellinglvl3.png",
+          "width": 42,
+          "height": 49,
+          "original": false,
+          "areaSource": "tbfrdw_3.def",
+          "borderSource": null
+        },
+        "dwellingLvl4": {
+          "mask": "assets/demo/town-ui/masks/fortress-dwellinglvl4.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-dwellinglvl4.png",
+          "width": 179,
+          "height": 80,
+          "original": false,
+          "areaSource": "tbfrdw_4.def",
+          "borderSource": null
+        },
+        "dwellingLvl5": {
+          "mask": "assets/demo/town-ui/masks/fortress-dwellinglvl5.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-dwellinglvl5.png",
+          "width": 255,
+          "height": 105,
+          "original": false,
+          "areaSource": "tbfrdw_2.def",
+          "borderSource": null
+        },
+        "dwellingLvl6": {
+          "mask": "assets/demo/town-ui/masks/fortress-dwellinglvl6.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-dwellinglvl6.png",
+          "width": 112,
+          "height": 108,
+          "original": false,
+          "areaSource": "tbfrdw_5.def",
+          "borderSource": null
+        },
+        "dwellingLvl7": {
+          "mask": "assets/demo/town-ui/masks/fortress-dwellinglvl7.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-dwellinglvl7.png",
+          "width": 188,
+          "height": 83,
+          "original": false,
+          "areaSource": "tbfrdw_6.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl1": {
+          "mask": "assets/demo/town-ui/masks/fortress-dwellinguplvl1.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-dwellinguplvl1.png",
+          "width": 159,
+          "height": 161,
+          "original": false,
+          "areaSource": "tbfrup_0.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl2": {
+          "mask": "assets/demo/town-ui/masks/fortress-dwellinguplvl2.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-dwellinguplvl2.png",
+          "width": 208,
+          "height": 125,
+          "original": false,
+          "areaSource": "tbfrup_1.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl3": {
+          "mask": "assets/demo/town-ui/masks/fortress-dwellinguplvl3.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-dwellinguplvl3.png",
+          "width": 87,
+          "height": 134,
+          "original": false,
+          "areaSource": "tbfrup_3.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl4": {
+          "mask": "assets/demo/town-ui/masks/fortress-dwellinguplvl4.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-dwellinguplvl4.png",
+          "width": 178,
+          "height": 115,
+          "original": false,
+          "areaSource": "tbfrup_4.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl5": {
+          "mask": "assets/demo/town-ui/masks/fortress-dwellinguplvl5.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-dwellinguplvl5.png",
+          "width": 255,
+          "height": 163,
+          "original": false,
+          "areaSource": "tbfrup_2.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl6": {
+          "mask": "assets/demo/town-ui/masks/fortress-dwellinguplvl6.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-dwellinguplvl6.png",
+          "width": 163,
+          "height": 118,
+          "original": false,
+          "areaSource": "tbfrup_5.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl7": {
+          "mask": "assets/demo/town-ui/masks/fortress-dwellinguplvl7.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-dwellinguplvl7.png",
+          "width": 213,
+          "height": 111,
+          "original": false,
+          "areaSource": "tbfrup_6.def",
+          "borderSource": null
+        }
+      }
+    },
+    "conflux": {
+      "hallBackground": "tpthbkfr.pcx",
+      "hallIcons": "hallelem.def",
+      "hallSlots": [
+        [
+          [
+            "villageHall",
+            "townHall",
+            "cityHall",
+            "capitol"
+          ],
+          [
+            "fort",
+            "citadel",
+            "castle"
+          ],
+          [
+            "tavern"
+          ],
+          [
+            "blacksmith"
+          ]
+        ],
+        [
+          [
+            "marketplace",
+            "resourceSilo"
+          ],
+          [
+            "mageGuild1",
+            "mageGuild2",
+            "mageGuild3",
+            "mageGuild4",
+            "mageGuild5"
+          ],
+          [
+            "shipyard"
+          ]
+        ],
+        [
+          [
+            "special2"
+          ],
+          [
+            "special1"
+          ],
+          [
+            "horde1",
+            "horde1Upgr"
+          ]
+        ],
+        [
+          [
+            "dwellingLvl1",
+            "dwellingUpLvl1"
+          ],
+          [
+            "dwellingLvl2",
+            "dwellingUpLvl2"
+          ],
+          [
+            "dwellingLvl3",
+            "dwellingUpLvl3"
+          ],
+          [
+            "dwellingLvl4",
+            "dwellingUpLvl4"
+          ]
+        ],
+        [
+          [
+            "dwellingLvl5",
+            "dwellingUpLvl5"
+          ],
+          [
+            "dwellingLvl6",
+            "dwellingUpLvl6"
+          ],
+          [
+            "dwellingLvl7",
+            "dwellingUpLvl7"
+          ]
+        ]
+      ],
+      "layers": {
+        "extraAnimation2": {
+          "mask": "assets/demo/town-ui/masks/conflux-extraanimation2.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-extraanimation2.png",
+          "width": 44,
+          "height": 75,
+          "original": false,
+          "areaSource": "tbelext5.def",
+          "borderSource": null
+        },
+        "extraAnimation": {
+          "mask": "assets/demo/town-ui/masks/conflux-extraanimation.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-extraanimation.png",
+          "width": 663,
+          "height": 156,
+          "original": false,
+          "areaSource": "tbelext1.def",
+          "borderSource": null
+        },
+        "mageGuild1": {
+          "mask": "assets/demo/town-ui/masks/conflux-mageguild1.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-mageguild1.png",
+          "width": 85,
+          "height": 237,
+          "original": false,
+          "areaSource": "tbelmage.def",
+          "borderSource": null
+        },
+        "mageGuild2": {
+          "mask": "assets/demo/town-ui/masks/conflux-mageguild2.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-mageguild2.png",
+          "width": 85,
+          "height": 237,
+          "original": false,
+          "areaSource": "tbelmag2.def",
+          "borderSource": null
+        },
+        "mageGuild3": {
+          "mask": "assets/demo/town-ui/masks/conflux-mageguild3.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-mageguild3.png",
+          "width": 85,
+          "height": 237,
+          "original": false,
+          "areaSource": "tbelmag3.def",
+          "borderSource": null
+        },
+        "mageGuild4": {
+          "mask": "assets/demo/town-ui/masks/conflux-mageguild4.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-mageguild4.png",
+          "width": 85,
+          "height": 237,
+          "original": false,
+          "areaSource": "tbelmag4.def",
+          "borderSource": null
+        },
+        "mageGuild5": {
+          "mask": "assets/demo/town-ui/masks/conflux-mageguild5.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-mageguild5.png",
+          "width": 85,
+          "height": 237,
+          "original": false,
+          "areaSource": "tbelmag5.def",
+          "borderSource": null
+        },
+        "tavern": {
+          "mask": "assets/demo/town-ui/masks/conflux-tavern.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-tavern.png",
+          "width": 72,
+          "height": 72,
+          "original": false,
+          "areaSource": "tbeltvrn.def",
+          "borderSource": null
+        },
+        "shipyard": {
+          "mask": "assets/demo/town-ui/masks/conflux-shipyard.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-shipyard.png",
+          "width": 108,
+          "height": 49,
+          "original": false,
+          "areaSource": "tbeldock.def",
+          "borderSource": null
+        },
+        "fort": {
+          "mask": "assets/demo/town-ui/masks/conflux-fort.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-fort.png",
+          "width": 359,
+          "height": 151,
+          "original": false,
+          "areaSource": "tbelcstl.def",
+          "borderSource": null
+        },
+        "citadel": {
+          "mask": "assets/demo/town-ui/masks/conflux-citadel.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-citadel.png",
+          "width": 359,
+          "height": 151,
+          "original": false,
+          "areaSource": "tbelcas2.def",
+          "borderSource": null
+        },
+        "castle": {
+          "mask": "assets/demo/town-ui/masks/conflux-castle.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-castle.png",
+          "width": 359,
+          "height": 151,
+          "original": false,
+          "areaSource": "tbelcas3.def",
+          "borderSource": null
+        },
+        "villageHall": {
+          "mask": "assets/demo/town-ui/masks/conflux-villagehall.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-villagehall.png",
+          "width": 234,
+          "height": 195,
+          "original": false,
+          "areaSource": "tbelhall.def",
+          "borderSource": null
+        },
+        "townHall": {
+          "mask": "assets/demo/town-ui/masks/conflux-townhall.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-townhall.png",
+          "width": 234,
+          "height": 195,
+          "original": false,
+          "areaSource": "tbelhal2.def",
+          "borderSource": null
+        },
+        "cityHall": {
+          "mask": "assets/demo/town-ui/masks/conflux-cityhall.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-cityhall.png",
+          "width": 234,
+          "height": 195,
+          "original": false,
+          "areaSource": "tbelhal3.def",
+          "borderSource": null
+        },
+        "capitol": {
+          "mask": "assets/demo/town-ui/masks/conflux-capitol.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-capitol.png",
+          "width": 234,
+          "height": 195,
+          "original": false,
+          "areaSource": "tbelhal4.def",
+          "borderSource": null
+        },
+        "marketplace": {
+          "mask": "assets/demo/town-ui/masks/conflux-marketplace.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-marketplace.png",
+          "width": 201,
+          "height": 92,
+          "original": false,
+          "areaSource": "tbelmark.def",
+          "borderSource": null
+        },
+        "resourceSilo": {
+          "mask": "assets/demo/town-ui/masks/conflux-resourcesilo.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-resourcesilo.png",
+          "width": 68,
+          "height": 114,
+          "original": false,
+          "areaSource": "tbelsilo.def",
+          "borderSource": null
+        },
+        "blacksmith": {
+          "mask": "assets/demo/town-ui/masks/conflux-blacksmith.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-blacksmith.png",
+          "width": 89,
+          "height": 114,
+          "original": false,
+          "areaSource": "tbelblak.def",
+          "borderSource": null
+        },
+        "special1": {
+          "mask": "assets/demo/town-ui/masks/conflux-special1.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-special1.png",
+          "width": 118,
+          "height": 95,
+          "original": false,
+          "areaSource": "tbelspec.def",
+          "borderSource": null
+        },
+        "horde1": {
+          "mask": "assets/demo/town-ui/masks/conflux-horde1.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-horde1.png",
+          "width": 111,
+          "height": 124,
+          "original": false,
+          "areaSource": "tbelhrd1.def",
+          "borderSource": null
+        },
+        "horde1Upgr": {
+          "mask": "assets/demo/town-ui/masks/conflux-horde1upgr.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-horde1upgr.png",
+          "width": 111,
+          "height": 124,
+          "original": false,
+          "areaSource": "tbelhrd2.def",
+          "borderSource": null
+        },
+        "ship": {
+          "mask": "assets/demo/town-ui/masks/conflux-ship.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-ship.png",
+          "width": 108,
+          "height": 49,
+          "original": false,
+          "areaSource": "tbelboat.def",
+          "borderSource": null
+        },
+        "special2": {
+          "mask": "assets/demo/town-ui/masks/conflux-special2.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-special2.png",
+          "width": 185,
+          "height": 119,
+          "original": false,
+          "areaSource": "tbelext6.def",
+          "borderSource": null
+        },
+        "grail": {
+          "mask": "assets/demo/town-ui/masks/conflux-grail.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-grail.png",
+          "width": 295,
+          "height": 100,
+          "original": false,
+          "areaSource": "tbelholy.def",
+          "borderSource": null
+        },
+        "extraTownHall": {
+          "mask": "assets/demo/town-ui/masks/conflux-extratownhall.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-extratownhall.png",
+          "width": 492,
+          "height": 169,
+          "original": false,
+          "areaSource": "tbelext2.def",
+          "borderSource": null
+        },
+        "extraCityHall": {
+          "mask": "assets/demo/town-ui/masks/conflux-extracityhall.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-extracityhall.png",
+          "width": 234,
+          "height": 81,
+          "original": false,
+          "areaSource": "tbelext3.def",
+          "borderSource": null
+        },
+        "extraCapitol": {
+          "mask": "assets/demo/town-ui/masks/conflux-extracapitol.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-extracapitol.png",
+          "width": 691,
+          "height": 122,
+          "original": false,
+          "areaSource": "tbelext4.def",
+          "borderSource": null
+        },
+        "dwellingLvl1": {
+          "mask": "assets/demo/town-ui/masks/conflux-dwellinglvl1.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-dwellinglvl1.png",
+          "width": 111,
+          "height": 124,
+          "original": false,
+          "areaSource": "tbeldw_0.def",
+          "borderSource": null
+        },
+        "dwellingLvl2": {
+          "mask": "assets/demo/town-ui/masks/conflux-dwellinglvl2.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-dwellinglvl2.png",
+          "width": 90,
+          "height": 70,
+          "original": false,
+          "areaSource": "tbeldw_1.def",
+          "borderSource": null
+        },
+        "dwellingLvl3": {
+          "mask": "assets/demo/town-ui/masks/conflux-dwellinglvl3.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-dwellinglvl3.png",
+          "width": 80,
+          "height": 38,
+          "original": false,
+          "areaSource": "tbeldw_2.def",
+          "borderSource": null
+        },
+        "dwellingLvl4": {
+          "mask": "assets/demo/town-ui/masks/conflux-dwellinglvl4.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-dwellinglvl4.png",
+          "width": 89,
+          "height": 79,
+          "original": false,
+          "areaSource": "tbeldw_3.def",
+          "borderSource": null
+        },
+        "dwellingLvl5": {
+          "mask": "assets/demo/town-ui/masks/conflux-dwellinglvl5.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-dwellinglvl5.png",
+          "width": 70,
+          "height": 45,
+          "original": false,
+          "areaSource": "tbeldw_4.def",
+          "borderSource": null
+        },
+        "dwellingLvl6": {
+          "mask": "assets/demo/town-ui/masks/conflux-dwellinglvl6.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-dwellinglvl6.png",
+          "width": 86,
+          "height": 88,
+          "original": false,
+          "areaSource": "tbeldw_5.def",
+          "borderSource": null
+        },
+        "dwellingLvl7": {
+          "mask": "assets/demo/town-ui/masks/conflux-dwellinglvl7.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-dwellinglvl7.png",
+          "width": 156,
+          "height": 126,
+          "original": false,
+          "areaSource": "tbeldw_6.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl1": {
+          "mask": "assets/demo/town-ui/masks/conflux-dwellinguplvl1.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-dwellinguplvl1.png",
+          "width": 111,
+          "height": 124,
+          "original": false,
+          "areaSource": "tbelup_0.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl2": {
+          "mask": "assets/demo/town-ui/masks/conflux-dwellinguplvl2.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-dwellinguplvl2.png",
+          "width": 90,
+          "height": 70,
+          "original": false,
+          "areaSource": "tbelup_1.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl3": {
+          "mask": "assets/demo/town-ui/masks/conflux-dwellinguplvl3.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-dwellinguplvl3.png",
+          "width": 80,
+          "height": 38,
+          "original": false,
+          "areaSource": "tbelup_2.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl4": {
+          "mask": "assets/demo/town-ui/masks/conflux-dwellinguplvl4.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-dwellinguplvl4.png",
+          "width": 89,
+          "height": 79,
+          "original": false,
+          "areaSource": "tbelup_3.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl5": {
+          "mask": "assets/demo/town-ui/masks/conflux-dwellinguplvl5.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-dwellinguplvl5.png",
+          "width": 70,
+          "height": 45,
+          "original": false,
+          "areaSource": "tbelup_4.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl6": {
+          "mask": "assets/demo/town-ui/masks/conflux-dwellinguplvl6.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-dwellinguplvl6.png",
+          "width": 86,
+          "height": 88,
+          "original": false,
+          "areaSource": "tbelup_5.def",
+          "borderSource": null
+        },
+        "dwellingUpLvl7": {
+          "mask": "assets/demo/town-ui/masks/conflux-dwellinguplvl7.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-dwellinguplvl7.png",
+          "width": 156,
+          "height": 142,
+          "original": false,
+          "areaSource": "tbelup_6.def",
+          "borderSource": null
+        }
+      }
+    }
+  },
+  "missingHallBackgrounds": [
+    {
+      "faction": "rampart",
+      "file": "tpthbkrm.pcx"
+    },
+    {
+      "faction": "inferno",
+      "file": "tpthbkin.pcx"
+    },
+    {
+      "faction": "fortress",
+      "file": "tpthbkfr.pcx"
+    },
+    {
+      "faction": "conflux",
+      "file": "tpthbkfr.pcx"
+    }
+  ],
+  "derivedMasks": [
+    {
+      "faction": "castle",
+      "structure": "extraAnimation",
+      "animation": "tbcsext2.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "extraAnimation",
+      "animation": "tbrmext2.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "mageGuild1",
+      "animation": "tbrmmage.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "mageGuild2",
+      "animation": "tbrmmag2.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "mageGuild3",
+      "animation": "tbrmmag3.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "mageGuild4",
+      "animation": "tbrmmag4.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "mageGuild5",
+      "animation": "tbrmmag5.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "tavern",
+      "animation": "tbrmtvrn.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "fort",
+      "animation": "tbrmcstl.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "citadel",
+      "animation": "tbrmcas2.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "castle",
+      "animation": "tbrmcas3.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "villageHall",
+      "animation": "tbrmhall.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "townHall",
+      "animation": "tbrmhal2.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "cityHall",
+      "animation": "tbrmhal3.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "capitol",
+      "animation": "tbrmhal4.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "marketplace",
+      "animation": "tbrmmark.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "resourceSilo",
+      "animation": "tbrmsilo.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "blacksmith",
+      "animation": "tbrmblak.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "special1",
+      "animation": "tbrmspec.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "horde1",
+      "animation": "tbrmhrd1.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "horde1Upgr",
+      "animation": "tbrmhrd2.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "special2",
+      "animation": "tbrmext0.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "special3",
+      "animation": "tbrmext1.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "horde2",
+      "animation": "tbrmhrd3.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "horde2Upgr",
+      "animation": "tbrmhrd4.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "grail",
+      "animation": "tbrmholy.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "extraTownHall",
+      "animation": "tbrmext3.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "extraCityHall",
+      "animation": "tbrmext4.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "extraCapitol",
+      "animation": "tbrmext5.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "dwellingLvl1",
+      "animation": "tbrmdw_0.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "dwellingLvl2",
+      "animation": "tbrmdw_1.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "dwellingLvl3",
+      "animation": "tbrmdw_2.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "dwellingLvl4",
+      "animation": "tbrmdw_3.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "dwellingLvl5",
+      "animation": "tbrmdw_4.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "dwellingLvl6",
+      "animation": "tbrmdw_5.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "dwellingLvl7",
+      "animation": "tbrmdw_6.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "dwellingUpLvl1",
+      "animation": "tbrmup_0.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "dwellingUpLvl2",
+      "animation": "tbrmup_1.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "dwellingUpLvl3",
+      "animation": "tbrmup_2.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "dwellingUpLvl4",
+      "animation": "tbrmup_3.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "dwellingUpLvl5",
+      "animation": "tbrmup_4.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "dwellingUpLvl6",
+      "animation": "tbrmup_5.def"
+    },
+    {
+      "faction": "rampart",
+      "structure": "dwellingUpLvl7",
+      "animation": "tbrmup_6.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "mageGuild1",
+      "animation": "tbtwmage.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "mageGuild2",
+      "animation": "tbtwmag2.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "mageGuild3",
+      "animation": "tbtwmag3.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "mageGuild4",
+      "animation": "tbtwmag4.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "mageGuild5",
+      "animation": "tbtwmag5.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "tavern",
+      "animation": "tbtwtvrn.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "fort",
+      "animation": "tbtwcstl.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "citadel",
+      "animation": "tbtwcas2.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "castle",
+      "animation": "tbtwcas3.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "villageHall",
+      "animation": "tbtwhall.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "townHall",
+      "animation": "tbtwhal2.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "cityHall",
+      "animation": "tbtwhal3.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "capitol",
+      "animation": "tbtwhal4.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "marketplace",
+      "animation": "tbtwmark.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "resourceSilo",
+      "animation": "tbtwsilo.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "blacksmith",
+      "animation": "tbtwblak.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "special1",
+      "animation": "tbtwspec.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "horde1",
+      "animation": "tbtwhrd1.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "horde1Upgr",
+      "animation": "tbtwhrd2.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "special2",
+      "animation": "tbtwext0.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "special3",
+      "animation": "tbtwext1.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "special4",
+      "animation": "tbtwext2.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "grail",
+      "animation": "tbtwholy.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "dwellingLvl1",
+      "animation": "tbtwdw_0.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "dwellingLvl2",
+      "animation": "tbtwdw_1.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "dwellingLvl3",
+      "animation": "tbtwdw_2.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "dwellingLvl4",
+      "animation": "tbtwdw_3.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "dwellingLvl5",
+      "animation": "tbtwdw_4.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "dwellingLvl6",
+      "animation": "tbtwdw_5.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "dwellingLvl7",
+      "animation": "tbtwdw_6.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "dwellingUpLvl1",
+      "animation": "tbtwup_0.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "dwellingUpLvl2",
+      "animation": "tbtwup_1.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "dwellingUpLvl3",
+      "animation": "tbtwup_2.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "dwellingUpLvl4",
+      "animation": "tbtwup_3.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "dwellingUpLvl5",
+      "animation": "tbtwup_4.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "dwellingUpLvl6",
+      "animation": "tbtwup_5.def"
+    },
+    {
+      "faction": "tower",
+      "structure": "dwellingUpLvl7",
+      "animation": "tbtwup_6.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "mageGuild1",
+      "animation": "tbinmage.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "mageGuild2",
+      "animation": "tbinmag2.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "mageGuild3",
+      "animation": "tbinmag3.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "mageGuild4",
+      "animation": "tbinmag4.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "mageGuild5",
+      "animation": "tbinmag5.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "tavern",
+      "animation": "tbintvrn.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "fort",
+      "animation": "tbincstl.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "citadel",
+      "animation": "tbincas2.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "castle",
+      "animation": "tbincas3.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "villageHall",
+      "animation": "tbinhall.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "townHall",
+      "animation": "tbinhal2.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "cityHall",
+      "animation": "tbinhal3.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "capitol",
+      "animation": "tbinhal4.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "marketplace",
+      "animation": "tbinmark.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "resourceSilo",
+      "animation": "tbinsilo.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "blacksmith",
+      "animation": "tbinblak.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "horde1",
+      "animation": "tbinhrd1.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "horde1Upgr",
+      "animation": "tbinhrd2.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "special2",
+      "animation": "tbinext0.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "special3",
+      "animation": "tbinext1.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "special4",
+      "animation": "tbinext2.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "horde2",
+      "animation": "tbinhrd3.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "horde2Upgr",
+      "animation": "tbinhrd4.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "grail",
+      "animation": "tbinholy.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "dwellingLvl1",
+      "animation": "tbindw_0.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "dwellingLvl2",
+      "animation": "tbindw_1.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "dwellingLvl3",
+      "animation": "tbindw_2.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "dwellingLvl4",
+      "animation": "tbindw_3.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "dwellingLvl5",
+      "animation": "tbindw_4.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "dwellingLvl6",
+      "animation": "tbindw_5.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "dwellingLvl7",
+      "animation": "tbindw_6.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "dwellingUpLvl1",
+      "animation": "tbinup_0.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "dwellingUpLvl2",
+      "animation": "tbinup_1.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "dwellingUpLvl3",
+      "animation": "tbinup_2.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "dwellingUpLvl4",
+      "animation": "tbinup_3.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "dwellingUpLvl5",
+      "animation": "tbinup_4.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "dwellingUpLvl6",
+      "animation": "tbinup_5.def"
+    },
+    {
+      "faction": "inferno",
+      "structure": "dwellingUpLvl7",
+      "animation": "tbinup_6.def"
+    },
+    {
+      "faction": "necropolis",
+      "structure": "extraAnimation",
+      "animation": "tbncext2.def"
+    },
+    {
+      "faction": "necropolis",
+      "structure": "extraTownHall",
+      "animation": "tbncext3.def"
+    },
+    {
+      "faction": "necropolis",
+      "structure": "extraCityHall",
+      "animation": "tbncext4.def"
+    },
+    {
+      "faction": "necropolis",
+      "structure": "extraCapitol",
+      "animation": "tbncext5.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "extraAnimation",
+      "animation": "tbstext3.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "mageGuild1",
+      "animation": "tbstmage.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "mageGuild2",
+      "animation": "tbstmag2.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "mageGuild3",
+      "animation": "tbstmag3.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "tavern",
+      "animation": "tbsttvrn.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "fort",
+      "animation": "tbstcstl.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "citadel",
+      "animation": "tbstcas2.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "castle",
+      "animation": "tbstcas3.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "villageHall",
+      "animation": "tbsthall.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "townHall",
+      "animation": "tbsthal2.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "cityHall",
+      "animation": "tbsthal3.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "capitol",
+      "animation": "tbsthal4.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "marketplace",
+      "animation": "tbstmark.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "resourceSilo",
+      "animation": "tbstsilo.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "blacksmith",
+      "animation": "tbstblak.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "special1",
+      "animation": "tbstspec.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "horde1",
+      "animation": "tbsthrd1.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "horde1Upgr",
+      "animation": "tbsthrd2.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "special2",
+      "animation": "tbstext0.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "special3",
+      "animation": "tbstext1.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "special4",
+      "animation": "tbstext2.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "grail",
+      "animation": "tbstholy.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "dwellingLvl1",
+      "animation": "tbstdw_0.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "dwellingLvl2",
+      "animation": "tbstdw_1.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "dwellingLvl3",
+      "animation": "tbstdw_2.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "dwellingLvl4",
+      "animation": "tbstdw_3.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "dwellingLvl5",
+      "animation": "tbstdw_4.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "dwellingLvl6",
+      "animation": "tbstdw_5.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "dwellingLvl7",
+      "animation": "tbstdw_6.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "dwellingUpLvl1",
+      "animation": "tbstup_0.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "dwellingUpLvl2",
+      "animation": "tbstup_1.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "dwellingUpLvl3",
+      "animation": "tbstup_2.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "dwellingUpLvl4",
+      "animation": "tbstup_3.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "dwellingUpLvl5",
+      "animation": "tbstup_4.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "dwellingUpLvl6",
+      "animation": "tbstup_5.def"
+    },
+    {
+      "faction": "stronghold",
+      "structure": "dwellingUpLvl7",
+      "animation": "tbstup_6.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "extraAnimation",
+      "animation": "tbfrext2.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "mageGuild1",
+      "animation": "tbfrmage.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "mageGuild2",
+      "animation": "tbfrmag2.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "mageGuild3",
+      "animation": "tbfrmag3.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "tavern",
+      "animation": "tbfrtvrn.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "shipyard",
+      "animation": "tbfrdock.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "fort",
+      "animation": "tbfrcstl.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "citadel",
+      "animation": "tbfrcas2.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "castle",
+      "animation": "tbfrcas3.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "villageHall",
+      "animation": "tbfrhall.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "townHall",
+      "animation": "tbfrhal2.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "cityHall",
+      "animation": "tbfrhal3.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "capitol",
+      "animation": "tbfrhal4.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "marketplace",
+      "animation": "tbfrmark.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "resourceSilo",
+      "animation": "tbfrsilo.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "blacksmith",
+      "animation": "tbfrblak.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "special1",
+      "animation": "tbfrspec.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "horde1",
+      "animation": "tbfrhrd1.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "horde1Upgr",
+      "animation": "tbfrhrd2.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "ship",
+      "animation": "tbfrboat.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "special2",
+      "animation": "tbfrext0.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "special3",
+      "animation": "tbfrext1.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "grail",
+      "animation": "tbfrholy.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "dwellingLvl1",
+      "animation": "tbfrdw_0.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "dwellingLvl2",
+      "animation": "tbfrdw_1.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "dwellingLvl3",
+      "animation": "tbfrdw_3.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "dwellingLvl4",
+      "animation": "tbfrdw_4.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "dwellingLvl5",
+      "animation": "tbfrdw_2.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "dwellingLvl6",
+      "animation": "tbfrdw_5.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "dwellingLvl7",
+      "animation": "tbfrdw_6.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "dwellingUpLvl1",
+      "animation": "tbfrup_0.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "dwellingUpLvl2",
+      "animation": "tbfrup_1.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "dwellingUpLvl3",
+      "animation": "tbfrup_3.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "dwellingUpLvl4",
+      "animation": "tbfrup_4.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "dwellingUpLvl5",
+      "animation": "tbfrup_2.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "dwellingUpLvl6",
+      "animation": "tbfrup_5.def"
+    },
+    {
+      "faction": "fortress",
+      "structure": "dwellingUpLvl7",
+      "animation": "tbfrup_6.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "extraAnimation2",
+      "animation": "tbelext5.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "extraAnimation",
+      "animation": "tbelext1.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "mageGuild1",
+      "animation": "tbelmage.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "mageGuild2",
+      "animation": "tbelmag2.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "mageGuild3",
+      "animation": "tbelmag3.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "mageGuild4",
+      "animation": "tbelmag4.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "mageGuild5",
+      "animation": "tbelmag5.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "tavern",
+      "animation": "tbeltvrn.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "shipyard",
+      "animation": "tbeldock.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "fort",
+      "animation": "tbelcstl.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "citadel",
+      "animation": "tbelcas2.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "castle",
+      "animation": "tbelcas3.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "villageHall",
+      "animation": "tbelhall.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "townHall",
+      "animation": "tbelhal2.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "cityHall",
+      "animation": "tbelhal3.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "capitol",
+      "animation": "tbelhal4.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "marketplace",
+      "animation": "tbelmark.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "resourceSilo",
+      "animation": "tbelsilo.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "blacksmith",
+      "animation": "tbelblak.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "special1",
+      "animation": "tbelspec.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "horde1",
+      "animation": "tbelhrd1.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "horde1Upgr",
+      "animation": "tbelhrd2.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "ship",
+      "animation": "tbelboat.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "special2",
+      "animation": "tbelext6.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "grail",
+      "animation": "tbelholy.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "extraTownHall",
+      "animation": "tbelext2.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "extraCityHall",
+      "animation": "tbelext3.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "extraCapitol",
+      "animation": "tbelext4.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "dwellingLvl1",
+      "animation": "tbeldw_0.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "dwellingLvl2",
+      "animation": "tbeldw_1.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "dwellingLvl3",
+      "animation": "tbeldw_2.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "dwellingLvl4",
+      "animation": "tbeldw_3.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "dwellingLvl5",
+      "animation": "tbeldw_4.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "dwellingLvl6",
+      "animation": "tbeldw_5.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "dwellingLvl7",
+      "animation": "tbeldw_6.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "dwellingUpLvl1",
+      "animation": "tbelup_0.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "dwellingUpLvl2",
+      "animation": "tbelup_1.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "dwellingUpLvl3",
+      "animation": "tbelup_2.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "dwellingUpLvl4",
+      "animation": "tbelup_3.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "dwellingUpLvl5",
+      "animation": "tbelup_4.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "dwellingUpLvl6",
+      "animation": "tbelup_5.def"
+    },
+    {
+      "faction": "conflux",
+      "structure": "dwellingUpLvl7",
+      "animation": "tbelup_6.def"
+    }
+  ],
+  "originalMasks": 112
+}

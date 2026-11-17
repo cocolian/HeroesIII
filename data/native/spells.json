@@ -1,0 +1,3351 @@
+{
+  "edition": "Classic Complete / Shadow of Death",
+  "masteryOrder": [
+    "none",
+    "basic",
+    "advanced",
+    "expert"
+  ],
+  "sources": [
+    "references/rules/sources.json",
+    "references/rules/wiki-sources.json"
+  ],
+  "errata": [
+    "The original manual incorrectly describes basic Slow as reducing speed to 25%; the actual reduction is 25%.",
+    "The original manual describes an extra 20% reduction for advanced Curse; actual base damage is minimum minus one, bounded at one.",
+    "Fire-school immunity includes Magic Arrow even if the hero uses mastery in a different school.",
+    "Death Ripple affects non-living creatures too; only undead and independently immune targets are excluded.",
+    "Advanced Forgetfulness is already a mass spell in classic Complete, unlike the HotA fix."
+  ],
+  "spells": [
+    {
+      "id": 0,
+      "key": "magicArrow",
+      "name": "魔法神箭",
+      "originalId": 15,
+      "level": 1,
+      "cost": 5,
+      "skilledCost": 4,
+      "enemy": true,
+      "schoolMask": 15,
+      "powerMultiplier": 10,
+      "values": [
+        10,
+        10,
+        20,
+        30
+      ],
+      "massAtExpert": false,
+      "kind": "Damage",
+      "target": "Single",
+      "filter": "Enemy",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "projectile": [
+          {
+            "minimumAngle": 0,
+            "defName": "C20SPX4"
+          },
+          {
+            "minimumAngle": 0.6,
+            "defName": "C20SPX3"
+          },
+          {
+            "minimumAngle": 0.9,
+            "defName": "C20SPX2"
+          },
+          {
+            "minimumAngle": 1.2,
+            "defName": "C20SPX1"
+          },
+          {
+            "minimumAngle": 1.5,
+            "defName": "C20SPX0"
+          }
+        ],
+        "hit": [
+          "C20SPX"
+        ]
+      },
+      "sounds": {
+        "cast": "MAGICBLT"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "reference": "references/rules/wiki/Magic_Arrow.html"
+    },
+    {
+      "id": 1,
+      "key": "cure",
+      "name": "疗伤",
+      "originalId": 37,
+      "level": 1,
+      "cost": 6,
+      "skilledCost": 5,
+      "enemy": false,
+      "schoolMask": 4,
+      "powerMultiplier": 5,
+      "values": [
+        10,
+        10,
+        20,
+        30
+      ],
+      "massAtExpert": true,
+      "kind": "Healing",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C03SPW"
+        ]
+      },
+      "sounds": {
+        "cast": "CURE"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        10,
+        10,
+        5,
+        5,
+        0,
+        5,
+        5,
+        10,
+        5
+      ],
+      "reference": "references/rules/wiki/Cure.html"
+    },
+    {
+      "id": 2,
+      "key": "haste",
+      "name": "加速",
+      "originalId": 53,
+      "level": 1,
+      "cost": 6,
+      "skilledCost": 5,
+      "enemy": false,
+      "schoolMask": 1,
+      "powerMultiplier": 0,
+      "values": [
+        3,
+        3,
+        5,
+        5
+      ],
+      "massAtExpert": true,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C15SPA0"
+        ]
+      },
+      "sounds": {
+        "cast": "TAILWIND"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        5,
+        10,
+        5,
+        5,
+        5,
+        10,
+        5,
+        10,
+        10
+      ],
+      "reference": "references/rules/wiki/Haste.html"
+    },
+    {
+      "id": 3,
+      "key": "slow",
+      "name": "迟缓",
+      "originalId": 54,
+      "level": 1,
+      "cost": 6,
+      "skilledCost": 5,
+      "enemy": true,
+      "schoolMask": 8,
+      "powerMultiplier": 0,
+      "values": [
+        25,
+        25,
+        50,
+        50
+      ],
+      "massAtExpert": true,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Enemy",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          {
+            "defName": "C09SPE0",
+            "verticalPosition": "bottom"
+          }
+        ]
+      },
+      "sounds": {
+        "cast": "MUCKMIRE"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        5,
+        10,
+        10,
+        10,
+        5,
+        5,
+        5,
+        5,
+        10
+      ],
+      "reference": "references/rules/wiki/Slow.html"
+    },
+    {
+      "id": 4,
+      "key": "shield",
+      "name": "护体神盾",
+      "originalId": 27,
+      "level": 1,
+      "cost": 5,
+      "skilledCost": 4,
+      "enemy": false,
+      "schoolMask": 8,
+      "powerMultiplier": 0,
+      "values": [
+        15,
+        15,
+        30,
+        30
+      ],
+      "massAtExpert": true,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C13SPE0"
+        ]
+      },
+      "sounds": {
+        "cast": "SHIELD"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        10,
+        3,
+        5,
+        3,
+        10,
+        5,
+        5,
+        5,
+        5
+      ],
+      "reference": "references/rules/wiki/Shield.html"
+    },
+    {
+      "id": 5,
+      "key": "stoneSkin",
+      "name": "护体石肤",
+      "originalId": 46,
+      "level": 1,
+      "cost": 5,
+      "skilledCost": 4,
+      "enemy": false,
+      "schoolMask": 8,
+      "powerMultiplier": 0,
+      "values": [
+        3,
+        3,
+        6,
+        6
+      ],
+      "massAtExpert": true,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C16SPE"
+        ]
+      },
+      "sounds": {
+        "cast": "TUFFSKIN"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        5,
+        5,
+        10,
+        5,
+        10,
+        5,
+        10,
+        5,
+        5
+      ],
+      "reference": "references/rules/wiki/Stone_Skin.html"
+    },
+    {
+      "id": 6,
+      "key": "bless",
+      "name": "祝福",
+      "originalId": 41,
+      "level": 1,
+      "cost": 5,
+      "skilledCost": 4,
+      "enemy": false,
+      "schoolMask": 4,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "massAtExpert": true,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C01SPW"
+        ]
+      },
+      "sounds": {
+        "cast": "BLESS"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        10,
+        5,
+        5,
+        0,
+        0,
+        3,
+        3,
+        5,
+        5
+      ],
+      "reference": "references/rules/wiki/Bless.html"
+    },
+    {
+      "id": 7,
+      "key": "curse",
+      "name": "恶咒附身",
+      "originalId": 42,
+      "level": 1,
+      "cost": 6,
+      "skilledCost": 5,
+      "enemy": true,
+      "schoolMask": 2,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "massAtExpert": true,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Enemy",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C04SPW"
+        ]
+      },
+      "sounds": {
+        "cast": "CURSE"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        0,
+        0,
+        3,
+        5,
+        10,
+        5,
+        0,
+        0,
+        0
+      ],
+      "reference": "references/rules/wiki/Curse.html"
+    },
+    {
+      "id": 8,
+      "key": "lightningBolt",
+      "name": "闪电霹雳",
+      "originalId": 17,
+      "level": 2,
+      "cost": 10,
+      "skilledCost": 8,
+      "enemy": true,
+      "schoolMask": 1,
+      "powerMultiplier": 25,
+      "values": [
+        10,
+        10,
+        20,
+        50
+      ],
+      "massAtExpert": false,
+      "kind": "Damage",
+      "target": "Single",
+      "filter": "Enemy",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          {
+            "defName": "C03SPA0",
+            "verticalPosition": "bottom"
+          },
+          "C03SPA1"
+        ]
+      },
+      "sounds": {
+        "cast": "LIGHTBLT"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        4,
+        4,
+        50,
+        20,
+        6,
+        50,
+        50,
+        4,
+        25
+      ],
+      "reference": "references/rules/wiki/Lightning_Bolt.html"
+    },
+    {
+      "id": 9,
+      "key": "iceBolt",
+      "name": "霹雳寒冰",
+      "originalId": 16,
+      "level": 2,
+      "cost": 8,
+      "skilledCost": 6,
+      "enemy": true,
+      "schoolMask": 4,
+      "powerMultiplier": 20,
+      "values": [
+        10,
+        10,
+        20,
+        50
+      ],
+      "massAtExpert": false,
+      "kind": "Damage",
+      "target": "Single",
+      "filter": "Enemy",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "projectile": [
+          {
+            "minimumAngle": 0,
+            "defName": "C08SPW4"
+          },
+          {
+            "minimumAngle": 0.6,
+            "defName": "C08SPW3"
+          },
+          {
+            "minimumAngle": 0.9,
+            "defName": "C08SPW2"
+          },
+          {
+            "minimumAngle": 1.2,
+            "defName": "C08SPW1"
+          },
+          {
+            "minimumAngle": 1.5,
+            "defName": "C08SPW0"
+          }
+        ],
+        "hit": [
+          {
+            "defName": "C08SPW5",
+            "transparency": 0.5
+          }
+        ]
+      },
+      "sounds": {
+        "cast": "ICERAY"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        50,
+        50,
+        6,
+        0,
+        6,
+        6,
+        4,
+        50,
+        25
+      ],
+      "reference": "references/rules/wiki/Ice_Bolt.html"
+    },
+    {
+      "id": 10,
+      "key": "implosion",
+      "name": "雷鸣爆弹",
+      "originalId": 18,
+      "level": 5,
+      "cost": 30,
+      "skilledCost": 25,
+      "enemy": true,
+      "schoolMask": 8,
+      "powerMultiplier": 75,
+      "values": [
+        100,
+        100,
+        200,
+        300
+      ],
+      "massAtExpert": false,
+      "kind": "Damage",
+      "target": "Single",
+      "filter": "Enemy",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C05SPE0"
+        ]
+      },
+      "sounds": {
+        "cast": "DECAY"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        0,
+        16,
+        14,
+        16,
+        20,
+        12,
+        0,
+        0,
+        13
+      ],
+      "reference": "references/rules/wiki/Implosion.html"
+    },
+    {
+      "id": 11,
+      "key": "chainLightning",
+      "name": "连锁闪电",
+      "originalId": 19,
+      "level": 4,
+      "cost": 24,
+      "skilledCost": 20,
+      "enemy": true,
+      "schoolMask": 1,
+      "powerMultiplier": 40,
+      "values": [
+        25,
+        25,
+        50,
+        100
+      ],
+      "massAtExpert": false,
+      "kind": "Damage",
+      "target": "Chain",
+      "filter": "Enemy",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          {
+            "defName": "C11SPA0",
+            "verticalPosition": "bottom"
+          },
+          "C11SPA1"
+        ],
+        "ray": {
+          "jaggedness": 0.2,
+          "hopDelay": 50,
+          "width": 16,
+          "colors": [
+            {
+              "start": [
+                100,
+                140,
+                255,
+                96
+              ],
+              "end": [
+                100,
+                140,
+                255,
+                48
+              ]
+            },
+            {
+              "start": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "end": [
+                255,
+                255,
+                255,
+                224
+              ]
+            }
+          ]
+        }
+      },
+      "sounds": {
+        "cast": "CHAINLTE"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        0,
+        0,
+        10
+      ],
+      "reference": "references/rules/wiki/Chain_Lightning.html"
+    },
+    {
+      "id": 12,
+      "key": "frostRing",
+      "name": "寒冰魔环",
+      "originalId": 20,
+      "level": 3,
+      "cost": 12,
+      "skilledCost": 9,
+      "enemy": true,
+      "schoolMask": 4,
+      "powerMultiplier": 10,
+      "values": [
+        15,
+        15,
+        30,
+        60
+      ],
+      "massAtExpert": false,
+      "kind": "Damage",
+      "target": "Ring",
+      "filter": "Any",
+      "radius": 1,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "hit": [
+          "C07SPW"
+        ]
+      },
+      "sounds": {
+        "cast": "FROSTING"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        16,
+        16,
+        16,
+        0,
+        12,
+        12,
+        12,
+        4,
+        12
+      ],
+      "reference": "references/rules/wiki/Frost_Ring.html"
+    },
+    {
+      "id": 13,
+      "key": "fireball",
+      "name": "连珠火球",
+      "originalId": 21,
+      "level": 3,
+      "cost": 15,
+      "skilledCost": 12,
+      "enemy": true,
+      "schoolMask": 2,
+      "powerMultiplier": 10,
+      "values": [
+        15,
+        15,
+        30,
+        60
+      ],
+      "massAtExpert": false,
+      "kind": "Damage",
+      "target": "Radius",
+      "filter": "Any",
+      "radius": 1,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "hit": [
+          "C13SPF"
+        ]
+      },
+      "sounds": {
+        "cast": "SPONTCOMB"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        8,
+        8,
+        8,
+        50,
+        12,
+        16,
+        12,
+        2,
+        12
+      ],
+      "reference": "references/rules/wiki/Fireball.html"
+    },
+    {
+      "id": 14,
+      "key": "inferno",
+      "name": "地狱烈焰",
+      "originalId": 22,
+      "level": 4,
+      "cost": 16,
+      "skilledCost": 12,
+      "enemy": true,
+      "schoolMask": 2,
+      "powerMultiplier": 10,
+      "values": [
+        20,
+        20,
+        40,
+        80
+      ],
+      "massAtExpert": false,
+      "kind": "Damage",
+      "target": "Radius",
+      "filter": "Any",
+      "radius": 2,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "hit": [
+          "C04SPF0"
+        ]
+      },
+      "sounds": {
+        "cast": "FIREBLST"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        5,
+        5,
+        5,
+        10,
+        5,
+        5,
+        0,
+        0,
+        10
+      ],
+      "reference": "references/rules/wiki/Inferno_(spell).html"
+    },
+    {
+      "id": 15,
+      "key": "meteorShower",
+      "name": "流星火雨",
+      "originalId": 23,
+      "level": 4,
+      "cost": 16,
+      "skilledCost": 12,
+      "enemy": true,
+      "schoolMask": 8,
+      "powerMultiplier": 25,
+      "values": [
+        25,
+        25,
+        50,
+        100
+      ],
+      "massAtExpert": false,
+      "kind": "Damage",
+      "target": "Radius",
+      "filter": "Any",
+      "radius": 1,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "hit": [
+          "C08SPE0"
+        ]
+      },
+      "sounds": {
+        "cast": "METEOR"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        0,
+        0,
+        10
+      ],
+      "reference": "references/rules/wiki/Meteor_Shower.html"
+    },
+    {
+      "id": 16,
+      "key": "deathRipple",
+      "name": "死亡波纹",
+      "originalId": 24,
+      "level": 2,
+      "cost": 10,
+      "skilledCost": 8,
+      "enemy": true,
+      "schoolMask": 8,
+      "powerMultiplier": 5,
+      "values": [
+        10,
+        10,
+        20,
+        30
+      ],
+      "massAtExpert": false,
+      "kind": "Damage",
+      "target": "Global",
+      "filter": "NonUndead",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C04SPE0"
+        ]
+      },
+      "sounds": {
+        "cast": "DEATHRIP"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        0,
+        0,
+        0,
+        0,
+        50,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reference": "references/rules/wiki/Death_Ripple.html"
+    },
+    {
+      "id": 17,
+      "key": "destroyUndead",
+      "name": "亡灵杀手",
+      "originalId": 25,
+      "level": 3,
+      "cost": 15,
+      "skilledCost": 12,
+      "enemy": true,
+      "schoolMask": 1,
+      "powerMultiplier": 10,
+      "values": [
+        10,
+        10,
+        20,
+        50
+      ],
+      "massAtExpert": false,
+      "kind": "Damage",
+      "target": "Global",
+      "filter": "Undead",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          {
+            "defName": "C14SPA0",
+            "transparency": 0.5
+          }
+        ]
+      },
+      "sounds": {
+        "cast": "SACBRETH"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        12,
+        8,
+        8,
+        2,
+        0,
+        4,
+        4,
+        2,
+        4
+      ],
+      "reference": "references/rules/wiki/Destroy_Undead.html"
+    },
+    {
+      "id": 18,
+      "key": "armageddon",
+      "name": "末日审判",
+      "originalId": 26,
+      "level": 4,
+      "cost": 24,
+      "skilledCost": 20,
+      "enemy": true,
+      "schoolMask": 2,
+      "powerMultiplier": 50,
+      "values": [
+        30,
+        30,
+        60,
+        120
+      ],
+      "massAtExpert": false,
+      "kind": "Damage",
+      "target": "Global",
+      "filter": "Any",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "hit": [
+          "C06SPF0"
+        ]
+      },
+      "sounds": {
+        "cast": "ARMGEDN"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        0,
+        0,
+        0,
+        5,
+        5,
+        10,
+        0,
+        0,
+        0
+      ],
+      "reference": "references/rules/wiki/Armageddon.html"
+    },
+    {
+      "id": 19,
+      "key": "titanBolt",
+      "name": "泰坦之箭",
+      "originalId": 57,
+      "level": 5,
+      "cost": 0,
+      "skilledCost": 0,
+      "enemy": true,
+      "schoolMask": 1,
+      "powerMultiplier": 0,
+      "values": [
+        600,
+        600,
+        600,
+        600
+      ],
+      "massAtExpert": false,
+      "kind": "Damage",
+      "target": "Single",
+      "filter": "Enemy",
+      "radius": 0,
+      "persistent": false,
+      "special": true,
+      "animation": {
+        "hit": [
+          {
+            "defName": "C03SPA0",
+            "verticalPosition": "bottom"
+          },
+          "C03SPA1"
+        ]
+      },
+      "sounds": {
+        "cast": "LIGHTBLT"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reference": "references/rules/wiki/Titan%27s_Lightning_Bolt.html"
+    },
+    {
+      "id": 20,
+      "key": "airShield",
+      "name": "护体气盾",
+      "originalId": 28,
+      "level": 3,
+      "cost": 12,
+      "skilledCost": 9,
+      "enemy": false,
+      "schoolMask": 1,
+      "powerMultiplier": 0,
+      "values": [
+        25,
+        25,
+        50,
+        50
+      ],
+      "massAtExpert": true,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C01SPA0"
+        ]
+      },
+      "sounds": {
+        "cast": "AIRSHELD"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        4,
+        8,
+        8,
+        2,
+        4,
+        4,
+        8,
+        4,
+        4
+      ],
+      "reference": "references/rules/wiki/Air_Shield.html"
+    },
+    {
+      "id": 21,
+      "key": "fireShield",
+      "name": "烈火神盾",
+      "originalId": 29,
+      "level": 4,
+      "cost": 16,
+      "skilledCost": 12,
+      "enemy": false,
+      "schoolMask": 2,
+      "powerMultiplier": 0,
+      "values": [
+        20,
+        20,
+        25,
+        30
+      ],
+      "massAtExpert": false,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C05SPF0"
+        ]
+      },
+      "sounds": {
+        "cast": "FIRESHLD"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        0,
+        0,
+        5
+      ],
+      "reference": "references/rules/wiki/Fire_Shield.html"
+    },
+    {
+      "id": 22,
+      "key": "protectAir",
+      "name": "御气奇术",
+      "originalId": 30,
+      "level": 2,
+      "cost": 7,
+      "skilledCost": 5,
+      "enemy": false,
+      "schoolMask": 1,
+      "powerMultiplier": 0,
+      "values": [
+        30,
+        30,
+        50,
+        50
+      ],
+      "massAtExpert": true,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C11SPE0"
+        ]
+      },
+      "sounds": {
+        "cast": "PROTECTA"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        2,
+        2,
+        2,
+        4,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "reference": "references/rules/wiki/Protection_from_Air.html"
+    },
+    {
+      "id": 23,
+      "key": "protectFire",
+      "name": "御火奇术",
+      "originalId": 31,
+      "level": 1,
+      "cost": 5,
+      "skilledCost": 4,
+      "enemy": false,
+      "schoolMask": 2,
+      "powerMultiplier": 0,
+      "values": [
+        30,
+        30,
+        50,
+        50
+      ],
+      "massAtExpert": true,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C11SPW0"
+        ]
+      },
+      "sounds": {
+        "cast": "PROTECTF"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "reference": "references/rules/wiki/Protection_from_Fire.html"
+    },
+    {
+      "id": 24,
+      "key": "protectWater",
+      "name": "御水奇术",
+      "originalId": 32,
+      "level": 1,
+      "cost": 5,
+      "skilledCost": 4,
+      "enemy": false,
+      "schoolMask": 4,
+      "powerMultiplier": 0,
+      "values": [
+        30,
+        30,
+        50,
+        50
+      ],
+      "massAtExpert": true,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C11SPF0"
+        ]
+      },
+      "sounds": {
+        "cast": "PROTECTW"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "reference": "references/rules/wiki/Protection_from_Water.html"
+    },
+    {
+      "id": 25,
+      "key": "protectEarth",
+      "name": "御土奇术",
+      "originalId": 33,
+      "level": 3,
+      "cost": 12,
+      "skilledCost": 9,
+      "enemy": false,
+      "schoolMask": 8,
+      "powerMultiplier": 0,
+      "values": [
+        30,
+        30,
+        50,
+        50
+      ],
+      "massAtExpert": true,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C13SPA0"
+        ]
+      },
+      "sounds": {
+        "cast": "PROTECTE"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        4,
+        4,
+        4,
+        2,
+        4,
+        4,
+        4,
+        0,
+        4
+      ],
+      "reference": "references/rules/wiki/Protection_from_Earth.html"
+    },
+    {
+      "id": 26,
+      "key": "antiMagic",
+      "name": "抗魔大法",
+      "originalId": 34,
+      "level": 3,
+      "cost": 15,
+      "skilledCost": 12,
+      "enemy": false,
+      "schoolMask": 8,
+      "powerMultiplier": 0,
+      "values": [
+        3,
+        3,
+        4,
+        5
+      ],
+      "massAtExpert": false,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C02SPE0"
+        ]
+      },
+      "sounds": {
+        "cast": "ANTIMAGK"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        12,
+        8,
+        8,
+        4,
+        8,
+        8,
+        12,
+        10,
+        12
+      ],
+      "reference": "references/rules/wiki/Anti-Magic.html"
+    },
+    {
+      "id": 27,
+      "key": "bloodlust",
+      "name": "嗜血奇术",
+      "originalId": 43,
+      "level": 1,
+      "cost": 5,
+      "skilledCost": 4,
+      "enemy": false,
+      "schoolMask": 2,
+      "powerMultiplier": 0,
+      "values": [
+        3,
+        3,
+        6,
+        6
+      ],
+      "massAtExpert": true,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          {
+            "effectName": "bloodlust"
+          }
+        ]
+      },
+      "sounds": {
+        "cast": "BLOODLUS"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        0,
+        0,
+        0,
+        10,
+        5,
+        5,
+        10,
+        5,
+        5
+      ],
+      "reference": "references/rules/wiki/Bloodlust.html"
+    },
+    {
+      "id": 28,
+      "key": "precision",
+      "name": "百发百中",
+      "originalId": 44,
+      "level": 2,
+      "cost": 8,
+      "skilledCost": 6,
+      "enemy": false,
+      "schoolMask": 1,
+      "powerMultiplier": 0,
+      "values": [
+        3,
+        3,
+        6,
+        6
+      ],
+      "massAtExpert": true,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C12SPA0"
+        ]
+      },
+      "sounds": {
+        "cast": "PRECISON"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        6,
+        6,
+        4,
+        8,
+        2,
+        6,
+        4,
+        4,
+        2
+      ],
+      "reference": "references/rules/wiki/Precision.html"
+    },
+    {
+      "id": 29,
+      "key": "weakness",
+      "name": "虚弱无力",
+      "originalId": 45,
+      "level": 2,
+      "cost": 8,
+      "skilledCost": 6,
+      "enemy": true,
+      "schoolMask": 4,
+      "powerMultiplier": 0,
+      "values": [
+        3,
+        3,
+        6,
+        6
+      ],
+      "massAtExpert": true,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Enemy",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C17SPW0"
+        ]
+      },
+      "sounds": {
+        "cast": "WEAKNESS"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        2,
+        2,
+        2,
+        8,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "reference": "references/rules/wiki/Weakness.html"
+    },
+    {
+      "id": 30,
+      "key": "disruptingRay",
+      "name": "毁灭之光",
+      "originalId": 47,
+      "level": 2,
+      "cost": 10,
+      "skilledCost": 8,
+      "enemy": true,
+      "schoolMask": 1,
+      "powerMultiplier": 0,
+      "values": [
+        3,
+        3,
+        4,
+        5
+      ],
+      "massAtExpert": false,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Enemy",
+      "radius": 0,
+      "persistent": true,
+      "special": false,
+      "animation": {
+        "affect": [
+          {
+            "defName": "C07SPA1",
+            "transparency": 0.5
+          }
+        ],
+        "projectile": [
+          {
+            "defName": "C07SPA0"
+          }
+        ]
+      },
+      "sounds": {
+        "cast": "DISRUPTR"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        6,
+        4,
+        6,
+        12,
+        4,
+        6,
+        6,
+        6,
+        8
+      ],
+      "reference": "references/rules/wiki/Disrupting_Ray.html"
+    },
+    {
+      "id": 31,
+      "key": "prayer",
+      "name": "祈祷",
+      "originalId": 48,
+      "level": 4,
+      "cost": 16,
+      "skilledCost": 12,
+      "enemy": false,
+      "schoolMask": 4,
+      "powerMultiplier": 0,
+      "values": [
+        2,
+        2,
+        4,
+        4
+      ],
+      "massAtExpert": true,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          {
+            "defName": "C10SPW",
+            "verticalPosition": "bottom",
+            "transparency": 0.5
+          }
+        ]
+      },
+      "sounds": {
+        "cast": "PRAYER"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        10,
+        5,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5
+      ],
+      "reference": "references/rules/wiki/Prayer.html"
+    },
+    {
+      "id": 32,
+      "key": "counterstrike",
+      "name": "反戈一击",
+      "originalId": 58,
+      "level": 4,
+      "cost": 24,
+      "skilledCost": 20,
+      "enemy": false,
+      "schoolMask": 1,
+      "powerMultiplier": 0,
+      "values": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "massAtExpert": true,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C04SPA0"
+        ]
+      },
+      "sounds": {
+        "cast": "CNTRSTRK"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        5,
+        10,
+        5,
+        5,
+        5,
+        5,
+        0,
+        0,
+        5
+      ],
+      "reference": "references/rules/wiki/Counterstrike.html"
+    },
+    {
+      "id": 33,
+      "key": "forgetfulness",
+      "name": "失忆大法",
+      "originalId": 61,
+      "level": 3,
+      "cost": 12,
+      "skilledCost": 9,
+      "enemy": true,
+      "schoolMask": 4,
+      "powerMultiplier": 0,
+      "values": [
+        50,
+        50,
+        100,
+        100
+      ],
+      "massAtExpert": true,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Enemy",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C06SPW"
+        ]
+      },
+      "sounds": {
+        "cast": "FORGET"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        8,
+        8,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        8
+      ],
+      "reference": "references/rules/wiki/Forgetfulness.html"
+    },
+    {
+      "id": 34,
+      "key": "dispel",
+      "name": "驱魔大法",
+      "originalId": 35,
+      "level": 1,
+      "cost": 5,
+      "skilledCost": 4,
+      "enemy": false,
+      "schoolMask": 4,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": true,
+      "kind": "Dispel",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C05SPW"
+        ]
+      },
+      "sounds": {
+        "cast": "DISPELL"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "reference": "references/rules/wiki/Dispel.html"
+    },
+    {
+      "id": 35,
+      "key": "summonBoat",
+      "name": "召船术",
+      "originalId": 0,
+      "level": 1,
+      "cost": 8,
+      "skilledCost": 7,
+      "enemy": false,
+      "schoolMask": 4,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {},
+      "sounds": {
+        "cast": "SUMMBOAT"
+      },
+      "implemented": false,
+      "adventure": true,
+      "guildWeights": [
+        3,
+        5,
+        5,
+        5,
+        3,
+        5,
+        5,
+        3,
+        3
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 36,
+      "key": "scuttleBoat",
+      "name": "毁船术",
+      "originalId": 1,
+      "level": 2,
+      "cost": 8,
+      "skilledCost": 6,
+      "enemy": false,
+      "schoolMask": 4,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {},
+      "sounds": {
+        "cast": "SCUTBOAT"
+      },
+      "implemented": false,
+      "adventure": true,
+      "guildWeights": [
+        6,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 37,
+      "key": "visions",
+      "name": "透视之眼",
+      "originalId": 2,
+      "level": 2,
+      "cost": 4,
+      "skilledCost": 2,
+      "enemy": false,
+      "schoolMask": 15,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {},
+      "sounds": {
+        "cast": "VISIONS"
+      },
+      "implemented": false,
+      "adventure": true,
+      "guildWeights": [
+        2,
+        2,
+        2,
+        4,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 38,
+      "key": "viewEarth",
+      "name": "透视大地",
+      "originalId": 3,
+      "level": 1,
+      "cost": 2,
+      "skilledCost": 1,
+      "enemy": false,
+      "schoolMask": 8,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {},
+      "sounds": {
+        "cast": "VIEW"
+      },
+      "implemented": false,
+      "adventure": true,
+      "guildWeights": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 39,
+      "key": "disguise",
+      "name": "伪装大法",
+      "originalId": 4,
+      "level": 2,
+      "cost": 4,
+      "skilledCost": 2,
+      "enemy": false,
+      "schoolMask": 1,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {},
+      "sounds": {
+        "cast": "DISGUISE"
+      },
+      "implemented": false,
+      "adventure": true,
+      "guildWeights": [
+        2,
+        2,
+        2,
+        4,
+        2,
+        2,
+        2,
+        0,
+        2
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 40,
+      "key": "viewAir",
+      "name": "透视大气",
+      "originalId": 5,
+      "level": 1,
+      "cost": 2,
+      "skilledCost": 1,
+      "enemy": false,
+      "schoolMask": 1,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {},
+      "sounds": {
+        "cast": "VIEW"
+      },
+      "implemented": false,
+      "adventure": true,
+      "guildWeights": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 41,
+      "key": "fly",
+      "name": "飞行奇术",
+      "originalId": 6,
+      "level": 5,
+      "cost": 20,
+      "skilledCost": 15,
+      "enemy": false,
+      "schoolMask": 1,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {},
+      "sounds": {
+        "cast": "FLYSPELL"
+      },
+      "implemented": false,
+      "adventure": true,
+      "guildWeights": [
+        0,
+        16,
+        16,
+        16,
+        16,
+        12,
+        0,
+        0,
+        13
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 42,
+      "key": "waterWalk",
+      "name": "凌波微步",
+      "originalId": 7,
+      "level": 4,
+      "cost": 12,
+      "skilledCost": 8,
+      "enemy": false,
+      "schoolMask": 4,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {},
+      "sounds": {
+        "cast": "WATRWALK"
+      },
+      "implemented": false,
+      "adventure": true,
+      "guildWeights": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        0,
+        0,
+        10
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 43,
+      "key": "dimensionDoor",
+      "name": "异次元之门",
+      "originalId": 8,
+      "level": 5,
+      "cost": 25,
+      "skilledCost": 20,
+      "enemy": false,
+      "schoolMask": 1,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {},
+      "sounds": {
+        "cast": "TELPTOUT"
+      },
+      "implemented": false,
+      "adventure": true,
+      "guildWeights": [
+        0,
+        20,
+        14,
+        16,
+        16,
+        16,
+        0,
+        0,
+        13
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 44,
+      "key": "townPortal",
+      "name": "时空之门",
+      "originalId": 9,
+      "level": 4,
+      "cost": 16,
+      "skilledCost": 12,
+      "enemy": false,
+      "schoolMask": 8,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {},
+      "sounds": {
+        "cast": "TELPTOUT"
+      },
+      "implemented": false,
+      "adventure": true,
+      "guildWeights": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        0,
+        0,
+        10
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 45,
+      "key": "quicksand",
+      "name": "流沙陷阱",
+      "originalId": 10,
+      "level": 2,
+      "cost": 8,
+      "skilledCost": 6,
+      "enemy": false,
+      "schoolMask": 8,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {},
+      "sounds": {
+        "cast": ""
+      },
+      "implemented": false,
+      "adventure": false,
+      "guildWeights": [
+        4,
+        4,
+        6,
+        4,
+        4,
+        4,
+        6,
+        6,
+        4
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 46,
+      "key": "landMine",
+      "name": "埋设地雷",
+      "originalId": 11,
+      "level": 3,
+      "cost": 18,
+      "skilledCost": 15,
+      "enemy": false,
+      "schoolMask": 2,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {},
+      "sounds": {
+        "cast": ""
+      },
+      "implemented": false,
+      "adventure": false,
+      "guildWeights": [
+        8,
+        8,
+        8,
+        6,
+        8,
+        12,
+        8,
+        2,
+        4
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 47,
+      "key": "forceField",
+      "name": "大力神盾",
+      "originalId": 12,
+      "level": 3,
+      "cost": 12,
+      "skilledCost": 9,
+      "enemy": false,
+      "schoolMask": 8,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {},
+      "sounds": {
+        "cast": "FORCEFLD"
+      },
+      "implemented": false,
+      "adventure": false,
+      "guildWeights": [
+        4,
+        4,
+        8,
+        2,
+        8,
+        8,
+        4,
+        4,
+        8
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 48,
+      "key": "fireWall",
+      "name": "烈火魔墙",
+      "originalId": 13,
+      "level": 2,
+      "cost": 8,
+      "skilledCost": 6,
+      "enemy": false,
+      "schoolMask": 2,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {},
+      "sounds": {
+        "cast": "FIREWALL"
+      },
+      "implemented": false,
+      "adventure": false,
+      "guildWeights": [
+        4,
+        4,
+        4,
+        12,
+        4,
+        4,
+        4,
+        4,
+        8
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 49,
+      "key": "earthquake",
+      "name": "地动山摇",
+      "originalId": 14,
+      "level": 3,
+      "cost": 20,
+      "skilledCost": 17,
+      "enemy": false,
+      "schoolMask": 8,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {},
+      "sounds": {
+        "cast": "ERTHQUAK"
+      },
+      "implemented": false,
+      "adventure": false,
+      "guildWeights": [
+        4,
+        8,
+        4,
+        6,
+        4,
+        4,
+        4,
+        50,
+        4
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 50,
+      "key": "magicMirror",
+      "name": "魔法神镜",
+      "originalId": 36,
+      "level": 5,
+      "cost": 25,
+      "skilledCost": 20,
+      "enemy": false,
+      "schoolMask": 1,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C02SPA0"
+        ]
+      },
+      "sounds": {
+        "cast": "BACKLASH"
+      },
+      "implemented": false,
+      "adventure": false,
+      "guildWeights": [
+        0,
+        16,
+        14,
+        0,
+        0,
+        12,
+        0,
+        0,
+        13
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 51,
+      "key": "resurrection",
+      "name": "转世重生",
+      "originalId": 38,
+      "level": 4,
+      "cost": 20,
+      "skilledCost": 16,
+      "enemy": false,
+      "schoolMask": 8,
+      "powerMultiplier": 50,
+      "values": [
+        40,
+        40,
+        80,
+        160
+      ],
+      "massAtExpert": false,
+      "kind": "Resurrection",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          {
+            "defName": "C01SPE0",
+            "transparency": 0.5
+          }
+        ]
+      },
+      "sounds": {
+        "cast": "RESURECT"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        0,
+        0,
+        5
+      ],
+      "reference": "references/rules/wiki/Resurrection.html"
+    },
+    {
+      "id": 52,
+      "key": "animateDead",
+      "name": "聚灵奇术",
+      "originalId": 39,
+      "level": 3,
+      "cost": 15,
+      "skilledCost": 12,
+      "enemy": false,
+      "schoolMask": 8,
+      "powerMultiplier": 50,
+      "values": [
+        30,
+        30,
+        60,
+        160
+      ],
+      "massAtExpert": false,
+      "kind": "Resurrection",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          {
+            "defName": "C01SPE0",
+            "transparency": 0.5
+          }
+        ]
+      },
+      "sounds": {
+        "cast": "ANIMDEAD"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        0,
+        0,
+        0,
+        0,
+        16,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reference": "references/rules/wiki/Animate_Dead.html"
+    },
+    {
+      "id": 53,
+      "key": "sacrifice",
+      "name": "牺牲",
+      "originalId": 40,
+      "level": 5,
+      "cost": 25,
+      "skilledCost": 20,
+      "enemy": false,
+      "schoolMask": 2,
+      "powerMultiplier": 0,
+      "values": [
+        3,
+        3,
+        6,
+        10
+      ],
+      "massAtExpert": false,
+      "kind": "Sacrifice",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C12SPF1"
+        ],
+        "affectSecondary": [
+          "C12SPF0"
+        ]
+      },
+      "sounds": {
+        "cast": "SACRIF1"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        0,
+        0,
+        0,
+        20,
+        16,
+        12,
+        0,
+        0,
+        0
+      ],
+      "reference": "references/rules/wiki/Sacrifice.html"
+    },
+    {
+      "id": 54,
+      "key": "mirth",
+      "name": "欢欣鼓舞",
+      "originalId": 49,
+      "level": 3,
+      "cost": 12,
+      "skilledCost": 9,
+      "enemy": false,
+      "schoolMask": 4,
+      "powerMultiplier": 0,
+      "values": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "massAtExpert": true,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C09SPW0"
+        ]
+      },
+      "sounds": {
+        "cast": "MIRTH"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        4,
+        4,
+        4,
+        2,
+        4,
+        4,
+        12,
+        2,
+        4
+      ],
+      "reference": "references/rules/wiki/Mirth.html"
+    },
+    {
+      "id": 55,
+      "key": "sorrow",
+      "name": "悲痛欲绝",
+      "originalId": 50,
+      "level": 4,
+      "cost": 16,
+      "skilledCost": 12,
+      "enemy": true,
+      "schoolMask": 8,
+      "powerMultiplier": 0,
+      "values": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "massAtExpert": true,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Enemy",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C14SPE0"
+        ]
+      },
+      "sounds": {
+        "cast": "SORROW"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        0,
+        0,
+        5
+      ],
+      "reference": "references/rules/wiki/Sorrow.html"
+    },
+    {
+      "id": 56,
+      "key": "fortune",
+      "name": "幸运之神",
+      "originalId": 51,
+      "level": 2,
+      "cost": 7,
+      "skilledCost": 5,
+      "enemy": false,
+      "schoolMask": 1,
+      "powerMultiplier": 0,
+      "values": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "massAtExpert": true,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C09SPA0"
+        ]
+      },
+      "sounds": {
+        "cast": "FORTUNE"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        4,
+        6,
+        4,
+        4,
+        2,
+        2,
+        4,
+        4,
+        2
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 57,
+      "key": "misfortune",
+      "name": "大难临头",
+      "originalId": 52,
+      "level": 3,
+      "cost": 12,
+      "skilledCost": 9,
+      "enemy": true,
+      "schoolMask": 2,
+      "powerMultiplier": 0,
+      "values": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "massAtExpert": true,
+      "kind": "Timed",
+      "target": "Single",
+      "filter": "Enemy",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C10SPF0"
+        ]
+      },
+      "sounds": {
+        "cast": "MISFORT"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        4,
+        4,
+        4,
+        6,
+        8,
+        4,
+        4,
+        2,
+        4
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 58,
+      "key": "slayer",
+      "name": "屠戮成性",
+      "originalId": 55,
+      "level": 4,
+      "cost": 16,
+      "skilledCost": 12,
+      "enemy": false,
+      "schoolMask": 2,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C13SPW0"
+        ]
+      },
+      "sounds": {
+        "cast": "SLAYER"
+      },
+      "implemented": false,
+      "adventure": false,
+      "guildWeights": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        0,
+        0,
+        5
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 59,
+      "key": "frenzy",
+      "name": "孤注一掷",
+      "originalId": 56,
+      "level": 4,
+      "cost": 16,
+      "skilledCost": 12,
+      "enemy": false,
+      "schoolMask": 2,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C08SPF0"
+        ]
+      },
+      "sounds": {
+        "cast": "FRENZY"
+      },
+      "implemented": false,
+      "adventure": false,
+      "guildWeights": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        0,
+        0,
+        5
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 60,
+      "key": "berserk",
+      "name": "丧心病狂",
+      "originalId": 59,
+      "level": 4,
+      "cost": 20,
+      "skilledCost": 16,
+      "enemy": true,
+      "schoolMask": 2,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Enemy",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C01SPF"
+        ]
+      },
+      "sounds": {
+        "cast": "BERSERK"
+      },
+      "implemented": false,
+      "adventure": false,
+      "guildWeights": [
+        5,
+        5,
+        5,
+        5,
+        10,
+        5,
+        0,
+        0,
+        5
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 61,
+      "key": "hypnotize",
+      "name": "蛊惑人心",
+      "originalId": 60,
+      "level": 3,
+      "cost": 18,
+      "skilledCost": 15,
+      "enemy": true,
+      "schoolMask": 1,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Enemy",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C10SPA0"
+        ]
+      },
+      "sounds": {
+        "cast": "HYPNOTIZ"
+      },
+      "implemented": false,
+      "adventure": false,
+      "guildWeights": [
+        4,
+        4,
+        8,
+        6,
+        0,
+        8,
+        4,
+        4,
+        12
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 62,
+      "key": "blind",
+      "name": "双目失明",
+      "originalId": 62,
+      "level": 2,
+      "cost": 10,
+      "skilledCost": 8,
+      "enemy": true,
+      "schoolMask": 2,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Enemy",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "affect": [
+          "C02SPF0"
+        ]
+      },
+      "sounds": {
+        "cast": "BLIND"
+      },
+      "implemented": false,
+      "adventure": false,
+      "guildWeights": [
+        4,
+        6,
+        2,
+        12,
+        4,
+        4,
+        4,
+        6,
+        8
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 63,
+      "key": "teleport",
+      "name": "瞬间移动",
+      "originalId": 63,
+      "level": 3,
+      "cost": 15,
+      "skilledCost": 3,
+      "enemy": false,
+      "schoolMask": 4,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {},
+      "sounds": {
+        "cast": "TELPTOUT"
+      },
+      "implemented": false,
+      "adventure": false,
+      "guildWeights": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        10,
+        8
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 64,
+      "key": "removeObstacle",
+      "name": "驱除障碍",
+      "originalId": 64,
+      "level": 2,
+      "cost": 7,
+      "skilledCost": 5,
+      "enemy": false,
+      "schoolMask": 4,
+      "powerMultiplier": 0,
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "massAtExpert": false,
+      "kind": "Unsupported",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {
+        "hit": [
+          "C18SPW0"
+        ]
+      },
+      "sounds": {
+        "cast": "REMOVEOB"
+      },
+      "implemented": false,
+      "adventure": false,
+      "guildWeights": [
+        4,
+        4,
+        6,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "reference": "references/rules/wiki/List_of_spells.html"
+    },
+    {
+      "id": 65,
+      "key": "clone",
+      "name": "镜像大法",
+      "originalId": 65,
+      "level": 4,
+      "cost": 24,
+      "skilledCost": 20,
+      "enemy": false,
+      "schoolMask": 4,
+      "powerMultiplier": 0,
+      "values": [
+        5,
+        5,
+        6,
+        10
+      ],
+      "massAtExpert": false,
+      "kind": "Clone",
+      "target": "Single",
+      "filter": "Ally",
+      "radius": 0,
+      "persistent": true,
+      "special": false,
+      "animation": {},
+      "sounds": {
+        "cast": "CLONE"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        5,
+        5,
+        10,
+        5,
+        5,
+        5,
+        0,
+        0,
+        10
+      ],
+      "reference": "references/rules/wiki/Clone.html"
+    },
+    {
+      "id": 66,
+      "key": "fireElemental",
+      "name": "召唤火元素",
+      "originalId": 66,
+      "level": 5,
+      "cost": 25,
+      "skilledCost": 20,
+      "enemy": false,
+      "schoolMask": 2,
+      "powerMultiplier": 0,
+      "values": [
+        2,
+        2,
+        3,
+        4
+      ],
+      "massAtExpert": false,
+      "kind": "Summon",
+      "target": "Global",
+      "filter": "Any",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {},
+      "sounds": {
+        "cast": "SUMNELM"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        0,
+        0,
+        0,
+        16,
+        0,
+        12,
+        0,
+        0,
+        12
+      ],
+      "reference": "references/rules/wiki/Summon_Fire_Elemental.html"
+    },
+    {
+      "id": 67,
+      "key": "earthElemental",
+      "name": "召唤土元素",
+      "originalId": 67,
+      "level": 5,
+      "cost": 25,
+      "skilledCost": 20,
+      "enemy": false,
+      "schoolMask": 8,
+      "powerMultiplier": 0,
+      "values": [
+        2,
+        2,
+        3,
+        4
+      ],
+      "massAtExpert": false,
+      "kind": "Summon",
+      "target": "Global",
+      "filter": "Any",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {},
+      "sounds": {
+        "cast": "SUMNELM"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        0,
+        16,
+        14,
+        16,
+        16,
+        12,
+        0,
+        0,
+        12
+      ],
+      "reference": "references/rules/wiki/Summon_Earth_Elemental.html"
+    },
+    {
+      "id": 68,
+      "key": "waterElemental",
+      "name": "召唤水元素",
+      "originalId": 68,
+      "level": 5,
+      "cost": 25,
+      "skilledCost": 20,
+      "enemy": false,
+      "schoolMask": 4,
+      "powerMultiplier": 0,
+      "values": [
+        2,
+        2,
+        3,
+        4
+      ],
+      "massAtExpert": false,
+      "kind": "Summon",
+      "target": "Global",
+      "filter": "Any",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {},
+      "sounds": {
+        "cast": "SUMNELM"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        0,
+        16,
+        14,
+        0,
+        0,
+        12,
+        0,
+        0,
+        12
+      ],
+      "reference": "references/rules/wiki/Summon_Water_Elemental.html"
+    },
+    {
+      "id": 69,
+      "key": "airElemental",
+      "name": "召唤气元素",
+      "originalId": 69,
+      "level": 5,
+      "cost": 25,
+      "skilledCost": 20,
+      "enemy": false,
+      "schoolMask": 1,
+      "powerMultiplier": 0,
+      "values": [
+        2,
+        2,
+        3,
+        4
+      ],
+      "massAtExpert": false,
+      "kind": "Summon",
+      "target": "Global",
+      "filter": "Any",
+      "radius": 0,
+      "persistent": false,
+      "special": false,
+      "animation": {},
+      "sounds": {
+        "cast": "SUMNELM"
+      },
+      "implemented": true,
+      "adventure": false,
+      "guildWeights": [
+        0,
+        0,
+        14,
+        0,
+        16,
+        0,
+        0,
+        0,
+        12
+      ],
+      "reference": "references/rules/wiki/Summon_Air_Elemental.html"
+    }
+  ]
+}

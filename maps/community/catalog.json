@@ -1,0 +1,459 @@
+{
+  "schema": 1,
+  "collectedOn": "2026-11-15",
+  "maps": [
+    {
+      "title": "Wayfarer (E)",
+      "author": "ustcers",
+      "source": "https://www.maps4heroes.com/forum/opinions.php?game=3&map_id=791",
+      "download": "https://www.maps4heroes.com/heroes3/maps/wayfarer_e_791.zip",
+      "siteRatingLabel": "Likes (public site count, not a 5-star rating)",
+      "siteRating": 59,
+      "difficultyLabel": "Impossible",
+      "notes": "高难寻路、资源和战术解谜",
+      "archive": "maps/community/wayfarer/original.zip",
+      "archiveSha256": "6777ee740b56a48966c00c38e8a50e0b9c0de6c7848e27ddfba318492fb82d2f",
+      "mapFiles": [
+        {
+          "file": "maps/community/wayfarer/1.h3m",
+          "originalArchiveMember": "Wayfarer(E).h3m",
+          "sizeBytes": 151631,
+          "sha256": "5178e5cac5055452fe3e3da99ca36e7bc15ca2d911baddc04452e3ba99c82815",
+          "formatVersion": 28,
+          "mapSize": [
+            144,
+            144
+          ],
+          "levels": 2,
+          "difficulty": "Impossible",
+          "runtimeImportSupported": false,
+          "terrainBlockValidated": true,
+          "terrainOffset": 2601,
+          "terrainTileCount": 41472,
+          "fullScenarioValidated": false
+        }
+      ],
+      "downloadedOn": "2026-11-15",
+      "playtestedInThisEngine": false
+    },
+    {
+      "title": "Lord of The Rings 3.0",
+      "author": "Vallex",
+      "source": "https://www.maps4heroes.com/forum/opinions.php?game=3&map_id=974",
+      "download": "https://www.maps4heroes.com/heroes3/maps/lord_of_the_rings_3_974.rar",
+      "siteRatingLabel": "Likes (public site count, not a 5-star rating)",
+      "siteRating": 66,
+      "difficultyLabel": "Expert",
+      "notes": "魔戒剧情与探索；保留戒指并阅读事件提示",
+      "archive": "maps/community/lord-of-the-rings/original.rar",
+      "archiveSha256": "1143219318c795f1425e88d8f4382c5233ef12c586a08e0f020ef2111babbdd9",
+      "mapFiles": [
+        {
+          "file": "maps/community/lord-of-the-rings/1.h3m",
+          "originalArchiveMember": "LOTR3/LOTR3.h3m",
+          "sizeBytes": 154201,
+          "sha256": "8a520ad1ecff97722e5f6887f220a41f8bf5ae5eaafd2e7f30ae33cc383ec62f",
+          "formatVersion": 28,
+          "mapSize": [
+            144,
+            144
+          ],
+          "levels": 2,
+          "difficulty": "Expert",
+          "runtimeImportSupported": false,
+          "terrainBlockValidated": true,
+          "terrainOffset": 1361,
+          "terrainTileCount": 41472,
+          "fullScenarioValidated": false
+        }
+      ],
+      "downloadedOn": "2026-11-15",
+      "playtestedInThisEngine": false
+    },
+    {
+      "title": "The Empire Of The World 2",
+      "author": "Darklord",
+      "source": "https://www.maps4heroes.com/forum/opinions.php?game=3&map_id=369",
+      "download": "https://www.maps4heroes.com/heroes3/maps/the_empire_of_the_world_2_new_369.rar",
+      "siteRatingLabel": "Likes (public site count, not a 5-star rating)",
+      "siteRating": 46,
+      "difficultyLabel": "Impossible",
+      "notes": "长篇单人冒险；注意压缩包内说明及攻略",
+      "archive": "maps/community/empire-of-the-world-2/original.rar",
+      "archiveSha256": "3dec07206a68af6e0903588b03d77326e201950f7d2b58d7df630c671a9d4a4a",
+      "mapFiles": [
+        {
+          "file": "maps/community/empire-of-the-world-2/1.h3m",
+          "originalArchiveMember": "The empire of the world II.h3m",
+          "sizeBytes": 185208,
+          "sha256": "670c01f290f6b0b18eb238364d13d6b4c659720fe8b7cefcd581fb16280d0933",
+          "formatVersion": 28,
+          "mapSize": [
+            144,
+            144
+          ],
+          "levels": 2,
+          "difficulty": "Impossible",
+          "runtimeImportSupported": false,
+          "terrainBlockValidated": true,
+          "terrainOffset": 1301,
+          "terrainTileCount": 41472,
+          "fullScenarioValidated": false
+        }
+      ],
+      "downloadedOn": "2026-11-15",
+      "playtestedInThisEngine": false
+    },
+    {
+      "title": "Ira the Mage",
+      "author": "Liu Xue Lian",
+      "source": "https://www.maps4heroes.com/forum/opinions.php?game=3&map_id=907",
+      "download": "https://www.maps4heroes.com/heroes3/maps/ira_the_mage_907.rar",
+      "siteRatingLabel": "Likes (public site count, not a 5-star rating)",
+      "siteRating": 34,
+      "difficultyLabel": "Expert",
+      "notes": "中文剧情；作者要求按说明设置电脑并使用 200% 难度",
+      "archive": "maps/community/ira-the-mage/original.rar",
+      "archiveSha256": "634a6450f9e61cf22ab1833082e72e5432ac90aeedce3ca97f7a1f0341410620",
+      "mapFiles": [
+        {
+          "file": "maps/community/ira-the-mage/1.h3m",
+          "originalArchiveMember": "the mage yhne/the mage yhne(easy).h3m",
+          "sizeBytes": 352802,
+          "sha256": "6cd94044fe743640abdbc5dd6d07254e8b4849cc98d1639fe134ab5a8cf2fcf7",
+          "formatVersion": 28,
+          "mapSize": [
+            144,
+            144
+          ],
+          "levels": 2,
+          "difficulty": "Expert",
+          "runtimeImportSupported": false,
+          "terrainBlockValidated": true,
+          "terrainOffset": 1635,
+          "terrainTileCount": 41472,
+          "fullScenarioValidated": false
+        },
+        {
+          "file": "maps/community/ira-the-mage/2.h3m",
+          "originalArchiveMember": "the mage yhne/the mage yhne(normal).h3m",
+          "sizeBytes": 352929,
+          "sha256": "3c4cead389aa125b3261a60787a06df5ea98d122df49141490904d9176a2e6c0",
+          "formatVersion": 28,
+          "mapSize": [
+            144,
+            144
+          ],
+          "levels": 2,
+          "difficulty": "Expert",
+          "runtimeImportSupported": false,
+          "terrainBlockValidated": true,
+          "terrainOffset": 1637,
+          "terrainTileCount": 41472,
+          "fullScenarioValidated": false
+        },
+        {
+          "file": "maps/community/ira-the-mage/3.h3m",
+          "originalArchiveMember": "Ina the mage eng/Ina the mage.h3m",
+          "sizeBytes": 376640,
+          "sha256": "4837c735a0d6b14101ce0083244688c68768c264455e110748270e4406e795ba",
+          "formatVersion": 28,
+          "mapSize": [
+            144,
+            144
+          ],
+          "levels": 2,
+          "difficulty": "Expert",
+          "runtimeImportSupported": false,
+          "terrainBlockValidated": true,
+          "terrainOffset": 1943,
+          "terrainTileCount": 41472,
+          "fullScenarioValidated": false
+        }
+      ],
+      "downloadedOn": "2026-11-15",
+      "playtestedInThisEngine": false
+    },
+    {
+      "title": "To Tame a Land",
+      "author": "Jaakko Minkkinen",
+      "source": "https://www.maps4heroes.com/forum/opinions.php?game=3&map_id=1610",
+      "download": "https://www.maps4heroes.com/heroes3/maps/to_tame_a_land_1610.zip",
+      "siteRatingLabel": "Likes (public site count, not a 5-star rating)",
+      "siteRating": 26,
+      "difficultyLabel": "Impossible",
+      "notes": "高难生存、寻路和战术解谜",
+      "archive": "maps/community/to-tame-a-land/original.zip",
+      "archiveSha256": "11ed9aeae654734f00ebb0a340730f9997edbf0b844ae0cdc1ad1289e2dbc524",
+      "mapFiles": [
+        {
+          "file": "maps/community/to-tame-a-land/1.h3m",
+          "originalArchiveMember": "To Tame a Land.h3m",
+          "sizeBytes": 104248,
+          "sha256": "0ce06b759fb768f0c330b6becf79f1ba526578cda211ed8a6337b58fee298128",
+          "formatVersion": 28,
+          "mapSize": [
+            144,
+            144
+          ],
+          "levels": 2,
+          "difficulty": "Impossible",
+          "runtimeImportSupported": false,
+          "terrainBlockValidated": true,
+          "terrainOffset": 936,
+          "terrainTileCount": 41472,
+          "fullScenarioValidated": false
+        }
+      ],
+      "downloadedOn": "2026-11-15",
+      "playtestedInThisEngine": false
+    },
+    {
+      "title": "War of the 7 realms",
+      "author": "Barbuta",
+      "source": "https://www.maps4heroes.com/forum/opinions.php?game=3&map_id=1756",
+      "download": "https://www.maps4heroes.com/heroes3/maps/war_of_the_7_realms_1756.zip",
+      "siteRatingLabel": "Likes (public site count, not a 5-star rating)",
+      "siteRating": 18,
+      "difficultyLabel": "Impossible",
+      "notes": "多国对抗与大型地图探索",
+      "archive": "maps/community/war-of-seven-realms/original.zip",
+      "archiveSha256": "0ca988e6af2fa60df759a812039e5b493cc34824c476a1a86222e90c966dfd98",
+      "mapFiles": [
+        {
+          "file": "maps/community/war-of-seven-realms/1.h3m",
+          "originalArchiveMember": "War of the 7 Realms V2.5.2.h3m",
+          "sizeBytes": 116955,
+          "sha256": "e6d817877cd34b18e2ca0e65213812d2668b4b784bfb006e2cec0f08f8dc3ce8",
+          "formatVersion": 28,
+          "mapSize": [
+            144,
+            144
+          ],
+          "levels": 2,
+          "difficulty": "Impossible",
+          "runtimeImportSupported": false,
+          "terrainBlockValidated": true,
+          "terrainOffset": 5366,
+          "terrainTileCount": 41472,
+          "fullScenarioValidated": false
+        }
+      ],
+      "downloadedOn": "2026-11-15",
+      "playtestedInThisEngine": false
+    },
+    {
+      "title": "The Lone Knight",
+      "author": "Hans C.",
+      "source": "https://www.maps4heroes.com/forum/opinions.php?game=3&map_id=67",
+      "download": "https://www.maps4heroes.com/heroes3/maps/the_lone_knight_67.zip",
+      "siteRatingLabel": "Likes (public site count, not a 5-star rating)",
+      "siteRating": 14,
+      "difficultyLabel": "Impossible",
+      "notes": "四个可选人类势力、剧情探索与支线；长篇地图",
+      "archive": "maps/community/the-lone-knight/original.zip",
+      "archiveSha256": "028a996b37f31712739c31293dd8f020f1dbec64c8647e5f82f15a7685424e82",
+      "mapFiles": [
+        {
+          "file": "maps/community/the-lone-knight/1.h3m",
+          "originalArchiveMember": "LKnight.h3m",
+          "sizeBytes": 149241,
+          "sha256": "2c54a76d0df52555f07193b52d475f0f89bff087d693351d95ce78757b543132",
+          "formatVersion": 28,
+          "mapSize": [
+            144,
+            144
+          ],
+          "levels": 2,
+          "difficulty": "Impossible",
+          "runtimeImportSupported": false,
+          "terrainBlockValidated": true,
+          "terrainOffset": 6860,
+          "terrainTileCount": 41472,
+          "fullScenarioValidated": false
+        }
+      ],
+      "downloadedOn": "2026-11-15",
+      "playtestedInThisEngine": false
+    },
+    {
+      "title": "Seven Lakes",
+      "author": "Oscar Sedell",
+      "source": "https://www.maps4heroes.com/forum/opinions.php?game=3&map_id=12",
+      "download": "https://www.maps4heroes.com/heroes3/maps/Seven_Lakes_1029661774.zip",
+      "siteRatingLabel": "Likes (public site count, not a 5-star rating)",
+      "siteRating": 6,
+      "difficultyLabel": "Normal",
+      "notes": "湖区探索与多方对抗；注意此版本作者为 Oscar Sedell，不是同名 HotA 地图",
+      "archive": "maps/community/seven-lakes/original.zip",
+      "archiveSha256": "92b27303c5ffdf14304a532bedff401097a9249b95d70d5f5135fdd7fafb9cc0",
+      "mapFiles": [
+        {
+          "file": "maps/community/seven-lakes/1.h3m",
+          "originalArchiveMember": "Seven_Lakes_1029661774.h3m",
+          "sizeBytes": 80000,
+          "sha256": "7c40c456bc04d55fd709942cb387f42e42ec1b7d0f428c45ce7dbd77afa38c15",
+          "formatVersion": 28,
+          "mapSize": [
+            144,
+            144
+          ],
+          "levels": 1,
+          "difficulty": "Normal",
+          "runtimeImportSupported": false,
+          "terrainBlockValidated": true,
+          "terrainOffset": 513,
+          "terrainTileCount": 20736,
+          "fullScenarioValidated": false
+        }
+      ],
+      "downloadedOn": "2026-11-15",
+      "playtestedInThisEngine": false
+    },
+    {
+      "title": "Jennifer's Dream Journey (CHI)",
+      "author": "grizliukas",
+      "source": "https://www.maps4heroes.com/forum/opinions.php?game=3&map_id=1847",
+      "download": "https://www.maps4heroes.com/heroes3/maps/jennifer's_dream_journey_chi_1847.zip",
+      "siteRatingLabel": "Likes (public site count, not a 5-star rating)",
+      "siteRating": 26,
+      "difficultyLabel": "Expert",
+      "notes": "中文长篇剧情；隐藏路径多，难度很高，建议熟悉原版后再挑战",
+      "archive": "maps/community/jennifers-dream-journey/original.zip",
+      "archiveSha256": "cd78db52118ed2feaaa9a26e08bdeee3871aac51280e445ba4747eee05552dac",
+      "mapFiles": [
+        {
+          "file": "maps/community/jennifers-dream-journey/1.h3m",
+          "originalArchiveMember": "Jennifer's Dream Journey (CHI).h3m",
+          "sizeBytes": 210059,
+          "sha256": "48e7b97ac5bc2610183b45e46c3750ec6bf8f69369d23840efc1a949f72ca9fb",
+          "formatVersion": 28,
+          "mapSize": [
+            144,
+            144
+          ],
+          "levels": 2,
+          "difficulty": "Expert",
+          "runtimeImportSupported": false,
+          "terrainBlockValidated": true,
+          "terrainOffset": 2820,
+          "terrainTileCount": 41472,
+          "fullScenarioValidated": false
+        }
+      ],
+      "downloadedOn": "2026-11-15",
+      "playtestedInThisEngine": false
+    },
+    {
+      "title": "Jedi Story",
+      "author": "fourzy",
+      "source": "https://www.maps4heroes.com/forum/opinions.php?game=3&map_id=888",
+      "download": "https://www.maps4heroes.com/heroes3/maps/jedi_story_888.zip",
+      "siteRatingLabel": "Likes (public site count, not a 5-star rating)",
+      "siteRating": 25,
+      "difficultyLabel": "Expert",
+      "notes": "单人长篇剧情与战术挑战；需阅读地图事件",
+      "archive": "maps/community/jedi-story/original.zip",
+      "archiveSha256": "8ca631ecfdeea4757e2080b1876b87e3a3864bb3d91e70ce088bc1820002257a",
+      "mapFiles": [
+        {
+          "file": "maps/community/jedi-story/1.h3m",
+          "originalArchiveMember": "Jedi Story.h3m",
+          "sizeBytes": 139753,
+          "sha256": "77d2a1bca993f4bf5e43ab9507026c68548bf53436ec3c50da7285e98bd0325b",
+          "formatVersion": 28,
+          "mapSize": [
+            144,
+            144
+          ],
+          "levels": 2,
+          "difficulty": "Expert",
+          "runtimeImportSupported": false,
+          "terrainBlockValidated": true,
+          "terrainOffset": 1390,
+          "terrainTileCount": 41472,
+          "fullScenarioValidated": false
+        },
+        {
+          "file": "maps/community/jedi-story/2.h3m",
+          "originalArchiveMember": "Jedi_Story_RUS.h3m",
+          "sizeBytes": 140334,
+          "sha256": "3a2f729f7c82f63e811a541f0a102bbf89bd32db0707c5b840f8e350033ab357",
+          "formatVersion": 28,
+          "mapSize": [
+            144,
+            144
+          ],
+          "levels": 2,
+          "difficulty": "Expert",
+          "runtimeImportSupported": false,
+          "terrainBlockValidated": true,
+          "terrainOffset": 1337,
+          "terrainTileCount": 41472,
+          "fullScenarioValidated": false
+        },
+        {
+          "file": "maps/community/jedi-story/3.h3m",
+          "originalArchiveMember": "Jedi_Story_WOG.h3m",
+          "sizeBytes": 140041,
+          "sha256": "cdafa4e7d3a2d287c67381d5698c363014fe4d4aa0eabd8e80ad2d11ba4b92f9",
+          "formatVersion": 28,
+          "mapSize": [
+            144,
+            144
+          ],
+          "levels": 2,
+          "difficulty": "Impossible",
+          "runtimeImportSupported": false,
+          "terrainBlockValidated": true,
+          "terrainOffset": 1390,
+          "terrainTileCount": 41472,
+          "fullScenarioValidated": false
+        }
+      ],
+      "downloadedOn": "2026-11-15",
+      "playtestedInThisEngine": false
+    },
+    {
+      "title": "死人和被埋葬的人 · Dead and Buried",
+      "author": "New World Computing",
+      "source": "https://heroesworld.net/topic/8850/list-of-standard-maps-for-heroes-3/",
+      "download": "https://heroesworld.net/attachments/file/ec69b642-43f6-4e81-96de-d7d61cfbf775/",
+      "siteRatingLabel": "Official original map; no community rating",
+      "siteRating": null,
+      "difficultyLabel": "Hard",
+      "notes": "视频核验地图：36×36 地上/地下，原版 RoE 地形与物件；俄文原图，完整死亡阴影规则仍有差异。",
+      "archive": "references/maps-0.46/standard-maps.zip",
+      "archiveSha256": "2c8e4b63ed9e3d56448826e8c22141023e1003c56ea760b6fe593bcf1165d9ab",
+      "mapFiles": [
+        {
+          "file": "maps/community/dead-and-buried/1.h3m",
+          "originalArchiveMember": "Dead and Buried.h3m",
+          "sizeBytes": 9885,
+          "sha256": "cc23096e678a2e3bd9cf62445d7bba1828924222969b6ca5828d4805886fc162",
+          "formatVersion": 14,
+          "mapSize": [
+            36,
+            36
+          ],
+          "levels": 2,
+          "difficulty": "Hard",
+          "runtimeImportSupported": true,
+          "terrainBlockValidated": true,
+          "fullScenarioValidated": false,
+          "conversion": {
+            "file": "references/maps-0.46/dead-and-buried-sod.h3m",
+            "sha256": "eb72980147f69d9248e54f034e2618592cef9b5b48c4a2672e824a2581a70be9",
+            "tool": "HeroWO h3m2json; public domain/Unlicense",
+            "scope": "RoE binary records normalized to SoD; original download retained unchanged"
+          }
+        }
+      ],
+      "downloadedOn": "2026-11-16",
+      "playtestedInThisEngine": false
+    }
+  ],
+  "runtimeCompatibility": "0.46: original map exploration with partial story/siege support; full compatibility and walkthrough status are recorded in versioned validation files.",
+  "archivePolicy": "Archives retained unchanged; only bounded .h3m data extracted; no downloaded code executed.",
+  "errors": []
+}

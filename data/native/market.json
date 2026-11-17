@@ -1,0 +1,380 @@
+{
+  "edition": "Heroes III Complete / Shadow of Death, classic resource trade",
+  "sources": [
+    {
+      "file": "references/rules/wiki/Marketplace.html",
+      "sha256": "e03d2e1804da55de6f9b6b373eca37b734e1fff6d68b4ff82bbecf5559f62c3e"
+    },
+    {
+      "file": "references/rules/wiki/Trading_Post.html",
+      "sha256": "4397bd123c7d8b8d7733498cad3519400a00d5511e90a7a79059bf27bcde813b"
+    }
+  ],
+  "categories": [
+    "goldToBasic",
+    "goldToRare",
+    "basicToGold",
+    "basicToBasic",
+    "basicToRare",
+    "rareToGold",
+    "rareToBasic",
+    "rareToRare"
+  ],
+  "basicResources": [
+    "wood",
+    "ore"
+  ],
+  "rareResources": [
+    "mercury",
+    "sulfur",
+    "crystal",
+    "gems"
+  ],
+  "rows": [
+    {
+      "marketplaces": 1,
+      "rates": [
+        {
+          "give": 2500,
+          "receive": 1
+        },
+        {
+          "give": 5000,
+          "receive": 1
+        },
+        {
+          "give": 1,
+          "receive": 25
+        },
+        {
+          "give": 10,
+          "receive": 1
+        },
+        {
+          "give": 20,
+          "receive": 1
+        },
+        {
+          "give": 1,
+          "receive": 50
+        },
+        {
+          "give": 5,
+          "receive": 1
+        },
+        {
+          "give": 10,
+          "receive": 1
+        }
+      ]
+    },
+    {
+      "marketplaces": 2,
+      "rates": [
+        {
+          "give": 1667,
+          "receive": 1
+        },
+        {
+          "give": 3333,
+          "receive": 1
+        },
+        {
+          "give": 1,
+          "receive": 37
+        },
+        {
+          "give": 7,
+          "receive": 1
+        },
+        {
+          "give": 13,
+          "receive": 1
+        },
+        {
+          "give": 1,
+          "receive": 75
+        },
+        {
+          "give": 3,
+          "receive": 1
+        },
+        {
+          "give": 7,
+          "receive": 1
+        }
+      ]
+    },
+    {
+      "marketplaces": 3,
+      "rates": [
+        {
+          "give": 1250,
+          "receive": 1
+        },
+        {
+          "give": 2500,
+          "receive": 1
+        },
+        {
+          "give": 1,
+          "receive": 50
+        },
+        {
+          "give": 5,
+          "receive": 1
+        },
+        {
+          "give": 10,
+          "receive": 1
+        },
+        {
+          "give": 1,
+          "receive": 100
+        },
+        {
+          "give": 3,
+          "receive": 1
+        },
+        {
+          "give": 5,
+          "receive": 1
+        }
+      ]
+    },
+    {
+      "marketplaces": 4,
+      "rates": [
+        {
+          "give": 1000,
+          "receive": 1
+        },
+        {
+          "give": 2000,
+          "receive": 1
+        },
+        {
+          "give": 1,
+          "receive": 62
+        },
+        {
+          "give": 4,
+          "receive": 1
+        },
+        {
+          "give": 8,
+          "receive": 1
+        },
+        {
+          "give": 1,
+          "receive": 125
+        },
+        {
+          "give": 2,
+          "receive": 1
+        },
+        {
+          "give": 4,
+          "receive": 1
+        }
+      ]
+    },
+    {
+      "marketplaces": 5,
+      "rates": [
+        {
+          "give": 833,
+          "receive": 1
+        },
+        {
+          "give": 1667,
+          "receive": 1
+        },
+        {
+          "give": 1,
+          "receive": 75
+        },
+        {
+          "give": 3,
+          "receive": 1
+        },
+        {
+          "give": 7,
+          "receive": 1
+        },
+        {
+          "give": 1,
+          "receive": 150
+        },
+        {
+          "give": 2,
+          "receive": 1
+        },
+        {
+          "give": 3,
+          "receive": 1
+        }
+      ]
+    },
+    {
+      "marketplaces": 6,
+      "rates": [
+        {
+          "give": 714,
+          "receive": 1
+        },
+        {
+          "give": 1429,
+          "receive": 1
+        },
+        {
+          "give": 1,
+          "receive": 88
+        },
+        {
+          "give": 3,
+          "receive": 1
+        },
+        {
+          "give": 6,
+          "receive": 1
+        },
+        {
+          "give": 1,
+          "receive": 175
+        },
+        {
+          "give": 1,
+          "receive": 1
+        },
+        {
+          "give": 3,
+          "receive": 1
+        }
+      ]
+    },
+    {
+      "marketplaces": 7,
+      "rates": [
+        {
+          "give": 625,
+          "receive": 1
+        },
+        {
+          "give": 1250,
+          "receive": 1
+        },
+        {
+          "give": 1,
+          "receive": 100
+        },
+        {
+          "give": 3,
+          "receive": 1
+        },
+        {
+          "give": 5,
+          "receive": 1
+        },
+        {
+          "give": 1,
+          "receive": 200
+        },
+        {
+          "give": 1,
+          "receive": 1
+        },
+        {
+          "give": 3,
+          "receive": 1
+        }
+      ]
+    },
+    {
+      "marketplaces": 8,
+      "rates": [
+        {
+          "give": 556,
+          "receive": 1
+        },
+        {
+          "give": 1111,
+          "receive": 1
+        },
+        {
+          "give": 1,
+          "receive": 112
+        },
+        {
+          "give": 2,
+          "receive": 1
+        },
+        {
+          "give": 4,
+          "receive": 1
+        },
+        {
+          "give": 1,
+          "receive": 225
+        },
+        {
+          "give": 1,
+          "receive": 1
+        },
+        {
+          "give": 2,
+          "receive": 1
+        }
+      ]
+    },
+    {
+      "marketplaces": 9,
+      "rates": [
+        {
+          "give": 500,
+          "receive": 1
+        },
+        {
+          "give": 1000,
+          "receive": 1
+        },
+        {
+          "give": 1,
+          "receive": 125
+        },
+        {
+          "give": 2,
+          "receive": 1
+        },
+        {
+          "give": 4,
+          "receive": 1
+        },
+        {
+          "give": 1,
+          "receive": 250
+        },
+        {
+          "give": 1,
+          "receive": 1
+        },
+        {
+          "give": 2,
+          "receive": 1
+        }
+      ]
+    }
+  ],
+  "maximumEffectiveMarkets": 9,
+  "tradingPostMarkets": 5,
+  "tradingPostTemplate": {
+    "archive": "h3bitmap.lod",
+    "entry": "objects.txt",
+    "entrySha256": "03baa3de63d0bc28976c412f82e4d83265c1fb9efc09336db5475030faea2099",
+    "record": "AVXpost0.def 001111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 000000101 99 0 0 0"
+  },
+  "remaining": [
+    "multiple owned towns and player resource transfers",
+    "all market services and original executable comparison"
+  ]
+}

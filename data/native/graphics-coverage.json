@@ -1,0 +1,5602 @@
+{
+  "sources": [
+    "references/demo/source.json",
+    "references/windows-demo/source.json",
+    "references/demo/inventory.json",
+    "references/rules/sources.json"
+  ],
+  "staticImages": 1224,
+  "spriteFiles": 2552,
+  "frames": 32787,
+  "creaturesWithAnimations": 128,
+  "creaturesMissingAnimations": 13,
+  "creatures": [
+    {
+      "id": 0,
+      "name": "枪兵",
+      "portraitFrame": 2,
+      "animation": "cpkman.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 4,
+        "2": 7,
+        "3": 6,
+        "4": 13,
+        "5": 5,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 10,
+        "12": 10,
+        "13": 11
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 1,
+      "name": "戟兵",
+      "portraitFrame": 3,
+      "animation": "chalbd.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 4,
+        "2": 8,
+        "3": 6,
+        "4": 12,
+        "5": 4,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 6,
+        "12": 6,
+        "13": 7
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 2,
+      "name": "弓箭手",
+      "portraitFrame": 4,
+      "animation": "clcbow.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 9,
+        "2": 8,
+        "3": 6,
+        "4": 9,
+        "5": 6,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 6,
+        "12": 6,
+        "13": 6,
+        "14": 8,
+        "15": 8,
+        "16": 8,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 3,
+      "name": "神射手",
+      "portraitFrame": 5,
+      "animation": "chcbow.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 9,
+        "2": 8,
+        "3": 6,
+        "4": 10,
+        "5": 6,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 6,
+        "12": 6,
+        "13": 6,
+        "14": 8,
+        "15": 8,
+        "16": 8,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 4,
+      "name": "狮鹫",
+      "portraitFrame": 6,
+      "animation": "cgriff.def",
+      "available": true,
+      "groups": {
+        "0": 4,
+        "1": 8,
+        "2": 8,
+        "3": 7,
+        "4": 8,
+        "5": 9,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 9,
+        "12": 9,
+        "13": 9,
+        "20": 4,
+        "21": 4
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 5,
+      "name": "皇家狮鹫",
+      "portraitFrame": 7,
+      "animation": "crgrif.def",
+      "available": true,
+      "groups": {
+        "0": 4,
+        "1": 8,
+        "2": 8,
+        "3": 7,
+        "4": 8,
+        "5": 9,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 9,
+        "12": 9,
+        "13": 9,
+        "20": 4,
+        "21": 4
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 6,
+      "name": "剑士",
+      "portraitFrame": 8,
+      "animation": "csword.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 8,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 6,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 7,
+      "name": "十字军",
+      "portraitFrame": 9,
+      "animation": "ccrusd.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 8,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 6,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 8,
+      "name": "僧侣",
+      "portraitFrame": 10,
+      "animation": "cmonkk.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 10,
+        "2": 6,
+        "3": 8,
+        "4": 7,
+        "5": 11,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 9,
+        "12": 8,
+        "13": 9,
+        "14": 10,
+        "15": 10,
+        "16": 9,
+        "20": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 9,
+      "name": "祭司",
+      "portraitFrame": 11,
+      "animation": "czealt.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 10,
+        "2": 6,
+        "3": 8,
+        "4": 7,
+        "5": 11,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 9,
+        "12": 8,
+        "13": 9,
+        "14": 13,
+        "15": 14,
+        "16": 13,
+        "17": 10,
+        "18": 10,
+        "19": 10,
+        "20": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 10,
+      "name": "骑士",
+      "portraitFrame": 12,
+      "animation": "ccavlr.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 5,
+        "2": 4,
+        "3": 8,
+        "4": 6,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 10,
+        "12": 10,
+        "13": 9,
+        "20": 3,
+        "21": 4
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 11,
+      "name": "冠军骑士",
+      "portraitFrame": 13,
+      "animation": "cchamp.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 5,
+        "2": 4,
+        "3": 8,
+        "4": 6,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 10,
+        "12": 10,
+        "13": 9,
+        "20": 3,
+        "21": 4
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 12,
+      "name": "天使",
+      "portraitFrame": 14,
+      "animation": "cangel.def",
+      "available": true,
+      "groups": {
+        "0": 7,
+        "1": 10,
+        "2": 8,
+        "3": 6,
+        "4": 10,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 6,
+        "12": 6,
+        "13": 6,
+        "14": 6,
+        "15": 6,
+        "16": 6,
+        "20": 2,
+        "21": 3
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 13,
+      "name": "大天使",
+      "portraitFrame": 15,
+      "animation": "crangl.def",
+      "available": true,
+      "groups": {
+        "0": 7,
+        "1": 7,
+        "2": 8,
+        "3": 6,
+        "4": 10,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 6,
+        "12": 6,
+        "13": 6,
+        "14": 6,
+        "15": 6,
+        "16": 6,
+        "20": 2,
+        "21": 3
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 14,
+      "name": "半人马",
+      "portraitFrame": 16,
+      "animation": "ccentr.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 4,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "14": 8,
+        "15": 8,
+        "16": 8,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 15,
+      "name": "半人马首领",
+      "portraitFrame": 17,
+      "animation": "cecent.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 9,
+        "2": 9,
+        "3": 6,
+        "4": 11,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "14": 8,
+        "15": 8,
+        "16": 8,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 16,
+      "name": "矮人",
+      "portraitFrame": 18,
+      "animation": "cdwarf.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 7,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 6,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 17,
+      "name": "战斗矮人",
+      "portraitFrame": 19,
+      "animation": "cbdwar.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 7,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 6,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 18,
+      "name": "木精灵",
+      "portraitFrame": 20,
+      "animation": "celf.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 11,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 5,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "14": 12,
+        "15": 12,
+        "16": 12,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 19,
+      "name": "大精灵",
+      "portraitFrame": 21,
+      "animation": "cgrelf.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 11,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 5,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "14": 12,
+        "15": 12,
+        "16": 12,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 20,
+      "name": "飞马",
+      "portraitFrame": 22,
+      "animation": "cpegas.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 9,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 21,
+      "name": "银飞马",
+      "portraitFrame": 23,
+      "animation": "capegs.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 9,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 22,
+      "name": "枯木卫士",
+      "portraitFrame": 24,
+      "animation": "ctree.def",
+      "available": true,
+      "groups": {
+        "0": 9,
+        "1": 9,
+        "2": 8,
+        "3": 7,
+        "4": 10,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 23,
+      "name": "枯木战士",
+      "portraitFrame": 25,
+      "animation": "cbtree.def",
+      "available": true,
+      "groups": {
+        "0": 9,
+        "1": 9,
+        "2": 8,
+        "3": 7,
+        "4": 10,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "17": 8,
+        "18": 8,
+        "19": 8,
+        "20": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 24,
+      "name": "独角兽",
+      "portraitFrame": 26,
+      "animation": "cunico.def",
+      "available": true,
+      "groups": {
+        "0": 7,
+        "1": 5,
+        "2": 8,
+        "3": 7,
+        "4": 11,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 9,
+        "12": 9,
+        "13": 9,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 25,
+      "name": "独角神兽",
+      "portraitFrame": 27,
+      "animation": "cwunic.def",
+      "available": true,
+      "groups": {
+        "0": 7,
+        "1": 5,
+        "2": 8,
+        "3": 7,
+        "4": 11,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 9,
+        "12": 9,
+        "13": 9,
+        "17": 7,
+        "18": 7,
+        "19": 7,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 26,
+      "name": "绿龙",
+      "portraitFrame": 28,
+      "animation": "cgdrag.def",
+      "available": true,
+      "groups": {
+        "0": 4,
+        "1": 5,
+        "2": 8,
+        "3": 6,
+        "4": 6,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 9,
+        "12": 9,
+        "13": 9,
+        "17": 9,
+        "18": 9,
+        "19": 9,
+        "20": 4,
+        "21": 4
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 27,
+      "name": "金龙",
+      "portraitFrame": 29,
+      "animation": "cddrag.def",
+      "available": true,
+      "groups": {
+        "0": 4,
+        "1": 5,
+        "2": 9,
+        "3": 6,
+        "4": 6,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 9,
+        "12": 9,
+        "13": 9,
+        "17": 9,
+        "18": 9,
+        "19": 9,
+        "20": 4,
+        "21": 4
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 28,
+      "name": "小妖精",
+      "portraitFrame": 30,
+      "animation": "cgrema.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 14,
+        "2": 8,
+        "3": 7,
+        "4": 10,
+        "5": 9,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 29,
+      "name": "大妖精",
+      "portraitFrame": 31,
+      "animation": "cgremm.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 14,
+        "2": 8,
+        "3": 7,
+        "4": 10,
+        "5": 9,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "14": 17,
+        "15": 16,
+        "16": 16,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 30,
+      "name": "石像鬼",
+      "portraitFrame": 32,
+      "animation": "cgargo.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 9,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 17,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 2,
+        "21": 3
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 31,
+      "name": "石像怪",
+      "portraitFrame": 33,
+      "animation": "cogarg.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 9,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 17,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 2,
+        "21": 3
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 32,
+      "name": "石人",
+      "portraitFrame": 34,
+      "animation": "csgole.def",
+      "available": true,
+      "groups": {
+        "0": 9,
+        "1": 5,
+        "2": 8,
+        "3": 7,
+        "4": 8,
+        "5": 9,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 33,
+      "name": "铁人",
+      "portraitFrame": 35,
+      "animation": "cigole.def",
+      "available": true,
+      "groups": {
+        "0": 9,
+        "1": 5,
+        "2": 8,
+        "3": 7,
+        "4": 8,
+        "5": 9,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 34,
+      "name": "法师",
+      "portraitFrame": 36,
+      "animation": "cmage.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 11,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 10,
+        "12": 10,
+        "13": 10,
+        "14": 13,
+        "15": 13,
+        "16": 13,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 35,
+      "name": "大法师",
+      "portraitFrame": 37,
+      "animation": "camage.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 11,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 10,
+        "12": 10,
+        "13": 10,
+        "14": 13,
+        "15": 13,
+        "16": 13,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 36,
+      "name": "神怪",
+      "portraitFrame": 38,
+      "animation": "cgenie.def",
+      "available": true,
+      "groups": {
+        "0": 4,
+        "1": 7,
+        "2": 7,
+        "3": 7,
+        "4": 7,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 37,
+      "name": "神怪主",
+      "portraitFrame": 39,
+      "animation": "csulta.def",
+      "available": true,
+      "groups": {
+        "0": 4,
+        "1": 6,
+        "2": 7,
+        "3": 7,
+        "4": 7,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 2,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "17": 7,
+        "18": 7,
+        "19": 7,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 38,
+      "name": "娜迦",
+      "portraitFrame": 40,
+      "animation": "cnaga.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 8,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 9,
+        "12": 8,
+        "13": 9,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 39,
+      "name": "娜迦女王",
+      "portraitFrame": 41,
+      "animation": "cnagag.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 8,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 9,
+        "12": 9,
+        "13": 9,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 40,
+      "name": "巨人",
+      "portraitFrame": 42,
+      "animation": "cltita.def",
+      "available": true,
+      "groups": {
+        "0": 9,
+        "1": 8,
+        "2": 8,
+        "3": 7,
+        "4": 8,
+        "5": 9,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 41,
+      "name": "泰坦巨人",
+      "portraitFrame": 43,
+      "animation": "cgtita.def",
+      "available": true,
+      "groups": {
+        "0": 9,
+        "1": 8,
+        "2": 8,
+        "3": 7,
+        "4": 9,
+        "5": 9,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "14": 8,
+        "15": 7,
+        "16": 7,
+        "20": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 42,
+      "name": "小怪物",
+      "portraitFrame": 44,
+      "animation": "cimp.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 8,
+        "2": 8,
+        "3": 7,
+        "4": 7,
+        "5": 9,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 1,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 43,
+      "name": "怪物",
+      "portraitFrame": 45,
+      "animation": "cfamil.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 8,
+        "2": 8,
+        "3": 7,
+        "4": 7,
+        "5": 9,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 1,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 44,
+      "name": "歌革",
+      "portraitFrame": 48,
+      "animation": "cgog.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 10,
+        "2": 6,
+        "3": 7,
+        "4": 7,
+        "5": 9,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 8,
+        "12": 8,
+        "13": 9,
+        "14": 8,
+        "15": 8,
+        "16": 9,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 45,
+      "name": "玛各",
+      "portraitFrame": 49,
+      "animation": "cmagog.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 10,
+        "2": 6,
+        "3": 7,
+        "4": 7,
+        "5": 9,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 8,
+        "12": 8,
+        "13": 9,
+        "14": 8,
+        "15": 8,
+        "16": 9,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 46,
+      "name": "地狱猎犬",
+      "portraitFrame": 46,
+      "animation": "chhoun.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 10,
+        "2": 8,
+        "3": 7,
+        "4": 8,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 47,
+      "name": "地狱三首犬",
+      "portraitFrame": 47,
+      "animation": "ccerbu.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 10,
+        "2": 8,
+        "3": 7,
+        "4": 8,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 48,
+      "name": "恶鬼",
+      "portraitFrame": 50,
+      "animation": "cohdem.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 9,
+        "2": 8,
+        "3": 7,
+        "4": 10,
+        "5": 9,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 2,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 49,
+      "name": "长角恶鬼",
+      "portraitFrame": 51,
+      "animation": "cthdem.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 9,
+        "2": 8,
+        "3": 7,
+        "4": 10,
+        "5": 9,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 2,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 50,
+      "name": "邪神",
+      "portraitFrame": 52,
+      "animation": "cpfien.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 11,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 5,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 51,
+      "name": "邪神王",
+      "portraitFrame": 53,
+      "animation": "cpfoe.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 11,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 5,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "18": 15,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 52,
+      "name": "火精灵",
+      "portraitFrame": 54,
+      "animation": "cefree.def",
+      "available": true,
+      "groups": {
+        "0": 7,
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 11,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 9,
+        "12": 9,
+        "13": 10,
+        "18": 11,
+        "20": 6,
+        "21": 6
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 53,
+      "name": "烈火精灵",
+      "portraitFrame": 55,
+      "animation": "cefres.def",
+      "available": true,
+      "groups": {
+        "0": 7,
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 11,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 9,
+        "12": 9,
+        "13": 10,
+        "18": 11,
+        "20": 6,
+        "21": 6
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 54,
+      "name": "恶魔",
+      "portraitFrame": 56,
+      "animation": "cdevil.def",
+      "available": true,
+      "groups": {
+        "0": 1,
+        "1": 13,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 14,
+        "21": 10
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 55,
+      "name": "大恶魔",
+      "portraitFrame": 57,
+      "animation": "cadevl.def",
+      "available": true,
+      "groups": {
+        "0": 1,
+        "1": 13,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 14,
+        "21": 10
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 56,
+      "name": "骷髅兵",
+      "portraitFrame": 58,
+      "animation": "cskele.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 11,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 6,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 57,
+      "name": "骷髅勇士",
+      "portraitFrame": 59,
+      "animation": "cwskel.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 11,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 6,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 58,
+      "name": "行尸",
+      "portraitFrame": 60,
+      "animation": "czombi.def",
+      "available": true,
+      "groups": {
+        "0": 10,
+        "1": 9,
+        "2": 8,
+        "3": 7,
+        "4": 8,
+        "5": 9,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 59,
+      "name": "僵尸",
+      "portraitFrame": 61,
+      "animation": "czomlo.def",
+      "available": true,
+      "groups": {
+        "0": 10,
+        "1": 9,
+        "2": 8,
+        "3": 7,
+        "4": 8,
+        "5": 9,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 60,
+      "name": "幽灵",
+      "portraitFrame": 62,
+      "animation": "cwight.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 10,
+        "2": 8,
+        "3": 6,
+        "4": 10,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "14": 7,
+        "15": 7,
+        "16": 7,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 61,
+      "name": "阴魂",
+      "portraitFrame": 63,
+      "animation": "cwrait.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 10,
+        "2": 8,
+        "3": 6,
+        "4": 10,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "14": 7,
+        "15": 7,
+        "16": 7,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 62,
+      "name": "吸血鬼",
+      "portraitFrame": 64,
+      "animation": "cvamp.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 9,
+        "2": 8,
+        "3": 7,
+        "4": 9,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 5,
+        "21": 5
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 63,
+      "name": "吸血鬼王",
+      "portraitFrame": 65,
+      "animation": "cnosfe.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 9,
+        "2": 8,
+        "3": 7,
+        "4": 9,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "17": 7,
+        "18": 7,
+        "19": 7,
+        "20": 5,
+        "21": 5
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 64,
+      "name": "尸巫",
+      "portraitFrame": 66,
+      "animation": "clich.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 11,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 7,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "14": 11,
+        "15": 11,
+        "16": 11,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 65,
+      "name": "尸巫王",
+      "portraitFrame": 67,
+      "animation": "cplich.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 11,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 7,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "14": 11,
+        "15": 11,
+        "16": 11,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 66,
+      "name": "暗黑骑士",
+      "portraitFrame": 68,
+      "animation": "cbknig.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 11,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 67,
+      "name": "恐怖骑士",
+      "portraitFrame": 69,
+      "animation": "cblord.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 11,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "17": 11,
+        "18": 11,
+        "19": 11,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 68,
+      "name": "骨龙",
+      "portraitFrame": 70,
+      "animation": "cndrgn.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 5,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 3,
+        "21": 4
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 69,
+      "name": "鬼龙",
+      "portraitFrame": 71,
+      "animation": "chdrgn.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 9,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 3,
+        "21": 4
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 70,
+      "name": "洞穴人",
+      "portraitFrame": 72,
+      "animation": "ctrogl.def",
+      "available": true,
+      "groups": {
+        "0": 7,
+        "1": 7,
+        "2": 4,
+        "3": 6,
+        "4": 6,
+        "5": 7,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 8,
+        "12": 10,
+        "13": 8
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 71,
+      "name": "地狱洞穴人",
+      "portraitFrame": 73,
+      "animation": "citrog.def",
+      "available": true,
+      "groups": {
+        "0": 7,
+        "1": 7,
+        "2": 6,
+        "3": 6,
+        "4": 6,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 8,
+        "12": 10,
+        "13": 8
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 72,
+      "name": "鹰身女妖",
+      "portraitFrame": 74,
+      "animation": "charpy.def",
+      "available": true,
+      "groups": {
+        "0": 7,
+        "1": 11,
+        "2": 7,
+        "3": 6,
+        "4": 8,
+        "5": 7,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 12,
+        "12": 12,
+        "13": 10,
+        "20": 4,
+        "21": 5
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 73,
+      "name": "鹰身女巫",
+      "portraitFrame": 75,
+      "animation": "charph.def",
+      "available": true,
+      "groups": {
+        "0": 7,
+        "1": 11,
+        "2": 7,
+        "3": 6,
+        "4": 8,
+        "5": 7,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 12,
+        "12": 12,
+        "13": 10,
+        "18": 13,
+        "20": 3,
+        "21": 3
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 74,
+      "name": "邪眼",
+      "portraitFrame": 76,
+      "animation": "cbehol.def",
+      "available": true,
+      "groups": {
+        "0": 11,
+        "1": 3,
+        "2": 7,
+        "3": 6,
+        "4": 11,
+        "5": 5,
+        "6": 7,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "14": 8,
+        "15": 7,
+        "16": 7,
+        "17": 7,
+        "18": 7,
+        "19": 7,
+        "20": 3,
+        "21": 3
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 75,
+      "name": "毒眼",
+      "portraitFrame": 77,
+      "animation": "ceveye.def",
+      "available": true,
+      "groups": {
+        "0": 11,
+        "1": 3,
+        "2": 7,
+        "3": 6,
+        "4": 11,
+        "5": 5,
+        "6": 7,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "14": 8,
+        "15": 7,
+        "16": 7,
+        "17": 7,
+        "18": 7,
+        "19": 7,
+        "20": 3,
+        "21": 3
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 76,
+      "name": "美杜莎",
+      "portraitFrame": 78,
+      "animation": "cmedus.def",
+      "available": true,
+      "groups": {
+        "0": 7,
+        "1": 10,
+        "2": 8,
+        "3": 6,
+        "4": 10,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 11,
+        "12": 11,
+        "13": 11,
+        "14": 10,
+        "15": 10,
+        "16": 10,
+        "20": 2,
+        "21": 3
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 77,
+      "name": "美杜莎女王",
+      "portraitFrame": 79,
+      "animation": "cmeduq.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 10,
+        "2": 8,
+        "3": 6,
+        "4": 10,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 10,
+        "12": 10,
+        "13": 10,
+        "14": 10,
+        "15": 10,
+        "16": 10,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 78,
+      "name": "牛头怪",
+      "portraitFrame": 80,
+      "animation": "cminot.def",
+      "available": true,
+      "groups": {
+        "0": 7,
+        "1": 6,
+        "2": 10,
+        "3": 8,
+        "4": 8,
+        "5": 7,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 8,
+        "12": 8,
+        "13": 9
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 79,
+      "name": "牛头王",
+      "portraitFrame": 81,
+      "animation": "cminok.def",
+      "available": true,
+      "groups": {
+        "0": 7,
+        "1": 6,
+        "2": 10,
+        "3": 8,
+        "4": 8,
+        "5": 7,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 8,
+        "12": 8,
+        "13": 9,
+        "17": 8,
+        "18": 8,
+        "19": 8
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 80,
+      "name": "狮蝎",
+      "portraitFrame": 82,
+      "animation": "cmcore.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 8,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "17": 8,
+        "18": 8,
+        "19": 8,
+        "20": 3,
+        "21": 3
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 81,
+      "name": "毒狮蝎",
+      "portraitFrame": 83,
+      "animation": "ccmcor.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 8,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "17": 8,
+        "18": 8,
+        "19": 8,
+        "20": 3,
+        "21": 3
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 82,
+      "name": "赤龙",
+      "portraitFrame": 84,
+      "animation": "crdrgn.def",
+      "available": true,
+      "groups": {
+        "0": 4,
+        "1": 5,
+        "2": 8,
+        "3": 7,
+        "4": 9,
+        "5": 10,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 10,
+        "12": 8,
+        "13": 11,
+        "17": 10,
+        "18": 8,
+        "19": 11,
+        "20": 4,
+        "21": 6
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 83,
+      "name": "黑龙",
+      "portraitFrame": 85,
+      "animation": "cbdrgn.def",
+      "available": true,
+      "groups": {
+        "0": 4,
+        "1": 5,
+        "2": 8,
+        "3": 7,
+        "4": 9,
+        "5": 10,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 10,
+        "12": 8,
+        "13": 11,
+        "17": 10,
+        "18": 8,
+        "19": 11,
+        "20": 4,
+        "21": 6
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 84,
+      "name": "大耳怪",
+      "portraitFrame": 86,
+      "animation": "cgobli.def",
+      "available": true,
+      "groups": {
+        "0": 9,
+        "1": 9,
+        "2": 8,
+        "3": 7,
+        "4": 9,
+        "5": 9,
+        "7": 3,
+        "8": 3,
+        "9": 2,
+        "10": 3,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 85,
+      "name": "大耳怪王",
+      "portraitFrame": 87,
+      "animation": "chgobl.def",
+      "available": true,
+      "groups": {
+        "0": 9,
+        "1": 9,
+        "2": 7,
+        "3": 7,
+        "4": 9,
+        "5": 9,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 86,
+      "name": "恶狼骑士",
+      "portraitFrame": 88,
+      "animation": "cbwlfr.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 9,
+        "2": 8,
+        "3": 7,
+        "4": 8,
+        "5": 7,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 87,
+      "name": "恶狼斗士",
+      "portraitFrame": 89,
+      "animation": "cuwlfr.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 9,
+        "2": 8,
+        "3": 7,
+        "4": 8,
+        "5": 7,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 88,
+      "name": "半兽人",
+      "portraitFrame": 90,
+      "animation": "corc.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 11,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 6,
+        "12": 6,
+        "13": 6,
+        "14": 7,
+        "15": 7,
+        "16": 7,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 89,
+      "name": "半兽人首领",
+      "portraitFrame": 91,
+      "animation": "corcch.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 11,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "14": 7,
+        "15": 7,
+        "16": 7,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 90,
+      "name": "食人魔",
+      "portraitFrame": 92,
+      "animation": "cogre.def",
+      "available": true,
+      "groups": {
+        "0": 9,
+        "1": 9,
+        "2": 8,
+        "3": 7,
+        "4": 9,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 91,
+      "name": "食人魔王",
+      "portraitFrame": 93,
+      "animation": "cogmag.def",
+      "available": true,
+      "groups": {
+        "0": 9,
+        "1": 9,
+        "2": 8,
+        "3": 7,
+        "4": 9,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "17": 8,
+        "18": 8,
+        "19": 8,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 92,
+      "name": "大雕",
+      "portraitFrame": 94,
+      "animation": "croc.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 7,
+        "2": 8,
+        "3": 7,
+        "4": 9,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 9,
+        "12": 8,
+        "13": 9,
+        "20": 4,
+        "21": 4
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 93,
+      "name": "雷鸟",
+      "portraitFrame": 95,
+      "animation": "ctbird.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 8,
+        "2": 8,
+        "3": 7,
+        "4": 9,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 9,
+        "12": 8,
+        "13": 9,
+        "20": 4,
+        "21": 4
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 94,
+      "name": "独眼巨人",
+      "portraitFrame": 96,
+      "animation": "ccyclr.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 7,
+        "2": 6,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "14": 16,
+        "15": 17,
+        "16": 17,
+        "20": 4,
+        "21": 5
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 95,
+      "name": "独眼王",
+      "portraitFrame": 97,
+      "animation": "ccycllor.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 7,
+        "2": 6,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "14": 16,
+        "15": 17,
+        "16": 17,
+        "17": 12,
+        "18": 12,
+        "19": 12,
+        "20": 4,
+        "21": 5
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 96,
+      "name": "比蒙巨兽",
+      "portraitFrame": 98,
+      "animation": "cybehe.def",
+      "available": true,
+      "groups": {
+        "0": 9,
+        "1": 10,
+        "2": 8,
+        "3": 7,
+        "4": 8,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 97,
+      "name": "远古比蒙",
+      "portraitFrame": 99,
+      "animation": "cabehe.def",
+      "available": true,
+      "groups": {
+        "0": 9,
+        "1": 10,
+        "2": 8,
+        "3": 7,
+        "4": 7,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 98,
+      "name": "狼人",
+      "portraitFrame": 100,
+      "animation": "cgnoll.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 15,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 6,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 99,
+      "name": "大狼人",
+      "portraitFrame": 101,
+      "animation": "cgnolm.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 15,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 6,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 100,
+      "name": "蜥蜴人",
+      "portraitFrame": 102,
+      "animation": "cpliza.def",
+      "available": true,
+      "groups": {
+        "0": 7,
+        "1": 10,
+        "2": 8,
+        "3": 6,
+        "4": 10,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 6,
+        "12": 6,
+        "13": 6,
+        "14": 10,
+        "15": 10,
+        "16": 10,
+        "20": 2,
+        "21": 3
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 101,
+      "name": "蜥蜴勇士",
+      "portraitFrame": 103,
+      "animation": "caliza.def",
+      "available": true,
+      "groups": {
+        "0": 7,
+        "1": 10,
+        "2": 8,
+        "3": 6,
+        "4": 10,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 9,
+        "12": 9,
+        "13": 9,
+        "14": 10,
+        "15": 10,
+        "16": 10,
+        "20": 2,
+        "21": 3
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 102,
+      "name": "毒蝇",
+      "portraitFrame": 106,
+      "animation": "cdrfly.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 5,
+        "2": 6,
+        "3": 6,
+        "4": 7,
+        "5": 7,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 103,
+      "name": "龙蝇",
+      "portraitFrame": 107,
+      "animation": "cdrfir.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 5,
+        "2": 6,
+        "3": 6,
+        "4": 7,
+        "5": 7,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 104,
+      "name": "蛇蜥",
+      "portraitFrame": 108,
+      "animation": "cbasil.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 4,
+        "2": 8,
+        "3": 6,
+        "4": 10,
+        "5": 6,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 6,
+        "12": 6,
+        "13": 6,
+        "17": 11,
+        "18": 11,
+        "19": 11,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 105,
+      "name": "巨蜥",
+      "portraitFrame": 109,
+      "animation": "cgbasi.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 4,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 6,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 6,
+        "12": 6,
+        "13": 6,
+        "17": 11,
+        "18": 11,
+        "19": 11,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 106,
+      "name": "蛇皮兽",
+      "portraitFrame": 104,
+      "animation": "ccgorg.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 4,
+        "2": 8,
+        "3": 6,
+        "4": 12,
+        "5": 5,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 6,
+        "13": 6
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 107,
+      "name": "蛮牛",
+      "portraitFrame": 105,
+      "animation": "cbgog.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 4,
+        "2": 8,
+        "3": 6,
+        "4": 12,
+        "5": 5,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 8,
+        "12": 7,
+        "13": 9
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 108,
+      "name": "飞龙",
+      "portraitFrame": 110,
+      "animation": "cwyver.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 8,
+        "2": 8,
+        "3": 9,
+        "4": 8,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 4,
+        "21": 6
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 109,
+      "name": "飞龙王",
+      "portraitFrame": 111,
+      "animation": "cwyvmn.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 8,
+        "2": 8,
+        "3": 9,
+        "4": 8,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 4,
+        "21": 6
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 110,
+      "name": "九头怪",
+      "portraitFrame": 112,
+      "animation": "chydra.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 7,
+        "2": 8,
+        "3": 6,
+        "4": 10,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 17,
+        "12": 17,
+        "13": 17,
+        "14": 17,
+        "15": 17,
+        "16": 17,
+        "17": 17,
+        "18": 17,
+        "19": 17,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 111,
+      "name": "终极九头怪",
+      "portraitFrame": 113,
+      "animation": "cchydr.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 6,
+        "2": 8,
+        "3": 6,
+        "4": 10,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 17,
+        "12": 17,
+        "13": 17,
+        "14": 17,
+        "15": 17,
+        "16": 17,
+        "17": 17,
+        "18": 17,
+        "19": 17,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 112,
+      "name": "小精灵",
+      "portraitFrame": 120,
+      "animation": "cpixie.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 9,
+        "2": 8,
+        "3": 8,
+        "4": 10,
+        "5": 6,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 10,
+        "12": 10,
+        "13": 10,
+        "20": 3,
+        "21": 3
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 113,
+      "name": "精灵",
+      "portraitFrame": 121,
+      "animation": "csprite.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 9,
+        "2": 8,
+        "3": 8,
+        "4": 9,
+        "5": 6,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 10,
+        "12": 10,
+        "13": 10,
+        "20": 3,
+        "21": 3
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 114,
+      "name": "气元素",
+      "portraitFrame": 114,
+      "animation": "caelem.def",
+      "available": true,
+      "groups": {
+        "0": 4,
+        "1": 6,
+        "2": 6,
+        "3": 7,
+        "4": 11,
+        "5": 10,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 115,
+      "name": "雷元素",
+      "portraitFrame": 129,
+      "animation": "cstorm.def",
+      "available": true,
+      "groups": {
+        "0": 4,
+        "1": 5,
+        "2": 10,
+        "3": 6,
+        "4": 11,
+        "5": 9,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 6,
+        "12": 6,
+        "13": 6,
+        "14": 6,
+        "15": 6,
+        "16": 6,
+        "17": 6,
+        "18": 6,
+        "19": 6,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 116,
+      "name": "水元素",
+      "portraitFrame": 117,
+      "animation": "cwelem.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 7,
+        "2": 8,
+        "3": 6,
+        "4": 15,
+        "5": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 117,
+      "name": "冰元素",
+      "portraitFrame": 125,
+      "animation": "cicee.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 118,
+      "name": "火元素",
+      "portraitFrame": 116,
+      "animation": "cfelem.def",
+      "available": true,
+      "groups": {
+        "0": 6,
+        "1": 7,
+        "2": 6,
+        "3": 6,
+        "4": 13,
+        "5": 9,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 15,
+        "12": 15,
+        "13": 15,
+        "20": 3,
+        "21": 7
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 119,
+      "name": "烈火元素",
+      "portraitFrame": 131,
+      "animation": "cnrg.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 120,
+      "name": "土元素",
+      "portraitFrame": 115,
+      "animation": "ceelem.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 9,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 6,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 121,
+      "name": "石元素",
+      "portraitFrame": 127,
+      "animation": "cstone.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 9,
+        "2": 8,
+        "3": 6,
+        "4": 11,
+        "5": 6,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "17": 8,
+        "18": 8,
+        "19": 8,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 122,
+      "name": "精神元素",
+      "portraitFrame": 122,
+      "animation": "cpsyel.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 123,
+      "name": "魔法元素",
+      "portraitFrame": 123,
+      "animation": "cmagel.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 124,
+      "name": "火鸟",
+      "portraitFrame": 132,
+      "animation": "cfbird.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 125,
+      "name": "凤凰",
+      "portraitFrame": 133,
+      "animation": "cphx.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 126,
+      "name": "金人",
+      "portraitFrame": 118,
+      "animation": "cggole.def",
+      "available": true,
+      "groups": {
+        "0": 9,
+        "1": 9,
+        "2": 8,
+        "3": 7,
+        "4": 8,
+        "5": 8,
+        "6": 8,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 127,
+      "name": "钻石人",
+      "portraitFrame": 119,
+      "animation": "cdgole.def",
+      "available": true,
+      "groups": {
+        "0": 9,
+        "1": 5,
+        "2": 6,
+        "3": 7,
+        "4": 8,
+        "5": 9,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 128,
+      "name": "半身人",
+      "portraitFrame": 140,
+      "animation": "chalf.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 22,
+        "2": 20,
+        "3": 9,
+        "4": 11,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 13,
+        "12": 12,
+        "13": 10,
+        "14": 19,
+        "15": 16,
+        "16": 17,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 129,
+      "name": "农民",
+      "portraitFrame": 141,
+      "animation": "cpeas.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 16,
+        "2": 8,
+        "3": 6,
+        "4": 9,
+        "5": 6,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 2,
+        "21": 2
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 130,
+      "name": "野猪",
+      "portraitFrame": 142,
+      "animation": "cboar.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 9,
+        "2": 12,
+        "3": 8,
+        "4": 7,
+        "5": 8,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 7,
+        "12": 7,
+        "13": 7,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 131,
+      "name": "木乃伊",
+      "portraitFrame": 143,
+      "animation": "cmummy.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 8,
+        "2": 6,
+        "3": 8,
+        "4": 8,
+        "5": 10,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 132,
+      "name": "游牧民",
+      "portraitFrame": 144,
+      "animation": "cnomad.def",
+      "available": true,
+      "groups": {
+        "0": 7,
+        "1": 7,
+        "2": 12,
+        "3": 9,
+        "4": 8,
+        "5": 10,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 9,
+        "12": 9,
+        "13": 9,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 133,
+      "name": "盗贼",
+      "portraitFrame": 145,
+      "animation": "crogue.def",
+      "available": true,
+      "groups": {
+        "0": 8,
+        "1": 12,
+        "2": 10,
+        "3": 8,
+        "4": 9,
+        "5": 9,
+        "7": 2,
+        "11": 10,
+        "12": 8,
+        "13": 9,
+        "20": 1,
+        "21": 1
+      },
+      "runtime": "idle and final death frame"
+    },
+    {
+      "id": 134,
+      "name": "穴居巨魔",
+      "portraitFrame": 146,
+      "animation": "ctroll.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 135,
+      "name": "魔幻法师",
+      "portraitFrame": 138,
+      "animation": "cench.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 136,
+      "name": "幻影射手",
+      "portraitFrame": 139,
+      "animation": "csharp.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 137,
+      "name": "仙女龙",
+      "portraitFrame": 136,
+      "animation": "cfdrgn.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 138,
+      "name": "锈龙",
+      "portraitFrame": 137,
+      "animation": "crsdgn.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 139,
+      "name": "水晶龙",
+      "portraitFrame": 135,
+      "animation": "ccdrgn.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 140,
+      "name": "圣龙",
+      "portraitFrame": 134,
+      "animation": "cadrgn.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    }
+  ],
+  "missingCreatureAnimations": [
+    {
+      "id": 117,
+      "name": "冰元素",
+      "portraitFrame": 125,
+      "animation": "cicee.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 119,
+      "name": "烈火元素",
+      "portraitFrame": 131,
+      "animation": "cnrg.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 122,
+      "name": "精神元素",
+      "portraitFrame": 122,
+      "animation": "cpsyel.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 123,
+      "name": "魔法元素",
+      "portraitFrame": 123,
+      "animation": "cmagel.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 124,
+      "name": "火鸟",
+      "portraitFrame": 132,
+      "animation": "cfbird.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 125,
+      "name": "凤凰",
+      "portraitFrame": 133,
+      "animation": "cphx.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 134,
+      "name": "穴居巨魔",
+      "portraitFrame": 146,
+      "animation": "ctroll.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 135,
+      "name": "魔幻法师",
+      "portraitFrame": 138,
+      "animation": "cench.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 136,
+      "name": "幻影射手",
+      "portraitFrame": 139,
+      "animation": "csharp.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 137,
+      "name": "仙女龙",
+      "portraitFrame": 136,
+      "animation": "cfdrgn.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 138,
+      "name": "锈龙",
+      "portraitFrame": 137,
+      "animation": "crsdgn.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 139,
+      "name": "水晶龙",
+      "portraitFrame": 135,
+      "animation": "ccdrgn.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    },
+    {
+      "id": 140,
+      "name": "圣龙",
+      "portraitFrame": 134,
+      "animation": "cadrgn.def",
+      "available": false,
+      "groups": {},
+      "runtime": "previous static sprite-sheet fallback"
+    }
+  ],
+  "townLayers": [
+    {
+      "town": "castle",
+      "animation": "tbcscas3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcscstl.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcscas2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsspec.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsdock.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsdw_6.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsup_6.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsext0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcshrd2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsup_2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcshrd1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsdw_2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsup_0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsdw_0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsdw_5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsup_5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsup_3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsdw_3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsup_1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsdw_1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsblak.def",
+      "available": true,
+      "staticFallback": false
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsmark.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsmag4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsmag3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsmag2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcshal4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcshal3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsmage.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsup_4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcshal2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcshall.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsdw_4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcssilo.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcsext1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "castle",
+      "animation": "tbcstvrn.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmup_6.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmdw_6.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmcas2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmcas3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmcstl.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmblak.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmdw_5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmup_5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmhrd2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmup_1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmhrd1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmdw_1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmup_3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmdw_3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmdw_2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmup_2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmmag5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmmag4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmhrd3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmhrd4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmdw_4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmup_4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmmag3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmmag2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmmage.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmhal2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmhal3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmhal4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmhall.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmext1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmtvrn.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmdw_0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmup_0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmspec.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmext0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmmark.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "rampart",
+      "animation": "tbrmsilo.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwcstl.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwcas2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwcas3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwmag5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwmag4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwmag3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwmag2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwmage.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwup_6.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwdw_6.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwup_4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwhrd2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwup_1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwdw_1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwhrd1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwup_3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwdw_4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwext0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwdw_3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwext1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwblak.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwmark.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwdw_2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwup_2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwext2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwdw_0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwup_0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwtvrn.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwhal3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwhal4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwup_5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwdw_5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwhal2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwhall.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwspec.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "tower",
+      "animation": "tbtwsilo.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinext0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinup_6.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbindw_6.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbincas3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbincstl.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbincas2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinext2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinext1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinmag5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinmag4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinmag3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinmag2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinmage.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinhal4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinhall.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinhal2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinhal3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinhrd2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinup_0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinhrd1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbindw_0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinhrd4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinup_2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinhrd3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbindw_2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbintvrn.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinblak.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinup_3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbindw_3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinup_4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbindw_4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinup_1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbindw_1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinmark.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinup_5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbinsilo.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "inferno",
+      "animation": "tbindw_5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbnchal3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbnchal4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncup_5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncdw_5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbnchal2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncext0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbnchall.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncdock.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncspec.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncmag5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncmag4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncmag3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncmag2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncmage.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbnccas3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncup_6.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncdw_6.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbnccstl.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbnccas2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbnctvrn.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncsilo.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncdw_1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncup_1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncup_3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncdw_3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncmark.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncup_4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncdw_4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncext1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbnchrd1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbnchrd2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncdw_0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncup_0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncblak.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncup_2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "necropolis",
+      "animation": "tbncdw_2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnblak.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnmark.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdndw_6.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnup_6.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnmag5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdndw_3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnup_3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnmag4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnmag3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnmag2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnmage.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdndw_5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnup_5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnext0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdndw_1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnup_1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnext1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnhal4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnhal2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnhal3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnhall.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdntvrn.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnext2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnup_4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdndw_4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnup_2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnspec.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdndw_2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnsilo.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdncstl.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdncas2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdncas3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnhrd2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnup_0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdnhrd1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "dungeon",
+      "animation": "tbdndw_0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstmag3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstmag2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstmage.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstup_5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstdw_5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstext2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstup_4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstdw_4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstcas2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstcas3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstcstl.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstdw_6.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstup_6.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstup_3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbsthal4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbsthal3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstdw_3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbsthrd2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstup_0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbsthal2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstspec.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbsthrd1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstdw_0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbsthall.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstblak.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstup_1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstdw_1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstext1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstmark.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstup_2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstdw_2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstsilo.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbsttvrn.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "stronghold",
+      "animation": "tbstext0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrext1.def",
+      "available": true,
+      "staticFallback": false
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrcas3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrup_2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrcas2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrcstl.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrdw_2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrmag3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrmag2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrmage.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrdw_5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrup_5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrup_3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrspec.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrdw_3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrup_1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrext0.def",
+      "available": true,
+      "staticFallback": false
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrdw_1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrhrd2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrup_0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrhrd1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrblak.def",
+      "available": true,
+      "staticFallback": false
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrdw_0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrup_4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrdw_4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrdock.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrsilo.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrhal4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrhal3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrhal2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrhall.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrtvrn.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrmark.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrup_6.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "fortress",
+      "animation": "tbfrdw_6.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelup_6.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbeldw_6.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbeldw_1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelup_1.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbeldw_4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelup_4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelcstl.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelcas2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelcas3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbeldw_3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelup_3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelblak.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbeldw_2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelup_2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbeldock.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelext6.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelmage.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelmag2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelmag3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelmag4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelmag5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelsilo.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbeltvrn.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelhall.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelhal4.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelhal2.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelhal3.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelmark.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelspec.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelhrd1.def",
+      "available": true,
+      "staticFallback": false
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelhrd2.def",
+      "available": true,
+      "staticFallback": false
+    },
+    {
+      "town": "conflux",
+      "animation": "tbeldw_0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelup_0.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbeldw_5.def",
+      "available": true,
+      "staticFallback": true
+    },
+    {
+      "town": "conflux",
+      "animation": "tbelup_5.def",
+      "available": true,
+      "staticFallback": true
+    }
+  ],
+  "unresolvedTownLayers": [],
+  "townInterface": {
+    "originalMaskDefinitions": 112,
+    "derivedMaskDefinitions": 237,
+    "missingHallBackgrounds": [
+      {
+        "faction": "rampart",
+        "file": "tpthbkrm.pcx"
+      },
+      {
+        "faction": "inferno",
+        "file": "tpthbkin.pcx"
+      },
+      {
+        "faction": "fortress",
+        "file": "tpthbkfr.pcx"
+      },
+      {
+        "faction": "conflux",
+        "file": "tpthbkfr.pcx"
+      }
+    ],
+    "fortPreviewBackgrounds": [
+      {
+        "faction": "castle",
+        "file": "tpcascas.pcx",
+        "dedicatedFortAsset": true
+      },
+      {
+        "faction": "rampart",
+        "file": "tpcasram.pcx",
+        "dedicatedFortAsset": true
+      },
+      {
+        "faction": "tower",
+        "file": "tpcastow.pcx",
+        "dedicatedFortAsset": true
+      },
+      {
+        "faction": "inferno",
+        "file": "tpcasinf.pcx",
+        "dedicatedFortAsset": true
+      },
+      {
+        "faction": "necropolis",
+        "file": "tpcasnec.pcx",
+        "dedicatedFortAsset": true
+      },
+      {
+        "faction": "dungeon",
+        "file": "tpcasdun.pcx",
+        "dedicatedFortAsset": true
+      },
+      {
+        "faction": "stronghold",
+        "file": "tpcasstr.pcx",
+        "dedicatedFortAsset": true
+      },
+      {
+        "faction": "fortress",
+        "file": "tpcasfor.pcx",
+        "dedicatedFortAsset": true
+      },
+      {
+        "faction": "conflux",
+        "file": "crbkgele.pcx",
+        "dedicatedFortAsset": false
+      }
+    ],
+    "details": "data/native/town-interface.json"
+  },
+  "remaining": [
+    "movement/attack/hit/turn/death/revival event sequencing",
+    "projectiles, hero and spell animations",
+    "original timing, palette cycling, player colors and exact shadow compositing",
+    "original battlefield anchoring and all window layouts/states"
+  ]
+}

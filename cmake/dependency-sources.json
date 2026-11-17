@@ -1,0 +1,32 @@
+[
+  {
+    "name": "SDL2-2.32.8.tar.gz",
+    "url": "https://codeload.github.com/libsdl-org/SDL/tar.gz/refs/tags/release-2.32.8",
+    "sha256": "dd35e05644ae527848d02433bec24dd0ea65db59faecf1a0e5d1880c533dac2c",
+    "bytes": 7882557
+  },
+  {
+    "name": "SDL2_image-2.8.8.tar.gz",
+    "url": "https://codeload.github.com/libsdl-org/SDL_image/tar.gz/refs/tags/release-2.8.8",
+    "sha256": "2bd2c17cab3744ebfe7351ded8c70dc2078d8c7c24eb9f4ebb1b26a623e2a747",
+    "bytes": 6925189
+  },
+  {
+    "name": "SDL2_ttf-2.24.0.tar.gz",
+    "url": "https://codeload.github.com/libsdl-org/SDL_ttf/tar.gz/refs/tags/release-2.24.0",
+    "sha256": "2c45241a56203a59d66ec6b4eae9457e5675fc609376566a257391fd29d341a2",
+    "bytes": 8843901
+  },
+  {
+    "name": "freetype-2.13.3.tar.gz",
+    "url": "https://codeload.github.com/freetype/freetype/tar.gz/refs/tags/VER-2-13-3",
+    "sha256": "bc5c898e4756d373e0d991bab053036c5eb2aa7c0d5c67e8662ddc6da40c4103",
+    "bytes": 2482495
+  },
+  {
+    "name": "json-3.11.3.tar.gz",
+    "url": "https://codeload.github.com/nlohmann/json/tar.gz/refs/tags/v3.11.3",
+    "sha256": "0d8ef5af7f9794e3263480193c491549b2ba6cc74bb018906202ada498a79406",
+    "bytes": 8053705
+  }
+]

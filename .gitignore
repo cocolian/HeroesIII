@@ -1,0 +1,30 @@
+# Local builds, installations and personal progress.
+/build/
+/dist/
+/saves/
+/native/screenshots/
+/references/
+/data/native/validation-*.json
+/data/native/ui-comparison-*.json
+
+# Downloaded/generated runtime artwork, audio and map packages stay local.
+/assets/
+/maps/community/*
+!/maps/community/README.md
+!/maps/community/catalog.json
+
+# Machine-specific state and credentials.
+.DS_Store
+._*
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.p12
+*.p8
+*.mobileprovision
+*.provisionprofile
+xcuserdata/
+*.xcuserstate
+*.log

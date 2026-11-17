@@ -1,0 +1,101 @@
+{
+  "schema": 1,
+  "edition": "Classic Complete / Shadow of Death",
+  "sources": {
+    "mapping": {
+      "file": "references/rules/vcmi/config/battles_graphics.json",
+      "sha256": "473abb1b9dc6f2d381990061a635e710e29f42ba0abe395c4a858f737eca58dd"
+    },
+    "identity": "references/battle/effect-source.json",
+    "frames": "assets/demo/manifest.json",
+    "sounds": "assets/audio/manifest.json"
+  },
+  "effects": [
+    {
+      "key": "goodMorale",
+      "originalEffectId": 20,
+      "animation": "c09spw0.def",
+      "frames": 20,
+      "canvas": [
+        94,
+        127
+      ],
+      "frameMs": 100,
+      "assetSource": {
+        "archive": "h3sprite.lod",
+        "name": "C09SPW0.def",
+        "size": 121316,
+        "sha256": "ad4cd82ad8a2a359df6d6756dc89be7d986815e8e7bc02957122cfc7f8a56cb6",
+        "edition": "mac-complete-demo"
+      },
+      "sound": "goodmrle.wav",
+      "soundFileSha256": "e1c05a761423205fc12c2c1e22dbe5719874aa399191c478d5fdfdfdba3605af"
+    },
+    {
+      "key": "badMorale",
+      "originalEffectId": 30,
+      "animation": "c14spe0.def",
+      "frames": 20,
+      "canvas": [
+        90,
+        125
+      ],
+      "frameMs": 100,
+      "assetSource": {
+        "archive": "h3sprite.lod",
+        "name": "C14SPE0.def",
+        "size": 106487,
+        "sha256": "634a1f394aa5ac4b5ae729fbf8c4969a5ed635cbc490441ee2b3ccdc2c1f5966",
+        "edition": "mac-complete-demo"
+      },
+      "sound": "badmrle.wav",
+      "soundFileSha256": "4ac80724ea371c36749a2badb1ec65ee2e20dd6414537428643140669389e40d"
+    },
+    {
+      "key": "goodLuck",
+      "originalEffectId": 18,
+      "animation": "c09spa0.def",
+      "frames": 15,
+      "canvas": [
+        50,
+        97
+      ],
+      "frameMs": 100,
+      "assetSource": {
+        "archive": "h3sprite.lod",
+        "name": "C09SPA0.def",
+        "size": 39623,
+        "sha256": "ac03c22c0caef9899ea2750870c0dc1fa3b58d796c47731ee299d13ae6607fbe",
+        "edition": "mac-complete-demo"
+      },
+      "sound": "goodluck.wav",
+      "soundFileSha256": "42534c93993a28b97537ab1951c2585cbd2a66da91421800c61c3c9224138ed9"
+    },
+    {
+      "key": "badLuckSpell",
+      "originalEffectId": 48,
+      "animation": "c10spf0.def",
+      "frames": 15,
+      "canvas": [
+        51,
+        96
+      ],
+      "frameMs": 100,
+      "assetSource": {
+        "archive": "h3sprite.lod",
+        "name": "C10SPF0.def",
+        "size": 46421,
+        "sha256": "611a93cc7fd20ff38a9c8e27ba84381605acff010e5129df442e237ec212634f",
+        "edition": "mac-complete-demo"
+      },
+      "sound": "misfort.wav",
+      "soundFileSha256": "d4cfa3e92178e4b71908263d271d4b25f5e074743e9246a351688c7984a3d5c2"
+    }
+  ],
+  "limitations": [
+    "100ms frame duration is provisional, not original-executable calibration.",
+    "The original canvases and offsets are retained; battlefield anchors need independent capture.",
+    "These original resolution sprites are not new native 2K artwork.",
+    "Bad luck animation is used only for Misfortune, not a classic negative-luck attack."
+  ]
+}

@@ -1,0 +1,10 @@
+// Generated classic integer trade lots; see data/native/market.json.
+std::array<TradeRate,8>{{TradeRate{2500,1},TradeRate{5000,1},TradeRate{1,25},TradeRate{10,1},TradeRate{20,1},TradeRate{1,50},TradeRate{5,1},TradeRate{10,1}}},
+std::array<TradeRate,8>{{TradeRate{1667,1},TradeRate{3333,1},TradeRate{1,37},TradeRate{7,1},TradeRate{13,1},TradeRate{1,75},TradeRate{3,1},TradeRate{7,1}}},
+std::array<TradeRate,8>{{TradeRate{1250,1},TradeRate{2500,1},TradeRate{1,50},TradeRate{5,1},TradeRate{10,1},TradeRate{1,100},TradeRate{3,1},TradeRate{5,1}}},
+std::array<TradeRate,8>{{TradeRate{1000,1},TradeRate{2000,1},TradeRate{1,62},TradeRate{4,1},TradeRate{8,1},TradeRate{1,125},TradeRate{2,1},TradeRate{4,1}}},
+std::array<TradeRate,8>{{TradeRate{833,1},TradeRate{1667,1},TradeRate{1,75},TradeRate{3,1},TradeRate{7,1},TradeRate{1,150},TradeRate{2,1},TradeRate{3,1}}},
+std::array<TradeRate,8>{{TradeRate{714,1},TradeRate{1429,1},TradeRate{1,88},TradeRate{3,1},TradeRate{6,1},TradeRate{1,175},TradeRate{1,1},TradeRate{3,1}}},
+std::array<TradeRate,8>{{TradeRate{625,1},TradeRate{1250,1},TradeRate{1,100},TradeRate{3,1},TradeRate{5,1},TradeRate{1,200},TradeRate{1,1},TradeRate{3,1}}},
+std::array<TradeRate,8>{{TradeRate{556,1},TradeRate{1111,1},TradeRate{1,112},TradeRate{2,1},TradeRate{4,1},TradeRate{1,225},TradeRate{1,1},TradeRate{2,1}}},
+std::array<TradeRate,8>{{TradeRate{500,1},TradeRate{1000,1},TradeRate{1,125},TradeRate{2,1},TradeRate{4,1},TradeRate{1,250},TradeRate{1,1},TradeRate{2,1}}},
