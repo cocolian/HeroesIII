@@ -12,7 +12,7 @@ std::string adventureSiteName(int sourceClass){
  case 17:case 18:case 19:case 20:case 216:case 217:case 218:return "野外生物巢穴";
  case 23:return "马力特塔";case 28:return "仙女环";case 30:return "幸运泉";
  case 31:return "青春泉";case 32:return "真理花园";case 38:return "幸运神像";
- case 41:return "智慧图书馆";case 48:return "魔法泉";case 51:return "雇佣兵营地";
+ case 41:return "智慧图书馆";case 42:return "灯塔";case 48:return "魔法泉";case 51:return "雇佣兵营地";
  case 52:return "美人鱼";case 55:return "神秘花园";case 56:return "绿洲";
  case 61:return "星轴";case 64:return "集结旗";case 87:return "船厂";
  case 92:return "海妖";case 94:return "马厩";case 96:return "神庙";
@@ -35,6 +35,26 @@ std::optional<std::string> Game::visitAdventureSite(Object&object){
  if(object.type!=ObjectType::Site)return {};
  if(!object.properties.is_object())object.properties=nlohmann::json::object();
  int cls=object.sourceClass,week=(day-1)/7;
+ if(cls==42){
+  if(object.owner==currentOwner())return "这座灯塔已属于你。每座灯塔使所属玩家的英雄每天航海行动力 +500，可与其他灯塔叠加。";
+  object.owner=currentOwner();object.visited=true;
+  return "灯塔已归你控制。从明天起，所属玩家的所有英雄每天航海行动力 +500；多座灯塔可以叠加，不影响陆地移动。";
+ }
+ if(cls==97)return "盗贼向你提供各势力的完整情报。";
+ if(cls==92){
+  if(!hero.onBoat)return "需要乘船靠近海妖。";
+  if(hasAdventureBonus(hero,92))return "船员已经用蜡封住耳朵，海妖的歌声无法再次诱惑他们。";
+  hero.adventureBonuses.push_back({92,object.id,0,0,0,0,true});
+  int64_t xp=0;std::string losses;
+  for(auto&stack:hero.army)if(!stack.empty()&&stack.count>1){
+   // Integer arithmetic preserves the classic ceil(30%) rule even for large stacks.
+   int lost=(stack.count*3+9)/10;stack.count-=lost;xp+=int64_t(lost)*Units[stack.unit].hp;
+   losses+=(losses.empty()?"":"、")+Units[stack.unit].name+" × "+std::to_string(lost);
+  }
+  if(!xp)return "海妖唱起诡异的歌声，但你的小队抵挡住了诱惑，没有士兵跳入海中。";
+  int award=int(std::min<int64_t>(1000000000,xp));gainXP(award);
+  return "海妖的歌声使部分士兵跳海溺亡。\n损失："+losses+"。\n你从这次遭遇中获得 "+std::to_string(award)+" 点经验。";
+ }
  if(cls==48){
   if(hero.mana>=2*maxMana())return "魔法值已经达到上限的两倍，无需饮用泉水。";
   const char*key=hero.pos.x<object.pos.x?"springLeftWeek":"springWeek";

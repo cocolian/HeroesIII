@@ -43,7 +43,7 @@ specials=[
  [('Cage of Warlords','战神之笼',[1000]),('Blood Obelisk','鲜血方尖塔',[1000]),('Glyphs of Fear','恐怖浮雕',[1000]),None],
  [('Artifact Merchants','宝物商店',[10000]),('Magic University','魔法大学',[5000,10,10]),None,None]]
 hordes=[[(2,3,'狮鹫堡垒'),None],[(1,4,'矿工工会'),(4,2,'枯木幼苗')],[(1,4,'雕塑家之翼'),None],[(0,8,'繁殖池'),(2,3,'犬笼')],[(0,6,'骷髅墓穴'),None],[(0,7,'蘑菇环'),None],[(0,8,'食堂'),None],[(0,6,'军官宿舍'),None],[(0,10,'生命之园'),None]]
-supportedSpecials={(0,1),(2,1),(2,2),(2,3),(3,3),(5,3),(6,3),(7,0),(8,1)}
+supportedSpecials={(0,0),(0,1),(2,1),(2,2),(2,3),(3,3),(5,3),(6,3),(7,0),(8,1)}
 def dnf(expr):
  if not expr:return [[]]
  if isinstance(expr,str):
@@ -89,7 +89,7 @@ for fi,town in enumerate(towns):
     english,name,c=special;cost[:len(c)]=c
     actual=next((r['cost']for r in town['allCostRows'][14:]if r['name']==english),None)
     if actual is not None:assert actual==cost,(town['key'],key,cost,actual)
-   implemented=(fi,si)in supportedSpecials;desc='每层魔法行会增加一种法术'if(fi,si)==(2,2)else'城镇特殊建筑'if implemented else'特殊建筑效果待接入'
+   implemented=(fi,si)in supportedSpecials;desc='所属玩家的英雄每日航海行动力 +500，可叠加'if(fi,si)==(0,0)else'每层魔法行会增加一种法术'if(fi,si)==(2,2)else'城镇特殊建筑'if implemented else'特殊建筑效果待接入'
   requirement=[sorted(set(r))for r in requirement]
   row={'key':key,'name':name,'sourceName':english,'description':desc,'cost':cost,'requirements':requirement,'unit':unit,'available':available,'implemented':implemented,'icon':rule.get('id',-1),'upIcon':common.get(key+'Upgr',{}).get('id',-1)}
   rows.append(row)

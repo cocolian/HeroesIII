@@ -8,6 +8,7 @@
 namespace h3 {
 void Desktop::visitDialog(){
  if(!visitPopup_){scene=Scene::Adventure;return;}
+ if(visitPopup_->sourceClass==97){thievesGuildDialog();return;}
  mapDialog({170,140,460,320});const auto&notice=*visitPopup_;
  constexpr SDL_Color gold{236,213,130,255};
  centerText(chineseMapText(game.scenarioId,notice.title),{194,164,412,40},24,gold);

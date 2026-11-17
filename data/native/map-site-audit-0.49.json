@@ -1,0 +1,1492 @@
+{
+  "classes": {
+    "10": {
+      "genericFallback": false,
+      "instances": 138,
+      "maps": {
+        "empire-of-the-world-2-1": 10,
+        "ira-the-mage-1": 8,
+        "ira-the-mage-2": 8,
+        "ira-the-mage-3": 8,
+        "jedi-story-1": 6,
+        "jedi-story-2": 6,
+        "jedi-story-3": 6,
+        "jennifers-dream-journey-1": 11,
+        "lord-of-the-rings-1": 11,
+        "seven-lakes-1": 6,
+        "the-lone-knight-1": 28,
+        "to-tame-a-land-1": 9,
+        "war-of-seven-realms-1": 12,
+        "wayfarer-1": 9
+      },
+      "name": "地图物件（类型 10）",
+      "sourceClass": 10
+    },
+    "100": {
+      "genericFallback": false,
+      "instances": 263,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 18,
+        "ira-the-mage-1": 30,
+        "ira-the-mage-2": 30,
+        "ira-the-mage-3": 30,
+        "jedi-story-1": 25,
+        "jedi-story-2": 25,
+        "jedi-story-3": 25,
+        "jennifers-dream-journey-1": 10,
+        "lord-of-the-rings-1": 21,
+        "seven-lakes-1": 20,
+        "the-lone-knight-1": 4,
+        "to-tame-a-land-1": 9,
+        "war-of-seven-realms-1": 10,
+        "wayfarer-1": 5
+      },
+      "name": "学习石",
+      "sourceClass": 100
+    },
+    "102": {
+      "genericFallback": true,
+      "instances": 146,
+      "maps": {
+        "empire-of-the-world-2-1": 18,
+        "ira-the-mage-1": 5,
+        "ira-the-mage-2": 5,
+        "ira-the-mage-3": 5,
+        "jedi-story-1": 10,
+        "jedi-story-2": 10,
+        "jedi-story-3": 10,
+        "jennifers-dream-journey-1": 32,
+        "lord-of-the-rings-1": 10,
+        "seven-lakes-1": 6,
+        "the-lone-knight-1": 1,
+        "to-tame-a-land-1": 15,
+        "war-of-seven-realms-1": 8,
+        "wayfarer-1": 11
+      },
+      "name": "知识之树",
+      "sourceClass": 102
+    },
+    "104": {
+      "genericFallback": true,
+      "instances": 36,
+      "maps": {
+        "empire-of-the-world-2-1": 4,
+        "ira-the-mage-1": 6,
+        "ira-the-mage-2": 6,
+        "ira-the-mage-3": 6,
+        "jennifers-dream-journey-1": 2,
+        "lord-of-the-rings-1": 2,
+        "seven-lakes-1": 3,
+        "the-lone-knight-1": 4,
+        "to-tame-a-land-1": 1,
+        "war-of-seven-realms-1": 1,
+        "wayfarer-1": 1
+      },
+      "name": "地图物件（类型 104）",
+      "sourceClass": 104
+    },
+    "105": {
+      "genericFallback": true,
+      "instances": 49,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 3,
+        "jedi-story-1": 1,
+        "jedi-story-2": 1,
+        "jedi-story-3": 1,
+        "jennifers-dream-journey-1": 2,
+        "lord-of-the-rings-1": 6,
+        "seven-lakes-1": 1,
+        "the-lone-knight-1": 23,
+        "to-tame-a-land-1": 1,
+        "war-of-seven-realms-1": 5,
+        "wayfarer-1": 4
+      },
+      "name": "废弃货车",
+      "sourceClass": 105
+    },
+    "106": {
+      "genericFallback": true,
+      "instances": 29,
+      "maps": {
+        "empire-of-the-world-2-1": 3,
+        "lord-of-the-rings-1": 2,
+        "seven-lakes-1": 5,
+        "the-lone-knight-1": 11,
+        "to-tame-a-land-1": 2,
+        "war-of-seven-realms-1": 4,
+        "wayfarer-1": 2
+      },
+      "name": "地图物件（类型 106）",
+      "sourceClass": 106
+    },
+    "107": {
+      "genericFallback": true,
+      "instances": 95,
+      "maps": {
+        "empire-of-the-world-2-1": 7,
+        "ira-the-mage-1": 8,
+        "ira-the-mage-2": 8,
+        "ira-the-mage-3": 8,
+        "jedi-story-1": 6,
+        "jedi-story-2": 6,
+        "jedi-story-3": 6,
+        "jennifers-dream-journey-1": 1,
+        "lord-of-the-rings-1": 6,
+        "seven-lakes-1": 5,
+        "the-lone-knight-1": 5,
+        "to-tame-a-land-1": 13,
+        "war-of-seven-realms-1": 10,
+        "wayfarer-1": 6
+      },
+      "name": "地图物件（类型 107）",
+      "sourceClass": 107
+    },
+    "108": {
+      "genericFallback": true,
+      "instances": 128,
+      "maps": {
+        "empire-of-the-world-2-1": 7,
+        "jedi-story-1": 4,
+        "jedi-story-2": 4,
+        "jedi-story-3": 4,
+        "lord-of-the-rings-1": 10,
+        "seven-lakes-1": 17,
+        "the-lone-knight-1": 3,
+        "to-tame-a-land-1": 18,
+        "war-of-seven-realms-1": 6,
+        "wayfarer-1": 55
+      },
+      "name": "地图物件（类型 108）",
+      "sourceClass": 108
+    },
+    "11": {
+      "genericFallback": false,
+      "instances": 246,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 7,
+        "ira-the-mage-1": 2,
+        "ira-the-mage-2": 2,
+        "ira-the-mage-3": 2,
+        "jedi-story-1": 31,
+        "jedi-story-2": 31,
+        "jedi-story-3": 31,
+        "jennifers-dream-journey-1": 57,
+        "lord-of-the-rings-1": 19,
+        "the-lone-knight-1": 20,
+        "to-tame-a-land-1": 8,
+        "war-of-seven-realms-1": 21,
+        "wayfarer-1": 14
+      },
+      "name": "浮标",
+      "sourceClass": 11
+    },
+    "110": {
+      "genericFallback": false,
+      "instances": 71,
+      "maps": {
+        "empire-of-the-world-2-1": 8,
+        "ira-the-mage-1": 1,
+        "ira-the-mage-2": 1,
+        "ira-the-mage-3": 1,
+        "jedi-story-1": 6,
+        "jedi-story-2": 6,
+        "jedi-story-3": 6,
+        "jennifers-dream-journey-1": 17,
+        "lord-of-the-rings-1": 4,
+        "seven-lakes-1": 1,
+        "the-lone-knight-1": 7,
+        "to-tame-a-land-1": 2,
+        "war-of-seven-realms-1": 1,
+        "wayfarer-1": 10
+      },
+      "name": "饮马池",
+      "sourceClass": 110
+    },
+    "113": {
+      "genericFallback": true,
+      "instances": 91,
+      "maps": {
+        "dead-and-buried-1": 3,
+        "empire-of-the-world-2-1": 6,
+        "ira-the-mage-1": 3,
+        "ira-the-mage-2": 3,
+        "ira-the-mage-3": 3,
+        "jennifers-dream-journey-1": 23,
+        "lord-of-the-rings-1": 9,
+        "seven-lakes-1": 8,
+        "the-lone-knight-1": 11,
+        "to-tame-a-land-1": 9,
+        "war-of-seven-realms-1": 5,
+        "wayfarer-1": 8
+      },
+      "name": "地图物件（类型 113）",
+      "sourceClass": 113
+    },
+    "12": {
+      "genericFallback": false,
+      "instances": 767,
+      "maps": {
+        "empire-of-the-world-2-1": 67,
+        "ira-the-mage-1": 1,
+        "ira-the-mage-2": 1,
+        "ira-the-mage-3": 1,
+        "jedi-story-1": 38,
+        "jedi-story-2": 38,
+        "jedi-story-3": 38,
+        "jennifers-dream-journey-1": 316,
+        "lord-of-the-rings-1": 24,
+        "seven-lakes-1": 31,
+        "to-tame-a-land-1": 11,
+        "war-of-seven-realms-1": 32,
+        "wayfarer-1": 169
+      },
+      "name": "营火",
+      "sourceClass": 12
+    },
+    "13": {
+      "genericFallback": true,
+      "instances": 102,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 19,
+        "ira-the-mage-1": 5,
+        "ira-the-mage-2": 5,
+        "ira-the-mage-3": 5,
+        "jedi-story-1": 15,
+        "jedi-story-2": 15,
+        "jedi-story-3": 15,
+        "jennifers-dream-journey-1": 5,
+        "lord-of-the-rings-1": 4,
+        "seven-lakes-1": 1,
+        "to-tame-a-land-1": 1,
+        "war-of-seven-realms-1": 1,
+        "wayfarer-1": 10
+      },
+      "name": "地图物件（类型 13）",
+      "sourceClass": 13
+    },
+    "14": {
+      "genericFallback": false,
+      "instances": 187,
+      "maps": {
+        "empire-of-the-world-2-1": 8,
+        "ira-the-mage-1": 16,
+        "ira-the-mage-2": 16,
+        "ira-the-mage-3": 16,
+        "jedi-story-1": 4,
+        "jedi-story-2": 4,
+        "jedi-story-3": 4,
+        "jennifers-dream-journey-1": 56,
+        "lord-of-the-rings-1": 7,
+        "seven-lakes-1": 3,
+        "the-lone-knight-1": 5,
+        "to-tame-a-land-1": 5,
+        "war-of-seven-realms-1": 5,
+        "wayfarer-1": 38
+      },
+      "name": "天鹅湖",
+      "sourceClass": 14
+    },
+    "15": {
+      "genericFallback": true,
+      "instances": 10,
+      "maps": {
+        "empire-of-the-world-2-1": 1,
+        "jennifers-dream-journey-1": 2,
+        "lord-of-the-rings-1": 7
+      },
+      "name": "地图物件（类型 15）",
+      "sourceClass": 15
+    },
+    "16": {
+      "genericFallback": true,
+      "instances": 445,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 44,
+        "ira-the-mage-1": 11,
+        "ira-the-mage-2": 11,
+        "ira-the-mage-3": 11,
+        "jedi-story-1": 49,
+        "jedi-story-2": 49,
+        "jedi-story-3": 49,
+        "jennifers-dream-journey-1": 14,
+        "lord-of-the-rings-1": 46,
+        "seven-lakes-1": 45,
+        "the-lone-knight-1": 32,
+        "to-tame-a-land-1": 18,
+        "war-of-seven-realms-1": 29,
+        "wayfarer-1": 36
+      },
+      "name": "地图物件（类型 16）",
+      "sourceClass": 16
+    },
+    "17": {
+      "genericFallback": true,
+      "instances": 1643,
+      "maps": {
+        "dead-and-buried-1": 3,
+        "empire-of-the-world-2-1": 137,
+        "ira-the-mage-1": 71,
+        "ira-the-mage-2": 71,
+        "ira-the-mage-3": 71,
+        "jedi-story-1": 140,
+        "jedi-story-2": 140,
+        "jedi-story-3": 140,
+        "jennifers-dream-journey-1": 142,
+        "lord-of-the-rings-1": 143,
+        "seven-lakes-1": 76,
+        "the-lone-knight-1": 74,
+        "to-tame-a-land-1": 142,
+        "war-of-seven-realms-1": 154,
+        "wayfarer-1": 139
+      },
+      "name": "野外生物巢穴",
+      "sourceClass": 17
+    },
+    "2": {
+      "genericFallback": true,
+      "instances": 30,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 1,
+        "jedi-story-1": 3,
+        "jedi-story-2": 3,
+        "jedi-story-3": 3,
+        "jennifers-dream-journey-1": 3,
+        "lord-of-the-rings-1": 3,
+        "seven-lakes-1": 5,
+        "the-lone-knight-1": 2,
+        "to-tame-a-land-1": 2,
+        "war-of-seven-realms-1": 2,
+        "wayfarer-1": 2
+      },
+      "name": "地图物件（类型 2）",
+      "sourceClass": 2
+    },
+    "20": {
+      "genericFallback": true,
+      "instances": 41,
+      "maps": {
+        "empire-of-the-world-2-1": 3,
+        "ira-the-mage-1": 4,
+        "ira-the-mage-2": 4,
+        "ira-the-mage-3": 4,
+        "jedi-story-1": 4,
+        "jedi-story-2": 4,
+        "jedi-story-3": 4,
+        "jennifers-dream-journey-1": 2,
+        "lord-of-the-rings-1": 1,
+        "the-lone-knight-1": 1,
+        "to-tame-a-land-1": 2,
+        "war-of-seven-realms-1": 6,
+        "wayfarer-1": 2
+      },
+      "name": "野外生物巢穴",
+      "sourceClass": 20
+    },
+    "213": {
+      "genericFallback": true,
+      "instances": 12,
+      "maps": {
+        "lord-of-the-rings-1": 3,
+        "seven-lakes-1": 2,
+        "the-lone-knight-1": 4,
+        "war-of-seven-realms-1": 2,
+        "wayfarer-1": 1
+      },
+      "name": "地图物件（类型 213）",
+      "sourceClass": 213
+    },
+    "216": {
+      "genericFallback": true,
+      "instances": 8,
+      "maps": {
+        "seven-lakes-1": 8
+      },
+      "name": "野外生物巢穴",
+      "sourceClass": 216
+    },
+    "217": {
+      "genericFallback": true,
+      "instances": 10,
+      "maps": {
+        "seven-lakes-1": 10
+      },
+      "name": "野外生物巢穴",
+      "sourceClass": 217
+    },
+    "218": {
+      "genericFallback": true,
+      "instances": 1,
+      "maps": {
+        "seven-lakes-1": 1
+      },
+      "name": "野外生物巢穴",
+      "sourceClass": 218
+    },
+    "219": {
+      "genericFallback": false,
+      "instances": 135,
+      "maps": {
+        "empire-of-the-world-2-1": 7,
+        "ira-the-mage-1": 33,
+        "ira-the-mage-2": 33,
+        "ira-the-mage-3": 33,
+        "jedi-story-1": 3,
+        "jedi-story-2": 3,
+        "jedi-story-3": 3,
+        "jennifers-dream-journey-1": 1,
+        "seven-lakes-1": 10,
+        "the-lone-knight-1": 2,
+        "to-tame-a-land-1": 1,
+        "war-of-seven-realms-1": 5,
+        "wayfarer-1": 1
+      },
+      "name": "地图物件（类型 219）",
+      "sourceClass": 219
+    },
+    "22": {
+      "genericFallback": true,
+      "instances": 167,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 14,
+        "jedi-story-1": 8,
+        "jedi-story-2": 8,
+        "jedi-story-3": 8,
+        "jennifers-dream-journey-1": 16,
+        "lord-of-the-rings-1": 32,
+        "seven-lakes-1": 7,
+        "the-lone-knight-1": 20,
+        "war-of-seven-realms-1": 24,
+        "wayfarer-1": 29
+      },
+      "name": "地图物件（类型 22）",
+      "sourceClass": 22
+    },
+    "221": {
+      "genericFallback": true,
+      "instances": 29,
+      "maps": {
+        "empire-of-the-world-2-1": 4,
+        "jedi-story-1": 2,
+        "jedi-story-2": 2,
+        "jedi-story-3": 2,
+        "jennifers-dream-journey-1": 6,
+        "lord-of-the-rings-1": 3,
+        "seven-lakes-1": 1,
+        "the-lone-knight-1": 2,
+        "to-tame-a-land-1": 2,
+        "war-of-seven-realms-1": 5
+      },
+      "name": "地图物件（类型 221）",
+      "sourceClass": 221
+    },
+    "23": {
+      "genericFallback": false,
+      "instances": 195,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 21,
+        "ira-the-mage-1": 20,
+        "ira-the-mage-2": 20,
+        "ira-the-mage-3": 20,
+        "jedi-story-1": 12,
+        "jedi-story-2": 12,
+        "jedi-story-3": 12,
+        "jennifers-dream-journey-1": 3,
+        "lord-of-the-rings-1": 19,
+        "seven-lakes-1": 6,
+        "the-lone-knight-1": 7,
+        "to-tame-a-land-1": 16,
+        "war-of-seven-realms-1": 14,
+        "wayfarer-1": 12
+      },
+      "name": "马力特塔",
+      "sourceClass": 23
+    },
+    "24": {
+      "genericFallback": true,
+      "instances": 215,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 17,
+        "ira-the-mage-1": 13,
+        "ira-the-mage-2": 13,
+        "ira-the-mage-3": 13,
+        "jedi-story-1": 26,
+        "jedi-story-2": 26,
+        "jedi-story-3": 26,
+        "jennifers-dream-journey-1": 32,
+        "lord-of-the-rings-1": 16,
+        "seven-lakes-1": 4,
+        "the-lone-knight-1": 15,
+        "to-tame-a-land-1": 5,
+        "war-of-seven-realms-1": 6,
+        "wayfarer-1": 2
+      },
+      "name": "地图物件（类型 24）",
+      "sourceClass": 24
+    },
+    "25": {
+      "genericFallback": true,
+      "instances": 60,
+      "maps": {
+        "empire-of-the-world-2-1": 2,
+        "ira-the-mage-1": 1,
+        "ira-the-mage-2": 1,
+        "ira-the-mage-3": 1,
+        "jedi-story-1": 10,
+        "jedi-story-2": 10,
+        "jedi-story-3": 10,
+        "jennifers-dream-journey-1": 4,
+        "lord-of-the-rings-1": 3,
+        "seven-lakes-1": 8,
+        "the-lone-knight-1": 1,
+        "to-tame-a-land-1": 3,
+        "war-of-seven-realms-1": 2,
+        "wayfarer-1": 4
+      },
+      "name": "地图物件（类型 25）",
+      "sourceClass": 25
+    },
+    "27": {
+      "genericFallback": true,
+      "instances": 98,
+      "maps": {
+        "dead-and-buried-1": 3,
+        "empire-of-the-world-2-1": 13,
+        "ira-the-mage-1": 1,
+        "ira-the-mage-2": 1,
+        "ira-the-mage-3": 1,
+        "jedi-story-1": 13,
+        "jedi-story-2": 13,
+        "jedi-story-3": 13,
+        "jennifers-dream-journey-1": 12,
+        "lord-of-the-rings-1": 3,
+        "seven-lakes-1": 8,
+        "the-lone-knight-1": 6,
+        "to-tame-a-land-1": 5,
+        "war-of-seven-realms-1": 4,
+        "wayfarer-1": 2
+      },
+      "name": "地图物件（类型 27）",
+      "sourceClass": 27
+    },
+    "28": {
+      "genericFallback": false,
+      "instances": 97,
+      "maps": {
+        "empire-of-the-world-2-1": 14,
+        "ira-the-mage-1": 1,
+        "ira-the-mage-2": 1,
+        "ira-the-mage-3": 1,
+        "jedi-story-1": 1,
+        "jedi-story-2": 1,
+        "jedi-story-3": 1,
+        "jennifers-dream-journey-1": 20,
+        "lord-of-the-rings-1": 7,
+        "seven-lakes-1": 4,
+        "the-lone-knight-1": 5,
+        "to-tame-a-land-1": 2,
+        "war-of-seven-realms-1": 3,
+        "wayfarer-1": 36
+      },
+      "name": "仙女环",
+      "sourceClass": 28
+    },
+    "29": {
+      "genericFallback": true,
+      "instances": 1672,
+      "maps": {
+        "dead-and-buried-1": 4,
+        "empire-of-the-world-2-1": 91,
+        "ira-the-mage-1": 294,
+        "ira-the-mage-2": 294,
+        "ira-the-mage-3": 294,
+        "jedi-story-1": 64,
+        "jedi-story-2": 64,
+        "jedi-story-3": 64,
+        "jennifers-dream-journey-1": 92,
+        "lord-of-the-rings-1": 112,
+        "seven-lakes-1": 14,
+        "the-lone-knight-1": 129,
+        "to-tame-a-land-1": 40,
+        "war-of-seven-realms-1": 41,
+        "wayfarer-1": 75
+      },
+      "name": "地图物件（类型 29）",
+      "sourceClass": 29
+    },
+    "30": {
+      "genericFallback": false,
+      "instances": 134,
+      "maps": {
+        "empire-of-the-world-2-1": 4,
+        "ira-the-mage-1": 6,
+        "ira-the-mage-2": 6,
+        "ira-the-mage-3": 6,
+        "jedi-story-1": 6,
+        "jedi-story-2": 6,
+        "jedi-story-3": 6,
+        "jennifers-dream-journey-1": 31,
+        "lord-of-the-rings-1": 8,
+        "seven-lakes-1": 7,
+        "the-lone-knight-1": 7,
+        "to-tame-a-land-1": 4,
+        "war-of-seven-realms-1": 8,
+        "wayfarer-1": 29
+      },
+      "name": "幸运泉",
+      "sourceClass": 30
+    },
+    "31": {
+      "genericFallback": false,
+      "instances": 148,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 25,
+        "ira-the-mage-1": 5,
+        "ira-the-mage-2": 5,
+        "ira-the-mage-3": 5,
+        "jedi-story-1": 6,
+        "jedi-story-2": 6,
+        "jedi-story-3": 6,
+        "jennifers-dream-journey-1": 32,
+        "lord-of-the-rings-1": 21,
+        "seven-lakes-1": 5,
+        "the-lone-knight-1": 14,
+        "to-tame-a-land-1": 3,
+        "war-of-seven-realms-1": 7,
+        "wayfarer-1": 7
+      },
+      "name": "青春泉",
+      "sourceClass": 31
+    },
+    "32": {
+      "genericFallback": false,
+      "instances": 239,
+      "maps": {
+        "empire-of-the-world-2-1": 12,
+        "ira-the-mage-1": 19,
+        "ira-the-mage-2": 19,
+        "ira-the-mage-3": 19,
+        "jedi-story-1": 19,
+        "jedi-story-2": 19,
+        "jedi-story-3": 19,
+        "jennifers-dream-journey-1": 12,
+        "lord-of-the-rings-1": 19,
+        "seven-lakes-1": 21,
+        "the-lone-knight-1": 8,
+        "to-tame-a-land-1": 21,
+        "war-of-seven-realms-1": 17,
+        "wayfarer-1": 15
+      },
+      "name": "真理花园",
+      "sourceClass": 32
+    },
+    "33": {
+      "genericFallback": false,
+      "instances": 190,
+      "maps": {
+        "empire-of-the-world-2-1": 8,
+        "ira-the-mage-1": 42,
+        "ira-the-mage-2": 42,
+        "ira-the-mage-3": 42,
+        "jedi-story-1": 2,
+        "jedi-story-2": 2,
+        "jedi-story-3": 2,
+        "jennifers-dream-journey-1": 8,
+        "lord-of-the-rings-1": 4,
+        "seven-lakes-1": 6,
+        "the-lone-knight-1": 9,
+        "to-tame-a-land-1": 5,
+        "war-of-seven-realms-1": 6,
+        "wayfarer-1": 12
+      },
+      "name": "地图物件（类型 33）",
+      "sourceClass": 33
+    },
+    "35": {
+      "genericFallback": true,
+      "instances": 40,
+      "maps": {
+        "empire-of-the-world-2-1": 10,
+        "ira-the-mage-1": 1,
+        "ira-the-mage-2": 1,
+        "ira-the-mage-3": 1,
+        "jedi-story-1": 2,
+        "jedi-story-2": 2,
+        "jedi-story-3": 2,
+        "jennifers-dream-journey-1": 4,
+        "lord-of-the-rings-1": 4,
+        "seven-lakes-1": 6,
+        "the-lone-knight-1": 1,
+        "to-tame-a-land-1": 1,
+        "war-of-seven-realms-1": 3,
+        "wayfarer-1": 2
+      },
+      "name": "地图物件（类型 35）",
+      "sourceClass": 35
+    },
+    "37": {
+      "genericFallback": true,
+      "instances": 27,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 1,
+        "ira-the-mage-1": 1,
+        "ira-the-mage-2": 1,
+        "ira-the-mage-3": 1,
+        "jedi-story-1": 4,
+        "jedi-story-2": 4,
+        "jedi-story-3": 4,
+        "jennifers-dream-journey-1": 1,
+        "lord-of-the-rings-1": 1,
+        "seven-lakes-1": 1,
+        "the-lone-knight-1": 4,
+        "to-tame-a-land-1": 1,
+        "war-of-seven-realms-1": 1,
+        "wayfarer-1": 1
+      },
+      "name": "地图物件（类型 37）",
+      "sourceClass": 37
+    },
+    "38": {
+      "genericFallback": false,
+      "instances": 114,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 20,
+        "ira-the-mage-1": 4,
+        "ira-the-mage-2": 4,
+        "ira-the-mage-3": 4,
+        "jedi-story-1": 8,
+        "jedi-story-2": 8,
+        "jedi-story-3": 8,
+        "jennifers-dream-journey-1": 7,
+        "lord-of-the-rings-1": 17,
+        "seven-lakes-1": 6,
+        "the-lone-knight-1": 12,
+        "to-tame-a-land-1": 5,
+        "war-of-seven-realms-1": 4,
+        "wayfarer-1": 6
+      },
+      "name": "幸运神像",
+      "sourceClass": 38
+    },
+    "39": {
+      "genericFallback": true,
+      "instances": 45,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 1,
+        "jedi-story-1": 7,
+        "jedi-story-2": 7,
+        "jedi-story-3": 7,
+        "jennifers-dream-journey-1": 8,
+        "lord-of-the-rings-1": 3,
+        "seven-lakes-1": 1,
+        "the-lone-knight-1": 3,
+        "to-tame-a-land-1": 1,
+        "war-of-seven-realms-1": 3,
+        "wayfarer-1": 3
+      },
+      "name": "地图物件（类型 39）",
+      "sourceClass": 39
+    },
+    "4": {
+      "genericFallback": true,
+      "instances": 126,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 5,
+        "ira-the-mage-1": 5,
+        "ira-the-mage-2": 5,
+        "ira-the-mage-3": 5,
+        "jedi-story-1": 17,
+        "jedi-story-2": 17,
+        "jedi-story-3": 17,
+        "jennifers-dream-journey-1": 4,
+        "lord-of-the-rings-1": 7,
+        "seven-lakes-1": 4,
+        "the-lone-knight-1": 8,
+        "to-tame-a-land-1": 12,
+        "war-of-seven-realms-1": 11,
+        "wayfarer-1": 8
+      },
+      "name": "地图物件（类型 4）",
+      "sourceClass": 4
+    },
+    "41": {
+      "genericFallback": false,
+      "instances": 140,
+      "maps": {
+        "empire-of-the-world-2-1": 8,
+        "ira-the-mage-1": 11,
+        "ira-the-mage-2": 11,
+        "ira-the-mage-3": 11,
+        "jedi-story-1": 11,
+        "jedi-story-2": 11,
+        "jedi-story-3": 11,
+        "jennifers-dream-journey-1": 12,
+        "lord-of-the-rings-1": 9,
+        "seven-lakes-1": 5,
+        "the-lone-knight-1": 7,
+        "to-tame-a-land-1": 10,
+        "war-of-seven-realms-1": 7,
+        "wayfarer-1": 16
+      },
+      "name": "智慧图书馆",
+      "sourceClass": 41
+    },
+    "42": {
+      "genericFallback": false,
+      "instances": 267,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 4,
+        "ira-the-mage-1": 43,
+        "ira-the-mage-2": 43,
+        "ira-the-mage-3": 43,
+        "jedi-story-1": 4,
+        "jedi-story-2": 4,
+        "jedi-story-3": 4,
+        "jennifers-dream-journey-1": 85,
+        "lord-of-the-rings-1": 8,
+        "seven-lakes-1": 1,
+        "the-lone-knight-1": 4,
+        "to-tame-a-land-1": 5,
+        "war-of-seven-realms-1": 11,
+        "wayfarer-1": 7
+      },
+      "name": "灯塔",
+      "sourceClass": 42
+    },
+    "47": {
+      "genericFallback": true,
+      "instances": 192,
+      "maps": {
+        "empire-of-the-world-2-1": 17,
+        "ira-the-mage-1": 14,
+        "ira-the-mage-2": 14,
+        "ira-the-mage-3": 14,
+        "jedi-story-1": 11,
+        "jedi-story-2": 11,
+        "jedi-story-3": 11,
+        "jennifers-dream-journey-1": 9,
+        "lord-of-the-rings-1": 26,
+        "seven-lakes-1": 6,
+        "the-lone-knight-1": 7,
+        "to-tame-a-land-1": 21,
+        "war-of-seven-realms-1": 22,
+        "wayfarer-1": 9
+      },
+      "name": "地图物件（类型 47）",
+      "sourceClass": 47
+    },
+    "48": {
+      "genericFallback": false,
+      "instances": 74,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 11,
+        "ira-the-mage-1": 1,
+        "ira-the-mage-2": 1,
+        "ira-the-mage-3": 1,
+        "jedi-story-1": 7,
+        "jedi-story-2": 7,
+        "jedi-story-3": 7,
+        "jennifers-dream-journey-1": 11,
+        "lord-of-the-rings-1": 12,
+        "the-lone-knight-1": 5,
+        "to-tame-a-land-1": 3,
+        "war-of-seven-realms-1": 3,
+        "wayfarer-1": 4
+      },
+      "name": "魔法泉",
+      "sourceClass": 48
+    },
+    "50": {
+      "genericFallback": true,
+      "instances": 6,
+      "maps": {
+        "war-of-seven-realms-1": 6
+      },
+      "name": "地图物件（类型 50）",
+      "sourceClass": 50
+    },
+    "51": {
+      "genericFallback": false,
+      "instances": 149,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 14,
+        "ira-the-mage-1": 18,
+        "ira-the-mage-2": 18,
+        "ira-the-mage-3": 18,
+        "jedi-story-1": 4,
+        "jedi-story-2": 4,
+        "jedi-story-3": 4,
+        "jennifers-dream-journey-1": 2,
+        "lord-of-the-rings-1": 18,
+        "seven-lakes-1": 5,
+        "the-lone-knight-1": 7,
+        "to-tame-a-land-1": 16,
+        "war-of-seven-realms-1": 11,
+        "wayfarer-1": 9
+      },
+      "name": "雇佣兵营地",
+      "sourceClass": 51
+    },
+    "52": {
+      "genericFallback": false,
+      "instances": 154,
+      "maps": {
+        "empire-of-the-world-2-1": 19,
+        "ira-the-mage-1": 3,
+        "ira-the-mage-2": 3,
+        "ira-the-mage-3": 3,
+        "jedi-story-1": 14,
+        "jedi-story-2": 14,
+        "jedi-story-3": 14,
+        "jennifers-dream-journey-1": 29,
+        "lord-of-the-rings-1": 8,
+        "the-lone-knight-1": 7,
+        "to-tame-a-land-1": 6,
+        "war-of-seven-realms-1": 2,
+        "wayfarer-1": 32
+      },
+      "name": "美人鱼",
+      "sourceClass": 52
+    },
+    "55": {
+      "genericFallback": false,
+      "instances": 114,
+      "maps": {
+        "empire-of-the-world-2-1": 14,
+        "ira-the-mage-1": 2,
+        "ira-the-mage-2": 2,
+        "ira-the-mage-3": 2,
+        "jedi-story-1": 9,
+        "jedi-story-2": 9,
+        "jedi-story-3": 9,
+        "jennifers-dream-journey-1": 10,
+        "lord-of-the-rings-1": 12,
+        "seven-lakes-1": 7,
+        "the-lone-knight-1": 4,
+        "to-tame-a-land-1": 5,
+        "war-of-seven-realms-1": 7,
+        "wayfarer-1": 22
+      },
+      "name": "神秘花园",
+      "sourceClass": 55
+    },
+    "56": {
+      "genericFallback": false,
+      "instances": 100,
+      "maps": {
+        "empire-of-the-world-2-1": 6,
+        "ira-the-mage-1": 1,
+        "ira-the-mage-2": 1,
+        "ira-the-mage-3": 1,
+        "jedi-story-1": 10,
+        "jedi-story-2": 10,
+        "jedi-story-3": 10,
+        "jennifers-dream-journey-1": 10,
+        "lord-of-the-rings-1": 5,
+        "seven-lakes-1": 3,
+        "the-lone-knight-1": 6,
+        "to-tame-a-land-1": 3,
+        "war-of-seven-realms-1": 4,
+        "wayfarer-1": 30
+      },
+      "name": "绿洲",
+      "sourceClass": 56
+    },
+    "58": {
+      "genericFallback": true,
+      "instances": 106,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 7,
+        "ira-the-mage-1": 11,
+        "ira-the-mage-2": 11,
+        "ira-the-mage-3": 11,
+        "jedi-story-1": 2,
+        "jedi-story-2": 2,
+        "jedi-story-3": 2,
+        "jennifers-dream-journey-1": 2,
+        "lord-of-the-rings-1": 9,
+        "seven-lakes-1": 10,
+        "the-lone-knight-1": 3,
+        "to-tame-a-land-1": 2,
+        "war-of-seven-realms-1": 8,
+        "wayfarer-1": 25
+      },
+      "name": "地图物件（类型 58）",
+      "sourceClass": 58
+    },
+    "59": {
+      "genericFallback": false,
+      "instances": 63,
+      "maps": {
+        "empire-of-the-world-2-1": 5,
+        "ira-the-mage-1": 5,
+        "ira-the-mage-2": 5,
+        "ira-the-mage-3": 5,
+        "jedi-story-1": 1,
+        "jedi-story-2": 1,
+        "jedi-story-3": 1,
+        "jennifers-dream-journey-1": 13,
+        "lord-of-the-rings-1": 7,
+        "seven-lakes-1": 3,
+        "to-tame-a-land-1": 10,
+        "war-of-seven-realms-1": 2,
+        "wayfarer-1": 5
+      },
+      "name": "地图物件（类型 59）",
+      "sourceClass": 59
+    },
+    "6": {
+      "genericFallback": false,
+      "instances": 220,
+      "maps": {
+        "empire-of-the-world-2-1": 8,
+        "ira-the-mage-1": 17,
+        "ira-the-mage-2": 17,
+        "ira-the-mage-3": 17,
+        "jedi-story-1": 8,
+        "jedi-story-2": 8,
+        "jedi-story-3": 8,
+        "jennifers-dream-journey-1": 20,
+        "lord-of-the-rings-1": 78,
+        "seven-lakes-1": 19,
+        "the-lone-knight-1": 10,
+        "to-tame-a-land-1": 1,
+        "war-of-seven-realms-1": 3,
+        "wayfarer-1": 6
+      },
+      "name": "地图物件（类型 6）",
+      "sourceClass": 6
+    },
+    "60": {
+      "genericFallback": true,
+      "instances": 81,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 9,
+        "ira-the-mage-1": 14,
+        "ira-the-mage-2": 14,
+        "ira-the-mage-3": 14,
+        "jedi-story-1": 5,
+        "jedi-story-2": 5,
+        "jedi-story-3": 5,
+        "jennifers-dream-journey-1": 4,
+        "lord-of-the-rings-1": 6,
+        "the-lone-knight-1": 1,
+        "to-tame-a-land-1": 1,
+        "wayfarer-1": 2
+      },
+      "name": "地图物件（类型 60）",
+      "sourceClass": 60
+    },
+    "61": {
+      "genericFallback": false,
+      "instances": 188,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 10,
+        "ira-the-mage-1": 16,
+        "ira-the-mage-2": 16,
+        "ira-the-mage-3": 16,
+        "jedi-story-1": 10,
+        "jedi-story-2": 10,
+        "jedi-story-3": 10,
+        "jennifers-dream-journey-1": 8,
+        "lord-of-the-rings-1": 14,
+        "seven-lakes-1": 16,
+        "the-lone-knight-1": 8,
+        "to-tame-a-land-1": 21,
+        "war-of-seven-realms-1": 15,
+        "wayfarer-1": 17
+      },
+      "name": "星轴",
+      "sourceClass": 61
+    },
+    "62": {
+      "genericFallback": true,
+      "instances": 87,
+      "maps": {
+        "empire-of-the-world-2-1": 4,
+        "ira-the-mage-1": 2,
+        "ira-the-mage-2": 2,
+        "ira-the-mage-3": 2,
+        "jedi-story-1": 11,
+        "jedi-story-2": 11,
+        "jedi-story-3": 11,
+        "jennifers-dream-journey-1": 5,
+        "lord-of-the-rings-1": 12,
+        "seven-lakes-1": 10,
+        "the-lone-knight-1": 11,
+        "to-tame-a-land-1": 2,
+        "war-of-seven-realms-1": 1,
+        "wayfarer-1": 3
+      },
+      "name": "地图物件（类型 62）",
+      "sourceClass": 62
+    },
+    "63": {
+      "genericFallback": true,
+      "instances": 30,
+      "maps": {
+        "empire-of-the-world-2-1": 2,
+        "jedi-story-1": 3,
+        "jedi-story-2": 3,
+        "jedi-story-3": 3,
+        "jennifers-dream-journey-1": 1,
+        "lord-of-the-rings-1": 5,
+        "the-lone-knight-1": 1,
+        "war-of-seven-realms-1": 2,
+        "wayfarer-1": 10
+      },
+      "name": "地图物件（类型 63）",
+      "sourceClass": 63
+    },
+    "64": {
+      "genericFallback": false,
+      "instances": 141,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 10,
+        "ira-the-mage-1": 2,
+        "ira-the-mage-2": 2,
+        "ira-the-mage-3": 2,
+        "jedi-story-1": 1,
+        "jedi-story-2": 1,
+        "jedi-story-3": 1,
+        "jennifers-dream-journey-1": 28,
+        "lord-of-the-rings-1": 32,
+        "seven-lakes-1": 15,
+        "the-lone-knight-1": 9,
+        "to-tame-a-land-1": 13,
+        "war-of-seven-realms-1": 6,
+        "wayfarer-1": 18
+      },
+      "name": "集结旗",
+      "sourceClass": 64
+    },
+    "7": {
+      "genericFallback": true,
+      "instances": 19,
+      "maps": {
+        "empire-of-the-world-2-1": 1,
+        "jedi-story-1": 2,
+        "jedi-story-2": 2,
+        "jedi-story-3": 2,
+        "jennifers-dream-journey-1": 1,
+        "seven-lakes-1": 3,
+        "the-lone-knight-1": 3,
+        "to-tame-a-land-1": 1,
+        "war-of-seven-realms-1": 1,
+        "wayfarer-1": 3
+      },
+      "name": "地图物件（类型 7）",
+      "sourceClass": 7
+    },
+    "78": {
+      "genericFallback": true,
+      "instances": 20,
+      "maps": {
+        "empire-of-the-world-2-1": 1,
+        "lord-of-the-rings-1": 1,
+        "seven-lakes-1": 10,
+        "the-lone-knight-1": 4,
+        "war-of-seven-realms-1": 4
+      },
+      "name": "地图物件（类型 78）",
+      "sourceClass": 78
+    },
+    "80": {
+      "genericFallback": true,
+      "instances": 68,
+      "maps": {
+        "empire-of-the-world-2-1": 7,
+        "ira-the-mage-1": 7,
+        "ira-the-mage-2": 7,
+        "ira-the-mage-3": 7,
+        "jedi-story-1": 7,
+        "jedi-story-2": 7,
+        "jedi-story-3": 7,
+        "jennifers-dream-journey-1": 2,
+        "lord-of-the-rings-1": 3,
+        "seven-lakes-1": 7,
+        "to-tame-a-land-1": 2,
+        "war-of-seven-realms-1": 3,
+        "wayfarer-1": 2
+      },
+      "name": "地图物件（类型 80）",
+      "sourceClass": 80
+    },
+    "81": {
+      "genericFallback": true,
+      "instances": 134,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 1,
+        "ira-the-mage-1": 3,
+        "ira-the-mage-2": 3,
+        "ira-the-mage-3": 3,
+        "jedi-story-1": 1,
+        "jedi-story-2": 1,
+        "jedi-story-3": 1,
+        "jennifers-dream-journey-1": 18,
+        "lord-of-the-rings-1": 5,
+        "seven-lakes-1": 29,
+        "the-lone-knight-1": 35,
+        "to-tame-a-land-1": 10,
+        "war-of-seven-realms-1": 16,
+        "wayfarer-1": 7
+      },
+      "name": "地图物件（类型 81）",
+      "sourceClass": 81
+    },
+    "83": {
+      "genericFallback": false,
+      "instances": 415,
+      "maps": {
+        "empire-of-the-world-2-1": 18,
+        "ira-the-mage-1": 35,
+        "ira-the-mage-2": 35,
+        "ira-the-mage-3": 35,
+        "jedi-story-1": 28,
+        "jedi-story-2": 28,
+        "jedi-story-3": 28,
+        "jennifers-dream-journey-1": 32,
+        "lord-of-the-rings-1": 48,
+        "seven-lakes-1": 17,
+        "the-lone-knight-1": 48,
+        "to-tame-a-land-1": 20,
+        "war-of-seven-realms-1": 20,
+        "wayfarer-1": 23
+      },
+      "name": "地图物件（类型 83）",
+      "sourceClass": 83
+    },
+    "84": {
+      "genericFallback": true,
+      "instances": 122,
+      "maps": {
+        "empire-of-the-world-2-1": 7,
+        "ira-the-mage-1": 13,
+        "ira-the-mage-2": 13,
+        "ira-the-mage-3": 13,
+        "jedi-story-1": 7,
+        "jedi-story-2": 7,
+        "jedi-story-3": 7,
+        "jennifers-dream-journey-1": 3,
+        "lord-of-the-rings-1": 6,
+        "seven-lakes-1": 4,
+        "the-lone-knight-1": 4,
+        "to-tame-a-land-1": 4,
+        "war-of-seven-realms-1": 8,
+        "wayfarer-1": 26
+      },
+      "name": "地图物件（类型 84）",
+      "sourceClass": 84
+    },
+    "85": {
+      "genericFallback": true,
+      "instances": 398,
+      "maps": {
+        "dead-and-buried-1": 1,
+        "empire-of-the-world-2-1": 51,
+        "ira-the-mage-1": 11,
+        "ira-the-mage-2": 11,
+        "ira-the-mage-3": 11,
+        "jedi-story-1": 46,
+        "jedi-story-2": 46,
+        "jedi-story-3": 46,
+        "jennifers-dream-journey-1": 46,
+        "lord-of-the-rings-1": 50,
+        "seven-lakes-1": 4,
+        "the-lone-knight-1": 29,
+        "to-tame-a-land-1": 11,
+        "war-of-seven-realms-1": 19,
+        "wayfarer-1": 16
+      },
+      "name": "地图物件（类型 85）",
+      "sourceClass": 85
+    },
+    "86": {
+      "genericFallback": true,
+      "instances": 177,
+      "maps": {
+        "empire-of-the-world-2-1": 8,
+        "ira-the-mage-1": 1,
+        "ira-the-mage-2": 1,
+        "ira-the-mage-3": 1,
+        "jedi-story-1": 31,
+        "jedi-story-2": 31,
+        "jedi-story-3": 31,
+        "jennifers-dream-journey-1": 20,
+        "lord-of-the-rings-1": 20,
+        "seven-lakes-1": 9,
+        "the-lone-knight-1": 10,
+        "to-tame-a-land-1": 5,
+        "war-of-seven-realms-1": 4,
+        "wayfarer-1": 5
+      },
+      "name": "地图物件（类型 86）",
+      "sourceClass": 86
+    },
+    "87": {
+      "genericFallback": false,
+      "instances": 47,
+      "maps": {
+        "dead-and-buried-1": 2,
+        "empire-of-the-world-2-1": 1,
+        "ira-the-mage-1": 6,
+        "ira-the-mage-2": 6,
+        "ira-the-mage-3": 6,
+        "jedi-story-1": 2,
+        "jedi-story-2": 2,
+        "jedi-story-3": 2,
+        "lord-of-the-rings-1": 6,
+        "seven-lakes-1": 5,
+        "the-lone-knight-1": 3,
+        "to-tame-a-land-1": 2,
+        "war-of-seven-realms-1": 2,
+        "wayfarer-1": 2
+      },
+      "name": "船厂",
+      "sourceClass": 87
+    },
+    "91": {
+      "genericFallback": false,
+      "instances": 434,
+      "maps": {
+        "empire-of-the-world-2-1": 39,
+        "ira-the-mage-1": 46,
+        "ira-the-mage-2": 46,
+        "ira-the-mage-3": 46,
+        "jedi-story-1": 12,
+        "jedi-story-2": 12,
+        "jedi-story-3": 12,
+        "jennifers-dream-journey-1": 48,
+        "lord-of-the-rings-1": 51,
+        "seven-lakes-1": 19,
+        "the-lone-knight-1": 36,
+        "to-tame-a-land-1": 18,
+        "war-of-seven-realms-1": 27,
+        "wayfarer-1": 22
+      },
+      "name": "地图物件（类型 91）",
+      "sourceClass": 91
+    },
+    "92": {
+      "genericFallback": false,
+      "instances": 59,
+      "maps": {
+        "empire-of-the-world-2-1": 12,
+        "jedi-story-1": 3,
+        "jedi-story-2": 3,
+        "jedi-story-3": 3,
+        "jennifers-dream-journey-1": 1,
+        "lord-of-the-rings-1": 2,
+        "the-lone-knight-1": 1,
+        "to-tame-a-land-1": 2,
+        "war-of-seven-realms-1": 1,
+        "wayfarer-1": 31
+      },
+      "name": "海妖",
+      "sourceClass": 92
+    },
+    "94": {
+      "genericFallback": false,
+      "instances": 151,
+      "maps": {
+        "empire-of-the-world-2-1": 13,
+        "ira-the-mage-1": 22,
+        "ira-the-mage-2": 22,
+        "ira-the-mage-3": 22,
+        "jedi-story-1": 5,
+        "jedi-story-2": 5,
+        "jedi-story-3": 5,
+        "jennifers-dream-journey-1": 18,
+        "lord-of-the-rings-1": 17,
+        "seven-lakes-1": 3,
+        "the-lone-knight-1": 4,
+        "to-tame-a-land-1": 4,
+        "war-of-seven-realms-1": 8,
+        "wayfarer-1": 3
+      },
+      "name": "马厩",
+      "sourceClass": 94
+    },
+    "95": {
+      "genericFallback": true,
+      "instances": 19,
+      "maps": {
+        "ira-the-mage-1": 5,
+        "ira-the-mage-2": 5,
+        "ira-the-mage-3": 5,
+        "jennifers-dream-journey-1": 1,
+        "seven-lakes-1": 3
+      },
+      "name": "地图物件（类型 95）",
+      "sourceClass": 95
+    },
+    "96": {
+      "genericFallback": false,
+      "instances": 41,
+      "maps": {
+        "empire-of-the-world-2-1": 6,
+        "ira-the-mage-1": 4,
+        "ira-the-mage-2": 4,
+        "ira-the-mage-3": 4,
+        "jedi-story-1": 1,
+        "jedi-story-2": 1,
+        "jedi-story-3": 1,
+        "jennifers-dream-journey-1": 6,
+        "lord-of-the-rings-1": 3,
+        "seven-lakes-1": 2,
+        "to-tame-a-land-1": 6,
+        "war-of-seven-realms-1": 1,
+        "wayfarer-1": 2
+      },
+      "name": "神庙",
+      "sourceClass": 96
+    },
+    "97": {
+      "genericFallback": false,
+      "instances": 64,
+      "maps": {
+        "empire-of-the-world-2-1": 1,
+        "ira-the-mage-1": 5,
+        "ira-the-mage-2": 5,
+        "ira-the-mage-3": 5,
+        "jedi-story-1": 8,
+        "jedi-story-2": 8,
+        "jedi-story-3": 8,
+        "jennifers-dream-journey-1": 4,
+        "lord-of-the-rings-1": 5,
+        "seven-lakes-1": 6,
+        "to-tame-a-land-1": 1,
+        "war-of-seven-realms-1": 4,
+        "wayfarer-1": 4
+      },
+      "name": "盗贼之家",
+      "sourceClass": 97
+    }
+  },
+  "genericFallbackClasses": 41,
+  "genericFallbackInstances": 6814,
+  "maps": 15,
+  "scope": "Site objects only; guard-free fallback dispatch, not original-rule completeness",
+  "version": "0.49.0"
+}

@@ -30,7 +30,7 @@ std::vector<Step> Game::adventurePlan(int*targetId){
     case ObjectType::Gate:if(questReady(*o))value=500;break;
     case ObjectType::Windmill:case ObjectType::WaterWheel:if(!o->visited)value=160;break;
     case ObjectType::Well:if(hero.mana<maxMana()/2&&hero.wellDay!=day)value=100;break;
-    case ObjectType::Site:if(o->sourceClass==87&&!hero.onBoat&&resources[Gold]>=1000&&resources[Wood]>=10&&std::none_of(objects.begin(),objects.end(),[&](auto&b){return b.type==ObjectType::Boat&&b.level==o->level&&std::max(std::abs(b.pos.x-o->pos.x),std::abs(b.pos.y-o->pos.y))<=5;}))value=650;else if(!o->visited&&(o->sourceClass==12||o->sourceClass==23||o->sourceClass==32||o->sourceClass==51||o->sourceClass==61||o->sourceClass==100))value=180;break;
+    case ObjectType::Site:if(o->sourceClass==42&&o->owner!=actingOwner&&safe(o))value=350;else if(o->sourceClass==87&&!hero.onBoat&&resources[Gold]>=1000&&resources[Wood]>=10&&std::none_of(objects.begin(),objects.end(),[&](auto&b){return b.type==ObjectType::Boat&&b.level==o->level&&std::max(std::abs(b.pos.x-o->pos.x),std::abs(b.pos.y-o->pos.y))<=5;}))value=650;else if(!o->visited&&(o->sourceClass==12||o->sourceClass==23||o->sourceClass==32||o->sourceClass==51||o->sourceClass==61||o->sourceClass==100))value=180;break;
     default:break;}}
    if(!encounter&&(!o||o->type!=ObjectType::Gate)){int unknown=0;for(int dy=-5;dy<=5;dy+=2)for(int dx=-5;dx<=5;dx+=2)if(dx*dx+dy*dy<30)if(auto*t=tile({p.x+dx,p.y+dy});t&&!t->seen&&t->terrain!=Terrain::Rock)++unknown;value+=unknown*18;}
    double score=value/(c+450.);if(recipient&&std::max(std::abs(p.x-recipient->pos.x),std::abs(p.y-recipient->pos.y))<=1)score+=20000;if(target&&target==hero.adventureGoal&&value>0)score+=10000;if(score>best){best=score;end=state;object=target;}

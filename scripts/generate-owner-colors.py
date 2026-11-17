@@ -31,10 +31,11 @@ colors = {
 towns = ['avccasx0.def', 'avcramx0.def', 'avctowx0.def', 'avcinfx0.def', 'avcnecx0.def',
          'avcdunx0.def', 'avcstrx0.def', 'avcftrx0.def', 'avchforx.def']
 mines = ['avmgold0.def', 'avmsawd0.def', 'avmore0.def', 'avmalch0.def', 'avmsulf0.def', 'avmcrys0.def', 'avmgems0.def']
+flaggable_sites = ['avxlths0.def']
 assets = {}
-for name in towns + mines + ['cmflagl.def', 'cmflagr.def']:
+for name in towns + mines + flaggable_sites + ['cmflagl.def', 'cmflagr.def']:
     definition = Def(resources.read(name))
-    is_map = name in towns + mines
+    is_map = name in towns + mines + flaggable_sites
     entry = {'mode': 'adventure-marker-5' if is_map else 'player-palette-224-255',
              'source': resources.source(name), 'pages': {}, 'samples': []}
     if is_map:
@@ -85,4 +86,4 @@ reference = ROOT / 'references/ownership-0.45';reference.mkdir(exist_ok=True)
     'heroFlags': {name: resources.source(info['heroFlag']) for name,info in colors.items() if 'heroFlag' in info},
     'assets': {name: {'source': info['source'], 'mode': info['mode'], 'flagPixelCounts': [p['pixels'] for p in info['samples']]} for name, info in assets.items()},
 }, ensure_ascii=False, indent=2)+'\n')
-print(f'Generated ownership variants for {len(towns)} towns, {len(mines)} mines and 2 battle flags')
+print(f'Generated ownership variants for {len(towns)} towns, {len(mines)} mines, {len(flaggable_sites)} sites and 2 battle flags')

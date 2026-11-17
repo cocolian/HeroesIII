@@ -25,6 +25,7 @@ class Desktop {
 public:
  explicit Desktop(std::filesystem::path root,bool hidden=false,std::filesystem::path saveDirectory={},std::filesystem::path inputTrace={},bool startFullscreen=false);~Desktop();int run();void render();bool screenshot(const std::filesystem::path&);void renderTests(const std::filesystem::path&);void graphicsPreview(const std::filesystem::path&,bool townArtOnly=false);void displayPreview(const std::filesystem::path&);void interactionPreview(const std::filesystem::path&);void runtimePreview(const std::filesystem::path&);void siegePreview(const std::filesystem::path&,const std::filesystem::path&);void kingdomPreview(const std::filesystem::path&,const std::filesystem::path&);void scenarioPreview(const std::filesystem::path&);void pointerPreview(const std::filesystem::path&);
  void sitePreview(const std::filesystem::path&,const std::filesystem::path&);
+ void mapServicesPreview(const std::filesystem::path&,const std::filesystem::path&);void thievesGuildDialog();
  void localizationPreview(const std::filesystem::path&);
  void performancePreview(const std::filesystem::path&,const std::filesystem::path&);
  std::unique_ptr<AsyncSaveWriter> autosave_;

@@ -727,7 +727,7 @@
           "key": "special1",
           "name": "灯塔",
           "sourceName": "Lighthouse",
-          "description": "特殊建筑效果待接入",
+          "description": "所属玩家的英雄每日航海行动力 +500，可叠加",
           "cost": [
             2000,
             0,
@@ -744,7 +744,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 17,
           "upIcon": -1
         },

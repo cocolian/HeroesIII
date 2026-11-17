@@ -1,6 +1,6 @@
 # 源码仓库与构建说明
 
-公开仓库为 <https://github.com/cocolian/HeroesIII>，当前源码版本 0.48.1。
+公开仓库为 <https://github.com/cocolian/HeroesIII>，当前源码版本 0.49.0。
 
 仓库包含 `native/src`、`native/include`、`native/generated`、原生测试、macOS／iPadOS 工程资源、CMake 固定版本依赖配置、资源采集与生成脚本，以及早期网页原型。生成的 C++ 表随源码保存，编译规则引擎不要求重新生成这些表。
 

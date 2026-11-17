@@ -38,7 +38,7 @@ struct MapDecoration {Point anchor;int level=0;std::string sprite;bool ground=fa
 bool originalGroundLayer(std::string_view scenario,std::string_view sprite,Point anchor,int level);
 struct AdventureTemplate {std::string_view asset;Point visitOffset{};uint64_t blocked=0,visitable=0;};
 const AdventureTemplate& adventureTemplate(std::string_view);
-struct AdventureVisit {ObjectType type;std::string title,message;Resources reward{};int spell=-1;int morale=0,luck=0;};
+struct AdventureVisit {ObjectType type;std::string title,message;Resources reward{};int spell=-1;int morale=0,luck=0;int sourceClass=-1;};
 enum SkillId {Offense,Archery,Armorer,Logistics,Wisdom,Intelligence,Mysticism,Leadership,AirMagic,FireMagic,WaterMagic,EarthMagic,LuckSkill,SkillCount};
 extern const std::array<std::string,SkillCount> SkillNames;
 extern const std::array<std::string,4> SkillLevels;
@@ -62,6 +62,7 @@ extern const std::array<TownDef,FactionCount> TownDefs;
 extern const std::array<BuildingDef,BuildingCount>& Buildings;
 struct Town {std::array<bool,BuildingCount> built{};std::array<int,7> pool{};Army garrison{};int builtDay=0,faction=0,stableWeek=-1;std::array<bool,4> lessons{};Point pos{4,20};std::array<std::vector<int>,5> guild{};int objectId=0,level=0;};
 struct MapHero {Hero value;int owner=0,level=0;bool sleeping=false;Point patrolOrigin{};int patrolRadius=-1;std::string sprite="ah00_.def";nlohmann::json properties=nlohmann::json::object();};
+struct GuildPlayer {int owner=0;std::array<int64_t,9> totals{};std::optional<Hero> bestHero;int bestCreature=-1;};
 enum class StackOrigin {Army,Summoned,Clone};
 struct CombatStack {int id=0,slot=0,unit=0,team=0,count=0,initialCount=0,hp=0,x=0,y=0,retaliations=0,shots=0;bool defending=false,waited=false;int preparedRound=-1,defenseReduction=0,defendingBonus=0;std::array<int,SpellCount> effects{},effectMastery{};StackOrigin origin=StackOrigin::Army;int permanentCount=0,cloneOf=-1,cloneTurns=0,deathOrder=0;bool corpse=false,acted=false,moraleUsed=false;};
 struct Siege {int faction=-1,fort=0,attackerTeam=0,townId=0,buildings=0;std::array<int,8> hp{};std::vector<Point> spentMines;};
@@ -90,10 +91,11 @@ public:
  std::string mapObjectAsset(const Object&)const;std::vector<bool> movementMask()const;void clearObstacleFootprints(const std::vector<Point>&);
  std::optional<AdventureVisit> takeAdventureVisit();int obelisksVisited()const;int obelisksTotal()const;std::string dig();
  std::optional<std::string> visitAdventureSite(Object&);int adventureModifier(const Hero&,int stat)const;bool hasAdventureBonus(const Hero&,int sourceClass)const;void consumeAdventureBonuses();
+ int seaMovementBonus(int owner)const;std::vector<GuildPlayer> thievesGuild()const;
  bool visiting()const{return (!imported()||activeHeroId!=0)&&hasTown()&&mapLevel==town.level&&hero.pos==town.pos;}
  static int mineYield(int resource);Resources mineIncome()const;Resources dailyIncome()const;
  int primarySkill(int)const;int artifactLandMovement()const;bool artifactSpellImmune(int)const;void equipPickedArtifact(int);int rollArtifact(int sourceClass);
- int income()const;int weeklyGrowth(int tier)const;int maxMana()const;int movementAllowance()const;static int experienceForLevel(int);
+ int income()const;int weeklyGrowth(int tier)const;int maxMana()const;int movementAllowance(int owner=-1)const;static int experienceForLevel(int);
  std::string endDay();std::string build(int);int recruitMax(int unit)const;std::string recruit(int unit,int count,bool garrison=false);std::string upgrade(bool garrison,int slot);
  std::string transfer(bool fromGarrison,int fromSlot,bool toGarrison,int toSlot,int amount);std::string dismiss(bool garrison,int slot);std::string chooseSkill(int);
  void gainXP(int);bool canAfford(const Resources&)const;std::array<int,7> recruitableUnits()const;
