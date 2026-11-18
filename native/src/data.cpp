@@ -8,6 +8,7 @@ const std::array<UnitDef,UnitCount> Units=[]{std::array<UnitDef,UnitCount> units
  const char*names[]={"弩车","急救帐篷","弹药车"};const char*animations[]={"smbal.def","smtent.def","smcart.def"};
  const int hp[]={250,75,100},cost[]={2500,750,1000},defense[]={10,0,5};
  for(int i=0;i<3;++i){auto&u=units[CreatureUnitCount+i];u.name=names[i];u.animation=animations[i];u.originalId=146+i;u.portraitFrame=148+i;u.hp=hp[i];u.attack=i==0?10:0;u.defense=defense[i];u.minDamage=i==0?2:0;u.maxDamage=i==0?3:0;u.speed=1;u.cost=cost[i];u.shots=i==0?24:0;u.size=i==2?1:2;u.retaliations=0;u.nonLiving=true;u.living=false;u.mindImmune=true;u.noDistancePenalty=true;u.noMeleePenalty=true;u.noRetaliation=true;u.portraitOnly=true;}
+ auto&catapult=units[CatapultUnit];catapult=units[BallistaUnit];catapult.name="投石车";catapult.animation="smcata.def";catapult.originalId=145;catapult.portraitFrame=147;catapult.hp=1000;catapult.cost=0;catapult.shots=0;catapult.minDamage=catapult.maxDamage=0;catapult.speed=0;
  return units;}();
 const std::array<TownDef,FactionCount> TownDefs={{
 #include "../generated/towns.inc"

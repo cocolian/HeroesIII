@@ -85,6 +85,7 @@ void Desktop::townDrag(Point p){
  if(!stack.empty()){portrait(stack.unit,{p.x-29,p.y-32,58,64});outline({p.x-29,p.y-32,58,64},GoldColor);}
 }
 void Desktop::town(){
+ std::string townName=Factions[game.town.faction].name+"主城";if(auto*o=game.objectById(game.activeTownId))townName=o->name;
  townScene();originalImage("townscrn.pcx",{0,374,800,226});
  // Each building receives only the nontransparent pixels of its original TZ
  // mask (or an explicitly recorded sprite-derived fallback), in painting order.
@@ -96,7 +97,7 @@ void Desktop::town(){
  int fortLevel=game.town.built[Castle]?2:game.town.built[Citadel]?1:game.town.built[Fort]?0:3;
  int hallLevel=game.town.built[Capitol]?3:game.town.built[CityHall]?2:game.town.built[TownHall]?1:0;
  frame("itpt.def",0,game.town.faction*2+(fortLevel==3?18:0),{15,387,58,64});
- centerText("狮鹫之巢",{81,387,144,20},14,GoldColor);
+ centerText(townName,{81,387,144,20},14,GoldColor);
  frame("itmcl.def",0,fortLevel,{82,410,38,38});frame("itmtl.def",0,hallLevel,{125,410,38,38});
  centerText(std::to_string(game.income()),{172,433,56,19},12);
  buttons_.push_back({{82,410,38,38},[this]{scene=Scene::Fort;focus_=-1;},true,{},"打开堡垒，查看各级兵种并招募部队"});
@@ -110,9 +111,10 @@ void Desktop::town(){
  frame("crest58.def",0,1,{241,386,58,64});
  if(game.visiting())originalImage("hpl128qc.pcx",{241,484,58,64});
  townArmyRow(true);townArmyRow(false);
+ if(game.constructionState(GrailBuilding)==BuildState::Ready)button({80,388,146,22},"建造圣杯",[this]{say(game.build(GrailBuilding));persist();});
  frame("itpa.def",0,2+game.town.faction*2+(fortLevel==3?18:0),{745,441,48,32});
  buttons_.push_back({{744,543,54,29},[this]{scene=Scene::Adventure;sourceSlot_=-1;},true,{},"离开城镇，返回冒险地图（Esc）"});
- std::string status=toastUntil_>SDL_GetTicks64()?toast_:"狮鹫之巢";
+ std::string status=toastUntil_>SDL_GetTicks64()?toast_:townName;
  int hovered=townLayerAt({mouseX_,mouseY_});if(hovered>=0&&!game.townDef().layers[hovered].needs.empty())status=game.townDef().buildings[game.townDef().layers[hovered].needs.front()].name;
  centerText(status,{8,554,733,20},11);townFooter();townDrag({mouseX_,mouseY_});
 }
@@ -120,6 +122,7 @@ void Desktop::townBuilding(int id){
  if(id==Shipyard&&game.imported()){say(game.buyBoat());persist();return;}
  if(id==Tavern&&game.imported()){scene=Scene::Tavern;focus_=-1;return;}
  focus_=-1;
+ if(id==Blacksmith||(id>=Special1&&id<=Special4)){game.refreshTownServices();if(!game.townOffers(id).empty()){townServiceBuilding_=id;locationPage_=0;scene=Scene::TownService;return;}}
  if(id==VillageHall||id==TownHall||id==CityHall||id==Capitol){scene=Scene::Build;return;}
  if(id==Fort||id==Citadel||id==Castle){scene=Scene::Fort;return;}
  if(id==Marketplace||id==ResourceSilo){openMarket();return;}

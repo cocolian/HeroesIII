@@ -36,21 +36,22 @@ void Desktop::battleAction(const std::function<std::string()>&action){
 }
 void Desktop::battle(){
  const Battle*view=scene==Scene::Report?battleMotion_.retainedView():battleMotion_.view();if(!view&&game.battle)view=&*game.battle;if(!view){settle();return;}
- const auto&b=*view;bool busy=battleMotion_.active();if(!siegeArtwork(b)&&!redrawnBattle())originalImage("cmbkgrtr.pcx",{0,0,800,556});
+ const auto&b=*view;bool busy=battleMotion_.active();if(!siegeArtwork(b)&&!redrawnBattle()){const char*backgrounds[]={"cmbkgrtr","cmbkdrtr","cmbkdes","cmbkdeck","cmbksntr","cmbkswmp","cmbkrgh","cmbksub","cmbklava","cmbksub"};auto*terrain=game.tile(game.hero.pos);std::string name=backgrounds[terrain?int(terrain->terrain):0];if(!originalImage(name+".bmp",{0,0,800,556})&&!originalImage(name+".pcx",{0,0,800,556}))originalImage("cmbkgrtr.pcx",{0,0,800,556});}
  // Hero class sprites and flags follow the heroes participating in this battle.
- int heroClass=game.hero.originalId>=0&&game.hero.originalId<144?game.hero.originalId/8:0;auto number=std::to_string(heroClass);if(heroClass==10||(heroClass>=12&&heroClass<=15))number="0"+number;auto heroAsset="ch"+std::string(number.size()<2?1:0,'0')+number+".def";if(!frame(heroAsset,0,0,{-25,-20,150,175}))frame("ch00.def",0,0,{-25,-20,150,175});
- if(game.heroes.contains(b.targetId)){int enemy=game.heroes.at(b.targetId).value.originalId;int enemyClass=enemy>=0&&enemy<144?enemy/8:0;auto n=std::to_string(enemyClass);if(enemyClass==10||(enemyClass>=12&&enemyClass<=15))n="0"+n;frame("ch"+std::string(n.size()<2?1:0,'0')+n+".def",0,0,{675,-20,150,175},true);frame("cmflagr.def",0,int(animationTime_/100),{735,15,17,15},false,false,false,game.heroes.at(b.targetId).owner);}
+ int heroClass=heroClassId(game.hero.originalId);auto number=std::to_string(heroClass);if(heroClass==10||(heroClass>=12&&heroClass<=15))number="0"+number;auto heroAsset="ch"+std::string(number.size()<2?1:0,'0')+number+".def";if(!frame(heroAsset,0,0,{-25,-20,150,175}))frame("ch00.def",0,0,{-25,-20,150,175});
+ if(game.heroes.contains(b.targetId)){int enemy=game.heroes.at(b.targetId).value.originalId;int enemyClass=heroClassId(enemy);auto n=std::to_string(enemyClass);if(enemyClass==10||(enemyClass>=12&&enemyClass<=15))n="0"+n;frame("ch"+std::string(n.size()<2?1:0,'0')+n+".def",0,0,{675,-20,150,175},true);frame("cmflagr.def",0,int(animationTime_/100),{735,15,17,15},false,false,false,game.heroes.at(b.targetId).owner);}
  frame("cmflagl.def",0,int(animationTime_/100),{45,15,17,15},false,false,false,0);
  auto*active=busy?nullptr:game.current();const auto*hovered=busy?nullptr:battleTargetAt({mouseX_,mouseY_});auto aim=hovered?std::optional<Point>(Point{hovered->x,hovered->y}):battleHexAt({mouseX_,mouseY_});
  std::vector<Point> area;if(pendingSpell_>=0&&aim)area=game.spellArea(pendingSpell_,*aim);
  for(int y=0;y<BattleH;y++)for(int x=0;x<BattleW;x++){
   Point cell{x,y},top=battleHexTopLeft(cell);SDL_Rect rect{top.x,top.y,45,52};
   bool affected=std::find(area.begin(),area.end(),cell)!=area.end();
-  bool reachable=false;if(!autoCombat_&&pendingSpell_<0&&active&&active->team==0&&!game.combatAt(cell)){auto distance=game.battlePath(*active,cell);reachable=distance&&*distance<=game.speed(*active);}
+  bool reachable=false;if(!autoCombat_&&pendingSpell_<0&&active&&active->team==0&&!game.combatAt(cell)){auto distance=game.battlePath(*active,cell);if(b.tacticsTeam==0){auto cells=game.footprint(*active,cell);reachable=distance&&std::all_of(cells.begin(),cells.end(),[&](auto p){return p.x>=0&&p.x<b.tacticsRange;});}else reachable=distance&&*distance<=game.speed(*active);}
   if(reachable||affected)art("assets/demo/battle-ui/cell-shadow.png",rect,{},false);
   if(settings_.battleGrid)art("assets/demo/battle-ui/cell-grid.png",rect,{},false);
   buttons_.push_back({rect,[this,cell]{battleCellAction(cell);},active&&active->team==0&&!autoCombat_,[cell](Point p){return battleHexAt(p)==cell;},pendingSpell_>=0?"选择"+Spells[pendingSpell_].name+"的施法目标；右键取消":"战场格：点击空地移动，点击敌军攻击；灰色区域无法到达"});
  }
+ for(const auto&o:b.obstacles)if((o.revealed&1)&&!o.cells.empty()){if(o.spell<0){auto at=battleHexCenter(o.anchor);if(demo_["def"].contains(o.asset)){const auto&f=demo_["def"][o.asset]["groups"]["0"][0];int w=f["canvas"][0],h=f["canvas"][1];frame(o.asset,0,0,{at.x-22,at.y-h+26,w,h});}continue;}std::string name=o.spell==Quicksand?"c17spe1.def":o.spell==LandMine?"c09spf1.def":o.spell==FireWall?"c07spf61.def":o.cells.size()==3?(o.team?"c15spe7.def":"c15spe10.def"):(o.team?"c15spe4.def":"c15spe1.def");auto draw=[&](Point p){auto at=battleHexCenter(p);int count=frameCount(name);int w=44,h=52;if(demo_["def"].contains(name)){const auto&f=demo_["def"][name]["groups"]["0"][0];w=f["canvas"][0];h=f["canvas"][1];}frame(name,0,count?int(animationTime_/100%count):0,{at.x-w/2,at.y-h+26,w,h});};if(o.spell==ForceField)draw(o.cells.front());else for(auto p:o.cells)draw(p);}
  std::vector<const CombatStack*> corpses,living;
  for(const auto&unit:b.units){auto pose=battleMotion_.pose(unit.id);bool dying=pose&&pose->dying;if(unit.corpse&&!dying)corpses.push_back(&unit);if(unit.hp>0||dying)living.push_back(&unit);}
  std::sort(corpses.begin(),corpses.end(),[](const auto*a,const auto*c){return a->deathOrder<c->deathOrder;});
@@ -83,20 +84,26 @@ void Desktop::battle(){
  if(pendingSpell_>=0)message=(pendingSpell_==Sacrifice?(sacrificeTarget_<0?"选择复生目标：":"选择牺牲部队："):"选择目标：")+Spells[pendingSpell_].name;
  else if(toastUntil_>SDL_GetTicks64()&&!toast_.empty())message=toast_;
  if(busy){if(battleMotion_.damageMessage().empty())message="正在播放战斗动作。";if(const auto*cue=battleMotion_.feedback())message=cue->type==GameEventType::SpellCast?"凯瑟琳施放"+Spells[cue->detail].name+"。":cue->type==GameEventType::CombatLuck?"幸运攻击！":cue->detail<0?"士气低落，失去行动。":"士气高涨，可以再次行动！";}else if(autoCombat_)message="自动战斗；再次点击交叉双剑或按 Esc 取消。";
- else if(b.moralePhase)message="士气额外行动等待阶段。";
- if(!busy&&pendingSpell_<0&&hovered){
+ else if(b.tacticsTeam>=0)message="战术布阵：选择己方部队后在高亮区域调整位置，点击完成布阵开始战斗。";else if(active&&active->unit==CatapultUnit)message="弹道术：点击尚未摧毁的城墙、城门或箭塔。";else if(b.moralePhase)message="士气额外行动等待阶段。";
+ if(!busy&&pendingSpell_<0&&hovered&&b.tacticsTeam<0&&(!active||active->unit!=CatapultUnit)){
   const auto&unit=*hovered;message=Units[unit.unit].name+" × "+std::to_string(unit.count)+"  总生命 "+std::to_string(unit.hp)+"/"+std::to_string(int64_t(unit.initialCount)*Units[unit.unit].hp);
  }
  text(message,216,569,10,GoldColor,394);
  bool own=active&&active->team==0&&!autoCombat_;
+ if(b.tacticsTeam>=0){
+  originalButton({599,561,198,36},"icm012.def",0,[this]{battleAction([this]{return game.act("end-tactics");});},own,2,"完成战术布阵，开始第一轮战斗（Enter）");
+  originalButton({3,561,198,36},"icm011.def",0,[this]{battleAction([this]{return game.act("next-tactics");});},own,2,"选择下一支可以布阵的己方部队");
+  box({9,566,186,26},{70,48,24,255});centerText("下一支部队",{9,566,186,26},16,GoldColor);box({605,566,186,26},{70,48,24,255});centerText("开始战斗",{605,566,186,26},16,GoldColor);
+  return;
+ }
  originalButton({3,561,48,36},"icm003.def",0,[this]{openOptions();});
- originalButton({54,561,48,36},"icm001.def",0,[]{},false,2);
- originalButton({105,561,48,36},"icm002.def",0,[]{},false,2);
+ originalButton({54,561,48,36},"icm001.def",0,[this]{battleExitSurrender_=true;scene=Scene::BattleExit;},own&&game.canLeaveBattle(true),2);
+ originalButton({105,561,48,36},"icm002.def",0,[this]{battleExitSurrender_=false;scene=Scene::BattleExit;},own&&game.canLeaveBattle(false),2);
  originalButton({156,561,48,36},"icm004.def",0,[this]{autoCombat_=!autoCombat_;pendingSpell_=sacrificeTarget_=-1;nextAI_=0;});
  if(autoCombat_)frame("icm004.def",0,1,{156,561,48,36});
- originalButton({645,561,48,36},"icm005.def",0,[this]{openSpellbook();},own&&game.hero.spellbook,2);
- originalButton({696,561,48,36},"icm006.def",0,[this]{battleAction([this]{return game.act("wait");});},own&&!active->waited&&!b.waitPhase&&!b.moralePhase,2);
- originalButton({747,561,48,36},"icm007.def",0,[this]{battleAction([this]{return game.act("defend");});},own,2);
+ originalButton({645,561,48,36},"icm005.def",0,[this]{openSpellbook();},own&&b.tacticsTeam<0&&!b.noMagic&&game.hero.spellbook,2);
+ originalButton({696,561,48,36},"icm006.def",0,[this]{battleAction([this]{return game.act("wait");});},own&&b.tacticsTeam<0&&!active->waited&&!b.waitPhase&&!b.moralePhase,2);
+ originalButton({747,561,48,36},"icm007.def",0,[this]{battleAction([this]{return game.act(game.battle->tacticsTeam>=0?"end-tactics":"defend");});},own,2);
 }
 void Desktop::battleRenderTests(const std::filesystem::path&directory){
  auto check=[](bool ok,const char*message){if(!ok)throw std::runtime_error(message);};

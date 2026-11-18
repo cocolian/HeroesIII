@@ -25,12 +25,14 @@ void Desktop::openMarket(int objectId){
  if(objectId==0&&scene==Scene::Adventure)if(const auto*o=game.objectAt(game.hero.pos);o&&o->type==ObjectType::TradingPost)objectId=o->id;
  if(!game.marketplaces(objectId)){say(objectId?"英雄必须访问贸易站才能交易。":"需要先建造市场。");return;}
  marketReturn_=scene==Scene::Town?Scene::Town:Scene::Adventure;
- marketObject_=objectId;marketSold_=marketBought_=-1;marketLots_=0;marketDragging_=false;marching_=false;focus_=-1;scene=Scene::Market;
+ giftMode_=false;giftOwner_=-1;marketObject_=objectId;marketSold_=marketBought_=-1;marketLots_=0;marketDragging_=false;marching_=false;focus_=-1;scene=Scene::Market;
 }
 SDL_Rect Desktop::marketTrack()const{return {X+247,Y+486,108,16};}
+int Desktop::marketLimit()const{if(!giftMode_)return game.tradeLimit(marketSold_,marketBought_,marketObject_);return giftOwner_>=0&&marketSold_>=0?std::min(game.resources[marketSold_],1000000000-game.playerResources[giftOwner_][marketSold_]):0;}
+std::string Desktop::marketCommit(){return giftMode_?game.giftResources(giftOwner_,marketSold_,marketLots_):game.trade(marketSold_,marketBought_,marketLots_,marketObject_);}
 void Desktop::marketAmount(int mouseX){
  auto track=marketTrack();int span=track.w-16;
- int limit=game.tradeLimit(marketSold_,marketBought_,marketObject_);
+ int limit=marketLimit();
  int position=std::clamp(mouseX-track.x-8,0,span);
  marketLots_=int((int64_t(position)*limit+span/2)/span);
 }
@@ -39,12 +41,13 @@ void Desktop::market(){
  if(marketReturn_==Scene::Town)town();else adventure();
  mouseX_=savedX;mouseY_=savedY;buttons_.clear();
  originalImage("tpmrkres.pcx",{X,Y,601,593});
- text(marketObject_?"贸易站":"资源市场",X+265,Y+12,16,GoldColor);
- text("王国资源",X+111,Y+142,12,GoldColor);text("可供交易",X+395,Y+142,12,GoldColor);
+ text(giftMode_?"赠送资源":marketObject_?"贸易站":"资源市场",X+265,Y+12,16,GoldColor);
+ text("王国资源",X+111,Y+142,12,GoldColor);text(giftMode_?"接收势力":"可供交易",X+395,Y+142,12,GoldColor);
  int count=game.marketplaces(marketObject_);auto offer=marketRate(marketSold_,marketBought_,count);
- int limit=game.tradeLimit(marketSold_,marketBought_,marketObject_);marketLots_=std::clamp(marketLots_,0,limit);
+ int limit=marketLimit();marketLots_=std::clamp(marketLots_,0,limit);
  std::string description;
- if(offer)description="交出 "+std::to_string(offer->give)+" "+ResourceNames[marketSold_]+"，可以换取 "+std::to_string(offer->receive)+" "+ResourceNames[marketBought_]+"。";
+ if(giftMode_)description="选择左侧资源与右侧接收势力，拖动滑块确定赠送数量。";
+ else if(offer)description="交出 "+std::to_string(offer->give)+" "+ResourceNames[marketSold_]+"，可以换取 "+std::to_string(offer->receive)+" "+ResourceNames[marketBought_]+"。";
  else description="选择希望交出的资源，以及希望换取的资源。";
  text(description,X+321,Y+54,12,GoldColor,250);
  text(marketObject_?"贸易站提供固定的五市场价格。":"王国中有 "+std::to_string(count)+" 个市场。",X+32,Y+68,12,GoldColor,250);
@@ -53,6 +56,8 @@ void Desktop::market(){
  originalButton({X+521,Y+530,64,32},"iokay.def",0,[this]{scene=marketReturn_;marketDragging_=false;},true,2,"关闭市场并返回上一界面（Esc）");
  for(int side=0;side<2;side++)for(int index=0;index<ResourceCount;index++){
   int resource=ResourceOrder[index];auto rect=cell(side,index);
+  if(giftMode_&&side){int owner=index>=game.currentOwner()?index+1:index;const char*names[]={"红色","蓝色","褐色","绿色","橙色","紫色","青色","粉色"};int human=game.imported()?game.scenarioRules.value("originalPlayer",0):0,original=owner==0?human:owner<=human?owner-1:owner;frame("itgflags.def",0,original,{rect.x+20,rect.y+5,24,36});text(names[original],rect.x+15,rect.y+46,11);if(giftOwner_==owner)outline(rect,GoldColor);bool alive=std::any_of(game.objects.begin(),game.objects.end(),[owner](auto&o){return o.owner==owner&&o.type==ObjectType::Town;})||std::any_of(game.heroes.begin(),game.heroes.end(),[owner](auto&h){return h.second.owner==owner;});buttons_.push_back({rect,[this,owner]{giftOwner_=owner;marketLots_=0;},alive,{},"选择接收资源的势力"});continue;}
+
   marketIcon(resource,{rect.x+18,rect.y+10,32,32});
   std::string value=std::to_string(game.resources[resource]);
   if(side){auto rate=marketRate(marketSold_,resource,count);value=!rate?"—":rate->give==1?std::to_string(rate->receive):std::to_string(rate->receive)+"/"+std::to_string(rate->give);}
@@ -63,9 +68,9 @@ void Desktop::market(){
   buttons_.push_back({rect,[this,side,resource]{if(side)marketBought_=resource;else marketSold_=resource;marketLots_=0;if(marketSold_==marketBought_)marketBought_=-1;},enabled,{},std::string(side?"选择要买入的资源：":"选择要卖出的资源：")+ResourceNames[resource]});
  }
  if(marketSold_>=0)marketIcon(marketSold_,{X+140,Y+454,32,32});
- if(marketBought_>=0)marketIcon(marketBought_,{X+429,Y+454,32,32});
- text(offer?std::to_string(int64_t(offer->give)*marketLots_):"0",X+127,Y+497,11,GoldColor);
- text(offer?std::to_string(int64_t(offer->receive)*marketLots_):"0",X+416,Y+497,11,GoldColor);
+ if(!giftMode_&&marketBought_>=0)marketIcon(marketBought_,{X+429,Y+454,32,32});
+ text(giftMode_?std::to_string(marketLots_):offer?std::to_string(int64_t(offer->give)*marketLots_):"0",X+127,Y+497,11,GoldColor);
+ text(giftMode_?std::to_string(marketLots_):offer?std::to_string(int64_t(offer->receive)*marketLots_):"0",X+416,Y+497,11,GoldColor);
  auto track=marketTrack();box(track,{18,17,14,255});outline(track,{127,113,77,255});
  int travel=track.w-16,knob=limit?int(int64_t(marketLots_)*travel/limit):0;
  frame("igpcrdiv.def",0,4,{track.x+knob,track.y,16,16});
@@ -73,8 +78,9 @@ void Desktop::market(){
  originalButton({track.x-16,track.y,16,16},"igpcrdiv.def",0,[this]{marketLots_=std::max(0,marketLots_-1);},marketLots_>0);
  originalButton({track.x+track.w,track.y,16,16},"igpcrdiv.def",2,[this,limit]{marketLots_=std::min(limit,marketLots_+1);},marketLots_<limit);
  originalButton({X+223,Y+530,64,32},"tpmrkb.def",3,[this,limit]{marketLots_=limit;},limit>0,5);
- originalButton({X+302,Y+530,64,32},"tpmrkb.def",0,[this]{say(game.trade(marketSold_,marketBought_,marketLots_,marketObject_));marketLots_=0;persist();},marketLots_>0,2);
- originalButton({X+14,Y+530,64,32},"tpmrkbu1.def",0,[]{},false);
- text(toastUntil_>SDL_GetTicks64()?toast_:"选择资源并确认交易。",X+15,Y+574,10,GoldColor,565);
+ originalButton({X+302,Y+530,64,32},"tpmrkb.def",0,[this]{say(marketCommit());marketLots_=0;persist();},marketLots_>0,2);
+ originalButton({X+14,Y+530,64,32},"tpmrkbu1.def",0,[this]{giftMode_=!giftMode_;marketBought_=giftOwner_=-1;marketLots_=0;},game.imported(),-1,giftMode_?"返回资源交易":"切换为向其他势力赠送资源");
+ box({X+245,Y+453,112,20},{85,60,33,255});centerText(giftMode_?"赠送数量":"交易数量",{X+245,Y+453,112,20},11,GoldColor);
+ text(toastUntil_>SDL_GetTicks64()?toast_:giftMode_?"选择资源和接收势力，再确认赠送。":"选择资源并确认交易。",X+15,Y+574,10,GoldColor,565);
 }
 }

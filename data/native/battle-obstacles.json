@@ -1,0 +1,1139 @@
+{
+  "source": "https://raw.githubusercontent.com/vcmi/vcmi/948333932fdf91abda780906bf2d18eec9aa0fc1/config/obstacles.json",
+  "sourceSha256": "e05b9d5888498581a607809357901e27f8c36cb5eab216f208aee66adc4ff492",
+  "obstacles": [
+    {
+      "id": 0,
+      "asset": "obdino1.def",
+      "terrainMask": 2,
+      "width": 2,
+      "height": 1,
+      "blocked": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 1,
+      "asset": "obdino2.def",
+      "terrainMask": 198,
+      "width": 3,
+      "height": 2,
+      "blocked": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "asset": "obdino3.def",
+      "terrainMask": 2,
+      "width": 4,
+      "height": 2,
+      "blocked": [
+        0,
+        1,
+        -14,
+        -15,
+        -16
+      ]
+    },
+    {
+      "id": 3,
+      "asset": "obskel1.def",
+      "terrainMask": 66,
+      "width": 2,
+      "height": 1,
+      "blocked": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 4,
+      "asset": "obskel2.def",
+      "terrainMask": 194,
+      "width": 2,
+      "height": 1,
+      "blocked": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 5,
+      "asset": "obbdt01.def",
+      "terrainMask": 2,
+      "width": 4,
+      "height": 2,
+      "blocked": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 6,
+      "asset": "obdrk01.def",
+      "terrainMask": 2,
+      "width": 3,
+      "height": 1,
+      "blocked": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 7,
+      "asset": "obdrk02.def",
+      "terrainMask": 2,
+      "width": 2,
+      "height": 2,
+      "blocked": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 8,
+      "asset": "obdrk03.def",
+      "terrainMask": 2,
+      "width": 2,
+      "height": 2,
+      "blocked": [
+        -16
+      ]
+    },
+    {
+      "id": 9,
+      "asset": "obdrk04.def",
+      "terrainMask": 2,
+      "width": 2,
+      "height": 2,
+      "blocked": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 10,
+      "asset": "obdsh01.def",
+      "terrainMask": 2,
+      "width": 2,
+      "height": 2,
+      "blocked": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 11,
+      "asset": "obdtf03.def",
+      "terrainMask": 2,
+      "width": 2,
+      "height": 1,
+      "blocked": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 12,
+      "asset": "obdts03.def",
+      "terrainMask": 66,
+      "width": 4,
+      "height": 3,
+      "blocked": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 13,
+      "asset": "obdts04.def",
+      "terrainMask": 66,
+      "width": 3,
+      "height": 2,
+      "blocked": [
+        1,
+        2,
+        -15
+      ]
+    },
+    {
+      "id": 14,
+      "asset": "obdts14.def",
+      "terrainMask": 66,
+      "width": 3,
+      "height": 2,
+      "blocked": [
+        2,
+        -15,
+        -16
+      ]
+    },
+    {
+      "id": 15,
+      "asset": "obdts15.def",
+      "terrainMask": 66,
+      "width": 3,
+      "height": 3,
+      "blocked": [
+        1,
+        -16,
+        -33
+      ]
+    },
+    {
+      "id": 16,
+      "asset": "obdsm01.def",
+      "terrainMask": 4,
+      "width": 4,
+      "height": 4,
+      "blocked": [
+        -15,
+        -16,
+        -32,
+        -33,
+        -48,
+        -49
+      ]
+    },
+    {
+      "id": 17,
+      "asset": "obdss02.def",
+      "terrainMask": 4,
+      "width": 3,
+      "height": 2,
+      "blocked": [
+        1,
+        -15,
+        -16
+      ]
+    },
+    {
+      "id": 18,
+      "asset": "obdss17.def",
+      "terrainMask": 4,
+      "width": 4,
+      "height": 2,
+      "blocked": [
+        1,
+        2,
+        3,
+        -15,
+        -16
+      ]
+    },
+    {
+      "id": 19,
+      "asset": "obglg01.def",
+      "terrainMask": 33,
+      "width": 2,
+      "height": 1,
+      "blocked": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 20,
+      "asset": "obgrk01.def",
+      "terrainMask": 33,
+      "width": 2,
+      "height": 2,
+      "blocked": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 21,
+      "asset": "obgst01.def",
+      "terrainMask": 33,
+      "width": 1,
+      "height": 1,
+      "blocked": [
+        0
+      ]
+    },
+    {
+      "id": 22,
+      "asset": "obgrs01.def",
+      "terrainMask": 1,
+      "width": 6,
+      "height": 2,
+      "blocked": [
+        1,
+        2,
+        3,
+        4,
+        -13,
+        -14,
+        -15,
+        -16
+      ]
+    },
+    {
+      "id": 23,
+      "asset": "obgrs02.def",
+      "terrainMask": 1,
+      "width": 7,
+      "height": 1,
+      "blocked": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 24,
+      "asset": "obsns01.def",
+      "terrainMask": 16,
+      "width": 3,
+      "height": 1,
+      "blocked": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 25,
+      "asset": "obsns02.def",
+      "terrainMask": 16,
+      "width": 5,
+      "height": 1,
+      "blocked": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 26,
+      "asset": "obsns03.def",
+      "terrainMask": 16,
+      "width": 3,
+      "height": 3,
+      "blocked": [
+        0,
+        -16,
+        -33
+      ]
+    },
+    {
+      "id": 27,
+      "asset": "obsns04.def",
+      "terrainMask": 16,
+      "width": 3,
+      "height": 1,
+      "blocked": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 28,
+      "asset": "obsns05.def",
+      "terrainMask": 16,
+      "width": 3,
+      "height": 1,
+      "blocked": [
+        1
+      ]
+    },
+    {
+      "id": 29,
+      "asset": "obsns06.def",
+      "terrainMask": 16,
+      "width": 3,
+      "height": 2,
+      "blocked": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 30,
+      "asset": "obsns07.def",
+      "terrainMask": 16,
+      "width": 2,
+      "height": 1,
+      "blocked": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 31,
+      "asset": "obsns08.def",
+      "terrainMask": 16,
+      "width": 3,
+      "height": 2,
+      "blocked": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 32,
+      "asset": "obsns09.def",
+      "terrainMask": 16,
+      "width": 7,
+      "height": 2,
+      "blocked": [
+        2,
+        3,
+        4,
+        5,
+        -13,
+        -14,
+        -15,
+        -16
+      ]
+    },
+    {
+      "id": 33,
+      "asset": "obsns10.def",
+      "terrainMask": 16,
+      "width": 5,
+      "height": 5,
+      "blocked": [
+        3,
+        -13,
+        -14,
+        -15,
+        -33,
+        -49,
+        -66
+      ]
+    },
+    {
+      "id": 34,
+      "asset": "obsws01.def",
+      "terrainMask": 32,
+      "width": 2,
+      "height": 2,
+      "blocked": [
+        0
+      ]
+    },
+    {
+      "id": 35,
+      "asset": "obsws02.def",
+      "terrainMask": 32,
+      "width": 8,
+      "height": 3,
+      "blocked": [
+        -10,
+        -11,
+        -12,
+        -13,
+        -14,
+        -15,
+        -16
+      ]
+    },
+    {
+      "id": 36,
+      "asset": "obsws03.def",
+      "terrainMask": 32,
+      "width": 2,
+      "height": 1,
+      "blocked": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 37,
+      "asset": "obsws04.def",
+      "terrainMask": 32,
+      "width": 3,
+      "height": 1,
+      "blocked": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 38,
+      "asset": "obsws11b.def",
+      "terrainMask": 32,
+      "width": 5,
+      "height": 4,
+      "blocked": [
+        -13,
+        -14,
+        -15,
+        -16,
+        -30,
+        -31,
+        -32,
+        -33
+      ]
+    },
+    {
+      "id": 39,
+      "asset": "obsws13a.def",
+      "terrainMask": 32,
+      "width": 4,
+      "height": 3,
+      "blocked": [
+        -16,
+        -17,
+        -31,
+        -32,
+        -33,
+        -34
+      ]
+    },
+    {
+      "id": 40,
+      "asset": "obrgs01.def",
+      "terrainMask": 64,
+      "width": 2,
+      "height": 2,
+      "blocked": [
+        0,
+        1,
+        -16
+      ]
+    },
+    {
+      "id": 41,
+      "asset": "obrgs02.def",
+      "terrainMask": 64,
+      "width": 4,
+      "height": 3,
+      "blocked": [
+        -14,
+        -15,
+        -16,
+        -32,
+        -33
+      ]
+    },
+    {
+      "id": 42,
+      "asset": "obrgs03.def",
+      "terrainMask": 64,
+      "width": 3,
+      "height": 2,
+      "blocked": [
+        1,
+        2,
+        -15,
+        -16
+      ]
+    },
+    {
+      "id": 43,
+      "asset": "obrgs04.def",
+      "terrainMask": 64,
+      "width": 3,
+      "height": 3,
+      "blocked": [
+        -16,
+        -32,
+        -33
+      ]
+    },
+    {
+      "id": 44,
+      "asset": "obrgs05.def",
+      "terrainMask": 64,
+      "width": 3,
+      "height": 3,
+      "blocked": [
+        -15,
+        -16,
+        -32
+      ]
+    },
+    {
+      "id": 45,
+      "asset": "obsus01.def",
+      "terrainMask": 128,
+      "width": 3,
+      "height": 3,
+      "blocked": [
+        0,
+        1,
+        2,
+        -15,
+        -16
+      ]
+    },
+    {
+      "id": 46,
+      "asset": "obsus02.def",
+      "terrainMask": 128,
+      "width": 3,
+      "height": 2,
+      "blocked": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 47,
+      "asset": "obsus11b.def",
+      "terrainMask": 128,
+      "width": 4,
+      "height": 3,
+      "blocked": [
+        0,
+        1,
+        2,
+        3,
+        -14,
+        -15,
+        -16
+      ]
+    },
+    {
+      "id": 48,
+      "asset": "oblvs01.def",
+      "terrainMask": 256,
+      "width": 4,
+      "height": 3,
+      "blocked": [
+        -14,
+        -32,
+        -33
+      ]
+    },
+    {
+      "id": 49,
+      "asset": "oblvs02.def",
+      "terrainMask": 256,
+      "width": 4,
+      "height": 2,
+      "blocked": [
+        0,
+        1,
+        2,
+        -14,
+        -15,
+        -16
+      ]
+    },
+    {
+      "id": 50,
+      "asset": "oblvs03.def",
+      "terrainMask": 256,
+      "width": 5,
+      "height": 3,
+      "blocked": [
+        -13,
+        -14,
+        -15,
+        -30,
+        -31,
+        -32,
+        -33
+      ]
+    },
+    {
+      "id": 51,
+      "asset": "oblvs04.def",
+      "terrainMask": 256,
+      "width": 3,
+      "height": 2,
+      "blocked": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 52,
+      "asset": "oblvs09.def",
+      "terrainMask": 256,
+      "width": 4,
+      "height": 4,
+      "blocked": [
+        -14,
+        -15,
+        -32,
+        -33,
+        -49,
+        -50
+      ]
+    },
+    {
+      "id": 53,
+      "asset": "oblvs17.def",
+      "terrainMask": 256,
+      "width": 5,
+      "height": 3,
+      "blocked": [
+        -13,
+        -14,
+        -15,
+        -16,
+        -30,
+        -31
+      ]
+    },
+    {
+      "id": 54,
+      "asset": "oblvs22.def",
+      "terrainMask": 256,
+      "width": 5,
+      "height": 3,
+      "blocked": [
+        -13,
+        -14,
+        -15,
+        -16,
+        -31,
+        -32,
+        -33
+      ]
+    },
+    {
+      "id": 55,
+      "asset": "obbts04.def",
+      "terrainMask": 0,
+      "width": 3,
+      "height": 3,
+      "blocked": [
+        -15,
+        -16,
+        -33
+      ]
+    },
+    {
+      "id": 56,
+      "asset": "obbhs02.def",
+      "terrainMask": 0,
+      "width": 3,
+      "height": 2,
+      "blocked": [
+        1,
+        -15,
+        -16
+      ]
+    },
+    {
+      "id": 57,
+      "asset": "obbhs03.def",
+      "terrainMask": 0,
+      "width": 3,
+      "height": 2,
+      "blocked": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 58,
+      "asset": "obbhs11a.def",
+      "terrainMask": 0,
+      "width": 5,
+      "height": 2,
+      "blocked": [
+        1,
+        2,
+        3,
+        -14,
+        -15,
+        -16
+      ]
+    },
+    {
+      "id": 59,
+      "asset": "obbhs12b.def",
+      "terrainMask": 0,
+      "width": 4,
+      "height": 2,
+      "blocked": [
+        1,
+        2,
+        -14,
+        -15
+      ]
+    },
+    {
+      "id": 60,
+      "asset": "obbhs14b.def",
+      "terrainMask": 0,
+      "width": 2,
+      "height": 2,
+      "blocked": [
+        0,
+        1,
+        -16
+      ]
+    },
+    {
+      "id": 61,
+      "asset": "obhgs00.def",
+      "terrainMask": 0,
+      "width": 1,
+      "height": 1,
+      "blocked": [
+        0
+      ]
+    },
+    {
+      "id": 62,
+      "asset": "obhgs01.def",
+      "terrainMask": 0,
+      "width": 2,
+      "height": 1,
+      "blocked": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 63,
+      "asset": "obhgs02.def",
+      "terrainMask": 0,
+      "width": 3,
+      "height": 3,
+      "blocked": [
+        1
+      ]
+    },
+    {
+      "id": 64,
+      "asset": "obhgs03.def",
+      "terrainMask": 0,
+      "width": 3,
+      "height": 2,
+      "blocked": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 65,
+      "asset": "obhgs04.def",
+      "terrainMask": 0,
+      "width": 4,
+      "height": 3,
+      "blocked": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 66,
+      "asset": "obefs00.def",
+      "terrainMask": 0,
+      "width": 1,
+      "height": 1,
+      "blocked": [
+        0
+      ]
+    },
+    {
+      "id": 67,
+      "asset": "obefs01.def",
+      "terrainMask": 0,
+      "width": 2,
+      "height": 1,
+      "blocked": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 68,
+      "asset": "obefs02.def",
+      "terrainMask": 0,
+      "width": 3,
+      "height": 2,
+      "blocked": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 69,
+      "asset": "obefs03.def",
+      "terrainMask": 0,
+      "width": 4,
+      "height": 2,
+      "blocked": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 70,
+      "asset": "obefs04.def",
+      "terrainMask": 0,
+      "width": 6,
+      "height": 2,
+      "blocked": [
+        1,
+        2,
+        3,
+        -12,
+        -13
+      ]
+    },
+    {
+      "id": 71,
+      "asset": "obcfs00.def",
+      "terrainMask": 0,
+      "width": 1,
+      "height": 1,
+      "blocked": [
+        0
+      ]
+    },
+    {
+      "id": 72,
+      "asset": "obcfs01.def",
+      "terrainMask": 0,
+      "width": 3,
+      "height": 1,
+      "blocked": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 73,
+      "asset": "obcfs02.def",
+      "terrainMask": 0,
+      "width": 3,
+      "height": 2,
+      "blocked": [
+        1,
+        2,
+        -15,
+        -16
+      ]
+    },
+    {
+      "id": 74,
+      "asset": "obcfs03.def",
+      "terrainMask": 0,
+      "width": 4,
+      "height": 2,
+      "blocked": [
+        0,
+        1,
+        2,
+        -14,
+        -15,
+        -16
+      ]
+    },
+    {
+      "id": 75,
+      "asset": "oblps00.def",
+      "terrainMask": 0,
+      "width": 1,
+      "height": 1,
+      "blocked": [
+        0
+      ]
+    },
+    {
+      "id": 76,
+      "asset": "oblps01.def",
+      "terrainMask": 0,
+      "width": 2,
+      "height": 1,
+      "blocked": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 77,
+      "asset": "oblps02.def",
+      "terrainMask": 0,
+      "width": 3,
+      "height": 2,
+      "blocked": [
+        0,
+        -15,
+        -16
+      ]
+    },
+    {
+      "id": 78,
+      "asset": "oblps03.def",
+      "terrainMask": 0,
+      "width": 5,
+      "height": 2,
+      "blocked": [
+        1,
+        2,
+        3,
+        -13,
+        -14,
+        -15,
+        -16
+      ]
+    },
+    {
+      "id": 79,
+      "asset": "obffs00.def",
+      "terrainMask": 0,
+      "width": 1,
+      "height": 1,
+      "blocked": [
+        0
+      ]
+    },
+    {
+      "id": 80,
+      "asset": "obffs01.def",
+      "terrainMask": 0,
+      "width": 2,
+      "height": 1,
+      "blocked": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 81,
+      "asset": "obffs02.def",
+      "terrainMask": 0,
+      "width": 3,
+      "height": 2,
+      "blocked": [
+        0,
+        1,
+        2,
+        -15
+      ]
+    },
+    {
+      "id": 82,
+      "asset": "obffs03.def",
+      "terrainMask": 0,
+      "width": 4,
+      "height": 2,
+      "blocked": [
+        1,
+        2,
+        3,
+        -15,
+        -16
+      ]
+    },
+    {
+      "id": 83,
+      "asset": "obffs04.def",
+      "terrainMask": 0,
+      "width": 3,
+      "height": 3,
+      "blocked": [
+        0,
+        1,
+        2,
+        3,
+        -14,
+        -15,
+        -16
+      ]
+    },
+    {
+      "id": 84,
+      "asset": "obrls00.def",
+      "terrainMask": 0,
+      "width": 1,
+      "height": 1,
+      "blocked": [
+        0
+      ]
+    },
+    {
+      "id": 85,
+      "asset": "obrls01.def",
+      "terrainMask": 0,
+      "width": 2,
+      "height": 1,
+      "blocked": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 86,
+      "asset": "obrls02.def",
+      "terrainMask": 0,
+      "width": 3,
+      "height": 1,
+      "blocked": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 87,
+      "asset": "obrls03.def",
+      "terrainMask": 0,
+      "width": 4,
+      "height": 2,
+      "blocked": [
+        1,
+        2,
+        3,
+        -15,
+        -16
+      ]
+    },
+    {
+      "id": 88,
+      "asset": "obmcs00.def",
+      "terrainMask": 0,
+      "width": 1,
+      "height": 1,
+      "blocked": [
+        0
+      ]
+    },
+    {
+      "id": 89,
+      "asset": "obmcs01.def",
+      "terrainMask": 0,
+      "width": 2,
+      "height": 2,
+      "blocked": [
+        1,
+        -16
+      ]
+    },
+    {
+      "id": 90,
+      "asset": "obmcs02.def",
+      "terrainMask": 0,
+      "width": 4,
+      "height": 2,
+      "blocked": [
+        0,
+        1,
+        -14,
+        -15
+      ]
+    }
+  ]
+}

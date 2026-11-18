@@ -26,7 +26,7 @@ int main(int argc,char**argv){try{
  }
  int missing=0,instances=0;for(const auto&row:classes)if(row["genericFallback"]){++missing;instances+=row["instances"].get<int>();}
  auto output=std::filesystem::path(argv[1]);std::filesystem::create_directories(output.parent_path());
- std::ofstream(output)<<Json{{"version","0.50.0"},{"maps",maps},{"scope","Site objects only; guard-free fallback dispatch, not original-rule completeness"},{"classes",classes},{"genericFallbackClasses",missing},{"genericFallbackInstances",instances}}.dump(2)<<'\n';
+ std::ofstream(output)<<Json{{"version","0.51.0"},{"maps",maps},{"scope","Site objects only; guard-free fallback dispatch, not original-rule completeness"},{"classes",classes},{"genericFallbackClasses",missing},{"genericFallbackInstances",instances}}.dump(2)<<'\n';
  std::cout<<maps<<" maps, "<<classes.size()<<" Site classes, "<<missing<<" classes still reach the generic fallback ("<<instances<<" objects)\n";
  return 0;
  }catch(const std::exception&e){std::cerr<<e.what()<<'\n';return 1;}}

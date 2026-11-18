@@ -15,7 +15,7 @@ std::filesystem::path preferences(){
 }
 int main(int argc,char**argv){try{
  auto bundle=bundledData();std::filesystem::path root=bundle.empty()?H3_SOURCE_ROOT:bundle,renderDir,saveDir,inputTrace,campaignSave;
- bool locationsOnly=false;bool mapServicesOnly=false;bool performanceOnly=false;bool localizationOnly=false;bool sitesOnly=false;bool runtimeOnly=false;bool siegeOnly=false;bool kingdomOnly=false;bool pointerOnly=false,scenarioOnly=false,interactionOnly=false,graphics=false,townArtOnly=false,displayOnly=false,fullscreen=true,runtimeInfo=false;
+ bool completionOnly=false;bool locationsOnly=false;bool mapServicesOnly=false;bool performanceOnly=false;bool localizationOnly=false;bool sitesOnly=false;bool runtimeOnly=false;bool siegeOnly=false;bool kingdomOnly=false;bool pointerOnly=false,scenarioOnly=false,interactionOnly=false,graphics=false,townArtOnly=false,displayOnly=false,fullscreen=true,runtimeInfo=false;
  for(int i=1;i<argc;i++){
   std::string arg=argv[i];
   if(arg=="--data-root"&&i+1<argc)root=argv[++i];
@@ -27,6 +27,7 @@ int main(int argc,char**argv){try{
   else if(arg=="--campaign-save"&&i+1<argc)campaignSave=argv[++i];
   else if(arg=="--performance-tests"&&i+1<argc){renderDir=argv[++i];performanceOnly=true;}
   else if(arg=="--localization-tests"&&i+1<argc){renderDir=argv[++i];localizationOnly=true;}
+  else if(arg=="--completion-tests"&&i+1<argc){renderDir=argv[++i];completionOnly=true;}
   else if(arg=="--location-tests"&&i+1<argc){renderDir=argv[++i];locationsOnly=true;}
   else if(arg=="--map-service-tests"&&i+1<argc){renderDir=argv[++i];mapServicesOnly=true;}
   else if(arg=="--site-tests"&&i+1<argc){renderDir=argv[++i];sitesOnly=true;}
@@ -49,6 +50,6 @@ int main(int argc,char**argv){try{
  // UIKit retains the frame callback after SDL_main returns.
  static std::unique_ptr<h3::Desktop> app;
  app=std::make_unique<h3::Desktop>(root,!renderDir.empty(),saveDir,inputTrace,fullscreen);
- if(!renderDir.empty()){if(locationsOnly)app->locationPreview(renderDir,campaignSave);else if(mapServicesOnly)app->mapServicesPreview(renderDir,campaignSave);else if(performanceOnly)app->performancePreview(renderDir,campaignSave);else if(localizationOnly)app->localizationPreview(renderDir);else if(sitesOnly)app->sitePreview(renderDir,campaignSave);else if(runtimeOnly)app->runtimePreview(renderDir);else if(siegeOnly)app->siegePreview(renderDir,campaignSave);else if(kingdomOnly)app->kingdomPreview(renderDir,campaignSave);else if(pointerOnly)app->pointerPreview(renderDir);else if(scenarioOnly)app->scenarioPreview(renderDir);else if(interactionOnly)app->interactionPreview(renderDir);else if(displayOnly)app->displayPreview(renderDir);else if(graphics||townArtOnly)app->graphicsPreview(renderDir,townArtOnly);else app->renderTests(renderDir);return 0;}
+ if(!renderDir.empty()){if(completionOnly)app->completionPreview(renderDir);else if(locationsOnly)app->locationPreview(renderDir,campaignSave);else if(mapServicesOnly)app->mapServicesPreview(renderDir,campaignSave);else if(performanceOnly)app->performancePreview(renderDir,campaignSave);else if(localizationOnly)app->localizationPreview(renderDir);else if(sitesOnly)app->sitePreview(renderDir,campaignSave);else if(runtimeOnly)app->runtimePreview(renderDir);else if(siegeOnly)app->siegePreview(renderDir,campaignSave);else if(kingdomOnly)app->kingdomPreview(renderDir,campaignSave);else if(pointerOnly)app->pointerPreview(renderDir);else if(scenarioOnly)app->scenarioPreview(renderDir);else if(interactionOnly)app->interactionPreview(renderDir);else if(displayOnly)app->displayPreview(renderDir);else if(graphics||townArtOnly)app->graphicsPreview(renderDir,townArtOnly);else app->renderTests(renderDir);return 0;}
  return app->run();
 }catch(const std::exception&e){std::cerr<<"Heroes III: "<<e.what()<<'\n';return 1;}}

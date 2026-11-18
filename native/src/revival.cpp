@@ -19,7 +19,7 @@ const CombatStack* Game::spellTarget(int spell,Point point)const {
 }
 
 bool Game::revivalEligible(const CombatStack&u,int spell)const {
- if(u.origin!=StackOrigin::Army||u.count>=u.initialCount||u.team!=0)return false;
+ if(u.origin!=StackOrigin::Army||u.count>=u.initialCount||u.team!=spellTeam_)return false;
  if(spell==AnimateDead){if(!Units[u.unit].undead)return false;}
  else if(!Units[u.unit].living||spellImmune(u,Resurrection))return false;
  if(spellImmune(u,spell))return false;
@@ -31,7 +31,7 @@ bool Game::revivalEligible(const CombatStack&u,int spell)const {
    for(const auto&other:battle->units)if(other.corpse&&other.deathOrder>u.deathOrder){auto cells=footprint(other,{other.x,other.y});if(std::find(cells.begin(),cells.end(),cell)!=cells.end())return false;}
   }
  }
- if(spell!=Sacrifice&&primarySkill(2)*Spells[spell].power+Spells[spell].values[spellMastery(spell)]<Units[u.unit].hp)return false;
+ if(spell!=Sacrifice&&casterPower()*Spells[spell].power+Spells[spell].values[spellMastery(spell)]<Units[u.unit].hp)return false;
  return true;
 }
 
@@ -39,7 +39,7 @@ std::vector<int> Game::sacrificeVictims(int targetId)const {
  std::vector<int>targets;if(!battle)return targets;
  auto at=std::find_if(battle->units.begin(),battle->units.end(),[=](const auto&u){return u.id==targetId;});
  if(at==battle->units.end()||!revivalEligible(*at,Sacrifice))return targets;
- for(const auto&u:battle->units)if(u.id!=targetId&&u.team==0&&u.hp>0&&u.origin==StackOrigin::Army&&Units[u.unit].living&&!spellImmune(u,Sacrifice))targets.push_back(u.id);
+ for(const auto&u:battle->units)if(u.id!=targetId&&u.team==spellTeam_&&u.hp>0&&u.origin==StackOrigin::Army&&Units[u.unit].living&&!spellImmune(u,Sacrifice))targets.push_back(u.id);
  return targets;
 }
 
@@ -73,7 +73,7 @@ void Game::revive(CombatStack&target,int amount,bool permanent,bool cleanse){
  battle->log.push_back(Units[target.unit].name+"复生 "+std::to_string(target.count-before)+" 个单位"+(permanent?"（永久）。":"（本场战斗）。"));
 }
 
-void Game::finishCast(int active){
+void Game::finishCast(int active,int spell){if(battle&&spell>=0&&spell<SpellCount)battle->spellHistory[spellTeam_][spell]=true;
  if(finishBattle())return;
  refreshQueue();auto at=std::find(battle->queue.begin(),battle->queue.end(),active);
  if(at!=battle->queue.end())std::rotate(battle->queue.begin(),at,at+1);
@@ -85,20 +85,20 @@ std::string Game::castReinforcement(int spell,Point point,Point sacrifice){
  auto targets=spellTargets(spell,point);int selected=targets.empty()?-1:targets.front(),victim=-1;
  std::optional<Point>position;CombatStack created;
  if(def.kind==SpellKind::Summon||def.kind==SpellKind::Clone){
-  int allocated=int(std::count_if(b.units.begin(),b.units.end(),[](const auto&u){return u.team==0;}));
+  int allocated=int(std::count_if(b.units.begin(),b.units.end(),[&](const auto&u){return u.team==spellTeam_;}));
   if(allocated>=MaxBattleStacksPerSide)return "本方已达到本场战斗的 20 栏上限";
-  int slot=ArmySlots;while(slot<26&&std::any_of(b.units.begin(),b.units.end(),[&](const auto&u){return u.team==0&&u.slot==slot;}))++slot;
+  int slot=ArmySlots;while(slot<26&&std::any_of(b.units.begin(),b.units.end(),[&](const auto&u){return u.team==spellTeam_&&u.slot==slot;}))++slot;
   if(slot==26)return "本方没有可用的战场栏位";
-  created.team=0;created.slot=slot;created.id=slot;
+  created.team=spellTeam_;created.slot=slot;created.id=spellTeam_*100+slot;
   if(def.kind==SpellKind::Summon){
-   int unit=elemental(spell);if(b.summonedType[0]>=0&&b.summonedType[0]!=unit)return "经典版一场战斗中只能召唤一种元素";
-   created.origin=StackOrigin::Summoned;created.unit=unit;created.count=created.initialCount=primarySkill(2)*def.values[mastery];
+   int unit=elemental(spell);if(b.summonedType[spellTeam_]>=0&&b.summonedType[spellTeam_]!=unit)return "经典版一场战斗中只能召唤一种元素";
+   created.origin=StackOrigin::Summoned;created.unit=unit;created.count=created.initialCount=casterPower()*def.values[mastery];
    if(created.count<=0)return "法术力量不足以召唤元素";
    position=reinforcementPosition(created);
   }else{
    if(selected<0)return "请选择可以复制的友军";
    const auto&source=*byId(b,selected);created.origin=StackOrigin::Clone;created.unit=source.unit;
-   created.count=created.initialCount=source.count;created.cloneOf=source.id;created.cloneTurns=std::max(1,primarySkill(2));
+   created.count=created.initialCount=source.count;created.cloneOf=source.id;created.cloneTurns=std::max(1,casterPower());
    position=reinforcementPosition(created,&source);
   }
   if(!position)return "没有可容纳新部队的空位";
@@ -111,15 +111,15 @@ std::string Game::castReinforcement(int spell,Point point,Point sacrifice){
    victim=source->id;
   }
  }
- hero.mana-=spellCost(spell);b.spellRound=b.round;emit({GameEventType::SpellCast,-1,spell,point});b.log.push_back("凯瑟琳施放"+def.name+"。");
+ casterMana()-=spellCost(spell);casterRound()=b.round;emit({GameEventType::SpellCast,-1,spell,point});b.log.push_back((spellTeam_?std::string("对方英雄"):hero.name)+"施放"+def.name+"。");
  if(def.kind==SpellKind::Summon||def.kind==SpellKind::Clone){
-  if(def.kind==SpellKind::Summon)b.summonedType[0]=created.unit;
+  if(def.kind==SpellKind::Summon)b.summonedType[spellTeam_]=created.unit;
   int id=created.id;b.units.push_back(std::move(created));b.queue.push_back(id);
  }else if(spell==Sacrifice){
-  auto&source=*byId(b,victim);int amount=int(std::min<int64_t>(std::numeric_limits<int>::max(),int64_t(primarySkill(2)+Units[source.unit].hp+def.values[mastery])*source.count));
+  auto&source=*byId(b,victim);int amount=int(std::min<int64_t>(std::numeric_limits<int>::max(),int64_t(casterPower()+Units[source.unit].hp+def.values[mastery])*source.count));
   b.log.push_back(Units[source.unit].name+"被牺牲，不留下尸体。");removeStack(source,false);
   revive(*byId(b,selected),amount,true,true);
- }else revive(*byId(b,selected),primarySkill(2)*def.power+def.values[mastery],spell==AnimateDead||mastery>=2,spell==Resurrection);
- finishCast(active);return {};
+ }else revive(*byId(b,selected),casterPower()*def.power+def.values[mastery],spell==AnimateDead||mastery>=2,spell==Resurrection);
+ finishCast(active,spell);return {};
 }
 }

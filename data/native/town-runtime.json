@@ -704,7 +704,7 @@
           "key": "shipyard",
           "name": "船坞",
           "sourceName": "shipyard",
-          "description": "船只系统待接入",
+          "description": "在沿海城镇购买船只，花费 1000 金币和 10 木材",
           "cost": [
             2000,
             20,
@@ -719,7 +719,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 6,
           "upIcon": -1
         },
@@ -777,7 +777,7 @@
           "key": "special3",
           "name": "兄弟会",
           "sourceName": "Brotherhood of the Sword",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             500,
             5,
@@ -794,7 +794,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 22,
           "upIcon": -1
         },
@@ -802,7 +802,7 @@
           "key": "special4",
           "name": "special4",
           "sourceName": "special4",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             0,
             0,
@@ -817,7 +817,7 @@
           ],
           "unit": -1,
           "available": false,
-          "implemented": false,
+          "implemented": true,
           "icon": 23,
           "upIcon": -1
         },
@@ -913,12 +913,52 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 10,
+          "upIcon": -1
+        },
+        {
+          "key": "grail",
+          "name": "奇迹",
+          "sourceName": "grail",
+          "description": "每日收入 +5000 金币，生物周增长 +50%，并提供本阵营圣杯特效",
+          "cost": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "requirements": [
+            []
+          ],
+          "unit": -1,
+          "available": false,
+          "implemented": true,
+          "icon": 26,
           "upIcon": -1
         }
       ],
       "layers": [
+        {
+          "structure": "grail",
+          "art": "castle-town/tbcsholy.png",
+          "animation": "tbcsholy.def",
+          "pos": [
+            456,
+            109
+          ],
+          "z": -6,
+          "needs": [
+            37
+          ],
+          "excludes": [],
+          "mask": "assets/demo/town-ui/masks/castle-grail.mask",
+          "outline": "assets/demo/town-ui/outlines/castle-grail.png",
+          "originalMask": true
+        },
         {
           "structure": "castle",
           "art": "castle-town/tbcscas3.png",
@@ -2362,7 +2402,7 @@
           "key": "shipyard",
           "name": "船坞",
           "sourceName": "shipyard",
-          "description": "船只系统待接入",
+          "description": "在沿海城镇购买船只，花费 1000 金币和 10 木材",
           "cost": [
             2000,
             20,
@@ -2377,7 +2417,7 @@
           ],
           "unit": -1,
           "available": false,
-          "implemented": false,
+          "implemented": true,
           "icon": 6,
           "upIcon": -1
         },
@@ -2385,7 +2425,7 @@
           "key": "special1",
           "name": "神秘池塘",
           "sourceName": "Mystic Pond",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             2000,
             2,
@@ -2400,7 +2440,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 17,
           "upIcon": -1
         },
@@ -2408,7 +2448,7 @@
           "key": "special2",
           "name": "幸运泉",
           "sourceName": "Fountain of Fortune",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             1500,
             0,
@@ -2425,7 +2465,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 21,
           "upIcon": -1
         },
@@ -2433,7 +2473,7 @@
           "key": "special3",
           "name": "金库",
           "sourceName": "Treasury",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             5000,
             5,
@@ -2450,7 +2490,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 22,
           "upIcon": -1
         },
@@ -2458,7 +2498,7 @@
           "key": "special4",
           "name": "special4",
           "sourceName": "special4",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             0,
             0,
@@ -2473,7 +2513,7 @@
           ],
           "unit": -1,
           "available": false,
-          "implemented": false,
+          "implemented": true,
           "icon": 23,
           "upIcon": -1
         },
@@ -2571,8 +2611,31 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 10,
+          "upIcon": -1
+        },
+        {
+          "key": "grail",
+          "name": "守护神像",
+          "sourceName": "grail",
+          "description": "每日收入 +5000 金币，生物周增长 +50%，并提供本阵营圣杯特效",
+          "cost": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "requirements": [
+            []
+          ],
+          "unit": -1,
+          "available": false,
+          "implemented": true,
+          "icon": 26,
           "upIcon": -1
         }
       ],
@@ -2667,6 +2730,23 @@
           ],
           "mask": "assets/demo/town-ui/masks/rampart-fort.mask",
           "outline": "assets/demo/town-ui/outlines/rampart-fort.png",
+          "originalMask": false
+        },
+        {
+          "structure": "grail",
+          "art": "rampart-town/tbrholy.png",
+          "animation": "tbrmholy.def",
+          "pos": [
+            0,
+            54
+          ],
+          "z": -3,
+          "needs": [
+            37
+          ],
+          "excludes": [],
+          "mask": "assets/demo/town-ui/masks/rampart-grail.mask",
+          "outline": "assets/demo/town-ui/outlines/rampart-grail.png",
           "originalMask": false
         },
         {
@@ -4067,7 +4147,7 @@
           "key": "shipyard",
           "name": "船坞",
           "sourceName": "shipyard",
-          "description": "船只系统待接入",
+          "description": "在沿海城镇购买船只，花费 1000 金币和 10 木材",
           "cost": [
             2000,
             20,
@@ -4082,7 +4162,7 @@
           ],
           "unit": -1,
           "available": false,
-          "implemented": false,
+          "implemented": true,
           "icon": 6,
           "upIcon": -1
         },
@@ -4090,7 +4170,7 @@
           "key": "special1",
           "name": "宝物商店",
           "sourceName": "Artifact Merchants",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             10000,
             0,
@@ -4107,7 +4187,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 17,
           "upIcon": -1
         },
@@ -4278,12 +4358,52 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 10,
+          "upIcon": -1
+        },
+        {
+          "key": "grail",
+          "name": "飞船",
+          "sourceName": "grail",
+          "description": "每日收入 +5000 金币，生物周增长 +50%，并提供本阵营圣杯特效",
+          "cost": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "requirements": [
+            []
+          ],
+          "unit": -1,
+          "available": false,
+          "implemented": true,
+          "icon": 26,
           "upIcon": -1
         }
       ],
       "layers": [
+        {
+          "structure": "grail",
+          "art": "tower-town/tbtholya.png",
+          "animation": "tbtwholy.def",
+          "pos": [
+            237,
+            14
+          ],
+          "z": -2,
+          "needs": [
+            37
+          ],
+          "excludes": [],
+          "mask": "assets/demo/town-ui/masks/tower-grail.mask",
+          "outline": "assets/demo/town-ui/outlines/tower-grail.png",
+          "originalMask": false
+        },
         {
           "structure": "fort",
           "art": "tower-town/tbtcas1.png",
@@ -5752,7 +5872,7 @@
           "key": "shipyard",
           "name": "船坞",
           "sourceName": "shipyard",
-          "description": "船只系统待接入",
+          "description": "在沿海城镇购买船只，花费 1000 金币和 10 木材",
           "cost": [
             2000,
             20,
@@ -5767,7 +5887,7 @@
           ],
           "unit": -1,
           "available": false,
-          "implemented": false,
+          "implemented": true,
           "icon": 6,
           "upIcon": -1
         },
@@ -5775,7 +5895,7 @@
           "key": "special1",
           "name": "special1",
           "sourceName": "special1",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             0,
             0,
@@ -5790,7 +5910,7 @@
           ],
           "unit": -1,
           "available": false,
-          "implemented": false,
+          "implemented": true,
           "icon": 17,
           "upIcon": -1
         },
@@ -5798,7 +5918,7 @@
           "key": "special2",
           "name": "硫磺烟云",
           "sourceName": "Brimstone Stormclouds",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             1000,
             0,
@@ -5815,7 +5935,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 21,
           "upIcon": -1
         },
@@ -5823,7 +5943,7 @@
           "key": "special3",
           "name": "城堡之门",
           "sourceName": "Castle Gate",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             10000,
             5,
@@ -5840,7 +5960,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 22,
           "upIcon": -1
         },
@@ -5963,8 +6083,31 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 10,
+          "upIcon": -1
+        },
+        {
+          "key": "grail",
+          "name": "火神像",
+          "sourceName": "grail",
+          "description": "每日收入 +5000 金币，生物周增长 +50%，并提供本阵营圣杯特效",
+          "cost": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "requirements": [
+            []
+          ],
+          "unit": -1,
+          "available": false,
+          "implemented": true,
+          "icon": 26,
           "upIcon": -1
         }
       ],
@@ -6076,6 +6219,23 @@
           ],
           "mask": "assets/demo/town-ui/masks/inferno-citadel.mask",
           "outline": "assets/demo/town-ui/outlines/inferno-citadel.png",
+          "originalMask": false
+        },
+        {
+          "structure": "grail",
+          "art": "inferno-town/tbiholy.png",
+          "animation": "tbinholy.def",
+          "pos": [
+            24,
+            10
+          ],
+          "z": -1,
+          "needs": [
+            37
+          ],
+          "excludes": [],
+          "mask": "assets/demo/town-ui/masks/inferno-grail.mask",
+          "outline": "assets/demo/town-ui/outlines/inferno-grail.png",
           "originalMask": false
         },
         {
@@ -7459,7 +7619,7 @@
           "key": "shipyard",
           "name": "船坞",
           "sourceName": "shipyard",
-          "description": "船只系统待接入",
+          "description": "在沿海城镇购买船只，花费 1000 金币和 10 木材",
           "cost": [
             2000,
             20,
@@ -7474,7 +7634,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 6,
           "upIcon": -1
         },
@@ -7482,7 +7642,7 @@
           "key": "special1",
           "name": "黑暗天幕",
           "sourceName": "Cover of Darkness",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             1000,
             0,
@@ -7499,7 +7659,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 17,
           "upIcon": -1
         },
@@ -7507,7 +7667,7 @@
           "key": "special2",
           "name": "招魂塔",
           "sourceName": "Necromancy Amplifier",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             1000,
             0,
@@ -7524,7 +7684,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 21,
           "upIcon": -1
         },
@@ -7532,7 +7692,7 @@
           "key": "special3",
           "name": "骷髅转换场",
           "sourceName": "Skeleton Transformer",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             1000,
             0,
@@ -7549,7 +7709,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 22,
           "upIcon": -1
         },
@@ -7557,7 +7717,7 @@
           "key": "special4",
           "name": "special4",
           "sourceName": "special4",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             0,
             0,
@@ -7572,7 +7732,7 @@
           ],
           "unit": -1,
           "available": false,
-          "implemented": false,
+          "implemented": true,
           "icon": 23,
           "upIcon": -1
         },
@@ -7668,8 +7828,31 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 10,
+          "upIcon": -1
+        },
+        {
+          "key": "grail",
+          "name": "灵魂囚笼",
+          "sourceName": "grail",
+          "description": "每日收入 +5000 金币，生物周增长 +50%，并提供本阵营圣杯特效",
+          "cost": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "requirements": [
+            []
+          ],
+          "unit": -1,
+          "available": false,
+          "implemented": true,
+          "icon": 26,
           "upIcon": -1
         }
       ],
@@ -8027,6 +8210,23 @@
           ],
           "mask": "assets/demo/town-ui/masks/necropolis-citadel.mask",
           "outline": "assets/demo/town-ui/outlines/necropolis-citadel.png",
+          "originalMask": true
+        },
+        {
+          "structure": "grail",
+          "art": "necropolis-town/tbnholya.png",
+          "animation": "tbncholy.def",
+          "pos": [
+            410,
+            88
+          ],
+          "z": 0,
+          "needs": [
+            37
+          ],
+          "excludes": [],
+          "mask": "assets/demo/town-ui/masks/necropolis-grail.mask",
+          "outline": "assets/demo/town-ui/outlines/necropolis-grail.png",
           "originalMask": true
         },
         {
@@ -9143,7 +9343,7 @@
           "key": "shipyard",
           "name": "船坞",
           "sourceName": "shipyard",
-          "description": "船只系统待接入",
+          "description": "在沿海城镇购买船只，花费 1000 金币和 10 木材",
           "cost": [
             2000,
             20,
@@ -9158,7 +9358,7 @@
           ],
           "unit": -1,
           "available": false,
-          "implemented": false,
+          "implemented": true,
           "icon": 6,
           "upIcon": -1
         },
@@ -9166,7 +9366,7 @@
           "key": "special1",
           "name": "宝物商店",
           "sourceName": "Artifact Merchants",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             10000,
             0,
@@ -9183,7 +9383,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 17,
           "upIcon": -1
         },
@@ -9191,7 +9391,7 @@
           "key": "special2",
           "name": "魔力漩涡",
           "sourceName": "Mana Vortex",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             1000,
             0,
@@ -9208,7 +9408,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 21,
           "upIcon": -1
         },
@@ -9216,7 +9416,7 @@
           "key": "special3",
           "name": "召唤之门",
           "sourceName": "Portal of Summoning",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             2500,
             0,
@@ -9231,7 +9431,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 22,
           "upIcon": -1
         },
@@ -9350,8 +9550,31 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 10,
+          "upIcon": -1
+        },
+        {
+          "key": "grail",
+          "name": "大地守护神",
+          "sourceName": "grail",
+          "description": "每日收入 +5000 金币，生物周增长 +50%，并提供本阵营圣杯特效",
+          "cost": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "requirements": [
+            []
+          ],
+          "unit": -1,
+          "available": false,
+          "implemented": true,
+          "icon": 26,
           "upIcon": -1
         }
       ],
@@ -9776,6 +9999,23 @@
           "excludes": [],
           "mask": "assets/demo/town-ui/masks/dungeon-special4.mask",
           "outline": "assets/demo/town-ui/outlines/dungeon-special4.png",
+          "originalMask": true
+        },
+        {
+          "structure": "grail",
+          "art": "dungeon-town/tbdholy.png",
+          "animation": "tbdnholy.def",
+          "pos": [
+            562,
+            24
+          ],
+          "z": 1,
+          "needs": [
+            37
+          ],
+          "excludes": [],
+          "mask": "assets/demo/town-ui/masks/dungeon-grail.mask",
+          "outline": "assets/demo/town-ui/outlines/dungeon-grail.png",
           "originalMask": true
         },
         {
@@ -10824,7 +11064,7 @@
           "key": "shipyard",
           "name": "船坞",
           "sourceName": "shipyard",
-          "description": "船只系统待接入",
+          "description": "在沿海城镇购买船只，花费 1000 金币和 10 木材",
           "cost": [
             2000,
             20,
@@ -10839,7 +11079,7 @@
           ],
           "unit": -1,
           "available": false,
-          "implemented": false,
+          "implemented": true,
           "icon": 6,
           "upIcon": -1
         },
@@ -10847,7 +11087,7 @@
           "key": "special1",
           "name": "逃跑地道",
           "sourceName": "Escape Tunnel",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             2000,
             5,
@@ -10864,7 +11104,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 17,
           "upIcon": -1
         },
@@ -10872,7 +11112,7 @@
           "key": "special2",
           "name": "自由职业者公会",
           "sourceName": "Freelancer's Guild",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             1000,
             0,
@@ -10889,7 +11129,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 21,
           "upIcon": -1
         },
@@ -10897,7 +11137,7 @@
           "key": "special3",
           "name": "弩车作坊",
           "sourceName": "Ballista Yard",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             1000,
             5,
@@ -10914,7 +11154,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 22,
           "upIcon": -1
         },
@@ -11035,8 +11275,31 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 10,
+          "upIcon": -1
+        },
+        {
+          "key": "grail",
+          "name": "战神碑",
+          "sourceName": "grail",
+          "description": "每日收入 +5000 金币，生物周增长 +50%，并提供本阵营圣杯特效",
+          "cost": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "requirements": [
+            []
+          ],
+          "unit": -1,
+          "available": false,
+          "implemented": true,
+          "icon": 26,
           "upIcon": -1
         }
       ],
@@ -11637,6 +11900,23 @@
           "excludes": [],
           "mask": "assets/demo/town-ui/masks/stronghold-tavern.mask",
           "outline": "assets/demo/town-ui/outlines/stronghold-tavern.png",
+          "originalMask": false
+        },
+        {
+          "structure": "grail",
+          "art": "stronghold-town/tbsholya.png",
+          "animation": "tbstholy.def",
+          "pos": [
+            321,
+            105
+          ],
+          "z": 3,
+          "needs": [
+            37
+          ],
+          "excludes": [],
+          "mask": "assets/demo/town-ui/masks/stronghold-grail.mask",
+          "outline": "assets/demo/town-ui/outlines/stronghold-grail.png",
           "originalMask": false
         },
         {
@@ -12465,7 +12745,7 @@
           "key": "shipyard",
           "name": "船坞",
           "sourceName": "shipyard",
-          "description": "船只系统待接入",
+          "description": "在沿海城镇购买船只，花费 1000 金币和 10 木材",
           "cost": [
             2000,
             20,
@@ -12480,7 +12760,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 6,
           "upIcon": -1
         },
@@ -12514,7 +12794,7 @@
           "key": "special2",
           "name": "鲜血方尖塔",
           "sourceName": "Blood Obelisk",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             1000,
             0,
@@ -12531,7 +12811,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 21,
           "upIcon": -1
         },
@@ -12539,7 +12819,7 @@
           "key": "special3",
           "name": "恐怖浮雕",
           "sourceName": "Glyphs of Fear",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             1000,
             0,
@@ -12556,7 +12836,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 22,
           "upIcon": -1
         },
@@ -12564,7 +12844,7 @@
           "key": "special4",
           "name": "special4",
           "sourceName": "special4",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             0,
             0,
@@ -12579,7 +12859,7 @@
           ],
           "unit": -1,
           "available": false,
-          "implemented": false,
+          "implemented": true,
           "icon": 23,
           "upIcon": -1
         },
@@ -12675,8 +12955,31 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 10,
+          "upIcon": -1
+        },
+        {
+          "key": "grail",
+          "name": "噬人花",
+          "sourceName": "grail",
+          "description": "每日收入 +5000 金币，生物周增长 +50%，并提供本阵营圣杯特效",
+          "cost": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "requirements": [
+            []
+          ],
+          "unit": -1,
+          "available": false,
+          "implemented": true,
+          "icon": 26,
           "upIcon": -1
         }
       ],
@@ -13258,6 +13561,23 @@
           "excludes": [],
           "mask": "assets/demo/town-ui/masks/fortress-marketplace.mask",
           "outline": "assets/demo/town-ui/outlines/fortress-marketplace.png",
+          "originalMask": false
+        },
+        {
+          "structure": "grail",
+          "art": "fortress-town/tbfhlyaa.png",
+          "animation": "tbfrholy.def",
+          "pos": [
+            468,
+            260
+          ],
+          "z": 5,
+          "needs": [
+            37
+          ],
+          "excludes": [],
+          "mask": "assets/demo/town-ui/masks/fortress-grail.mask",
+          "outline": "assets/demo/town-ui/outlines/fortress-grail.png",
           "originalMask": false
         },
         {
@@ -14104,7 +14424,7 @@
           "key": "shipyard",
           "name": "船坞",
           "sourceName": "shipyard",
-          "description": "船只系统待接入",
+          "description": "在沿海城镇购买船只，花费 1000 金币和 10 木材",
           "cost": [
             2000,
             20,
@@ -14119,7 +14439,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 6,
           "upIcon": -1
         },
@@ -14127,7 +14447,7 @@
           "key": "special1",
           "name": "宝物商店",
           "sourceName": "Artifact Merchants",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             10000,
             0,
@@ -14144,7 +14464,7 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 17,
           "upIcon": -1
         },
@@ -14177,7 +14497,7 @@
           "key": "special3",
           "name": "special3",
           "sourceName": "special3",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             0,
             0,
@@ -14192,7 +14512,7 @@
           ],
           "unit": -1,
           "available": false,
-          "implemented": false,
+          "implemented": true,
           "icon": 22,
           "upIcon": -1
         },
@@ -14200,7 +14520,7 @@
           "key": "special4",
           "name": "special4",
           "sourceName": "special4",
-          "description": "特殊建筑效果待接入",
+          "description": "城镇特殊建筑",
           "cost": [
             0,
             0,
@@ -14215,7 +14535,7 @@
           ],
           "unit": -1,
           "available": false,
-          "implemented": false,
+          "implemented": true,
           "icon": 23,
           "upIcon": -1
         },
@@ -14311,8 +14631,31 @@
           ],
           "unit": -1,
           "available": true,
-          "implemented": false,
+          "implemented": true,
           "icon": 10,
+          "upIcon": -1
+        },
+        {
+          "key": "grail",
+          "name": "魔幻彩虹",
+          "sourceName": "grail",
+          "description": "每日收入 +5000 金币，生物周增长 +50%，并提供本阵营圣杯特效",
+          "cost": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "requirements": [
+            []
+          ],
+          "unit": -1,
+          "available": false,
+          "implemented": true,
+          "icon": 26,
           "upIcon": -1
         }
       ],
@@ -14332,6 +14675,23 @@
           "excludes": [],
           "mask": "assets/demo/town-ui/masks/conflux-dwellinguplvl7.mask",
           "outline": "assets/demo/town-ui/outlines/conflux-dwellinguplvl7.png",
+          "originalMask": false
+        },
+        {
+          "structure": "grail",
+          "art": "conflux-town/tbelhlya.png",
+          "animation": "tbelholy.def",
+          "pos": [
+            307,
+            2
+          ],
+          "z": 0,
+          "needs": [
+            37
+          ],
+          "excludes": [],
+          "mask": "assets/demo/town-ui/masks/conflux-grail.mask",
+          "outline": "assets/demo/town-ui/outlines/conflux-grail.png",
           "originalMask": false
         },
         {

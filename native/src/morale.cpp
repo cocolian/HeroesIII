@@ -20,10 +20,10 @@ int Game::moraleBase(int team)const{
  // creature floors and army-wide creature bonuses still apply.
  if(team==1&&(!battle||!heroes.contains(battle->targetId)))composition=std::min(0,composition);
  const Hero*leader=team==0?&hero:battle&&heroes.contains(battle->targetId)?&heroes.at(battle->targetId).value:nullptr;
- return composition+(undead&&affected?-1:0)+(team==0?hero.skills[Leadership]:battle?battle->defenderSkills[Leadership]:0)+allied+enemy+(leader?adventureModifier(*leader,0):0);
+ return (leader?grailBonus(team==0?currentOwner():heroes.at(battle->targetId).owner,0):0)+siegeBonus(team,3)+composition+(undead&&affected?-1:0)+(team==0?hero.skills[Leadership]:battle?battle->defenderSkills[Leadership]:0)+allied+enemy+(leader?adventureModifier(*leader,0):0);
 }
 int Game::luckBase(int team)const{
- if(team<0||team>1)return 0;auto armies=rosters(*this);int enemy=0;for(int id:armies[1-team])enemy=std::min(enemy,Units[id].enemyLuck);const Hero*leader=team==0?&hero:battle&&heroes.contains(battle->targetId)?&heroes.at(battle->targetId).value:nullptr;return(team==0?hero.skills[LuckSkill]:battle?battle->defenderSkills[LuckSkill]:0)+enemy+(leader?adventureModifier(*leader,1):0);
+ if(team<0||team>1)return 0;auto armies=rosters(*this);int enemy=0;for(int id:armies[1-team])enemy=std::min(enemy,Units[id].enemyLuck);const Hero*leader=team==0?&hero:battle&&heroes.contains(battle->targetId)?&heroes.at(battle->targetId).value:nullptr;return (leader?grailBonus(team==0?currentOwner():heroes.at(battle->targetId).owner,1):0)+siegeBonus(team,4)+(team==0?hero.skills[LuckSkill]:battle?battle->defenderSkills[LuckSkill]:0)+enemy+(leader?adventureModifier(*leader,1):0);
 }
 int Game::armyMorale(int team)const{return std::clamp(moraleBase(team),-3,3);}
 int Game::armyLuck(int team)const{return std::clamp(luckBase(team),0,3);}

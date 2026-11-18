@@ -12,7 +12,7 @@ bool contains(SDL_Rect r,Point p){return p.x>=r.x&&p.y>=r.y&&p.x<r.x+r.w&&p.y<r.
 std::string shortened(const std::string&s,size_t count){size_t glyphs=0;for(size_t i=0;i<s.size();++i)if((static_cast<unsigned char>(s[i])&0xc0)!=0x80&&glyphs++==count)return s.substr(0,i)+"…";return s;}
 }
 void Desktop::selectMap(int index){
- scenarioVideoPreset_=false;selectedMap_=std::clamp(index,0,int(mapLibrary_["entries"].size())-1);mapPage_=selectedMap_/6;mapLevel_=0;focus_=-1;
+ scenarioHero_=-1;scenarioVideoPreset_=false;selectedMap_=std::clamp(index,0,int(mapLibrary_["entries"].size())-1);mapPage_=selectedMap_/6;mapLevel_=0;focus_=-1;
 }
 void Desktop::scenario(){
  title("新游戏 · 选择起始城镇",Scene::Menu);
@@ -20,7 +20,7 @@ void Desktop::scenario(){
  for(int f=0;f<FactionCount;++f){
   SDL_Rect r{35+f%3*245,73+f/3*143,235,133};panel(r);
   art("original/"+Factions[f].background,{r.x+3,r.y+3,229,96},{},false);
-  button({r.x+3,r.y+101,229,29},Factions[f].name+(f==scenarioFaction_?" · 已选择":""),[this,f]{scenarioFaction_=f;focus_=-1;},true,false,"选择"+Factions[f].name+"作为起始城镇；整张图片和文字均可点击（"+std::to_string(f+1)+"）");
+  button({r.x+3,r.y+101,229,29},Factions[f].name+(f==scenarioFaction_?" · 已选择":""),[this,f]{scenarioFaction_=f;scenarioHero_=-1;focus_=-1;},true,false,"选择"+Factions[f].name+"作为起始城镇；整张图片和文字均可点击（"+std::to_string(f+1)+"）");
   // The caption retains its layout, while the full illustrated card owns input.
   buttons_.back().rect=r;
   if(f==scenarioFaction_||contains(r,{mouseX_,mouseY_}))outline({r.x-2,r.y-2,r.w+4,r.h+4},f==scenarioFaction_?GoldColor:Muted);
@@ -28,9 +28,11 @@ void Desktop::scenario(){
  bool playable=mapLibrary_["entries"][selectedMap_].value("playable",false);
  auto name=mapLibrary_["entries"][selectedMap_]["title"].get<std::string>();
  text("当前地图："+shortened(name,28)+(selectedMap_==0?"（可游玩）":playable?"（原图探索）":"（仅预览）"),35,511,12,playable?Green:GoldColor);
- text(selectedMap_==0?"边境练习地图，支持九种起始城镇。":mapLibrary_["entries"][selectedMap_]["id"]=="seven-lakes-1"?"此图自动花费 2500 金币招募一名起始英雄。":"按原图开局；阵营选项仅影响随机城镇。",35,531,11,Muted);
+ text(selectedMap_==0?"边境练习地图，支持九种起始城镇。":mapLibrary_["entries"][selectedMap_]["id"]=="seven-lakes-1"?"按所选难度分配资源，并生成所选起始英雄。":"按原图开局；阵营选项仅影响随机城镇。",35,531,11,Muted);
  button({525,510,225,40},playable?(selectedMap_==0?"开始游戏":"开始原图探索"):"暂不支持开始",[this]{startScenario();},playable,false,selectedMap_==0?"使用所选城镇开始边境练习地图（Enter）":"载入真实地图、原始对象与开局；可探索、拾取、占矿和战斗。部分剧情与英雄能力尚未完整支持（Enter）");
  if(mapLibrary_["entries"][selectedMap_]["id"]=="dead-and-buried-1")button({275,551,235,27},scenarioVideoPreset_?"视频开局 · 已选":"视频开局 · 元素城 / 200%",[this]{scenarioVideoPreset_=true;scenarioFaction_=8;},true,false,"按视频选用元素城与拉克斯、200% 零资源开局；不同随机种子和未实现的战术特长仍会影响比较");
+ if(selectedMap_>0&&mapLibrary_["entries"][selectedMap_]["id"]!="dead-and-buried-1"){Hero selected;if(scenarioHero_>=0)heroDefaults(selected,scenarioHero_);button({275,551,235,27},scenarioHero_<0?"起始英雄 · 默认":"起始英雄 · "+selected.name,[this]{int next=scenarioHero_<0?0:scenarioHero_-scenarioFaction_*16+1;scenarioHero_=next>=16?-1:scenarioFaction_*16+next;},true,false,"切换随机开局的起始英雄；地图预设英雄会保留原设定");}
+ const char*levels[]={"简单 · 50%","普通 · 100%","困难 · 130%","专家 · 160%","不可能 · 200%"};button({525,551,225,27},"难度："+std::string(levels[scenarioVideoPreset_?4:scenarioDifficulty_]),[this]{scenarioVideoPreset_=false;scenarioDifficulty_=(scenarioDifficulty_+1)%5;},true,false,"切换原版五档难度；开局资源和电脑的收入修正随难度变化");
  button({35,551,220,27},"选择地图 · 已下载地图",[this]{scene=Scene::Maps;mapPage_=selectedMap_/6;focus_=-1;},true,false,"打开地图列表：1 张练习地图及 15 张已下载地图的原图探索入口");
 }
 void Desktop::mapLibrary(){
@@ -75,7 +77,7 @@ void Desktop::mapLibrary(){
 }
 void Desktop::startScenario(){
  const auto&entry=mapLibrary_["entries"][selectedMap_];if(!entry.value("playable",false))return;
- Game candidate;if(selectedMap_==0)candidate=Game::create(1999,scenarioFaction_);else{std::string error;if(!candidate.importScenario(root_/entry["scenarioFile"].get<std::string>(),error,scenarioFaction_,scenarioVideoPreset_?131:-1,scenarioVideoPreset_?4:-1)){say("地图载入失败："+error);return;}}
+ Game candidate;if(selectedMap_==0)candidate=Game::create(1999,scenarioFaction_);else{std::string error;if(!candidate.importScenario(root_/entry["scenarioFile"].get<std::string>(),error,scenarioFaction_,scenarioVideoPreset_?131:scenarioHero_,scenarioVideoPreset_?4:scenarioDifficulty_)){say("地图载入失败："+error);return;}}
  heroListPage_=townListPage_=0;game=std::move(candidate);visitPopup_.reset();heroDirection_={1,0};battleMotion_.clear();autoCombat_=false;camX_=game.hero.pos.x+.5f;camY_=game.hero.pos.y+.5f;scene=Scene::Adventure;route_.clear();destination_.reset();marching_=false;pendingSpell_=sacrificeTarget_=-1;buildPage_=0;sourceSlot_=-1;recruitUnit_=game.town.faction*14;toastUntil_=0;toast_.clear();mouseX_=mouseY_=-1;scrollTick_=0;mouseLeftDown_=minimapDragging_=drag_=false;armyDrag_.reset();focus_=-1;nativePointer_.reset();persist();settle();
 }
 void Desktop::scenarioPreview(const std::filesystem::path&directory){

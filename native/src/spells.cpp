@@ -8,7 +8,7 @@ const std::array<SpellDef,SpellCount> Spells={{
 #include "../generated/spells.inc"
 }};
 
-int Game::casterPower()const{return spellTeam_==1&&battle?battle->defenderPrimary[2]:primarySkill(2);}
+int Game::casterPower()const{return siegeBonus(spellTeam_,2)+(spellTeam_==1&&battle?battle->defenderPrimary[2]:primarySkill(2));}
 int& Game::casterMana(){return spellTeam_==1?battle->defenderMana:hero.mana;}
 int& Game::casterRound(){return spellTeam_==1?battle->defenderSpellRound:battle->spellRound;}
 int Game::spellMastery(int spell)const {
@@ -45,7 +45,7 @@ bool Game::spellImmune(const CombatStack&target,int spell)const {
  const auto&u=Units[target.unit];
  if(target.origin==StackOrigin::WarMachine&&Spells[spell].kind!=SpellKind::Damage)return true;
  if((spell==Mirth||spell==Sorrow)&&u.nonLiving)return true;
- if(spell==Forgetfulness&&u.mindImmune)return true;
+ if((spell==Forgetfulness||spell==Blind||spell==Frenzy||spell==Berserk||spell==Hypnotize)&&(u.mindImmune||u.nonLiving))return true;
  return std::max(u.spellImmunity,spellEffect(target,AntiMagic))>=Spells[spell].level
   ||(u.schoolImmunity&Spells[spell].school)!=0
   ||std::find(u.spellImmunities.begin(),u.spellImmunities.end(),spell)!=u.spellImmunities.end();
@@ -64,13 +64,13 @@ int Game::spellDamage(const CombatStack&target,int spell,int raw)const {
 }
 namespace {
  bool hasEffects(const CombatStack&unit,bool negativeOnly){for(int s=0;s<SpellCount;s++)if(unit.effects[s]>0&&(!negativeOnly||Spells[s].enemy))return true;return false;}
- void clearEffects(CombatStack&unit,bool negativeOnly){for(int s=0;s<SpellCount;s++)if(!Spells[s].persistent&&(!negativeOnly||Spells[s].enemy))unit.effects[s]=unit.effectMastery[s]=0;}
+ void clearEffects(CombatStack&unit,bool negativeOnly){for(int s=0;s<SpellCount;s++)if(!Spells[s].persistent&&(!negativeOnly||Spells[s].enemy))unit.effects[s]=unit.effectMastery[s]=0;if(!unit.effects[Hypnotize])unit.team=unit.id/100;}
  const CombatStack* stackById(const Battle&battle,int id){auto at=std::find_if(battle.units.begin(),battle.units.end(),[id](const auto&unit){return unit.id==id;});return at==battle.units.end()?nullptr:&*at;}
 }
 std::vector<Point> Game::spellArea(int spell,Point center)const {
  std::vector<Point>area;if(spell<0||spell>=SpellCount||center.x<0||center.x>=BattleW||center.y<0||center.y>=BattleH)return area;
  const auto&def=Spells[spell];if(def.target!=SpellTarget::Radius&&def.target!=SpellTarget::Ring)return {center};
- for(int y=0;y<BattleH;y++)for(int x=0;x<BattleW;x++){int distance=hexDistance(center,{x,y});if(distance<=def.radius&&(def.target!=SpellTarget::Ring||distance>0))area.push_back({x,y});}
+ for(int y=0;y<BattleH;y++)for(int x=0;x<BattleW;x++){int distance=hexDistance(center,{x,y});if(distance<=(spell==Berserk?def.values[spellMastery(spell)]:def.radius)&&(def.target!=SpellTarget::Ring||distance>0))area.push_back({x,y});}
  return area;
 }
 std::vector<int> Game::spellTargets(int spell,Point point)const {
@@ -88,6 +88,7 @@ std::vector<int> Game::spellTargets(int spell,Point point)const {
   if(filter==SpellFilter::Ally&&unit.team!=spellTeam_)continue;
   if(filter==SpellFilter::Undead&&!Units[unit.unit].undead)continue;
   if(filter==SpellFilter::NonUndead&&Units[unit.unit].undead)continue;
+  if(spell==Hypnotize&&(unit.hp>casterPower()*25+def.values[spellMastery(spell)]||unit.effects[MagicMirror]>0))continue;
   if((spell==Precision||spell==Forgetfulness)&&Units[unit.unit].shots==0)continue;
   if(area){auto footprint_=footprint(unit,{unit.x,unit.y});if(std::none_of(footprint_.begin(),footprint_.end(),[&](Point p){return std::find(cells.begin(),cells.end(),p)!=cells.end();}))continue;}
   else if(!spellAutomatic(spell)&&(!selected||selected->id!=unit.id))continue;
@@ -101,9 +102,21 @@ std::string Game::spellDescription(int spell)const {
  if(spell<0||spell>=SpellCount)return {};
  if(!Spells[spell].implemented)return "此法术效果尚未开放。";
  const auto&def=Spells[spell];int mastery=spellMastery(spell),amount=def.values[mastery];
+ if(def.adventure){switch(spell){case SummonBoat:return "在岸边召来最近的空船，成功率 50% / 50% / 75% / 100%；高级以上可创造船只。";case ScuttleBoat:return "摧毁视野内选中的空船，成功率 50% / 50% / 75% / 100%。";case TownPortal:return "传送到己方城镇；初级以下仅最近城镇，高级以上可选择；消耗 300 行动力，专家消耗 200。";case DimensionDoor:return "在横向 9 格、纵向 8 格内传送；每日可施放 1 / 2 / 3 / 4 次；消耗 300 行动力，专家 200。";case Fly:return "本日可飞越地面障碍和水面，须在空闲陆地落脚；行动力额外消耗 40% / 40% / 20% / 0%。";case WaterWalk:return "本日可步行跨越水面，须回到陆地结束；行动力额外消耗 40% / 40% / 20% / 0%。";case Visions:return "本日查看范围内野兵数量和加入意愿；高级可查看英雄，专家可查看城镇。";case Disguise:return "本日向敌方隐藏真实部队：以最强部队伪装；专家还隐藏部队数量。";case ViewEarth:return "显示资源位置；高级增加矿山，专家显示完整地形，不改变探索迷雾。";case ViewAir:return "显示宝物位置；高级增加英雄，专家增加城镇，不改变探索迷雾。";default:return {};}}
  std::string target=spellAutomatic(spell)?"全部有效目标":def.target==SpellTarget::Chain?"敌军及其附近部队":def.target==SpellTarget::Radius||def.target==SpellTarget::Ring?"范围内所有部队":def.enemy?"一支敌军":"一支友军";
  std::string description=target+"：";
- if(def.kind==SpellKind::Summon)description="召唤 "+std::to_string(casterPower()*amount)+" 个元素，本场战斗中只能召唤同一种元素。";
+ if(spell==Blind)description="无法移动和行动；受到伤害后清醒。被近战唤醒时以 "+std::to_string(amount)+"% 伤害反击。";
+ else if(spell==Slayer)description="攻击巨兽、九头蛇和龙类时攻击 +8；高级包含天使、恶魔，专家包含巨人、泰坦。";
+ else if(spell==Frenzy)description="防御归零，并将原防御的 "+std::to_string(amount)+"% 转为攻击；本队完成一次攻击后解除。";
+ else if(spell==MagicMirror)description="有 "+std::to_string(amount)+"% 几率把敌方单体法术反射到随机敌军，不连续反射。";
+ else if(spell==Berserk)description="使半径 "+std::to_string(amount)+" 格内的非免疫部队失控，攻击最近的任何部队，完成自己的攻击后解除。";
+ else if(spell==Hypnotize)description="控制总生命不超过 "+std::to_string(casterPower()*25+amount)+" 的非免疫敌军，持续英雄力量轮。";
+ else if(spell==Quicksand||spell==LandMine)description="随机布置 "+std::to_string(std::array<int,4>{4,4,6,8}[mastery])+" 处隐藏陷阱；流沙停止地面移动，地雷对敌军触发一次伤害。";
+ else if(spell==ForceField||spell==FireWall)description="放置 "+std::to_string(mastery>=2?3:2)+" 格魔法墙，持续 2 轮；大力神盾阻挡，烈火魔墙对进入及停留的部队造成伤害。";
+ else if(spell==Teleport)description="先选择己方部队，再选择落脚格；高级可越过护城河，专家可越过城墙。";
+ else if(spell==RemoveObstacle)description="驱除障碍；高级可移除烈火魔墙，专家可移除其他魔法障碍。";
+ else if(spell==Earthquake)description="随机攻击 "+std::to_string(amount)+" 段城防，每次造成 1 点城防伤害。";
+ else if(def.kind==SpellKind::Summon)description="召唤 "+std::to_string(casterPower()*amount)+" 个元素，本场战斗中只能召唤同一种元素。";
  else if(def.kind==SpellKind::Clone)description="复制一支 "+std::to_string(amount)+" 级及以下友军，镜像受伤或本体死亡即消失，持续 "+std::to_string(std::max(1,casterPower()))+" 轮。";
  else if(def.kind==SpellKind::Resurrection)description="恢复最多 "+std::to_string(casterPower()*def.power+amount)+" 点生命对应的阵亡"+std::string(spell==AnimateDead?"亡灵":"活物")+"，"+(spell==AnimateDead||mastery>=2?"永久保留。":"仅本场战斗有效。 ");
  else if(def.kind==SpellKind::Sacrifice)description="先选择复生目标，再牺牲另一支活物友军；复生生命 =（力量 + 牺牲单位生命 + "+std::to_string(amount)+"）× 牺牲数量，永久保留。";
@@ -128,11 +141,11 @@ std::string Game::spellDescription(int spell)const {
  else if(spell==Mirth||spell==Sorrow)description+="士气 "+std::string(spell==Mirth?"+":"−")+std::to_string(amount)+"。";
  else if(spell==Fortune||spell==Misfortune)description+="幸运 "+std::string(spell==Fortune?"+":"−")+std::to_string(amount)+"。";
  if(def.kind==SpellKind::Damage&&(def.target==SpellTarget::Radius||def.target==SpellTarget::Ring||def.target==SpellTarget::Global||def.target==SpellTarget::Chain))description+="可能伤及友军。";
- if(def.kind==SpellKind::Timed&&!def.persistent)description+="持续 "+std::to_string(std::max(1,casterPower()))+" 轮。";
+ if(def.kind==SpellKind::Timed&&!def.persistent&&spell!=Frenzy&&spell!=Berserk)description+="持续 "+std::to_string(std::max(1,casterPower()))+" 轮。";
  return description;
 }
 std::string Game::cast(int spell,Point point,Point sacrifice) {
- if(!battle||!current()||current()->team!=spellTeam_)return "等待我方行动";
+ if(!battle||!current()||current()->team!=spellTeam_)return "等待我方行动";if(battle->tacticsTeam>=0)return "请先完成战术布阵。";if(battle->noMagic)return "禁魔要塞内不能施放法术。";
  if(!(spellTeam_==1?battle->defenderSpellbook:hero.spellbook))return "英雄尚未拥有魔法书";
  if(spell<0||spell>=SpellCount||!(spellTeam_==1?battle->defenderSpells:hero.spells)[spell])return "尚未学会该法术";
  if(!Spells[spell].implemented)return "此法术效果尚未开放";
@@ -140,7 +153,10 @@ std::string Game::cast(int spell,Point point,Point sacrifice) {
  auto&combat=*battle;const auto&def=Spells[spell];
  if(casterRound()==combat.round)return "英雄每轮只能施法一次";
  int cost=spellCost(spell);if(casterMana()<cost)return "魔法值不足";
- if(def.kind==SpellKind::Resurrection||def.kind==SpellKind::Sacrifice||def.kind==SpellKind::Clone||def.kind==SpellKind::Summon)return spellTeam_==1?"对方复生与召唤策略尚未开放":castReinforcement(spell,point,sacrifice);
+ if(def.kind==SpellKind::Resurrection||def.kind==SpellKind::Sacrifice||def.kind==SpellKind::Clone||def.kind==SpellKind::Summon)return castReinforcement(spell,point,sacrifice);
+ if(def.kind==SpellKind::Special&&spell!=Earthquake)return castBattleSpecial(spell,point,sacrifice);
+ if(spell==Earthquake){if(!combat.siege.fort)return "只能在攻城战中施放。";bool intact=std::any_of(combat.siege.hp.begin(),combat.siege.hp.end(),[](int hp){return hp>0;});if(!intact)return "城防已经全部摧毁。";int active=current()->id;casterMana()-=cost;casterRound()=combat.round;for(int i=0;i<def.values[spellMastery(spell)];++i){std::vector<int>parts;for(int j=0;j<8;++j)if(combat.siege.hp[j]>0)parts.push_back(j);if(parts.empty())break;--combat.siege.hp[parts[size_t(random()*parts.size())]];}combat.log.push_back("地动山摇破坏了城防。");emit({GameEventType::SpellCast,-1,spell,point});finishCast(active,spell);return {};}
+
  if(!spellAutomatic(spell)&&(def.target==SpellTarget::Single||def.target==SpellTarget::Chain)){
   auto*target=combatAt(point);if(!target)return "请选择一支部队";
   if(spellImmune(*target,spell))return "该单位免疫这一等级的魔法";
@@ -148,17 +164,20 @@ std::string Game::cast(int spell,Point point,Point sacrifice) {
  auto targets=spellTargets(spell,point);if(targets.empty())return "没有可受此法术影响的部队";
  int active=current()->id,mastery=spellMastery(spell),raw=casterPower()*def.power+def.values[mastery];
  casterMana()-=cost;casterRound()=combat.round;emit({GameEventType::SpellCast,-1,spell,point});combat.log.push_back((spellTeam_==1?std::string("对方英雄"):hero.name)+"施放"+def.name+(spellMass(spell)?"（群体）。":"。"));
+ std::vector<int>reflected;
  auto apply=[&](int id,int baseDamage){
   auto&target=*std::find_if(combat.units.begin(),combat.units.end(),[id](const auto&unit){return unit.id==id;});const auto&unit=Units[target.unit];
   if(target.hp<=0&&spell!=Dispel)return true;
+  if(def.enemy&&def.target==SpellTarget::Single&&!spellMass(spell)&&spellEffect(target,MagicMirror)>0&&random()*100<spellEffect(target,MagicMirror)){std::vector<int>candidates;for(const auto&u:combat.units)if(u.hp>0&&u.team==spellTeam_&&!spellImmune(u,spell))candidates.push_back(u.id);if(!candidates.empty()){reflected.push_back(candidates[size_t(random()*candidates.size())]);combat.log.push_back("魔法神镜反射了"+def.name+"。");return false;}}
+
   int resistance=std::max(unit.magicResistance,std::array<int,4>{0,5,10,20}[target.team==0?hero.skills[Resistance]:combat.defenderSkills[Resistance]]);
   if(def.enemy&&resistance>0&&random()*100<resistance){combat.log.push_back(unit.name+"抵抗了法术。");return false;}
   if(def.kind==SpellKind::Damage)hurt(target,spellDamage(target,spell,baseDamage));
   else if(spell==Cure){int healing=std::min(target.count*unit.hp-target.hp,raw);target.hp+=healing;clearEffects(target,true);combat.log.push_back(unit.name+"恢复 "+std::to_string(healing)+" 点生命并解除负面效果。");}
   else if(spell==Dispel)clearEffects(target,false);
   else if(spell==DisruptingRay)target.defenseReduction+=std::min(def.values[mastery],std::max(0,defense(target)));
-  else {if(spell==AntiMagic)clearEffects(target,true);target.effects[spell]=std::max(1,casterPower());target.effectMastery[spell]=mastery;int counter=spell==Haste?Slow:spell==Slow?Haste:spell==Bless?Curse:spell==Curse?Bless:spell==Bloodlust?Weakness:spell==Weakness?Bloodlust:spell==Mirth?Sorrow:spell==Sorrow?Mirth:spell==Fortune?Misfortune:spell==Misfortune?Fortune:-1;if(counter>=0)target.effects[counter]=target.effectMastery[counter]=0;}
-  if(spell==Mirth||spell==Sorrow||spell==Fortune||spell==Misfortune)emit({GameEventType::CombatSpellEffect,target.unit,spell,{target.x,target.y},target.id,-1,{},target});
+  else {if(spell==AntiMagic)clearEffects(target,true);target.effects[spell]=std::max(1,casterPower());target.effectMastery[spell]=mastery;if(spell==Hypnotize){target.team=spellTeam_;target.effects[Berserk]=target.effectMastery[Berserk]=0;}if(spell==Berserk)clearHypnosis(target);int counter=spell==Haste?Slow:spell==Slow?Haste:spell==Bless?Curse:spell==Curse?Bless:spell==Bloodlust?Weakness:spell==Weakness?Bloodlust:spell==Mirth?Sorrow:spell==Sorrow?Mirth:spell==Fortune?Misfortune:spell==Misfortune?Fortune:-1;if(counter>=0)target.effects[counter]=target.effectMastery[counter]=0;}
+  if(def.kind==SpellKind::Timed)emit({GameEventType::CombatSpellEffect,target.unit,spell,{target.x,target.y},target.id,-1,{},target});
   return true;
  };
  if(def.target==SpellTarget::Chain){
@@ -172,7 +191,8 @@ std::string Game::cast(int spell,Point point,Point sacrifice) {
    if(nearest.empty())break;id=nearest[nearest.size()==1?0:size_t(random()*nearest.size())];
   }
  }else for(int id:targets)apply(id,raw);
- finishCast(active);
+ for(int id:reflected){auto&target=*std::find_if(combat.units.begin(),combat.units.end(),[id](auto&u){return u.id==id;});if(def.kind==SpellKind::Damage)hurt(target,spellDamage(target,spell,raw));else if(spell==DisruptingRay)target.defenseReduction+=def.values[mastery];else{target.effects[spell]=std::max(1,casterPower());target.effectMastery[spell]=mastery;}}
+ refreshQueue();finishCast(active,spell);
  return {};
 }
 

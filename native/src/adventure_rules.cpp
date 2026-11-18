@@ -41,6 +41,7 @@ const Object* Game::guardingMonster(Point p,bool visibleOnly)const{
  return selected;
 }
 std::vector<Step> Game::path(Point goal)const{
+ if(adventureSpellActive(Fly)||adventureSpellActive(WaterWalk)){auto magical=magicRoute(goal);if(!magical.empty())return magical;}
  auto allowed=movementMask();
  // Each search owns a fresh spatial index. It cannot retain stale pointers
  // after a pickup, hero movement, capture, or switching map levels.
@@ -98,18 +99,21 @@ std::vector<Step> Game::path(Point goal)const{
  std::reverse(result.begin(),result.end());if(attack&&target->type==ObjectType::EnemyHero&&!result.empty())result.push_back({goal.x,goal.y,moveCost({result.back().x,result.back().y},goal)});return result;
 }
 std::string Game::move(Point p){
+ if(neutralOffer)return "请先完成野兵交涉。";
  if(imported()&&!activeHeroId)return "请先从城镇酒馆招募英雄。";
  if(battle||report||result||!hero.levelChoices.empty())return "请先完成当前战斗、战报或升级选择";
+ if(adventureSpellActive(Fly)||adventureSpellActive(WaterWalk)){auto flight=magicRoute(p);if(!flight.empty()){int cost=0;std::vector<Point>positions{hero.pos};for(auto step:flight){cost+=step.cost;positions.push_back({step.x,step.y});}hero.movement-=cost;hero.pos=p;emit({GameEventType::HeroMove,-1,int(tile(p)->terrain),p,-1,-1,positions});reveal();storeHero();if(const auto*g=guardingMonster(p))return encounterMonster(g->id,objectAt(p)?objectAt(p)->id:0);if(auto*o=objectAt(p))visit(o->id);if(imported())triggerMapEvents();return {};}}
  if(imported()&&p==hero.pos){for(const auto&o:objects)if(o.type==ObjectType::Portal&&o.level==mapLevel&&o.pos==p){if(hero.movement<100)return "行动力不足，请结束回合";hero.movement-=100;return visit(o.id);}}
  if(!canStep(hero.pos,p)||!tile(p)->seen)return "无法通行";
  int cost=moveCost(hero.pos,p);if(hero.movement<cost)return "行动力不足，请结束回合";
  hero.movement-=cost;
  auto*object=objectAt(p);
  if(object&&(object->type==ObjectType::Monster||object->type==ObjectType::EnemyHero)&&object->owner!=currentOwner()&&armyCount(object->army)>0){
-  startBattle(object->id);return "向相邻野兵发起战斗！";
+  if(object->type==ObjectType::Monster)return encounterMonster(object->id);startBattle(object->id);return "向相邻野兵发起战斗！";
  }
- if(object&&object->type==ObjectType::Gate){if(const auto*guard=guardingMonster(p)){startBattle(guard->id);return "必须先击败关卡附近的守军。";}return applyVisit(object->id);}
- if(object&&locationBlocksPassage(*object))return visit(object->id);
+ if(object&&object->type==ObjectType::Gate){if(const auto*guard=guardingMonster(p)){return encounterMonster(guard->id);}return applyVisit(object->id);}
+ if(object&&object->type==ObjectType::EnemyHero&&object->owner==currentOwner())return meetHero(object->id);
+ if(object&&locationBlocksPassage(*object)){if(const auto*guard=guardingMonster(p))return encounterMonster(guard->id,object->id);if(armyCount(object->army)>0){startBattle(object->id);return "守卫迎战！";}return visit(object->id);}
  auto previous=hero.pos;bool waterBefore=tile(previous)->terrain==Terrain::Water,waterAfter=tile(p)->terrain==Terrain::Water;
  if(imported()&&waterBefore!=waterAfter){
   if(waterAfter){hero.lastEmbark=previous;hero.onBoat=true;if(object&&object->type==ObjectType::Boat){int id=object->id;std::erase_if(objects,[id](const auto&o){return o.id==id;});object=nullptr;}}
@@ -119,8 +123,7 @@ std::string Game::move(Point p){
  hero.pos=p;emit({GameEventType::HeroMove,-1,int(tile(p)->terrain),p});reveal();
  if(const auto*guard=guardingMonster(p)){
   int deferred=object&&object->type!=ObjectType::Monster?object->id:0;
-  startBattle(guard->id);if(battle)battle->deferredVisitId=deferred;
-  return "进入野兵守卫范围，必须先击败守军！";
+  return encounterMonster(guard->id,deferred);
  }
  auto message=object?visit(object->id):"";if(imported()&&!battle)triggerMapEvents();return message;
 }

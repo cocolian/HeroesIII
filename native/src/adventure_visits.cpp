@@ -11,7 +11,7 @@ std::string Game::dig(){
  if(objectAt(hero.pos)||!passable(hero.pos))return "这里无法挖掘。";
  hero.movement=0;
  std::string msg="挖掘了一整天，这里没有发现圣杯。";
- if(!grailFound&&hero.pos==grailPos&&(!imported()||(scenarioRules.value("grailExists",false)&&mapLevel==scenarioRules.value("grailLevel",0)))){grailFound=true;hero.artifacts.push_back("圣杯");msg="你挖出了圣杯！圣杯已交由英雄保管。";}
+ if(!grailFound&&hero.pos==grailPos&&(!imported()||(scenarioRules.value("grailExists",false)&&mapLevel==scenarioRules.value("grailLevel",0)))){grailFound=true;hero.artifacts.push_back("圣杯");hero.artifactIds.push_back(2);msg="你挖出了圣杯！圣杯已交由英雄保管。";}
  message(msg);return msg;
 }
 }

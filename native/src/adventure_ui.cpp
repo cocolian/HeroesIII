@@ -85,7 +85,7 @@ void Desktop::adventureHero(){
  // Its bottom edge meets the destination tile's bottom, not its center.
  auto scaled=[&](int n){return int(std::lround(n*zoom_));};
  SDL_Rect canvas{p.x-scaled(48),p.y-scaled(48),scaled(96),scaled(64)};
- frame(game.hero.onBoat?"ab01_.def":"ah00_.def",group,int(animationTime_/80),canvas,flip);
+ frame(adventureHeroAsset(game.hero),group,int(animationTime_/80),canvas,flip);
  frame(game.hero.onBoat?ownerArt_["colors"][ownerName(0)].value("boatFlag",std::string("abf01g.def")):ownerHeroFlag(0),group,int(animationTime_/100),canvas,flip);
 }
 void Desktop::prepareFogFrames(){
@@ -179,7 +179,7 @@ void Desktop::adventure(){
  if(heroIds.empty())button({615+dx,212,56,32},"",[this]{scene=Scene::Hero;},true,true,"英雄详情：属性、部队、阵型和魔法书（H）");
  if(townIds.empty())button({749+dx,212,42,32},"",[this]{if(game.hasTown())scene=Scene::Town;},game.hasTown(),true,"进入城镇界面，建设与招募部队（T）");
  auto control=[&](SDL_Rect original,const std::string&label,std::function<void()> action,bool enabled=true){SDL_Rect rect{original.x+dx,original.y,original.w,original.h};if(!enabled)box(rect,{0,0,0,115});button(rect,"",std::move(action),enabled,true,label);if(inside(rect,{mouseX_,mouseY_}))rollover=label;};
- control({680,197,31,30},"王国总览：尚未实现",[]{},false);
+ control({680,197,31,30},"王国总览：查看英雄、城镇、驻军与日收入",[this]{scene=Scene::Overview;overviewPage_=0;});
  control({712,197,31,30},game.mapLevels==2?"当前为"+std::string(game.mapLevel?"地下":"地上")+"层；通过地下通道抵达另一层":"地上/地下切换：本地图没有地下层",[]{},false);
  control({680,229,31,30},"任务记录：查看已触发的地图剧情和奖励",[this]{scene=Scene::Journal;journalPage_=0;},game.imported());
  control({712,229,31,30},"英雄休眠：切换当前英雄的休眠状态",[this]{if(game.heroes.contains(game.activeHeroId))game.heroes[game.activeHeroId].sleeping=!game.heroes[game.activeHeroId].sleeping;persist();},game.imported());
@@ -191,6 +191,8 @@ void Desktop::adventure(){
  control({680,358,63,29},"结束回合（E）：结算城镇及矿山收入，恢复行动力",[this]{say(game.endDay());persist();settle();},!game.result);
  if(rollover.empty()&&inside(clip,{mouseX_,mouseY_}))if(auto*object=adventureObjectAt({mouseX_,mouseY_})){
   rollover=object->name;
+  int visions=game.adventureSpellActive(Visions)?game.hero.adventureSpellMastery[Visions]:-1;if(visions>=0&&std::hypot(object->pos.x-game.hero.pos.x,object->pos.y-game.hero.pos.y)<=std::max(3,game.primarySkill(2)*std::max(1,visions))){if(object->type==ObjectType::Monster){auto reaction=game.neutralReaction(object->id);rollover+=" · "+std::to_string(armyCount(object->army))+" 名 · "+(reaction.intent==NeutralIntent::JoinFree?"愿意加入":reaction.intent==NeutralIntent::JoinPaid?"要求金币后加入":reaction.intent==NeutralIntent::Flee?"准备逃走":"准备战斗");}else if((object->type==ObjectType::EnemyHero&&visions>=2)||(object->type==ObjectType::Town&&visions==3)){if(game.heroes.contains(object->id)){const auto&h=game.heroes.at(object->id).value;if(h.adventureSpellDay[Disguise]==game.day)rollover+=" · 部队经过伪装";else rollover+=" · "+std::to_string(h.level)+" 级 · "+std::to_string(armyCount(h.army))+" 名部队";}else rollover+=" · 驻军 "+std::to_string(armyCount(object->army));}}
+
   if(object->type==ObjectType::Windmill||object->type==ObjectType::WaterWheel)rollover+=object->visited?"（本周已领取）":"（本周尚未领取）";
   if(object->type==ObjectType::Well)rollover+=game.hero.wellDay==game.day?"（今日已饮用魔法井）":"（恢复魔法，每日限一次）";
   if(object->type==ObjectType::Obelisk)rollover+=object->visited?"（已拜访）":"（尚未拜访）";

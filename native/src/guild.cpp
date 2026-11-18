@@ -47,6 +47,7 @@ std::vector<int> Game::guildSpells(int level)const {
 
 void Game::learnTownSpells() {
  if(!visiting()||!hero.spellbook)return;
+ if(town.faction==8&&town.built[GrailBuilding]){for(int spell=0;spell<SpellCount;++spell)if(!Spells[spell].special&&!bannedSpells[spell]&&Spells[spell].level<=learnableSpellLevel())hero.spells[spell]=true;return;}
  for(int level=1;level<=std::min(mageGuildLevel(),learnableSpellLevel());level++)
   for(int spell:guildSpells(level))hero.spells[spell]=true;
 }

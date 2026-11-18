@@ -11,7 +11,7 @@ void Desktop::afterReport(){
  focus_=-1;marching_=false;route_.clear();destination_.reset();
  pendingSpell_=sacrificeTarget_=-1;autoCombat_=false;if(scene==Scene::Adventure)settle();
 }
-void Desktop::mapDialog(SDL_Rect dialog){
+void Desktop::mapDialog(SDL_Rect dialog,Scene background){
  auto*target=SDL_GetRenderTarget(renderer_);auto&backdrop=images_["#outcome-backdrop"];
  if(!backdrop.texture){
   backdrop={SDL_CreateTexture(renderer_,SDL_PIXELFORMAT_RGBA8888,SDL_TEXTUREACCESS_TARGET,800,600),800,600};
@@ -23,7 +23,7 @@ void Desktop::mapDialog(SDL_Rect dialog){
  SDL_SetRenderTarget(renderer_,backdrop.texture);SDL_RenderSetScale(renderer_,1,1);SDL_RenderSetClipRect(renderer_,nullptr);
  SDL_SetRenderDrawColor(renderer_,7,6,5,255);SDL_RenderClear(renderer_);
  // Keep the completed map visible behind a persistent, explicit result.
- adventure();buttons_.clear();box({0,0,800,600},{0,0,0,170});
+ if(background==Scene::Battle)battle();else if(background==Scene::Town)town();else adventure();buttons_.clear();box({0,0,800,600},{0,0,0,170});
  box({dialog.x+4,dialog.y+4,dialog.w,dialog.h},{0,0,0,180});
  // Tile the original leather and eight-piece dialogue frame at native size.
  for(int y=dialog.y+14;y<dialog.y+dialog.h-14;y+=256)for(int x=dialog.x+14;x<dialog.x+dialog.w-14;x+=256){

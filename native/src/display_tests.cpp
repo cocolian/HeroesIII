@@ -68,7 +68,7 @@ void Desktop::displayRenderTests(const std::filesystem::path& directory){
  camX_=4.5f;camY_=20.5f;route_.clear();destination_.reset();render();click(mapScreen({7,21}),false);key(SDLK_m,KMOD_NONE);
  auto planned=route_;auto destination=destination_;click(mapScreen({6,20}),false);
  check(!marching_&&destination_==destination&&route_.size()==planned.size(),"Map click while moving did not stop and retain route");
- render();int side=480;click({696+side,212},false);check(scene==Scene::Adventure,"Kingdom icon opened an unrelated window");
+ render();int side=480;click({696+side,212},false);check(scene==Scene::Overview,"Kingdom icon did not open the kingdom overview");key(SDLK_ESCAPE,KMOD_NONE);check(scene==Scene::Adventure,"Kingdom overview did not return to adventure");
  click({728+side,308},false);check(scene==Scene::Options,"Original System Options button is miswired");key(SDLK_ESCAPE,KMOD_NONE);
  key(SDLK_F4,KMOD_NONE);bool entered=(SDL_GetWindowFlags(window_)&SDL_WINDOW_FULLSCREEN_DESKTOP)!=0;
  check(entered,"F4 did not enter desktop fullscreen");render();key(SDLK_F4,KMOD_NONE);check(!(SDL_GetWindowFlags(window_)&SDL_WINDOW_FULLSCREEN_DESKTOP),"F4 did not leave fullscreen");

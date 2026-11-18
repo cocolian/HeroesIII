@@ -11,7 +11,7 @@ namespace {constexpr size_t TextureBudget=128*1024*1024,SourceBudget=32*1024*102
 int Desktop::fontKey(int size)const{return std::max(8,int(std::lround(size*pixelScale_)))*4+(settings_.hdArtwork?1:0)+(settings_.hdArtwork&&size>=18?2:0);}
 TTF_Font*Desktop::font(int size){int key=fontKey(size);if(!fonts_.contains(key)){auto*face=TTF_OpenFont((settings_.hdArtwork&&size>=18?titleFontPath_:fontPath_).c_str(),std::max(8,int(std::lround(size*pixelScale_))));if(!face)throw std::runtime_error(TTF_GetError());TTF_SetFontHinting(face,settings_.hdArtwork?TTF_HINTING_LIGHT:TTF_HINTING_NORMAL);fonts_[key]=face;}return fonts_[key];}
 void Desktop::clearArtworkCache(){for(auto&[key,item]:enhanced_)SDL_DestroyTexture(item.texture);for(auto&[key,item]:artSources_)SDL_FreeSurface(item.surface);enhanced_.clear();artSources_.clear();redrawnMeshes_.clear();enhancedBytes_=sourceBytes_=0;}
-bool Desktop::redrawnBattle(){redrawnBattleDrawn_=redrawnBackground("battle.grass",{0,0,800,556});return redrawnBattleDrawn_;}
+bool Desktop::redrawnBattle(){auto*t=game.tile(game.hero.pos);if(t&&t->terrain!=Terrain::Grass){redrawnBattleDrawn_=false;return false;}redrawnBattleDrawn_=redrawnBackground("battle.grass",{0,0,800,556});return redrawnBattleDrawn_;}
 bool Desktop::redrawnTown(){redrawnTownDrawn_=redrawnBackground("town."+Factions[game.town.faction].key,{0,0,800,374});return redrawnTownDrawn_;}
 SDL_Texture*Desktop::cacheArtwork(const std::string&key,SDL_Surface*surface){
  if(auto found=enhanced_.find(key);found!=enhanced_.end()){found->second.used=++artUse_;return found->second.texture;}

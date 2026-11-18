@@ -45,3 +45,18 @@ for row in rows:
     cpp.append('{"%s",%d,%d,%d,%d},' % (row['animation'], row['frames'], *row['canvas'], row['frameMs']))
 (root / 'native/generated/battle_effects.inc').write_text('\n'.join(cpp) + '\n')
 print('Compiled', len(rows), 'original effects with', sum(row['frames'] for row in rows), 'frame references')
+
+spells=json.loads((root/'data/native/spells.json').read_text())['spells']
+cpp=['// Original timed-spell animation identities and frame canvases.']
+records=[]
+for spell in spells:
+ candidates=spell.get('animation',{}).get('affect',[])if spell['kind']=='Timed'else[]
+ names=[candidate.lower()+(""if candidate.lower().endswith('.def')else'.def')for candidate in candidates if isinstance(candidate,str)]
+ name=next((name for name in names if name in demo['def']),None)
+ if name:
+  asset=demo['def'][name];frames=asset['groups']['0'];w,h=frames[0]['canvas']
+  cpp.append('{"%s",%d,%d,%d,100},'%(name,len(frames),w,h));records.append({'spell':spell['id'],'animation':name,'frames':len(frames),'canvas':[w,h]})
+ else:cpp.append('{nullptr,0,0,0,100},')
+(root/'native/generated/spell_effects.inc').write_text('\n'.join(cpp)+'\n')
+(root/'data/native/spell-effects.json').write_text(json.dumps({'source':'data/native/spells.json','effects':records,'timing':'100 ms per frame; provisional original-executable calibration'},ensure_ascii=False,indent=2)+'\n')
+print('Compiled',len(records),'timed-spell effects')

@@ -27,7 +27,7 @@ def troops(rows):
              'upgradeChance': r.get('upgradeChance', 0)} for r in rows]
 
 
-data = {'banks': {}, 'dwellings': {}, 'bankLayouts': {}, 'battleLayouts': {}}
+data = {'transformerDragons': [u['id'] for u in units if 'SKELETON_TRANSFORMER_TARGET' in u['abilityTypes']], 'banks': {}, 'dwellings': {}, 'bankLayouts': {}, 'battleLayouts': {}}
 for group in source('creatureBanks').values():
     for item in group['types'].values():
         rows = []

@@ -1,0 +1,240 @@
+{
+  "source": "data/native/spells.json",
+  "effects": [
+    {
+      "spell": 2,
+      "animation": "c15spa0.def",
+      "frames": 15,
+      "canvas": [
+        113,
+        106
+      ]
+    },
+    {
+      "spell": 4,
+      "animation": "c13spe0.def",
+      "frames": 16,
+      "canvas": [
+        56,
+        73
+      ]
+    },
+    {
+      "spell": 5,
+      "animation": "c16spe.def",
+      "frames": 22,
+      "canvas": [
+        89,
+        83
+      ]
+    },
+    {
+      "spell": 6,
+      "animation": "c01spw.def",
+      "frames": 20,
+      "canvas": [
+        43,
+        123
+      ]
+    },
+    {
+      "spell": 7,
+      "animation": "c04spw.def",
+      "frames": 21,
+      "canvas": [
+        85,
+        111
+      ]
+    },
+    {
+      "spell": 20,
+      "animation": "c01spa0.def",
+      "frames": 15,
+      "canvas": [
+        88,
+        81
+      ]
+    },
+    {
+      "spell": 21,
+      "animation": "c05spf0.def",
+      "frames": 10,
+      "canvas": [
+        75,
+        62
+      ]
+    },
+    {
+      "spell": 22,
+      "animation": "c11spe0.def",
+      "frames": 16,
+      "canvas": [
+        82,
+        100
+      ]
+    },
+    {
+      "spell": 23,
+      "animation": "c11spw0.def",
+      "frames": 16,
+      "canvas": [
+        76,
+        99
+      ]
+    },
+    {
+      "spell": 24,
+      "animation": "c11spf0.def",
+      "frames": 15,
+      "canvas": [
+        100,
+        100
+      ]
+    },
+    {
+      "spell": 25,
+      "animation": "c13spa0.def",
+      "frames": 16,
+      "canvas": [
+        80,
+        100
+      ]
+    },
+    {
+      "spell": 26,
+      "animation": "c02spe0.def",
+      "frames": 16,
+      "canvas": [
+        94,
+        126
+      ]
+    },
+    {
+      "spell": 28,
+      "animation": "c12spa0.def",
+      "frames": 20,
+      "canvas": [
+        76,
+        75
+      ]
+    },
+    {
+      "spell": 29,
+      "animation": "c17spw0.def",
+      "frames": 20,
+      "canvas": [
+        97,
+        114
+      ]
+    },
+    {
+      "spell": 32,
+      "animation": "c04spa0.def",
+      "frames": 16,
+      "canvas": [
+        84,
+        100
+      ]
+    },
+    {
+      "spell": 33,
+      "animation": "c06spw.def",
+      "frames": 15,
+      "canvas": [
+        119,
+        75
+      ]
+    },
+    {
+      "spell": 50,
+      "animation": "c02spa0.def",
+      "frames": 10,
+      "canvas": [
+        93,
+        88
+      ]
+    },
+    {
+      "spell": 54,
+      "animation": "c09spw0.def",
+      "frames": 20,
+      "canvas": [
+        94,
+        127
+      ]
+    },
+    {
+      "spell": 55,
+      "animation": "c14spe0.def",
+      "frames": 20,
+      "canvas": [
+        90,
+        125
+      ]
+    },
+    {
+      "spell": 56,
+      "animation": "c09spa0.def",
+      "frames": 15,
+      "canvas": [
+        50,
+        97
+      ]
+    },
+    {
+      "spell": 57,
+      "animation": "c10spf0.def",
+      "frames": 15,
+      "canvas": [
+        51,
+        96
+      ]
+    },
+    {
+      "spell": 58,
+      "animation": "c13spw0.def",
+      "frames": 18,
+      "canvas": [
+        80,
+        100
+      ]
+    },
+    {
+      "spell": 59,
+      "animation": "c08spf0.def",
+      "frames": 18,
+      "canvas": [
+        86,
+        97
+      ]
+    },
+    {
+      "spell": 60,
+      "animation": "c01spf.def",
+      "frames": 12,
+      "canvas": [
+        61,
+        99
+      ]
+    },
+    {
+      "spell": 61,
+      "animation": "c10spa0.def",
+      "frames": 19,
+      "canvas": [
+        99,
+        90
+      ]
+    },
+    {
+      "spell": 62,
+      "animation": "c02spf0.def",
+      "frames": 15,
+      "canvas": [
+        125,
+        123
+      ]
+    }
+  ],
+  "timing": "100 ms per frame; provisional original-executable calibration"
+}

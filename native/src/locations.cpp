@@ -48,7 +48,7 @@ std::optional<std::string> Game::visitLocation(int id){auto*o=objectById(id);if(
  else if(cls==22||cls==29||cls==39||cls==86||cls==105||cls==108)text=locations::pickup(*this,id);
  else if(cls==13||cls==15||cls==27||cls==37||cls==58||cls==60)text=locations::scout(*this,id);
  else if(cls==4||cls==47||cls==81||cls==102||cls==104||cls==107||cls==113)text=locations::training(*this,id);
- else text=locations::service(*this,id);
+ else{text=locations::service(*this,id);if(auto*site=objectById(id))site->visited=true;}
  if(objectById(id))locationNotice(id,text);if(actingOwner>0&&objectById(id))autoVisitLocation(id);checkScenarioVictory();return text;
 }
 std::vector<LocationOffer> Game::locationOffers(int id)const{auto at=std::find_if(objects.begin(),objects.end(),[id](auto&o){return o.id==id;});if(at==objects.end()||!extendedLocation(at->sourceClass))return {};const auto&o=*at;
@@ -65,7 +65,7 @@ std::string Game::locationAction(int id,LocationAction action,int parameter,int 
  initializeLocation(id);auto offers=locationOffers(id);auto at=std::find_if(offers.begin(),offers.end(),[&](auto&offer){return offer.action==action&&offer.parameter==parameter;});
  if(at==offers.end()||!at->enabled||amount<1||amount>at->maximum)return "当前选择已失效，请重新选择。";
  auto offer=*at;Resources cost{};for(int r=0;r<ResourceCount;++r){int64_t n=int64_t(offer.cost[r])*amount;if(n>1000000000||n<0)return "数量超出交易范围。";cost[r]=int(n);}if(!canAfford(cost))return "资源不足，无法完成这项交易。";
- if(action==LocationAction::Fight){adventureVisit_.reset();if(const auto*guard=guardingMonster(o->pos)){startBattle(guard->id);if(battle)battle->deferredVisitId=id;}else startBattle(id);return "守卫迎战！";}
+ if(action==LocationAction::Fight){adventureVisit_.reset();if(const auto*guard=guardingMonster(o->pos)){return encounterMonster(guard->id,id);}else startBattle(id);return "守卫迎战！";}
  std::string response;
  if(action==LocationAction::Claim){if(o->sourceClass==108){o->properties["locationSearchAccepted"]=true;response=locations::pickup(*this,id);}else response=locations::bank(*this,id);}
  else if(action==LocationAction::Hire)response=locations::hire(*this,*o,offer,amount);
@@ -77,9 +77,9 @@ void Game::locationBattleWon(int id){if(auto*o=objectById(id);o&&extendedLocatio
 bool Game::sanctuaryProtected(int heroId)const{auto at=heroes.find(heroId);Point pos=heroId==activeHeroId?hero.pos:at==heroes.end()?Point{-999,-999}:at->second.value.pos;int level=heroId==activeHeroId?mapLevel:at==heroes.end()?-1:at->second.level;return std::any_of(objects.begin(),objects.end(),[&](auto&o){return o.sourceClass==80&&o.level==level&&o.pos==pos;});}
 void Game::locationNewDay(){for(size_t i=0;i<objects.size();++i)if(dwellingLocation(objects[i].sourceClass))initializeLocation(objects[i].id);}
 bool Game::canVisitLocation(const Object&o)const{return o.level==mapLevel&&(o.visitableAt(hero.pos)||((bankLocation(o.sourceClass)||dwellingLocation(o.sourceClass))&&std::max(std::abs(o.pos.x-hero.pos.x),std::abs(o.pos.y-hero.pos.y))==1&&canStep(hero.pos,o.pos)));}
-bool Game::locationBlocksPassage(const Object&o)const{return o.type==ObjectType::Site&&((bankLocation(o.sourceClass)&&(!o.properties.is_object()||!o.properties.value("locationCleared",false)))||(dwellingLocation(o.sourceClass)&&o.owner!=currentOwner()&&armyCount(o.army)>0));}
+bool Game::locationBlocksPassage(const Object&o)const{if(o.type!=ObjectType::Monster&&o.type!=ObjectType::EnemyHero&&o.type!=ObjectType::MapEvent&&o.owner!=currentOwner()&&armyCount(o.army)>0)return true;return o.type==ObjectType::Site&&((bankLocation(o.sourceClass)&&(!o.properties.is_object()||!o.properties.value("locationCleared",false)))||(dwellingLocation(o.sourceClass)&&o.owner!=currentOwner()&&armyCount(o.army)>0));}
 int Game::externalDwellingGrowth(int faction,int tier,int owner)const{int count=0;for(const auto&o:objects)if(o.owner==owner&&dwellingLocation(o.sourceClass)&&o.properties.is_object())for(int unit:o.properties.value("locationUnits",std::vector<int>{}))if(unit>=0&&unit<CreatureUnitCount&&Units[unit].faction==faction&&Units[unit].tier==tier)++count;return count;}
-void Game::autoVisitLocation(int id){if(battle||report||result||!hero.levelChoices.empty())return;auto*o=objectById(id);if(!o)return;
+void Game::autoVisitLocation(int id){if(battle||report||result||!hero.levelChoices.empty())return;auto*o=objectById(id);if(!o)return;if(canVisitLocation(*o)&&std::find(hero.aiVisitedSites.begin(),hero.aiVisitedSites.end(),id)==hero.aiVisitedSites.end())hero.aiVisitedSites.push_back(id);
  auto offers=locationOffers(id);if(offers.empty())return;
  if(offers.front().action==LocationAction::Fight){if(armyPower(hero.army)>armyPower(o->army)*1.4)locationAction(id,LocationAction::Fight);return;}
  // Computer kingdoms make useful visits without sacrificing their main army or artifacts.

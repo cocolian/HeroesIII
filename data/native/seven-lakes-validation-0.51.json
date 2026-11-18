@@ -1,0 +1,8423 @@
+{
+  "battles": [
+    {
+      "actions": 12,
+      "computerAttack": false,
+      "day": 10,
+      "exitType": 0,
+      "hero": 6739,
+      "target": 1127,
+      "won": true
+    },
+    {
+      "actions": 22,
+      "computerAttack": false,
+      "day": 17,
+      "exitType": 0,
+      "hero": 6739,
+      "target": 1125,
+      "won": true
+    },
+    {
+      "actions": 23,
+      "computerAttack": false,
+      "day": 18,
+      "exitType": 0,
+      "hero": 6739,
+      "target": 1451,
+      "won": true
+    },
+    {
+      "actions": 18,
+      "computerAttack": false,
+      "day": 19,
+      "exitType": 0,
+      "hero": 6739,
+      "target": 1467,
+      "won": true
+    },
+    {
+      "actions": 23,
+      "computerAttack": false,
+      "day": 20,
+      "exitType": 0,
+      "hero": 6739,
+      "target": 1469,
+      "won": true
+    },
+    {
+      "actions": 25,
+      "computerAttack": false,
+      "day": 29,
+      "exitType": 0,
+      "hero": 6739,
+      "target": 2452,
+      "won": true
+    },
+    {
+      "actions": 6,
+      "computerAttack": false,
+      "day": 29,
+      "exitType": 0,
+      "hero": 6739,
+      "target": 2454,
+      "won": true
+    },
+    {
+      "actions": 12,
+      "computerAttack": false,
+      "day": 34,
+      "exitType": 0,
+      "hero": 6739,
+      "target": 1475,
+      "won": true
+    },
+    {
+      "actions": 8,
+      "computerAttack": false,
+      "day": 34,
+      "exitType": 0,
+      "hero": 6739,
+      "target": 1573,
+      "won": true
+    },
+    {
+      "actions": 16,
+      "computerAttack": false,
+      "day": 36,
+      "exitType": 0,
+      "hero": 6739,
+      "target": 1492,
+      "won": true
+    },
+    {
+      "actions": 9,
+      "computerAttack": false,
+      "day": 36,
+      "exitType": 0,
+      "hero": 6739,
+      "target": 970,
+      "won": true
+    },
+    {
+      "actions": 11,
+      "computerAttack": false,
+      "day": 37,
+      "exitType": 0,
+      "hero": 6739,
+      "target": 975,
+      "won": true
+    },
+    {
+      "actions": 3,
+      "computerAttack": false,
+      "day": 37,
+      "exitType": 0,
+      "hero": 6739,
+      "target": 951,
+      "won": true
+    },
+    {
+      "actions": 20,
+      "computerAttack": false,
+      "day": 39,
+      "exitType": 0,
+      "hero": 6739,
+      "target": 995,
+      "won": true
+    },
+    {
+      "actions": 8,
+      "computerAttack": false,
+      "day": 39,
+      "exitType": 0,
+      "hero": 6739,
+      "target": 994,
+      "won": true
+    },
+    {
+      "actions": 23,
+      "computerAttack": false,
+      "day": 40,
+      "exitType": 0,
+      "hero": 6739,
+      "target": 3346,
+      "won": true
+    },
+    {
+      "actions": 15,
+      "computerAttack": false,
+      "day": 40,
+      "exitType": 0,
+      "hero": 6739,
+      "target": 3225,
+      "won": true
+    },
+    {
+      "actions": 20,
+      "computerAttack": false,
+      "day": 45,
+      "exitType": 0,
+      "hero": 6739,
+      "target": 5052,
+      "won": true
+    },
+    {
+      "actions": 21,
+      "computerAttack": false,
+      "day": 45,
+      "exitType": 0,
+      "hero": 6739,
+      "target": 5053,
+      "won": true
+    },
+    {
+      "actions": 49,
+      "computerAttack": false,
+      "day": 55,
+      "exitType": 0,
+      "hero": 6739,
+      "target": 1610,
+      "won": true
+    },
+    {
+      "actions": 9,
+      "computerAttack": false,
+      "day": 59,
+      "exitType": 0,
+      "hero": 6739,
+      "target": 1491,
+      "won": true
+    },
+    {
+      "actions": 49,
+      "computerAttack": false,
+      "day": 59,
+      "exitType": 0,
+      "hero": 6739,
+      "target": 1223,
+      "won": true
+    },
+    {
+      "actions": 33,
+      "computerAttack": false,
+      "day": 70,
+      "exitType": 0,
+      "hero": 6780,
+      "target": 1097,
+      "won": true
+    },
+    {
+      "actions": 6,
+      "computerAttack": false,
+      "day": 76,
+      "exitType": 0,
+      "hero": 6780,
+      "target": 1138,
+      "won": true
+    },
+    {
+      "actions": 9,
+      "computerAttack": false,
+      "day": 77,
+      "exitType": 0,
+      "hero": 6783,
+      "target": 1478,
+      "won": true
+    },
+    {
+      "actions": 5,
+      "computerAttack": false,
+      "day": 80,
+      "exitType": 0,
+      "hero": 6783,
+      "target": 1519,
+      "won": true
+    },
+    {
+      "actions": 55,
+      "computerAttack": false,
+      "day": 82,
+      "exitType": 0,
+      "hero": 6783,
+      "target": 6740,
+      "won": true
+    },
+    {
+      "actions": 23,
+      "computerAttack": false,
+      "day": 83,
+      "exitType": 0,
+      "hero": 6783,
+      "target": 976,
+      "won": true
+    },
+    {
+      "actions": 4,
+      "computerAttack": false,
+      "day": 84,
+      "exitType": 0,
+      "hero": 6783,
+      "target": 1519,
+      "won": true
+    },
+    {
+      "actions": 4,
+      "computerAttack": false,
+      "day": 92,
+      "exitType": 0,
+      "hero": 6780,
+      "target": 3051,
+      "won": true
+    },
+    {
+      "actions": 14,
+      "computerAttack": false,
+      "day": 94,
+      "exitType": 0,
+      "hero": 6780,
+      "target": 3050,
+      "won": true
+    },
+    {
+      "actions": 6,
+      "computerAttack": false,
+      "day": 96,
+      "exitType": 0,
+      "hero": 6780,
+      "target": 975,
+      "won": true
+    },
+    {
+      "actions": 34,
+      "computerAttack": false,
+      "day": 108,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1519,
+      "won": true
+    },
+    {
+      "actions": 14,
+      "computerAttack": false,
+      "day": 111,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1138,
+      "won": true
+    },
+    {
+      "actions": 8,
+      "computerAttack": false,
+      "day": 112,
+      "exitType": 0,
+      "hero": 6780,
+      "target": 975,
+      "won": true
+    },
+    {
+      "actions": 12,
+      "computerAttack": false,
+      "day": 118,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 556,
+      "won": true
+    },
+    {
+      "actions": 13,
+      "computerAttack": false,
+      "day": 123,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1031,
+      "won": true
+    },
+    {
+      "actions": 5,
+      "computerAttack": false,
+      "day": 124,
+      "exitType": 0,
+      "hero": 6780,
+      "target": 1576,
+      "won": true
+    },
+    {
+      "actions": 1,
+      "computerAttack": false,
+      "day": 124,
+      "exitType": 0,
+      "hero": 6780,
+      "target": 1573,
+      "won": true
+    },
+    {
+      "actions": 6,
+      "computerAttack": false,
+      "day": 131,
+      "exitType": 0,
+      "hero": 6780,
+      "target": 1138,
+      "won": true
+    },
+    {
+      "actions": 13,
+      "computerAttack": false,
+      "day": 133,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1462,
+      "won": true
+    },
+    {
+      "actions": 22,
+      "computerAttack": false,
+      "day": 136,
+      "exitType": 0,
+      "hero": 6780,
+      "target": 855,
+      "won": true
+    },
+    {
+      "actions": 14,
+      "computerAttack": false,
+      "day": 137,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 568,
+      "won": true
+    },
+    {
+      "actions": 9,
+      "computerAttack": false,
+      "day": 142,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 831,
+      "won": true
+    },
+    {
+      "actions": 17,
+      "computerAttack": false,
+      "day": 143,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 4957,
+      "won": true
+    },
+    {
+      "actions": 26,
+      "computerAttack": false,
+      "day": 146,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1519,
+      "won": true
+    },
+    {
+      "actions": 23,
+      "computerAttack": false,
+      "day": 149,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6807,
+      "won": true
+    },
+    {
+      "actions": 4,
+      "computerAttack": false,
+      "day": 155,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1768,
+      "won": true
+    },
+    {
+      "actions": 5,
+      "computerAttack": false,
+      "day": 155,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1774,
+      "won": true
+    },
+    {
+      "actions": 5,
+      "computerAttack": false,
+      "day": 155,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1787,
+      "won": true
+    },
+    {
+      "actions": 17,
+      "computerAttack": false,
+      "day": 158,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1138,
+      "won": true
+    },
+    {
+      "actions": 31,
+      "computerAttack": false,
+      "day": 160,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1031,
+      "won": true
+    },
+    {
+      "actions": 30,
+      "computerAttack": false,
+      "day": 164,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 568,
+      "won": true
+    },
+    {
+      "actions": 7,
+      "computerAttack": false,
+      "day": 166,
+      "exitType": 0,
+      "hero": 6819,
+      "target": 471,
+      "won": true
+    },
+    {
+      "actions": 29,
+      "computerAttack": false,
+      "day": 167,
+      "exitType": 0,
+      "hero": 6819,
+      "target": 598,
+      "won": true
+    },
+    {
+      "actions": 20,
+      "computerAttack": false,
+      "day": 170,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1519,
+      "won": true
+    },
+    {
+      "actions": 9,
+      "computerAttack": false,
+      "day": 178,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1852,
+      "won": true
+    },
+    {
+      "actions": 18,
+      "computerAttack": false,
+      "day": 181,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1138,
+      "won": true
+    },
+    {
+      "actions": 84,
+      "computerAttack": false,
+      "day": 182,
+      "exitType": 0,
+      "hero": 6819,
+      "target": 1031,
+      "won": true
+    },
+    {
+      "actions": 29,
+      "computerAttack": false,
+      "day": 184,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 568,
+      "won": true
+    },
+    {
+      "actions": 18,
+      "computerAttack": false,
+      "day": 190,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1519,
+      "won": true
+    },
+    {
+      "actions": 10,
+      "computerAttack": false,
+      "day": 190,
+      "exitType": 0,
+      "hero": 6819,
+      "target": 975,
+      "won": true
+    },
+    {
+      "actions": 5,
+      "computerAttack": false,
+      "day": 191,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1576,
+      "won": true
+    },
+    {
+      "actions": 5,
+      "computerAttack": false,
+      "day": 191,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1573,
+      "won": true
+    },
+    {
+      "actions": 20,
+      "computerAttack": false,
+      "day": 204,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6826,
+      "won": true
+    },
+    {
+      "actions": 5,
+      "computerAttack": false,
+      "day": 204,
+      "exitType": 0,
+      "hero": 6819,
+      "target": 3225,
+      "won": true
+    },
+    {
+      "actions": 16,
+      "computerAttack": false,
+      "day": 207,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1138,
+      "won": true
+    },
+    {
+      "actions": 25,
+      "computerAttack": false,
+      "day": 208,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1031,
+      "won": true
+    },
+    {
+      "actions": 27,
+      "computerAttack": false,
+      "day": 209,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 568,
+      "won": true
+    },
+    {
+      "actions": 5,
+      "computerAttack": false,
+      "day": 213,
+      "exitType": 0,
+      "hero": 6842,
+      "target": 1491,
+      "won": true
+    },
+    {
+      "actions": 22,
+      "computerAttack": false,
+      "day": 223,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1031,
+      "won": true
+    },
+    {
+      "actions": 26,
+      "computerAttack": false,
+      "day": 225,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 568,
+      "won": true
+    },
+    {
+      "actions": 36,
+      "computerAttack": false,
+      "day": 225,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6768,
+      "won": true
+    },
+    {
+      "actions": 4,
+      "computerAttack": false,
+      "day": 232,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1768,
+      "won": true
+    },
+    {
+      "actions": 3,
+      "computerAttack": false,
+      "day": 233,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1774,
+      "won": true
+    },
+    {
+      "actions": 5,
+      "computerAttack": false,
+      "day": 233,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1787,
+      "won": true
+    },
+    {
+      "actions": 23,
+      "computerAttack": false,
+      "day": 236,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1519,
+      "won": true
+    },
+    {
+      "actions": 18,
+      "computerAttack": false,
+      "day": 238,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6850,
+      "won": true
+    },
+    {
+      "actions": 4,
+      "computerAttack": false,
+      "day": 239,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 975,
+      "won": true
+    },
+    {
+      "actions": 18,
+      "computerAttack": false,
+      "day": 243,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 568,
+      "won": true
+    },
+    {
+      "actions": 23,
+      "computerAttack": false,
+      "day": 244,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1031,
+      "won": true
+    },
+    {
+      "actions": 7,
+      "computerAttack": false,
+      "day": 245,
+      "exitType": 0,
+      "hero": 6852,
+      "target": 3225,
+      "won": true
+    },
+    {
+      "actions": 16,
+      "computerAttack": false,
+      "day": 246,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1138,
+      "won": true
+    },
+    {
+      "actions": 17,
+      "computerAttack": false,
+      "day": 248,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1519,
+      "won": true
+    },
+    {
+      "actions": 16,
+      "computerAttack": false,
+      "day": 260,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1519,
+      "won": true
+    },
+    {
+      "actions": 1,
+      "computerAttack": false,
+      "day": 260,
+      "exitType": 0,
+      "hero": 6861,
+      "target": 1573,
+      "won": true
+    },
+    {
+      "actions": 25,
+      "computerAttack": false,
+      "day": 261,
+      "exitType": 0,
+      "hero": 6861,
+      "target": 1138,
+      "won": true
+    },
+    {
+      "actions": 3,
+      "computerAttack": false,
+      "day": 265,
+      "exitType": 0,
+      "hero": 6861,
+      "target": 1576,
+      "won": true
+    },
+    {
+      "actions": 22,
+      "computerAttack": false,
+      "day": 271,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1031,
+      "won": true
+    },
+    {
+      "actions": 22,
+      "computerAttack": false,
+      "day": 273,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 568,
+      "won": true
+    },
+    {
+      "actions": 18,
+      "computerAttack": false,
+      "day": 278,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1519,
+      "won": true
+    },
+    {
+      "actions": 18,
+      "computerAttack": false,
+      "day": 280,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1138,
+      "won": true
+    },
+    {
+      "actions": 4,
+      "computerAttack": false,
+      "day": 289,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1768,
+      "won": true
+    },
+    {
+      "actions": 3,
+      "computerAttack": false,
+      "day": 289,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1774,
+      "won": true
+    },
+    {
+      "actions": 5,
+      "computerAttack": false,
+      "day": 289,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1787,
+      "won": true
+    },
+    {
+      "actions": 18,
+      "computerAttack": false,
+      "day": 304,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1138,
+      "won": true
+    },
+    {
+      "actions": 23,
+      "computerAttack": false,
+      "day": 305,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1031,
+      "won": true
+    },
+    {
+      "actions": 27,
+      "computerAttack": false,
+      "day": 306,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 568,
+      "won": true
+    },
+    {
+      "actions": 25,
+      "computerAttack": false,
+      "day": 318,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1519,
+      "won": true
+    },
+    {
+      "actions": 30,
+      "computerAttack": false,
+      "day": 318,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6863,
+      "won": true
+    },
+    {
+      "actions": 1,
+      "computerAttack": false,
+      "day": 318,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 1573,
+      "won": true
+    },
+    {
+      "actions": 5,
+      "computerAttack": false,
+      "day": 322,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1576,
+      "won": true
+    },
+    {
+      "actions": 8,
+      "computerAttack": false,
+      "day": 326,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 975,
+      "won": true
+    },
+    {
+      "actions": 23,
+      "computerAttack": false,
+      "day": 327,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 568,
+      "won": true
+    },
+    {
+      "actions": 23,
+      "computerAttack": false,
+      "day": 328,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1031,
+      "won": true
+    },
+    {
+      "actions": 31,
+      "computerAttack": false,
+      "day": 329,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6805,
+      "won": true
+    },
+    {
+      "actions": 23,
+      "computerAttack": false,
+      "day": 330,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1138,
+      "won": true
+    },
+    {
+      "actions": 22,
+      "computerAttack": false,
+      "day": 332,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1519,
+      "won": true
+    },
+    {
+      "actions": 22,
+      "computerAttack": false,
+      "day": 337,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1138,
+      "won": true
+    },
+    {
+      "actions": 3,
+      "computerAttack": false,
+      "day": 340,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1491,
+      "won": true
+    },
+    {
+      "actions": 2,
+      "computerAttack": false,
+      "day": 341,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1350,
+      "won": true
+    },
+    {
+      "actions": 25,
+      "computerAttack": false,
+      "day": 344,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 1519,
+      "won": true
+    },
+    {
+      "actions": 33,
+      "computerAttack": false,
+      "day": 345,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6867,
+      "won": true
+    },
+    {
+      "actions": 20,
+      "computerAttack": false,
+      "day": 350,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1031,
+      "won": true
+    },
+    {
+      "actions": 30,
+      "computerAttack": false,
+      "day": 350,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 1138,
+      "won": true
+    },
+    {
+      "actions": 18,
+      "computerAttack": false,
+      "day": 352,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 568,
+      "won": true
+    },
+    {
+      "actions": 6,
+      "computerAttack": false,
+      "day": 355,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 490,
+      "won": true
+    },
+    {
+      "actions": 18,
+      "computerAttack": false,
+      "day": 356,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 416,
+      "won": true
+    },
+    {
+      "actions": 17,
+      "computerAttack": false,
+      "day": 361,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1138,
+      "won": true
+    },
+    {
+      "actions": 2,
+      "computerAttack": false,
+      "day": 364,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 471,
+      "won": true
+    },
+    {
+      "actions": 35,
+      "computerAttack": false,
+      "day": 367,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 1138,
+      "won": true
+    },
+    {
+      "actions": 18,
+      "computerAttack": false,
+      "day": 373,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1519,
+      "won": true
+    },
+    {
+      "actions": 16,
+      "computerAttack": false,
+      "day": 376,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1138,
+      "won": true
+    },
+    {
+      "actions": 2,
+      "computerAttack": false,
+      "day": 377,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1031,
+      "won": true
+    },
+    {
+      "actions": 23,
+      "computerAttack": false,
+      "day": 379,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 416,
+      "won": true
+    },
+    {
+      "actions": 18,
+      "computerAttack": false,
+      "day": 382,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 568,
+      "won": true
+    },
+    {
+      "actions": 38,
+      "computerAttack": false,
+      "day": 387,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6888,
+      "won": true
+    },
+    {
+      "actions": 25,
+      "computerAttack": false,
+      "day": 388,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1519,
+      "won": true
+    },
+    {
+      "actions": 16,
+      "computerAttack": false,
+      "day": 390,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1138,
+      "won": true
+    },
+    {
+      "actions": 21,
+      "computerAttack": false,
+      "day": 392,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1031,
+      "won": true
+    },
+    {
+      "actions": 19,
+      "computerAttack": false,
+      "day": 393,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 568,
+      "won": true
+    },
+    {
+      "actions": 23,
+      "computerAttack": false,
+      "day": 396,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 416,
+      "won": true
+    },
+    {
+      "actions": 24,
+      "computerAttack": false,
+      "day": 398,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6886,
+      "won": true
+    },
+    {
+      "actions": 12,
+      "computerAttack": false,
+      "day": 404,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6911,
+      "won": true
+    },
+    {
+      "actions": 7,
+      "computerAttack": false,
+      "day": 405,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6914,
+      "won": true
+    },
+    {
+      "actions": 9,
+      "computerAttack": false,
+      "day": 412,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6914,
+      "won": true
+    },
+    {
+      "actions": 10,
+      "computerAttack": false,
+      "day": 412,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 1946,
+      "won": true
+    },
+    {
+      "actions": 10,
+      "computerAttack": false,
+      "day": 414,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 1948,
+      "won": true
+    },
+    {
+      "actions": 29,
+      "computerAttack": false,
+      "day": 417,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 1138,
+      "won": true
+    },
+    {
+      "actions": 33,
+      "computerAttack": false,
+      "day": 420,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6893,
+      "won": true
+    },
+    {
+      "actions": 24,
+      "computerAttack": false,
+      "day": 422,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 371,
+      "won": true
+    },
+    {
+      "actions": 6,
+      "computerAttack": false,
+      "day": 423,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 773,
+      "won": true
+    },
+    {
+      "actions": 10,
+      "computerAttack": false,
+      "day": 424,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6914,
+      "won": true
+    },
+    {
+      "actions": 31,
+      "computerAttack": false,
+      "day": 427,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6904,
+      "won": true
+    },
+    {
+      "actions": 21,
+      "computerAttack": false,
+      "day": 427,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1138,
+      "won": true
+    },
+    {
+      "actions": 9,
+      "computerAttack": false,
+      "day": 430,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1768,
+      "won": true
+    },
+    {
+      "actions": 3,
+      "computerAttack": false,
+      "day": 430,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1774,
+      "won": true
+    },
+    {
+      "actions": 1,
+      "computerAttack": false,
+      "day": 430,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 1787,
+      "won": true
+    },
+    {
+      "actions": 24,
+      "computerAttack": false,
+      "day": 436,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 416,
+      "won": true
+    },
+    {
+      "actions": 2,
+      "computerAttack": false,
+      "day": 437,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 490,
+      "won": true
+    },
+    {
+      "actions": 23,
+      "computerAttack": false,
+      "day": 438,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 371,
+      "won": true
+    },
+    {
+      "actions": 22,
+      "computerAttack": false,
+      "day": 443,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1031,
+      "won": true
+    },
+    {
+      "actions": 22,
+      "computerAttack": false,
+      "day": 445,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 568,
+      "won": true
+    },
+    {
+      "actions": 51,
+      "computerAttack": false,
+      "day": 448,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6743,
+      "won": true
+    },
+    {
+      "actions": 23,
+      "computerAttack": false,
+      "day": 454,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6922,
+      "won": true
+    },
+    {
+      "actions": 25,
+      "computerAttack": false,
+      "day": 459,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1031,
+      "won": true
+    },
+    {
+      "actions": 1,
+      "computerAttack": false,
+      "day": 460,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 568,
+      "won": true
+    },
+    {
+      "actions": 32,
+      "computerAttack": false,
+      "day": 463,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6916,
+      "won": true
+    },
+    {
+      "actions": 25,
+      "computerAttack": false,
+      "day": 466,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1362,
+      "won": true
+    },
+    {
+      "actions": 1,
+      "computerAttack": false,
+      "day": 472,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1576,
+      "won": true
+    },
+    {
+      "actions": 1,
+      "computerAttack": false,
+      "day": 472,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1573,
+      "won": true
+    },
+    {
+      "actions": 3,
+      "computerAttack": false,
+      "day": 472,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 975,
+      "won": true
+    },
+    {
+      "actions": 3,
+      "computerAttack": false,
+      "day": 472,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 5053,
+      "won": true
+    },
+    {
+      "actions": 1,
+      "computerAttack": false,
+      "day": 478,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1768,
+      "won": true
+    },
+    {
+      "actions": 1,
+      "computerAttack": false,
+      "day": 478,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1774,
+      "won": true
+    },
+    {
+      "actions": 1,
+      "computerAttack": false,
+      "day": 479,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 1787,
+      "won": true
+    },
+    {
+      "actions": 3,
+      "computerAttack": false,
+      "day": 482,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 3150,
+      "won": true
+    },
+    {
+      "actions": 21,
+      "computerAttack": false,
+      "day": 483,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 36,
+      "won": true
+    },
+    {
+      "actions": 29,
+      "computerAttack": false,
+      "day": 485,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6930,
+      "won": true
+    },
+    {
+      "actions": 1,
+      "computerAttack": false,
+      "day": 489,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 319,
+      "won": true
+    },
+    {
+      "actions": 45,
+      "computerAttack": false,
+      "day": 490,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 2163,
+      "won": true
+    },
+    {
+      "actions": 24,
+      "computerAttack": false,
+      "day": 491,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 2104,
+      "won": true
+    },
+    {
+      "actions": 10,
+      "computerAttack": false,
+      "day": 493,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6921,
+      "won": true
+    },
+    {
+      "actions": 51,
+      "computerAttack": false,
+      "day": 501,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6942,
+      "won": true
+    },
+    {
+      "actions": 38,
+      "computerAttack": false,
+      "day": 505,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 66,
+      "won": true
+    },
+    {
+      "actions": 23,
+      "computerAttack": false,
+      "day": 506,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6952,
+      "won": true
+    },
+    {
+      "actions": 7,
+      "computerAttack": false,
+      "day": 510,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 3986,
+      "won": true
+    },
+    {
+      "actions": 3,
+      "computerAttack": false,
+      "day": 511,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6700,
+      "won": true
+    },
+    {
+      "actions": 2,
+      "computerAttack": false,
+      "day": 511,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 1414,
+      "won": true
+    },
+    {
+      "actions": 8,
+      "computerAttack": false,
+      "day": 512,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 3480,
+      "won": true
+    },
+    {
+      "actions": 4,
+      "computerAttack": false,
+      "day": 514,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 789,
+      "won": true
+    },
+    {
+      "actions": 8,
+      "computerAttack": false,
+      "day": 515,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 3827,
+      "won": true
+    },
+    {
+      "actions": 9,
+      "computerAttack": false,
+      "day": 516,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 3820,
+      "won": true
+    },
+    {
+      "actions": 8,
+      "computerAttack": false,
+      "day": 516,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 3826,
+      "won": true
+    },
+    {
+      "actions": 8,
+      "computerAttack": false,
+      "day": 517,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 3821,
+      "won": true
+    },
+    {
+      "actions": 25,
+      "computerAttack": false,
+      "day": 518,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 3549,
+      "won": true
+    },
+    {
+      "actions": 9,
+      "computerAttack": false,
+      "day": 523,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 3809,
+      "won": true
+    },
+    {
+      "actions": 33,
+      "computerAttack": false,
+      "day": 524,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 2832,
+      "won": true
+    },
+    {
+      "actions": 25,
+      "computerAttack": false,
+      "day": 526,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 3549,
+      "won": true
+    },
+    {
+      "actions": 8,
+      "computerAttack": false,
+      "day": 528,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 3780,
+      "won": true
+    },
+    {
+      "actions": 3,
+      "computerAttack": false,
+      "day": 528,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 3781,
+      "won": true
+    },
+    {
+      "actions": 35,
+      "computerAttack": false,
+      "day": 530,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6945,
+      "won": true
+    },
+    {
+      "actions": 9,
+      "computerAttack": false,
+      "day": 531,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6959,
+      "won": true
+    },
+    {
+      "actions": 23,
+      "computerAttack": false,
+      "day": 531,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 3548,
+      "won": true
+    },
+    {
+      "actions": 31,
+      "computerAttack": false,
+      "day": 532,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6954,
+      "won": true
+    },
+    {
+      "actions": 110,
+      "computerAttack": false,
+      "day": 535,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 1407,
+      "won": true
+    },
+    {
+      "actions": 24,
+      "computerAttack": false,
+      "day": 537,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6693,
+      "won": true
+    },
+    {
+      "actions": 7,
+      "computerAttack": false,
+      "day": 538,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6719,
+      "won": true
+    },
+    {
+      "actions": 21,
+      "computerAttack": false,
+      "day": 538,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6722,
+      "won": true
+    },
+    {
+      "actions": 9,
+      "computerAttack": false,
+      "day": 538,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 4130,
+      "won": true
+    },
+    {
+      "actions": 15,
+      "computerAttack": false,
+      "day": 538,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 4242,
+      "won": true
+    },
+    {
+      "actions": 11,
+      "computerAttack": false,
+      "day": 538,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 4260,
+      "won": true
+    },
+    {
+      "actions": 14,
+      "computerAttack": false,
+      "day": 539,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 4262,
+      "won": true
+    },
+    {
+      "actions": 42,
+      "computerAttack": false,
+      "day": 539,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 1061,
+      "won": true
+    },
+    {
+      "actions": 2,
+      "computerAttack": false,
+      "day": 543,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 3225,
+      "won": true
+    },
+    {
+      "actions": 27,
+      "computerAttack": false,
+      "day": 544,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6959,
+      "won": true
+    },
+    {
+      "actions": 19,
+      "computerAttack": false,
+      "day": 546,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6694,
+      "won": true
+    },
+    {
+      "actions": 29,
+      "computerAttack": false,
+      "day": 548,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 4130,
+      "won": true
+    },
+    {
+      "actions": 2,
+      "computerAttack": false,
+      "day": 548,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 1381,
+      "won": true
+    },
+    {
+      "actions": 21,
+      "computerAttack": false,
+      "day": 549,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6961,
+      "won": true
+    },
+    {
+      "actions": 6,
+      "computerAttack": false,
+      "day": 549,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6719,
+      "won": true
+    },
+    {
+      "actions": 53,
+      "computerAttack": false,
+      "day": 550,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 1443,
+      "won": true
+    },
+    {
+      "actions": 2,
+      "computerAttack": false,
+      "day": 550,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 1448,
+      "won": true
+    },
+    {
+      "actions": 22,
+      "computerAttack": false,
+      "day": 552,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6960,
+      "won": true
+    },
+    {
+      "actions": 12,
+      "computerAttack": false,
+      "day": 552,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 457,
+      "won": true
+    },
+    {
+      "actions": 2,
+      "computerAttack": false,
+      "day": 552,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 1063,
+      "won": true
+    },
+    {
+      "actions": 9,
+      "computerAttack": false,
+      "day": 557,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 4252,
+      "won": true
+    },
+    {
+      "actions": 10,
+      "computerAttack": false,
+      "day": 564,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 5321,
+      "won": true
+    },
+    {
+      "actions": 9,
+      "computerAttack": false,
+      "day": 564,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 5320,
+      "won": true
+    },
+    {
+      "actions": 1,
+      "computerAttack": false,
+      "day": 565,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 5315,
+      "won": true
+    },
+    {
+      "actions": 1,
+      "computerAttack": false,
+      "day": 565,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 5316,
+      "won": true
+    },
+    {
+      "actions": 15,
+      "computerAttack": false,
+      "day": 565,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6617,
+      "won": true
+    },
+    {
+      "actions": 11,
+      "computerAttack": false,
+      "day": 565,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6618,
+      "won": true
+    },
+    {
+      "actions": 6,
+      "computerAttack": false,
+      "day": 566,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 5176,
+      "won": true
+    },
+    {
+      "actions": 10,
+      "computerAttack": false,
+      "day": 567,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 6680,
+      "won": true
+    },
+    {
+      "actions": 20,
+      "computerAttack": false,
+      "day": 567,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 6684,
+      "won": true
+    },
+    {
+      "actions": 1,
+      "computerAttack": false,
+      "day": 568,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6681,
+      "won": true
+    },
+    {
+      "actions": 13,
+      "computerAttack": false,
+      "day": 568,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6202,
+      "won": true
+    },
+    {
+      "actions": 1,
+      "computerAttack": false,
+      "day": 569,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6234,
+      "won": true
+    },
+    {
+      "actions": 15,
+      "computerAttack": false,
+      "day": 570,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 6203,
+      "won": true
+    },
+    {
+      "actions": 1,
+      "computerAttack": false,
+      "day": 572,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 5658,
+      "won": true
+    },
+    {
+      "actions": 1,
+      "computerAttack": false,
+      "day": 573,
+      "exitType": 0,
+      "hero": 6797,
+      "target": 5040,
+      "won": true
+    },
+    {
+      "actions": 27,
+      "computerAttack": false,
+      "day": 609,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 6742,
+      "won": true
+    },
+    {
+      "actions": 13,
+      "computerAttack": false,
+      "day": 611,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 5778,
+      "won": true
+    },
+    {
+      "actions": 10,
+      "computerAttack": false,
+      "day": 612,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 5941,
+      "won": true
+    },
+    {
+      "actions": 25,
+      "computerAttack": false,
+      "day": 613,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 6035,
+      "won": true
+    },
+    {
+      "actions": 44,
+      "computerAttack": false,
+      "day": 614,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 5943,
+      "won": true
+    },
+    {
+      "actions": 10,
+      "computerAttack": false,
+      "day": 614,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 5944,
+      "won": true
+    },
+    {
+      "actions": 10,
+      "computerAttack": false,
+      "day": 614,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 5942,
+      "won": true
+    },
+    {
+      "actions": 6,
+      "computerAttack": false,
+      "day": 614,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 6378,
+      "won": true
+    },
+    {
+      "actions": 12,
+      "computerAttack": false,
+      "day": 615,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 6677,
+      "won": true
+    },
+    {
+      "actions": 9,
+      "computerAttack": false,
+      "day": 615,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 6027,
+      "won": true
+    },
+    {
+      "actions": 11,
+      "computerAttack": false,
+      "day": 615,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 6046,
+      "won": true
+    },
+    {
+      "actions": 16,
+      "computerAttack": false,
+      "day": 616,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 6028,
+      "won": true
+    },
+    {
+      "actions": 14,
+      "computerAttack": false,
+      "day": 620,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 100,
+      "won": true
+    },
+    {
+      "actions": 23,
+      "computerAttack": false,
+      "day": 621,
+      "exitType": 0,
+      "hero": 6885,
+      "target": 6961,
+      "won": true
+    }
+  ],
+  "completed": true,
+  "day": 621,
+  "difficulty": 0,
+  "map": "seven-lakes-1",
+  "movesIncludingRetries": 18428,
+  "noInjectedTeleportOrFogReveal": true,
+  "noResourceOrArmyInjection": true,
+  "normalGameplayOnly": true,
+  "observedDefeats": [
+    {
+      "actions": 1,
+      "computerAttack": true,
+      "day": 66,
+      "exitType": 2,
+      "hero": 6739,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 9,
+      "computerAttack": true,
+      "day": 78,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6740,
+      "won": false
+    },
+    {
+      "actions": 1,
+      "computerAttack": true,
+      "day": 83,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6764,
+      "won": false
+    },
+    {
+      "actions": 16,
+      "computerAttack": true,
+      "day": 84,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 10,
+      "computerAttack": true,
+      "day": 88,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 1,
+      "computerAttack": true,
+      "day": 103,
+      "exitType": 2,
+      "hero": 6783,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 30,
+      "computerAttack": true,
+      "day": 115,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 16,
+      "computerAttack": true,
+      "day": 137,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 10,
+      "computerAttack": true,
+      "day": 142,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 17,
+      "computerAttack": true,
+      "day": 153,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 1,
+      "computerAttack": true,
+      "day": 158,
+      "exitType": 2,
+      "hero": 6780,
+      "target": 6768,
+      "won": false
+    },
+    {
+      "actions": 22,
+      "computerAttack": true,
+      "day": 165,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 23,
+      "computerAttack": true,
+      "day": 168,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 19,
+      "computerAttack": true,
+      "day": 170,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 19,
+      "computerAttack": true,
+      "day": 179,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 14,
+      "computerAttack": true,
+      "day": 185,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 11,
+      "computerAttack": true,
+      "day": 188,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 18,
+      "computerAttack": true,
+      "day": 198,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 1,
+      "computerAttack": true,
+      "day": 207,
+      "exitType": 2,
+      "hero": 6819,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 12,
+      "computerAttack": true,
+      "day": 216,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 17,
+      "computerAttack": true,
+      "day": 218,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 1,
+      "computerAttack": true,
+      "day": 227,
+      "exitType": 2,
+      "hero": 6842,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 15,
+      "computerAttack": true,
+      "day": 233,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 13,
+      "computerAttack": true,
+      "day": 236,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 15,
+      "computerAttack": true,
+      "day": 238,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 10,
+      "computerAttack": true,
+      "day": 242,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 14,
+      "computerAttack": true,
+      "day": 245,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 1,
+      "computerAttack": true,
+      "day": 248,
+      "exitType": 2,
+      "hero": 6852,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 16,
+      "computerAttack": true,
+      "day": 255,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 67,
+      "computerAttack": true,
+      "day": 260,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6863,
+      "won": false
+    },
+    {
+      "actions": 15,
+      "computerAttack": true,
+      "day": 262,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 15,
+      "computerAttack": true,
+      "day": 270,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 17,
+      "computerAttack": true,
+      "day": 276,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 15,
+      "computerAttack": true,
+      "day": 278,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 14,
+      "computerAttack": true,
+      "day": 285,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 17,
+      "computerAttack": true,
+      "day": 289,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 2,
+      "computerAttack": true,
+      "day": 305,
+      "exitType": 2,
+      "hero": 6861,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 19,
+      "computerAttack": true,
+      "day": 313,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 20,
+      "computerAttack": true,
+      "day": 316,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 19,
+      "computerAttack": true,
+      "day": 318,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 17,
+      "computerAttack": true,
+      "day": 325,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 19,
+      "computerAttack": true,
+      "day": 331,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 18,
+      "computerAttack": true,
+      "day": 338,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 33,
+      "computerAttack": true,
+      "day": 343,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6886,
+      "won": false
+    },
+    {
+      "actions": 121,
+      "computerAttack": true,
+      "day": 345,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6886,
+      "won": false
+    },
+    {
+      "actions": 16,
+      "computerAttack": true,
+      "day": 355,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 23,
+      "computerAttack": true,
+      "day": 368,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 79,
+      "computerAttack": true,
+      "day": 373,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6886,
+      "won": false
+    },
+    {
+      "actions": 14,
+      "computerAttack": true,
+      "day": 376,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6888,
+      "won": false
+    },
+    {
+      "actions": 14,
+      "computerAttack": true,
+      "day": 379,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6888,
+      "won": false
+    },
+    {
+      "actions": 16,
+      "computerAttack": true,
+      "day": 381,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 15,
+      "computerAttack": true,
+      "day": 386,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 37,
+      "computerAttack": true,
+      "day": 387,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6886,
+      "won": false
+    },
+    {
+      "actions": 21,
+      "computerAttack": true,
+      "day": 391,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 33,
+      "computerAttack": true,
+      "day": 408,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6893,
+      "won": false
+    },
+    {
+      "actions": 23,
+      "computerAttack": true,
+      "day": 410,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 22,
+      "computerAttack": true,
+      "day": 417,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6893,
+      "won": false
+    },
+    {
+      "actions": 21,
+      "computerAttack": true,
+      "day": 418,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 38,
+      "computerAttack": true,
+      "day": 422,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6916,
+      "won": false
+    },
+    {
+      "actions": 19,
+      "computerAttack": true,
+      "day": 429,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 25,
+      "computerAttack": true,
+      "day": 437,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 19,
+      "computerAttack": true,
+      "day": 441,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6743,
+      "won": false
+    },
+    {
+      "actions": 5,
+      "computerAttack": true,
+      "day": 492,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6921,
+      "won": false
+    },
+    {
+      "actions": 14,
+      "computerAttack": true,
+      "day": 495,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6942,
+      "won": false
+    },
+    {
+      "actions": 16,
+      "computerAttack": true,
+      "day": 523,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6945,
+      "won": false
+    },
+    {
+      "actions": 23,
+      "computerAttack": true,
+      "day": 542,
+      "exitType": 0,
+      "hero": 0,
+      "target": 6960,
+      "won": false
+    }
+  ],
+  "realMapCollisionDataUnchanged": true,
+  "recruitAdditionalTavernHeroes": false,
+  "reloadPolicy": "kingdom-defeat-only",
+  "reloads": 0,
+  "sourceSha256": "7c40c456bc04d55fd709942cb387f42e42ec1b7d0f428c45ce7dbd77afa38c15",
+  "spellsIncludingRetries": 614,
+  "startingFaction": 0,
+  "startingHero": 9,
+  "turns": [
+    {
+      "armyPower": 2380.8333333333335,
+      "day": 1,
+      "enemyTowns": 6,
+      "gold": 28460,
+      "heroes": 6,
+      "movesIncludingRetries": 13,
+      "towns": 1
+    },
+    {
+      "armyPower": 2380.8333333333335,
+      "day": 2,
+      "enemyTowns": 6,
+      "gold": 26960,
+      "heroes": 6,
+      "movesIncludingRetries": 25,
+      "towns": 1
+    },
+    {
+      "armyPower": 2380.8333333333335,
+      "day": 3,
+      "enemyTowns": 6,
+      "gold": 24560,
+      "heroes": 6,
+      "movesIncludingRetries": 38,
+      "towns": 1
+    },
+    {
+      "armyPower": 2380.8333333333335,
+      "day": 4,
+      "enemyTowns": 6,
+      "gold": 23610,
+      "heroes": 6,
+      "movesIncludingRetries": 39,
+      "towns": 1
+    },
+    {
+      "armyPower": 2380.8333333333335,
+      "day": 5,
+      "enemyTowns": 6,
+      "gold": 24110,
+      "heroes": 6,
+      "movesIncludingRetries": 51,
+      "towns": 1
+    },
+    {
+      "armyPower": 2380.8333333333335,
+      "day": 6,
+      "enemyTowns": 7,
+      "gold": 22110,
+      "heroes": 6,
+      "movesIncludingRetries": 63,
+      "towns": 1
+    },
+    {
+      "armyPower": 2380.8333333333335,
+      "day": 7,
+      "enemyTowns": 7,
+      "gold": 20610,
+      "heroes": 6,
+      "movesIncludingRetries": 76,
+      "towns": 1
+    },
+    {
+      "armyPower": 2380.8333333333335,
+      "day": 8,
+      "enemyTowns": 7,
+      "gold": 16710,
+      "heroes": 6,
+      "movesIncludingRetries": 88,
+      "towns": 1
+    },
+    {
+      "armyPower": 2380.8333333333335,
+      "day": 9,
+      "enemyTowns": 7,
+      "gold": 14510,
+      "heroes": 6,
+      "movesIncludingRetries": 94,
+      "towns": 1
+    },
+    {
+      "armyPower": 1781.8666666666668,
+      "day": 10,
+      "enemyTowns": 7,
+      "gold": 15810,
+      "heroes": 6,
+      "movesIncludingRetries": 104,
+      "towns": 1
+    },
+    {
+      "armyPower": 1781.8666666666668,
+      "day": 11,
+      "enemyTowns": 7,
+      "gold": 15530,
+      "heroes": 6,
+      "movesIncludingRetries": 117,
+      "towns": 1
+    },
+    {
+      "armyPower": 1781.8666666666668,
+      "day": 12,
+      "enemyTowns": 7,
+      "gold": 11530,
+      "heroes": 6,
+      "movesIncludingRetries": 120,
+      "towns": 1
+    },
+    {
+      "armyPower": 5017.753333333334,
+      "day": 13,
+      "enemyTowns": 7,
+      "gold": 630,
+      "heroes": 7,
+      "movesIncludingRetries": 133,
+      "towns": 1
+    },
+    {
+      "armyPower": 5017.753333333334,
+      "day": 14,
+      "enemyTowns": 7,
+      "gold": 2630,
+      "heroes": 7,
+      "movesIncludingRetries": 136,
+      "towns": 1
+    },
+    {
+      "armyPower": 5017.753333333334,
+      "day": 15,
+      "enemyTowns": 7,
+      "gold": 25,
+      "heroes": 7,
+      "movesIncludingRetries": 149,
+      "towns": 1
+    },
+    {
+      "armyPower": 5017.753333333334,
+      "day": 16,
+      "enemyTowns": 7,
+      "gold": 1350,
+      "heroes": 7,
+      "movesIncludingRetries": 152,
+      "towns": 1
+    },
+    {
+      "armyPower": 4373.593333333334,
+      "day": 17,
+      "enemyTowns": 7,
+      "gold": 3350,
+      "heroes": 7,
+      "movesIncludingRetries": 164,
+      "towns": 1
+    },
+    {
+      "armyPower": 3388.2333333333336,
+      "day": 18,
+      "enemyTowns": 7,
+      "gold": 5350,
+      "heroes": 7,
+      "movesIncludingRetries": 177,
+      "towns": 1
+    },
+    {
+      "armyPower": 2576.8166666666666,
+      "day": 19,
+      "enemyTowns": 7,
+      "gold": 8350,
+      "heroes": 7,
+      "movesIncludingRetries": 190,
+      "towns": 1
+    },
+    {
+      "armyPower": 1443.8666666666666,
+      "day": 20,
+      "enemyTowns": 7,
+      "gold": 8550,
+      "heroes": 7,
+      "movesIncludingRetries": 202,
+      "towns": 1
+    },
+    {
+      "armyPower": 1443.8666666666666,
+      "day": 21,
+      "enemyTowns": 7,
+      "gold": 9050,
+      "heroes": 7,
+      "movesIncludingRetries": 214,
+      "towns": 1
+    },
+    {
+      "armyPower": 1443.8666666666666,
+      "day": 22,
+      "enemyTowns": 7,
+      "gold": 1725,
+      "heroes": 7,
+      "movesIncludingRetries": 227,
+      "towns": 1
+    },
+    {
+      "armyPower": 1443.8666666666666,
+      "day": 23,
+      "enemyTowns": 7,
+      "gold": 3725,
+      "heroes": 7,
+      "movesIncludingRetries": 241,
+      "towns": 1
+    },
+    {
+      "armyPower": 1443.8666666666666,
+      "day": 24,
+      "enemyTowns": 7,
+      "gold": 5725,
+      "heroes": 7,
+      "movesIncludingRetries": 248,
+      "towns": 1
+    },
+    {
+      "armyPower": 1443.8666666666666,
+      "day": 25,
+      "enemyTowns": 7,
+      "gold": 7725,
+      "heroes": 8,
+      "movesIncludingRetries": 261,
+      "towns": 1
+    },
+    {
+      "armyPower": 1443.8666666666666,
+      "day": 26,
+      "enemyTowns": 7,
+      "gold": 9725,
+      "heroes": 8,
+      "movesIncludingRetries": 264,
+      "towns": 1
+    },
+    {
+      "armyPower": 11367.083333333334,
+      "day": 27,
+      "enemyTowns": 7,
+      "gold": 7515,
+      "heroes": 8,
+      "movesIncludingRetries": 276,
+      "towns": 1
+    },
+    {
+      "armyPower": 11367.083333333334,
+      "day": 28,
+      "enemyTowns": 7,
+      "gold": 9515,
+      "heroes": 8,
+      "movesIncludingRetries": 277,
+      "towns": 1
+    },
+    {
+      "armyPower": 10855.293333333335,
+      "day": 29,
+      "enemyTowns": 7,
+      "gold": 10190,
+      "heroes": 8,
+      "movesIncludingRetries": 287,
+      "towns": 1
+    },
+    {
+      "armyPower": 10855.293333333335,
+      "day": 30,
+      "enemyTowns": 7,
+      "gold": 12190,
+      "heroes": 8,
+      "movesIncludingRetries": 289,
+      "towns": 1
+    },
+    {
+      "armyPower": 15503.103333333333,
+      "day": 31,
+      "enemyTowns": 7,
+      "gold": 690,
+      "heroes": 8,
+      "movesIncludingRetries": 292,
+      "towns": 1
+    },
+    {
+      "armyPower": 15503.103333333333,
+      "day": 32,
+      "enemyTowns": 7,
+      "gold": 2690,
+      "heroes": 8,
+      "movesIncludingRetries": 304,
+      "towns": 1
+    },
+    {
+      "armyPower": 15503.103333333333,
+      "day": 33,
+      "enemyTowns": 7,
+      "gold": 4690,
+      "heroes": 9,
+      "movesIncludingRetries": 312,
+      "towns": 1
+    },
+    {
+      "armyPower": 15503.103333333333,
+      "day": 34,
+      "enemyTowns": 7,
+      "gold": 8190,
+      "heroes": 9,
+      "movesIncludingRetries": 323,
+      "towns": 1
+    },
+    {
+      "armyPower": 17304.43666666667,
+      "day": 35,
+      "enemyTowns": 7,
+      "gold": 11690,
+      "heroes": 9,
+      "movesIncludingRetries": 334,
+      "towns": 1
+    },
+    {
+      "armyPower": 17304.43666666667,
+      "day": 36,
+      "enemyTowns": 7,
+      "gold": 65,
+      "heroes": 9,
+      "movesIncludingRetries": 344,
+      "towns": 1
+    },
+    {
+      "armyPower": 16003.486666666668,
+      "day": 37,
+      "enemyTowns": 7,
+      "gold": 5365,
+      "heroes": 9,
+      "movesIncludingRetries": 356,
+      "towns": 1
+    },
+    {
+      "armyPower": 16003.486666666668,
+      "day": 38,
+      "enemyTowns": 7,
+      "gold": 7365,
+      "heroes": 9,
+      "movesIncludingRetries": 369,
+      "towns": 1
+    },
+    {
+      "armyPower": 16604.296666666665,
+      "day": 39,
+      "enemyTowns": 7,
+      "gold": 12465,
+      "heroes": 9,
+      "movesIncludingRetries": 381,
+      "towns": 1
+    },
+    {
+      "armyPower": 13987.836666666668,
+      "day": 40,
+      "enemyTowns": 7,
+      "gold": 2965,
+      "heroes": 9,
+      "movesIncludingRetries": 393,
+      "towns": 1
+    },
+    {
+      "armyPower": 13987.836666666668,
+      "day": 41,
+      "enemyTowns": 7,
+      "gold": 4965,
+      "heroes": 9,
+      "movesIncludingRetries": 407,
+      "towns": 1
+    },
+    {
+      "armyPower": 15597.65,
+      "day": 42,
+      "enemyTowns": 7,
+      "gold": 9965,
+      "heroes": 9,
+      "movesIncludingRetries": 419,
+      "towns": 1
+    },
+    {
+      "armyPower": 17350.4,
+      "day": 43,
+      "enemyTowns": 7,
+      "gold": 55,
+      "heroes": 9,
+      "movesIncludingRetries": 433,
+      "towns": 1
+    },
+    {
+      "armyPower": 17350.4,
+      "day": 44,
+      "enemyTowns": 7,
+      "gold": 3005,
+      "heroes": 9,
+      "movesIncludingRetries": 446,
+      "towns": 1
+    },
+    {
+      "armyPower": 15025.866666666667,
+      "day": 45,
+      "enemyTowns": 7,
+      "gold": 8005,
+      "heroes": 9,
+      "movesIncludingRetries": 460,
+      "towns": 1
+    },
+    {
+      "armyPower": 15025.866666666667,
+      "day": 46,
+      "enemyTowns": 7,
+      "gold": 13005,
+      "heroes": 9,
+      "movesIncludingRetries": 476,
+      "towns": 1
+    },
+    {
+      "armyPower": 15025.866666666667,
+      "day": 47,
+      "enemyTowns": 7,
+      "gold": 18005,
+      "heroes": 9,
+      "movesIncludingRetries": 490,
+      "towns": 1
+    },
+    {
+      "armyPower": 15025.866666666667,
+      "day": 48,
+      "enemyTowns": 7,
+      "gold": 23005,
+      "heroes": 9,
+      "movesIncludingRetries": 501,
+      "towns": 1
+    },
+    {
+      "armyPower": 15025.866666666667,
+      "day": 49,
+      "enemyTowns": 7,
+      "gold": 28005,
+      "heroes": 9,
+      "movesIncludingRetries": 508,
+      "towns": 1
+    },
+    {
+      "armyPower": 15025.866666666667,
+      "day": 50,
+      "enemyTowns": 7,
+      "gold": 14045,
+      "heroes": 9,
+      "movesIncludingRetries": 520,
+      "towns": 1
+    },
+    {
+      "armyPower": 35567.05333333334,
+      "day": 51,
+      "enemyTowns": 7,
+      "gold": 19045,
+      "heroes": 9,
+      "movesIncludingRetries": 521,
+      "towns": 1
+    },
+    {
+      "armyPower": 35567.05333333334,
+      "day": 52,
+      "enemyTowns": 7,
+      "gold": 24045,
+      "heroes": 9,
+      "movesIncludingRetries": 522,
+      "towns": 1
+    },
+    {
+      "armyPower": 35567.05333333334,
+      "day": 53,
+      "enemyTowns": 7,
+      "gold": 29045,
+      "heroes": 9,
+      "movesIncludingRetries": 534,
+      "towns": 1
+    },
+    {
+      "armyPower": 35567.05333333334,
+      "day": 54,
+      "enemyTowns": 7,
+      "gold": 34045,
+      "heroes": 9,
+      "movesIncludingRetries": 537,
+      "towns": 1
+    },
+    {
+      "armyPower": 30595.053333333337,
+      "day": 55,
+      "enemyTowns": 7,
+      "gold": 49046,
+      "heroes": 9,
+      "movesIncludingRetries": 549,
+      "towns": 1
+    },
+    {
+      "armyPower": 30595.053333333337,
+      "day": 56,
+      "enemyTowns": 7,
+      "gold": 54046,
+      "heroes": 9,
+      "movesIncludingRetries": 567,
+      "towns": 1
+    },
+    {
+      "armyPower": 30595.053333333337,
+      "day": 57,
+      "enemyTowns": 7,
+      "gold": 42186,
+      "heroes": 9,
+      "movesIncludingRetries": 583,
+      "towns": 1
+    },
+    {
+      "armyPower": 30595.053333333337,
+      "day": 58,
+      "enemyTowns": 7,
+      "gold": 47186,
+      "heroes": 9,
+      "movesIncludingRetries": 600,
+      "towns": 1
+    },
+    {
+      "armyPower": 27009.053333333337,
+      "day": 59,
+      "enemyTowns": 7,
+      "gold": 52186,
+      "heroes": 9,
+      "movesIncludingRetries": 615,
+      "towns": 1
+    },
+    {
+      "armyPower": 27009.053333333337,
+      "day": 60,
+      "enemyTowns": 7,
+      "gold": 57186,
+      "heroes": 10,
+      "movesIncludingRetries": 618,
+      "towns": 1
+    },
+    {
+      "armyPower": 9394.0,
+      "day": 61,
+      "enemyTowns": 7,
+      "gold": 63686,
+      "heroes": 10,
+      "movesIncludingRetries": 637,
+      "towns": 1
+    },
+    {
+      "armyPower": 9394.0,
+      "day": 62,
+      "enemyTowns": 7,
+      "gold": 68686,
+      "heroes": 10,
+      "movesIncludingRetries": 649,
+      "towns": 1
+    },
+    {
+      "armyPower": 9394.0,
+      "day": 63,
+      "enemyTowns": 7,
+      "gold": 73686,
+      "heroes": 10,
+      "movesIncludingRetries": 656,
+      "towns": 1
+    },
+    {
+      "armyPower": 9394.0,
+      "day": 64,
+      "enemyTowns": 7,
+      "gold": 58626,
+      "heroes": 10,
+      "movesIncludingRetries": 668,
+      "towns": 1
+    },
+    {
+      "armyPower": 9394.0,
+      "day": 65,
+      "enemyTowns": 7,
+      "gold": 64626,
+      "heroes": 10,
+      "movesIncludingRetries": 668,
+      "towns": 1
+    },
+    {
+      "armyPower": 9394.0,
+      "day": 66,
+      "enemyTowns": 7,
+      "gold": 65543,
+      "heroes": 10,
+      "movesIncludingRetries": 668,
+      "towns": 1
+    },
+    {
+      "armyPower": 47680.33,
+      "day": 67,
+      "enemyTowns": 7,
+      "gold": 70543,
+      "heroes": 10,
+      "movesIncludingRetries": 692,
+      "towns": 1
+    },
+    {
+      "armyPower": 47680.33,
+      "day": 68,
+      "enemyTowns": 7,
+      "gold": 75543,
+      "heroes": 10,
+      "movesIncludingRetries": 713,
+      "towns": 1
+    },
+    {
+      "armyPower": 47680.33,
+      "day": 69,
+      "enemyTowns": 7,
+      "gold": 80543,
+      "heroes": 10,
+      "movesIncludingRetries": 745,
+      "towns": 1
+    },
+    {
+      "armyPower": 47680.33,
+      "day": 70,
+      "enemyTowns": 8,
+      "gold": 85543,
+      "heroes": 10,
+      "movesIncludingRetries": 786,
+      "towns": 1
+    },
+    {
+      "armyPower": 47680.33,
+      "day": 71,
+      "enemyTowns": 8,
+      "gold": 73683,
+      "heroes": 10,
+      "movesIncludingRetries": 800,
+      "towns": 1
+    },
+    {
+      "armyPower": 47680.33,
+      "day": 72,
+      "enemyTowns": 8,
+      "gold": 78683,
+      "heroes": 10,
+      "movesIncludingRetries": 813,
+      "towns": 1
+    },
+    {
+      "armyPower": 47680.33,
+      "day": 73,
+      "enemyTowns": 8,
+      "gold": 83683,
+      "heroes": 9,
+      "movesIncludingRetries": 850,
+      "towns": 1
+    },
+    {
+      "armyPower": 47680.33,
+      "day": 74,
+      "enemyTowns": 8,
+      "gold": 88683,
+      "heroes": 9,
+      "movesIncludingRetries": 890,
+      "towns": 1
+    },
+    {
+      "armyPower": 47680.33,
+      "day": 75,
+      "enemyTowns": 8,
+      "gold": 92683,
+      "heroes": 10,
+      "movesIncludingRetries": 941,
+      "towns": 2
+    },
+    {
+      "armyPower": 47680.33,
+      "day": 76,
+      "enemyTowns": 7,
+      "gold": 96183,
+      "heroes": 10,
+      "movesIncludingRetries": 987,
+      "towns": 3
+    },
+    {
+      "armyPower": 51625.66333333334,
+      "day": 77,
+      "enemyTowns": 7,
+      "gold": 83483,
+      "heroes": 10,
+      "movesIncludingRetries": 1031,
+      "towns": 3
+    },
+    {
+      "armyPower": 51625.66333333334,
+      "day": 78,
+      "enemyTowns": 8,
+      "gold": 61638,
+      "heroes": 10,
+      "movesIncludingRetries": 1087,
+      "towns": 2
+    },
+    {
+      "armyPower": 51625.66333333334,
+      "day": 79,
+      "enemyTowns": 8,
+      "gold": 66638,
+      "heroes": 10,
+      "movesIncludingRetries": 1128,
+      "towns": 2
+    },
+    {
+      "armyPower": 51625.66333333334,
+      "day": 80,
+      "enemyTowns": 7,
+      "gold": 67638,
+      "heroes": 10,
+      "movesIncludingRetries": 1165,
+      "towns": 3
+    },
+    {
+      "armyPower": 51625.66333333334,
+      "day": 81,
+      "enemyTowns": 7,
+      "gold": 68788,
+      "heroes": 10,
+      "movesIncludingRetries": 1207,
+      "towns": 3
+    },
+    {
+      "armyPower": 46075.45333333334,
+      "day": 82,
+      "enemyTowns": 7,
+      "gold": 71838,
+      "heroes": 9,
+      "movesIncludingRetries": 1257,
+      "towns": 3
+    },
+    {
+      "armyPower": 45646.013333333336,
+      "day": 83,
+      "enemyTowns": 8,
+      "gold": 74838,
+      "heroes": 10,
+      "movesIncludingRetries": 1303,
+      "towns": 2
+    },
+    {
+      "armyPower": 47831.543333333335,
+      "day": 84,
+      "enemyTowns": 8,
+      "gold": 81838,
+      "heroes": 10,
+      "movesIncludingRetries": 1350,
+      "towns": 2
+    },
+    {
+      "armyPower": 47831.543333333335,
+      "day": 85,
+      "enemyTowns": 8,
+      "gold": 61598,
+      "heroes": 10,
+      "movesIncludingRetries": 1409,
+      "towns": 2
+    },
+    {
+      "armyPower": 50506.293333333335,
+      "day": 86,
+      "enemyTowns": 8,
+      "gold": 52878,
+      "heroes": 10,
+      "movesIncludingRetries": 1460,
+      "towns": 2
+    },
+    {
+      "armyPower": 50506.293333333335,
+      "day": 87,
+      "enemyTowns": 8,
+      "gold": 56278,
+      "heroes": 10,
+      "movesIncludingRetries": 1491,
+      "towns": 2
+    },
+    {
+      "armyPower": 50506.293333333335,
+      "day": 88,
+      "enemyTowns": 9,
+      "gold": 63278,
+      "heroes": 10,
+      "movesIncludingRetries": 1535,
+      "towns": 1
+    },
+    {
+      "armyPower": 50506.293333333335,
+      "day": 89,
+      "enemyTowns": 9,
+      "gold": 68278,
+      "heroes": 10,
+      "movesIncludingRetries": 1574,
+      "towns": 1
+    },
+    {
+      "armyPower": 50506.293333333335,
+      "day": 90,
+      "enemyTowns": 9,
+      "gold": 73278,
+      "heroes": 10,
+      "movesIncludingRetries": 1602,
+      "towns": 1
+    },
+    {
+      "armyPower": 50506.293333333335,
+      "day": 91,
+      "enemyTowns": 9,
+      "gold": 78278,
+      "heroes": 9,
+      "movesIncludingRetries": 1613,
+      "towns": 1
+    },
+    {
+      "armyPower": 50506.293333333335,
+      "day": 92,
+      "enemyTowns": 9,
+      "gold": 50018,
+      "heroes": 9,
+      "movesIncludingRetries": 1623,
+      "towns": 1
+    },
+    {
+      "armyPower": 50506.293333333335,
+      "day": 93,
+      "enemyTowns": 9,
+      "gold": 54018,
+      "heroes": 9,
+      "movesIncludingRetries": 1638,
+      "towns": 1
+    },
+    {
+      "armyPower": 50506.293333333335,
+      "day": 94,
+      "enemyTowns": 9,
+      "gold": 58018,
+      "heroes": 9,
+      "movesIncludingRetries": 1654,
+      "towns": 1
+    },
+    {
+      "armyPower": 50506.293333333335,
+      "day": 95,
+      "enemyTowns": 9,
+      "gold": 62018,
+      "heroes": 9,
+      "movesIncludingRetries": 1691,
+      "towns": 1
+    },
+    {
+      "armyPower": 50506.293333333335,
+      "day": 96,
+      "enemyTowns": 9,
+      "gold": 67018,
+      "heroes": 9,
+      "movesIncludingRetries": 1740,
+      "towns": 1
+    },
+    {
+      "armyPower": 50506.293333333335,
+      "day": 97,
+      "enemyTowns": 9,
+      "gold": 72018,
+      "heroes": 9,
+      "movesIncludingRetries": 1786,
+      "towns": 1
+    },
+    {
+      "armyPower": 50506.293333333335,
+      "day": 98,
+      "enemyTowns": 9,
+      "gold": 73818,
+      "heroes": 9,
+      "movesIncludingRetries": 1825,
+      "towns": 1
+    },
+    {
+      "armyPower": 50506.293333333335,
+      "day": 99,
+      "enemyTowns": 9,
+      "gold": 59858,
+      "heroes": 9,
+      "movesIncludingRetries": 1868,
+      "towns": 1
+    },
+    {
+      "armyPower": 50506.293333333335,
+      "day": 100,
+      "enemyTowns": 9,
+      "gold": 64858,
+      "heroes": 9,
+      "movesIncludingRetries": 1918,
+      "towns": 1
+    },
+    {
+      "armyPower": 50506.293333333335,
+      "day": 101,
+      "enemyTowns": 9,
+      "gold": 69858,
+      "heroes": 9,
+      "movesIncludingRetries": 1939,
+      "towns": 1
+    },
+    {
+      "armyPower": 50506.293333333335,
+      "day": 102,
+      "enemyTowns": 9,
+      "gold": 74858,
+      "heroes": 9,
+      "movesIncludingRetries": 1939,
+      "towns": 1
+    },
+    {
+      "armyPower": 15942.94,
+      "day": 103,
+      "enemyTowns": 9,
+      "gold": 67549,
+      "heroes": 9,
+      "movesIncludingRetries": 1940,
+      "towns": 1
+    },
+    {
+      "armyPower": 87985.86,
+      "day": 104,
+      "enemyTowns": 9,
+      "gold": 71549,
+      "heroes": 9,
+      "movesIncludingRetries": 1941,
+      "towns": 1
+    },
+    {
+      "armyPower": 87985.86,
+      "day": 105,
+      "enemyTowns": 9,
+      "gold": 76549,
+      "heroes": 9,
+      "movesIncludingRetries": 1953,
+      "towns": 1
+    },
+    {
+      "armyPower": 87985.86,
+      "day": 106,
+      "enemyTowns": 9,
+      "gold": 63689,
+      "heroes": 8,
+      "movesIncludingRetries": 1987,
+      "towns": 1
+    },
+    {
+      "armyPower": 87985.86,
+      "day": 107,
+      "enemyTowns": 9,
+      "gold": 67689,
+      "heroes": 8,
+      "movesIncludingRetries": 1992,
+      "towns": 1
+    },
+    {
+      "armyPower": 82260.77,
+      "day": 108,
+      "enemyTowns": 8,
+      "gold": 71689,
+      "heroes": 9,
+      "movesIncludingRetries": 2008,
+      "towns": 2
+    },
+    {
+      "armyPower": 82260.77,
+      "day": 109,
+      "enemyTowns": 8,
+      "gold": 79689,
+      "heroes": 9,
+      "movesIncludingRetries": 2022,
+      "towns": 2
+    },
+    {
+      "armyPower": 82260.77,
+      "day": 110,
+      "enemyTowns": 8,
+      "gold": 87689,
+      "heroes": 9,
+      "movesIncludingRetries": 2067,
+      "towns": 2
+    },
+    {
+      "armyPower": 80720.77,
+      "day": 111,
+      "enemyTowns": 8,
+      "gold": 95689,
+      "heroes": 9,
+      "movesIncludingRetries": 2112,
+      "towns": 2
+    },
+    {
+      "armyPower": 80720.77,
+      "day": 112,
+      "enemyTowns": 8,
+      "gold": 104689,
+      "heroes": 9,
+      "movesIncludingRetries": 2161,
+      "towns": 2
+    },
+    {
+      "armyPower": 80720.77,
+      "day": 113,
+      "enemyTowns": 8,
+      "gold": 72759,
+      "heroes": 9,
+      "movesIncludingRetries": 2195,
+      "towns": 2
+    },
+    {
+      "armyPower": 80720.77,
+      "day": 114,
+      "enemyTowns": 8,
+      "gold": 85759,
+      "heroes": 9,
+      "movesIncludingRetries": 2220,
+      "towns": 2
+    },
+    {
+      "armyPower": 80720.77,
+      "day": 115,
+      "enemyTowns": 9,
+      "gold": 90559,
+      "heroes": 9,
+      "movesIncludingRetries": 2246,
+      "towns": 1
+    },
+    {
+      "armyPower": 89241.16,
+      "day": 116,
+      "enemyTowns": 9,
+      "gold": 95559,
+      "heroes": 9,
+      "movesIncludingRetries": 2273,
+      "towns": 1
+    },
+    {
+      "armyPower": 89241.16,
+      "day": 117,
+      "enemyTowns": 10,
+      "gold": 100559,
+      "heroes": 9,
+      "movesIncludingRetries": 2307,
+      "towns": 1
+    },
+    {
+      "armyPower": 89241.16,
+      "day": 118,
+      "enemyTowns": 11,
+      "gold": 110059,
+      "heroes": 9,
+      "movesIncludingRetries": 2324,
+      "towns": 1
+    },
+    {
+      "armyPower": 89241.16,
+      "day": 119,
+      "enemyTowns": 11,
+      "gold": 116059,
+      "heroes": 9,
+      "movesIncludingRetries": 2339,
+      "towns": 1
+    },
+    {
+      "armyPower": 89241.16,
+      "day": 120,
+      "enemyTowns": 11,
+      "gold": 105799,
+      "heroes": 9,
+      "movesIncludingRetries": 2352,
+      "towns": 1
+    },
+    {
+      "armyPower": 89241.16,
+      "day": 121,
+      "enemyTowns": 11,
+      "gold": 111799,
+      "heroes": 8,
+      "movesIncludingRetries": 2362,
+      "towns": 1
+    },
+    {
+      "armyPower": 89241.16,
+      "day": 122,
+      "enemyTowns": 11,
+      "gold": 117799,
+      "heroes": 8,
+      "movesIncludingRetries": 2414,
+      "towns": 1
+    },
+    {
+      "armyPower": 88503.16,
+      "day": 123,
+      "enemyTowns": 10,
+      "gold": 123799,
+      "heroes": 9,
+      "movesIncludingRetries": 2458,
+      "towns": 2
+    },
+    {
+      "armyPower": 88503.16,
+      "day": 124,
+      "enemyTowns": 10,
+      "gold": 112801,
+      "heroes": 9,
+      "movesIncludingRetries": 2503,
+      "towns": 2
+    },
+    {
+      "armyPower": 88503.16,
+      "day": 125,
+      "enemyTowns": 11,
+      "gold": 122801,
+      "heroes": 9,
+      "movesIncludingRetries": 2533,
+      "towns": 1
+    },
+    {
+      "armyPower": 88503.16,
+      "day": 126,
+      "enemyTowns": 11,
+      "gold": 128801,
+      "heroes": 9,
+      "movesIncludingRetries": 2579,
+      "towns": 1
+    },
+    {
+      "armyPower": 88503.16,
+      "day": 127,
+      "enemyTowns": 11,
+      "gold": 119541,
+      "heroes": 9,
+      "movesIncludingRetries": 2614,
+      "towns": 1
+    },
+    {
+      "armyPower": 88503.16,
+      "day": 128,
+      "enemyTowns": 11,
+      "gold": 104191,
+      "heroes": 9,
+      "movesIncludingRetries": 2650,
+      "towns": 1
+    },
+    {
+      "armyPower": 88503.16,
+      "day": 129,
+      "enemyTowns": 11,
+      "gold": 115191,
+      "heroes": 9,
+      "movesIncludingRetries": 2690,
+      "towns": 1
+    },
+    {
+      "armyPower": 88503.16,
+      "day": 130,
+      "enemyTowns": 11,
+      "gold": 122191,
+      "heroes": 9,
+      "movesIncludingRetries": 2718,
+      "towns": 1
+    },
+    {
+      "armyPower": 88503.16,
+      "day": 131,
+      "enemyTowns": 10,
+      "gold": 128191,
+      "heroes": 9,
+      "movesIncludingRetries": 2746,
+      "towns": 2
+    },
+    {
+      "armyPower": 90363.26000000001,
+      "day": 132,
+      "enemyTowns": 10,
+      "gold": 121191,
+      "heroes": 9,
+      "movesIncludingRetries": 2782,
+      "towns": 2
+    },
+    {
+      "armyPower": 122463.90000000001,
+      "day": 133,
+      "enemyTowns": 11,
+      "gold": 59431,
+      "heroes": 9,
+      "movesIncludingRetries": 2827,
+      "towns": 2
+    },
+    {
+      "armyPower": 122463.90000000001,
+      "day": 134,
+      "enemyTowns": 11,
+      "gold": 34301,
+      "heroes": 9,
+      "movesIncludingRetries": 2870,
+      "towns": 2
+    },
+    {
+      "armyPower": 122463.90000000001,
+      "day": 135,
+      "enemyTowns": 11,
+      "gold": 44301,
+      "heroes": 9,
+      "movesIncludingRetries": 2909,
+      "towns": 2
+    },
+    {
+      "armyPower": 122463.90000000001,
+      "day": 136,
+      "enemyTowns": 11,
+      "gold": 56801,
+      "heroes": 9,
+      "movesIncludingRetries": 2940,
+      "towns": 2
+    },
+    {
+      "armyPower": 121605.02,
+      "day": 137,
+      "enemyTowns": 11,
+      "gold": 69301,
+      "heroes": 9,
+      "movesIncludingRetries": 2983,
+      "towns": 2
+    },
+    {
+      "armyPower": 121605.02,
+      "day": 138,
+      "enemyTowns": 11,
+      "gold": 52301,
+      "heroes": 9,
+      "movesIncludingRetries": 3028,
+      "towns": 2
+    },
+    {
+      "armyPower": 121605.02,
+      "day": 139,
+      "enemyTowns": 11,
+      "gold": 36970,
+      "heroes": 9,
+      "movesIncludingRetries": 3079,
+      "towns": 2
+    },
+    {
+      "armyPower": 121605.02,
+      "day": 140,
+      "enemyTowns": 11,
+      "gold": 46970,
+      "heroes": 9,
+      "movesIncludingRetries": 3115,
+      "towns": 2
+    },
+    {
+      "armyPower": 121605.02,
+      "day": 141,
+      "enemyTowns": 11,
+      "gold": 18,
+      "heroes": 9,
+      "movesIncludingRetries": 3135,
+      "towns": 2
+    },
+    {
+      "armyPower": 121605.02,
+      "day": 142,
+      "enemyTowns": 12,
+      "gold": 12518,
+      "heroes": 9,
+      "movesIncludingRetries": 3160,
+      "towns": 1
+    },
+    {
+      "armyPower": 121605.02,
+      "day": 143,
+      "enemyTowns": 12,
+      "gold": 21629,
+      "heroes": 9,
+      "movesIncludingRetries": 3189,
+      "towns": 1
+    },
+    {
+      "armyPower": 121605.02,
+      "day": 144,
+      "enemyTowns": 12,
+      "gold": 28629,
+      "heroes": 9,
+      "movesIncludingRetries": 3206,
+      "towns": 1
+    },
+    {
+      "armyPower": 121605.02,
+      "day": 145,
+      "enemyTowns": 12,
+      "gold": 35629,
+      "heroes": 9,
+      "movesIncludingRetries": 3217,
+      "towns": 1
+    },
+    {
+      "armyPower": 154951.19666666668,
+      "day": 146,
+      "enemyTowns": 11,
+      "gold": 42629,
+      "heroes": 9,
+      "movesIncludingRetries": 3251,
+      "towns": 2
+    },
+    {
+      "armyPower": 154951.19666666668,
+      "day": 147,
+      "enemyTowns": 11,
+      "gold": 53629,
+      "heroes": 9,
+      "movesIncludingRetries": 3289,
+      "towns": 2
+    },
+    {
+      "armyPower": 154951.19666666668,
+      "day": 148,
+      "enemyTowns": 11,
+      "gold": 22433,
+      "heroes": 9,
+      "movesIncludingRetries": 3332,
+      "towns": 2
+    },
+    {
+      "armyPower": 154951.19666666668,
+      "day": 149,
+      "enemyTowns": 11,
+      "gold": 33433,
+      "heroes": 8,
+      "movesIncludingRetries": 3367,
+      "towns": 2
+    },
+    {
+      "armyPower": 154951.19666666668,
+      "day": 150,
+      "enemyTowns": 11,
+      "gold": 44433,
+      "heroes": 9,
+      "movesIncludingRetries": 3416,
+      "towns": 2
+    },
+    {
+      "armyPower": 154951.19666666668,
+      "day": 151,
+      "enemyTowns": 11,
+      "gold": 56433,
+      "heroes": 9,
+      "movesIncludingRetries": 3457,
+      "towns": 2
+    },
+    {
+      "armyPower": 154951.19666666668,
+      "day": 152,
+      "enemyTowns": 11,
+      "gold": 68433,
+      "heroes": 9,
+      "movesIncludingRetries": 3501,
+      "towns": 2
+    },
+    {
+      "armyPower": 154951.19666666668,
+      "day": 153,
+      "enemyTowns": 12,
+      "gold": 80433,
+      "heroes": 9,
+      "movesIncludingRetries": 3550,
+      "towns": 1
+    },
+    {
+      "armyPower": 154951.19666666668,
+      "day": 154,
+      "enemyTowns": 12,
+      "gold": 88433,
+      "heroes": 9,
+      "movesIncludingRetries": 3596,
+      "towns": 1
+    },
+    {
+      "armyPower": 157149.86333333334,
+      "day": 155,
+      "enemyTowns": 12,
+      "gold": 79633,
+      "heroes": 9,
+      "movesIncludingRetries": 3630,
+      "towns": 1
+    },
+    {
+      "armyPower": 157149.86333333334,
+      "day": 156,
+      "enemyTowns": 12,
+      "gold": 87633,
+      "heroes": 9,
+      "movesIncludingRetries": 3651,
+      "towns": 1
+    },
+    {
+      "armyPower": 157149.86333333334,
+      "day": 157,
+      "enemyTowns": 12,
+      "gold": 95633,
+      "heroes": 9,
+      "movesIncludingRetries": 3670,
+      "towns": 1
+    },
+    {
+      "armyPower": 156398.34333333335,
+      "day": 158,
+      "enemyTowns": 11,
+      "gold": 72658,
+      "heroes": 9,
+      "movesIncludingRetries": 3688,
+      "towns": 2
+    },
+    {
+      "armyPower": 49268.90666666667,
+      "day": 159,
+      "enemyTowns": 11,
+      "gold": 66338,
+      "heroes": 9,
+      "movesIncludingRetries": 3706,
+      "towns": 2
+    },
+    {
+      "armyPower": 49268.90666666667,
+      "day": 160,
+      "enemyTowns": 10,
+      "gold": 77338,
+      "heroes": 9,
+      "movesIncludingRetries": 3734,
+      "towns": 3
+    },
+    {
+      "armyPower": 49268.90666666667,
+      "day": 161,
+      "enemyTowns": 10,
+      "gold": 92338,
+      "heroes": 9,
+      "movesIncludingRetries": 3759,
+      "towns": 3
+    },
+    {
+      "armyPower": 49268.90666666667,
+      "day": 162,
+      "enemyTowns": 10,
+      "gold": 44123,
+      "heroes": 9,
+      "movesIncludingRetries": 3802,
+      "towns": 3
+    },
+    {
+      "armyPower": 37041.18666666667,
+      "day": 163,
+      "enemyTowns": 10,
+      "gold": 59123,
+      "heroes": 9,
+      "movesIncludingRetries": 3856,
+      "towns": 3
+    },
+    {
+      "armyPower": 37041.18666666667,
+      "day": 164,
+      "enemyTowns": 9,
+      "gold": 74123,
+      "heroes": 9,
+      "movesIncludingRetries": 3901,
+      "towns": 4
+    },
+    {
+      "armyPower": 37041.18666666667,
+      "day": 165,
+      "enemyTowns": 10,
+      "gold": 93123,
+      "heroes": 9,
+      "movesIncludingRetries": 3929,
+      "towns": 3
+    },
+    {
+      "armyPower": 38015.346666666665,
+      "day": 166,
+      "enemyTowns": 10,
+      "gold": 106323,
+      "heroes": 9,
+      "movesIncludingRetries": 3975,
+      "towns": 3
+    },
+    {
+      "armyPower": 37365.90666666667,
+      "day": 167,
+      "enemyTowns": 10,
+      "gold": 125323,
+      "heroes": 9,
+      "movesIncludingRetries": 4019,
+      "towns": 3
+    },
+    {
+      "armyPower": 37365.90666666667,
+      "day": 168,
+      "enemyTowns": 11,
+      "gold": 139323,
+      "heroes": 9,
+      "movesIncludingRetries": 4063,
+      "towns": 2
+    },
+    {
+      "armyPower": 37365.90666666667,
+      "day": 169,
+      "enemyTowns": 11,
+      "gold": 95703,
+      "heroes": 9,
+      "movesIncludingRetries": 4091,
+      "towns": 2
+    },
+    {
+      "armyPower": 47454.22666666667,
+      "day": 170,
+      "enemyTowns": 11,
+      "gold": 105703,
+      "heroes": 9,
+      "movesIncludingRetries": 4116,
+      "towns": 2
+    },
+    {
+      "armyPower": 47454.22666666667,
+      "day": 171,
+      "enemyTowns": 11,
+      "gold": 115703,
+      "heroes": 9,
+      "movesIncludingRetries": 4135,
+      "towns": 2
+    },
+    {
+      "armyPower": 47454.22666666667,
+      "day": 172,
+      "enemyTowns": 11,
+      "gold": 125703,
+      "heroes": 9,
+      "movesIncludingRetries": 4165,
+      "towns": 2
+    },
+    {
+      "armyPower": 47454.22666666667,
+      "day": 173,
+      "enemyTowns": 11,
+      "gold": 135703,
+      "heroes": 9,
+      "movesIncludingRetries": 4193,
+      "towns": 2
+    },
+    {
+      "armyPower": 47454.22666666667,
+      "day": 174,
+      "enemyTowns": 11,
+      "gold": 145703,
+      "heroes": 9,
+      "movesIncludingRetries": 4223,
+      "towns": 2
+    },
+    {
+      "armyPower": 47454.22666666667,
+      "day": 175,
+      "enemyTowns": 11,
+      "gold": 155703,
+      "heroes": 9,
+      "movesIncludingRetries": 4257,
+      "towns": 2
+    },
+    {
+      "armyPower": 47454.22666666667,
+      "day": 176,
+      "enemyTowns": 11,
+      "gold": 122853,
+      "heroes": 8,
+      "movesIncludingRetries": 4291,
+      "towns": 2
+    },
+    {
+      "armyPower": 47454.22666666667,
+      "day": 177,
+      "enemyTowns": 11,
+      "gold": 133853,
+      "heroes": 9,
+      "movesIncludingRetries": 4324,
+      "towns": 2
+    },
+    {
+      "armyPower": 47454.22666666667,
+      "day": 178,
+      "enemyTowns": 11,
+      "gold": 152511,
+      "heroes": 9,
+      "movesIncludingRetries": 4351,
+      "towns": 2
+    },
+    {
+      "armyPower": 47454.22666666667,
+      "day": 179,
+      "enemyTowns": 12,
+      "gold": 163511,
+      "heroes": 9,
+      "movesIncludingRetries": 4385,
+      "towns": 1
+    },
+    {
+      "armyPower": 47454.22666666667,
+      "day": 180,
+      "enemyTowns": 12,
+      "gold": 170511,
+      "heroes": 9,
+      "movesIncludingRetries": 4415,
+      "towns": 1
+    },
+    {
+      "armyPower": 47454.22666666667,
+      "day": 181,
+      "enemyTowns": 11,
+      "gold": 177511,
+      "heroes": 9,
+      "movesIncludingRetries": 4445,
+      "towns": 2
+    },
+    {
+      "armyPower": 27336.8,
+      "day": 182,
+      "enemyTowns": 10,
+      "gold": 188511,
+      "heroes": 9,
+      "movesIncludingRetries": 4487,
+      "towns": 3
+    },
+    {
+      "armyPower": 31867.039999999997,
+      "day": 183,
+      "enemyTowns": 10,
+      "gold": 141231,
+      "heroes": 9,
+      "movesIncludingRetries": 4530,
+      "towns": 3
+    },
+    {
+      "armyPower": 31867.039999999997,
+      "day": 184,
+      "enemyTowns": 9,
+      "gold": 156231,
+      "heroes": 9,
+      "movesIncludingRetries": 4575,
+      "towns": 4
+    },
+    {
+      "armyPower": 31867.039999999997,
+      "day": 185,
+      "enemyTowns": 10,
+      "gold": 175231,
+      "heroes": 9,
+      "movesIncludingRetries": 4601,
+      "towns": 3
+    },
+    {
+      "armyPower": 31867.039999999997,
+      "day": 186,
+      "enemyTowns": 10,
+      "gold": 190231,
+      "heroes": 9,
+      "movesIncludingRetries": 4660,
+      "towns": 3
+    },
+    {
+      "armyPower": 31867.039999999997,
+      "day": 187,
+      "enemyTowns": 10,
+      "gold": 204231,
+      "heroes": 9,
+      "movesIncludingRetries": 4701,
+      "towns": 3
+    },
+    {
+      "armyPower": 29174.24,
+      "day": 188,
+      "enemyTowns": 11,
+      "gold": 218231,
+      "heroes": 9,
+      "movesIncludingRetries": 4744,
+      "towns": 2
+    },
+    {
+      "armyPower": 30802.88,
+      "day": 189,
+      "enemyTowns": 11,
+      "gold": 225031,
+      "heroes": 9,
+      "movesIncludingRetries": 4784,
+      "towns": 2
+    },
+    {
+      "armyPower": 30802.88,
+      "day": 190,
+      "enemyTowns": 11,
+      "gold": 210351,
+      "heroes": 9,
+      "movesIncludingRetries": 4823,
+      "towns": 2
+    },
+    {
+      "armyPower": 30802.88,
+      "day": 191,
+      "enemyTowns": 11,
+      "gold": 221351,
+      "heroes": 9,
+      "movesIncludingRetries": 4861,
+      "towns": 2
+    },
+    {
+      "armyPower": 30802.88,
+      "day": 192,
+      "enemyTowns": 11,
+      "gold": 232351,
+      "heroes": 9,
+      "movesIncludingRetries": 4891,
+      "towns": 2
+    },
+    {
+      "armyPower": 56900.62666666666,
+      "day": 193,
+      "enemyTowns": 11,
+      "gold": 242351,
+      "heroes": 9,
+      "movesIncludingRetries": 4912,
+      "towns": 2
+    },
+    {
+      "armyPower": 56900.62666666666,
+      "day": 194,
+      "enemyTowns": 11,
+      "gold": 252351,
+      "heroes": 9,
+      "movesIncludingRetries": 4935,
+      "towns": 2
+    },
+    {
+      "armyPower": 56900.62666666666,
+      "day": 195,
+      "enemyTowns": 11,
+      "gold": 262351,
+      "heroes": 9,
+      "movesIncludingRetries": 4965,
+      "towns": 2
+    },
+    {
+      "armyPower": 56900.62666666666,
+      "day": 196,
+      "enemyTowns": 11,
+      "gold": 272351,
+      "heroes": 9,
+      "movesIncludingRetries": 5003,
+      "towns": 2
+    },
+    {
+      "armyPower": 56900.62666666666,
+      "day": 197,
+      "enemyTowns": 11,
+      "gold": 248761,
+      "heroes": 9,
+      "movesIncludingRetries": 5038,
+      "towns": 2
+    },
+    {
+      "armyPower": 56900.62666666666,
+      "day": 198,
+      "enemyTowns": 12,
+      "gold": 258761,
+      "heroes": 9,
+      "movesIncludingRetries": 5070,
+      "towns": 1
+    },
+    {
+      "armyPower": 56900.62666666666,
+      "day": 199,
+      "enemyTowns": 12,
+      "gold": 264761,
+      "heroes": 9,
+      "movesIncludingRetries": 5101,
+      "towns": 1
+    },
+    {
+      "armyPower": 56900.62666666666,
+      "day": 200,
+      "enemyTowns": 12,
+      "gold": 270761,
+      "heroes": 9,
+      "movesIncludingRetries": 5130,
+      "towns": 1
+    },
+    {
+      "armyPower": 56900.62666666666,
+      "day": 201,
+      "enemyTowns": 12,
+      "gold": 276761,
+      "heroes": 9,
+      "movesIncludingRetries": 5174,
+      "towns": 1
+    },
+    {
+      "armyPower": 56900.62666666666,
+      "day": 202,
+      "enemyTowns": 12,
+      "gold": 283761,
+      "heroes": 9,
+      "movesIncludingRetries": 5217,
+      "towns": 1
+    },
+    {
+      "armyPower": 56900.62666666666,
+      "day": 203,
+      "enemyTowns": 12,
+      "gold": 290761,
+      "heroes": 9,
+      "movesIncludingRetries": 5261,
+      "towns": 1
+    },
+    {
+      "armyPower": 56900.62666666666,
+      "day": 204,
+      "enemyTowns": 12,
+      "gold": 283601,
+      "heroes": 8,
+      "movesIncludingRetries": 5304,
+      "towns": 1
+    },
+    {
+      "armyPower": 56900.62666666666,
+      "day": 205,
+      "enemyTowns": 12,
+      "gold": 290601,
+      "heroes": 9,
+      "movesIncludingRetries": 5331,
+      "towns": 1
+    },
+    {
+      "armyPower": 56900.62666666666,
+      "day": 206,
+      "enemyTowns": 12,
+      "gold": 297601,
+      "heroes": 9,
+      "movesIncludingRetries": 5351,
+      "towns": 1
+    },
+    {
+      "armyPower": 177124.58333333334,
+      "day": 207,
+      "enemyTowns": 11,
+      "gold": 255132,
+      "heroes": 9,
+      "movesIncludingRetries": 5368,
+      "towns": 2
+    },
+    {
+      "armyPower": 68058.10666666666,
+      "day": 208,
+      "enemyTowns": 10,
+      "gold": 254932,
+      "heroes": 9,
+      "movesIncludingRetries": 5387,
+      "towns": 3
+    },
+    {
+      "armyPower": 68058.10666666666,
+      "day": 209,
+      "enemyTowns": 9,
+      "gold": 269932,
+      "heroes": 9,
+      "movesIncludingRetries": 5416,
+      "towns": 4
+    },
+    {
+      "armyPower": 68058.10666666666,
+      "day": 210,
+      "enemyTowns": 9,
+      "gold": 287932,
+      "heroes": 9,
+      "movesIncludingRetries": 5442,
+      "towns": 4
+    },
+    {
+      "armyPower": 68058.10666666666,
+      "day": 211,
+      "enemyTowns": 10,
+      "gold": 251512,
+      "heroes": 9,
+      "movesIncludingRetries": 5472,
+      "towns": 3
+    },
+    {
+      "armyPower": 7326.666666666666,
+      "day": 212,
+      "enemyTowns": 11,
+      "gold": 266512,
+      "heroes": 9,
+      "movesIncludingRetries": 5495,
+      "towns": 3
+    },
+    {
+      "armyPower": 8350.666666666666,
+      "day": 213,
+      "enemyTowns": 11,
+      "gold": 280012,
+      "heroes": 9,
+      "movesIncludingRetries": 5544,
+      "towns": 3
+    },
+    {
+      "armyPower": 8350.666666666666,
+      "day": 214,
+      "enemyTowns": 11,
+      "gold": 295012,
+      "heroes": 9,
+      "movesIncludingRetries": 5582,
+      "towns": 3
+    },
+    {
+      "armyPower": 8350.666666666666,
+      "day": 215,
+      "enemyTowns": 11,
+      "gold": 310012,
+      "heroes": 9,
+      "movesIncludingRetries": 5621,
+      "towns": 3
+    },
+    {
+      "armyPower": 8350.666666666666,
+      "day": 216,
+      "enemyTowns": 12,
+      "gold": 325012,
+      "heroes": 9,
+      "movesIncludingRetries": 5643,
+      "towns": 2
+    },
+    {
+      "armyPower": 8350.666666666666,
+      "day": 217,
+      "enemyTowns": 12,
+      "gold": 336012,
+      "heroes": 9,
+      "movesIncludingRetries": 5684,
+      "towns": 2
+    },
+    {
+      "armyPower": 8350.666666666666,
+      "day": 218,
+      "enemyTowns": 13,
+      "gold": 338612,
+      "heroes": 9,
+      "movesIncludingRetries": 5722,
+      "towns": 1
+    },
+    {
+      "armyPower": 8350.666666666666,
+      "day": 219,
+      "enemyTowns": 13,
+      "gold": 345612,
+      "heroes": 9,
+      "movesIncludingRetries": 5762,
+      "towns": 1
+    },
+    {
+      "armyPower": 8350.666666666666,
+      "day": 220,
+      "enemyTowns": 13,
+      "gold": 352612,
+      "heroes": 9,
+      "movesIncludingRetries": 5798,
+      "towns": 1
+    },
+    {
+      "armyPower": 8350.666666666666,
+      "day": 221,
+      "enemyTowns": 13,
+      "gold": 358612,
+      "heroes": 9,
+      "movesIncludingRetries": 5835,
+      "towns": 1
+    },
+    {
+      "armyPower": 8350.666666666666,
+      "day": 222,
+      "enemyTowns": 13,
+      "gold": 365612,
+      "heroes": 9,
+      "movesIncludingRetries": 5878,
+      "towns": 1
+    },
+    {
+      "armyPower": 8350.666666666666,
+      "day": 223,
+      "enemyTowns": 12,
+      "gold": 372612,
+      "heroes": 9,
+      "movesIncludingRetries": 5918,
+      "towns": 2
+    },
+    {
+      "armyPower": 8350.666666666666,
+      "day": 224,
+      "enemyTowns": 12,
+      "gold": 384612,
+      "heroes": 9,
+      "movesIncludingRetries": 5964,
+      "towns": 2
+    },
+    {
+      "armyPower": 8350.666666666666,
+      "day": 225,
+      "enemyTowns": 11,
+      "gold": 365952,
+      "heroes": 8,
+      "movesIncludingRetries": 5988,
+      "towns": 3
+    },
+    {
+      "armyPower": 8350.666666666666,
+      "day": 226,
+      "enemyTowns": 11,
+      "gold": 381952,
+      "heroes": 9,
+      "movesIncludingRetries": 6010,
+      "towns": 3
+    },
+    {
+      "armyPower": 228759.16333333336,
+      "day": 227,
+      "enemyTowns": 11,
+      "gold": 389852,
+      "heroes": 9,
+      "movesIncludingRetries": 6028,
+      "towns": 3
+    },
+    {
+      "armyPower": 43902.58666666667,
+      "day": 228,
+      "enemyTowns": 10,
+      "gold": 369972,
+      "heroes": 9,
+      "movesIncludingRetries": 6048,
+      "towns": 4
+    },
+    {
+      "armyPower": 43902.58666666667,
+      "day": 229,
+      "enemyTowns": 10,
+      "gold": 390972,
+      "heroes": 9,
+      "movesIncludingRetries": 6077,
+      "towns": 4
+    },
+    {
+      "armyPower": 43902.58666666667,
+      "day": 230,
+      "enemyTowns": 10,
+      "gold": 410972,
+      "heroes": 9,
+      "movesIncludingRetries": 6108,
+      "towns": 4
+    },
+    {
+      "armyPower": 43902.58666666667,
+      "day": 231,
+      "enemyTowns": 10,
+      "gold": 430972,
+      "heroes": 9,
+      "movesIncludingRetries": 6137,
+      "towns": 4
+    },
+    {
+      "armyPower": 43902.58666666667,
+      "day": 232,
+      "enemyTowns": 10,
+      "gold": 365122,
+      "heroes": 9,
+      "movesIncludingRetries": 6166,
+      "towns": 4
+    },
+    {
+      "armyPower": 43902.58666666667,
+      "day": 233,
+      "enemyTowns": 11,
+      "gold": 382122,
+      "heroes": 9,
+      "movesIncludingRetries": 6195,
+      "towns": 3
+    },
+    {
+      "armyPower": 43902.58666666667,
+      "day": 234,
+      "enemyTowns": 11,
+      "gold": 398122,
+      "heroes": 9,
+      "movesIncludingRetries": 6227,
+      "towns": 3
+    },
+    {
+      "armyPower": 43902.58666666667,
+      "day": 235,
+      "enemyTowns": 11,
+      "gold": 414122,
+      "heroes": 9,
+      "movesIncludingRetries": 6252,
+      "towns": 3
+    },
+    {
+      "armyPower": 26535.920000000002,
+      "day": 236,
+      "enemyTowns": 11,
+      "gold": 430122,
+      "heroes": 8,
+      "movesIncludingRetries": 6288,
+      "towns": 3
+    },
+    {
+      "armyPower": 26535.920000000002,
+      "day": 237,
+      "enemyTowns": 11,
+      "gold": 446122,
+      "heroes": 8,
+      "movesIncludingRetries": 6332,
+      "towns": 3
+    },
+    {
+      "armyPower": 26535.920000000002,
+      "day": 238,
+      "enemyTowns": 11,
+      "gold": 460822,
+      "heroes": 7,
+      "movesIncludingRetries": 6377,
+      "towns": 3
+    },
+    {
+      "armyPower": 32419.02666666667,
+      "day": 239,
+      "enemyTowns": 11,
+      "gold": 405967,
+      "heroes": 8,
+      "movesIncludingRetries": 6421,
+      "towns": 3
+    },
+    {
+      "armyPower": 32419.02666666667,
+      "day": 240,
+      "enemyTowns": 11,
+      "gold": 422967,
+      "heroes": 8,
+      "movesIncludingRetries": 6464,
+      "towns": 3
+    },
+    {
+      "armyPower": 32419.02666666667,
+      "day": 241,
+      "enemyTowns": 11,
+      "gold": 439967,
+      "heroes": 8,
+      "movesIncludingRetries": 6485,
+      "towns": 3
+    },
+    {
+      "armyPower": 32419.02666666667,
+      "day": 242,
+      "enemyTowns": 12,
+      "gold": 456967,
+      "heroes": 8,
+      "movesIncludingRetries": 6522,
+      "towns": 2
+    },
+    {
+      "armyPower": 32419.02666666667,
+      "day": 243,
+      "enemyTowns": 11,
+      "gold": 469967,
+      "heroes": 7,
+      "movesIncludingRetries": 6563,
+      "towns": 3
+    },
+    {
+      "armyPower": 32419.02666666667,
+      "day": 244,
+      "enemyTowns": 10,
+      "gold": 486967,
+      "heroes": 7,
+      "movesIncludingRetries": 6609,
+      "towns": 4
+    },
+    {
+      "armyPower": 32419.02666666667,
+      "day": 245,
+      "enemyTowns": 11,
+      "gold": 507967,
+      "heroes": 7,
+      "movesIncludingRetries": 6654,
+      "towns": 3
+    },
+    {
+      "armyPower": 32419.02666666667,
+      "day": 246,
+      "enemyTowns": 10,
+      "gold": 458987,
+      "heroes": 7,
+      "movesIncludingRetries": 6683,
+      "towns": 4
+    },
+    {
+      "armyPower": 32419.02666666667,
+      "day": 247,
+      "enemyTowns": 10,
+      "gold": 479987,
+      "heroes": 7,
+      "movesIncludingRetries": 6700,
+      "towns": 4
+    },
+    {
+      "armyPower": 241198.2566666667,
+      "day": 248,
+      "enemyTowns": 9,
+      "gold": 470827,
+      "heroes": 7,
+      "movesIncludingRetries": 6714,
+      "towns": 5
+    },
+    {
+      "armyPower": 56215.29666666666,
+      "day": 249,
+      "enemyTowns": 9,
+      "gold": 493827,
+      "heroes": 6,
+      "movesIncludingRetries": 6735,
+      "towns": 5
+    },
+    {
+      "armyPower": 56215.29666666666,
+      "day": 250,
+      "enemyTowns": 9,
+      "gold": 517827,
+      "heroes": 7,
+      "movesIncludingRetries": 6763,
+      "towns": 5
+    },
+    {
+      "armyPower": 56215.29666666666,
+      "day": 251,
+      "enemyTowns": 10,
+      "gold": 541827,
+      "heroes": 7,
+      "movesIncludingRetries": 6798,
+      "towns": 4
+    },
+    {
+      "armyPower": 56215.29666666666,
+      "day": 252,
+      "enemyTowns": 10,
+      "gold": 561827,
+      "heroes": 7,
+      "movesIncludingRetries": 6830,
+      "towns": 4
+    },
+    {
+      "armyPower": 56215.29666666666,
+      "day": 253,
+      "enemyTowns": 10,
+      "gold": 499837,
+      "heroes": 7,
+      "movesIncludingRetries": 6862,
+      "towns": 4
+    },
+    {
+      "armyPower": 56215.29666666666,
+      "day": 254,
+      "enemyTowns": 10,
+      "gold": 519837,
+      "heroes": 7,
+      "movesIncludingRetries": 6895,
+      "towns": 4
+    },
+    {
+      "armyPower": 56215.29666666666,
+      "day": 255,
+      "enemyTowns": 11,
+      "gold": 539837,
+      "heroes": 7,
+      "movesIncludingRetries": 6930,
+      "towns": 3
+    },
+    {
+      "armyPower": 56215.29666666666,
+      "day": 256,
+      "enemyTowns": 11,
+      "gold": 555837,
+      "heroes": 7,
+      "movesIncludingRetries": 6968,
+      "towns": 3
+    },
+    {
+      "armyPower": 56215.29666666666,
+      "day": 257,
+      "enemyTowns": 11,
+      "gold": 571837,
+      "heroes": 7,
+      "movesIncludingRetries": 6998,
+      "towns": 3
+    },
+    {
+      "armyPower": 56215.29666666666,
+      "day": 258,
+      "enemyTowns": 11,
+      "gold": 587837,
+      "heroes": 7,
+      "movesIncludingRetries": 7023,
+      "towns": 3
+    },
+    {
+      "armyPower": 17565.026666666665,
+      "day": 259,
+      "enemyTowns": 11,
+      "gold": 603837,
+      "heroes": 7,
+      "movesIncludingRetries": 7063,
+      "towns": 3
+    },
+    {
+      "armyPower": 17565.026666666665,
+      "day": 260,
+      "enemyTowns": 11,
+      "gold": 571645,
+      "heroes": 7,
+      "movesIncludingRetries": 7103,
+      "towns": 3
+    },
+    {
+      "armyPower": 14587.106666666667,
+      "day": 261,
+      "enemyTowns": 10,
+      "gold": 587645,
+      "heroes": 7,
+      "movesIncludingRetries": 7150,
+      "towns": 4
+    },
+    {
+      "armyPower": 14587.106666666667,
+      "day": 262,
+      "enemyTowns": 11,
+      "gold": 607645,
+      "heroes": 7,
+      "movesIncludingRetries": 7188,
+      "towns": 3
+    },
+    {
+      "armyPower": 14587.106666666667,
+      "day": 263,
+      "enemyTowns": 11,
+      "gold": 623845,
+      "heroes": 7,
+      "movesIncludingRetries": 7233,
+      "towns": 3
+    },
+    {
+      "armyPower": 14587.106666666667,
+      "day": 264,
+      "enemyTowns": 11,
+      "gold": 639845,
+      "heroes": 7,
+      "movesIncludingRetries": 7273,
+      "towns": 3
+    },
+    {
+      "armyPower": 15778.773333333334,
+      "day": 265,
+      "enemyTowns": 11,
+      "gold": 653845,
+      "heroes": 7,
+      "movesIncludingRetries": 7309,
+      "towns": 3
+    },
+    {
+      "armyPower": 15778.773333333334,
+      "day": 266,
+      "enemyTowns": 12,
+      "gold": 669845,
+      "heroes": 7,
+      "movesIncludingRetries": 7327,
+      "towns": 2
+    },
+    {
+      "armyPower": 15778.773333333334,
+      "day": 267,
+      "enemyTowns": 12,
+      "gold": 638815,
+      "heroes": 7,
+      "movesIncludingRetries": 7351,
+      "towns": 2
+    },
+    {
+      "armyPower": 15778.773333333334,
+      "day": 268,
+      "enemyTowns": 12,
+      "gold": 650815,
+      "heroes": 7,
+      "movesIncludingRetries": 7377,
+      "towns": 2
+    },
+    {
+      "armyPower": 15778.773333333334,
+      "day": 269,
+      "enemyTowns": 12,
+      "gold": 662815,
+      "heroes": 7,
+      "movesIncludingRetries": 7394,
+      "towns": 2
+    },
+    {
+      "armyPower": 15778.773333333334,
+      "day": 270,
+      "enemyTowns": 13,
+      "gold": 674815,
+      "heroes": 7,
+      "movesIncludingRetries": 7432,
+      "towns": 1
+    },
+    {
+      "armyPower": 15778.773333333334,
+      "day": 271,
+      "enemyTowns": 12,
+      "gold": 682815,
+      "heroes": 7,
+      "movesIncludingRetries": 7453,
+      "towns": 2
+    },
+    {
+      "armyPower": 15778.773333333334,
+      "day": 272,
+      "enemyTowns": 12,
+      "gold": 694815,
+      "heroes": 7,
+      "movesIncludingRetries": 7484,
+      "towns": 2
+    },
+    {
+      "armyPower": 15778.773333333334,
+      "day": 273,
+      "enemyTowns": 11,
+      "gold": 706815,
+      "heroes": 7,
+      "movesIncludingRetries": 7510,
+      "towns": 3
+    },
+    {
+      "armyPower": 54537.009999999995,
+      "day": 274,
+      "enemyTowns": 11,
+      "gold": 640455,
+      "heroes": 7,
+      "movesIncludingRetries": 7542,
+      "towns": 3
+    },
+    {
+      "armyPower": 54537.009999999995,
+      "day": 275,
+      "enemyTowns": 11,
+      "gold": 656455,
+      "heroes": 7,
+      "movesIncludingRetries": 7573,
+      "towns": 3
+    },
+    {
+      "armyPower": 54537.009999999995,
+      "day": 276,
+      "enemyTowns": 12,
+      "gold": 672455,
+      "heroes": 7,
+      "movesIncludingRetries": 7597,
+      "towns": 2
+    },
+    {
+      "armyPower": 17056.800000000003,
+      "day": 277,
+      "enemyTowns": 12,
+      "gold": 684455,
+      "heroes": 7,
+      "movesIncludingRetries": 7637,
+      "towns": 2
+    },
+    {
+      "armyPower": 17056.800000000003,
+      "day": 278,
+      "enemyTowns": 12,
+      "gold": 696455,
+      "heroes": 7,
+      "movesIncludingRetries": 7662,
+      "towns": 2
+    },
+    {
+      "armyPower": 17056.800000000003,
+      "day": 279,
+      "enemyTowns": 12,
+      "gold": 708455,
+      "heroes": 7,
+      "movesIncludingRetries": 7685,
+      "towns": 2
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 280,
+      "enemyTowns": 11,
+      "gold": 720455,
+      "heroes": 7,
+      "movesIncludingRetries": 7708,
+      "towns": 3
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 281,
+      "enemyTowns": 11,
+      "gold": 673025,
+      "heroes": 7,
+      "movesIncludingRetries": 7739,
+      "towns": 3
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 282,
+      "enemyTowns": 11,
+      "gold": 688025,
+      "heroes": 7,
+      "movesIncludingRetries": 7769,
+      "towns": 3
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 283,
+      "enemyTowns": 11,
+      "gold": 704025,
+      "heroes": 7,
+      "movesIncludingRetries": 7797,
+      "towns": 3
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 284,
+      "enemyTowns": 11,
+      "gold": 720025,
+      "heroes": 7,
+      "movesIncludingRetries": 7812,
+      "towns": 3
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 285,
+      "enemyTowns": 12,
+      "gold": 736025,
+      "heroes": 7,
+      "movesIncludingRetries": 7841,
+      "towns": 2
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 286,
+      "enemyTowns": 12,
+      "gold": 748025,
+      "heroes": 7,
+      "movesIncludingRetries": 7868,
+      "towns": 2
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 287,
+      "enemyTowns": 12,
+      "gold": 760025,
+      "heroes": 7,
+      "movesIncludingRetries": 7901,
+      "towns": 2
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 288,
+      "enemyTowns": 12,
+      "gold": 728895,
+      "heroes": 7,
+      "movesIncludingRetries": 7930,
+      "towns": 2
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 289,
+      "enemyTowns": 13,
+      "gold": 736695,
+      "heroes": 7,
+      "movesIncludingRetries": 7960,
+      "towns": 1
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 290,
+      "enemyTowns": 13,
+      "gold": 744695,
+      "heroes": 7,
+      "movesIncludingRetries": 7994,
+      "towns": 1
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 291,
+      "enemyTowns": 13,
+      "gold": 752695,
+      "heroes": 7,
+      "movesIncludingRetries": 8027,
+      "towns": 1
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 292,
+      "enemyTowns": 13,
+      "gold": 760695,
+      "heroes": 7,
+      "movesIncludingRetries": 8060,
+      "towns": 1
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 293,
+      "enemyTowns": 13,
+      "gold": 768695,
+      "heroes": 7,
+      "movesIncludingRetries": 8083,
+      "towns": 1
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 294,
+      "enemyTowns": 13,
+      "gold": 776695,
+      "heroes": 7,
+      "movesIncludingRetries": 8134,
+      "towns": 1
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 295,
+      "enemyTowns": 13,
+      "gold": 762310,
+      "heroes": 7,
+      "movesIncludingRetries": 8175,
+      "towns": 1
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 296,
+      "enemyTowns": 13,
+      "gold": 770310,
+      "heroes": 7,
+      "movesIncludingRetries": 8213,
+      "towns": 1
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 297,
+      "enemyTowns": 13,
+      "gold": 778310,
+      "heroes": 7,
+      "movesIncludingRetries": 8249,
+      "towns": 1
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 298,
+      "enemyTowns": 13,
+      "gold": 786310,
+      "heroes": 7,
+      "movesIncludingRetries": 8289,
+      "towns": 1
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 299,
+      "enemyTowns": 13,
+      "gold": 794310,
+      "heroes": 7,
+      "movesIncludingRetries": 8330,
+      "towns": 1
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 300,
+      "enemyTowns": 13,
+      "gold": 802310,
+      "heroes": 7,
+      "movesIncludingRetries": 8367,
+      "towns": 1
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 301,
+      "enemyTowns": 13,
+      "gold": 810310,
+      "heroes": 7,
+      "movesIncludingRetries": 8410,
+      "towns": 1
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 302,
+      "enemyTowns": 13,
+      "gold": 795425,
+      "heroes": 7,
+      "movesIncludingRetries": 8452,
+      "towns": 1
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 303,
+      "enemyTowns": 13,
+      "gold": 803425,
+      "heroes": 7,
+      "movesIncludingRetries": 8474,
+      "towns": 1
+    },
+    {
+      "armyPower": 37940.96,
+      "day": 304,
+      "enemyTowns": 12,
+      "gold": 811425,
+      "heroes": 7,
+      "movesIncludingRetries": 8495,
+      "towns": 2
+    },
+    {
+      "armyPower": 307945.69333333336,
+      "day": 305,
+      "enemyTowns": 11,
+      "gold": 800390,
+      "heroes": 7,
+      "movesIncludingRetries": 8513,
+      "towns": 3
+    },
+    {
+      "armyPower": 49501.74,
+      "day": 306,
+      "enemyTowns": 10,
+      "gold": 816390,
+      "heroes": 7,
+      "movesIncludingRetries": 8557,
+      "towns": 4
+    },
+    {
+      "armyPower": 49501.74,
+      "day": 307,
+      "enemyTowns": 10,
+      "gold": 836390,
+      "heroes": 7,
+      "movesIncludingRetries": 8580,
+      "towns": 4
+    },
+    {
+      "armyPower": 49501.74,
+      "day": 308,
+      "enemyTowns": 10,
+      "gold": 856390,
+      "heroes": 7,
+      "movesIncludingRetries": 8615,
+      "towns": 4
+    },
+    {
+      "armyPower": 49501.74,
+      "day": 309,
+      "enemyTowns": 10,
+      "gold": 790540,
+      "heroes": 7,
+      "movesIncludingRetries": 8642,
+      "towns": 4
+    },
+    {
+      "armyPower": 49501.74,
+      "day": 310,
+      "enemyTowns": 10,
+      "gold": 809540,
+      "heroes": 7,
+      "movesIncludingRetries": 8675,
+      "towns": 4
+    },
+    {
+      "armyPower": 49501.74,
+      "day": 311,
+      "enemyTowns": 10,
+      "gold": 828540,
+      "heroes": 7,
+      "movesIncludingRetries": 8705,
+      "towns": 4
+    },
+    {
+      "armyPower": 49501.74,
+      "day": 312,
+      "enemyTowns": 10,
+      "gold": 847540,
+      "heroes": 7,
+      "movesIncludingRetries": 8734,
+      "towns": 4
+    },
+    {
+      "armyPower": 49501.74,
+      "day": 313,
+      "enemyTowns": 11,
+      "gold": 866540,
+      "heroes": 7,
+      "movesIncludingRetries": 8768,
+      "towns": 3
+    },
+    {
+      "armyPower": 49501.74,
+      "day": 314,
+      "enemyTowns": 11,
+      "gold": 881540,
+      "heroes": 7,
+      "movesIncludingRetries": 8802,
+      "towns": 3
+    },
+    {
+      "armyPower": 49501.74,
+      "day": 315,
+      "enemyTowns": 11,
+      "gold": 896540,
+      "heroes": 7,
+      "movesIncludingRetries": 8847,
+      "towns": 3
+    },
+    {
+      "armyPower": 49501.74,
+      "day": 316,
+      "enemyTowns": 12,
+      "gold": 868820,
+      "heroes": 7,
+      "movesIncludingRetries": 8891,
+      "towns": 2
+    },
+    {
+      "armyPower": 49501.74,
+      "day": 317,
+      "enemyTowns": 12,
+      "gold": 879820,
+      "heroes": 7,
+      "movesIncludingRetries": 8935,
+      "towns": 2
+    },
+    {
+      "armyPower": 28090.82,
+      "day": 318,
+      "enemyTowns": 12,
+      "gold": 889320,
+      "heroes": 6,
+      "movesIncludingRetries": 8972,
+      "towns": 2
+    },
+    {
+      "armyPower": 28090.82,
+      "day": 319,
+      "enemyTowns": 12,
+      "gold": 900320,
+      "heroes": 7,
+      "movesIncludingRetries": 9016,
+      "towns": 2
+    },
+    {
+      "armyPower": 28090.82,
+      "day": 320,
+      "enemyTowns": 12,
+      "gold": 910320,
+      "heroes": 7,
+      "movesIncludingRetries": 9061,
+      "towns": 2
+    },
+    {
+      "armyPower": 28090.82,
+      "day": 321,
+      "enemyTowns": 12,
+      "gold": 920320,
+      "heroes": 7,
+      "movesIncludingRetries": 9103,
+      "towns": 2
+    },
+    {
+      "armyPower": 28090.82,
+      "day": 322,
+      "enemyTowns": 12,
+      "gold": 930320,
+      "heroes": 7,
+      "movesIncludingRetries": 9150,
+      "towns": 2
+    },
+    {
+      "armyPower": 28090.82,
+      "day": 323,
+      "enemyTowns": 12,
+      "gold": 896630,
+      "heroes": 7,
+      "movesIncludingRetries": 9189,
+      "towns": 2
+    },
+    {
+      "armyPower": 28090.82,
+      "day": 324,
+      "enemyTowns": 12,
+      "gold": 906630,
+      "heroes": 7,
+      "movesIncludingRetries": 9231,
+      "towns": 2
+    },
+    {
+      "armyPower": 28090.82,
+      "day": 325,
+      "enemyTowns": 13,
+      "gold": 917630,
+      "heroes": 7,
+      "movesIncludingRetries": 9279,
+      "towns": 1
+    },
+    {
+      "armyPower": 29220.153333333335,
+      "day": 326,
+      "enemyTowns": 13,
+      "gold": 921930,
+      "heroes": 7,
+      "movesIncludingRetries": 9318,
+      "towns": 1
+    },
+    {
+      "armyPower": 29220.153333333335,
+      "day": 327,
+      "enemyTowns": 12,
+      "gold": 928930,
+      "heroes": 7,
+      "movesIncludingRetries": 9359,
+      "towns": 2
+    },
+    {
+      "armyPower": 29220.153333333335,
+      "day": 328,
+      "enemyTowns": 11,
+      "gold": 939930,
+      "heroes": 7,
+      "movesIncludingRetries": 9390,
+      "towns": 3
+    },
+    {
+      "armyPower": 59085.01333333333,
+      "day": 329,
+      "enemyTowns": 11,
+      "gold": 954930,
+      "heroes": 6,
+      "movesIncludingRetries": 9410,
+      "towns": 3
+    },
+    {
+      "armyPower": 65718.55333333333,
+      "day": 330,
+      "enemyTowns": 10,
+      "gold": 904950,
+      "heroes": 7,
+      "movesIncludingRetries": 9431,
+      "towns": 4
+    },
+    {
+      "armyPower": 65718.55333333333,
+      "day": 331,
+      "enemyTowns": 11,
+      "gold": 923950,
+      "heroes": 7,
+      "movesIncludingRetries": 9461,
+      "towns": 3
+    },
+    {
+      "armyPower": 65718.55333333333,
+      "day": 332,
+      "enemyTowns": 10,
+      "gold": 938950,
+      "heroes": 7,
+      "movesIncludingRetries": 9487,
+      "towns": 4
+    },
+    {
+      "armyPower": 65718.55333333333,
+      "day": 333,
+      "enemyTowns": 10,
+      "gold": 957950,
+      "heroes": 7,
+      "movesIncludingRetries": 9515,
+      "towns": 4
+    },
+    {
+      "armyPower": 65718.55333333333,
+      "day": 334,
+      "enemyTowns": 11,
+      "gold": 976950,
+      "heroes": 7,
+      "movesIncludingRetries": 9546,
+      "towns": 3
+    },
+    {
+      "armyPower": 65718.55333333333,
+      "day": 335,
+      "enemyTowns": 11,
+      "gold": 991950,
+      "heroes": 7,
+      "movesIncludingRetries": 9575,
+      "towns": 3
+    },
+    {
+      "armyPower": 65718.55333333333,
+      "day": 336,
+      "enemyTowns": 10,
+      "gold": 1006950,
+      "heroes": 7,
+      "movesIncludingRetries": 9604,
+      "towns": 4
+    },
+    {
+      "armyPower": 65718.55333333333,
+      "day": 337,
+      "enemyTowns": 9,
+      "gold": 938400,
+      "heroes": 7,
+      "movesIncludingRetries": 9636,
+      "towns": 5
+    },
+    {
+      "armyPower": 65718.55333333333,
+      "day": 338,
+      "enemyTowns": 10,
+      "gold": 961400,
+      "heroes": 7,
+      "movesIncludingRetries": 9668,
+      "towns": 4
+    },
+    {
+      "armyPower": 65718.55333333333,
+      "day": 339,
+      "enemyTowns": 10,
+      "gold": 980400,
+      "heroes": 7,
+      "movesIncludingRetries": 9698,
+      "towns": 4
+    },
+    {
+      "armyPower": 65718.55333333333,
+      "day": 340,
+      "enemyTowns": 10,
+      "gold": 997900,
+      "heroes": 7,
+      "movesIncludingRetries": 9725,
+      "towns": 4
+    },
+    {
+      "armyPower": 65718.55333333333,
+      "day": 341,
+      "enemyTowns": 11,
+      "gold": 1016900,
+      "heroes": 7,
+      "movesIncludingRetries": 9752,
+      "towns": 3
+    },
+    {
+      "armyPower": 65718.55333333333,
+      "day": 342,
+      "enemyTowns": 11,
+      "gold": 1031900,
+      "heroes": 7,
+      "movesIncludingRetries": 9777,
+      "towns": 3
+    },
+    {
+      "armyPower": 65718.55333333333,
+      "day": 343,
+      "enemyTowns": 12,
+      "gold": 1047900,
+      "heroes": 7,
+      "movesIncludingRetries": 9798,
+      "towns": 2
+    },
+    {
+      "armyPower": 63907.293333333335,
+      "day": 344,
+      "enemyTowns": 11,
+      "gold": 1025340,
+      "heroes": 7,
+      "movesIncludingRetries": 9830,
+      "towns": 3
+    },
+    {
+      "armyPower": 63907.293333333335,
+      "day": 345,
+      "enemyTowns": 12,
+      "gold": 1041340,
+      "heroes": 6,
+      "movesIncludingRetries": 9864,
+      "towns": 2
+    },
+    {
+      "armyPower": 63907.293333333335,
+      "day": 346,
+      "enemyTowns": 12,
+      "gold": 1054340,
+      "heroes": 7,
+      "movesIncludingRetries": 9897,
+      "towns": 2
+    },
+    {
+      "armyPower": 63907.293333333335,
+      "day": 347,
+      "enemyTowns": 12,
+      "gold": 1068340,
+      "heroes": 7,
+      "movesIncludingRetries": 9952,
+      "towns": 2
+    },
+    {
+      "armyPower": 63907.293333333335,
+      "day": 348,
+      "enemyTowns": 12,
+      "gold": 590940,
+      "heroes": 7,
+      "movesIncludingRetries": 9997,
+      "towns": 2
+    },
+    {
+      "armyPower": 63907.293333333335,
+      "day": 349,
+      "enemyTowns": 12,
+      "gold": 604940,
+      "heroes": 7,
+      "movesIncludingRetries": 10043,
+      "towns": 2
+    },
+    {
+      "armyPower": 62426.143333333326,
+      "day": 350,
+      "enemyTowns": 10,
+      "gold": 619940,
+      "heroes": 7,
+      "movesIncludingRetries": 10088,
+      "towns": 4
+    },
+    {
+      "armyPower": 62426.143333333326,
+      "day": 351,
+      "enemyTowns": 10,
+      "gold": 554200,
+      "heroes": 7,
+      "movesIncludingRetries": 10118,
+      "towns": 4
+    },
+    {
+      "armyPower": 62426.143333333326,
+      "day": 352,
+      "enemyTowns": 9,
+      "gold": 577200,
+      "heroes": 7,
+      "movesIncludingRetries": 10149,
+      "towns": 5
+    },
+    {
+      "armyPower": 62426.143333333326,
+      "day": 353,
+      "enemyTowns": 9,
+      "gold": 604200,
+      "heroes": 7,
+      "movesIncludingRetries": 10183,
+      "towns": 5
+    },
+    {
+      "armyPower": 62426.143333333326,
+      "day": 354,
+      "enemyTowns": 9,
+      "gold": 632200,
+      "heroes": 7,
+      "movesIncludingRetries": 10209,
+      "towns": 5
+    },
+    {
+      "armyPower": 62426.143333333326,
+      "day": 355,
+      "enemyTowns": 10,
+      "gold": 660200,
+      "heroes": 7,
+      "movesIncludingRetries": 10237,
+      "towns": 4
+    },
+    {
+      "armyPower": 62426.143333333326,
+      "day": 356,
+      "enemyTowns": 9,
+      "gold": 679550,
+      "heroes": 7,
+      "movesIncludingRetries": 10262,
+      "towns": 5
+    },
+    {
+      "armyPower": 62426.143333333326,
+      "day": 357,
+      "enemyTowns": 9,
+      "gold": 707550,
+      "heroes": 7,
+      "movesIncludingRetries": 10282,
+      "towns": 5
+    },
+    {
+      "armyPower": 62426.143333333326,
+      "day": 358,
+      "enemyTowns": 9,
+      "gold": 630020,
+      "heroes": 7,
+      "movesIncludingRetries": 10318,
+      "towns": 5
+    },
+    {
+      "armyPower": 62426.143333333326,
+      "day": 359,
+      "enemyTowns": 9,
+      "gold": 658020,
+      "heroes": 7,
+      "movesIncludingRetries": 10368,
+      "towns": 5
+    },
+    {
+      "armyPower": 62426.143333333326,
+      "day": 360,
+      "enemyTowns": 9,
+      "gold": 686020,
+      "heroes": 7,
+      "movesIncludingRetries": 10424,
+      "towns": 5
+    },
+    {
+      "armyPower": 62426.143333333326,
+      "day": 361,
+      "enemyTowns": 8,
+      "gold": 714020,
+      "heroes": 7,
+      "movesIncludingRetries": 10470,
+      "towns": 6
+    },
+    {
+      "armyPower": 62426.143333333326,
+      "day": 362,
+      "enemyTowns": 8,
+      "gold": 746020,
+      "heroes": 7,
+      "movesIncludingRetries": 10517,
+      "towns": 6
+    },
+    {
+      "armyPower": 62426.143333333326,
+      "day": 363,
+      "enemyTowns": 8,
+      "gold": 778020,
+      "heroes": 7,
+      "movesIncludingRetries": 10562,
+      "towns": 6
+    },
+    {
+      "armyPower": 30299.62666666667,
+      "day": 364,
+      "enemyTowns": 9,
+      "gold": 810020,
+      "heroes": 7,
+      "movesIncludingRetries": 10600,
+      "towns": 5
+    },
+    {
+      "armyPower": 38223.14666666667,
+      "day": 365,
+      "enemyTowns": 9,
+      "gold": 731940,
+      "heroes": 7,
+      "movesIncludingRetries": 10643,
+      "towns": 5
+    },
+    {
+      "armyPower": 38223.14666666667,
+      "day": 366,
+      "enemyTowns": 9,
+      "gold": 759940,
+      "heroes": 7,
+      "movesIncludingRetries": 10692,
+      "towns": 5
+    },
+    {
+      "armyPower": 33560.89333333333,
+      "day": 367,
+      "enemyTowns": 8,
+      "gold": 787940,
+      "heroes": 7,
+      "movesIncludingRetries": 10735,
+      "towns": 6
+    },
+    {
+      "armyPower": 33560.89333333333,
+      "day": 368,
+      "enemyTowns": 9,
+      "gold": 819940,
+      "heroes": 7,
+      "movesIncludingRetries": 10772,
+      "towns": 5
+    },
+    {
+      "armyPower": 33560.89333333333,
+      "day": 369,
+      "enemyTowns": 9,
+      "gold": 847940,
+      "heroes": 7,
+      "movesIncludingRetries": 10814,
+      "towns": 5
+    },
+    {
+      "armyPower": 33560.89333333333,
+      "day": 370,
+      "enemyTowns": 10,
+      "gold": 875940,
+      "heroes": 7,
+      "movesIncludingRetries": 10861,
+      "towns": 4
+    },
+    {
+      "armyPower": 33560.89333333333,
+      "day": 371,
+      "enemyTowns": 10,
+      "gold": 899940,
+      "heroes": 7,
+      "movesIncludingRetries": 10907,
+      "towns": 4
+    },
+    {
+      "armyPower": 33560.89333333333,
+      "day": 372,
+      "enemyTowns": 10,
+      "gold": 832340,
+      "heroes": 7,
+      "movesIncludingRetries": 10949,
+      "towns": 4
+    },
+    {
+      "armyPower": 33560.89333333333,
+      "day": 373,
+      "enemyTowns": 10,
+      "gold": 856340,
+      "heroes": 7,
+      "movesIncludingRetries": 10990,
+      "towns": 4
+    },
+    {
+      "armyPower": 33560.89333333333,
+      "day": 374,
+      "enemyTowns": 10,
+      "gold": 880340,
+      "heroes": 7,
+      "movesIncludingRetries": 11026,
+      "towns": 4
+    },
+    {
+      "armyPower": 33560.89333333333,
+      "day": 375,
+      "enemyTowns": 10,
+      "gold": 906740,
+      "heroes": 7,
+      "movesIncludingRetries": 11048,
+      "towns": 4
+    },
+    {
+      "armyPower": 33560.89333333333,
+      "day": 376,
+      "enemyTowns": 10,
+      "gold": 930740,
+      "heroes": 7,
+      "movesIncludingRetries": 11093,
+      "towns": 4
+    },
+    {
+      "armyPower": 33560.89333333333,
+      "day": 377,
+      "enemyTowns": 10,
+      "gold": 954740,
+      "heroes": 7,
+      "movesIncludingRetries": 11115,
+      "towns": 4
+    },
+    {
+      "armyPower": 33560.89333333333,
+      "day": 378,
+      "enemyTowns": 10,
+      "gold": 978740,
+      "heroes": 7,
+      "movesIncludingRetries": 11141,
+      "towns": 4
+    },
+    {
+      "armyPower": 33560.89333333333,
+      "day": 379,
+      "enemyTowns": 10,
+      "gold": 943350,
+      "heroes": 7,
+      "movesIncludingRetries": 11169,
+      "towns": 4
+    },
+    {
+      "armyPower": 33560.89333333333,
+      "day": 380,
+      "enemyTowns": 10,
+      "gold": 966350,
+      "heroes": 7,
+      "movesIncludingRetries": 11187,
+      "towns": 4
+    },
+    {
+      "armyPower": 76049.88666666667,
+      "day": 381,
+      "enemyTowns": 11,
+      "gold": 970450,
+      "heroes": 7,
+      "movesIncludingRetries": 11210,
+      "towns": 3
+    },
+    {
+      "armyPower": 76049.88666666667,
+      "day": 382,
+      "enemyTowns": 10,
+      "gold": 989450,
+      "heroes": 7,
+      "movesIncludingRetries": 11239,
+      "towns": 4
+    },
+    {
+      "armyPower": 76049.88666666667,
+      "day": 383,
+      "enemyTowns": 10,
+      "gold": 1012450,
+      "heroes": 7,
+      "movesIncludingRetries": 11245,
+      "towns": 4
+    },
+    {
+      "armyPower": 76049.88666666667,
+      "day": 384,
+      "enemyTowns": 10,
+      "gold": 1035450,
+      "heroes": 7,
+      "movesIncludingRetries": 11274,
+      "towns": 4
+    },
+    {
+      "armyPower": 76049.88666666667,
+      "day": 385,
+      "enemyTowns": 10,
+      "gold": 1058450,
+      "heroes": 7,
+      "movesIncludingRetries": 11301,
+      "towns": 4
+    },
+    {
+      "armyPower": 76049.88666666667,
+      "day": 386,
+      "enemyTowns": 11,
+      "gold": 1033820,
+      "heroes": 7,
+      "movesIncludingRetries": 11320,
+      "towns": 3
+    },
+    {
+      "armyPower": 76049.88666666667,
+      "day": 387,
+      "enemyTowns": 12,
+      "gold": 1052820,
+      "heroes": 6,
+      "movesIncludingRetries": 11357,
+      "towns": 2
+    },
+    {
+      "armyPower": 9761.400000000001,
+      "day": 388,
+      "enemyTowns": 11,
+      "gold": 1067820,
+      "heroes": 7,
+      "movesIncludingRetries": 11386,
+      "towns": 3
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 389,
+      "enemyTowns": 11,
+      "gold": 1086820,
+      "heroes": 7,
+      "movesIncludingRetries": 11413,
+      "towns": 3
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 390,
+      "enemyTowns": 10,
+      "gold": 1089560,
+      "heroes": 7,
+      "movesIncludingRetries": 11439,
+      "towns": 4
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 391,
+      "enemyTowns": 11,
+      "gold": 1112560,
+      "heroes": 7,
+      "movesIncludingRetries": 11468,
+      "towns": 3
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 392,
+      "enemyTowns": 10,
+      "gold": 1131560,
+      "heroes": 7,
+      "movesIncludingRetries": 11497,
+      "towns": 4
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 393,
+      "enemyTowns": 9,
+      "gold": 1070440,
+      "heroes": 7,
+      "movesIncludingRetries": 11537,
+      "towns": 5
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 394,
+      "enemyTowns": 9,
+      "gold": 1097440,
+      "heroes": 7,
+      "movesIncludingRetries": 11577,
+      "towns": 5
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 395,
+      "enemyTowns": 9,
+      "gold": 1124440,
+      "heroes": 7,
+      "movesIncludingRetries": 11613,
+      "towns": 5
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 396,
+      "enemyTowns": 8,
+      "gold": 1151440,
+      "heroes": 7,
+      "movesIncludingRetries": 11648,
+      "towns": 6
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 397,
+      "enemyTowns": 8,
+      "gold": 1182440,
+      "heroes": 7,
+      "movesIncludingRetries": 11698,
+      "towns": 6
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 398,
+      "enemyTowns": 8,
+      "gold": 1213440,
+      "heroes": 6,
+      "movesIncludingRetries": 11737,
+      "towns": 6
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 399,
+      "enemyTowns": 8,
+      "gold": 1244940,
+      "heroes": 7,
+      "movesIncludingRetries": 11780,
+      "towns": 6
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 400,
+      "enemyTowns": 8,
+      "gold": 1147890,
+      "heroes": 7,
+      "movesIncludingRetries": 11821,
+      "towns": 6
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 401,
+      "enemyTowns": 8,
+      "gold": 1179890,
+      "heroes": 7,
+      "movesIncludingRetries": 11863,
+      "towns": 6
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 402,
+      "enemyTowns": 8,
+      "gold": 1211890,
+      "heroes": 7,
+      "movesIncludingRetries": 11907,
+      "towns": 6
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 403,
+      "enemyTowns": 8,
+      "gold": 1243890,
+      "heroes": 7,
+      "movesIncludingRetries": 11950,
+      "towns": 6
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 404,
+      "enemyTowns": 8,
+      "gold": 1275890,
+      "heroes": 6,
+      "movesIncludingRetries": 11987,
+      "towns": 6
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 405,
+      "enemyTowns": 7,
+      "gold": 1307890,
+      "heroes": 6,
+      "movesIncludingRetries": 12026,
+      "towns": 7
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 406,
+      "enemyTowns": 7,
+      "gold": 1343890,
+      "heroes": 6,
+      "movesIncludingRetries": 12060,
+      "towns": 7
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 407,
+      "enemyTowns": 7,
+      "gold": 1230570,
+      "heroes": 6,
+      "movesIncludingRetries": 12094,
+      "towns": 7
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 408,
+      "enemyTowns": 8,
+      "gold": 1267570,
+      "heroes": 6,
+      "movesIncludingRetries": 12137,
+      "towns": 6
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 409,
+      "enemyTowns": 7,
+      "gold": 1299570,
+      "heroes": 6,
+      "movesIncludingRetries": 12180,
+      "towns": 7
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 410,
+      "enemyTowns": 8,
+      "gold": 1335570,
+      "heroes": 6,
+      "movesIncludingRetries": 12220,
+      "towns": 6
+    },
+    {
+      "armyPower": 37789.4,
+      "day": 411,
+      "enemyTowns": 8,
+      "gold": 1369570,
+      "heroes": 7,
+      "movesIncludingRetries": 12254,
+      "towns": 6
+    },
+    {
+      "armyPower": 37296.05,
+      "day": 412,
+      "enemyTowns": 7,
+      "gold": 1403570,
+      "heroes": 6,
+      "movesIncludingRetries": 12288,
+      "towns": 7
+    },
+    {
+      "armyPower": 37296.05,
+      "day": 413,
+      "enemyTowns": 7,
+      "gold": 1441570,
+      "heroes": 6,
+      "movesIncludingRetries": 12318,
+      "towns": 7
+    },
+    {
+      "armyPower": 37524.850000000006,
+      "day": 414,
+      "enemyTowns": 8,
+      "gold": 1356120,
+      "heroes": 6,
+      "movesIncludingRetries": 12359,
+      "towns": 6
+    },
+    {
+      "armyPower": 37524.850000000006,
+      "day": 415,
+      "enemyTowns": 8,
+      "gold": 1391120,
+      "heroes": 6,
+      "movesIncludingRetries": 12397,
+      "towns": 6
+    },
+    {
+      "armyPower": 37524.850000000006,
+      "day": 416,
+      "enemyTowns": 8,
+      "gold": 1426120,
+      "heroes": 6,
+      "movesIncludingRetries": 12438,
+      "towns": 6
+    },
+    {
+      "armyPower": 35041.2,
+      "day": 417,
+      "enemyTowns": 8,
+      "gold": 633220,
+      "heroes": 6,
+      "movesIncludingRetries": 12475,
+      "towns": 6
+    },
+    {
+      "armyPower": 35041.2,
+      "day": 418,
+      "enemyTowns": 9,
+      "gold": 668220,
+      "heroes": 6,
+      "movesIncludingRetries": 12504,
+      "towns": 5
+    },
+    {
+      "armyPower": 51952.63333333333,
+      "day": 419,
+      "enemyTowns": 8,
+      "gold": 699220,
+      "heroes": 7,
+      "movesIncludingRetries": 12530,
+      "towns": 6
+    },
+    {
+      "armyPower": 54742.9,
+      "day": 420,
+      "enemyTowns": 9,
+      "gold": 723420,
+      "heroes": 6,
+      "movesIncludingRetries": 12550,
+      "towns": 5
+    },
+    {
+      "armyPower": 54742.9,
+      "day": 421,
+      "enemyTowns": 9,
+      "gold": 656950,
+      "heroes": 7,
+      "movesIncludingRetries": 12575,
+      "towns": 5
+    },
+    {
+      "armyPower": 54742.9,
+      "day": 422,
+      "enemyTowns": 9,
+      "gold": 686950,
+      "heroes": 7,
+      "movesIncludingRetries": 12602,
+      "towns": 5
+    },
+    {
+      "armyPower": 56311.5,
+      "day": 423,
+      "enemyTowns": 9,
+      "gold": 713950,
+      "heroes": 7,
+      "movesIncludingRetries": 12626,
+      "towns": 5
+    },
+    {
+      "armyPower": 56311.5,
+      "day": 424,
+      "enemyTowns": 9,
+      "gold": 743950,
+      "heroes": 6,
+      "movesIncludingRetries": 12651,
+      "towns": 5
+    },
+    {
+      "armyPower": 56311.5,
+      "day": 425,
+      "enemyTowns": 8,
+      "gold": 773950,
+      "heroes": 6,
+      "movesIncludingRetries": 12679,
+      "towns": 6
+    },
+    {
+      "armyPower": 56311.5,
+      "day": 426,
+      "enemyTowns": 8,
+      "gold": 807950,
+      "heroes": 6,
+      "movesIncludingRetries": 12702,
+      "towns": 6
+    },
+    {
+      "armyPower": 71487.1,
+      "day": 427,
+      "enemyTowns": 8,
+      "gold": 841950,
+      "heroes": 5,
+      "movesIncludingRetries": 12741,
+      "towns": 6
+    },
+    {
+      "armyPower": 71487.1,
+      "day": 428,
+      "enemyTowns": 8,
+      "gold": 746610,
+      "heroes": 6,
+      "movesIncludingRetries": 12781,
+      "towns": 6
+    },
+    {
+      "armyPower": 71487.1,
+      "day": 429,
+      "enemyTowns": 9,
+      "gold": 781110,
+      "heroes": 7,
+      "movesIncludingRetries": 12820,
+      "towns": 5
+    },
+    {
+      "armyPower": 71515.7,
+      "day": 430,
+      "enemyTowns": 9,
+      "gold": 809910,
+      "heroes": 7,
+      "movesIncludingRetries": 12860,
+      "towns": 5
+    },
+    {
+      "armyPower": 71515.7,
+      "day": 431,
+      "enemyTowns": 9,
+      "gold": 836910,
+      "heroes": 7,
+      "movesIncludingRetries": 12900,
+      "towns": 5
+    },
+    {
+      "armyPower": 71515.7,
+      "day": 432,
+      "enemyTowns": 9,
+      "gold": 865910,
+      "heroes": 7,
+      "movesIncludingRetries": 12943,
+      "towns": 5
+    },
+    {
+      "armyPower": 71515.7,
+      "day": 433,
+      "enemyTowns": 9,
+      "gold": 894910,
+      "heroes": 7,
+      "movesIncludingRetries": 12985,
+      "towns": 5
+    },
+    {
+      "armyPower": 71515.7,
+      "day": 434,
+      "enemyTowns": 9,
+      "gold": 922910,
+      "heroes": 7,
+      "movesIncludingRetries": 13027,
+      "towns": 5
+    },
+    {
+      "armyPower": 71515.7,
+      "day": 435,
+      "enemyTowns": 9,
+      "gold": 827690,
+      "heroes": 7,
+      "movesIncludingRetries": 13064,
+      "towns": 5
+    },
+    {
+      "armyPower": 71515.7,
+      "day": 436,
+      "enemyTowns": 8,
+      "gold": 855190,
+      "heroes": 7,
+      "movesIncludingRetries": 13102,
+      "towns": 6
+    },
+    {
+      "armyPower": 71515.7,
+      "day": 437,
+      "enemyTowns": 9,
+      "gold": 886190,
+      "heroes": 7,
+      "movesIncludingRetries": 13146,
+      "towns": 5
+    },
+    {
+      "armyPower": 71515.7,
+      "day": 438,
+      "enemyTowns": 8,
+      "gold": 913190,
+      "heroes": 7,
+      "movesIncludingRetries": 13189,
+      "towns": 6
+    },
+    {
+      "armyPower": 71515.7,
+      "day": 439,
+      "enemyTowns": 8,
+      "gold": 944190,
+      "heroes": 7,
+      "movesIncludingRetries": 13232,
+      "towns": 6
+    },
+    {
+      "armyPower": 71515.7,
+      "day": 440,
+      "enemyTowns": 8,
+      "gold": 976190,
+      "heroes": 7,
+      "movesIncludingRetries": 13274,
+      "towns": 6
+    },
+    {
+      "armyPower": 71515.7,
+      "day": 441,
+      "enemyTowns": 9,
+      "gold": 1009190,
+      "heroes": 7,
+      "movesIncludingRetries": 13325,
+      "towns": 5
+    },
+    {
+      "armyPower": 71515.7,
+      "day": 442,
+      "enemyTowns": 9,
+      "gold": 932975,
+      "heroes": 7,
+      "movesIncludingRetries": 13363,
+      "towns": 5
+    },
+    {
+      "armyPower": 100661.20000000001,
+      "day": 443,
+      "enemyTowns": 8,
+      "gold": 960975,
+      "heroes": 7,
+      "movesIncludingRetries": 13401,
+      "towns": 6
+    },
+    {
+      "armyPower": 100661.20000000001,
+      "day": 444,
+      "enemyTowns": 8,
+      "gold": 992975,
+      "heroes": 7,
+      "movesIncludingRetries": 13441,
+      "towns": 6
+    },
+    {
+      "armyPower": 100661.20000000001,
+      "day": 445,
+      "enemyTowns": 7,
+      "gold": 1024975,
+      "heroes": 7,
+      "movesIncludingRetries": 13480,
+      "towns": 7
+    },
+    {
+      "armyPower": 100661.20000000001,
+      "day": 446,
+      "enemyTowns": 7,
+      "gold": 1060975,
+      "heroes": 7,
+      "movesIncludingRetries": 13526,
+      "towns": 7
+    },
+    {
+      "armyPower": 100661.20000000001,
+      "day": 447,
+      "enemyTowns": 8,
+      "gold": 1097975,
+      "heroes": 7,
+      "movesIncludingRetries": 13567,
+      "towns": 6
+    },
+    {
+      "armyPower": 100661.20000000001,
+      "day": 448,
+      "enemyTowns": 8,
+      "gold": 1130975,
+      "heroes": 6,
+      "movesIncludingRetries": 13607,
+      "towns": 6
+    },
+    {
+      "armyPower": 100661.20000000001,
+      "day": 449,
+      "enemyTowns": 9,
+      "gold": 1039560,
+      "heroes": 7,
+      "movesIncludingRetries": 13646,
+      "towns": 5
+    },
+    {
+      "armyPower": 100661.20000000001,
+      "day": 450,
+      "enemyTowns": 9,
+      "gold": 1068560,
+      "heroes": 7,
+      "movesIncludingRetries": 13686,
+      "towns": 5
+    },
+    {
+      "armyPower": 100661.20000000001,
+      "day": 451,
+      "enemyTowns": 9,
+      "gold": 1097560,
+      "heroes": 7,
+      "movesIncludingRetries": 13726,
+      "towns": 5
+    },
+    {
+      "armyPower": 100661.20000000001,
+      "day": 452,
+      "enemyTowns": 9,
+      "gold": 1125560,
+      "heroes": 7,
+      "movesIncludingRetries": 13765,
+      "towns": 5
+    },
+    {
+      "armyPower": 100661.20000000001,
+      "day": 453,
+      "enemyTowns": 9,
+      "gold": 1152560,
+      "heroes": 7,
+      "movesIncludingRetries": 13799,
+      "towns": 5
+    },
+    {
+      "armyPower": 66416.88,
+      "day": 454,
+      "enemyTowns": 9,
+      "gold": 1179560,
+      "heroes": 6,
+      "movesIncludingRetries": 13834,
+      "towns": 5
+    },
+    {
+      "armyPower": 66416.88,
+      "day": 455,
+      "enemyTowns": 9,
+      "gold": 1206560,
+      "heroes": 7,
+      "movesIncludingRetries": 13869,
+      "towns": 5
+    },
+    {
+      "armyPower": 66416.88,
+      "day": 456,
+      "enemyTowns": 9,
+      "gold": 1133015,
+      "heroes": 7,
+      "movesIncludingRetries": 13899,
+      "towns": 5
+    },
+    {
+      "armyPower": 66416.88,
+      "day": 457,
+      "enemyTowns": 9,
+      "gold": 1160015,
+      "heroes": 7,
+      "movesIncludingRetries": 13925,
+      "towns": 5
+    },
+    {
+      "armyPower": 66416.88,
+      "day": 458,
+      "enemyTowns": 9,
+      "gold": 1187015,
+      "heroes": 7,
+      "movesIncludingRetries": 13943,
+      "towns": 5
+    },
+    {
+      "armyPower": 106140.88,
+      "day": 459,
+      "enemyTowns": 8,
+      "gold": 1197215,
+      "heroes": 7,
+      "movesIncludingRetries": 13976,
+      "towns": 6
+    },
+    {
+      "armyPower": 106140.88,
+      "day": 460,
+      "enemyTowns": 7,
+      "gold": 1228215,
+      "heroes": 7,
+      "movesIncludingRetries": 14003,
+      "towns": 7
+    },
+    {
+      "armyPower": 106140.88,
+      "day": 461,
+      "enemyTowns": 7,
+      "gold": 1263215,
+      "heroes": 7,
+      "movesIncludingRetries": 14024,
+      "towns": 7
+    },
+    {
+      "armyPower": 106140.88,
+      "day": 462,
+      "enemyTowns": 7,
+      "gold": 1299215,
+      "heroes": 7,
+      "movesIncludingRetries": 14069,
+      "towns": 7
+    },
+    {
+      "armyPower": 59532.880000000005,
+      "day": 463,
+      "enemyTowns": 7,
+      "gold": 1180375,
+      "heroes": 6,
+      "movesIncludingRetries": 14114,
+      "towns": 7
+    },
+    {
+      "armyPower": 59532.880000000005,
+      "day": 464,
+      "enemyTowns": 7,
+      "gold": 1215375,
+      "heroes": 7,
+      "movesIncludingRetries": 14144,
+      "towns": 7
+    },
+    {
+      "armyPower": 59532.880000000005,
+      "day": 465,
+      "enemyTowns": 7,
+      "gold": 1249375,
+      "heroes": 7,
+      "movesIncludingRetries": 14173,
+      "towns": 7
+    },
+    {
+      "armyPower": 59532.880000000005,
+      "day": 466,
+      "enemyTowns": 7,
+      "gold": 1284175,
+      "heroes": 7,
+      "movesIncludingRetries": 14193,
+      "towns": 7
+    },
+    {
+      "armyPower": 87295.03,
+      "day": 467,
+      "enemyTowns": 7,
+      "gold": 1316175,
+      "heroes": 5,
+      "movesIncludingRetries": 14218,
+      "towns": 7
+    },
+    {
+      "armyPower": 87295.03,
+      "day": 468,
+      "enemyTowns": 7,
+      "gold": 1351175,
+      "heroes": 5,
+      "movesIncludingRetries": 14239,
+      "towns": 7
+    },
+    {
+      "armyPower": 87295.03,
+      "day": 469,
+      "enemyTowns": 7,
+      "gold": 1386175,
+      "heroes": 5,
+      "movesIncludingRetries": 14278,
+      "towns": 7
+    },
+    {
+      "armyPower": 87295.03,
+      "day": 470,
+      "enemyTowns": 7,
+      "gold": 1267210,
+      "heroes": 5,
+      "movesIncludingRetries": 14318,
+      "towns": 7
+    },
+    {
+      "armyPower": 87295.03,
+      "day": 471,
+      "enemyTowns": 7,
+      "gold": 1303210,
+      "heroes": 5,
+      "movesIncludingRetries": 14360,
+      "towns": 7
+    },
+    {
+      "armyPower": 86980.43000000001,
+      "day": 472,
+      "enemyTowns": 7,
+      "gold": 1340210,
+      "heroes": 5,
+      "movesIncludingRetries": 14403,
+      "towns": 7
+    },
+    {
+      "armyPower": 86980.43000000001,
+      "day": 473,
+      "enemyTowns": 7,
+      "gold": 1377210,
+      "heroes": 5,
+      "movesIncludingRetries": 14443,
+      "towns": 7
+    },
+    {
+      "armyPower": 86980.43000000001,
+      "day": 474,
+      "enemyTowns": 7,
+      "gold": 1414210,
+      "heroes": 5,
+      "movesIncludingRetries": 14484,
+      "towns": 7
+    },
+    {
+      "armyPower": 86980.43000000001,
+      "day": 475,
+      "enemyTowns": 7,
+      "gold": 1452210,
+      "heroes": 5,
+      "movesIncludingRetries": 14526,
+      "towns": 7
+    },
+    {
+      "armyPower": 86980.43000000001,
+      "day": 476,
+      "enemyTowns": 7,
+      "gold": 1491210,
+      "heroes": 5,
+      "movesIncludingRetries": 14564,
+      "towns": 7
+    },
+    {
+      "armyPower": 86980.43000000001,
+      "day": 477,
+      "enemyTowns": 7,
+      "gold": 1384090,
+      "heroes": 5,
+      "movesIncludingRetries": 14599,
+      "towns": 7
+    },
+    {
+      "armyPower": 86980.43000000001,
+      "day": 478,
+      "enemyTowns": 7,
+      "gold": 1418890,
+      "heroes": 5,
+      "movesIncludingRetries": 14642,
+      "towns": 7
+    },
+    {
+      "armyPower": 86980.43000000001,
+      "day": 479,
+      "enemyTowns": 7,
+      "gold": 1457890,
+      "heroes": 5,
+      "movesIncludingRetries": 14680,
+      "towns": 7
+    },
+    {
+      "armyPower": 86980.43000000001,
+      "day": 480,
+      "enemyTowns": 7,
+      "gold": 1496890,
+      "heroes": 5,
+      "movesIncludingRetries": 14717,
+      "towns": 7
+    },
+    {
+      "armyPower": 86980.43000000001,
+      "day": 481,
+      "enemyTowns": 7,
+      "gold": 1535890,
+      "heroes": 5,
+      "movesIncludingRetries": 14757,
+      "towns": 7
+    },
+    {
+      "armyPower": 86923.23000000001,
+      "day": 482,
+      "enemyTowns": 7,
+      "gold": 1573690,
+      "heroes": 5,
+      "movesIncludingRetries": 14786,
+      "towns": 7
+    },
+    {
+      "armyPower": 86923.23000000001,
+      "day": 483,
+      "enemyTowns": 6,
+      "gold": 1612690,
+      "heroes": 5,
+      "movesIncludingRetries": 14814,
+      "towns": 8
+    },
+    {
+      "armyPower": 86923.23000000001,
+      "day": 484,
+      "enemyTowns": 6,
+      "gold": 1446810,
+      "heroes": 5,
+      "movesIncludingRetries": 14854,
+      "towns": 8
+    },
+    {
+      "armyPower": 86923.23000000001,
+      "day": 485,
+      "enemyTowns": 6,
+      "gold": 1489810,
+      "heroes": 4,
+      "movesIncludingRetries": 14896,
+      "towns": 8
+    },
+    {
+      "armyPower": 86923.23000000001,
+      "day": 486,
+      "enemyTowns": 6,
+      "gold": 1533810,
+      "heroes": 5,
+      "movesIncludingRetries": 14925,
+      "towns": 8
+    },
+    {
+      "armyPower": 86923.23000000001,
+      "day": 487,
+      "enemyTowns": 6,
+      "gold": 1577810,
+      "heroes": 5,
+      "movesIncludingRetries": 14961,
+      "towns": 8
+    },
+    {
+      "armyPower": 86923.23000000001,
+      "day": 488,
+      "enemyTowns": 6,
+      "gold": 1621810,
+      "heroes": 5,
+      "movesIncludingRetries": 14987,
+      "towns": 8
+    },
+    {
+      "armyPower": 86923.23000000001,
+      "day": 489,
+      "enemyTowns": 6,
+      "gold": 1662810,
+      "heroes": 5,
+      "movesIncludingRetries": 15027,
+      "towns": 8
+    },
+    {
+      "armyPower": 86923.23000000001,
+      "day": 490,
+      "enemyTowns": 6,
+      "gold": 1706965,
+      "heroes": 5,
+      "movesIncludingRetries": 15072,
+      "towns": 9
+    },
+    {
+      "armyPower": 86923.23000000001,
+      "day": 491,
+      "enemyTowns": 6,
+      "gold": 1509235,
+      "heroes": 5,
+      "movesIncludingRetries": 15118,
+      "towns": 9
+    },
+    {
+      "armyPower": 72942.23000000001,
+      "day": 492,
+      "enemyTowns": 7,
+      "gold": 1553735,
+      "heroes": 5,
+      "movesIncludingRetries": 15168,
+      "towns": 8
+    },
+    {
+      "armyPower": 72942.23000000001,
+      "day": 493,
+      "enemyTowns": 6,
+      "gold": 1597735,
+      "heroes": 4,
+      "movesIncludingRetries": 15209,
+      "towns": 9
+    },
+    {
+      "armyPower": 72942.23000000001,
+      "day": 494,
+      "enemyTowns": 6,
+      "gold": 1641735,
+      "heroes": 5,
+      "movesIncludingRetries": 15245,
+      "towns": 9
+    },
+    {
+      "armyPower": 72942.23000000001,
+      "day": 495,
+      "enemyTowns": 7,
+      "gold": 1683735,
+      "heroes": 5,
+      "movesIncludingRetries": 15263,
+      "towns": 8
+    },
+    {
+      "armyPower": 72942.23000000001,
+      "day": 496,
+      "enemyTowns": 7,
+      "gold": 1722485,
+      "heroes": 5,
+      "movesIncludingRetries": 15279,
+      "towns": 8
+    },
+    {
+      "armyPower": 116421.04000000001,
+      "day": 497,
+      "enemyTowns": 6,
+      "gold": 1760485,
+      "heroes": 5,
+      "movesIncludingRetries": 15300,
+      "towns": 9
+    },
+    {
+      "armyPower": 128679.12,
+      "day": 498,
+      "enemyTowns": 6,
+      "gold": 1586455,
+      "heroes": 5,
+      "movesIncludingRetries": 15306,
+      "towns": 9
+    },
+    {
+      "armyPower": 128679.12,
+      "day": 499,
+      "enemyTowns": 6,
+      "gold": 1629455,
+      "heroes": 5,
+      "movesIncludingRetries": 15335,
+      "towns": 9
+    },
+    {
+      "armyPower": 128679.12,
+      "day": 500,
+      "enemyTowns": 6,
+      "gold": 1668455,
+      "heroes": 5,
+      "movesIncludingRetries": 15355,
+      "towns": 9
+    },
+    {
+      "armyPower": 128679.12,
+      "day": 501,
+      "enemyTowns": 6,
+      "gold": 1708955,
+      "heroes": 4,
+      "movesIncludingRetries": 15395,
+      "towns": 9
+    },
+    {
+      "armyPower": 128679.12,
+      "day": 502,
+      "enemyTowns": 6,
+      "gold": 1751455,
+      "heroes": 5,
+      "movesIncludingRetries": 15436,
+      "towns": 9
+    },
+    {
+      "armyPower": 128679.12,
+      "day": 503,
+      "enemyTowns": 6,
+      "gold": 1791455,
+      "heroes": 5,
+      "movesIncludingRetries": 15469,
+      "towns": 9
+    },
+    {
+      "armyPower": 128679.12,
+      "day": 504,
+      "enemyTowns": 6,
+      "gold": 1827455,
+      "heroes": 5,
+      "movesIncludingRetries": 15503,
+      "towns": 9
+    },
+    {
+      "armyPower": 128679.12,
+      "day": 505,
+      "enemyTowns": 5,
+      "gold": 1660910,
+      "heroes": 5,
+      "movesIncludingRetries": 15526,
+      "towns": 10
+    },
+    {
+      "armyPower": 128679.12,
+      "day": 506,
+      "enemyTowns": 5,
+      "gold": 1689810,
+      "heroes": 4,
+      "movesIncludingRetries": 15560,
+      "towns": 10
+    },
+    {
+      "armyPower": 128679.12,
+      "day": 507,
+      "enemyTowns": 5,
+      "gold": 1740810,
+      "heroes": 5,
+      "movesIncludingRetries": 15591,
+      "towns": 10
+    },
+    {
+      "armyPower": 128679.12,
+      "day": 508,
+      "enemyTowns": 5,
+      "gold": 1791810,
+      "heroes": 5,
+      "movesIncludingRetries": 15620,
+      "towns": 10
+    },
+    {
+      "armyPower": 128679.12,
+      "day": 509,
+      "enemyTowns": 5,
+      "gold": 1842810,
+      "heroes": 5,
+      "movesIncludingRetries": 15659,
+      "towns": 10
+    },
+    {
+      "armyPower": 128679.12,
+      "day": 510,
+      "enemyTowns": 5,
+      "gold": 1847810,
+      "heroes": 5,
+      "movesIncludingRetries": 15701,
+      "towns": 10
+    },
+    {
+      "armyPower": 124284.49,
+      "day": 511,
+      "enemyTowns": 5,
+      "gold": 1900810,
+      "heroes": 5,
+      "movesIncludingRetries": 15744,
+      "towns": 10
+    },
+    {
+      "armyPower": 124284.49,
+      "day": 512,
+      "enemyTowns": 5,
+      "gold": 1710205,
+      "heroes": 5,
+      "movesIncludingRetries": 15768,
+      "towns": 10
+    },
+    {
+      "armyPower": 124284.49,
+      "day": 513,
+      "enemyTowns": 5,
+      "gold": 1763205,
+      "heroes": 5,
+      "movesIncludingRetries": 15790,
+      "towns": 10
+    },
+    {
+      "armyPower": 124313.09,
+      "day": 514,
+      "enemyTowns": 5,
+      "gold": 1816205,
+      "heroes": 5,
+      "movesIncludingRetries": 15807,
+      "towns": 10
+    },
+    {
+      "armyPower": 124313.09,
+      "day": 515,
+      "enemyTowns": 5,
+      "gold": 1869205,
+      "heroes": 5,
+      "movesIncludingRetries": 15838,
+      "towns": 10
+    },
+    {
+      "armyPower": 124313.09,
+      "day": 516,
+      "enemyTowns": 5,
+      "gold": 1922205,
+      "heroes": 5,
+      "movesIncludingRetries": 15880,
+      "towns": 10
+    },
+    {
+      "armyPower": 124313.09,
+      "day": 517,
+      "enemyTowns": 5,
+      "gold": 1975705,
+      "heroes": 5,
+      "movesIncludingRetries": 15926,
+      "towns": 10
+    },
+    {
+      "armyPower": 124313.09,
+      "day": 518,
+      "enemyTowns": 4,
+      "gold": 2015105,
+      "heroes": 5,
+      "movesIncludingRetries": 15966,
+      "towns": 11
+    },
+    {
+      "armyPower": 124313.09,
+      "day": 519,
+      "enemyTowns": 4,
+      "gold": 1807500,
+      "heroes": 5,
+      "movesIncludingRetries": 15993,
+      "towns": 11
+    },
+    {
+      "armyPower": 124313.09,
+      "day": 520,
+      "enemyTowns": 4,
+      "gold": 1866500,
+      "heroes": 5,
+      "movesIncludingRetries": 16016,
+      "towns": 11
+    },
+    {
+      "armyPower": 172411.97,
+      "day": 521,
+      "enemyTowns": 4,
+      "gold": 1925500,
+      "heroes": 5,
+      "movesIncludingRetries": 16047,
+      "towns": 11
+    },
+    {
+      "armyPower": 172411.97,
+      "day": 522,
+      "enemyTowns": 4,
+      "gold": 1984500,
+      "heroes": 5,
+      "movesIncludingRetries": 16082,
+      "towns": 11
+    },
+    {
+      "armyPower": 172411.97,
+      "day": 523,
+      "enemyTowns": 5,
+      "gold": 2043500,
+      "heroes": 5,
+      "movesIncludingRetries": 16102,
+      "towns": 10
+    },
+    {
+      "armyPower": 189894.44000000003,
+      "day": 524,
+      "enemyTowns": 5,
+      "gold": 1981990,
+      "heroes": 5,
+      "movesIncludingRetries": 16150,
+      "towns": 11
+    },
+    {
+      "armyPower": 189894.44000000003,
+      "day": 525,
+      "enemyTowns": 5,
+      "gold": 2044990,
+      "heroes": 5,
+      "movesIncludingRetries": 16183,
+      "towns": 11
+    },
+    {
+      "armyPower": 189894.44000000003,
+      "day": 526,
+      "enemyTowns": 4,
+      "gold": 1812155,
+      "heroes": 5,
+      "movesIncludingRetries": 16216,
+      "towns": 12
+    },
+    {
+      "armyPower": 189894.44000000003,
+      "day": 527,
+      "enemyTowns": 4,
+      "gold": 1881155,
+      "heroes": 5,
+      "movesIncludingRetries": 16246,
+      "towns": 12
+    },
+    {
+      "armyPower": 189894.44000000003,
+      "day": 528,
+      "enemyTowns": 5,
+      "gold": 1950655,
+      "heroes": 5,
+      "movesIncludingRetries": 16288,
+      "towns": 11
+    },
+    {
+      "armyPower": 189894.44000000003,
+      "day": 529,
+      "enemyTowns": 5,
+      "gold": 2015655,
+      "heroes": 5,
+      "movesIncludingRetries": 16335,
+      "towns": 11
+    },
+    {
+      "armyPower": 189894.44000000003,
+      "day": 530,
+      "enemyTowns": 4,
+      "gold": 2080655,
+      "heroes": 4,
+      "movesIncludingRetries": 16379,
+      "towns": 12
+    },
+    {
+      "armyPower": 189894.44000000003,
+      "day": 531,
+      "enemyTowns": 3,
+      "gold": 2145655,
+      "heroes": 4,
+      "movesIncludingRetries": 16415,
+      "towns": 13
+    },
+    {
+      "armyPower": 249325.88,
+      "day": 532,
+      "enemyTowns": 3,
+      "gold": 2218655,
+      "heroes": 4,
+      "movesIncludingRetries": 16452,
+      "towns": 13
+    },
+    {
+      "armyPower": 452104.27999999997,
+      "day": 533,
+      "enemyTowns": 3,
+      "gold": 1939690,
+      "heroes": 5,
+      "movesIncludingRetries": 16491,
+      "towns": 13
+    },
+    {
+      "armyPower": 452104.27999999997,
+      "day": 534,
+      "enemyTowns": 3,
+      "gold": 2012690,
+      "heroes": 5,
+      "movesIncludingRetries": 16533,
+      "towns": 13
+    },
+    {
+      "armyPower": 282610.24,
+      "day": 535,
+      "enemyTowns": 3,
+      "gold": 2085690,
+      "heroes": 5,
+      "movesIncludingRetries": 16576,
+      "towns": 13
+    },
+    {
+      "armyPower": 372476.10666666663,
+      "day": 536,
+      "enemyTowns": 2,
+      "gold": 2158690,
+      "heroes": 5,
+      "movesIncludingRetries": 16618,
+      "towns": 14
+    },
+    {
+      "armyPower": 576455.7066666665,
+      "day": 537,
+      "enemyTowns": 2,
+      "gold": 2236090,
+      "heroes": 5,
+      "movesIncludingRetries": 16658,
+      "towns": 14
+    },
+    {
+      "armyPower": 776371.0266666666,
+      "day": 538,
+      "enemyTowns": 1,
+      "gold": 2308101,
+      "heroes": 5,
+      "movesIncludingRetries": 16701,
+      "towns": 15
+    },
+    {
+      "armyPower": 591112.6399999999,
+      "day": 539,
+      "enemyTowns": 2,
+      "gold": 2398589,
+      "heroes": 5,
+      "movesIncludingRetries": 16743,
+      "towns": 14
+    },
+    {
+      "armyPower": 591112.6399999999,
+      "day": 540,
+      "enemyTowns": 2,
+      "gold": 2335917,
+      "heroes": 5,
+      "movesIncludingRetries": 16786,
+      "towns": 14
+    },
+    {
+      "armyPower": 591112.6399999999,
+      "day": 541,
+      "enemyTowns": 2,
+      "gold": 2417917,
+      "heroes": 5,
+      "movesIncludingRetries": 16824,
+      "towns": 14
+    },
+    {
+      "armyPower": 591112.6399999999,
+      "day": 542,
+      "enemyTowns": 3,
+      "gold": 2498917,
+      "heroes": 5,
+      "movesIncludingRetries": 16866,
+      "towns": 13
+    },
+    {
+      "armyPower": 592135.6399999999,
+      "day": 543,
+      "enemyTowns": 3,
+      "gold": 2569117,
+      "heroes": 5,
+      "movesIncludingRetries": 16909,
+      "towns": 13
+    },
+    {
+      "armyPower": 592135.6399999999,
+      "day": 544,
+      "enemyTowns": 3,
+      "gold": 2641117,
+      "heroes": 4,
+      "movesIncludingRetries": 16949,
+      "towns": 13
+    },
+    {
+      "armyPower": 592135.6399999999,
+      "day": 545,
+      "enemyTowns": 3,
+      "gold": 2713117,
+      "heroes": 5,
+      "movesIncludingRetries": 16989,
+      "towns": 13
+    },
+    {
+      "armyPower": 592135.6399999999,
+      "day": 546,
+      "enemyTowns": 2,
+      "gold": 2785117,
+      "heroes": 5,
+      "movesIncludingRetries": 17033,
+      "towns": 14
+    },
+    {
+      "armyPower": 1237404.4400000002,
+      "day": 547,
+      "enemyTowns": 2,
+      "gold": 2492082,
+      "heroes": 5,
+      "movesIncludingRetries": 17073,
+      "towns": 14
+    },
+    {
+      "armyPower": 3007232.9399999995,
+      "day": 548,
+      "enemyTowns": 1,
+      "gold": 2568082,
+      "heroes": 5,
+      "movesIncludingRetries": 17111,
+      "towns": 15
+    },
+    {
+      "armyPower": 3007232.9399999995,
+      "day": 549,
+      "enemyTowns": 1,
+      "gold": 2651382,
+      "heroes": 4,
+      "movesIncludingRetries": 17149,
+      "towns": 15
+    },
+    {
+      "armyPower": 3387458.9,
+      "day": 550,
+      "enemyTowns": 1,
+      "gold": 2738882,
+      "heroes": 4,
+      "movesIncludingRetries": 17193,
+      "towns": 15
+    },
+    {
+      "armyPower": 3387458.9,
+      "day": 551,
+      "enemyTowns": 1,
+      "gold": 2823882,
+      "heroes": 4,
+      "movesIncludingRetries": 17232,
+      "towns": 15
+    },
+    {
+      "armyPower": 6434154.1,
+      "day": 552,
+      "enemyTowns": 1,
+      "gold": 2948882,
+      "heroes": 3,
+      "movesIncludingRetries": 17270,
+      "towns": 15
+    },
+    {
+      "armyPower": 9537886.379999999,
+      "day": 553,
+      "enemyTowns": 1,
+      "gold": 3034882,
+      "heroes": 3,
+      "movesIncludingRetries": 17314,
+      "towns": 15
+    },
+    {
+      "armyPower": 9537886.379999999,
+      "day": 554,
+      "enemyTowns": 1,
+      "gold": 3016535,
+      "heroes": 3,
+      "movesIncludingRetries": 17362,
+      "towns": 15
+    },
+    {
+      "armyPower": 9537886.379999999,
+      "day": 555,
+      "enemyTowns": 1,
+      "gold": 3102535,
+      "heroes": 3,
+      "movesIncludingRetries": 17409,
+      "towns": 15
+    },
+    {
+      "armyPower": 9537886.379999999,
+      "day": 556,
+      "enemyTowns": 1,
+      "gold": 3187575,
+      "heroes": 3,
+      "movesIncludingRetries": 17454,
+      "towns": 15
+    },
+    {
+      "armyPower": 9537886.379999999,
+      "day": 557,
+      "enemyTowns": 1,
+      "gold": 3283436,
+      "heroes": 3,
+      "movesIncludingRetries": 17500,
+      "towns": 15
+    },
+    {
+      "armyPower": 9537886.379999999,
+      "day": 558,
+      "enemyTowns": 1,
+      "gold": 3369436,
+      "heroes": 3,
+      "movesIncludingRetries": 17542,
+      "towns": 15
+    },
+    {
+      "armyPower": 21421697.880000003,
+      "day": 559,
+      "enemyTowns": 1,
+      "gold": 3455436,
+      "heroes": 3,
+      "movesIncludingRetries": 17586,
+      "towns": 15
+    },
+    {
+      "armyPower": 21421697.880000003,
+      "day": 560,
+      "enemyTowns": 1,
+      "gold": 3541436,
+      "heroes": 3,
+      "movesIncludingRetries": 17630,
+      "towns": 15
+    },
+    {
+      "armyPower": 350694.42000000004,
+      "day": 561,
+      "enemyTowns": 1,
+      "gold": 3551339,
+      "heroes": 3,
+      "movesIncludingRetries": 17657,
+      "towns": 15
+    },
+    {
+      "armyPower": 350694.42000000004,
+      "day": 562,
+      "enemyTowns": 1,
+      "gold": 3637339,
+      "heroes": 3,
+      "movesIncludingRetries": 17697,
+      "towns": 15
+    },
+    {
+      "armyPower": 357108.05333333334,
+      "day": 563,
+      "enemyTowns": 1,
+      "gold": 3694139,
+      "heroes": 3,
+      "movesIncludingRetries": 17741,
+      "towns": 16
+    },
+    {
+      "armyPower": 357108.05333333334,
+      "day": 564,
+      "enemyTowns": 1,
+      "gold": 3786439,
+      "heroes": 3,
+      "movesIncludingRetries": 17783,
+      "towns": 16
+    },
+    {
+      "armyPower": 357108.05333333334,
+      "day": 565,
+      "enemyTowns": 1,
+      "gold": 1176009,
+      "heroes": 3,
+      "movesIncludingRetries": 17829,
+      "towns": 16
+    },
+    {
+      "armyPower": 353464.8533333334,
+      "day": 566,
+      "enemyTowns": 1,
+      "gold": 1268009,
+      "heroes": 3,
+      "movesIncludingRetries": 17874,
+      "towns": 16
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 567,
+      "enemyTowns": 1,
+      "gold": 1358009,
+      "heroes": 3,
+      "movesIncludingRetries": 17894,
+      "towns": 16
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 568,
+      "enemyTowns": 1,
+      "gold": 1144339,
+      "heroes": 3,
+      "movesIncludingRetries": 17913,
+      "towns": 16
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 569,
+      "enemyTowns": 1,
+      "gold": 1211339,
+      "heroes": 3,
+      "movesIncludingRetries": 17932,
+      "towns": 16
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 570,
+      "enemyTowns": 1,
+      "gold": 1304339,
+      "heroes": 3,
+      "movesIncludingRetries": 17950,
+      "towns": 16
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 571,
+      "enemyTowns": 1,
+      "gold": 1395339,
+      "heroes": 3,
+      "movesIncludingRetries": 17970,
+      "towns": 16
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 572,
+      "enemyTowns": 1,
+      "gold": 1486339,
+      "heroes": 3,
+      "movesIncludingRetries": 17987,
+      "towns": 16
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 573,
+      "enemyTowns": 1,
+      "gold": 1577339,
+      "heroes": 3,
+      "movesIncludingRetries": 18004,
+      "towns": 16
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 574,
+      "enemyTowns": 1,
+      "gold": 1671839,
+      "heroes": 3,
+      "movesIncludingRetries": 18021,
+      "towns": 16
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 575,
+      "enemyTowns": 1,
+      "gold": 1449127,
+      "heroes": 3,
+      "movesIncludingRetries": 18041,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 576,
+      "enemyTowns": 1,
+      "gold": 1543207,
+      "heroes": 3,
+      "movesIncludingRetries": 18064,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 577,
+      "enemyTowns": 1,
+      "gold": 1637647,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 578,
+      "enemyTowns": 1,
+      "gold": 1723647,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 579,
+      "enemyTowns": 1,
+      "gold": 1811647,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 580,
+      "enemyTowns": 1,
+      "gold": 1874647,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 581,
+      "enemyTowns": 1,
+      "gold": 1971647,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 582,
+      "enemyTowns": 1,
+      "gold": 1787111,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 583,
+      "enemyTowns": 1,
+      "gold": 1885111,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 584,
+      "enemyTowns": 1,
+      "gold": 1983111,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 585,
+      "enemyTowns": 1,
+      "gold": 2081111,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 586,
+      "enemyTowns": 1,
+      "gold": 2179111,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 587,
+      "enemyTowns": 1,
+      "gold": 2277111,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 588,
+      "enemyTowns": 1,
+      "gold": 2375111,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 589,
+      "enemyTowns": 1,
+      "gold": 2204922,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 590,
+      "enemyTowns": 1,
+      "gold": 2302922,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 591,
+      "enemyTowns": 1,
+      "gold": 2400922,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 592,
+      "enemyTowns": 1,
+      "gold": 2498922,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 593,
+      "enemyTowns": 1,
+      "gold": 2596922,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 594,
+      "enemyTowns": 1,
+      "gold": 2694922,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 595,
+      "enemyTowns": 1,
+      "gold": 2792922,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 596,
+      "enemyTowns": 1,
+      "gold": 2688514,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 597,
+      "enemyTowns": 1,
+      "gold": 2786514,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 598,
+      "enemyTowns": 1,
+      "gold": 2884514,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 599,
+      "enemyTowns": 1,
+      "gold": 2982514,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 600,
+      "enemyTowns": 1,
+      "gold": 3080514,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 601,
+      "enemyTowns": 1,
+      "gold": 3178514,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 350560.6533333334,
+      "day": 602,
+      "enemyTowns": 1,
+      "gold": 3276514,
+      "heroes": 3,
+      "movesIncludingRetries": 18075,
+      "towns": 17
+    },
+    {
+      "armyPower": 466919.85333333333,
+      "day": 603,
+      "enemyTowns": 1,
+      "gold": 3219465,
+      "heroes": 3,
+      "movesIncludingRetries": 18093,
+      "towns": 17
+    },
+    {
+      "armyPower": 466919.85333333333,
+      "day": 604,
+      "enemyTowns": 1,
+      "gold": 3317465,
+      "heroes": 3,
+      "movesIncludingRetries": 18099,
+      "towns": 17
+    },
+    {
+      "armyPower": 466919.85333333333,
+      "day": 605,
+      "enemyTowns": 1,
+      "gold": 3415465,
+      "heroes": 3,
+      "movesIncludingRetries": 18124,
+      "towns": 17
+    },
+    {
+      "armyPower": 466919.85333333333,
+      "day": 606,
+      "enemyTowns": 1,
+      "gold": 3513465,
+      "heroes": 3,
+      "movesIncludingRetries": 18148,
+      "towns": 17
+    },
+    {
+      "armyPower": 466919.85333333333,
+      "day": 607,
+      "enemyTowns": 1,
+      "gold": 3611465,
+      "heroes": 3,
+      "movesIncludingRetries": 18172,
+      "towns": 17
+    },
+    {
+      "armyPower": 466919.85333333333,
+      "day": 608,
+      "enemyTowns": 1,
+      "gold": 3709465,
+      "heroes": 3,
+      "movesIncludingRetries": 18197,
+      "towns": 17
+    },
+    {
+      "armyPower": 466310.89333333337,
+      "day": 609,
+      "enemyTowns": 1,
+      "gold": 3807465,
+      "heroes": 2,
+      "movesIncludingRetries": 18219,
+      "towns": 17
+    },
+    {
+      "armyPower": 466310.89333333337,
+      "day": 610,
+      "enemyTowns": 1,
+      "gold": 3761631,
+      "heroes": 2,
+      "movesIncludingRetries": 18243,
+      "towns": 17
+    },
+    {
+      "armyPower": 711966.0266666667,
+      "day": 611,
+      "enemyTowns": 1,
+      "gold": 3861031,
+      "heroes": 3,
+      "movesIncludingRetries": 18268,
+      "towns": 17
+    },
+    {
+      "armyPower": 1741301.8066666666,
+      "day": 612,
+      "enemyTowns": 1,
+      "gold": 3961931,
+      "heroes": 3,
+      "movesIncludingRetries": 18289,
+      "towns": 17
+    },
+    {
+      "armyPower": 1588615.3066666666,
+      "day": 613,
+      "enemyTowns": 1,
+      "gold": 4059931,
+      "heroes": 3,
+      "movesIncludingRetries": 18302,
+      "towns": 17
+    },
+    {
+      "armyPower": 2343945.826666666,
+      "day": 614,
+      "enemyTowns": 1,
+      "gold": 1660181,
+      "heroes": 3,
+      "movesIncludingRetries": 18314,
+      "towns": 17
+    },
+    {
+      "armyPower": 3510600.9866666663,
+      "day": 615,
+      "enemyTowns": 1,
+      "gold": 1754981,
+      "heroes": 3,
+      "movesIncludingRetries": 18326,
+      "towns": 17
+    },
+    {
+      "armyPower": 3463532.133333333,
+      "day": 616,
+      "enemyTowns": 1,
+      "gold": 1852981,
+      "heroes": 3,
+      "movesIncludingRetries": 18341,
+      "towns": 17
+    },
+    {
+      "armyPower": 3987079.773333333,
+      "day": 617,
+      "enemyTowns": 1,
+      "gold": 1654449,
+      "heroes": 3,
+      "movesIncludingRetries": 18364,
+      "towns": 17
+    },
+    {
+      "armyPower": 3987079.773333333,
+      "day": 618,
+      "enemyTowns": 1,
+      "gold": 1752449,
+      "heroes": 3,
+      "movesIncludingRetries": 18388,
+      "towns": 17
+    },
+    {
+      "armyPower": 3987079.773333333,
+      "day": 619,
+      "enemyTowns": 1,
+      "gold": 1850449,
+      "heroes": 3,
+      "movesIncludingRetries": 18409,
+      "towns": 17
+    },
+    {
+      "armyPower": 3986234.853333333,
+      "day": 620,
+      "enemyTowns": 0,
+      "gold": 1303194,
+      "heroes": 3,
+      "movesIncludingRetries": 18421,
+      "towns": 18
+    },
+    {
+      "armyPower": 3974119.1,
+      "day": 621,
+      "enemyTowns": 0,
+      "gold": 1387994,
+      "heroes": 2,
+      "movesIncludingRetries": 18428,
+      "towns": 18
+    }
+  ],
+  "usesNormalSaveLoadRetries": true,
+  "visitsIncludingRetries": 2618
+}

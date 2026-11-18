@@ -1795,7 +1795,7 @@
         0
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
+      "kind": "Adventure",
       "target": "Single",
       "filter": "Ally",
       "radius": 0,
@@ -1805,7 +1805,7 @@
       "sounds": {
         "cast": "SUMMBOAT"
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": true,
       "guildWeights": [
         3,
@@ -1818,7 +1818,7 @@
         3,
         3
       ],
-      "reference": "references/rules/wiki/List_of_spells.html"
+      "reference": "references/rules/wiki/Summon_Boat.html"
     },
     {
       "id": 36,
@@ -1838,7 +1838,7 @@
         0
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
+      "kind": "Adventure",
       "target": "Single",
       "filter": "Ally",
       "radius": 0,
@@ -1848,7 +1848,7 @@
       "sounds": {
         "cast": "SCUTBOAT"
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": true,
       "guildWeights": [
         6,
@@ -1861,7 +1861,7 @@
         4,
         4
       ],
-      "reference": "references/rules/wiki/List_of_spells.html"
+      "reference": "references/rules/wiki/Scuttle_Boat.html"
     },
     {
       "id": 37,
@@ -1881,7 +1881,7 @@
         0
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
+      "kind": "Adventure",
       "target": "Single",
       "filter": "Ally",
       "radius": 0,
@@ -1891,7 +1891,7 @@
       "sounds": {
         "cast": "VISIONS"
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": true,
       "guildWeights": [
         2,
@@ -1904,7 +1904,7 @@
         2,
         2
       ],
-      "reference": "references/rules/wiki/List_of_spells.html"
+      "reference": "references/rules/wiki/Visions.html"
     },
     {
       "id": 38,
@@ -1924,7 +1924,7 @@
         0
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
+      "kind": "Adventure",
       "target": "Single",
       "filter": "Ally",
       "radius": 0,
@@ -1934,7 +1934,7 @@
       "sounds": {
         "cast": "VIEW"
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": true,
       "guildWeights": [
         3,
@@ -1947,7 +1947,7 @@
         3,
         3
       ],
-      "reference": "references/rules/wiki/List_of_spells.html"
+      "reference": "references/rules/wiki/View_Earth.html"
     },
     {
       "id": 39,
@@ -1967,7 +1967,7 @@
         0
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
+      "kind": "Adventure",
       "target": "Single",
       "filter": "Ally",
       "radius": 0,
@@ -1977,7 +1977,7 @@
       "sounds": {
         "cast": "DISGUISE"
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": true,
       "guildWeights": [
         2,
@@ -1990,7 +1990,7 @@
         0,
         2
       ],
-      "reference": "references/rules/wiki/List_of_spells.html"
+      "reference": "references/rules/wiki/Disguise.html"
     },
     {
       "id": 40,
@@ -2010,7 +2010,7 @@
         0
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
+      "kind": "Adventure",
       "target": "Single",
       "filter": "Ally",
       "radius": 0,
@@ -2020,7 +2020,7 @@
       "sounds": {
         "cast": "VIEW"
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": true,
       "guildWeights": [
         3,
@@ -2033,7 +2033,7 @@
         3,
         3
       ],
-      "reference": "references/rules/wiki/List_of_spells.html"
+      "reference": "references/rules/wiki/View_Air.html"
     },
     {
       "id": 41,
@@ -2053,7 +2053,7 @@
         0
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
+      "kind": "Adventure",
       "target": "Single",
       "filter": "Ally",
       "radius": 0,
@@ -2063,7 +2063,7 @@
       "sounds": {
         "cast": "FLYSPELL"
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": true,
       "guildWeights": [
         0,
@@ -2076,7 +2076,7 @@
         0,
         13
       ],
-      "reference": "references/rules/wiki/List_of_spells.html"
+      "reference": "references/rules/wiki/Fly.html"
     },
     {
       "id": 42,
@@ -2096,7 +2096,7 @@
         0
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
+      "kind": "Adventure",
       "target": "Single",
       "filter": "Ally",
       "radius": 0,
@@ -2106,7 +2106,7 @@
       "sounds": {
         "cast": "WATRWALK"
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": true,
       "guildWeights": [
         10,
@@ -2119,7 +2119,7 @@
         0,
         10
       ],
-      "reference": "references/rules/wiki/List_of_spells.html"
+      "reference": "references/rules/wiki/Water_Walk.html"
     },
     {
       "id": 43,
@@ -2139,7 +2139,7 @@
         0
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
+      "kind": "Adventure",
       "target": "Single",
       "filter": "Ally",
       "radius": 0,
@@ -2149,7 +2149,7 @@
       "sounds": {
         "cast": "TELPTOUT"
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": true,
       "guildWeights": [
         0,
@@ -2162,7 +2162,7 @@
         0,
         13
       ],
-      "reference": "references/rules/wiki/List_of_spells.html"
+      "reference": "references/rules/wiki/Dimension_Door.html"
     },
     {
       "id": 44,
@@ -2182,7 +2182,7 @@
         0
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
+      "kind": "Adventure",
       "target": "Single",
       "filter": "Ally",
       "radius": 0,
@@ -2192,7 +2192,7 @@
       "sounds": {
         "cast": "TELPTOUT"
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": true,
       "guildWeights": [
         10,
@@ -2205,7 +2205,7 @@
         0,
         10
       ],
-      "reference": "references/rules/wiki/List_of_spells.html"
+      "reference": "references/rules/wiki/Town_Portal.html"
     },
     {
       "id": 45,
@@ -2225,9 +2225,9 @@
         0
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
-      "target": "Single",
-      "filter": "Ally",
+      "kind": "Special",
+      "target": "Global",
+      "filter": "Any",
       "radius": 0,
       "persistent": false,
       "special": false,
@@ -2235,7 +2235,7 @@
       "sounds": {
         "cast": ""
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": false,
       "guildWeights": [
         4,
@@ -2248,7 +2248,7 @@
         6,
         4
       ],
-      "reference": "references/rules/wiki/List_of_spells.html"
+      "reference": "references/rules/wiki/Quicksand.html"
     },
     {
       "id": 46,
@@ -2268,9 +2268,9 @@
         0
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
-      "target": "Single",
-      "filter": "Ally",
+      "kind": "Special",
+      "target": "Global",
+      "filter": "Any",
       "radius": 0,
       "persistent": false,
       "special": false,
@@ -2278,7 +2278,7 @@
       "sounds": {
         "cast": ""
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": false,
       "guildWeights": [
         8,
@@ -2311,7 +2311,7 @@
         0
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
+      "kind": "Special",
       "target": "Single",
       "filter": "Ally",
       "radius": 0,
@@ -2321,7 +2321,7 @@
       "sounds": {
         "cast": "FORCEFLD"
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": false,
       "guildWeights": [
         4,
@@ -2354,7 +2354,7 @@
         0
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
+      "kind": "Special",
       "target": "Single",
       "filter": "Ally",
       "radius": 0,
@@ -2364,7 +2364,7 @@
       "sounds": {
         "cast": "FIREWALL"
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": false,
       "guildWeights": [
         4,
@@ -2391,15 +2391,15 @@
       "schoolMask": 8,
       "powerMultiplier": 0,
       "values": [
-        0,
-        0,
-        0,
-        0
+        2,
+        2,
+        3,
+        4
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
-      "target": "Single",
-      "filter": "Ally",
+      "kind": "Special",
+      "target": "Global",
+      "filter": "Any",
       "radius": 0,
       "persistent": false,
       "special": false,
@@ -2407,7 +2407,7 @@
       "sounds": {
         "cast": "ERTHQUAK"
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": false,
       "guildWeights": [
         4,
@@ -2434,13 +2434,13 @@
       "schoolMask": 1,
       "powerMultiplier": 0,
       "values": [
-        0,
-        0,
-        0,
-        0
+        20,
+        20,
+        30,
+        40
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
+      "kind": "Timed",
       "target": "Single",
       "filter": "Ally",
       "radius": 0,
@@ -2454,7 +2454,7 @@
       "sounds": {
         "cast": "BACKLASH"
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": false,
       "guildWeights": [
         0,
@@ -2467,7 +2467,7 @@
         0,
         13
       ],
-      "reference": "references/rules/wiki/List_of_spells.html"
+      "reference": "references/rules/wiki/Magic_Mirror.html"
     },
     {
       "id": 51,
@@ -2819,13 +2819,13 @@
       "schoolMask": 2,
       "powerMultiplier": 0,
       "values": [
-        0,
-        0,
-        0,
-        0
+        8,
+        8,
+        8,
+        8
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
+      "kind": "Timed",
       "target": "Single",
       "filter": "Ally",
       "radius": 0,
@@ -2839,7 +2839,7 @@
       "sounds": {
         "cast": "SLAYER"
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": false,
       "guildWeights": [
         5,
@@ -2852,7 +2852,7 @@
         0,
         5
       ],
-      "reference": "references/rules/wiki/List_of_spells.html"
+      "reference": "references/rules/wiki/Slayer.html"
     },
     {
       "id": 59,
@@ -2866,13 +2866,13 @@
       "schoolMask": 2,
       "powerMultiplier": 0,
       "values": [
-        0,
-        0,
-        0,
-        0
+        100,
+        100,
+        150,
+        200
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
+      "kind": "Timed",
       "target": "Single",
       "filter": "Ally",
       "radius": 0,
@@ -2886,7 +2886,7 @@
       "sounds": {
         "cast": "FRENZY"
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": false,
       "guildWeights": [
         5,
@@ -2899,7 +2899,7 @@
         0,
         5
       ],
-      "reference": "references/rules/wiki/List_of_spells.html"
+      "reference": "references/rules/wiki/Frenzy.html"
     },
     {
       "id": 60,
@@ -2915,14 +2915,14 @@
       "values": [
         0,
         0,
-        0,
-        0
+        1,
+        2
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
-      "target": "Single",
-      "filter": "Enemy",
-      "radius": 0,
+      "kind": "Timed",
+      "target": "Radius",
+      "filter": "Any",
+      "radius": 1,
       "persistent": false,
       "special": false,
       "animation": {
@@ -2933,7 +2933,7 @@
       "sounds": {
         "cast": "BERSERK"
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": false,
       "guildWeights": [
         5,
@@ -2946,7 +2946,7 @@
         0,
         5
       ],
-      "reference": "references/rules/wiki/List_of_spells.html"
+      "reference": "references/rules/wiki/Berserk.html"
     },
     {
       "id": 61,
@@ -2958,15 +2958,15 @@
       "skilledCost": 15,
       "enemy": true,
       "schoolMask": 1,
-      "powerMultiplier": 0,
+      "powerMultiplier": 25,
       "values": [
-        0,
-        0,
-        0,
-        0
+        10,
+        10,
+        20,
+        50
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
+      "kind": "Timed",
       "target": "Single",
       "filter": "Enemy",
       "radius": 0,
@@ -2980,7 +2980,7 @@
       "sounds": {
         "cast": "HYPNOTIZ"
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": false,
       "guildWeights": [
         4,
@@ -3007,13 +3007,13 @@
       "schoolMask": 2,
       "powerMultiplier": 0,
       "values": [
-        0,
-        0,
-        0,
+        50,
+        50,
+        25,
         0
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
+      "kind": "Timed",
       "target": "Single",
       "filter": "Enemy",
       "radius": 0,
@@ -3027,7 +3027,7 @@
       "sounds": {
         "cast": "BLIND"
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": false,
       "guildWeights": [
         4,
@@ -3060,7 +3060,7 @@
         0
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
+      "kind": "Special",
       "target": "Single",
       "filter": "Ally",
       "radius": 0,
@@ -3070,7 +3070,7 @@
       "sounds": {
         "cast": "TELPTOUT"
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": false,
       "guildWeights": [
         8,
@@ -3103,7 +3103,7 @@
         0
       ],
       "massAtExpert": false,
-      "kind": "Unsupported",
+      "kind": "Special",
       "target": "Single",
       "filter": "Ally",
       "radius": 0,
@@ -3117,7 +3117,7 @@
       "sounds": {
         "cast": "REMOVEOB"
       },
-      "implemented": false,
+      "implemented": true,
       "adventure": false,
       "guildWeights": [
         4,

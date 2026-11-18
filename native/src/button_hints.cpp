@@ -14,8 +14,9 @@ std::string Desktop::originalButtonHint(const std::string& name,int normal)const
  if(name=="tpmrkb.def")return normal==3?"选择可交易的最大数量（End）":"按当前汇率交换所选资源（Enter）";
  if(name=="tpmrkbu1.def")return "赠送资源：当前版本尚未实现";
  if(name=="icm003.def")return "打开战斗与系统选项（O）";
- if(name=="icm001.def")return "投降：当前版本尚未实现";
- if(name=="icm002.def")return "撤退：当前界面尚未开放";
+ if(name=="icm011.def")return "选择下一支可以布阵的部队";if(name=="icm012.def")return "完成战术布阵并开始战斗";
+ if(name=="icm001.def")return "投降：支付费用保留幸存部队，外交术降低费用；英雄可回酒馆重雇";
+ if(name=="icm002.def")return "撤退：丢失部队，保留英雄的宝物和经验；战争枷锁禁止撤退";
  if(name=="icm004.def")return autoCombat_?"停止自动战斗，恢复手动操作（A）":"开始自动战斗（A）；再次点击可停止";
  if(name=="icm005.def")return "打开战斗魔法书（C）；需要魔法书，且轮到我方行动";
  if(name=="icm006.def")return "等待：本轮稍后行动（W）；每支部队每轮只能等待一次";

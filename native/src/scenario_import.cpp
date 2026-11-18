@@ -18,12 +18,12 @@ int factionOf(int hero){return hero>=0&&hero<144?hero/16:0;}
 Point coordinates(const Json&j){return {j.at("x"),j.at("y")};}
 Point visitPoint(const Json&t,Point anchor){for(int row=5;row>=0;--row)for(int col=7;col>=0;--col)if(t["actionability"][row].get<int>()&(1<<col))return {anchor.x+col-7,anchor.y+row-5};return anchor;}
 void primary(Hero&h,const Json&j){h.attack=j.value("attack",h.attack);h.defense=j.value("defense",h.defense);h.power=j.value("spell_power",h.power);h.knowledge=j.value("knowledge",h.knowledge);}
-void skills(Hero&h,const Json&j){for(const auto&s:j){int id=s.value("type",-1);if(id>=0&&id<28&&SkillsByOriginal[id]>=0)h.skills[SkillsByOriginal[id]]=std::clamp(s.value("level",0),0,3);}}
+void skills(Hero&h,const Json&j){h.skills.fill(0);for(const auto&s:j){int id=s.value("type",-1);if(id>=0&&id<28&&SkillsByOriginal[id]>=0)h.skills[SkillsByOriginal[id]]=std::clamp(s.value("level",0),0,3);}}
 void townBuildings(Town&t,const Json&p){
  t.built.fill(false);t.built[VillageHall]=true;
  if(!p.contains("buildings")){t.built[Fort]=p.value("has_fort",0)!=0;t.built[Tavern]=t.built[Guardhouse]=true;return;}
  const auto&b=p["buildings"]["is_built"];
- const std::pair<const char*,int> pairs[]={{"town_hall",TownHall},{"city_hall",CityHall},{"capitol",Capitol},{"fort",Fort},{"citadel",Citadel},{"castle",Castle},{"tavern",Tavern},{"marketplace",Marketplace},{"blacksmith",Blacksmith},{"resource_silo",ResourceSilo},{"shipyard",Shipyard},{"mage_guild_1",MageGuild},{"mage_guild_2",MageGuild2},{"mage_guild_3",MageGuild3},{"mage_guild_4",MageGuild4},{"mage_guild_5",MageGuild5},{"special_building_1",Special1},{"special_building_2",Special2},{"special_building_3",Special3},{"special_building_4",Special4}};
+ const std::pair<const char*,int> pairs[]={{"grail",GrailBuilding},{"town_hall",TownHall},{"city_hall",CityHall},{"capitol",Capitol},{"fort",Fort},{"citadel",Citadel},{"castle",Castle},{"tavern",Tavern},{"marketplace",Marketplace},{"blacksmith",Blacksmith},{"resource_silo",ResourceSilo},{"shipyard",Shipyard},{"mage_guild_1",MageGuild},{"mage_guild_2",MageGuild2},{"mage_guild_3",MageGuild3},{"mage_guild_4",MageGuild4},{"mage_guild_5",MageGuild5},{"special_building_1",Special1},{"special_building_2",Special2},{"special_building_3",Special3},{"special_building_4",Special4}};
  for(auto[key,id]:pairs)t.built[id]=b.value(key,false);
  for(int tier=0;tier<7;++tier){t.built[Guardhouse+tier]=b.value("dwelling_"+std::to_string(tier+1),false);t.built[UpGuardhouse+tier]=b.value("dwelling_"+std::to_string(tier+1)+"u",false);}
 }
@@ -41,7 +41,7 @@ bool Game::importScenario(const std::filesystem::path&path,std::string&error,int
  std::ifstream stream(path);Json data;stream>>data;
  if(data.at("schema")!=1)throw std::runtime_error("地图格式不支持");
  localizeMapData(data,data.at("id").get<std::string>());
- Game g;if(difficulty==4)g.resources={};g.scenarioId=data.at("id");g.scenarioName=data.at("title");g.mapWidth=data.at("width");g.mapHeight=data.at("height");g.mapLevels=data.at("levels");
+ difficulty=difficulty<0?1:std::clamp(difficulty,0,4);Game g;g.resources=startingResources(difficulty);g.scenarioId=data.at("id");g.scenarioName=data.at("title");g.mapWidth=data.at("width");g.mapHeight=data.at("height");g.mapLevels=data.at("levels");
  if(g.mapWidth<1||g.mapWidth>144||g.mapHeight<1||g.mapHeight>144||g.mapLevels<1||g.mapLevels>2||data["tiles"].size()!=size_t(g.mapWidth*g.mapHeight*g.mapLevels)||data["objects"].size()>60000)throw std::runtime_error("地图尺寸或物件数量无效");
  g.tiles.resize(g.mapWidth*g.mapHeight*g.mapLevels);g.objects.clear();g.hero.army={};
  const Terrain terrains[]={Terrain::Dirt,Terrain::Sand,Terrain::Grass,Terrain::Snow,Terrain::Swamp,Terrain::Rough,Terrain::Subterranean,Terrain::Lava,Terrain::Water,Terrain::Rock};
@@ -49,6 +49,9 @@ bool Game::importScenario(const std::filesystem::path&path,std::string&error,int
  int player=-1;for(int i=0;i<8;++i)if(data["players"][Players[i]].value("can_be_human",0)){player=i;break;}if(player<0)throw std::runtime_error("地图没有可选的人类玩家");
  g.scenarioRules={{"difficulty",difficulty},{"originalPlayer",player},{"additional",data["additionalInfo"]},{"timedEvents",data["timedEvents"]},{"spellNames",data["spellNames"]},{"sourceSha256",data["sourceSha256"]},{"defeated",Json::array()},{"grailExists",false}};
  for(int i=0;i<SpellCount;++i){int id=Spells[i].originalId;if(id>=0&&id<int(data["spellNames"].size()))g.bannedSpells[i]=data["additionalInfo"]["disabled_spells"].value(data["spellNames"][id].get<std::string>(),false);}
+ std::array<int,8>alignments{};const char*factionKeys[]={"castle","rampart","tower","inferno","necropolis","dungeon","stronghold","fortress","conflux"};
+ for(int owner=0;owner<8;++owner){std::vector<int>allowed;const auto&settings=data["players"][Players[owner]];for(int f=0;f<9;++f)if(!settings.contains("allowed_alignments")||settings["allowed_alignments"].value(factionKeys[f],true))allowed.push_back(f);if(allowed.empty())allowed.push_back(0);alignments[owner]=owner==player&&std::find(allowed.begin(),allowed.end(),randomFaction)!=allowed.end()?randomFaction:allowed[size_t(g.random()*allowed.size())];}
+ g.scenarioRules["playerAlignments"]=alignments;
  const auto&templates=data.at("templates");int chosenHero=-1;Json heroProperties;int id=0;
  for(const auto&source:data["objects"]){
   ++id;int tid=source.at("template_idx");if(tid<0||tid>=int(templates.size()))throw std::runtime_error("地图物件索引无效");const auto&t=templates[tid];const auto&c=source["coordinates"];Point anchor=coordinates(c);int level=c.at("z");
@@ -64,7 +67,7 @@ bool Game::importScenario(const std::filesystem::path&path,std::string&error,int
   if(!actionable&&cls!=26&&cls!=27){g.decorations.push_back({anchor,level,asset,t.value("is_ground",0)!=0});continue;}
   Object o;o.ground=t.value("is_ground",0)!=0;o.id=id;o.pos=visit;o.anchor=anchor;o.level=level;o.sprite=asset;o.sourceClass=cls;o.sourceSubtype=sub;o.properties=p;o.name=p.value("name",objectName(cls));o.owner=originalOwner<0?-1:originalOwner==player?0:originalOwner<player?originalOwner+1:originalOwner;o.type=ObjectType::Site;
   if(cls==98||cls==77){
-   o.type=ObjectType::Town;Town town;town.faction=cls==77?std::clamp(randomFaction,0,8):std::clamp(sub,0,8);town.objectId=id;town.level=level;town.pos=visit;townBuildings(town,p);if(p.contains("garrison"))town.garrison=army(p["garrison"]);o.army=town.garrison;
+   o.type=ObjectType::Town;Town town;int affinity=p.value("alignment",255);town.faction=cls!=77?std::clamp(sub,0,8):affinity>=0&&affinity<8?alignments[affinity]:originalOwner>=0&&originalOwner<8?alignments[originalOwner]:int(g.random()*9);town.objectId=id;town.level=level;town.pos=visit;townBuildings(town,p);if(p.contains("garrison"))town.garrison=army(p["garrison"]);o.army=town.garrison;
    for(int tier=0;tier<7;++tier)if(town.built[Guardhouse+tier]||town.built[UpGuardhouse+tier])town.pool[tier]=Units[town.faction*14+tier*2].growth*(town.built[Castle]?2:1);
    g.settlements[id]=town;if(cls==77){Object image=o;image.sprite.clear();image.owner=0;g.town=town;o.sprite=g.mapObjectAsset(image);}
   }else if(cls==53||cls==220){o.type=ObjectType::Mine;o.resource=ResourcesByOriginal[std::clamp(sub,0,6)];o.name=ResourceNames[o.resource]+"矿";}
@@ -90,9 +93,9 @@ bool Game::importScenario(const std::filesystem::path&path,std::string&error,int
  int home=0;for(const auto&o:g.objects)if(o.type==ObjectType::Town&&o.owner==0){home=o.id;break;}
  if(home){g.activeTownId=home;g.town=g.settlements.at(home);}else{g.town=Town{};g.town.faction=factionOf(heroProperties.value("type",0));g.town.pos=g.hero.pos;g.town.level=g.mapLevel;}
  for(auto&[id,town]:g.settlements){auto previous=g.town;g.town=town;g.generateGuild();town=g.town;g.town=previous;}if(home)g.town=g.settlements.at(home);
- if(chosenHero<0){if(!home)throw std::runtime_error("地图没有可控制的起始英雄或城镇");g.hero.pos=g.town.pos;g.mapLevel=g.town.level;g.hero.army={Stack{g.town.faction*14,20},Stack{g.town.faction*14+2,6}};if(difficulty<0)g.resources[Gold]-=2500;heroDefaults(g.hero,startingHero>=0?startingHero:g.town.faction*16);if(startingHero==131)g.hero.army={Stack{112,15+int(g.random()*11)},Stack{116,3+int(g.random()*3)}};g.scenarioRules["generatedStartingHero"]=true;}
+ if(chosenHero<0){if(!home)throw std::runtime_error("地图没有可控制的起始英雄或城镇");g.hero.pos=g.town.pos;g.mapLevel=g.town.level;g.hero.army={Stack{g.town.faction*14,20},Stack{g.town.faction*14+2,6}};heroDefaults(g.hero,startingHero>=0?startingHero:g.town.faction*16);g.startingArmy(g.hero);g.scenarioRules["generatedStartingHero"]=true;}
  else{
-  g.hero.originalId=heroProperties.value("type",0);heroDefaults(g.hero,g.hero.originalId);g.hero.name=heroProperties.value("name",g.hero.name);g.hero.army=heroProperties.contains("creatures")?army(heroProperties["creatures"]):Army{Stack{factionOf(g.hero.originalId)*14,20},Stack{factionOf(g.hero.originalId)*14+2,6}};
+  g.hero.originalId=heroProperties.value("type",0);heroDefaults(g.hero,g.hero.originalId);g.hero.name=heroProperties.value("name",g.hero.name);g.hero.army=heroProperties.contains("creatures")?army(heroProperties["creatures"]):Army{};if(!heroProperties.contains("creatures"))g.startingArmy(g.hero);
   if(!armyCount(g.hero.army))throw std::runtime_error("起始英雄没有可支持的部队");g.hero.xp=std::clamp(heroProperties.value("experience",0),0,1000000000);while(g.hero.level<70&&g.hero.xp>=experienceForLevel(g.hero.level+1))++g.hero.level;
   if(heroProperties.contains("primary_skills"))primary(g.hero,heroProperties["primary_skills"]);if(heroProperties.contains("secondary_skills"))skills(g.hero,heroProperties["secondary_skills"]);
   if(heroProperties.contains("spells"))for(int i=0;i<SpellCount;++i){int n=Spells[i].originalId;if(n>=0&&n<int(data["spellNames"].size()))g.hero.spells[i]=heroProperties["spells"].value(data["spellNames"][n].get<std::string>(),false);}

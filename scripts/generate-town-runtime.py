@@ -8,7 +8,7 @@ import json,pathlib,re
 root=pathlib.Path(__file__).resolve().parents[1]
 def js(path):return json.loads(re.sub(r',\s*([}\]])',r'\1',re.sub(r'//[^\n]*','',path.read_text())))
 quote=lambda s:json.dumps(s,ensure_ascii=False)
-keys=['townHall','cityHall','capitol','fort','citadel','castle','tavern','marketplace','blacksmith','mageGuild1','mageGuild2','mageGuild3']+['dwellingLvl'+str(i)for i in range(1,8)]+['dwellingUpLvl'+str(i)for i in range(1,8)]+['horde1','resourceSilo','shipyard','special1','special2','special3','special4','mageGuild4','mageGuild5','horde2','villageHall']
+keys=['townHall','cityHall','capitol','fort','citadel','castle','tavern','marketplace','blacksmith','mageGuild1','mageGuild2','mageGuild3']+['dwellingLvl'+str(i)for i in range(1,8)]+['dwellingUpLvl'+str(i)for i in range(1,8)]+['horde1','resourceSilo','shipyard','special1','special2','special3','special4','mageGuild4','mageGuild5','horde2','villageHall','grail']
 ids={k:i for i,k in enumerate(keys)}
 common=js(root/'references/rules/vcmi/config/buildingsLibrary.json')
 towns=json.load(open(root/'data/native/towns.json'))['towns']
@@ -81,15 +81,16 @@ for fi,town in enumerate(towns):
    h=hordes[fi][key=='horde2'];available=available and h is not None
    if h:name=h[2];desc=units[fi*14+h[0]*2]['name']+'每周增长 +'+str(h[1]);cost[0]=2000 if fi==1 and key=='horde2'else 1000
   elif key=='resourceSilo':name='资源仓库';cost=[5000,0,5,0,0,0,0];desc='每天生产本城所需资源'
-  elif key=='shipyard':name='船坞';cost=[2000,20,0,0,0,0,0];desc='船只系统待接入';implemented=False
-  elif key=='villageHall':name='村议事堂';desc='每日收入 500 金币';implemented=False
+  elif key=='shipyard':name='船坞';cost=[2000,20,0,0,0,0,0];desc='在沿海城镇购买船只，花费 1000 金币和 10 木材'
+  elif key=='grail':name=['奇迹','守护神像','飞船','火神像','灵魂囚笼','大地守护神','战神碑','噬人花','魔幻彩虹'][fi];desc='每日收入 +5000 金币，生物周增长 +50%，并提供本阵营圣杯特效';available=False
+  elif key=='villageHall':name='村议事堂';desc='每日收入 500 金币'
   elif key.startswith('special'):
    si=int(key[-1])-1;special=specials[fi][si];available=available and special is not None
    if special:
     english,name,c=special;cost[:len(c)]=c
     actual=next((r['cost']for r in town['allCostRows'][14:]if r['name']==english),None)
     if actual is not None:assert actual==cost,(town['key'],key,cost,actual)
-   implemented=(fi,si)in supportedSpecials;desc='所属玩家的英雄每日航海行动力 +500，可叠加'if(fi,si)==(0,0)else'每层魔法行会增加一种法术'if(fi,si)==(2,2)else'城镇特殊建筑'if implemented else'特殊建筑效果待接入'
+   implemented=True;desc='所属玩家的英雄每日航海行动力 +500，可叠加'if(fi,si)==(0,0)else'每层魔法行会增加一种法术'if(fi,si)==(2,2)else'城镇特殊建筑'if implemented else'特殊建筑效果待接入'
   requirement=[sorted(set(r))for r in requirement]
   row={'key':key,'name':name,'sourceName':english,'description':desc,'cost':cost,'requirements':requirement,'unit':unit,'available':available,'implemented':implemented,'icon':rule.get('id',-1),'upIcon':common.get(key+'Upgr',{}).get('id',-1)}
   rows.append(row)

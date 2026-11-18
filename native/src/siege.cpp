@@ -45,10 +45,16 @@ bool Game::wallPenalty(const CombatStack&a,const CombatStack&t)const{
  if(!battle||!battle->siege.fort||a.team!=battle->siege.attackerTeam)return false;const auto&s=battle->siege;auto from=canonical(s,{a.x,a.y}),to=canonical(s,{t.x,t.y});constexpr int line[]={11,11,10,10,9,9,9,10,10,11,11};if(from.x>=line[from.y]||to.x<line[to.y])return false;
  int row=std::clamp((from.y+to.y)/2,0,10),part=row==5?3:row<3?4:row<6?5:row<9?6:7;return s.hp[part]>0;
 }
-void Game::siegeCatapult(){
- if(!battle||!battle->siege.fort)return;auto&s=battle->siege;std::vector<int>parts;for(int i=0;i<8;++i)if(s.hp[i]>0)parts.push_back(i);if(parts.empty())return;int part=parts[int(random()*parts.size())];int hit=part==0?5:part<3?10:part==3?25:50;
- if(random()*100>=hit){battle->log.push_back("投石车未命中城防。");return;}int damage=random()<.1?0:random()<2./3?1:2;s.hp[part]=std::max(0,s.hp[part]-damage);battle->log.push_back("投石车命中"+std::string(part==3?"城门":part<3?"箭塔":"城墙")+"，造成 "+std::to_string(damage)+" 点城防伤害。");
+int Game::catapultPartAt(Point p)const{if(!battle||!battle->siege.fort)return -1;p=canonical(battle->siege,p);for(int i=0;i<8;++i)if(p==Sections[i])return i;return p==Point{10,5}?3:-1;}
+void Game::catapultShots(int selected){
+ if(!battle||!battle->siege.fort||battle->catapultRound==battle->round)return;auto&b=*battle;auto&s=b.siege;b.catapultRound=b.round;int mastery=s.attackerTeam?b.defenderSkills[Ballistics]:hero.skills[Ballistics];int shots=mastery>=2?2:1;
+ const int accuracy[4][4]={{5,10,25,50},{5,10,50,75},{5,10,50,75},{10,20,100,100}};
+ for(int shot=0;shot<shots;++shot){std::vector<int>parts;for(int i=0;i<8;++i)if(s.hp[i]>0)parts.push_back(i);if(parts.empty())return;int part=selected>=0&&selected<8&&s.hp[selected]>0?selected:parts[int(random()*parts.size())];int kind=part==0?0:part<3?1:part==3?2:3;
+  if(random()*100>=accuracy[mastery][kind]){b.log.push_back("投石车未命中城防。");continue;}int roll=int(random()*100);int damage=mastery==3?2:mastery?roll<50?1:2:roll<10?0:roll<70?1:2;s.hp[part]=std::max(0,s.hp[part]-damage);b.log.push_back("投石车命中"+std::string(part==3?"城门":part<3?"箭塔":"城墙")+"，造成 "+std::to_string(damage)+" 点城防伤害。");
+ }
 }
+std::string Game::fireCatapult(int part){if(!battle||!current()||current()->unit!=CatapultUnit||battle->tacticsTeam>=0)return "当前不是投石车行动。";if(part<0||part>7||battle->siege.hp[part]<=0)return "请选择尚未摧毁的城门、城墙或箭塔。";catapultShots(part);if(current())current()->acted=true;completeAction(false);return {};}
+void Game::siegeCatapult(){if(battle&&!std::any_of(battle->units.begin(),battle->units.end(),[](const auto&u){return u.unit==CatapultUnit;}))catapultShots();}
 void Game::siegeTowers(){
  if(!battle||battle->siege.fort<2)return;for(int tower=0;tower<3&&battle;++tower){auto&s=battle->siege;if(!s.hp[tower])continue;CombatStack*target=nullptr;double best=-1;for(auto&u:battle->units)if(u.hp>0&&u.team==s.attackerTeam){double score=u.count*(Units[u.unit].minDamage+Units[u.unit].maxDamage)*(Units[u.unit].shots?2.:1.);if(score>best){best=score;target=&u;}}
   if(!target)return;int base=tower?6:10,buildings=tower?s.buildings/2:s.buildings;int damage=base+buildings+int(random()*(base+buildings+1));battle->log.push_back(tower?"侧箭塔射击。":"主箭塔射击。");hurt(*target,damage);if(finishBattle())return;

@@ -9,7 +9,7 @@ void Desktop::hero(){
  const auto&h=game.hero;
  heroPortrait(game.hero,{82,27,58,64});
  centerText(h.name,{145,28,218,38},22,GoldColor);centerText(std::to_string(h.level)+" 级 英雄",{145,65,218,25},12);
- const char*labels[]={"攻击","防御","力量","知识"};const int values[]={h.attack,h.defense,h.power,h.knowledge};
+ const char*labels[]={"攻击","防御","力量","知识"};const int values[]={game.primarySkill(0),game.primarySkill(1),game.primarySkill(2),game.primarySkill(3)};
  constexpr int primaryFrames[]={0,1,2,5};
  for(int i=0;i<4;i++){centerText(labels[i],{82+i*70,94,73,20},10,GoldColor);frame("pskil42.def",0,primaryFrames[i],{96+i*70,119,42,42});centerText(std::to_string(values[i]),{82+i*70,163,73,21},12);}
  frame("pskil42.def",0,4,{83,243,42,42});frame("pskil42.def",0,3,{239,243,42,42});
@@ -23,10 +23,21 @@ void Desktop::hero(){
  int slot=0;for(int skill=0;skill<SkillCount;skill++)if(h.skills[skill]){
   int x=82+(slot%2)*156,y=290+(slot/2)*48;
   frame("secskill.def",0,3+originalSkill[skill]*3+std::clamp(h.skills[skill]-1,0,2),{x,y,44,44});
-  text(SkillLevels[h.skills[skill]],x+49,y+5,10,Muted);text(SkillNames[skill],x+49,y+24,12,GoldColor);slot++;
+  text(SkillLevels[h.skills[skill]],x+49,y+5,10,Muted);text(SkillNames[skill],x+49,y+24,12,GoldColor);button({x,y,150,44},"",[]{},true,true,skillDescription(skill,h.skills[skill]));slot++;
  }
  text("行动力 "+std::to_string(h.movement)+" / "+std::to_string(h.maxMovement),390,417,12,Muted);
- int y=366;for(const auto&artifact:h.artifacts){text(artifact,390,y,11,GoldColor);y+=17;}
+ const std::pair<const char*,Point> equipment[]={
+  {"head",{442,21}},{"neck",{442,69}},{"torso",{442,121}},{"feet",{442,303}},
+  {"shoulders",{499,21}},{"right_hand",{315,133}},{"left_hand",{544,175}},
+  {"right_ring",{330,185}},{"left_ring",{499,232}},
+  {"misc1",{315,60}},{"misc2",{365,60}},{"misc3",{544,67}},{"misc4",{544,114}},{"misc5",{544,286}}
+ };
+ for(const auto&[name,p]:equipment){SDL_Rect rect{64+p.x,7+p.y,44,44};auto at=h.equipmentSlots.find(name);int id=at==h.equipmentSlots.end()?-1:at->second;if(id>=0)frame("artifact.def",0,id,rect);button(rect,"",[this,slot=std::string(name)]{say(heroArtifact_>=0?game.equipArtifact(heroArtifact_,slot):game.unequipArtifact(slot));heroArtifact_=-1;persist();},true,true,id>=0?artifactName(id)+"：点击卸下；选中背包宝物后点击此处替换":"空装备栏：先选背包中的宝物，再点击合适栏位装备");}
+ auto backpack=h.artifactIds;for(int worn:h.wornArtifacts){auto at=std::find(backpack.begin(),backpack.end(),worn);if(at!=backpack.end())backpack.erase(at);}std::erase_if(backpack,[](int id){return id<7&&id!=2;});int pages=std::max(1,(int(backpack.size())+4)/5);heroArtifactPage_=std::clamp(heroArtifactPage_,0,pages-1);
+ for(int i=0;i<5;++i){int index=heroArtifactPage_*5+i;if(index>=int(backpack.size()))break;int id=backpack[index];SDL_Rect rect{400+i*46,363,44,44};frame("artifact.def",0,id,rect);if(heroArtifact_==id)outline(rect,GoldColor);button(rect,"",[this,id]{if(id==2)say("携带圣杯进入己方城镇，即可建造圣杯建筑。");else heroArtifact_=id;},true,true,artifactName(id)+(id==2?"：携带进入己方城镇后建造圣杯建筑":"：选择后点击装备栏"));}
+ if(pages>1){button({379,367,18,32},"◀",[this]{--heroArtifactPage_;},heroArtifactPage_>0);button({634,367,18,32},"▶",[this]{++heroArtifactPage_;},heroArtifactPage_+1<pages);}
+
+
  heroPortrait(game.hero,{675,94,48,32});
  for(int i=0;i<ArmySlots;i++){const auto&unit=h.army[i];if(unit.empty())continue;portrait(unit.unit,{80+i*65,492,57,63});text(std::to_string(unit.count),84+i*65,541,13);}
  button({380,435,122,38},"部队管理",[this]{sourceSlot_=-1;armyReturn_=Scene::Hero;scene=Scene::Army;});

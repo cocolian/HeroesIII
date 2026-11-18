@@ -18,6 +18,8 @@ std::optional<Desktop::CursorVisual> Desktop::combatCursor(){
   static constexpr Point pivots[]={{12,12},{10,14},{14,14},{12,12},{12,12},{8,12},{0,0},{21,0},{31,5},{21,21},{0,21},{0,5},{0,0},{6,0},{6,31},{14,0},{12,12},{12,12},{12,12},{14,20}};
   return {"crcombat.def",frame,pivots[frame]};
  };
+ if(active->unit==CatapultUnit){int part=hex?game.catapultPartAt(*hex):-1;return combat(part>=0&&game.battle->siege.hp[part]>0?3:0);}
+ if(game.battle->tacticsTeam==0){if(target&&target->team==0)return combat(5);if(!hex)return combat(0);auto cells=game.footprint(*active,*hex);bool allowed=std::all_of(cells.begin(),cells.end(),[&](auto p){auto*u=game.combatAt(p);return p.x>=0&&p.x<game.battle->tacticsRange&&p.y>=0&&p.y<BattleH&&(!u||u->id==active->id)&&game.siegeCellAllowed(*active,p);});return combat(allowed?1:0);}
  if(pendingSpell_>=0){
   if(!hex&&!target)return combat(0);
   Point cell=target?Point{target->x,target->y}:*hex;
@@ -26,6 +28,7 @@ std::optional<Desktop::CursorVisual> Desktop::combatCursor(){
    auto victims=game.sacrificeVictims(sacrificeTarget_);valid=valid&&target&&std::find(victims.begin(),victims.end(),target->id)!=victims.end();
    return combat(valid?18:0);
   }
+  if(Spells[pendingSpell_].kind==SpellKind::Special){if(pendingSpell_==Teleport&&sacrificeTarget_<0)valid=valid&&target&&target->team==0;else valid=valid&&hex.has_value();int count=frameCount("crspell.def");return valid?CursorVisual{"crspell.def",count?int(animationTime_/80%count):0,{18,28}}:combat(0);}
   valid=valid&&!game.spellTargets(pendingSpell_,cell).empty();
   if(!valid)return combat(0);
   int count=frameCount("crspell.def");if(!count)return combat(6);

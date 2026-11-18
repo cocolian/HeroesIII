@@ -1,0 +1,282 @@
+{
+  "missingSpellEffects": [
+    {
+      "adventure": true,
+      "id": 35,
+      "name": "召船术"
+    },
+    {
+      "adventure": true,
+      "id": 36,
+      "name": "毁船术"
+    },
+    {
+      "adventure": true,
+      "id": 37,
+      "name": "透视之眼"
+    },
+    {
+      "adventure": true,
+      "id": 38,
+      "name": "透视大地"
+    },
+    {
+      "adventure": true,
+      "id": 39,
+      "name": "伪装大法"
+    },
+    {
+      "adventure": true,
+      "id": 40,
+      "name": "透视大气"
+    },
+    {
+      "adventure": true,
+      "id": 41,
+      "name": "飞行奇术"
+    },
+    {
+      "adventure": true,
+      "id": 42,
+      "name": "凌波微步"
+    },
+    {
+      "adventure": true,
+      "id": 43,
+      "name": "异次元之门"
+    },
+    {
+      "adventure": true,
+      "id": 44,
+      "name": "时空之门"
+    },
+    {
+      "adventure": false,
+      "id": 45,
+      "name": "流沙陷阱"
+    },
+    {
+      "adventure": false,
+      "id": 46,
+      "name": "埋设地雷"
+    },
+    {
+      "adventure": false,
+      "id": 47,
+      "name": "大力神盾"
+    },
+    {
+      "adventure": false,
+      "id": 48,
+      "name": "烈火魔墙"
+    },
+    {
+      "adventure": false,
+      "id": 49,
+      "name": "地动山摇"
+    },
+    {
+      "adventure": false,
+      "id": 50,
+      "name": "魔法神镜"
+    },
+    {
+      "adventure": false,
+      "id": 58,
+      "name": "屠戮成性"
+    },
+    {
+      "adventure": false,
+      "id": 59,
+      "name": "孤注一掷"
+    },
+    {
+      "adventure": false,
+      "id": 60,
+      "name": "丧心病狂"
+    },
+    {
+      "adventure": false,
+      "id": 61,
+      "name": "蛊惑人心"
+    },
+    {
+      "adventure": false,
+      "id": 62,
+      "name": "双目失明"
+    },
+    {
+      "adventure": false,
+      "id": 63,
+      "name": "瞬间移动"
+    },
+    {
+      "adventure": false,
+      "id": 64,
+      "name": "驱除障碍"
+    }
+  ],
+  "scope": "Runtime flags; behavioral and UI audits are separate",
+  "unimplementedAvailableBuildings": [
+    {
+      "building": 28,
+      "faction": "城堡",
+      "name": "船坞"
+    },
+    {
+      "building": 31,
+      "faction": "城堡",
+      "name": "兄弟会"
+    },
+    {
+      "building": 36,
+      "faction": "城堡",
+      "name": "村议事堂"
+    },
+    {
+      "building": 29,
+      "faction": "壁垒",
+      "name": "神秘池塘"
+    },
+    {
+      "building": 30,
+      "faction": "壁垒",
+      "name": "幸运泉"
+    },
+    {
+      "building": 31,
+      "faction": "壁垒",
+      "name": "金库"
+    },
+    {
+      "building": 36,
+      "faction": "壁垒",
+      "name": "村议事堂"
+    },
+    {
+      "building": 29,
+      "faction": "塔楼",
+      "name": "宝物商店"
+    },
+    {
+      "building": 36,
+      "faction": "塔楼",
+      "name": "村议事堂"
+    },
+    {
+      "building": 30,
+      "faction": "地狱",
+      "name": "硫磺烟云"
+    },
+    {
+      "building": 31,
+      "faction": "地狱",
+      "name": "城堡之门"
+    },
+    {
+      "building": 36,
+      "faction": "地狱",
+      "name": "村议事堂"
+    },
+    {
+      "building": 28,
+      "faction": "墓园",
+      "name": "船坞"
+    },
+    {
+      "building": 29,
+      "faction": "墓园",
+      "name": "黑暗天幕"
+    },
+    {
+      "building": 30,
+      "faction": "墓园",
+      "name": "招魂塔"
+    },
+    {
+      "building": 31,
+      "faction": "墓园",
+      "name": "骷髅转换场"
+    },
+    {
+      "building": 36,
+      "faction": "墓园",
+      "name": "村议事堂"
+    },
+    {
+      "building": 29,
+      "faction": "地下城",
+      "name": "宝物商店"
+    },
+    {
+      "building": 30,
+      "faction": "地下城",
+      "name": "魔力漩涡"
+    },
+    {
+      "building": 31,
+      "faction": "地下城",
+      "name": "召唤之门"
+    },
+    {
+      "building": 36,
+      "faction": "地下城",
+      "name": "村议事堂"
+    },
+    {
+      "building": 29,
+      "faction": "据点",
+      "name": "逃跑地道"
+    },
+    {
+      "building": 30,
+      "faction": "据点",
+      "name": "自由职业者公会"
+    },
+    {
+      "building": 31,
+      "faction": "据点",
+      "name": "弩车作坊"
+    },
+    {
+      "building": 36,
+      "faction": "据点",
+      "name": "村议事堂"
+    },
+    {
+      "building": 28,
+      "faction": "要塞",
+      "name": "船坞"
+    },
+    {
+      "building": 30,
+      "faction": "要塞",
+      "name": "鲜血方尖塔"
+    },
+    {
+      "building": 31,
+      "faction": "要塞",
+      "name": "恐怖浮雕"
+    },
+    {
+      "building": 36,
+      "faction": "要塞",
+      "name": "村议事堂"
+    },
+    {
+      "building": 28,
+      "faction": "元素城",
+      "name": "船坞"
+    },
+    {
+      "building": 29,
+      "faction": "元素城",
+      "name": "宝物商店"
+    },
+    {
+      "building": 36,
+      "faction": "元素城",
+      "name": "村议事堂"
+    }
+  ]
+}

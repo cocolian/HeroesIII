@@ -71,6 +71,12 @@ for fact in sorted(facts.values(),key=lambda row:row['originalId']):
 # Adventure entries provide identity/learning metadata; their behavior is separate.
 for name in ['adventure']:defs.update(read(root/'references/rules/vcmi/config/spells'/f'{name}.json'))
 newBehavior={
+ **{key:('Special',0,[0,0,0,0])for key in ['quicksand','landMine','forceField','fireWall','teleport','removeObstacle']},
+ 'berserk':('Timed',0,[0,0,1,2]),'hypnotize':('Timed',25,[10,10,20,50]),
+ **{key:('Adventure',0,[0,0,0,0])for key in ['summonBoat','scuttleBoat','visions','viewEarth','viewAir','disguise','fly','waterWalk','dimensionDoor','townPortal']},
+ 'blind':('Timed',0,[50,50,25,0]),'slayer':('Timed',0,[8,8,8,8]),
+ 'frenzy':('Timed',0,[100,100,150,200]),'magicMirror':('Timed',0,[20,20,30,40]),
+ 'earthquake':('Special',0,[2,2,3,4]),
  'mirth':('Timed',0,[1,1,2,2]),'sorrow':('Timed',0,[1,1,2,2]),
  'fortune':('Timed',0,[1,1,2,2]),'misfortune':('Timed',0,[1,1,2,2]),
  'resurrection':('Resurrection',50,[40,40,80,160]),
@@ -89,7 +95,7 @@ for index,(key,page,name,level,enemy,school,power,values)in enumerate(inputs):
  assert (level,school)==(fact['level'],fact['school']),key
  text=Document((root/'references/rules/wiki'/f'{page}.html').read_text()).root.text()if implemented and (root/'references/rules/wiki'/f'{page}.html').exists() else''
  match=re.search(r'Cost:\s*(\d+)\s*/\s*(\d+)',text)
- if not implemented:cost,skilled=fact['cost'],fact['skilledCost']
+ if not implemented or key in newBehavior or fact['adventure'] or key in {'blind','slayer','frenzy','magicMirror','earthquake'}:cost,skilled=fact['cost'],fact['skilledCost']
  elif key=='titanBolt':cost=skilled=0
  elif key in {'fortune','misfortune'}:cost,skilled=fact['cost'],fact['skilledCost']
  else:
@@ -99,7 +105,8 @@ for index,(key,page,name,level,enemy,school,power,values)in enumerate(inputs):
  kind='Unsupported'if not implemented else'Damage'if d.get('flags',{}).get('damage')else'Healing'if key=='cure'else'Dispel'if key=='dispel'else'Timed'
  if key in newBehavior:kind=newBehavior[key][0]
  target={'chainLightning':'Chain','frostRing':'Ring','fireball':'Radius','inferno':'Radius','meteorShower':'Radius','deathRipple':'Global','destroyUndead':'Global','armageddon':'Global'}.get(key,'Single')
- if kind=='Summon':target='Global'
+ if kind=='Summon' or key in {'earthquake','quicksand','landMine'}:target='Global'
+ if key=='berserk':target='Radius'
  filter_='Any'if target in ['Radius','Ring','Global']else'Enemy'if enemy else'Ally'
  if key=='deathRipple':filter_='NonUndead'
  if key=='destroyUndead':filter_='Undead'

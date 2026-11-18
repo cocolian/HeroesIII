@@ -1,0 +1,122 @@
+{
+  "version": "0.51.0",
+  "date": "2026-11-18",
+  "scope": "Six requested secondary skills, missing available spells and town services, original UI details, and final-code Seven Lakes normal-gameplay completion. Not full original-game parity.",
+  "secondarySkillChecks": 80,
+  "completionChecks": 449,
+  "spellCompletionChecks": 65,
+  "ctest": {
+    "native": {
+      "passed": 16,
+      "failed": 0
+    },
+    "distribution": {
+      "passed": 16,
+      "failed": 0
+    },
+    "asanUbsan": {
+      "passed": 16,
+      "failed": 0
+    }
+  },
+  "ui": {
+    "nativeFullScreenshots": 478,
+    "additionalCompletionScreenshotsPerBuild": 36,
+    "locationClasses": 41,
+    "locationScreenshots": 106,
+    "completionImageParity": {
+      "screenshots": 36,
+      "nativeVsSanitizedIdentical": true,
+      "nativeVsDistributionIdentical": true,
+      "sanitizedMismatches": [],
+      "distributionMismatches": []
+    },
+    "screenshotsAreControlledFixturesExceptCampaignEvidence": true
+  },
+  "mapLocations": {
+    "downloadedMaps": 15,
+    "siteClasses": 72,
+    "genericFallbackClasses": 0,
+    "genericFallbackInstances": 0,
+    "notProofOfAllOriginalRules": true
+  },
+  "sevenLakes": {
+    "completed": true,
+    "day": 621,
+    "difficulty": 0,
+    "map": "seven-lakes-1",
+    "movesIncludingRetries": 18428,
+    "noInjectedTeleportOrFogReveal": true,
+    "noResourceOrArmyInjection": true,
+    "normalGameplayOnly": true,
+    "realMapCollisionDataUnchanged": true,
+    "recruitAdditionalTavernHeroes": false,
+    "reloadPolicy": "kingdom-defeat-only",
+    "reloads": 0,
+    "sourceSha256": "7c40c456bc04d55fd709942cb387f42e42ec1b7d0f428c45ce7dbd77afa38c15",
+    "spellsIncludingRetries": 614,
+    "startingFaction": 0,
+    "startingHero": 9,
+    "usesNormalSaveLoadRetries": true,
+    "visitsIncludingRetries": 2618
+  },
+  "sevenLakesCounts": {
+    "dailyRecords": 621,
+    "wonBattles": 246,
+    "defeatsOrRetreatsOrSurrenders": 66,
+    "ownedTownsAtVictory": 18,
+    "additionalHeroes": "Normal prison rescues; no extra tavern recruitment",
+    "audit": "data/native/seven-lakes-validation-0.51.json"
+  },
+  "bundle": {
+    "verifiedAssetFiles": 12178,
+    "minimumMacOS": "14.0",
+    "systemLibrariesOnly": true,
+    "strictSignatureValid": true,
+    "startupFullscreen": true
+  },
+  "packages": {
+    "version": "0.51.0",
+    "architectures": [
+      "x86_64",
+      "arm64"
+    ],
+    "minimumMacOS": "14.0",
+    "selfContained": true,
+    "sourceFallbackEnabled": false,
+    "developerIdSigned": false,
+    "appleNotarized": false,
+    "files": {
+      "HeroesIII-0.51.0-macOS-universal.dmg": {
+        "bytes": 814521885,
+        "sha256": "74906b446ec832c0ea8a41c806069dcba31320e37f8c8cea65827c124784331a"
+      },
+      "HeroesIII-0.51.0-macOS-universal.pkg": {
+        "bytes": 786437579,
+        "sha256": "b9bcba49746c096b6f9a71a82106c17a34702d4e189e771cb03423968046ea66"
+      }
+    }
+  },
+  "personalSaveSha256BeforeAndAfter": "9334bb41cffc9c83a726d1a8ea9e2a2f892e49697339791ca72fa1685a6d0840",
+  "personalSaveModified": false,
+  "fullEvidenceDirectory": "references/validation/0.51",
+  "remainingScope": "Campaigns/network play, all hero and creature specialties, combination-artifact assembly, complete class-specific level-up probabilities, original map team alliances and custom-script edge cases, every pixel and animation timing. Video 200% performance remains unverified.",
+  "performanceProbe": {
+    "renderer": "metal",
+    "window": [
+      1280,
+      800
+    ],
+    "map": "wayfarer-1",
+    "idleFrameMs": 8.277526,
+    "hoverFrameMs": 8.370828125,
+    "heroFrameMs": 8.412916625,
+    "pathMs": 0.042349,
+    "autosaveEnqueueMeanMs": 0.038054149999999995,
+    "minimumMovingHeroPixels": 2225,
+    "originalSaveWritten": false,
+    "movingHeroFrames": 64,
+    "originalExitHitboxAtThreeWindowSizes": true,
+    "scope": "Fixed scene measurements on this Mac; not a whole-game FPS guarantee"
+  }
+}

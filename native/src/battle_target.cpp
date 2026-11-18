@@ -35,8 +35,12 @@ const CombatStack* Desktop::battleTargetAt(Point point){
 }
 void Desktop::battleCellAction(Point cell){
  if(battleMotion_.active()||autoCombat_||!game.current()||game.current()->team!=0)return;
+ if(game.battle&&game.battle->tacticsTeam==0){battleAction([this,cell]{auto*u=game.combatAt(cell);return game.act(u&&u->team==0?"select-tactics":"move",cell);});return;}
+ if(game.current()&&game.current()->unit==CatapultUnit){battleAction([this,cell]{return game.act("catapult",cell);});return;}
  std::string message;
- if(pendingSpell_==Sacrifice&&sacrificeTarget_<0){
+ if(pendingSpell_==Teleport&&sacrificeTarget_<0){auto*u=game.combatAt(cell);if(u&&u->team==0&&u->origin!=StackOrigin::WarMachine){sacrificeTarget_=u->id;message="请选择传送的落脚格。";}else message="请选择己方部队。";
+ }else if(pendingSpell_==Teleport){auto at=std::find_if(game.battle->units.begin(),game.battle->units.end(),[this](auto&u){return u.id==sacrificeTarget_;});if(at!=game.battle->units.end())battleAction([&]{return message=game.cast(Teleport,{at->x,at->y},cell);});if(message.empty())pendingSpell_=sacrificeTarget_=-1;
+ }else if(pendingSpell_==Sacrifice&&sacrificeTarget_<0){
   auto targets=game.spellTargets(Sacrifice,cell);if(targets.empty())message="请选择可复生的友军";else{sacrificeTarget_=targets.front();message="请选择另一支活物友军作为牺牲。";}
  }else if(pendingSpell_==Sacrifice){
   auto target=std::find_if(game.battle->units.begin(),game.battle->units.end(),[this](const auto&unit){return unit.id==sacrificeTarget_;});
