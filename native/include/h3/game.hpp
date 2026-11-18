@@ -15,7 +15,7 @@ constexpr int MapW=36,MapH=28,BattleW=15,BattleH=11,ArmySlots=7,MaxBattleStacksP
 enum Resource {Gold,Wood,Ore,Mercury,Sulfur,Crystal,Gems,ResourceCount};
 using Resources=std::array<int,ResourceCount>;
 extern const std::array<std::string,ResourceCount> ResourceNames;
-enum UnitId {Pikeman,Halberdier,Archer,Marksman,Griffin,RoyalGriffin,Swordsman,Crusader,Monk,Zealot,Cavalier,Champion,Angel,Archangel,Skeleton=56,Wolf=86,Orc=88,UnitCount=141};
+enum UnitId {Pikeman,Halberdier,Archer,Marksman,Griffin,RoyalGriffin,Swordsman,Crusader,Monk,Zealot,Cavalier,Champion,Angel,Archangel,Skeleton=56,Wolf=86,Orc=88,CreatureUnitCount=141,BallistaUnit=141,FirstAidTentUnit,AmmoCartUnit,UnitCount};
 struct UnitDef {
  std::string name,asset; int hp,attack,defense,minDamage,maxDamage,speed,growth,cost,shots,size,retaliations;
  bool flying=false,doubleAttack=false,noMeleePenalty=false,joust=false; int gemCost=0;
@@ -38,8 +38,12 @@ struct MapDecoration {Point anchor;int level=0;std::string sprite;bool ground=fa
 bool originalGroundLayer(std::string_view scenario,std::string_view sprite,Point anchor,int level);
 struct AdventureTemplate {std::string_view asset;Point visitOffset{};uint64_t blocked=0,visitable=0;};
 const AdventureTemplate& adventureTemplate(std::string_view);
-struct AdventureVisit {ObjectType type;std::string title,message;Resources reward{};int spell=-1;int morale=0,luck=0;int sourceClass=-1;};
-enum SkillId {Offense,Archery,Armorer,Logistics,Wisdom,Intelligence,Mysticism,Leadership,AirMagic,FireMagic,WaterMagic,EarthMagic,LuckSkill,SkillCount};
+struct AdventureVisit {ObjectType type;std::string title,message;Resources reward{};int spell=-1;int morale=0,luck=0;int sourceClass=-1;int objectId=0;};
+enum SkillId {Offense,Archery,Armorer,Logistics,Wisdom,Intelligence,Mysticism,Leadership,AirMagic,FireMagic,WaterMagic,EarthMagic,LuckSkill,Pathfinding,Scouting,Diplomacy,Navigation,Ballistics,EagleEye,Necromancy,Estates,Scholar,Tactics,Artillery,Learning,Sorcery,Resistance,FirstAid,SkillCount};
+inline constexpr int OriginalSkills[]={Pathfinding,Archery,Logistics,Scouting,Diplomacy,Navigation,Leadership,Wisdom,Mysticism,LuckSkill,Ballistics,EagleEye,Necromancy,Estates,FireMagic,AirMagic,WaterMagic,EarthMagic,Scholar,Tactics,Artillery,Learning,Offense,Armorer,Intelligence,Sorcery,Resistance,FirstAid};
+inline constexpr int OriginalSkillIcons[]={22,1,23,2,7,24,8,6,15,14,16,17,9,0,3,4,5,10,11,12,13,18,19,20,21,25,26,27};
+enum class LocationAction {Fight,Claim,Hire,Upgrade,Primary,Level,Learn,BuyArtifact,SellCreature,SacrificeCreature,SacrificeArtifact,RecruitHero,FreeHero,BuyMap,BuyMachine,Trade,Forget};
+struct LocationOffer {LocationAction action=LocationAction::Claim;int parameter=0,maximum=1,unit=-1,artifact=-1;Resources cost{};std::string label,description;bool enabled=true;};
 extern const std::array<std::string,SkillCount> SkillNames;
 extern const std::array<std::string,4> SkillLevels;
 enum SpellId {MagicArrow,Cure,Haste,Slow,Shield,StoneSkin,Bless,Curse,LightningBolt,IceBolt,Implosion,ChainLightning,FrostRing,Fireball,Inferno,MeteorShower,DeathRipple,DestroyUndead,Armageddon,TitanBolt,AirShield,FireShield,ProtectAir,ProtectFire,ProtectWater,ProtectEarth,AntiMagic,Bloodlust,Precision,Weakness,DisruptingRay,Prayer,Counterstrike,Forgetfulness,Dispel,SummonBoat,ScuttleBoat,Visions,ViewEarth,Disguise,ViewAir,Fly,WaterWalk,DimensionDoor,TownPortal,Quicksand,LandMine,ForceField,FireWall,Earthquake,MagicMirror,Resurrection,AnimateDead,Sacrifice,Mirth,Sorrow,Fortune,Misfortune,Slayer,Frenzy,Berserk,Hypnotize,Blind,Teleport,RemoveObstacle,Clone,SummonFireElemental,SummonEarthElemental,SummonWaterElemental,SummonAirElemental,SpellCount};
@@ -63,7 +67,7 @@ extern const std::array<BuildingDef,BuildingCount>& Buildings;
 struct Town {std::array<bool,BuildingCount> built{};std::array<int,7> pool{};Army garrison{};int builtDay=0,faction=0,stableWeek=-1;std::array<bool,4> lessons{};Point pos{4,20};std::array<std::vector<int>,5> guild{};int objectId=0,level=0;};
 struct MapHero {Hero value;int owner=0,level=0;bool sleeping=false;Point patrolOrigin{};int patrolRadius=-1;std::string sprite="ah00_.def";nlohmann::json properties=nlohmann::json::object();};
 struct GuildPlayer {int owner=0;std::array<int64_t,9> totals{};std::optional<Hero> bestHero;int bestCreature=-1;};
-enum class StackOrigin {Army,Summoned,Clone};
+enum class StackOrigin {Army,Summoned,Clone,WarMachine};
 struct CombatStack {int id=0,slot=0,unit=0,team=0,count=0,initialCount=0,hp=0,x=0,y=0,retaliations=0,shots=0;bool defending=false,waited=false;int preparedRound=-1,defenseReduction=0,defendingBonus=0;std::array<int,SpellCount> effects{},effectMastery{};StackOrigin origin=StackOrigin::Army;int permanentCount=0,cloneOf=-1,cloneTurns=0,deathOrder=0;bool corpse=false,acted=false,moraleUsed=false;};
 struct Siege {int faction=-1,fort=0,attackerTeam=0,townId=0,buildings=0;std::array<int,8> hp{};std::vector<Point> spentMines;};
 struct Battle {int targetId=0,round=1,spellRound=0,deferredVisitId=0;std::vector<CombatStack> units;std::vector<int> queue,waiting;bool waitPhase=false;std::vector<std::string> log;std::array<int,2> summonedType{-1,-1};int deathSequence=0;std::vector<int> moraleWaiting;bool moralePhase=false;std::array<int,4> defenderPrimary{};std::array<int,SkillCount> defenderSkills{};int defendingTown=0,returnHero=0;Siege siege;int defenderMana=0,defenderSpellRound=0;bool defenderSpellbook=false;std::array<bool,SpellCount> defenderSpells{};};
@@ -92,13 +96,18 @@ public:
  std::optional<AdventureVisit> takeAdventureVisit();int obelisksVisited()const;int obelisksTotal()const;std::string dig();
  std::optional<std::string> visitAdventureSite(Object&);int adventureModifier(const Hero&,int stat)const;bool hasAdventureBonus(const Hero&,int sourceClass)const;void consumeAdventureBonuses();
  int seaMovementBonus(int owner)const;std::vector<GuildPlayer> thievesGuild()const;
+ static bool extendedLocation(int sourceClass);static bool dwellingLocation(int sourceClass);static bool bankLocation(int sourceClass);
+ std::optional<std::string> visitLocation(int);std::vector<LocationOffer> locationOffers(int)const;std::string locationAction(int,LocationAction,int parameter=0,int amount=1);
+ void initializeLocation(int);void locationNewDay();void locationNotice(int,const std::string&);void locationBattleWon(int);bool sanctuaryProtected(int heroId)const;
+ void setupLocationBattle(int);void setupWarMachines();bool prepareWarMachine();int externalDwellingGrowth(int faction,int tier,int owner)const;
+ bool canVisitLocation(const Object&)const;bool locationBlocksPassage(const Object&)const;void autoVisitLocation(int);
  bool visiting()const{return (!imported()||activeHeroId!=0)&&hasTown()&&mapLevel==town.level&&hero.pos==town.pos;}
  static int mineYield(int resource);Resources mineIncome()const;Resources dailyIncome()const;
  int primarySkill(int)const;int artifactLandMovement()const;bool artifactSpellImmune(int)const;void equipPickedArtifact(int);int rollArtifact(int sourceClass);
  int income()const;int weeklyGrowth(int tier)const;int maxMana()const;int movementAllowance(int owner=-1)const;static int experienceForLevel(int);
  std::string endDay();std::string build(int);int recruitMax(int unit)const;std::string recruit(int unit,int count,bool garrison=false);std::string upgrade(bool garrison,int slot);
  std::string transfer(bool fromGarrison,int fromSlot,bool toGarrison,int toSlot,int amount);std::string dismiss(bool garrison,int slot);std::string chooseSkill(int);
- void gainXP(int);bool canAfford(const Resources&)const;std::array<int,7> recruitableUnits()const;
+ void gainXP(int,bool learning=true);int experienceAward(int)const;bool canAfford(const Resources&)const;std::array<int,7> recruitableUnits()const;
  const TownDef& townDef()const{return TownDefs[town.faction];}bool buildingRequirementsMet(int)const;void visitTownBuildings();
  BuildState constructionState(int)const;int hallBuilding(int row,int column)const;int hallIcon(int building)const;
  std::string learnMagic(int skill);

@@ -19,7 +19,7 @@ void Desktop::hero(){
  centerText("士气 "+std::string(morale>0?"+":"")+std::to_string(morale),{142,194,76,25},11);centerText("幸运 "+std::to_string(luck),{285,194,76,25},11);
  // Classic secondary-skill indices are factual data from the pinned skill
  // catalog. Each has three mastery frames after three empty placeholders.
- constexpr int originalSkill[]={22,1,23,2,7,24,8,6,15,14,16,17,9};
+ const auto&originalSkill=OriginalSkillIcons;
  int slot=0;for(int skill=0;skill<SkillCount;skill++)if(h.skills[skill]){
   int x=82+(slot%2)*156,y=290+(slot/2)*48;
   frame("secskill.def",0,3+originalSkill[skill]*3+std::clamp(h.skills[skill]-1,0,2),{x,y,44,44});

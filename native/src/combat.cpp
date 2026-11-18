@@ -1,4 +1,5 @@
 #include "h3/game.hpp"
+#include "h3/locations.hpp"
 #include "h3/battle_layout.hpp"
 #include <algorithm>
 #include <cmath>
@@ -18,6 +19,7 @@ int Game::distance(const CombatStack&a,const CombatStack&b)const{int d=100;for(a
 int Game::speed(const CombatStack&u)const{int n=Units[u.unit].speed+spellEffect(u,Prayer);if(u.effects[Haste]>0)n+=spellEffect(u,Haste);if(u.effects[Slow]>0)n=n*(100-spellEffect(u,Slow))/100;return std::max(1,n);}
 int Game::defense(const CombatStack&u)const{return Units[u.unit].defense+(u.team==0?primarySkill(1):battle?battle->defenderPrimary[1]:0)+spellEffect(u,StoneSkin)+spellEffect(u,Prayer)-u.defenseReduction+(u.defending?u.defendingBonus:0)-(inMoat(u,{u.x,u.y})&&battle->siege.faction!=2?3:0);}
 std::vector<Point> Game::battleRoute(const CombatStack&u,Point dest)const{
+ if(u.origin==StackOrigin::WarMachine)return dest==Point{u.x,u.y}?std::vector<Point>{dest}:std::vector<Point>{};
  if(!battle||u.x<0||u.x>=BattleW||u.y<0||u.y>=BattleH)return {};
  auto available=[&](Point p){for(Point cell:footprint(u,p)){if(cell.x<0||cell.x>=BattleW||cell.y<0||cell.y>=BattleH)return false;if(!siegeCellAllowed(u,cell))return false;auto*other=combatAt(cell);if(other&&other->id!=u.id)return false;}return true;};
  if(!available(dest))return {};Point start{u.x,u.y};if(dest==start)return {start};if(Units[u.unit].flying)return {start,dest};
@@ -32,10 +34,10 @@ std::vector<Point> Game::battleRoute(const CombatStack&u,Point dest)const{
  }return {};
 }
 std::optional<int> Game::battlePath(const CombatStack&u,Point dest)const{auto route=battleRoute(u,dest);if(route.empty())return {};return Units[u.unit].flying?hexDistance(route.front(),route.back()):int(route.size())-1;}
-bool Game::canShoot(const CombatStack&u)const{if(!battle||Units[u.unit].shots==0||u.shots<=0||spellEffect(u,Forgetfulness)>=100)return false;for(auto&t:battle->units)if(t.hp>0&&t.team!=u.team&&distance(u,t)==1)return false;return true;}
+bool Game::canShoot(const CombatStack&u)const{if(u.unit==BallistaUnit)return battle&&u.shots>0;if(!battle||Units[u.unit].shots==0||u.shots<=0||spellEffect(u,Forgetfulness)>=100)return false;for(auto&t:battle->units)if(t.hp>0&&t.team!=u.team&&distance(u,t)==1)return false;return true;}
 std::optional<AttackPlan> Game::attackPlan(const CombatStack&u,const CombatStack&t)const{
  if(!battle||u.hp<=0||t.hp<=0||u.team==t.team)return {};
- AttackPlan plan{{u.x,u.y},0,canShoot(u)&&distance(u,t)>1};
+ AttackPlan plan{{u.x,u.y},0,canShoot(u)&&(u.unit==BallistaUnit||distance(u,t)>1)};
  if(plan.ranged||distance(u,t)==1)return plan;
  int best=999;
  for(int y=0;y<BattleH;++y)for(int x=0;x<BattleW;++x){
@@ -71,16 +73,16 @@ int Game::damage(const CombatStack&a,const CombatStack&t,bool ranged,int travele
 }
 
 int Game::sampleBaseDamage(const CombatStack&stack){const auto&u=Units[stack.unit];if(stack.effects[Bless]>0)return stack.count*(u.maxDamage+spellEffect(stack,Bless));if(stack.effects[Curse]>0)return stack.count*std::max(1,u.minDamage-spellEffect(stack,Curse));if(u.minDamage==u.maxDamage)return stack.count*u.minDamage;int samples=std::min(stack.count,10),total=0;for(int i=0;i<samples;i++)total+=u.minDamage+int(random()*(u.maxDamage-u.minDamage+1));return int(int64_t(total)*stack.count/samples);}
-void Game::startBattle(int id,int defendingTown,int returnHero,int heroDefendingTown){if(battle)return;auto*o=objectById(id);if(!o)return;Battle b;if(heroes.contains(id)){auto previous=hero;hero=heroes[id].value;for(int stat=0;stat<4;++stat)b.defenderPrimary[stat]=primarySkill(stat);b.defenderSkills=hero.skills;b.defenderMana=hero.mana;b.defenderSpells=hero.spells;b.defenderSpellbook=hero.spellbook;hero=previous;}b.units.reserve(MaxBattleStacksPerSide*2);b.targetId=id;for(int team=0;team<2;team++){const auto&a=team==0?hero.army:o->army;int stacks=armyStacks(a),rank=0;for(int i=0;i<ArmySlots;i++){if(a[i].empty())continue;CombatStack s;s.id=team*100+i;s.slot=i;s.unit=a[i].unit;s.team=team;s.count=s.initialCount=a[i].count;s.permanentCount=s.count;s.hp=s.count*Units[s.unit].hp;auto position=battleDeployment(team,Units[s.unit].size,stacks,rank++,team==0&&hero.tightFormation);s.x=position.x;s.y=position.y;s.shots=Units[s.unit].shots;b.units.push_back(s);}}b.log.push_back("与"+o->name+"的战斗开始。");b.defendingTown=defendingTown;b.returnHero=returnHero;battle=std::move(b);if(defendingTown)setupSiege(defendingTown,1);else if(heroDefendingTown)setupSiege(heroDefendingTown,1);else if(o->type==ObjectType::Town)setupSiege(o->id,0);else if(heroes.contains(id)){for(const auto&city:objects)if(city.type==ObjectType::Town&&city.owner==o->owner&&city.level==o->level&&city.pos==o->pos){setupSiege(city.id,0);break;}}report.reset();emit({GameEventType::CombatStart,-1,id});nextRound();}
+void Game::startBattle(int id,int defendingTown,int returnHero,int heroDefendingTown){if(battle)return;auto*o=objectById(id);if(!o)return;if(heroes.contains(id)&&sanctuaryProtected(id)){message("避难所中的英雄受到保护，无法攻击。");return;}Battle b;if(heroes.contains(id)){auto previous=hero;hero=heroes[id].value;for(int stat=0;stat<4;++stat)b.defenderPrimary[stat]=primarySkill(stat);b.defenderSkills=hero.skills;b.defenderMana=hero.mana;b.defenderSpells=hero.spells;b.defenderSpellbook=hero.spellbook;hero=previous;}b.units.reserve(MaxBattleStacksPerSide*2);b.targetId=id;for(int team=0;team<2;team++){const auto&a=team==0?hero.army:o->army;int stacks=armyStacks(a),rank=0;for(int i=0;i<ArmySlots;i++){if(a[i].empty())continue;CombatStack s;s.id=team*100+i;s.slot=i;s.unit=a[i].unit;s.team=team;s.count=s.initialCount=a[i].count;s.permanentCount=s.count;s.hp=s.count*Units[s.unit].hp;auto position=battleDeployment(team,Units[s.unit].size,stacks,rank++,team==0&&hero.tightFormation);s.x=position.x;s.y=position.y;s.shots=Units[s.unit].shots;b.units.push_back(s);}}b.log.push_back("与"+o->name+"的战斗开始。");b.defendingTown=defendingTown;b.returnHero=returnHero;battle=std::move(b);if(defendingTown)setupSiege(defendingTown,1);else if(heroDefendingTown)setupSiege(heroDefendingTown,1);else if(o->type==ObjectType::Town)setupSiege(o->id,0);else if(heroes.contains(id)){for(const auto&city:objects)if(city.type==ObjectType::Town&&city.owner==o->owner&&city.level==o->level&&city.pos==o->pos){setupSiege(city.id,0);break;}}setupLocationBattle(id);setupWarMachines();report.reset();emit({GameEventType::CombatStart,-1,id});nextRound();}
 void Game::prepareCurrent(){
- while(battle){auto*u=current();if(!u||u->preparedRound==battle->round)return;u->preparedRound=battle->round;int preparing=u->id;moatHit(preparing);if(finishBattle())return;refreshQueue();if(battle->queue.empty()){nextAction();return;}u=current();if(!u||u->id!=preparing)continue;const auto&def=Units[u->unit];
+ while(battle){auto*u=current();if(!u||u->preparedRound==battle->round)return;u->preparedRound=battle->round;int preparing=u->id;moatHit(preparing);if(finishBattle())return;refreshQueue();if(battle->queue.empty()){nextAction();return;}u=current();if(!u||u->id!=preparing)continue;const auto&def=Units[u->unit];if(prepareWarMachine())continue;
   if(def.regeneration>0){int healing=std::min(def.regeneration,u->count*def.hp-u->hp);u->hp+=healing;if(healing)battle->log.push_back(def.name+"再生，恢复 "+std::to_string(healing)+" 点生命。");}
   if(u->team==1&&def.manaDrain>0){int drain=std::min(hero.mana,def.manaDrain);hero.mana-=drain;if(drain)battle->log.push_back(def.name+"吸取 "+std::to_string(drain)+" 点魔法值。");}
   int value=morale(*u);if(value>=0||u->moraleUsed||random()*12>=-value)return;
   u->moraleUsed=true;u->acted=true;battle->log.push_back(def.name+"因士气低落失去行动。");emit({GameEventType::CombatMorale,u->unit,-1,{u->x,u->y},u->id,-1,{},*u});nextAction(false);
  }
 }
-void Game::nextRound(bool prepare){if(!battle)return;auto&b=*battle;b.queue.clear();b.waiting.clear();b.waitPhase=b.moralePhase=false;b.moraleWaiting.clear();for(auto&u:b.units){u.moraleUsed=false;u.waited=false;u.acted=false;u.defending=false;u.defendingBonus=0;u.retaliations=0;if(u.origin==StackOrigin::Clone&&u.hp>0&&--u.cloneTurns<=0){b.log.push_back(Units[u.unit].name+"的镜像到期消失。");removeStack(u,false);}for(int s=0;s<SpellCount;s++)if(u.effects[s]>0&&--u.effects[s]==0)u.effectMastery[s]=0;if(u.hp>0)b.queue.push_back(u.id);}refreshQueue();b.log.push_back("第 "+std::to_string(b.round)+" 轮。");siegeTowers();if(!battle)return;if(!finishBattle()&&prepare)prepareCurrent();}
+void Game::nextRound(bool prepare){if(!battle)return;auto&b=*battle;b.queue.clear();b.waiting.clear();b.waitPhase=b.moralePhase=false;b.moraleWaiting.clear();for(auto&u:b.units){u.moraleUsed=false;u.waited=false;u.acted=false;u.defending=false;u.defendingBonus=0;u.retaliations=0;if(u.origin==StackOrigin::Clone&&u.hp>0&&--u.cloneTurns<=0){b.log.push_back(Units[u.unit].name+"的镜像到期消失。");removeStack(u,false);}for(int s=0;s<SpellCount;s++)if(u.effects[s]>0&&--u.effects[s]==0)u.effectMastery[s]=0;if(u.hp>0&&u.unit!=AmmoCartUnit)b.queue.push_back(u.id);}refreshQueue();b.log.push_back("第 "+std::to_string(b.round)+" 轮。");siegeTowers();if(!battle)return;if(!finishBattle()&&prepare)prepareCurrent();}
 void Game::refreshQueue(){if(!battle)return;auto&b=*battle;auto alive=[&](int id){auto*u=byId(b,id);return u&&u->hp>0;};std::erase_if(b.queue,[&](int id){return !alive(id);});std::erase_if(b.waiting,[&](int id){return !alive(id);});std::erase_if(b.moraleWaiting,[&](int id){return !alive(id);});if(!b.moralePhase)std::stable_sort(b.queue.begin(),b.queue.end(),[&](int a,int c){auto*u=byId(b,a);auto*v=byId(b,c);int as=speed(*u),bs=speed(*v);if(as!=bs)return b.waitPhase?as<bs:as>bs;if(u->team!=v->team)return u->team<v->team;return u->slot<v->slot;});}
 void Game::hurt(CombatStack&t,int n){
  int before=t.count;
@@ -95,10 +97,10 @@ void Game::strike(int aid,int tid,bool ranged,int traveled,bool counter){
  auto hit=[&](int distance_){
   int rating=luck(a);bool lucky=rating>0&&random()*24<rating;
   if(lucky){battle->log.push_back(Units[a.unit].name+"发动幸运攻击。");emit({GameEventType::CombatLuck,a.unit,1,{a.x,a.y},a.id,t.id,{},a});}
-  int base=sampleBaseDamage(a),hpBefore=t.hp;
+  int base=sampleBaseDamage(a),hpBefore=t.hp;if(a.unit==BallistaUnit){int attack=a.team==0?primarySkill(0):battle->defenderPrimary[0];base*=1+attack;int skill=a.team==0?hero.skills[Artillery]:battle->defenderSkills[Artillery];if(random()<std::array<double,4>{0,.5,.75,1}[skill])base*=2;}
   int dealt=damage(a,t,ranged,distance_,.5,base,false,lucky);
   int reflectedBase=damage(a,t,false,distance_,.5,base,true,lucky);
-  if(ranged)a.shots--;
+  if(ranged&&!std::any_of(battle->units.begin(),battle->units.end(),[&](auto&machine){return machine.hp>0&&machine.team==a.team&&machine.unit==AmmoCartUnit;}))a.shots--;
   emit({GameEventType::CombatAttack,a.unit,ranged?1:0,{a.x,a.y},a.id,t.id,{},a});
   int shield=std::max(Units[t.unit].fireShield,spellEffect(t,FireShield));
   hurt(t,dealt);
@@ -111,11 +113,11 @@ void Game::strike(int aid,int tid,bool ranged,int traveled,bool counter){
  battle->log.push_back(Units[a.unit].name+(counter?"反击":"攻击")+Units[t.unit].name+"。");
  hit(traveled);
  if(!ranged&&!counter&&!Units[a.unit].noRetaliation&&a.hp>0&&t.hp>0&&t.retaliations<Units[t.unit].retaliations+spellEffect(t,Counterstrike)){t.retaliations++;strike(tid,aid,false,0,true);}
- if(!counter&&Units[a.unit].doubleAttack&&(Units[a.unit].shots==0||ranged)&&a.hp>0&&t.hp>0&&(!ranged||a.shots>0)){battle->log.push_back(Units[a.unit].name+"发动第二次攻击。");hit(0);}
+ if(!counter&&(Units[a.unit].doubleAttack||(a.unit==BallistaUnit&&(a.team==0?hero.skills[Artillery]:battle->defenderSkills[Artillery])>1))&&(Units[a.unit].shots==0||ranged)&&a.hp>0&&t.hp>0&&(!ranged||a.shots>0)){battle->log.push_back(Units[a.unit].name+"发动第二次攻击。");hit(0);}
 }
 bool Game::finishBattle(){
  if(!battle)return false;auto&b=*battle;bool blue=false,red=false;
- for(auto&u:b.units)if(u.hp>0)(u.team==0?blue:red)=true;
+ for(auto&u:b.units)if(u.hp>0&&u.origin!=StackOrigin::WarMachine)(u.team==0?blue:red)=true;
  if(blue&&red)return false;
  BattleReport r;int64_t xp=0;hero.army={};
  for(auto&u:b.units)if(u.origin==StackOrigin::Army){
@@ -125,13 +127,14 @@ bool Game::finishBattle(){
  r.won=blue&&armyCount(hero.army)>0;r.after=hero.army;r.xp=r.won?int(std::min<int64_t>(xp,1000000000)):0;
  consumeAdventureBonuses();
  if(heroes.contains(b.targetId))heroes[b.targetId].value.mana=b.defenderMana;
- int id=b.targetId,deferred=b.deferredVisitId,defendingTown=b.defendingTown,returnHero=b.returnHero,heroDefendingTown=!b.defendingTown&&b.siege.attackerTeam==1?b.siege.townId:0;if(!r.won&&heroes.contains(id)){Army survivors{};for(const auto&u:b.units)if(u.team==1&&u.count>0)survivors[u.slot]={u.unit,u.count};heroes[id].value.army=survivors;if(auto*o=objectById(id))o->army=survivors;}battle.reset();report=r;emit({GameEventType::CombatEnd,-1,r.won?1:0});
+ for(const auto&machine:b.units)if(machine.origin==StackOrigin::WarMachine&&machine.hp<=0){int artifact=machine.unit==BallistaUnit?4:machine.unit==FirstAidTentUnit?6:5;Hero*owner=machine.team==0?&hero:heroes.contains(b.targetId)?&heroes[b.targetId].value:nullptr;if(owner)locations::removeArtifact(*owner,artifact);}
+ int id=b.targetId,deferred=b.deferredVisitId,defendingTown=b.defendingTown,returnHero=b.returnHero,heroDefendingTown=!b.defendingTown&&b.siege.attackerTeam==1?b.siege.townId:0;if(!r.won&&heroes.contains(id)){Army survivors{};for(const auto&u:b.units)if(u.team==1&&u.origin==StackOrigin::Army&&u.count>0)survivors[u.slot]={u.unit,u.count};heroes[id].value.army=survivors;if(auto*o=objectById(id))o->army=survivors;}battle.reset();report=r;emit({GameEventType::CombatEnd,-1,r.won?1:0});
  if(defendingTown){if(r.won){heroes.erase(id);std::erase_if(objects,[id](const auto&o){return o.id==id;});if(settlements.contains(defendingTown))settlements[defendingTown].garrison=r.after;if(activeTownId==defendingTown)town.garrison=r.after;if(auto*o=objectById(defendingTown))o->army=r.after;}else if(auto*o=objectById(defendingTown)){o->owner=heroes.contains(id)?heroes[id].owner:1;o->army={};settlements[defendingTown].garrison={};}activeHeroId=returnHero;if(heroes.contains(returnHero)){hero=heroes[returnHero].value;mapLevel=heroes[returnHero].level;}syncHeroObjects();checkScenarioVictory();return true;}
  if(heroDefendingTown&&!r.won){if(auto*city=objectById(heroDefendingTown)){city->owner=heroes.contains(id)?heroes[id].owner:1;city->army={};settlements[heroDefendingTown].garrison={};if(activeTownId==heroDefendingTown)town.garrison={};if(heroes.contains(id)){heroes[id].value.pos=city->pos;heroes[id].level=city->level;}}}
  if(!r.won){result=actingOwner==0?-1:0;message(hero.name+"没有可带离战场的部队，战役失败。");}
- else{gainXP(r.xp);auto*o=objectById(id);if(imported()&&o&&o->properties.contains("absod_id"))scenarioRules["defeated"].push_back(o->properties["absod_id"]);if(o&&o->type==ObjectType::Town){o->owner=actingOwner;o->army={};if(imported()){if(settlements.contains(id))settlements[id].garrison={};selectTown(id);checkScenarioVictory();message("城镇已被占领。");}else{result=1;message("黑鸦堡已被占领！边境重归和平。");}}else if(imported()&&o&&o->type!=ObjectType::Monster&&o->type!=ObjectType::EnemyHero){o->army={};applyVisit(id);}else{heroes.erase(id);std::erase_if(objects,[id](auto&o){return o.id==id;});message("战斗胜利，获得 "+std::to_string(xp)+" 点经验。");if(imported())checkScenarioVictory();}}
+ else{gainXP(r.xp);auto*o=objectById(id);if(imported()&&o&&o->properties.contains("absod_id"))scenarioRules["defeated"].push_back(o->properties["absod_id"]);if(o&&o->type==ObjectType::Town){o->owner=actingOwner;o->army={};if(imported()){if(settlements.contains(id))settlements[id].garrison={};selectTown(id);checkScenarioVictory();message("城镇已被占领。");}else{result=1;message("黑鸦堡已被占领！边境重归和平。");}}else if(imported()&&o&&o->type!=ObjectType::Monster&&o->type!=ObjectType::EnemyHero){o->army={};locationBattleWon(id);applyVisit(id);}else{heroes.erase(id);std::erase_if(objects,[id](auto&o){return o.id==id;});message("战斗胜利，获得 "+std::to_string(xp)+" 点经验。");if(imported())checkScenarioVictory();}}
  if(!r.won&&imported()&&activeHeroId){heroes.erase(activeHeroId);auto next=std::find_if(heroes.begin(),heroes.end(),[&](const auto&p){return p.second.owner==actingOwner;});if(next!=heroes.end()){activeHeroId=next->first;hero=next->second.value;mapLevel=next->second.level;result=0;}else{activeHeroId=0;if(actingOwner==0&&hasTown()){result=0;hero=Hero{};hero.army={};hero.movement=0;hero.name="请从酒馆招募英雄";hero.pos=town.pos;mapLevel=town.level;}}syncHeroObjects();}
- if(r.won&&deferred&&!guardingMonster(hero.pos)){auto*object=objectById(deferred);if(object&&object->visitableAt(hero.pos)&&!(object->type==ObjectType::Town&&object->owner!=0))applyVisit(deferred);}
+ if(r.won&&deferred){auto*object=objectById(deferred);if(object&&(object->visitableAt(hero.pos)||(extendedLocation(object->sourceClass)&&canVisitLocation(*object)))&&!guardingMonster(object->pos)&&!(object->type==ObjectType::Town&&object->owner!=0))applyVisit(deferred);}
  return true;
 }
 void Game::nextAction(bool prepare){

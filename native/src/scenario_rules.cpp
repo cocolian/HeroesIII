@@ -7,7 +7,7 @@ namespace {
 using Json=nlohmann::json;
 constexpr const char*ResourceKeys[]={"gold","wood","ore","mercury","sulfur","crystal","gems"};
 constexpr int ResourceIds[]={Wood,Mercury,Ore,Sulfur,Crystal,Gems,Gold};
-constexpr int SkillIds[]={-1,Archery,Logistics,-1,-1,-1,Leadership,Wisdom,Mysticism,LuckSkill,-1,-1,-1,-1,FireMagic,AirMagic,WaterMagic,EarthMagic,-1,-1,-1,-1,Offense,Armorer,Intelligence,-1,-1,-1};
+constexpr int SkillIds[]={Pathfinding,Archery,Logistics,Scouting,Diplomacy,Navigation,Leadership,Wisdom,Mysticism,LuckSkill,Ballistics,EagleEye,Necromancy,Estates,FireMagic,AirMagic,WaterMagic,EarthMagic,Scholar,Tactics,Artillery,Learning,Offense,Armorer,Intelligence,Sorcery,Resistance,FirstAid};
 int unitId(int original){for(int i=0;i<UnitCount;++i)if(Units[i].originalId==original)return i;return -1;}
 bool merge(Army&army,int unit,int count){if(unit<0||count<=0)return false;for(auto&s:army)if(!s.empty()&&s.unit==unit){if(count>MaxArmyStack-s.count)return false;s.count+=count;return true;}for(auto&s:army)if(s.empty()){s={unit,count};return count<=MaxArmyStack;}return false;}
 int count(const Army&army,int original){int id=unitId(original),n=0;for(auto s:army)if(s.unit==id)n+=s.count;return n;}
@@ -59,6 +59,7 @@ bool Game::questReady(const Object&o)const{if(o.sourceClass==9||o.sourceClass==2
 std::optional<std::string> Game::importedVisit(int id){
  if(!imported())return {};auto*ptr=objectById(id);if(!ptr)return std::string{};if(ptr->type==ObjectType::Site&&(ptr->name=="地图物件"||ptr->name.starts_with("地图物件（类型 ")))ptr->name=adventureSiteName(ptr->sourceClass);Object o=*ptr;auto previous=resources;if(o.type==ObjectType::MapEvent){const char*names[]={"red","blue","tan","green","orange","purple","teal","pink"};int original=scenarioRules.value("originalPlayer",0);int recipient=actingOwner==0?original:actingOwner<=original?actingOwner-1:actingOwner;if(o.properties.contains("affected_players")&&!o.properties["affected_players"].value(names[recipient],false))return std::string{};if(actingOwner&&!o.properties.value("applies_to_computer",1))return std::string{};}
  auto finish=[&](std::string message,bool erase=false,bool mark=true){if(auto*p=objectById(id);p&&mark)p->visited=true;if(erase)std::erase_if(objects,[id](const auto&o){return o.id==id;});if(mark&&(o.sourceClass==23||o.sourceClass==32||o.sourceClass==51||o.sourceClass==61||o.sourceClass==100||o.sourceClass==41))hero.visitedSites.push_back(id);recordStory(o.name,message);AdventureVisit notice{o.type,o.name,message};notice.sourceClass=o.sourceClass;for(int r=0;r<ResourceCount;++r)notice.reward[r]=resources[r]-previous[r];adventureVisit_=notice;this->message(message);emit({GameEventType::Visit,o.type==ObjectType::Site?o.sourceClass:-1,int(o.type),o.pos});checkScenarioVictory();return message;};
+ if(o.type==ObjectType::Site)if(auto handled=visitLocation(id))return handled;
  if(o.type==ObjectType::EnemyHero&&o.owner==currentOwner())return finish("与 "+o.name+" 会面，可以交换部队或切换英雄。",false,false);
  if(o.type!=ObjectType::Town&&o.type!=ObjectType::Monster&&o.type!=ObjectType::EnemyHero&&armyCount(o.army)>0&&!((o.sourceClass==33||o.sourceClass==219)&&o.owner==actingOwner)){startBattle(id);return "必须先击败守卫。";}
  if(o.sourceClass==33||o.sourceClass==219){if(o.owner==actingOwner)return finish("这是己方驻防要塞。",false,false);if(!armyCount(o.army)){ptr->owner=actingOwner;return finish("驻防要塞已占领。",false,false);}}
@@ -100,7 +101,8 @@ void Game::checkScenarioVictory(){
 }
 void Game::importedNewDay(){
  if(!imported())return;
- if((day-1)%7==0)for(auto&[id,t]:settlements){if(id==activeTownId)continue;auto*o=objectById(id);if(!o||o->owner<0)continue;for(int tier=0;tier<7;++tier)if(t.built[Guardhouse+tier]){int growth=Units[t.faction*14+tier*2].growth;if(t.built[Castle])growth*=2;else if(t.built[Citadel])growth=growth*3/2;t.pool[tier]=std::min(MaxArmyStack,t.pool[tier]+growth);}}
+ if((day-1)%7==0)for(auto&[id,t]:settlements){if(id==activeTownId)continue;auto*o=objectById(id);if(!o||o->owner<0)continue;for(int tier=0;tier<7;++tier)if(t.built[Guardhouse+tier]){int growth=Units[t.faction*14+tier*2].growth;if(t.built[Castle])growth*=2;else if(t.built[Citadel])growth=growth*3/2;growth+=externalDwellingGrowth(t.faction,tier,o->owner);t.pool[tier]=std::min(MaxArmyStack,t.pool[tier]+growth);}}
+ locationNewDay();
  runScenarioEvents();
  checkScenarioVictory();
 }

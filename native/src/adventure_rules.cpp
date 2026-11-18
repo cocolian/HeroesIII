@@ -21,7 +21,9 @@ int Game::moveCost(Point from,Point to)const{
  auto*t=tile(to);auto*f=tile(from);if(!t||!f)return 999999;
  // The map currently draws dirt roads. A discount requires both endpoints
  // to lie on that road; merely stepping onto a road is ordinary terrain.
- int cost=f->road&&t->road?75:t->terrain==Terrain::Sand?150:100;
+ int penalty=t->terrain==Terrain::Sand||t->terrain==Terrain::Snow?50:t->terrain==Terrain::Swamp?75:t->terrain==Terrain::Rough?25:0;
+ const Terrain native[]={Terrain::Grass,Terrain::Grass,Terrain::Snow,Terrain::Lava,Terrain::Dirt,Terrain::Subterranean,Terrain::Rough,Terrain::Swamp,Terrain::Grass};bool nativeArmy=armyCount(hero.army)>0;for(const auto&s:hero.army)if(!s.empty())nativeArmy&=Units[s.unit].faction>=0&&native[Units[s.unit].faction]==t->terrain;
+ if(nativeArmy)penalty=0;penalty=std::max(0,penalty-std::array<int,4>{0,25,50,100}[hero.skills[Pathfinding]]);int cost=f->road&&t->road?75:100+penalty;
  return from.x!=to.x&&from.y!=to.y?int(std::floor(cost*std::sqrt(2.))):cost;
 }
 const Object* Game::guardingMonster(Point p,bool visibleOnly)const{
@@ -58,7 +60,7 @@ std::vector<Step> Game::path(Point goal)const{
  auto open=[&](Point p){return tile(p)&&allowed[p.y*mapWidth+p.x];};
  auto step=[&](Point a,Point b){int dx=b.x-a.x,dy=b.y-a.y;if(std::max(std::abs(dx),std::abs(dy))!=1||!open(b)||(!imported()&&(dx&&dy)&&(!open({a.x+dx,a.y})||!open({a.x,a.y+dy}))))return false;if(imported()){auto*f=tile(a);auto*t=tile(b);if(f->terrain!=Terrain::Water&&t->terrain==Terrain::Water){auto*o=object(b);if(!o||o->type!=ObjectType::Boat)return false;}if(f->terrain==Terrain::Water&&t->terrain!=Terrain::Water&&!(t->originalFlags&64))return false;}return true;};
  if(!open(goal)||!tile(goal)->seen||goal==hero.pos)return {};
- const auto*target=object(goal);
+ const auto*target=object(goal);if(target&&target->type==ObjectType::EnemyHero&&sanctuaryProtected(target->id))return {};
  bool attack=target&&(target->type==ObjectType::Monster||target->type==ObjectType::EnemyHero)&&target->owner!=currentOwner()&&armyCount(target->army)>0;
  if(attack&&step(hero.pos,goal))return {{goal.x,goal.y,moveCost(hero.pos,goal)}};
  constexpr int Inf=std::numeric_limits<int>::max();
@@ -74,7 +76,7 @@ std::vector<Step> Game::path(Point goal)const{
    if((!attack&&p==goal)||(attack&&guard&&guard->id==target->id)||(attack&&target->type==ObjectType::EnemyHero&&step(p,target->pos))){end=i;break;}
    // A route cannot silently continue through an encounter or enemy town.
    const auto*at=object(p);
-   if(guard||(at&&((at->type==ObjectType::Town&&at->owner!=currentOwner())||at->type==ObjectType::Gate||at->type==ObjectType::Portal)))continue;
+   if(guard||(at&&((at->type==ObjectType::Town&&at->owner!=currentOwner())||at->type==ObjectType::Gate||at->type==ObjectType::Portal||locationBlocksPassage(*at))))continue;
   }
   for(int dy=-1;dy<=1;++dy)for(int dx=-1;dx<=1;++dx){
    Point next{p.x+dx,p.y+dy};if(!step(p,next)||!tile(next)->seen)continue;
@@ -107,6 +109,7 @@ std::string Game::move(Point p){
   startBattle(object->id);return "向相邻野兵发起战斗！";
  }
  if(object&&object->type==ObjectType::Gate){if(const auto*guard=guardingMonster(p)){startBattle(guard->id);return "必须先击败关卡附近的守军。";}return applyVisit(object->id);}
+ if(object&&locationBlocksPassage(*object))return visit(object->id);
  auto previous=hero.pos;bool waterBefore=tile(previous)->terrain==Terrain::Water,waterAfter=tile(p)->terrain==Terrain::Water;
  if(imported()&&waterBefore!=waterAfter){
   if(waterAfter){hero.lastEmbark=previous;hero.onBoat=true;if(object&&object->type==ObjectType::Boat){int id=object->id;std::erase_if(objects,[id](const auto&o){return o.id==id;});object=nullptr;}}

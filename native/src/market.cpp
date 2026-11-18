@@ -18,7 +18,7 @@ int Game::marketplaces(int marketObject)const{
  if(marketObject==0){if(!imported())return town.built[Marketplace]?1:0;int markets=0;for(auto&o:objects)if(o.type==ObjectType::Town&&o.owner==actingOwner&&settlements.contains(o.id))markets+=(o.id==activeTownId?town:settlements.at(o.id)).built[Marketplace];return markets;}
  if(marketObject<0)return 0;
  auto post=std::find_if(objects.begin(),objects.end(),[&](const auto&object){return object.id==marketObject;});
- return post!=objects.end()&&post->type==ObjectType::TradingPost&&post->pos==hero.pos?5:0;
+ return post!=objects.end()&&(post->type==ObjectType::TradingPost||post->sourceClass==221)&&post->pos==hero.pos&&post->level==mapLevel?5:0;
 }
 int Game::tradeLimit(int sold,int bought,int marketObject)const{
  if(battle||report||result||!hero.levelChoices.empty())return 0;

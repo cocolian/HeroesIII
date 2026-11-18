@@ -1,4 +1,5 @@
 #include "h3/game.hpp"
+#include "h3/locations.hpp"
 #include <algorithm>
 
 namespace h3 {
@@ -7,6 +8,7 @@ bool active(const AdventureBonus&bonus,int day){return !bonus.expiresDay||day<bo
 std::string signedNumber(int value){return (value>0?"+":"")+std::to_string(value);}
 }
 std::string adventureSiteName(int sourceClass){
+ if(auto name=locations::name(sourceClass);!name.empty())return name;
  switch(sourceClass){
  case 11:return "浮标";case 12:return "营火";case 14:return "天鹅湖";
  case 17:case 18:case 19:case 20:case 216:case 217:case 218:return "野外生物巢穴";
@@ -53,7 +55,7 @@ std::optional<std::string> Game::visitAdventureSite(Object&object){
   }
   if(!xp)return "海妖唱起诡异的歌声，但你的小队抵挡住了诱惑，没有士兵跳入海中。";
   int award=int(std::min<int64_t>(1000000000,xp));gainXP(award);
-  return "海妖的歌声使部分士兵跳海溺亡。\n损失："+losses+"。\n你从这次遭遇中获得 "+std::to_string(award)+" 点经验。";
+  return "海妖的歌声使部分士兵跳海溺亡。\n损失："+losses+"。\n你从这次遭遇中获得 "+std::to_string(experienceAward(award))+" 点经验。";
  }
  if(cls==48){
   if(hero.mana>=2*maxMana())return "魔法值已经达到上限的两倍，无需饮用泉水。";

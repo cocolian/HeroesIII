@@ -87,7 +87,8 @@ std::string Game::castReinforcement(int spell,Point point,Point sacrifice){
  if(def.kind==SpellKind::Summon||def.kind==SpellKind::Clone){
   int allocated=int(std::count_if(b.units.begin(),b.units.end(),[](const auto&u){return u.team==0;}));
   if(allocated>=MaxBattleStacksPerSide)return "本方已达到本场战斗的 20 栏上限";
-  int slot=ArmySlots;for(const auto&u:b.units)if(u.team==0)slot=std::max(slot,u.slot+1);
+  int slot=ArmySlots;while(slot<26&&std::any_of(b.units.begin(),b.units.end(),[&](const auto&u){return u.team==0&&u.slot==slot;}))++slot;
+  if(slot==26)return "本方没有可用的战场栏位";
   created.team=0;created.slot=slot;created.id=slot;
   if(def.kind==SpellKind::Summon){
    int unit=elemental(spell);if(b.summonedType[0]>=0&&b.summonedType[0]!=unit)return "经典版一场战斗中只能召唤一种元素";

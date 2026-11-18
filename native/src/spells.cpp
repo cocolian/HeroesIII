@@ -43,6 +43,7 @@ bool Game::spellImmune(const CombatStack&target,int spell)const {
  if(spell==Dispel)return false;
  if(target.team==0&&artifactSpellImmune(spell))return true;
  const auto&u=Units[target.unit];
+ if(target.origin==StackOrigin::WarMachine&&Spells[spell].kind!=SpellKind::Damage)return true;
  if((spell==Mirth||spell==Sorrow)&&u.nonLiving)return true;
  if(spell==Forgetfulness&&u.mindImmune)return true;
  return std::max(u.spellImmunity,spellEffect(target,AntiMagic))>=Spells[spell].level
@@ -57,6 +58,7 @@ int Game::spellDamage(const CombatStack&target,int spell,int raw)const {
  const auto&unit=Units[target.unit];int vulnerability=0,protection=0;
  for(auto[s,bonus]:unit.spellVulnerabilities)if(s==spell)vulnerability=bonus;
  for(int school=0;school<4;school++)if(Spells[spell].school&(1<<school))protection=std::max(protection,spellEffect(target,ProtectAir+school));
+ int sorcery=spellTeam_==0?hero.skills[Sorcery]:battle?battle->defenderSkills[Sorcery]:0;raw=int(int64_t(raw)*(100+5*sorcery)/100);
  int64_t damage=int64_t(raw)*(100+vulnerability)*(100-unit.spellDamageReduction)*(100-protection)/1000000;
  return std::max(0,int(damage));
 }
@@ -149,7 +151,8 @@ std::string Game::cast(int spell,Point point,Point sacrifice) {
  auto apply=[&](int id,int baseDamage){
   auto&target=*std::find_if(combat.units.begin(),combat.units.end(),[id](const auto&unit){return unit.id==id;});const auto&unit=Units[target.unit];
   if(target.hp<=0&&spell!=Dispel)return true;
-  if(def.enemy&&unit.magicResistance>0&&random()*100<unit.magicResistance){combat.log.push_back(unit.name+"抵抗了法术。");return false;}
+  int resistance=std::max(unit.magicResistance,std::array<int,4>{0,5,10,20}[target.team==0?hero.skills[Resistance]:combat.defenderSkills[Resistance]]);
+  if(def.enemy&&resistance>0&&random()*100<resistance){combat.log.push_back(unit.name+"抵抗了法术。");return false;}
   if(def.kind==SpellKind::Damage)hurt(target,spellDamage(target,spell,baseDamage));
   else if(spell==Cure){int healing=std::min(target.count*unit.hp-target.hp,raw);target.hp+=healing;clearEffects(target,true);combat.log.push_back(unit.name+"恢复 "+std::to_string(healing)+" 点生命并解除负面效果。");}
   else if(spell==Dispel)clearEffects(target,false);

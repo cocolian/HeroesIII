@@ -32,6 +32,14 @@ towns = ['avccasx0.def', 'avcramx0.def', 'avctowx0.def', 'avcinfx0.def', 'avcnec
          'avcdunx0.def', 'avcstrx0.def', 'avcftrx0.def', 'avchforx.def']
 mines = ['avmgold0.def', 'avmsawd0.def', 'avmore0.def', 'avmalch0.def', 'avmsulf0.def', 'avmcrys0.def', 'avmgems0.def']
 flaggable_sites = ['avxlths0.def']
+for scenario in sorted((ROOT / 'assets/demo/scenarios').glob('*.json')):
+    for template in json.loads(scenario.read_text())['templates']:
+        name = template['def'].lower()
+        if template['object_class'] not in (17, 20, 216, 217, 218) or name not in manifest['def'] or name in flaggable_sites:
+            continue
+        definition = Def(resources.read(name))
+        if any(5 in definition.pixels(frame) for frame in definition.groups[0]):
+            flaggable_sites.append(name)
 assets = {}
 for name in towns + mines + flaggable_sites + ['cmflagl.def', 'cmflagr.def']:
     definition = Def(resources.read(name))
@@ -42,7 +50,9 @@ for name in towns + mines + flaggable_sites + ['cmflagl.def', 'cmflagr.def']:
         for frame in definition.groups[0]:
             pixels = definition.pixels(frame)
             points = [(i % frame.width, i // frame.width) for i, value in enumerate(pixels) if value == 5]
-            assert points, 'Missing owner marker: ' + name
+            if not points:
+                entry['samples'].append({'point': [0, 0], 'pixels': 0})
+                continue
             center = (sum(x for x, y in points) / len(points), sum(y for x, y in points) / len(points))
             point = min(points, key=lambda p: (p[0]-center[0])**2 + (p[1]-center[1])**2)
             entry['samples'].append({'point': [frame.left+point[0], frame.top+point[1]], 'pixels': len(points)})

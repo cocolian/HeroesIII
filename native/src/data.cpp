@@ -2,9 +2,13 @@
 #include <limits>
 #include <algorithm>
 namespace h3 {
-const std::array<UnitDef,UnitCount> Units={{
+const std::array<UnitDef,UnitCount> Units=[]{std::array<UnitDef,UnitCount> units={{
 #include "../generated/creatures.inc"
 }};
+ const char*names[]={"弩车","急救帐篷","弹药车"};const char*animations[]={"smbal.def","smtent.def","smcart.def"};
+ const int hp[]={250,75,100},cost[]={2500,750,1000},defense[]={10,0,5};
+ for(int i=0;i<3;++i){auto&u=units[CreatureUnitCount+i];u.name=names[i];u.animation=animations[i];u.originalId=146+i;u.portraitFrame=148+i;u.hp=hp[i];u.attack=i==0?10:0;u.defense=defense[i];u.minDamage=i==0?2:0;u.maxDamage=i==0?3:0;u.speed=1;u.cost=cost[i];u.shots=i==0?24:0;u.size=i==2?1:2;u.retaliations=0;u.nonLiving=true;u.living=false;u.mindImmune=true;u.noDistancePenalty=true;u.noMeleePenalty=true;u.noRetaliation=true;u.portraitOnly=true;}
+ return units;}();
 const std::array<TownDef,FactionCount> TownDefs={{
 #include "../generated/towns.inc"
 }};

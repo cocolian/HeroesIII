@@ -156,7 +156,7 @@ void Desktop::adventure(){
  // Keep minimap cells square and show the actual expanded viewport.
  box({side+22,27,144,144},{0,0,0,255});auto mini=adventureMinimapRect();int miniScale=mini.w/game.mapWidth;
  for(int y=0;y<game.mapHeight;y++)for(int x=0;x<game.mapWidth;x++){auto*t=game.tile({x,y});if(!t->seen)continue;SDL_Color c=t->terrain==Terrain::Water?SDL_Color{28,67,72,255}:t->terrain==Terrain::Sand?SDL_Color{164,151,100,255}:SDL_Color{70,99,44,255};box({mini.x+x*miniScale,mini.y+y*miniScale,miniScale,miniScale},c);}
- for(const auto&o:game.objects)if(o.level==game.mapLevel&&(o.type==ObjectType::Town||o.type==ObjectType::Mine||o.sourceClass==42)&&game.tile(o.pos)->seen)box({mini.x+o.pos.x*miniScale,mini.y+o.pos.y*miniScale,miniScale,miniScale},ownerColor(o.owner));
+ for(const auto&o:game.objects)if(o.level==game.mapLevel&&(o.type==ObjectType::Town||o.type==ObjectType::Mine||o.sourceClass==42||(Game::dwellingLocation(o.sourceClass)&&o.sourceClass!=78))&&game.tile(o.pos)->seen)box({mini.x+o.pos.x*miniScale,mini.y+o.pos.y*miniScale,miniScale,miniScale},ownerColor(o.owner));
  int left=std::clamp(int(std::floor(camX_-clip.w/(64*zoom_))),0,game.mapWidth-1),right=std::clamp(int(std::ceil(camX_+clip.w/(64*zoom_))),left+1,game.mapWidth);
  int top=std::clamp(int(std::floor(camY_-clip.h/(64*zoom_))),0,game.mapHeight-1),bottom=std::clamp(int(std::ceil(camY_+clip.h/(64*zoom_))),top+1,game.mapHeight);
  outline({mini.x+left*miniScale,mini.y+top*miniScale,(right-left)*miniScale,(bottom-top)*miniScale},{211,45,36,255});

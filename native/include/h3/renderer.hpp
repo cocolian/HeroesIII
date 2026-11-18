@@ -26,6 +26,7 @@ public:
  explicit Desktop(std::filesystem::path root,bool hidden=false,std::filesystem::path saveDirectory={},std::filesystem::path inputTrace={},bool startFullscreen=false);~Desktop();int run();void render();bool screenshot(const std::filesystem::path&);void renderTests(const std::filesystem::path&);void graphicsPreview(const std::filesystem::path&,bool townArtOnly=false);void displayPreview(const std::filesystem::path&);void interactionPreview(const std::filesystem::path&);void runtimePreview(const std::filesystem::path&);void siegePreview(const std::filesystem::path&,const std::filesystem::path&);void kingdomPreview(const std::filesystem::path&,const std::filesystem::path&);void scenarioPreview(const std::filesystem::path&);void pointerPreview(const std::filesystem::path&);
  void sitePreview(const std::filesystem::path&,const std::filesystem::path&);
  void mapServicesPreview(const std::filesystem::path&,const std::filesystem::path&);void thievesGuildDialog();
+ bool locationDialog();void locationPreview(const std::filesystem::path&,const std::filesystem::path&);
  void localizationPreview(const std::filesystem::path&);
  void performancePreview(const std::filesystem::path&,const std::filesystem::path&);
  std::unique_ptr<AsyncSaveWriter> autosave_;
@@ -50,6 +51,7 @@ private:
  enum class MenuView {Main,Scores,Credits};MenuView menuView_=MenuView::Main;
  nlohmann::json mapLibrary_;bool scenarioVideoPreset_=false;int selectedMap_=0,mapPage_=0,mapLevel_=0;
  int visitPage_=0;std::string visitMessage_;
+ int locationObject_=0,locationPage_=0,locationSelected_=-1,locationAmount_=1;
  void mapLibrary();void selectMap(int);void startScenario();void scenarioRenderTests(const std::filesystem::path&);
  std::unique_ptr<NativePointerInput> pointerInput_;
  std::optional<SDL_Keymod> pointerModifiers_;

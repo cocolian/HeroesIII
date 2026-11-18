@@ -15,7 +15,7 @@ def main():
     run(['/usr/bin/ditto',source,app]);run(['/usr/bin/codesign','--verify','--strict',app])
     link=stage/'Applications'
     if not link.exists():link.symlink_to('/Applications',target_is_directory=True)
-    (stage/'安装说明.txt').write_text(f'''Heroes III {version} · C++ 原生开发测试版\n\n将 HeroesIII.app 拖到 Applications，然后从应用程序打开。\n支持 Apple Silicon 与 Intel，最低 macOS 14；支持 Retina 与 F4 全屏。\n所有运行素材和静态依赖均在应用内，不需要 Homebrew 或本工程。\n用户设置与游戏进度保存在 ~/Library/Application Support/HeroesIII/。\n这是本地临时签名的测试包，尚无 Developer ID 签名或 Apple 公证。\n练习地图、Seven Lakes 与视频对应的 Dead and Buried 已完成规则引擎通关测试，完整原版功能与画面仍在开发中。\n此 Mac 包不能安装到 iPad。iPad 必须用 iPadOS 构建并经过苹果签名。\n''')
+    (stage/'安装说明.txt').write_text(f'''Heroes III {version} · C++ 原生开发测试版\n\n将 HeroesIII.app 拖到 Applications，然后从应用程序打开。\n支持 Apple Silicon 与 Intel，最低 macOS 14；支持 Retina 与 F4 全屏。\n所有运行素材和静态依赖均在应用内，不需要 Homebrew 或本工程。\n用户设置与游戏进度保存在 ~/Library/Application Support/HeroesIII/。\n这是本地临时签名的测试包，尚无 Developer ID 签名或 Apple 公证。\nDead and Buried 已完成本版正常流程通关测试；Seven Lakes 的历史版本曾通关，本版自动回归未通过。完整原版功能与画面仍在开发中。\n此 Mac 包不能安装到 iPad。iPad 必须用 iPadOS 构建并经过苹果签名。\n''')
     with (stage/'安装说明.txt').open('a') as f:
         f.write('15 张下载地图可在“新游戏 → 选择地图 · 已下载地图”进入；已加入多英雄、电脑经营与基础攻城；部分剧情、物件、英雄特长和完整攻城细节仍缺。\n')
     names=[]

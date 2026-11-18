@@ -11,7 +11,7 @@ namespace {
 using Json=nlohmann::json;
 constexpr const char*Players[]={"red","blue","tan","green","orange","purple","teal","pink"};
 constexpr int ResourcesByOriginal[]={Wood,Mercury,Ore,Sulfur,Crystal,Gems,Gold};
-constexpr int SkillsByOriginal[]={-1,Archery,Logistics,-1,-1,-1,Leadership,Wisdom,Mysticism,LuckSkill,-1,-1,-1,-1,FireMagic,AirMagic,WaterMagic,EarthMagic,-1,-1,-1,-1,Offense,Armorer,Intelligence,-1,-1,-1};
+constexpr int SkillsByOriginal[]={Pathfinding,Archery,Logistics,Scouting,Diplomacy,Navigation,Leadership,Wisdom,Mysticism,LuckSkill,Ballistics,EagleEye,Necromancy,Estates,FireMagic,AirMagic,WaterMagic,EarthMagic,Scholar,Tactics,Artillery,Learning,Offense,Armorer,Intelligence,Sorcery,Resistance,FirstAid};
 int unitId(int original){for(int i=0;i<UnitCount;++i)if(Units[i].originalId==original)return i;return -1;}
 Army army(const Json&j){Army result{};int slot=0;for(const auto&s:j){if(slot==ArmySlots)break;int u=unitId(s.value("type",-1)),count=s.value("quantity",0);if(u>=0&&count>0)result[slot]={u,std::min(MaxArmyStack,count)};++slot;}return result;}
 int factionOf(int hero){return hero>=0&&hero<144?hero/16:0;}
@@ -60,7 +60,8 @@ bool Game::importScenario(const std::filesystem::path&path,std::string&error,int
   int originalOwner=p.value("owner",-1);if(originalOwner==255)originalOwner=-1;
   if(visit.x<0||visit.x>=g.mapWidth||visit.y<0||visit.y>=g.mapHeight){g.decorations.push_back({anchor,level,asset,t.value("is_ground",0)!=0});continue;}
   if((cls==34||cls==70)&&originalOwner==player&&chosenHero<0){chosenHero=id;g.hero.pos=visit;g.mapLevel=level;heroProperties=p;continue;}
-  if(!actionable&&cls!=26){g.decorations.push_back({anchor,level,asset,t.value("is_ground",0)!=0});continue;}
+  // A magi eye is a passive sight relay even when its template has no entrance.
+  if(!actionable&&cls!=26&&cls!=27){g.decorations.push_back({anchor,level,asset,t.value("is_ground",0)!=0});continue;}
   Object o;o.ground=t.value("is_ground",0)!=0;o.id=id;o.pos=visit;o.anchor=anchor;o.level=level;o.sprite=asset;o.sourceClass=cls;o.sourceSubtype=sub;o.properties=p;o.name=p.value("name",objectName(cls));o.owner=originalOwner<0?-1:originalOwner==player?0:originalOwner<player?originalOwner+1:originalOwner;o.type=ObjectType::Site;
   if(cls==98||cls==77){
    o.type=ObjectType::Town;Town town;town.faction=cls==77?std::clamp(randomFaction,0,8):std::clamp(sub,0,8);town.objectId=id;town.level=level;town.pos=visit;townBuildings(town,p);if(p.contains("garrison"))town.garrison=army(p["garrison"]);o.army=town.garrison;
@@ -75,7 +76,7 @@ bool Game::importScenario(const std::filesystem::path&path,std::string&error,int
   else if(cls==49)o.type=ObjectType::Well;
   else if(cls==57)o.type=ObjectType::Obelisk;
   else if(cls==88||cls==89||cls==90){o.type=ObjectType::Shrine;int spell=p.value("spell",-1);for(int i=0;i<SpellCount;++i)if(Spells[i].originalId==spell)o.amount=i+1;}
-  else if(cls==99)o.type=ObjectType::TradingPost;
+  else if(cls==99||cls==221)o.type=ObjectType::TradingPost;
   else if(cls==112)o.type=ObjectType::Windmill;
   else if(cls==109)o.type=ObjectType::WaterWheel;
   else if(cls==8)o.type=ObjectType::Boat;
@@ -110,6 +111,8 @@ bool Game::importScenario(const std::filesystem::path&path,std::string&error,int
  const auto&victory=data["additionalInfo"]["victory_condition"];if(victory.contains("details")&&victory["details"].contains("coordinates")){const auto&c=victory["details"]["coordinates"];for(const auto&o:g.objects)if(o.anchor==coordinates(c)&&o.level==c["z"]&&((victory.value("type",255)==5&&o.type==ObjectType::EnemyHero)||(victory.value("type",255)==7&&o.type==ObjectType::Monster)))g.scenarioRules["victoryTarget"]=o.id;}
  g.scenarioRules["initialHeroProperties"]=heroProperties;g.scenarioRules["initialHeroSourceId"]=chosenHero;
  const auto&loss=data["additionalInfo"]["loss_condition"];if(loss.contains("details")&&loss["details"].contains("coordinates")){const auto&c=loss["details"]["coordinates"];int index=0;for(const auto&source:data["objects"]){++index;int cls=templates[source["template_idx"].get<int>()]["object_class"].get<int>();if(source["coordinates"]==c&&((loss.value("type",255)==0&&(cls==98||cls==77))||(loss.value("type",255)==1&&(cls==34||cls==70)))){g.scenarioRules["lossTarget"]=index;g.scenarioRules["lossTargetWasOwned"]=source.value("properties",Json::object()).value("owner",-1)==player;}}}g.resetMapHeroes();g.reveal();g.message("已载入原图「"+g.scenarioName+"」：可探索、拾取、占矿和战斗；部分剧情与英雄能力仍待实现。");
+ g.locationNewDay();
+ for(auto&[id,t]:g.settlements){auto*owner=g.objectById(id);if(!owner||owner->owner<0)continue;for(int tier=0;tier<7;++tier)if(t.built[Guardhouse+tier])t.pool[tier]+=g.externalDwellingGrowth(t.faction,tier,owner->owner);if(id==g.activeTownId)g.town=t;}
  g.importedNewDay();
  if(!g.validate())throw std::runtime_error("地图开局数据校验失败");*this=std::move(g);return true;
  }catch(const std::exception&e){error=e.what();return false;}}
