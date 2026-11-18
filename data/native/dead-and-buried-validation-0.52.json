@@ -1,0 +1,236 @@
+{
+  "version": "0.52.0",
+  "runs": [
+    {
+      "battles": [
+        {
+          "actions": 29,
+          "day": 12,
+          "fort": 0,
+          "target": 643,
+          "won": true
+        },
+        {
+          "actions": 42,
+          "day": 15,
+          "fort": 0,
+          "target": 696,
+          "won": true
+        },
+        {
+          "actions": 33,
+          "day": 20,
+          "fort": 0,
+          "target": 2,
+          "won": true
+        },
+        {
+          "actions": 23,
+          "day": 27,
+          "fort": 2,
+          "target": 1,
+          "won": true
+        },
+        {
+          "actions": 13,
+          "day": 30,
+          "fort": 3,
+          "target": 696,
+          "won": false
+        },
+        {
+          "actions": 17,
+          "day": 31,
+          "fort": 0,
+          "target": 287,
+          "won": true
+        },
+        {
+          "actions": 36,
+          "day": 32,
+          "fort": 3,
+          "target": 580,
+          "won": true
+        },
+        {
+          "actions": 39,
+          "day": 43,
+          "fort": 0,
+          "target": 696,
+          "won": true
+        },
+        {
+          "actions": 15,
+          "day": 81,
+          "fort": 3,
+          "target": 699,
+          "won": false
+        },
+        {
+          "actions": 29,
+          "day": 83,
+          "fort": 0,
+          "target": 699,
+          "won": true
+        },
+        {
+          "actions": 39,
+          "day": 83,
+          "fort": 3,
+          "target": 580,
+          "won": true
+        },
+        {
+          "actions": 23,
+          "day": 86,
+          "fort": 0,
+          "target": 13,
+          "won": true
+        },
+        {
+          "actions": 26,
+          "day": 90,
+          "fort": 2,
+          "target": 642,
+          "won": true
+        }
+      ],
+      "completed": true,
+      "day": 97,
+      "difficulty": 1,
+      "faction": 8,
+      "identicalToOriginalRules": false,
+      "map": "dead-and-buried-1",
+      "matchesVideoDifficulty": false,
+      "moves": 2117,
+      "normalGameplayOnly": true,
+      "policy": "threat-and-loss-aware",
+      "reloads": 0,
+      "result": 1,
+      "sourceSha256": "cc23096e678a2e3bd9cf62445d7bba1828924222969b6ca5828d4805886fc162",
+      "startingHero": 131,
+      "videoDays": 19,
+      "visits": 112
+    },
+    {
+      "battles": [
+        {
+          "actions": 11,
+          "day": 3,
+          "fort": 0,
+          "target": 574,
+          "won": true
+        },
+        {
+          "actions": 2,
+          "day": 8,
+          "fort": 0,
+          "target": 695,
+          "won": true
+        },
+        {
+          "actions": 17,
+          "day": 11,
+          "fort": 0,
+          "target": 287,
+          "won": true
+        },
+        {
+          "actions": 22,
+          "day": 12,
+          "fort": 0,
+          "target": 699,
+          "won": true
+        },
+        {
+          "actions": 4,
+          "day": 23,
+          "fort": 2,
+          "target": 696,
+          "won": false
+        },
+        {
+          "actions": 2,
+          "day": 26,
+          "fort": 3,
+          "target": 580,
+          "won": true
+        },
+        {
+          "actions": 26,
+          "day": 30,
+          "fort": 0,
+          "target": 643,
+          "won": true
+        },
+        {
+          "actions": 49,
+          "day": 33,
+          "fort": 0,
+          "target": 699,
+          "won": true
+        },
+        {
+          "actions": 4,
+          "day": 36,
+          "fort": 0,
+          "target": 696,
+          "won": false
+        },
+        {
+          "actions": 5,
+          "day": 37,
+          "fort": 3,
+          "target": 696,
+          "won": false
+        },
+        {
+          "actions": 23,
+          "day": 40,
+          "fort": 3,
+          "target": 580,
+          "won": true
+        },
+        {
+          "actions": 19,
+          "day": 43,
+          "fort": 0,
+          "target": 699,
+          "won": true
+        },
+        {
+          "actions": 5,
+          "day": 56,
+          "fort": 3,
+          "target": 642,
+          "won": true
+        },
+        {
+          "actions": 16,
+          "day": 62,
+          "fort": 0,
+          "target": 702,
+          "won": true
+        }
+      ],
+      "completed": true,
+      "day": 63,
+      "difficulty": 4,
+      "faction": 8,
+      "identicalToOriginalRules": false,
+      "map": "dead-and-buried-1",
+      "matchesVideoDifficulty": true,
+      "moves": 1370,
+      "normalGameplayOnly": true,
+      "policy": "threat-and-loss-aware",
+      "reloads": 0,
+      "result": 1,
+      "sourceSha256": "cc23096e678a2e3bd9cf62445d7bba1828924222969b6ca5828d4805886fc162",
+      "startingHero": 131,
+      "videoDays": 19,
+      "visits": 163
+    }
+  ],
+  "limits": "A victory in this engine does not establish complete original-rule equivalence or superiority to the original player.",
+  "referenceVideo": "https://www.bilibili.com/video/BV1vu41177kZ/"
+}

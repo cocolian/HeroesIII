@@ -20,10 +20,11 @@ std::optional<Desktop::CursorVisual> Desktop::combatCursor(){
  };
  if(active->unit==CatapultUnit){int part=hex?game.catapultPartAt(*hex):-1;return combat(part>=0&&game.battle->siege.hp[part]>0?3:0);}
  if(game.battle->tacticsTeam==0){if(target&&target->team==0)return combat(5);if(!hex)return combat(0);auto cells=game.footprint(*active,*hex);bool allowed=std::all_of(cells.begin(),cells.end(),[&](auto p){auto*u=game.combatAt(p);return p.x>=0&&p.x<game.battle->tacticsRange&&p.y>=0&&p.y<BattleH&&(!u||u->id==active->id)&&game.siegeCellAllowed(*active,p);});return combat(allowed?1:0);}
+ if(pendingSpell_<0&&(pendingCreature_||(target&&target->team==active->team&&game.canCreatureCast(*active,{target->x,target->y})))){Point cell=target?Point{target->x,target->y}:hex.value_or(Point{-1,-1});return game.canCreatureCast(*active,cell)?CursorVisual{"crspell.def",int(animationTime_/80%std::max(1,frameCount("crspell.def"))),{18,28}}:combat(0);}
  if(pendingSpell_>=0){
   if(!hex&&!target)return combat(0);
   Point cell=target?Point{target->x,target->y}:*hex;
-  bool valid=game.hero.spellbook&&game.hero.spells[pendingSpell_]&&game.hero.mana>=game.spellCost(pendingSpell_)&&game.battle->spellRound!=game.battle->round;
+  bool valid=game.hero.spellbook&&heroKnowsSpell(game.hero,pendingSpell_)&&game.hero.mana>=game.spellCost(pendingSpell_)&&game.battle->spellRound!=game.battle->round;
   if(pendingSpell_==Sacrifice&&sacrificeTarget_>=0){
    auto victims=game.sacrificeVictims(sacrificeTarget_);valid=valid&&target&&std::find(victims.begin(),victims.end(),target->id)!=victims.end();
    return combat(valid?18:0);

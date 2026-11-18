@@ -38,6 +38,8 @@ void Desktop::battleCellAction(Point cell){
  if(game.battle&&game.battle->tacticsTeam==0){battleAction([this,cell]{auto*u=game.combatAt(cell);return game.act(u&&u->team==0?"select-tactics":"move",cell);});return;}
  if(game.current()&&game.current()->unit==CatapultUnit){battleAction([this,cell]{return game.act("catapult",cell);});return;}
  std::string message;
+ if(pendingSpell_<0&&(pendingCreature_||(game.creatureCastingSpell(*game.current())>=0&&game.canCreatureCast(*game.current(),cell)&&(!game.combatAt(cell)||game.combatAt(cell)->team==game.current()->team)))){battleAction([&]{return message=game.act("cast-creature",cell);});if(message.empty())pendingCreature_=false;say(message);persist();settle();return;}
+ if((creatureAbility(game.current()->unit).flags&64)&&game.siegePartAt(cell)>=0){battleAction([&]{return game.act("siege-creature",cell);});persist();settle();return;}
  if(pendingSpell_==Teleport&&sacrificeTarget_<0){auto*u=game.combatAt(cell);if(u&&u->team==0&&u->origin!=StackOrigin::WarMachine){sacrificeTarget_=u->id;message="请选择传送的落脚格。";}else message="请选择己方部队。";
  }else if(pendingSpell_==Teleport){auto at=std::find_if(game.battle->units.begin(),game.battle->units.end(),[this](auto&u){return u.id==sacrificeTarget_;});if(at!=game.battle->units.end())battleAction([&]{return message=game.cast(Teleport,{at->x,at->y},cell);});if(message.empty())pendingSpell_=sacrificeTarget_=-1;
  }else if(pendingSpell_==Sacrifice&&sacrificeTarget_<0){

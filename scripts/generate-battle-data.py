@@ -46,6 +46,7 @@ reference_folder.mkdir(parents=True, exist_ok=True)
 (reference_folder / 'cranim.txt').write_bytes(raw)
 rows = [fields for line in raw.decode('cp1252').splitlines()[2:] if (fields := line.split('\t'))[0].strip()]
 units = json.loads((root / 'data/native/creatures.json').read_text())['units']
+units += [{'id':141+i,'originalId':original}for i,original in enumerate([146,147,148,145])]
 timings = []
 for unit in units:
     fields = rows[unit['originalId']]

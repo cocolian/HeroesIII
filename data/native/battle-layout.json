@@ -45,7 +45,7 @@
     "columnPitch": 44,
     "rowPitch": 42,
     "oddRowXOffset": -22,
-    "originEvidence": "0.46 video frame-0900 and original siege wall/gate coordinates resolve the one-column ambiguity; first playable cell starts at (36,86)."
+    "originEvidence": "0.46 video frame-0900 and original siege coordinate grid resolve the one-column ambiguity; first playable cell starts at (36,86)"
   },
   "formations": {
     "loose": [
@@ -4775,6 +4775,138 @@
         0.0,
         0.0,
         0.0
+      ],
+      "missileAngles": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "unit": 141,
+      "originalId": 146,
+      "referenceName": "Ballista",
+      "fidgetInterval": 1.0,
+      "walkTime": 1.0,
+      "attackTime": 1.0,
+      "flightDistance": 1.0,
+      "countOffset": 0,
+      "attackClimax": 5,
+      "missileOffsets": [
+        57.0,
+        -104.0,
+        101.0,
+        -75.0,
+        53.0,
+        -36.0
+      ],
+      "missileAngles": [
+        90.0,
+        72.0,
+        45.0,
+        27.0,
+        0.0,
+        -27.0,
+        -45.0,
+        -72.0,
+        -90.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "unit": 142,
+      "originalId": 147,
+      "referenceName": "First-Aid Tent",
+      "fidgetInterval": 1.0,
+      "walkTime": 1.0,
+      "attackTime": 1.0,
+      "flightDistance": 1.0,
+      "countOffset": 0,
+      "attackClimax": 0,
+      "missileOffsets": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "missileAngles": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "unit": 143,
+      "originalId": 148,
+      "referenceName": "Ammo Cart",
+      "fidgetInterval": 1.0,
+      "walkTime": 1.0,
+      "attackTime": 1.0,
+      "flightDistance": 1.0,
+      "countOffset": 0,
+      "attackClimax": 0,
+      "missileOffsets": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "missileAngles": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "unit": 144,
+      "originalId": 145,
+      "referenceName": "Catapult",
+      "fidgetInterval": 1.0,
+      "walkTime": 1.0,
+      "attackTime": 1.0,
+      "flightDistance": 1.0,
+      "countOffset": 0,
+      "attackClimax": 4,
+      "missileOffsets": [
+        69.0,
+        -119.0,
+        69.0,
+        -119.0,
+        69.0,
+        -119.0
       ],
       "missileAngles": [
         0.0,

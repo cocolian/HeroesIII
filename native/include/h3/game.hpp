@@ -24,6 +24,8 @@ struct UnitDef {
  int fireShield=0;bool mindImmune=false,living=true;int level=1;std::string animation;int portraitFrame=-1;int allyMorale=0,enemyMorale=0,enemyLuck=0,moraleFloor=-3,luckFloor=0;
 };
 extern const std::array<UnitDef,UnitCount> Units;
+struct CreatureAbility {int flags=0,casts=0,power=0,duration=0,fear=0,mirror=0,aura=0,channel=0,critical=0,rebirth=0;std::vector<std::array<int,3>> spells;std::vector<std::pair<int,int>> procs;};
+const CreatureAbility& creatureAbility(int);
 struct Stack {int unit=-1,count=0; bool empty() const{return unit<0||count<=0;} };
 using Army=std::array<Stack,ArmySlots>;
 struct Point {int x=0,y=0; bool operator==(const Point&)const=default;};
@@ -55,7 +57,7 @@ struct SpellDef {std::string name;int level,cost,skilledCost;bool enemy;int scho
 extern const std::array<SpellDef,SpellCount> Spells;
 struct LevelChoice {int level=0,primary=0;std::vector<int> skills;};
 struct AdventureBonus {int sourceClass=-1,sourceId=0,morale=0,luck=0,movement=0,expiresDay=0;bool untilBattle=true;};
-struct Hero {std::array<int,SpellCount> adventureSpellDay{},adventureSpellMastery{};int doorDay=0,doorCasts=0;Point pos{4,20};int level=1,xp=0,attack=2,defense=2,power=1,knowledge=2,mana=20,movement=1560,maxMovement=1560;Army army{};std::array<int,SkillCount> skills{};std::array<bool,SpellCount> spells{};bool spellbook=false;std::vector<std::string> artifacts;std::vector<LevelChoice> levelChoices;bool tightFormation=false;int wellDay=0;std::string name="凯瑟琳";int originalId=-1;bool onBoat=false;Point lastEmbark{-1000,-1000};int adventureGoal=0;std::vector<int> artifactIds,wornArtifacts,visitedSites,townLessons,aiVisitedSites;int stableWeek=-1;std::map<std::string,int> equipmentSlots;std::array<bool,8> keys{};std::vector<AdventureBonus> adventureBonuses;};
+struct Hero {std::array<int,SpellCount> adventureSpellDay{},adventureSpellMastery{};int doorDay=0,doorCasts=0;Point pos{4,20};int level=1,xp=0,attack=2,defense=2,power=1,knowledge=2,mana=20,movement=1560,maxMovement=1560;Army army{};std::array<int,SkillCount> skills{};std::array<bool,SpellCount> spells{};bool spellbook=false;std::vector<std::string> artifacts;std::vector<LevelChoice> levelChoices;bool tightFormation=false;int wellDay=0;std::string name="凯瑟琳";int originalId=-1;bool onBoat=false;Point lastEmbark{-1000,-1000};int adventureGoal=0;std::vector<int> artifactIds,wornArtifacts,visitedSites,townLessons,aiVisitedSites;int stableWeek=-1;std::map<std::string,int> equipmentSlots,comboLocks;std::array<bool,8> keys{};std::vector<AdventureBonus> adventureBonuses;};
 enum BuildingId {TownHall,CityHall,Capitol,Fort,Citadel,Castle,Tavern,Marketplace,Blacksmith,MageGuild,MageGuild2,MageGuild3,Guardhouse,ArcherTower,GriffinTower,Barracks,Monastery,TrainingGrounds,Portal,UpGuardhouse,UpArcherTower,UpGriffinTower,UpBarracks,UpMonastery,UpTrainingGrounds,UpPortal,GriffinBastion,ResourceSilo,Shipyard,Special1,Special2,Special3,Special4,MageGuild4,MageGuild5,Horde2,VillageHall,GrailBuilding,BuildingCount};
 struct BuildingDef {std::string name,description;Resources cost{};std::vector<std::vector<int>> requirements;int unit=-1;bool available=true,implemented=true;int icon=-1,upIcon=-1;};
 struct TownLayer {std::string art;Point pos{};int z=0;std::vector<int> needs,excludes;std::string animation,mask,outline;bool originalMask=false;};
@@ -66,18 +68,19 @@ extern const std::array<TownDef,FactionCount> TownDefs;
 extern const std::array<BuildingDef,BuildingCount>& Buildings;
 struct Town {std::array<bool,BuildingCount> built{};std::array<int,7> pool{};Army garrison{};int builtDay=0,faction=0,stableWeek=-1;std::array<bool,4> lessons{};Point pos{4,20};std::array<std::vector<int>,5> guild{};int objectId=0,level=0,vortexWeek=-1,bonusWeek=-1,pondResource=-1,pondAmount=0,portalUnit=-1,portalStock=0,merchantMonth=-1;std::vector<int> merchantStock;};
 struct MapHero {Hero value;int owner=0,level=0;bool sleeping=false;Point patrolOrigin{};int patrolRadius=-1;std::string sprite="ah00_.def";nlohmann::json properties=nlohmann::json::object();};
+std::vector<int> equippedArtifacts(const Hero&);bool wearsArtifact(const Hero&,int);std::vector<int> artifactParts(int);bool validArtifactLocks(const Hero&);std::vector<std::string> artifactSlots(int);double secondaryEffect(const Hero&,int,double);int heroUnitBonus(const Hero&,int,int);int heroSpellEffect(const Hero&,int,int,int);Resources heroSpecialtyIncome(const Hero&);bool heroKnowsSpell(const Hero&,int);std::array<bool,SpellCount> heroKnownSpells(const Hero&);std::string heroSpecialtyDescription(const Hero&);int heroSpecialUpgrade(const Hero&,int);
 struct GuildPlayer {int owner=0;std::array<int64_t,9> totals{};std::optional<Hero> bestHero;int bestCreature=-1;};
 enum class StackOrigin {Army,Summoned,Clone,WarMachine};
 enum class NeutralIntent {Fight,JoinFree,JoinPaid,Flee};
 struct NeutralOffer {int objectId=0,unit=-1,count=0,cost=0,deferredVisitId=0;NeutralIntent intent=NeutralIntent::Fight;};
-struct CombatStack {int id=0,slot=0,unit=0,team=0,count=0,initialCount=0,hp=0,x=0,y=0,retaliations=0,shots=0;bool defending=false,waited=false;int blindRetaliation=100;int preparedRound=-1,defenseReduction=0,defendingBonus=0;std::array<int,SpellCount> effects{},effectMastery{};StackOrigin origin=StackOrigin::Army;int permanentCount=0,cloneOf=-1,cloneTurns=0,deathOrder=0;bool corpse=false,acted=false,moraleUsed=false;};
+struct CombatStack {int id=0,slot=0,unit=0,team=0,count=0,initialCount=0,hp=0,x=0,y=0,retaliations=0,shots=0;bool defending=false,waited=false;int blindRetaliation=100;int preparedRound=-1,defenseReduction=0,defendingBonus=0;std::array<int,SpellCount> effects{},effectMastery{};StackOrigin origin=StackOrigin::Army;int permanentCount=0,cloneOf=-1,cloneTurns=0,deathOrder=0;bool corpse=false,acted=false,moraleUsed=false;int poisonTurns=0,baseHealth=0,casts=-1,creatureSpell=-1,abilityRound=-1,poison=0,aged=0,disease=0,petrified=0,paralyzed=0,boundBy=-1;std::array<int,SpellCount> effectBonuses{};};
 struct Siege {int faction=-1,fort=0,attackerTeam=0,townId=0,buildings=0;std::array<int,8> hp{};std::vector<Point> spentMines;};
 struct RetiredHero {Hero value;int owner=0,week=0;};
 struct BattleObstacle {int spell=-1,team=0,power=0,mastery=0,turns=-1,revealed=0;std::vector<Point>cells;std::string asset;Point anchor{};};
-struct Battle {std::vector<BattleObstacle>obstacles;int lastDamageRound=1;int targetId=0,round=1,spellRound=0,deferredVisitId=0;std::vector<CombatStack> units;std::vector<int> queue,waiting;bool waitPhase=false;std::vector<std::string> log;std::array<int,2> summonedType{-1,-1};int deathSequence=0;std::vector<int> moraleWaiting;bool moralePhase=false;std::array<int,4> defenderPrimary{};std::array<int,SkillCount> defenderSkills{};int defendingTown=0,returnHero=0;Siege siege;int defenderMana=0,defenderSpellRound=0;bool defenderSpellbook=false;std::array<bool,SpellCount> defenderSpells{};std::array<std::array<bool,SpellCount>,2> spellHistory{};int tacticsTeam=-1,tacticsRange=0,tacticsStack=-1,catapultRound=0,exitType=0;bool noMagic=false;};
+struct Battle {Terrain terrain=Terrain::Grass;std::array<Army,2> initialArmies{};std::vector<BattleObstacle>obstacles;int lastDamageRound=1;int targetId=0,round=1,spellRound=0,deferredVisitId=0;std::vector<CombatStack> units;std::vector<int> queue,waiting;bool waitPhase=false;std::vector<std::string> log;std::array<int,2> summonedType{-1,-1};int deathSequence=0;std::vector<int> moraleWaiting;bool moralePhase=false;std::array<int,4> defenderPrimary{};std::array<int,SkillCount> defenderSkills{};int defendingTown=0,returnHero=0;Siege siege;int defenderMana=0,defenderSpellRound=0;bool defenderSpellbook=false;std::array<bool,SpellCount> defenderSpells{};std::array<std::array<bool,SpellCount>,2> spellHistory{};int tacticsTeam=-1,tacticsRange=0,tacticsStack=-1,catapultRound=0,exitType=0;bool noMagic=false;};
 struct BattleReport {bool won=false;int xp=0;Army before{},after{},enemies{};Stack raised{};std::vector<int> learnedSpells;int exitType=0;bool raisedPending=false;};
 struct TradeRate {int give=0,receive=0;bool operator==(const TradeRate&)const=default;};
-enum class GameEventType {HeroMove,Visit,NewDay,Build,Recruit,Upgrade,Level,CombatStart,CombatMove,CombatAttack,CombatHit,CombatDeath,SpellCast,CombatEnd,CombatMorale,CombatLuck,CombatSpellEffect};
+enum class GameEventType {HeroMove,Visit,NewDay,Build,Recruit,Upgrade,Level,CombatStart,CombatMove,CombatAttack,CombatHit,CombatDeath,SpellCast,CombatEnd,CombatMorale,CombatLuck,CombatSpellEffect,CombatCreatureEffect,SiegeHit};
 struct GameEvent {GameEventType type;int unit=-1,detail=0;Point pos{};int stackId=-1,targetId=-1;std::vector<Point> path{};std::optional<CombatStack> state{};bool scheduled=false;};
 std::optional<TradeRate> marketRate(int sold,int bought,int marketplaces);
 class Game {
@@ -112,7 +115,13 @@ public:
  bool canVisitLocation(const Object&)const;bool locationBlocksPassage(const Object&)const;void autoVisitLocation(int);
  bool visiting()const{return (!imported()||activeHeroId!=0)&&hasTown()&&mapLevel==town.level&&hero.pos==town.pos;}
  static int mineYield(int resource);Resources mineIncome()const;Resources dailyIncome()const;Resources incomeForOwner(int)const;void payComputerIncome();
- int primarySkill(int)const;int artifactLandMovement()const;bool artifactSpellImmune(int)const;void equipPickedArtifact(int);void optimizeEquipment();std::string equipArtifact(int,const std::string&);std::string unequipArtifact(const std::string&);std::string transferHeroArtifact(int,int);int rollArtifact(int sourceClass);
+ const Hero* combatHero(int team)const;int nativeTerrainBonus(const CombatStack&)const;int attackSkill(const CombatStack&,bool ranged=false)const;
+ int stackHealth(const CombatStack&)const;void setupStackHealth(CombatStack&);void refreshStackHealth(CombatStack&,int);
+ int magicResistance(const CombatStack&)const;std::vector<int> genieSpells(const CombatStack&,const CombatStack&)const;int creatureCastingSpell(const CombatStack&)const;bool canCreatureCast(const CombatStack&,Point)const;std::string castCreature(Point);bool autoCreatureCast();
+ void weeklyCreatureIncome();void creatureNewRound();void prepareCreature();void creatureAfterAttack(int,int,bool,int);std::vector<int> creatureAttackTargets(const CombatStack&,const CombatStack&,bool)const;void openingArtifacts();bool creatureSiegeAttack(Point);void clearCreatureEffects(CombatStack&);
+ bool reserveArtifactSlots(Hero&,int,const std::string&);bool artifactSlotLocked(const std::string&)const;std::vector<int> assemblableArtifacts(int component=-1)const;std::string assembleArtifact(int);std::string disassembleArtifact(int);void repairArtifactLocks(Hero&);int artifactDuration(const Hero&)const;int artifactHealth(const Hero&,int)const;void equipmentSpellbook();
+ Resources artifactIncome(const Hero&)const;int artifactGrowth(int owner)const;int manaRecovery(const Hero&)const;
+ int primarySkill(int)const;int artifactLandMovement()const;bool artifactSpellImmune(int,int team=0)const;void equipPickedArtifact(int);void optimizeEquipment();std::string equipArtifact(int,const std::string&);std::string unequipArtifact(const std::string&);std::string transferHeroArtifact(int,int);int rollArtifact(int sourceClass);
  int income()const;int weeklyGrowth(int tier)const;int weeklyGrowthFor(const Town&,int tier,int owner)const;int maxMana()const;int movementAllowance(int owner=-1)const;static int experienceForLevel(int);
  std::string endDay();std::string build(int);int recruitMax(int unit)const;std::string recruit(int unit,int count,bool garrison=false);std::string upgrade(bool garrison,int slot);
  std::string transferGarrison(int,bool,int,bool,int,int);
@@ -136,7 +145,7 @@ public:
  int siegeBonus(int,int)const;int catapultPartAt(Point)const;std::string fireCatapult(int part);void catapultShots(int part=-1);
  nlohmann::json toJson()const;bool save(const std::filesystem::path&,std::string&)const;bool load(const std::filesystem::path&,std::string&);bool validate()const;
 private:
- int spellTeam_=0;
+ int spellTeam_=0;bool innateSpell_=false;
  int casterPower()const;int& casterMana();int& casterRound();
  std::optional<AdventureVisit> adventureVisit_;
  std::string applyVisit(int);

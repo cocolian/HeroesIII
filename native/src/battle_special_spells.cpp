@@ -24,7 +24,7 @@ bool Game::obstacleHit(CombatStack&u,bool entering){
  if(!battle||u.hp<=0)return false;bool stopped=false;auto cells=footprint(u,{u.x,u.y});for(auto&o:battle->obstacles){if(o.cells.empty()||std::none_of(cells.begin(),cells.end(),[&](Point p){return std::find(o.cells.begin(),o.cells.end(),p)!=o.cells.end();}))continue;
   if((o.spell==Quicksand||o.spell==LandMine)&&(u.team==o.team||!entering||Units[u.unit].flying))continue;
   if(o.spell==Quicksand){o.revealed=3;stopped=true;battle->log.push_back(Units[u.unit].name+"陷入流沙，停止移动。");}
-  if(o.spell==LandMine||o.spell==FireWall){int spell=o.spell;if(!spellImmune(u,spell)){int damage=o.power*10+(spell==LandMine?std::array<int,4>{25,25,50,100}[o.mastery]:std::array<int,4>{10,10,20,50}[o.mastery]);int heroId=o.team==0?hero.originalId:heroes.contains(battle->targetId)?heroes.at(battle->targetId).value.originalId:-1;if(spell==FireWall&&heroId==136)damage*=2;int previous=spellTeam_;spellTeam_=o.team;hurt(u,spellDamage(u,spell,damage));spellTeam_=previous;}if(spell==LandMine){o.cells.clear();o.revealed=3;}}
+  if(o.spell==LandMine||o.spell==FireWall){int spell=o.spell;if(!spellImmune(u,spell)){int damage=o.power*10+(spell==LandMine?std::array<int,4>{25,25,50,100}[o.mastery]:std::array<int,4>{10,10,20,50}[o.mastery]);int previous=spellTeam_;spellTeam_=o.team;hurt(u,spellDamage(u,spell,damage));spellTeam_=previous;}if(spell==LandMine){o.cells.clear();o.revealed=3;}}
   if(u.hp<=0)break;
  }std::erase_if(battle->obstacles,[](auto&o){return o.cells.empty();});return stopped;
 }

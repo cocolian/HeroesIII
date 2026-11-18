@@ -36,7 +36,7 @@ void Desktop::battleAction(const std::function<std::string()>&action){
 }
 void Desktop::battle(){
  const Battle*view=scene==Scene::Report?battleMotion_.retainedView():battleMotion_.view();if(!view&&game.battle)view=&*game.battle;if(!view){settle();return;}
- const auto&b=*view;bool busy=battleMotion_.active();if(!siegeArtwork(b)&&!redrawnBattle()){const char*backgrounds[]={"cmbkgrtr","cmbkdrtr","cmbkdes","cmbkdeck","cmbksntr","cmbkswmp","cmbkrgh","cmbksub","cmbklava","cmbksub"};auto*terrain=game.tile(game.hero.pos);std::string name=backgrounds[terrain?int(terrain->terrain):0];if(!originalImage(name+".bmp",{0,0,800,556})&&!originalImage(name+".pcx",{0,0,800,556}))originalImage("cmbkgrtr.pcx",{0,0,800,556});}
+ const auto&b=*view;bool busy=battleMotion_.active();if(!siegeArtwork(b)&&!redrawnBattle()){const char*backgrounds[]={"cmbkgrtr","cmbkdrtr","cmbkdes","cmbkdeck","cmbksntr","cmbkswmp","cmbkrgh","cmbksub","cmbklava","cmbksub"};std::string name=backgrounds[int(b.terrain)];if(!originalImage(name+".bmp",{0,0,800,556})&&!originalImage(name+".pcx",{0,0,800,556}))originalImage("cmbkgrtr.pcx",{0,0,800,556});}
  // Hero class sprites and flags follow the heroes participating in this battle.
  int heroClass=heroClassId(game.hero.originalId);auto number=std::to_string(heroClass);if(heroClass==10||(heroClass>=12&&heroClass<=15))number="0"+number;auto heroAsset="ch"+std::string(number.size()<2?1:0,'0')+number+".def";if(!frame(heroAsset,0,0,{-25,-20,150,175}))frame("ch00.def",0,0,{-25,-20,150,175});
  if(game.heroes.contains(b.targetId)){int enemy=game.heroes.at(b.targetId).value.originalId;int enemyClass=heroClassId(enemy);auto n=std::to_string(enemyClass);if(enemyClass==10||(enemyClass>=12&&enemyClass<=15))n="0"+n;frame("ch"+std::string(n.size()<2?1:0,'0')+n+".def",0,0,{675,-20,150,175},true);frame("cmflagr.def",0,int(animationTime_/100),{735,15,17,15},false,false,false,game.heroes.at(b.targetId).owner);}
@@ -74,6 +74,7 @@ void Desktop::battle(){
    }
   }
  }
+ for(const auto&p:battleMotion_.projectiles()){const auto&d=*p.definition;frame(d.animation,0,p.frame,{int(std::lround(p.x))-d.width/2,int(std::lround(p.y))-d.height/2,d.width,d.height},p.flip);}
  for(const auto&effect:battleMotion_.effects()){
   auto point=battleHexCenter(effect.pos);const auto&def=*effect.definition;auto target=std::find_if(b.units.begin(),b.units.end(),[&](const auto&unit){return unit.id==effect.stackId;});
   if(target!=b.units.end()&&Units[target->unit].size==2)point.x+=target->team?22:-22;
@@ -86,7 +87,7 @@ void Desktop::battle(){
  if(busy){if(battleMotion_.damageMessage().empty())message="正在播放战斗动作。";if(const auto*cue=battleMotion_.feedback())message=cue->type==GameEventType::SpellCast?"凯瑟琳施放"+Spells[cue->detail].name+"。":cue->type==GameEventType::CombatLuck?"幸运攻击！":cue->detail<0?"士气低落，失去行动。":"士气高涨，可以再次行动！";}else if(autoCombat_)message="自动战斗；再次点击交叉双剑或按 Esc 取消。";
  else if(b.tacticsTeam>=0)message="战术布阵：选择己方部队后在高亮区域调整位置，点击完成布阵开始战斗。";else if(active&&active->unit==CatapultUnit)message="弹道术：点击尚未摧毁的城墙、城门或箭塔。";else if(b.moralePhase)message="士气额外行动等待阶段。";
  if(!busy&&pendingSpell_<0&&hovered&&b.tacticsTeam<0&&(!active||active->unit!=CatapultUnit)){
-  const auto&unit=*hovered;message=Units[unit.unit].name+" × "+std::to_string(unit.count)+"  总生命 "+std::to_string(unit.hp)+"/"+std::to_string(int64_t(unit.initialCount)*Units[unit.unit].hp);
+  const auto&unit=*hovered;message=Units[unit.unit].name+" × "+std::to_string(unit.count)+"  攻击 "+std::to_string(game.attackSkill(unit,game.canShoot(unit)))+"  防御 "+std::to_string(game.defense(unit))+"  速度 "+std::to_string(game.speed(unit))+"  总生命 "+std::to_string(unit.hp)+"/"+std::to_string(int64_t(unit.initialCount)*game.stackHealth(unit));
  }
  text(message,216,569,10,GoldColor,394);
  bool own=active&&active->team==0&&!autoCombat_;
@@ -101,6 +102,7 @@ void Desktop::battle(){
  originalButton({105,561,48,36},"icm002.def",0,[this]{battleExitSurrender_=false;scene=Scene::BattleExit;},own&&game.canLeaveBattle(false),2);
  originalButton({156,561,48,36},"icm004.def",0,[this]{autoCombat_=!autoCombat_;pendingSpell_=sacrificeTarget_=-1;nextAI_=0;});
  if(autoCombat_)frame("icm004.def",0,1,{156,561,48,36});
+ if(active&&game.creatureCastingSpell(*active)>=0){button({602,516,192,29},pendingCreature_?"取消生物施法（G）":"生物施法（G）",[this]{pendingCreature_=!pendingCreature_;pendingSpell_=-1;},own&&b.tacticsTeam<0&&!b.noMagic,false,"生物能力使用自身次数，消耗本支部队行动；不消耗英雄魔法值。");}
  originalButton({645,561,48,36},"icm005.def",0,[this]{openSpellbook();},own&&b.tacticsTeam<0&&!b.noMagic&&game.hero.spellbook,2);
  originalButton({696,561,48,36},"icm006.def",0,[this]{battleAction([this]{return game.act("wait");});},own&&b.tacticsTeam<0&&!active->waited&&!b.waitPhase&&!b.moralePhase,2);
  originalButton({747,561,48,36},"icm007.def",0,[this]{battleAction([this]{return game.act(game.battle->tacticsTeam>=0?"end-tactics":"defend");});},own,2);
@@ -164,7 +166,7 @@ void Desktop::battleActionRenderTests(const std::filesystem::path&directory){
  reset(Archer,50,75,1);game.battle->units[1].x=10;render();click(battleHexCenter({10,5}),false);advance(900);check(battleMotion_.pose(100)->group==6&&battleMotion_.pose(100)->dying,"Original Evil Eye alternate ranged death was not used");shot("battle-ranged-alternate-death");
  reset(Pikeman,20,Skeleton,50);game.battle->units[0].x=7;render();click(battleHexCenter({6,5}),false);check(battleMotion_.pose(0)->group==7&&!battleMotion_.pose(0)->flip,"Backward attack did not begin the turn");shot("battle-turn-first-half");advance(200);check(battleMotion_.pose(0)->group==8&&battleMotion_.pose(0)->flip,"Backward attack did not flip between turn halves");shot("battle-turn-second-half");
  reset(Pikeman,100,53,1);render();click(battleHexCenter({6,5}),false);advance(600);check(battleMotion_.pose(0)->group==3&&battleMotion_.pose(100)->dying,"Fire shield did not show reflected damage with the primary impact");shot("battle-fire-shield-impact");
- reset(Pikeman,20,Archer,1000);game.hero.spellbook=true;game.hero.spells[Clone]=true;game.hero.skills[WaterMagic]=3;auto original=game.battle->units[0];check(game.cast(Clone,{original.x,original.y}).empty(),"Mirror fixture could not cast Clone");int mirror=game.battle->units.back().id;game.battle->units[1].x=12;game.battle->queue={100,0,mirror};game.takeEvents();battleAction([&]{return game.act("attack",{original.x,original.y});});advance(700);check(battleMotion_.view()->units[0].hp==0&&battleMotion_.view()->units.back().hp==0&&!battleMotion_.view()->units.back().corpse,"The dead original left a living mirror in the presentation");shot("battle-mirror-disappeared");
+ reset(Pikeman,20,Archer,1000);game.hero.spellbook=true;game.hero.spells[Clone]=true;game.hero.skills[WaterMagic]=3;auto original=game.battle->units[0];check(game.cast(Clone,{original.x,original.y}).empty(),"Mirror fixture could not cast Clone");int mirror=game.battle->units.back().id;game.battle->units[1].x=12;game.battle->queue={100,0,mirror};game.takeEvents();battleAction([&]{return game.act("attack",{original.x,original.y});});for(uint64_t time=10;time<=5000&&battleMotion_.view()&&battleMotion_.view()->units[0].hp>0;time+=10)advance(time);auto*presented=battleMotion_.view();check(presented&&presented->units[0].hp==0&&presented->units.back().hp==0&&!presented->units.back().corpse,"The dead original left a living mirror in the presentation");shot("battle-mirror-disappeared");
  battleMotion_.clear();game=Game::create();scene=Scene::Town;fixedAnimationTime_=0;autoCombat_=false;
 }
 void Desktop::moraleRenderTests(const std::filesystem::path&directory){

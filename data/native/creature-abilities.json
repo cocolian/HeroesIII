@@ -1,0 +1,4358 @@
+{
+  "scope": "Classic Complete 141 creatures, factual ability parameters",
+  "customEffects": [
+    "disease",
+    "bind",
+    "stoneGaze",
+    "paralyze",
+    "poison",
+    "age",
+    "acidBreath",
+    "acidBreathDamage",
+    "deathStare",
+    "lifeDrain",
+    "rebirth",
+    "thunderbolt",
+    "dispelHelpful"
+  ],
+  "units": [
+    {
+      "id": 0,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "CHARGE_IMMUNITY"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "CHARGE_IMMUNITY"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        },
+        {
+          "type": "ADDITIONAL_ATTACK",
+          "val": 1,
+          "description": "PLACEHOLDER",
+          "effectRange": "ONLY_DISTANCE_FIGHT"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "ADDITIONAL_RETALIATION",
+          "val": 1
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "UNLIMITED_RETALIATIONS"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": []
+    },
+    {
+      "id": 7,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "ADDITIONAL_ATTACK",
+          "val": 1
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        },
+        {
+          "type": "NO_MELEE_PENALTY"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "JOUSTING",
+          "val": 5
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "JOUSTING",
+          "val": 5
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "MORALE",
+          "val": 1,
+          "propagator": "ARMY",
+          "description": "PLACEHOLDER",
+          "stacking": "Angels"
+        },
+        {
+          "type": "KING",
+          "val": 2
+        },
+        {
+          "type": "HATE",
+          "subtype": "devil",
+          "val": 50
+        },
+        {
+          "type": "HATE",
+          "subtype": "archDevil",
+          "val": 50
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "flags": 0,
+      "casts": 1,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [
+        [
+          51,
+          3,
+          1
+        ]
+      ],
+      "procs": [],
+      "facts": [
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "SPELLCASTER",
+          "subtype": "resurrection",
+          "val": 3
+        },
+        {
+          "type": "SPECIFIC_SPELL_POWER",
+          "subtype": "resurrection",
+          "val": 100
+        },
+        {
+          "type": "CASTS",
+          "val": 1
+        },
+        {
+          "type": "MORALE",
+          "val": 1,
+          "propagator": "ARMY",
+          "description": "@creatures.core.angel.bonus.raisesMorale",
+          "stacking": "Angels"
+        },
+        {
+          "type": "KING",
+          "val": 2
+        },
+        {
+          "type": "HATE",
+          "subtype": "devil",
+          "val": 50
+        },
+        {
+          "type": "HATE",
+          "subtype": "archDevil",
+          "val": 50
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": []
+    },
+    {
+      "id": 15,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": []
+    },
+    {
+      "id": 16,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "MAGIC_RESISTANCE",
+          "val": 20
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "MAGIC_RESISTANCE",
+          "val": 40
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        },
+        {
+          "type": "ADDITIONAL_ATTACK",
+          "val": 1,
+          "description": "@creatures.core.marksman.bonus.extraAttack",
+          "effectRange": "ONLY_DISTANCE_FIGHT"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "CHANGES_SPELL_COST_FOR_ENEMY",
+          "val": 2
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "CHANGES_SPELL_COST_FOR_ENEMY",
+          "val": 2
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [
+        [
+          71,
+          100
+        ]
+      ],
+      "facts": [
+        {
+          "type": "SPELL_AFTER_ATTACK",
+          "subtype": "bind",
+          "val": 100
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [
+        [
+          71,
+          100
+        ]
+      ],
+      "facts": [
+        {
+          "type": "SPELL_AFTER_ATTACK",
+          "subtype": "bind",
+          "val": 100
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 20,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [
+        [
+          62,
+          20
+        ]
+      ],
+      "facts": [
+        {
+          "type": "SPELL_AFTER_ATTACK",
+          "subtype": "blind",
+          "val": 20,
+          "addInfo": [
+            3,
+            0
+          ]
+        },
+        {
+          "type": "SPELL_RESISTANCE_AURA",
+          "val": 20
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 20,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [
+        [
+          62,
+          20
+        ]
+      ],
+      "facts": [
+        {
+          "type": "SPELL_AFTER_ATTACK",
+          "subtype": "blind",
+          "val": 20,
+          "addInfo": [
+            3,
+            0
+          ]
+        },
+        {
+          "type": "SPELL_RESISTANCE_AURA",
+          "val": 20
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "flags": 2052,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "DRAGON_NATURE"
+        },
+        {
+          "type": "SKELETON_TRANSFORMER_TARGET",
+          "subtype": "boneDragon"
+        },
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "TWO_HEX_ATTACK_BREATH"
+        },
+        {
+          "type": "LEVEL_SPELL_IMMUNITY",
+          "val": 3
+        },
+        {
+          "type": "KING",
+          "val": 0
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "flags": 2052,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "DRAGON_NATURE"
+        },
+        {
+          "type": "SKELETON_TRANSFORMER_TARGET",
+          "subtype": "boneDragon"
+        },
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "TWO_HEX_ATTACK_BREATH"
+        },
+        {
+          "type": "LEVEL_SPELL_IMMUNITY",
+          "val": 4
+        },
+        {
+          "type": "KING",
+          "val": 0
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": []
+    },
+    {
+      "id": 29,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "GARGOYLE"
+        },
+        {
+          "type": "FLYING"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "GARGOYLE"
+        },
+        {
+          "type": "FLYING"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "NON_LIVING"
+        },
+        {
+          "type": "SPELL_DAMAGE_REDUCTION",
+          "subtype": "any",
+          "val": 50
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "NON_LIVING"
+        },
+        {
+          "type": "SPELL_DAMAGE_REDUCTION",
+          "subtype": "any",
+          "val": 75
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "flags": 256,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        },
+        {
+          "type": "NO_MELEE_PENALTY"
+        },
+        {
+          "type": "NO_WALL_PENALTY"
+        },
+        {
+          "type": "CHANGES_SPELL_COST_FOR_ALLY",
+          "val": 2
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "flags": 256,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        },
+        {
+          "type": "NO_MELEE_PENALTY"
+        },
+        {
+          "type": "NO_WALL_PENALTY"
+        },
+        {
+          "type": "CHANGES_SPELL_COST_FOR_ALLY",
+          "val": 2
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "HATE",
+          "subtype": "efreet",
+          "val": 50
+        },
+        {
+          "type": "HATE",
+          "subtype": "efreetSultan",
+          "val": 50
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "flags": 8192,
+      "casts": 3,
+      "power": 0,
+      "duration": 6,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "CASTS",
+          "val": 3
+        },
+        {
+          "type": "CREATURE_ENCHANT_POWER",
+          "val": 6
+        },
+        {
+          "type": "RANDOM_SPELLCASTER",
+          "val": 2
+        },
+        {
+          "type": "HATE",
+          "subtype": "efreet",
+          "val": 50
+        },
+        {
+          "type": "HATE",
+          "subtype": "efreetSultan",
+          "val": 50
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "BLOCKS_RETALIATION"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "BLOCKS_RETALIATION"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "MIND_IMMUNITY"
+        },
+        {
+          "type": "KING",
+          "val": 3
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        },
+        {
+          "type": "NO_MELEE_PENALTY"
+        },
+        {
+          "type": "MIND_IMMUNITY"
+        },
+        {
+          "type": "KING",
+          "val": 3
+        },
+        {
+          "type": "HATE",
+          "subtype": "blackDragon",
+          "val": 50
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": []
+    },
+    {
+      "id": 43,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 20,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "MANA_CHANNELING",
+          "val": 20
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "flags": 8,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        },
+        {
+          "type": "SPELL_LIKE_ATTACK",
+          "subtype": "fireballAbility"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": []
+    },
+    {
+      "id": 47,
+      "flags": 2,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "BLOCKS_RETALIATION"
+        },
+        {
+          "type": "THREE_HEADED_ATTACK"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": []
+    },
+    {
+      "id": 49,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": []
+    },
+    {
+      "id": 50,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": []
+    },
+    {
+      "id": 51,
+      "flags": 0,
+      "casts": 1,
+      "power": 50,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [
+        [
+          1000,
+          0,
+          1
+        ]
+      ],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SPECIFIC_SPELL_POWER",
+          "subtype": "summonDemons",
+          "val": 50
+        },
+        {
+          "type": "SPELLCASTER",
+          "subtype": "summonDemons",
+          "val": 0
+        },
+        {
+          "type": "CASTS",
+          "val": 1
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "SPELL_SCHOOL_IMMUNITY",
+          "subtype": "fire"
+        },
+        {
+          "type": "HATE",
+          "subtype": "genie",
+          "val": 50
+        },
+        {
+          "type": "HATE",
+          "subtype": "masterGenie",
+          "val": 50
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "COMBAT_EVENT_TRIGGER",
+          "subtype": "fireShield",
+          "val": 20,
+          "stacking": "fireShield"
+        },
+        {
+          "type": "SPELL_SCHOOL_IMMUNITY",
+          "subtype": "fire"
+        },
+        {
+          "type": "HATE",
+          "subtype": "genie",
+          "val": 50
+        },
+        {
+          "type": "HATE",
+          "subtype": "masterGenie",
+          "val": 50
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "FLYING",
+          "subtype": "movementTeleporting"
+        },
+        {
+          "type": "BLOCKS_RETALIATION"
+        },
+        {
+          "type": "LUCK",
+          "val": -1,
+          "stacking": "Devils",
+          "propagator": "BATTLE_WIDE",
+          "propagationUpdater": "BONUS_OWNER_UPDATER",
+          "description": "PLACEHOLDER",
+          "limiters": [
+            "OPPOSITE_SIDE"
+          ]
+        },
+        {
+          "type": "KING",
+          "val": 2
+        },
+        {
+          "type": "HATE",
+          "subtype": "angel",
+          "val": 50
+        },
+        {
+          "type": "HATE",
+          "subtype": "archangel",
+          "val": 50,
+          "description": "Devil -1"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "FLYING",
+          "subtype": "movementTeleporting"
+        },
+        {
+          "type": "BLOCKS_RETALIATION"
+        },
+        {
+          "type": "LUCK",
+          "val": -1,
+          "stacking": "Devils",
+          "propagator": "BATTLE_WIDE",
+          "propagationUpdater": "BONUS_OWNER_UPDATER",
+          "description": "@creatures.core.devil.bonus.decreaseLuck",
+          "limiters": [
+            "OPPOSITE_SIDE"
+          ]
+        },
+        {
+          "type": "KING",
+          "val": 2
+        },
+        {
+          "type": "HATE",
+          "subtype": "angel",
+          "val": 50
+        },
+        {
+          "type": "HATE",
+          "subtype": "archangel",
+          "val": 50
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "UNDEAD"
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "UNDEAD"
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "UNDEAD"
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [
+        [
+          70,
+          20
+        ]
+      ],
+      "facts": [
+        {
+          "type": "UNDEAD"
+        },
+        {
+          "type": "SPELL_AFTER_ATTACK",
+          "subtype": "disease",
+          "val": 20
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "UNDEAD"
+        },
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "HP_REGENERATION",
+          "val": 50
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "UNDEAD"
+        },
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "HP_REGENERATION",
+          "val": 50
+        },
+        {
+          "type": "MANA_DRAIN",
+          "val": 2
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "UNDEAD"
+        },
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "BLOCKS_RETALIATION"
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [
+        [
+          79,
+          100
+        ]
+      ],
+      "facts": [
+        {
+          "type": "UNDEAD"
+        },
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "BLOCKS_RETALIATION"
+        },
+        {
+          "type": "COMBAT_EVENT_TRIGGER",
+          "subtype": "lifeDrain",
+          "val": 100
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "flags": 16,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "UNDEAD"
+        },
+        {
+          "type": "SHOOTER"
+        },
+        {
+          "type": "SPELL_LIKE_ATTACK",
+          "subtype": "deathCloud"
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "flags": 16,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "UNDEAD"
+        },
+        {
+          "type": "SHOOTER"
+        },
+        {
+          "type": "SPELL_LIKE_ATTACK",
+          "subtype": "deathCloud"
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [
+        [
+          7,
+          25
+        ]
+      ],
+      "facts": [
+        {
+          "type": "UNDEAD"
+        },
+        {
+          "type": "SPELL_AFTER_ATTACK",
+          "subtype": "curse",
+          "val": 25
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 20,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [
+        [
+          7,
+          25
+        ]
+      ],
+      "facts": [
+        {
+          "type": "UNDEAD"
+        },
+        {
+          "type": "SPELL_AFTER_ATTACK",
+          "subtype": "curse",
+          "val": 25
+        },
+        {
+          "type": "DOUBLE_DAMAGE_CHANCE",
+          "val": 20
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "flags": 2048,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "UNDEAD"
+        },
+        {
+          "type": "DRAGON_NATURE"
+        },
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "MORALE",
+          "val": -1,
+          "stacking": "Undead Dragons",
+          "propagator": "BATTLE_WIDE",
+          "propagationUpdater": "BONUS_OWNER_UPDATER",
+          "description": "PLACEHOLDER",
+          "limiters": [
+            "OPPOSITE_SIDE"
+          ]
+        },
+        {
+          "type": "KING",
+          "val": 0
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "flags": 2048,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [
+        [
+          75,
+          20
+        ]
+      ],
+      "facts": [
+        {
+          "type": "UNDEAD"
+        },
+        {
+          "type": "DRAGON_NATURE"
+        },
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "SPELL_AFTER_ATTACK",
+          "subtype": "age",
+          "val": 20
+        },
+        {
+          "type": "MORALE",
+          "val": -1,
+          "stacking": "Undead Dragons",
+          "propagator": "BATTLE_WIDE",
+          "propagationUpdater": "BONUS_OWNER_UPDATER",
+          "description": "@creatures.core.boneDragon.bonus.decreaseMorale",
+          "limiters": [
+            "OPPOSITE_SIDE"
+          ]
+        },
+        {
+          "type": "KING",
+          "val": 0
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SPELL_IMMUNITY",
+          "subtype": "blind",
+          "addInfo": 1
+        },
+        {
+          "type": "SPELL_IMMUNITY",
+          "subtype": "stoneGaze",
+          "addInfo": 1
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SPELL_IMMUNITY",
+          "subtype": "blind",
+          "addInfo": 1
+        },
+        {
+          "type": "SPELL_IMMUNITY",
+          "subtype": "stoneGaze",
+          "addInfo": 1
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "flags": 32,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "RETURN_AFTER_STRIKE"
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "flags": 32,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "RETURN_AFTER_STRIKE"
+        },
+        {
+          "type": "BLOCKS_RETALIATION"
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        },
+        {
+          "type": "NO_MELEE_PENALTY"
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        },
+        {
+          "type": "NO_MELEE_PENALTY"
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [
+        [
+          72,
+          20
+        ]
+      ],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        },
+        {
+          "type": "NO_MELEE_PENALTY"
+        },
+        {
+          "type": "SPELL_AFTER_ATTACK",
+          "subtype": "stoneGaze",
+          "val": 20,
+          "addInfo": [
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [
+        [
+          72,
+          20
+        ]
+      ],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        },
+        {
+          "type": "NO_MELEE_PENALTY"
+        },
+        {
+          "type": "SPELL_AFTER_ATTACK",
+          "subtype": "stoneGaze",
+          "val": 20,
+          "addInfo": [
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "MORALE",
+          "val": 1,
+          "valueType": "INDEPENDENT_MAX"
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "MORALE",
+          "val": 1,
+          "valueType": "INDEPENDENT_MAX"
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "FLYING"
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [
+        [
+          73,
+          20
+        ]
+      ],
+      "facts": [
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "SPELL_AFTER_ATTACK",
+          "subtype": "paralyze",
+          "val": 20
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "flags": 2052,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "DRAGON_NATURE"
+        },
+        {
+          "type": "SKELETON_TRANSFORMER_TARGET",
+          "subtype": "boneDragon"
+        },
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "TWO_HEX_ATTACK_BREATH"
+        },
+        {
+          "type": "LEVEL_SPELL_IMMUNITY",
+          "val": 3
+        },
+        {
+          "type": "KING",
+          "val": 0
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "flags": 2052,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "DRAGON_NATURE"
+        },
+        {
+          "type": "SKELETON_TRANSFORMER_TARGET",
+          "subtype": "boneDragon"
+        },
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "TWO_HEX_ATTACK_BREATH"
+        },
+        {
+          "type": "LEVEL_SPELL_IMMUNITY",
+          "val": 5
+        },
+        {
+          "type": "KING",
+          "val": 0
+        },
+        {
+          "type": "HATE",
+          "subtype": "titan",
+          "val": 50
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": []
+    },
+    {
+      "id": 85,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": []
+    },
+    {
+      "id": 86,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": []
+    },
+    {
+      "id": 87,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "ADDITIONAL_ATTACK",
+          "val": 1
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": []
+    },
+    {
+      "id": 91,
+      "flags": 0,
+      "casts": 3,
+      "power": 0,
+      "duration": 6,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [
+        [
+          27,
+          2,
+          1
+        ]
+      ],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SPELLCASTER",
+          "subtype": "bloodlust",
+          "val": 2
+        },
+        {
+          "type": "CASTS",
+          "val": 3
+        },
+        {
+          "type": "CREATURE_ENCHANT_POWER",
+          "val": 6
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "FLYING"
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [
+        [
+          81,
+          20
+        ]
+      ],
+      "facts": [
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "SPELL_AFTER_ATTACK",
+          "subtype": "thunderbolt",
+          "val": 20
+        },
+        {
+          "type": "SPECIFIC_SPELL_POWER",
+          "subtype": "thunderbolt",
+          "val": 10
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "flags": 64,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        },
+        {
+          "type": "CATAPULT",
+          "subtype": "cyclopsShot"
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "flags": 192,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        },
+        {
+          "type": "CATAPULT",
+          "subtype": "cyclopsShot"
+        },
+        {
+          "type": "CATAPULT_EXTRA_SHOTS",
+          "subtype": "cyclopsShot",
+          "valueType": "BASE_NUMBER",
+          "val": 1
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "ENEMY_DEFENCE_REDUCTION",
+          "val": 40
+        },
+        {
+          "type": "KING",
+          "val": 0
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "ENEMY_DEFENCE_REDUCTION",
+          "val": 80
+        },
+        {
+          "type": "KING",
+          "val": 0
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": []
+    },
+    {
+      "id": 99,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": []
+    },
+    {
+      "id": 100,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [
+        [
+          82,
+          100
+        ]
+      ],
+      "facts": [
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "SPELL_AFTER_ATTACK",
+          "subtype": "dispelHelpful",
+          "val": 100
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [
+        [
+          82,
+          100
+        ],
+        [
+          29,
+          100
+        ]
+      ],
+      "facts": [
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "SPELL_AFTER_ATTACK",
+          "subtype": "dispelHelpful",
+          "val": 100
+        },
+        {
+          "type": "SPELL_AFTER_ATTACK",
+          "subtype": "weakness",
+          "val": 100
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [
+        [
+          72,
+          20
+        ]
+      ],
+      "facts": [
+        {
+          "type": "SPELL_AFTER_ATTACK",
+          "subtype": "stoneGaze",
+          "val": 20
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [
+        [
+          72,
+          20
+        ]
+      ],
+      "facts": [
+        {
+          "type": "SPELL_AFTER_ATTACK",
+          "subtype": "stoneGaze",
+          "val": 20
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": []
+    },
+    {
+      "id": 107,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [
+        [
+          78,
+          10
+        ]
+      ],
+      "facts": [
+        {
+          "type": "COMBAT_EVENT_TRIGGER",
+          "subtype": "deathStare",
+          "val": 10,
+          "addInfo": {
+            "situation": "melee"
+          }
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "FLYING"
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [
+        [
+          74,
+          30
+        ]
+      ],
+      "facts": [
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "SPELL_AFTER_ATTACK",
+          "subtype": "poison",
+          "val": 30
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "flags": 1,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "ATTACKS_ALL_ADJACENT"
+        },
+        {
+          "type": "SKELETON_TRANSFORMER_TARGET",
+          "subtype": "boneDragon"
+        },
+        {
+          "type": "BLOCKS_RETALIATION"
+        },
+        {
+          "type": "KING",
+          "val": 0
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "flags": 1,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "ATTACKS_ALL_ADJACENT"
+        },
+        {
+          "type": "SKELETON_TRANSFORMER_TARGET",
+          "subtype": "boneDragon"
+        },
+        {
+          "type": "BLOCKS_RETALIATION"
+        },
+        {
+          "type": "KING",
+          "val": 0
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "FLYING"
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "BLOCKS_RETALIATION"
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "NON_LIVING"
+        },
+        {
+          "type": "MIND_IMMUNITY"
+        },
+        {
+          "type": "SPELL_IMMUNITY",
+          "subtype": "meteorShower"
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "lightningBolt",
+          "val": 100
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "titanBolt",
+          "val": 100
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "chainLightning",
+          "val": 100
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "armageddon",
+          "val": 100
+        },
+        {
+          "type": "HATE",
+          "subtype": "earthElemental",
+          "val": 100
+        },
+        {
+          "type": "HATE",
+          "subtype": "magmaElemental",
+          "val": 100
+        }
+      ]
+    },
+    {
+      "id": 115,
+      "flags": 0,
+      "casts": 3,
+      "power": 0,
+      "duration": 6,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [
+        [
+          22,
+          2,
+          1
+        ]
+      ],
+      "procs": [],
+      "facts": [
+        {
+          "type": "NON_LIVING"
+        },
+        {
+          "type": "SHOOTER"
+        },
+        {
+          "type": "SPELLCASTER",
+          "subtype": "protectAir",
+          "val": 2
+        },
+        {
+          "type": "CREATURE_ENCHANT_POWER",
+          "val": 6
+        },
+        {
+          "type": "CASTS",
+          "val": 3
+        },
+        {
+          "type": "MIND_IMMUNITY"
+        },
+        {
+          "type": "SPELL_IMMUNITY",
+          "subtype": "meteorShower"
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "lightningBolt",
+          "val": 100
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "titanBolt",
+          "val": 100
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "chainLightning",
+          "val": 100
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "armageddon",
+          "val": 100
+        },
+        {
+          "type": "HATE",
+          "subtype": "earthElemental",
+          "val": 100
+        },
+        {
+          "type": "HATE",
+          "subtype": "magmaElemental",
+          "val": 100
+        }
+      ]
+    },
+    {
+      "id": 116,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "NON_LIVING"
+        },
+        {
+          "type": "MIND_IMMUNITY"
+        },
+        {
+          "type": "SPELL_IMMUNITY",
+          "subtype": "iceBolt"
+        },
+        {
+          "type": "SPELL_IMMUNITY",
+          "subtype": "frostRing"
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "fireball",
+          "val": 100
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "inferno",
+          "val": 100
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "armageddon",
+          "val": 100
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "fireShield",
+          "val": 100
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "fireWallTrigger",
+          "val": 100
+        },
+        {
+          "type": "HATE",
+          "subtype": "fireElemental",
+          "val": 100
+        },
+        {
+          "type": "HATE",
+          "subtype": "energyElemental",
+          "val": 100
+        }
+      ]
+    },
+    {
+      "id": 117,
+      "flags": 0,
+      "casts": 3,
+      "power": 0,
+      "duration": 6,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [
+        [
+          24,
+          2,
+          1
+        ]
+      ],
+      "procs": [],
+      "facts": [
+        {
+          "type": "NON_LIVING"
+        },
+        {
+          "type": "SHOOTER"
+        },
+        {
+          "type": "SPELLCASTER",
+          "subtype": "protectWater",
+          "val": 2
+        },
+        {
+          "type": "CREATURE_ENCHANT_POWER",
+          "val": 6
+        },
+        {
+          "type": "CASTS",
+          "val": 3
+        },
+        {
+          "type": "MIND_IMMUNITY"
+        },
+        {
+          "type": "SPELL_IMMUNITY",
+          "subtype": "iceBolt"
+        },
+        {
+          "type": "SPELL_IMMUNITY",
+          "subtype": "frostRing"
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "fireball",
+          "val": 100
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "inferno",
+          "val": 100
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "armageddon",
+          "val": 100
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "fireShield",
+          "val": 100
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "fireWallTrigger",
+          "val": 100
+        },
+        {
+          "type": "HATE",
+          "subtype": "fireElemental",
+          "val": 100
+        },
+        {
+          "type": "HATE",
+          "subtype": "energyElemental",
+          "val": 100
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "NON_LIVING"
+        },
+        {
+          "type": "MIND_IMMUNITY"
+        },
+        {
+          "type": "SPELL_SCHOOL_IMMUNITY",
+          "subtype": "fire"
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "iceBolt",
+          "val": 100
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "frostRing",
+          "val": 100
+        },
+        {
+          "type": "HATE",
+          "subtype": "waterElemental",
+          "val": 100
+        },
+        {
+          "type": "HATE",
+          "subtype": "iceElemental",
+          "val": 100
+        }
+      ]
+    },
+    {
+      "id": 119,
+      "flags": 0,
+      "casts": 3,
+      "power": 0,
+      "duration": 6,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [
+        [
+          23,
+          2,
+          1
+        ]
+      ],
+      "procs": [],
+      "facts": [
+        {
+          "type": "NON_LIVING"
+        },
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "SPELLCASTER",
+          "subtype": "protectFire",
+          "val": 2
+        },
+        {
+          "type": "CREATURE_ENCHANT_POWER",
+          "val": 6
+        },
+        {
+          "type": "CASTS",
+          "val": 3
+        },
+        {
+          "type": "MIND_IMMUNITY"
+        },
+        {
+          "type": "SPELL_SCHOOL_IMMUNITY",
+          "subtype": "fire"
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "iceBolt",
+          "val": 100
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "frostRing",
+          "val": 100
+        },
+        {
+          "type": "HATE",
+          "subtype": "waterElemental",
+          "val": 100
+        },
+        {
+          "type": "HATE",
+          "subtype": "iceElemental",
+          "val": 100
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "NON_LIVING"
+        },
+        {
+          "type": "MIND_IMMUNITY"
+        },
+        {
+          "type": "SPELL_IMMUNITY",
+          "subtype": "lightningBolt"
+        },
+        {
+          "type": "SPELL_IMMUNITY",
+          "subtype": "titanBolt"
+        },
+        {
+          "type": "SPELL_IMMUNITY",
+          "subtype": "chainLightning"
+        },
+        {
+          "type": "SPELL_IMMUNITY",
+          "subtype": "armageddon"
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "meteorShower",
+          "val": 100
+        },
+        {
+          "type": "HATE",
+          "subtype": "airElemental",
+          "val": 100
+        },
+        {
+          "type": "HATE",
+          "subtype": "stormElemental",
+          "val": 100
+        }
+      ]
+    },
+    {
+      "id": 121,
+      "flags": 0,
+      "casts": 3,
+      "power": 0,
+      "duration": 6,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [
+        [
+          25,
+          2,
+          1
+        ]
+      ],
+      "procs": [],
+      "facts": [
+        {
+          "type": "NON_LIVING"
+        },
+        {
+          "type": "SPELLCASTER",
+          "subtype": "protectEarth",
+          "val": 2
+        },
+        {
+          "type": "CREATURE_ENCHANT_POWER",
+          "val": 6
+        },
+        {
+          "type": "CASTS",
+          "val": 3
+        },
+        {
+          "type": "MIND_IMMUNITY"
+        },
+        {
+          "type": "SPELL_IMMUNITY",
+          "subtype": "lightningBolt"
+        },
+        {
+          "type": "SPELL_IMMUNITY",
+          "subtype": "titanBolt"
+        },
+        {
+          "type": "SPELL_IMMUNITY",
+          "subtype": "chainLightning"
+        },
+        {
+          "type": "SPELL_IMMUNITY",
+          "subtype": "armageddon"
+        },
+        {
+          "type": "MORE_DAMAGE_FROM_SPELL",
+          "subtype": "meteorShower",
+          "val": 100
+        },
+        {
+          "type": "HATE",
+          "subtype": "airElemental",
+          "val": 100
+        },
+        {
+          "type": "HATE",
+          "subtype": "stormElemental",
+          "val": 100
+        }
+      ]
+    },
+    {
+      "id": 122,
+      "flags": 1,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "NON_LIVING"
+        },
+        {
+          "type": "ATTACKS_ALL_ADJACENT"
+        },
+        {
+          "type": "BLOCKS_RETALIATION"
+        },
+        {
+          "type": "MIND_IMMUNITY"
+        }
+      ]
+    },
+    {
+      "id": 123,
+      "flags": 1,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "NON_LIVING"
+        },
+        {
+          "type": "ATTACKS_ALL_ADJACENT"
+        },
+        {
+          "type": "BLOCKS_RETALIATION"
+        },
+        {
+          "type": "LEVEL_SPELL_IMMUNITY",
+          "val": 5
+        }
+      ]
+    },
+    {
+      "id": 124,
+      "flags": 4,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "TWO_HEX_ATTACK_BREATH"
+        },
+        {
+          "type": "SPELL_SCHOOL_IMMUNITY",
+          "subtype": "fire"
+        },
+        {
+          "type": "KING",
+          "val": 0
+        }
+      ]
+    },
+    {
+      "id": 125,
+      "flags": 4,
+      "casts": 1,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 20,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "TWO_HEX_ATTACK_BREATH"
+        },
+        {
+          "type": "CASTS",
+          "val": 1
+        },
+        {
+          "type": "COMBAT_EVENT_TRIGGER",
+          "subtype": "rebirth",
+          "val": 20
+        },
+        {
+          "type": "SPELL_SCHOOL_IMMUNITY",
+          "subtype": "fire"
+        },
+        {
+          "type": "KING",
+          "val": 0
+        }
+      ]
+    },
+    {
+      "id": 126,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "NON_LIVING"
+        },
+        {
+          "type": "SPELL_DAMAGE_REDUCTION",
+          "subtype": "any",
+          "val": 85
+        }
+      ]
+    },
+    {
+      "id": 127,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "NON_LIVING"
+        },
+        {
+          "type": "SPELL_DAMAGE_REDUCTION",
+          "subtype": "any",
+          "val": 95
+        }
+      ]
+    },
+    {
+      "id": 128,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        },
+        {
+          "type": "LUCK",
+          "val": 1,
+          "valueType": "INDEPENDENT_MAX",
+          "description": "PLACEHOLDER"
+        }
+      ]
+    },
+    {
+      "id": 129,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": []
+    },
+    {
+      "id": 130,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": []
+    },
+    {
+      "id": 131,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [
+        [
+          7,
+          25
+        ]
+      ],
+      "facts": [
+        {
+          "type": "UNDEAD"
+        },
+        {
+          "type": "SPELL_AFTER_ATTACK",
+          "subtype": "curse",
+          "val": 25
+        }
+      ]
+    },
+    {
+      "id": 132,
+      "flags": 512,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "NO_TERRAIN_PENALTY",
+          "subtype": "sand",
+          "propagator": "HERO",
+          "description": "PLACEHOLDER"
+        }
+      ]
+    },
+    {
+      "id": 133,
+      "flags": 1024,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "VISIONS",
+          "subtype": "visionsMonsters",
+          "val": 3,
+          "valueType": "INDEPENDENT_MAX",
+          "propagator": "HERO",
+          "description": "PLACEHOLDER"
+        },
+        {
+          "type": "VISIONS",
+          "subtype": "visionsHeroes",
+          "val": 3,
+          "valueType": "INDEPENDENT_MAX",
+          "propagator": "HERO",
+          "description": "PLACEHOLDER"
+        },
+        {
+          "type": "VISIONS",
+          "subtype": "visionsTowns",
+          "val": 3,
+          "valueType": "INDEPENDENT_MAX",
+          "propagator": "HERO",
+          "description": "PLACEHOLDER"
+        }
+      ]
+    },
+    {
+      "id": 134,
+      "flags": 0,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "HP_REGENERATION",
+          "val": 50
+        }
+      ]
+    },
+    {
+      "id": 135,
+      "flags": 4352,
+      "casts": 5,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [
+        [
+          2,
+          3,
+          15
+        ],
+        [
+          3,
+          3,
+          10
+        ],
+        [
+          5,
+          3,
+          15
+        ],
+        [
+          6,
+          3,
+          15
+        ],
+        [
+          29,
+          3,
+          4
+        ],
+        [
+          20,
+          3,
+          10
+        ],
+        [
+          27,
+          3,
+          5
+        ],
+        [
+          1,
+          3,
+          10
+        ]
+      ],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        },
+        {
+          "type": "NO_MELEE_PENALTY"
+        },
+        {
+          "type": "NO_WALL_PENALTY"
+        },
+        {
+          "type": "CASTS",
+          "val": 5
+        },
+        {
+          "type": "ENCHANTER",
+          "subtype": "haste",
+          "val": 3,
+          "addInfo": {
+            "cooldown": 3,
+            "weight": 15
+          }
+        },
+        {
+          "type": "ENCHANTER",
+          "subtype": "slow",
+          "val": 3,
+          "addInfo": {
+            "cooldown": 3,
+            "weight": 10
+          }
+        },
+        {
+          "type": "ENCHANTER",
+          "subtype": "stoneSkin",
+          "val": 3,
+          "addInfo": {
+            "cooldown": 3,
+            "weight": 15
+          }
+        },
+        {
+          "type": "ENCHANTER",
+          "subtype": "bless",
+          "val": 3,
+          "addInfo": {
+            "cooldown": 3,
+            "weight": 15
+          }
+        },
+        {
+          "type": "ENCHANTER",
+          "subtype": "weakness",
+          "val": 3,
+          "addInfo": {
+            "cooldown": 3,
+            "weight": 4
+          }
+        },
+        {
+          "type": "ENCHANTER",
+          "subtype": "airShield",
+          "val": 3,
+          "addInfo": {
+            "cooldown": 3,
+            "weight": 10
+          }
+        },
+        {
+          "type": "ENCHANTER",
+          "subtype": "bloodlust",
+          "val": 3,
+          "addInfo": {
+            "cooldown": 3,
+            "weight": 5
+          }
+        },
+        {
+          "type": "ENCHANTER",
+          "subtype": "cure",
+          "val": 3,
+          "addInfo": {
+            "cooldown": 3,
+            "weight": 10
+          }
+        }
+      ]
+    },
+    {
+      "id": 136,
+      "flags": 256,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "SHOOTER"
+        },
+        {
+          "type": "NO_DISTANCE_PENALTY"
+        },
+        {
+          "type": "NO_WALL_PENALTY"
+        }
+      ]
+    },
+    {
+      "id": 137,
+      "flags": 2048,
+      "casts": 5,
+      "power": 500,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 20,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [
+        [
+          0,
+          2,
+          10
+        ],
+        [
+          9,
+          2,
+          22
+        ],
+        [
+          8,
+          2,
+          22
+        ],
+        [
+          11,
+          2,
+          5
+        ],
+        [
+          12,
+          2,
+          10
+        ],
+        [
+          13,
+          2,
+          21
+        ],
+        [
+          14,
+          2,
+          5
+        ],
+        [
+          15,
+          2,
+          5
+        ]
+      ],
+      "procs": [],
+      "facts": [
+        {
+          "type": "DRAGON_NATURE"
+        },
+        {
+          "type": "SKELETON_TRANSFORMER_TARGET",
+          "subtype": "boneDragon"
+        },
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "MAGIC_MIRROR",
+          "val": 20
+        },
+        {
+          "type": "CASTS",
+          "val": 5
+        },
+        {
+          "type": "CREATURE_SPELL_POWER",
+          "val": 500
+        },
+        {
+          "type": "SPELLCASTER",
+          "subtype": "magicArrow",
+          "addInfo": 10,
+          "val": 2
+        },
+        {
+          "type": "SPELLCASTER",
+          "subtype": "iceBolt",
+          "addInfo": 22,
+          "val": 2
+        },
+        {
+          "type": "SPELLCASTER",
+          "subtype": "lightningBolt",
+          "addInfo": 22,
+          "val": 2
+        },
+        {
+          "type": "SPELLCASTER",
+          "subtype": "chainLightning",
+          "addInfo": 5,
+          "val": 2
+        },
+        {
+          "type": "SPELLCASTER",
+          "subtype": "frostRing",
+          "addInfo": 10,
+          "val": 2
+        },
+        {
+          "type": "SPELLCASTER",
+          "subtype": "fireball",
+          "addInfo": 21,
+          "val": 2
+        },
+        {
+          "type": "SPELLCASTER",
+          "subtype": "inferno",
+          "addInfo": 5,
+          "val": 2
+        },
+        {
+          "type": "SPELLCASTER",
+          "subtype": "meteorShower",
+          "addInfo": 5,
+          "val": 2
+        },
+        {
+          "type": "KING",
+          "val": 0
+        }
+      ]
+    },
+    {
+      "id": 138,
+      "flags": 2052,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [
+        [
+          77,
+          20
+        ],
+        [
+          76,
+          100
+        ]
+      ],
+      "facts": [
+        {
+          "type": "DRAGON_NATURE"
+        },
+        {
+          "type": "SKELETON_TRANSFORMER_TARGET",
+          "subtype": "boneDragon"
+        },
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "TWO_HEX_ATTACK_BREATH"
+        },
+        {
+          "type": "SPELL_AFTER_ATTACK",
+          "subtype": "acidBreathDamage",
+          "val": 20
+        },
+        {
+          "type": "SPECIFIC_SPELL_POWER",
+          "subtype": "acidBreathDamage",
+          "val": 25
+        },
+        {
+          "type": "SPELL_AFTER_ATTACK",
+          "subtype": "acidBreath",
+          "val": 100
+        },
+        {
+          "type": "KING",
+          "val": 0
+        }
+      ]
+    },
+    {
+      "id": 139,
+      "flags": 2048,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 0,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "DRAGON_NATURE"
+        },
+        {
+          "type": "SKELETON_TRANSFORMER_TARGET",
+          "subtype": "boneDragon"
+        },
+        {
+          "type": "SPECIAL_CRYSTAL_GENERATION"
+        },
+        {
+          "type": "MAGIC_RESISTANCE",
+          "val": 20
+        },
+        {
+          "type": "KING",
+          "val": 0
+        }
+      ]
+    },
+    {
+      "id": 140,
+      "flags": 2052,
+      "casts": 0,
+      "power": 0,
+      "duration": 0,
+      "fear": 10,
+      "mirror": 0,
+      "aura": 0,
+      "channel": 0,
+      "critical": 0,
+      "rebirth": 0,
+      "spells": [],
+      "procs": [],
+      "facts": [
+        {
+          "type": "DRAGON_NATURE"
+        },
+        {
+          "type": "SKELETON_TRANSFORMER_TARGET",
+          "subtype": "boneDragon"
+        },
+        {
+          "type": "FLYING"
+        },
+        {
+          "type": "TWO_HEX_ATTACK_BREATH"
+        },
+        {
+          "type": "FEARFUL",
+          "val": 10,
+          "propagator": "BATTLE_WIDE",
+          "propagationUpdater": "BONUS_OWNER_UPDATER",
+          "description": "PLACEHOLDER",
+          "limiters": [
+            "OPPOSITE_SIDE",
+            {
+              "type": "HAS_ANOTHER_BONUS_LIMITER",
+              "bonusType": "LIVING"
+            }
+          ]
+        },
+        {
+          "type": "FEARFUL",
+          "valueType": "INDEPENDENT_MIN",
+          "description": "PLACEHOLDER",
+          "val": 0
+        },
+        {
+          "type": "LEVEL_SPELL_IMMUNITY",
+          "val": 3
+        },
+        {
+          "type": "KING",
+          "val": 0
+        }
+      ]
+    }
+  ]
+}

@@ -8,7 +8,7 @@ Resources startingResources(int difficulty,bool computer){
 }
 Resources Game::incomeForOwner(int owner)const{
  Resources income{};for(const auto&o:objects)if(o.owner==owner){if(o.type==ObjectType::Mine)income[o.resource]+=mineYield(o.resource);if(o.type==ObjectType::Town&&settlements.contains(o.id)){const auto&t=o.id==activeTownId?town:settlements.at(o.id);income[Gold]+=(t.built[Capitol]?4000:t.built[CityHall]?2000:t.built[TownHall]?1000:500)+(t.built[GrailBuilding]?5000:0);if(t.built[ResourceSilo])for(int r=0;r<ResourceCount;++r)income[r]+=TownDefs[t.faction].silo[r];}}
- for(const auto&[id,h]:heroes)if(h.owner==owner){const auto&who=id==activeHeroId?hero:h.value;income[Gold]+=who.originalId==142?350:0;income[Gold]+=std::array<int,4>{0,125,250,500}[who.skills[Estates]];}
+ for(const auto&[id,h]:heroes)if(h.owner==owner){const auto&who=id==activeHeroId?hero:h.value;auto extra=heroSpecialtyIncome(who),items=artifactIncome(who);for(int r=0;r<ResourceCount;++r)income[r]+=extra[r]+items[r];}
  return income;
 }
 void Game::payComputerIncome(){

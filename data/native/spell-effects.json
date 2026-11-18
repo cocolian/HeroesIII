@@ -1,6 +1,24 @@
 {
-  "source": "data/native/spells.json",
+  "source": "Original spell hit and affect sprite names",
   "effects": [
+    {
+      "spell": 0,
+      "animation": "c20spx.def",
+      "frames": 14,
+      "canvas": [
+        133,
+        116
+      ]
+    },
+    {
+      "spell": 1,
+      "animation": "c03spw.def",
+      "frames": 15,
+      "canvas": [
+        94,
+        119
+      ]
+    },
     {
       "spell": 2,
       "animation": "c15spa0.def",
@@ -8,6 +26,15 @@
       "canvas": [
         113,
         106
+      ]
+    },
+    {
+      "spell": 3,
+      "animation": "c09spe0.def",
+      "frames": 20,
+      "canvas": [
+        74,
+        54
       ]
     },
     {
@@ -44,6 +71,114 @@
       "canvas": [
         85,
         111
+      ]
+    },
+    {
+      "spell": 8,
+      "animation": "c03spa1.def",
+      "frames": 12,
+      "canvas": [
+        114,
+        110
+      ]
+    },
+    {
+      "spell": 9,
+      "animation": "c08spw5.def",
+      "frames": 16,
+      "canvas": [
+        146,
+        154
+      ]
+    },
+    {
+      "spell": 10,
+      "animation": "c05spe0.def",
+      "frames": 19,
+      "canvas": [
+        90,
+        147
+      ]
+    },
+    {
+      "spell": 11,
+      "animation": "c11spa1.def",
+      "frames": 12,
+      "canvas": [
+        114,
+        110
+      ]
+    },
+    {
+      "spell": 12,
+      "animation": "c07spw.def",
+      "frames": 15,
+      "canvas": [
+        135,
+        130
+      ]
+    },
+    {
+      "spell": 13,
+      "animation": "c13spf.def",
+      "frames": 13,
+      "canvas": [
+        142,
+        155
+      ]
+    },
+    {
+      "spell": 14,
+      "animation": "c04spf0.def",
+      "frames": 16,
+      "canvas": [
+        207,
+        217
+      ]
+    },
+    {
+      "spell": 15,
+      "animation": "c08spe0.def",
+      "frames": 18,
+      "canvas": [
+        144,
+        144
+      ]
+    },
+    {
+      "spell": 16,
+      "animation": "c04spe0.def",
+      "frames": 15,
+      "canvas": [
+        134,
+        134
+      ]
+    },
+    {
+      "spell": 17,
+      "animation": "c14spa0.def",
+      "frames": 15,
+      "canvas": [
+        84,
+        89
+      ]
+    },
+    {
+      "spell": 18,
+      "animation": "c06spf0.def",
+      "frames": 20,
+      "canvas": [
+        200,
+        200
+      ]
+    },
+    {
+      "spell": 19,
+      "animation": "c03spa1.def",
+      "frames": 12,
+      "canvas": [
+        114,
+        110
       ]
     },
     {
@@ -128,6 +263,24 @@
       ]
     },
     {
+      "spell": 30,
+      "animation": "c07spa1.def",
+      "frames": 16,
+      "canvas": [
+        176,
+        148
+      ]
+    },
+    {
+      "spell": 31,
+      "animation": "c10spw.def",
+      "frames": 20,
+      "canvas": [
+        54,
+        556
+      ]
+    },
+    {
       "spell": 32,
       "animation": "c04spa0.def",
       "frames": 16,
@@ -146,12 +299,48 @@
       ]
     },
     {
+      "spell": 34,
+      "animation": "c05spw.def",
+      "frames": 15,
+      "canvas": [
+        199,
+        201
+      ]
+    },
+    {
       "spell": 50,
       "animation": "c02spa0.def",
       "frames": 10,
       "canvas": [
         93,
         88
+      ]
+    },
+    {
+      "spell": 51,
+      "animation": "c01spe0.def",
+      "frames": 20,
+      "canvas": [
+        98,
+        95
+      ]
+    },
+    {
+      "spell": 52,
+      "animation": "c01spe0.def",
+      "frames": 20,
+      "canvas": [
+        98,
+        95
+      ]
+    },
+    {
+      "spell": 53,
+      "animation": "c12spf1.def",
+      "frames": 20,
+      "canvas": [
+        98,
+        95
       ]
     },
     {
@@ -234,7 +423,16 @@
         125,
         123
       ]
+    },
+    {
+      "spell": 64,
+      "animation": "c18spw0.def",
+      "frames": 15,
+      "canvas": [
+        127,
+        93
+      ]
     }
   ],
-  "timing": "100 ms per frame; provisional original-executable calibration"
+  "timing": "100ms provisional; no claim of original executable frame parity"
 }

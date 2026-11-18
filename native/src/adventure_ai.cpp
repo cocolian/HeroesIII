@@ -75,7 +75,7 @@ std::vector<Step> Game::adventurePlan(int* targetId) {
   int penalty=t->terrain==Terrain::Sand||t->terrain==Terrain::Snow?50:t->terrain==Terrain::Swamp?75:t->terrain==Terrain::Rough?25:0;
   const Terrain native[]={Terrain::Grass,Terrain::Grass,Terrain::Snow,Terrain::Lava,Terrain::Dirt,Terrain::Subterranean,Terrain::Rough,Terrain::Swamp,Terrain::Grass};
   bool nativeArmy=armyCount(hero.army)>0;for(const auto& s:hero.army)if(!s.empty())nativeArmy&=Units[s.unit].faction>=0&&native[Units[s.unit].faction]==t->terrain;
-  if(nativeArmy)penalty=0;penalty=std::max(0,penalty-std::array<int,4>{0,25,50,100}[hero.skills[Pathfinding]]);
+  if(nativeArmy||(t->terrain==Terrain::Sand&&std::any_of(hero.army.begin(),hero.army.end(),[](auto&s){return !s.empty()&&(creatureAbility(s.unit).flags&512);})))penalty=0;penalty=std::max(0,penalty-std::array<int,4>{0,25,50,100}[hero.skills[Pathfinding]]);
   int cost=f->road&&t->road?75:100+penalty;return from.x!=to.x&&from.y!=to.y?int(std::floor(cost*std::sqrt(2.))):cost;
  };
  auto knownPortal=[&](const Object& o){return o.properties.is_object()&&(o.properties.value("portalKnownOwners",0)&(1<<actingOwner));};

@@ -1,0 +1,3710 @@
+{
+  "scope": "Classic Complete 156 heroes; facts compiled from pinned hero records",
+  "heroes": [
+    {
+      "id": 0,
+      "key": "orrin",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "archery"
+      }
+    },
+    {
+      "id": 1,
+      "key": "valeska",
+      "kind": 1,
+      "unit": 2,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "archer"
+      }
+    },
+    {
+      "id": 2,
+      "key": "edric",
+      "kind": 1,
+      "unit": 4,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "griffin"
+      }
+    },
+    {
+      "id": 3,
+      "key": "sylvia",
+      "kind": 12,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "navigationSpecialty": {
+            "type": "MOVEMENT",
+            "subtype": "heroMovementSea",
+            "updater": {
+              "type": "GROWS_WITH_LEVEL",
+              "valPer20": 1500,
+              "stepSize": 1
+            },
+            "limiters": {
+              "type": "HAS_ANOTHER_BONUS_LIMITER",
+              "bonusSourceType": "SECONDARY_SKILL",
+              "bonusSourceID": "navigation"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 4,
+      "key": "lordHaart",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "estates"
+      }
+    },
+    {
+      "id": 5,
+      "key": "sorsha",
+      "kind": 1,
+      "unit": 6,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "swordsman"
+      }
+    },
+    {
+      "id": 6,
+      "key": "christian",
+      "kind": 1,
+      "unit": 141,
+      "spell": -1,
+      "resource": -1,
+      "amount": 5,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "ballista",
+        "creatureLevel": 5
+      }
+    },
+    {
+      "id": 7,
+      "key": "tyris",
+      "kind": 1,
+      "unit": 10,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "cavalier"
+      }
+    },
+    {
+      "id": 8,
+      "key": "rion",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "firstAid"
+      }
+    },
+    {
+      "id": 9,
+      "key": "adela",
+      "kind": 4,
+      "unit": -1,
+      "spell": 6,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "bless": {
+            "type": "GENERAL_DAMAGE_PREMY",
+            "limiters": [
+              {
+                "type": "HAS_ANOTHER_BONUS_LIMITER",
+                "bonusSourceType": "SPELL_EFFECT",
+                "bonusSourceID": "bless"
+              }
+            ],
+            "updater": "TIMES_HERO_LEVEL_DIVIDE_STACK_LEVEL",
+            "val": 3
+          }
+        }
+      }
+    },
+    {
+      "id": 10,
+      "key": "cuthbert",
+      "kind": 3,
+      "unit": -1,
+      "spell": 29,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellFixedAdditive": "weakness"
+      }
+    },
+    {
+      "id": 11,
+      "key": "adelaide",
+      "kind": 2,
+      "unit": -1,
+      "spell": 12,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellScalingPercentage": "frostRing"
+      }
+    },
+    {
+      "id": 12,
+      "key": "ingham",
+      "kind": 1,
+      "unit": 8,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "monk"
+      }
+    },
+    {
+      "id": 13,
+      "key": "sanya",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "eagleEye"
+      }
+    },
+    {
+      "id": 14,
+      "key": "loynis",
+      "kind": 3,
+      "unit": -1,
+      "spell": 31,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellFixedAdditive": "prayer"
+      }
+    },
+    {
+      "id": 15,
+      "key": "caitlin",
+      "kind": 6,
+      "unit": -1,
+      "spell": -1,
+      "resource": 0,
+      "amount": 350,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "gold": {
+            "subtype": "gold",
+            "type": "GENERATE_RESOURCE",
+            "val": 350
+          }
+        }
+      }
+    },
+    {
+      "id": 16,
+      "key": "mephala",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "armorer"
+      }
+    },
+    {
+      "id": 17,
+      "key": "ufretin",
+      "kind": 1,
+      "unit": 16,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "dwarf"
+      }
+    },
+    {
+      "id": 18,
+      "key": "jenova",
+      "kind": 6,
+      "unit": -1,
+      "spell": -1,
+      "resource": 0,
+      "amount": 350,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "gold": {
+            "subtype": "gold",
+            "type": "GENERATE_RESOURCE",
+            "val": 350
+          }
+        }
+      }
+    },
+    {
+      "id": 19,
+      "key": "ryland",
+      "kind": 1,
+      "unit": 22,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "dendroidGuard"
+      }
+    },
+    {
+      "id": 20,
+      "key": "thorgrim",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "resistance"
+      }
+    },
+    {
+      "id": 21,
+      "key": "ivor",
+      "kind": 1,
+      "unit": 18,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "woodElf"
+      }
+    },
+    {
+      "id": 22,
+      "key": "clancy",
+      "kind": 1,
+      "unit": 24,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "unicorn"
+      }
+    },
+    {
+      "id": 23,
+      "key": "kyrre",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "logistics"
+      }
+    },
+    {
+      "id": 24,
+      "key": "coronius",
+      "kind": 3,
+      "unit": -1,
+      "spell": 58,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellFixedAdditive": "slayer",
+        "spellFixedValues": [
+          4,
+          3,
+          2,
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "key": "uland",
+      "kind": 2,
+      "unit": -1,
+      "spell": 1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellScalingPercentage": "cure"
+      }
+    },
+    {
+      "id": 26,
+      "key": "elleshar",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "intelligence"
+      }
+    },
+    {
+      "id": 27,
+      "key": "gem",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "firstAid"
+      }
+    },
+    {
+      "id": 28,
+      "key": "malcom",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "eagleEye"
+      }
+    },
+    {
+      "id": 29,
+      "key": "melodia",
+      "kind": 3,
+      "unit": -1,
+      "spell": 56,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "fortune": {
+            "addInfo": 3,
+            "subtype": "fortune",
+            "type": "SPECIAL_FIXED_VALUE_ENCHANT"
+          }
+        }
+      }
+    },
+    {
+      "id": 30,
+      "key": "alagar",
+      "kind": 2,
+      "unit": -1,
+      "spell": 9,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellScalingPercentage": "iceBolt"
+      }
+    },
+    {
+      "id": 31,
+      "key": "aeris",
+      "kind": 1,
+      "unit": 20,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "pegasus"
+      }
+    },
+    {
+      "id": 32,
+      "key": "piquedram",
+      "kind": 1,
+      "unit": 30,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "stoneGargoyle"
+      }
+    },
+    {
+      "id": 33,
+      "key": "thane",
+      "kind": 1,
+      "unit": 36,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "genie"
+      }
+    },
+    {
+      "id": 34,
+      "key": "josephine",
+      "kind": 1,
+      "unit": 32,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "ironGolem"
+      }
+    },
+    {
+      "id": 35,
+      "key": "neela",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "armorer"
+      }
+    },
+    {
+      "id": 36,
+      "key": "torosar",
+      "kind": 1,
+      "unit": 141,
+      "spell": -1,
+      "resource": -1,
+      "amount": 5,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "ballista",
+        "creatureLevel": 5
+      }
+    },
+    {
+      "id": 37,
+      "key": "fafner",
+      "kind": 1,
+      "unit": 38,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "naga"
+      }
+    },
+    {
+      "id": 38,
+      "key": "rissa",
+      "kind": 6,
+      "unit": -1,
+      "spell": -1,
+      "resource": 3,
+      "amount": 1,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "mercury": {
+            "subtype": "mercury",
+            "type": "GENERATE_RESOURCE",
+            "val": 1
+          }
+        }
+      }
+    },
+    {
+      "id": 39,
+      "key": "iona",
+      "kind": 1,
+      "unit": 36,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "genie"
+      }
+    },
+    {
+      "id": 40,
+      "key": "astral",
+      "kind": 2,
+      "unit": -1,
+      "spell": 61,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellScalingPercentage": "hypnotize"
+      }
+    },
+    {
+      "id": 41,
+      "key": "halon",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "mysticism",
+        "bonuses": {
+          "mysticismExtra": {
+            "type": "MANA_REGENERATION",
+            "val": 1,
+            "valueType": "ADDITIVE_VALUE"
+          }
+        }
+      }
+    },
+    {
+      "id": 42,
+      "key": "serena",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "eagleEye"
+      }
+    },
+    {
+      "id": 43,
+      "key": "daremyth",
+      "kind": 3,
+      "unit": -1,
+      "spell": 56,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "fortune": {
+            "addInfo": 3,
+            "subtype": "fortune",
+            "type": "SPECIAL_FIXED_VALUE_ENCHANT"
+          }
+        }
+      }
+    },
+    {
+      "id": 44,
+      "key": "theodorus",
+      "kind": 1,
+      "unit": 34,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "mage"
+      }
+    },
+    {
+      "id": 45,
+      "key": "solmyr",
+      "kind": 2,
+      "unit": -1,
+      "spell": 11,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellScalingPercentage": "chainLightning"
+      }
+    },
+    {
+      "id": 46,
+      "key": "cyra",
+      "kind": 3,
+      "unit": -1,
+      "spell": 2,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellFixedAdditive": "haste"
+      }
+    },
+    {
+      "id": 47,
+      "key": "aine",
+      "kind": 6,
+      "unit": -1,
+      "spell": -1,
+      "resource": 0,
+      "amount": 350,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "gold": {
+            "subtype": "gold",
+            "type": "GENERATE_RESOURCE",
+            "val": 350
+          }
+        }
+      }
+    },
+    {
+      "id": 48,
+      "key": "fiona",
+      "kind": 1,
+      "unit": 46,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "hellHound"
+      }
+    },
+    {
+      "id": 49,
+      "key": "rashka",
+      "kind": 1,
+      "unit": 52,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "efreet"
+      }
+    },
+    {
+      "id": 50,
+      "key": "marius",
+      "kind": 1,
+      "unit": 48,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "demon"
+      }
+    },
+    {
+      "id": 51,
+      "key": "ignatius",
+      "kind": 1,
+      "unit": 42,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "imp"
+      }
+    },
+    {
+      "id": 52,
+      "key": "octavia",
+      "kind": 6,
+      "unit": -1,
+      "spell": -1,
+      "resource": 0,
+      "amount": 350,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "gold": {
+            "subtype": "gold",
+            "type": "GENERATE_RESOURCE",
+            "val": 350
+          }
+        }
+      }
+    },
+    {
+      "id": 53,
+      "key": "calh",
+      "kind": 1,
+      "unit": 44,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "gog"
+      }
+    },
+    {
+      "id": 54,
+      "key": "pyre",
+      "kind": 1,
+      "unit": 141,
+      "spell": -1,
+      "resource": -1,
+      "amount": 5,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "ballista",
+        "creatureLevel": 5
+      }
+    },
+    {
+      "id": 55,
+      "key": "nymus",
+      "kind": 1,
+      "unit": 50,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "pitFiend"
+      }
+    },
+    {
+      "id": 56,
+      "key": "ayden",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "intelligence"
+      }
+    },
+    {
+      "id": 57,
+      "key": "xyron",
+      "kind": 2,
+      "unit": -1,
+      "spell": 14,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellScalingPercentage": "inferno"
+      }
+    },
+    {
+      "id": 58,
+      "key": "axsis",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "mysticism",
+        "bonuses": {
+          "mysticismExtra": {
+            "type": "MANA_REGENERATION",
+            "val": 1,
+            "valueType": "ADDITIVE_VALUE"
+          }
+        }
+      }
+    },
+    {
+      "id": 59,
+      "key": "olema",
+      "kind": 3,
+      "unit": -1,
+      "spell": 29,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellFixedAdditive": "weakness"
+      }
+    },
+    {
+      "id": 60,
+      "key": "calid",
+      "kind": 6,
+      "unit": -1,
+      "spell": -1,
+      "resource": 4,
+      "amount": 1,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "sulfur": {
+            "subtype": "sulfur",
+            "type": "GENERATE_RESOURCE",
+            "val": 1
+          }
+        }
+      }
+    },
+    {
+      "id": 61,
+      "key": "ash",
+      "kind": 3,
+      "unit": -1,
+      "spell": 27,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellFixedAdditive": "bloodlust"
+      }
+    },
+    {
+      "id": 62,
+      "key": "zydar",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "sorcery"
+      }
+    },
+    {
+      "id": 63,
+      "key": "xarfax",
+      "kind": 2,
+      "unit": -1,
+      "spell": 13,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellScalingPercentage": "fireball"
+      }
+    },
+    {
+      "id": 64,
+      "key": "straker",
+      "kind": 1,
+      "unit": 58,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "walkingDead"
+      }
+    },
+    {
+      "id": 65,
+      "key": "vokial",
+      "kind": 1,
+      "unit": 62,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "vampire"
+      }
+    },
+    {
+      "id": 66,
+      "key": "moandor",
+      "kind": 1,
+      "unit": 64,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "lich"
+      }
+    },
+    {
+      "id": 67,
+      "key": "charna",
+      "kind": 1,
+      "unit": 60,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "wight"
+      }
+    },
+    {
+      "id": 68,
+      "key": "tamika",
+      "kind": 1,
+      "unit": 66,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "blackKnight"
+      }
+    },
+    {
+      "id": 69,
+      "key": "isra",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "necromancy"
+      }
+    },
+    {
+      "id": 70,
+      "key": "clavius",
+      "kind": 6,
+      "unit": -1,
+      "spell": -1,
+      "resource": 0,
+      "amount": 350,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "gold": {
+            "subtype": "gold",
+            "type": "GENERATE_RESOURCE",
+            "val": 350
+          }
+        }
+      }
+    },
+    {
+      "id": 71,
+      "key": "galthran",
+      "kind": 1,
+      "unit": 56,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "skeleton"
+      }
+    },
+    {
+      "id": 72,
+      "key": "septienna",
+      "kind": 2,
+      "unit": -1,
+      "spell": 16,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellScalingPercentage": "deathRipple"
+      }
+    },
+    {
+      "id": 73,
+      "key": "aislinn",
+      "kind": 2,
+      "unit": -1,
+      "spell": 15,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellScalingPercentage": "meteorShower"
+      }
+    },
+    {
+      "id": 74,
+      "key": "sandro",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "sorcery"
+      }
+    },
+    {
+      "id": 75,
+      "key": "nimbus",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "eagleEye"
+      }
+    },
+    {
+      "id": 76,
+      "key": "thant",
+      "kind": 2,
+      "unit": -1,
+      "spell": 52,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellScalingPercentage": "animateDead"
+      }
+    },
+    {
+      "id": 77,
+      "key": "xsi",
+      "kind": 3,
+      "unit": -1,
+      "spell": 5,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellFixedAdditive": "stoneSkin"
+      }
+    },
+    {
+      "id": 78,
+      "key": "vidomina",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "necromancy"
+      }
+    },
+    {
+      "id": 79,
+      "key": "nagash",
+      "kind": 6,
+      "unit": -1,
+      "spell": -1,
+      "resource": 0,
+      "amount": 350,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "gold": {
+            "subtype": "gold",
+            "type": "GENERATE_RESOURCE",
+            "val": 350
+          }
+        }
+      }
+    },
+    {
+      "id": 80,
+      "key": "lorelei",
+      "kind": 1,
+      "unit": 72,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "harpy"
+      }
+    },
+    {
+      "id": 81,
+      "key": "arlach",
+      "kind": 1,
+      "unit": 141,
+      "spell": -1,
+      "resource": -1,
+      "amount": 5,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "ballista",
+        "creatureLevel": 5
+      }
+    },
+    {
+      "id": 82,
+      "key": "dace",
+      "kind": 1,
+      "unit": 78,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "minotaur"
+      }
+    },
+    {
+      "id": 83,
+      "key": "ajit",
+      "kind": 1,
+      "unit": 74,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "beholder"
+      }
+    },
+    {
+      "id": 84,
+      "key": "damacon",
+      "kind": 6,
+      "unit": -1,
+      "spell": -1,
+      "resource": 0,
+      "amount": 350,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "gold": {
+            "subtype": "gold",
+            "type": "GENERATE_RESOURCE",
+            "val": 350
+          }
+        }
+      }
+    },
+    {
+      "id": 85,
+      "key": "gunnar",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "logistics"
+      }
+    },
+    {
+      "id": 86,
+      "key": "synca",
+      "kind": 1,
+      "unit": 80,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "manticore"
+      }
+    },
+    {
+      "id": 87,
+      "key": "shakti",
+      "kind": 1,
+      "unit": 70,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "troglodyte"
+      }
+    },
+    {
+      "id": 88,
+      "key": "alamar",
+      "kind": 2,
+      "unit": -1,
+      "spell": 51,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellScalingPercentage": "resurrection"
+      }
+    },
+    {
+      "id": 89,
+      "key": "jaegar",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "mysticism",
+        "bonuses": {
+          "mysticismExtra": {
+            "type": "MANA_REGENERATION",
+            "val": 1,
+            "valueType": "ADDITIVE_VALUE"
+          }
+        }
+      }
+    },
+    {
+      "id": 90,
+      "key": "malekith",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "sorcery"
+      }
+    },
+    {
+      "id": 91,
+      "key": "jeddite",
+      "kind": 2,
+      "unit": -1,
+      "spell": 51,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellScalingPercentage": "resurrection"
+      }
+    },
+    {
+      "id": 92,
+      "key": "geon",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "eagleEye"
+      }
+    },
+    {
+      "id": 93,
+      "key": "deemer",
+      "kind": 2,
+      "unit": -1,
+      "spell": 15,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellScalingPercentage": "meteorShower"
+      }
+    },
+    {
+      "id": 94,
+      "key": "sephinroth",
+      "kind": 6,
+      "unit": -1,
+      "spell": -1,
+      "resource": 5,
+      "amount": 1,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "crystal": {
+            "subtype": "crystal",
+            "type": "GENERATE_RESOURCE",
+            "val": 1
+          }
+        }
+      }
+    },
+    {
+      "id": 95,
+      "key": "darkstorn",
+      "kind": 3,
+      "unit": -1,
+      "spell": 5,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellFixedAdditive": "stoneSkin"
+      }
+    },
+    {
+      "id": 96,
+      "key": "yog",
+      "kind": 1,
+      "unit": 94,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "cyclop"
+      }
+    },
+    {
+      "id": 97,
+      "key": "gurnisson",
+      "kind": 1,
+      "unit": 141,
+      "spell": -1,
+      "resource": -1,
+      "amount": 5,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "ballista",
+        "creatureLevel": 5
+      }
+    },
+    {
+      "id": 98,
+      "key": "jabarkas",
+      "kind": 1,
+      "unit": 88,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "orc"
+      }
+    },
+    {
+      "id": 99,
+      "key": "shiva",
+      "kind": 1,
+      "unit": 92,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "roc"
+      }
+    },
+    {
+      "id": 100,
+      "key": "gretchin",
+      "kind": 1,
+      "unit": 84,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "goblin"
+      }
+    },
+    {
+      "id": 101,
+      "key": "krellion",
+      "kind": 1,
+      "unit": 90,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "ogre"
+      }
+    },
+    {
+      "id": 102,
+      "key": "cragHack",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "offence"
+      }
+    },
+    {
+      "id": 103,
+      "key": "tyraxor",
+      "kind": 1,
+      "unit": 86,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "goblinWolfRider"
+      }
+    },
+    {
+      "id": 104,
+      "key": "gird",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "sorcery"
+      }
+    },
+    {
+      "id": 105,
+      "key": "vey",
+      "kind": 1,
+      "unit": 90,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "ogre"
+      }
+    },
+    {
+      "id": 106,
+      "key": "dessa",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "logistics"
+      }
+    },
+    {
+      "id": 107,
+      "key": "terek",
+      "kind": 3,
+      "unit": -1,
+      "spell": 2,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellFixedAdditive": "haste"
+      }
+    },
+    {
+      "id": 108,
+      "key": "zubin",
+      "kind": 3,
+      "unit": -1,
+      "spell": 28,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellFixedAdditive": "precision"
+      }
+    },
+    {
+      "id": 109,
+      "key": "gundula",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "offence"
+      }
+    },
+    {
+      "id": 110,
+      "key": "oris",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "eagleEye"
+      }
+    },
+    {
+      "id": 111,
+      "key": "saurug",
+      "kind": 6,
+      "unit": -1,
+      "spell": -1,
+      "resource": 6,
+      "amount": 1,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "gems": {
+            "subtype": "gems",
+            "type": "GENERATE_RESOURCE",
+            "val": 1
+          }
+        }
+      }
+    },
+    {
+      "id": 112,
+      "key": "bron",
+      "kind": 1,
+      "unit": 104,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "basilisk"
+      }
+    },
+    {
+      "id": 113,
+      "key": "drakon",
+      "kind": 1,
+      "unit": 98,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "gnoll"
+      }
+    },
+    {
+      "id": 114,
+      "key": "wystan",
+      "kind": 1,
+      "unit": 100,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "lizardman"
+      }
+    },
+    {
+      "id": 115,
+      "key": "tazar",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "armorer"
+      }
+    },
+    {
+      "id": 116,
+      "key": "alkin",
+      "kind": 1,
+      "unit": 106,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "gorgon"
+      }
+    },
+    {
+      "id": 117,
+      "key": "korbac",
+      "kind": 1,
+      "unit": 102,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "serpentFly"
+      }
+    },
+    {
+      "id": 118,
+      "key": "gerwulf",
+      "kind": 1,
+      "unit": 141,
+      "spell": -1,
+      "resource": -1,
+      "amount": 5,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "ballista",
+        "creatureLevel": 5
+      }
+    },
+    {
+      "id": 119,
+      "key": "broghild",
+      "kind": 1,
+      "unit": 108,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "wyvern"
+      }
+    },
+    {
+      "id": 120,
+      "key": "mirlanda",
+      "kind": 3,
+      "unit": -1,
+      "spell": 29,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellFixedAdditive": "weakness"
+      }
+    },
+    {
+      "id": 121,
+      "key": "rosic",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "mysticism",
+        "bonuses": {
+          "mysticismExtra": {
+            "type": "MANA_REGENERATION",
+            "val": 1,
+            "valueType": "ADDITIVE_VALUE"
+          }
+        }
+      }
+    },
+    {
+      "id": 122,
+      "key": "voy",
+      "kind": 12,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "navigationSpecialty": {
+            "type": "MOVEMENT",
+            "subtype": "heroMovementSea",
+            "updater": {
+              "type": "GROWS_WITH_LEVEL",
+              "valPer20": 1500,
+              "stepSize": 1
+            },
+            "limiters": {
+              "type": "HAS_ANOTHER_BONUS_LIMITER",
+              "bonusSourceType": "SECONDARY_SKILL",
+              "bonusSourceID": "navigation"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 123,
+      "key": "verdish",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "firstAid"
+      }
+    },
+    {
+      "id": 124,
+      "key": "merist",
+      "kind": 3,
+      "unit": -1,
+      "spell": 5,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellFixedAdditive": "stoneSkin"
+      }
+    },
+    {
+      "id": 125,
+      "key": "styg",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "sorcery"
+      }
+    },
+    {
+      "id": 126,
+      "key": "andra",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "intelligence"
+      }
+    },
+    {
+      "id": 127,
+      "key": "tiva",
+      "kind": 0,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "secondary": "eagleEye"
+      }
+    },
+    {
+      "id": 128,
+      "key": "pasis",
+      "kind": 5,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        3,
+        3,
+        0,
+        0
+      ],
+      "targets": [
+        122,
+        123
+      ],
+      "upgrade": -1,
+      "source": {
+        "base": {
+          "limiters": [
+            {
+              "type": "CREATURE_TYPE_LIMITER",
+              "creature": "psychicElemental",
+              "includeUpgrades": true
+            }
+          ],
+          "type": "PRIMARY_SKILL",
+          "val": 3
+        },
+        "bonuses": {
+          "attack": {
+            "subtype": "attack"
+          },
+          "defence": {
+            "subtype": "defence"
+          }
+        }
+      }
+    },
+    {
+      "id": 129,
+      "key": "thunar",
+      "kind": 5,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        2,
+        1,
+        5,
+        0
+      ],
+      "targets": [
+        120,
+        121
+      ],
+      "upgrade": -1,
+      "source": {
+        "base": {
+          "limiters": [
+            {
+              "type": "CREATURE_TYPE_LIMITER",
+              "creature": "earthElemental",
+              "includeUpgrades": true
+            }
+          ]
+        },
+        "bonuses": {
+          "damage": {
+            "type": "CREATURE_DAMAGE",
+            "subtype": "creatureDamageBoth",
+            "val": 5
+          },
+          "attack": {
+            "subtype": "attack",
+            "type": "PRIMARY_SKILL",
+            "val": 2
+          },
+          "defence": {
+            "subtype": "defence",
+            "type": "PRIMARY_SKILL",
+            "val": 1
+          }
+        }
+      }
+    },
+    {
+      "id": 130,
+      "key": "ignissa",
+      "kind": 5,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        1,
+        2,
+        2,
+        0
+      ],
+      "targets": [
+        118,
+        119
+      ],
+      "upgrade": -1,
+      "source": {
+        "base": {
+          "limiters": [
+            {
+              "type": "CREATURE_TYPE_LIMITER",
+              "creature": "fireElemental",
+              "includeUpgrades": true
+            }
+          ]
+        },
+        "bonuses": {
+          "damage": {
+            "subtype": "creatureDamageBoth",
+            "type": "CREATURE_DAMAGE",
+            "val": 2
+          },
+          "attack": {
+            "subtype": "attack",
+            "type": "PRIMARY_SKILL",
+            "val": 1
+          },
+          "defence": {
+            "subtype": "defence",
+            "type": "PRIMARY_SKILL",
+            "val": 2
+          }
+        }
+      }
+    },
+    {
+      "id": 131,
+      "key": "lacus",
+      "kind": 5,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "targets": [
+        116,
+        117
+      ],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "attack": {
+            "limiters": [
+              {
+                "type": "CREATURE_TYPE_LIMITER",
+                "creature": "waterElemental",
+                "includeUpgrades": true
+              }
+            ],
+            "subtype": "attack",
+            "type": "PRIMARY_SKILL",
+            "val": 2
+          }
+        }
+      }
+    },
+    {
+      "id": 132,
+      "key": "monere",
+      "kind": 5,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        3,
+        3,
+        0,
+        0
+      ],
+      "targets": [
+        122,
+        123
+      ],
+      "upgrade": -1,
+      "source": {
+        "base": {
+          "limiters": [
+            {
+              "type": "CREATURE_TYPE_LIMITER",
+              "creature": "psychicElemental",
+              "includeUpgrades": true
+            }
+          ],
+          "type": "PRIMARY_SKILL",
+          "val": 3
+        },
+        "bonuses": {
+          "attack": {
+            "subtype": "attack"
+          },
+          "defence": {
+            "subtype": "defence"
+          }
+        }
+      }
+    },
+    {
+      "id": 133,
+      "key": "erdamon",
+      "kind": 5,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        2,
+        1,
+        5,
+        0
+      ],
+      "targets": [
+        120,
+        121
+      ],
+      "upgrade": -1,
+      "source": {
+        "base": {
+          "limiters": [
+            {
+              "type": "CREATURE_TYPE_LIMITER",
+              "creature": "earthElemental",
+              "includeUpgrades": true
+            }
+          ]
+        },
+        "bonuses": {
+          "damage": {
+            "type": "CREATURE_DAMAGE",
+            "subtype": "creatureDamageBoth",
+            "val": 5
+          },
+          "attack": {
+            "subtype": "attack",
+            "type": "PRIMARY_SKILL",
+            "val": 2
+          },
+          "defence": {
+            "subtype": "defence",
+            "type": "PRIMARY_SKILL",
+            "val": 1
+          }
+        }
+      }
+    },
+    {
+      "id": 134,
+      "key": "fiur",
+      "kind": 5,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        1,
+        2,
+        2,
+        0
+      ],
+      "targets": [
+        118,
+        119
+      ],
+      "upgrade": -1,
+      "source": {
+        "base": {
+          "limiters": [
+            {
+              "type": "CREATURE_TYPE_LIMITER",
+              "creature": "fireElemental",
+              "includeUpgrades": true
+            }
+          ]
+        },
+        "bonuses": {
+          "damage": {
+            "subtype": "creatureDamageBoth",
+            "type": "CREATURE_DAMAGE",
+            "val": 2
+          },
+          "attack": {
+            "subtype": "attack",
+            "type": "PRIMARY_SKILL",
+            "val": 1
+          },
+          "defence": {
+            "subtype": "defence",
+            "type": "PRIMARY_SKILL",
+            "val": 2
+          }
+        }
+      }
+    },
+    {
+      "id": 135,
+      "key": "kalt",
+      "kind": 5,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "targets": [
+        116,
+        117
+      ],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "attack": {
+            "limiters": [
+              {
+                "type": "CREATURE_TYPE_LIMITER",
+                "creature": "waterElemental",
+                "includeUpgrades": true
+              }
+            ],
+            "subtype": "attack",
+            "type": "PRIMARY_SKILL",
+            "val": 2
+          }
+        }
+      }
+    },
+    {
+      "id": 136,
+      "key": "luna",
+      "kind": 10,
+      "unit": -1,
+      "spell": 48,
+      "resource": -1,
+      "amount": 100,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "fireWall": {
+            "subtype": "fireWallTrigger",
+            "type": "SPECIFIC_SPELL_DAMAGE",
+            "val": 100,
+            "valueType": "BASE_NUMBER"
+          },
+          "fireWallTooltip": {
+            "subtype": "fireWall",
+            "type": "SPECIFIC_SPELL_DAMAGE",
+            "val": 100,
+            "valueType": "BASE_NUMBER"
+          }
+        }
+      }
+    },
+    {
+      "id": 137,
+      "key": "brissa",
+      "kind": 3,
+      "unit": -1,
+      "spell": 2,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellFixedAdditive": "haste"
+      }
+    },
+    {
+      "id": 138,
+      "key": "ciele",
+      "kind": 11,
+      "unit": -1,
+      "spell": 0,
+      "resource": -1,
+      "amount": 50,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "magicArrow": {
+            "subtype": "magicArrow",
+            "type": "SPECIFIC_SPELL_DAMAGE",
+            "val": 50,
+            "valueType": "BASE_NUMBER"
+          }
+        }
+      }
+    },
+    {
+      "id": 139,
+      "key": "labetha",
+      "kind": 3,
+      "unit": -1,
+      "spell": 5,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellFixedAdditive": "stoneSkin"
+      }
+    },
+    {
+      "id": 140,
+      "key": "inteus",
+      "kind": 3,
+      "unit": -1,
+      "spell": 27,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellFixedAdditive": "bloodlust"
+      }
+    },
+    {
+      "id": 141,
+      "key": "aenain",
+      "kind": 3,
+      "unit": -1,
+      "spell": 30,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "spellFixedAdditive": "disruptingRay",
+        "spellFixedValues": [
+          -2
+        ]
+      }
+    },
+    {
+      "id": 142,
+      "key": "gelare",
+      "kind": 6,
+      "unit": -1,
+      "spell": -1,
+      "resource": 0,
+      "amount": 350,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "gold": {
+            "subtype": "gold",
+            "type": "GENERATE_RESOURCE",
+            "val": 350
+          }
+        }
+      }
+    },
+    {
+      "id": 143,
+      "key": "grindan",
+      "kind": 6,
+      "unit": -1,
+      "spell": -1,
+      "resource": 0,
+      "amount": 350,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "gold": {
+            "subtype": "gold",
+            "type": "GENERATE_RESOURCE",
+            "val": 350
+          }
+        }
+      }
+    },
+    {
+      "id": 144,
+      "key": "sirMullich",
+      "kind": 7,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        2
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {
+          "speed": {
+            "type": "STACKS_SPEED",
+            "val": 2
+          }
+        }
+      }
+    },
+    {
+      "id": 145,
+      "key": "adrienne",
+      "kind": 9,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "bonuses": {}
+      }
+    },
+    {
+      "id": 146,
+      "key": "catherine",
+      "kind": 1,
+      "unit": 6,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "swordsman"
+      }
+    },
+    {
+      "id": 147,
+      "key": "dracon",
+      "kind": 8,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [
+        8,
+        9,
+        34,
+        35
+      ],
+      "upgrade": 135,
+      "source": {
+        "base": {
+          "addInfo": "enchanter",
+          "type": "SPECIAL_UPGRADE"
+        },
+        "bonuses": {
+          "mage2enchanter": {
+            "limiters": [
+              {
+                "type": "CREATURE_TYPE_LIMITER",
+                "creature": "mage",
+                "includeUpgrades": true
+              }
+            ]
+          },
+          "monk2enchanter": {
+            "limiters": [
+              {
+                "type": "CREATURE_TYPE_LIMITER",
+                "creature": "monk",
+                "includeUpgrades": true
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 148,
+      "key": "gelu",
+      "kind": 8,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [
+        2,
+        3,
+        18,
+        19
+      ],
+      "upgrade": 136,
+      "source": {
+        "base": {
+          "addInfo": "sharpshooter",
+          "type": "SPECIAL_UPGRADE"
+        },
+        "bonuses": {
+          "archer2sharpshooter": {
+            "limiters": [
+              {
+                "type": "CREATURE_TYPE_LIMITER",
+                "creature": "archer",
+                "includeUpgrades": true
+              }
+            ]
+          },
+          "woodElf2sharpshooter": {
+            "limiters": [
+              {
+                "type": "CREATURE_TYPE_LIMITER",
+                "creature": "woodElf",
+                "includeUpgrades": true
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 149,
+      "key": "kilgor",
+      "kind": 5,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        5,
+        5,
+        10,
+        0
+      ],
+      "targets": [
+        96,
+        97
+      ],
+      "upgrade": -1,
+      "source": {
+        "base": {
+          "limiters": [
+            {
+              "type": "CREATURE_TYPE_LIMITER",
+              "creature": "behemoth",
+              "includeUpgrades": true
+            }
+          ]
+        },
+        "bonuses": {
+          "damage": {
+            "subtype": "creatureDamageBoth",
+            "type": "CREATURE_DAMAGE",
+            "val": 10
+          },
+          "attack": {
+            "subtype": "attack",
+            "type": "PRIMARY_SKILL",
+            "val": 5
+          },
+          "defence": {
+            "subtype": "defence",
+            "type": "PRIMARY_SKILL",
+            "val": 5
+          }
+        }
+      }
+    },
+    {
+      "id": 150,
+      "key": "undeadHaart",
+      "kind": 5,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        5,
+        5,
+        10,
+        0
+      ],
+      "targets": [
+        66,
+        67
+      ],
+      "upgrade": -1,
+      "source": {
+        "base": {
+          "limiters": [
+            {
+              "type": "CREATURE_TYPE_LIMITER",
+              "creature": "blackKnight",
+              "includeUpgrades": true
+            }
+          ]
+        },
+        "bonuses": {
+          "damage": {
+            "subtype": "creatureDamageBoth",
+            "type": "CREATURE_DAMAGE",
+            "val": 10
+          },
+          "attack": {
+            "subtype": "attack",
+            "type": "PRIMARY_SKILL",
+            "val": 5
+          },
+          "defence": {
+            "subtype": "defence",
+            "type": "PRIMARY_SKILL",
+            "val": 5
+          }
+        }
+      }
+    },
+    {
+      "id": 151,
+      "key": "mutare",
+      "kind": 5,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        5,
+        5,
+        0,
+        0
+      ],
+      "targets": [
+        26,
+        27,
+        68,
+        69,
+        82,
+        83,
+        137,
+        138,
+        139,
+        140
+      ],
+      "upgrade": -1,
+      "source": {
+        "base": {
+          "limiters": [
+            {
+              "type": "HAS_ANOTHER_BONUS_LIMITER",
+              "bonusType": "DRAGON_NATURE"
+            }
+          ],
+          "type": "PRIMARY_SKILL",
+          "val": 5
+        },
+        "bonuses": {
+          "attack": {
+            "subtype": "attack"
+          },
+          "defence": {
+            "subtype": "defence"
+          }
+        }
+      }
+    },
+    {
+      "id": 152,
+      "key": "roland",
+      "kind": 1,
+      "unit": 6,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "swordsman"
+      }
+    },
+    {
+      "id": 153,
+      "key": "mutareDrake",
+      "kind": 5,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        5,
+        5,
+        0,
+        0
+      ],
+      "targets": [
+        26,
+        27,
+        68,
+        69,
+        82,
+        83,
+        137,
+        138,
+        139,
+        140
+      ],
+      "upgrade": -1,
+      "source": {
+        "base": {
+          "limiters": [
+            {
+              "type": "HAS_ANOTHER_BONUS_LIMITER",
+              "bonusType": "DRAGON_NATURE"
+            }
+          ],
+          "type": "PRIMARY_SKILL",
+          "val": 5
+        },
+        "bonuses": {
+          "attack": {
+            "subtype": "attack"
+          },
+          "defence": {
+            "subtype": "defence"
+          }
+        }
+      }
+    },
+    {
+      "id": 154,
+      "key": "boragus",
+      "kind": 1,
+      "unit": 90,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "targets": [],
+      "upgrade": -1,
+      "source": {
+        "creature": "ogre"
+      }
+    },
+    {
+      "id": 155,
+      "key": "xeron",
+      "kind": 5,
+      "unit": -1,
+      "spell": -1,
+      "resource": -1,
+      "amount": 0,
+      "bonus": [
+        4,
+        2,
+        0,
+        1
+      ],
+      "targets": [
+        54,
+        55
+      ],
+      "upgrade": -1,
+      "source": {
+        "base": {
+          "limiters": [
+            {
+              "type": "CREATURE_TYPE_LIMITER",
+              "creature": "devil",
+              "includeUpgrades": true
+            }
+          ]
+        },
+        "bonuses": {
+          "attack": {
+            "subtype": "attack",
+            "type": "PRIMARY_SKILL",
+            "val": 4
+          },
+          "defence": {
+            "subtype": "defence",
+            "type": "PRIMARY_SKILL",
+            "val": 2
+          },
+          "speed": {
+            "type": "STACKS_SPEED",
+            "val": 1
+          }
+        }
+      }
+    }
+  ]
+}

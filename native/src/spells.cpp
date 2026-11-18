@@ -16,7 +16,7 @@ int Game::spellMastery(int spell)const {
  int mastery=0;
  for(int school=0;school<4;school++)
   if(Spells[spell].school&(1<<school))mastery=std::max(mastery,(spellTeam_==1&&battle?battle->defenderSkills:hero.skills)[AirMagic+school]);
- return mastery;
+ if((spell==SummonBoat||spell==ScuttleBoat)&&combatHero(spellTeam_)&&wearsArtifact(*combatHero(spellTeam_),123))mastery=3;return mastery;
 }
 
 bool Game::spellMass(int spell)const {
@@ -41,7 +41,7 @@ int Game::spellCost(int spell,int team)const {
 bool Game::spellImmune(const CombatStack&target,int spell)const {
  if(spell<0||spell>=SpellCount)return true;
  if(spell==Dispel)return false;
- if(target.team==0&&artifactSpellImmune(spell))return true;
+ if(artifactSpellImmune(spell,target.team))return true;if(combatHero(target.team)&&wearsArtifact(*combatHero(target.team),134)&&Spells[spell].level<=4)return true;
  const auto&u=Units[target.unit];
  if(target.origin==StackOrigin::WarMachine&&Spells[spell].kind!=SpellKind::Damage)return true;
  if((spell==Mirth||spell==Sorrow)&&u.nonLiving)return true;
@@ -52,19 +52,19 @@ bool Game::spellImmune(const CombatStack&target,int spell)const {
 }
 int Game::spellEffect(const CombatStack&unit,int spell)const {
  if(spell<0||spell>=SpellCount||unit.effects[spell]<=0)return 0;
- return Spells[spell].values[unit.effectMastery[spell]];
+ return Spells[spell].values[unit.effectMastery[spell]]+(spell==Bless?0:unit.effectBonuses[spell]);
 }
 int Game::spellDamage(const CombatStack&target,int spell,int raw)const {
  const auto&unit=Units[target.unit];int vulnerability=0,protection=0;
  for(auto[s,bonus]:unit.spellVulnerabilities)if(s==spell)vulnerability=bonus;
  for(int school=0;school<4;school++)if(Spells[spell].school&(1<<school))protection=std::max(protection,spellEffect(target,ProtectAir+school));
- int sorcery=spellTeam_==0?hero.skills[Sorcery]:battle?battle->defenderSkills[Sorcery]:0;raw=int(int64_t(raw)*(100+5*sorcery)/100);
+ int sorcery=spellTeam_==0?hero.skills[Sorcery]:battle?battle->defenderSkills[Sorcery]:0;if(!innateSpell_){double bonus=combatHero(spellTeam_)?secondaryEffect(*combatHero(spellTeam_),Sorcery,5*sorcery):0;raw=int(raw*(100+bonus)/100.);if(auto*h=combatHero(spellTeam_))raw=heroSpellEffect(*h,spell,target.unit,raw);}
  int64_t damage=int64_t(raw)*(100+vulnerability)*(100-unit.spellDamageReduction)*(100-protection)/1000000;
  return std::max(0,int(damage));
 }
 namespace {
  bool hasEffects(const CombatStack&unit,bool negativeOnly){for(int s=0;s<SpellCount;s++)if(unit.effects[s]>0&&(!negativeOnly||Spells[s].enemy))return true;return false;}
- void clearEffects(CombatStack&unit,bool negativeOnly){for(int s=0;s<SpellCount;s++)if(!Spells[s].persistent&&(!negativeOnly||Spells[s].enemy))unit.effects[s]=unit.effectMastery[s]=0;if(!unit.effects[Hypnotize])unit.team=unit.id/100;}
+ void clearEffects(CombatStack&unit,bool negativeOnly){for(int s=0;s<SpellCount;s++)if(!Spells[s].persistent&&(!negativeOnly||Spells[s].enemy))unit.effects[s]=unit.effectMastery[s]=unit.effectBonuses[s]=0;if(!unit.effects[Hypnotize])unit.team=unit.id/100;}
  const CombatStack* stackById(const Battle&battle,int id){auto at=std::find_if(battle.units.begin(),battle.units.end(),[id](const auto&unit){return unit.id==id;});return at==battle.units.end()?nullptr:&*at;}
 }
 std::vector<Point> Game::spellArea(int spell,Point center)const {
@@ -88,7 +88,7 @@ std::vector<int> Game::spellTargets(int spell,Point point)const {
   if(filter==SpellFilter::Ally&&unit.team!=spellTeam_)continue;
   if(filter==SpellFilter::Undead&&!Units[unit.unit].undead)continue;
   if(filter==SpellFilter::NonUndead&&Units[unit.unit].undead)continue;
-  if(spell==Hypnotize&&(unit.hp>casterPower()*25+def.values[spellMastery(spell)]||unit.effects[MagicMirror]>0))continue;
+  if(spell==Hypnotize&&(unit.hp>casterPower()*25+def.values[spellMastery(spell)]||std::max(unit.effects[MagicMirror],creatureAbility(unit.unit).mirror)>0))continue;
   if((spell==Precision||spell==Forgetfulness)&&Units[unit.unit].shots==0)continue;
   if(area){auto footprint_=footprint(unit,{unit.x,unit.y});if(std::none_of(footprint_.begin(),footprint_.end(),[&](Point p){return std::find(cells.begin(),cells.end(),p)!=cells.end();}))continue;}
   else if(!spellAutomatic(spell)&&(!selected||selected->id!=unit.id))continue;
@@ -147,7 +147,7 @@ std::string Game::spellDescription(int spell)const {
 std::string Game::cast(int spell,Point point,Point sacrifice) {
  if(!battle||!current()||current()->team!=spellTeam_)return "等待我方行动";if(battle->tacticsTeam>=0)return "请先完成战术布阵。";if(battle->noMagic)return "禁魔要塞内不能施放法术。";
  if(!(spellTeam_==1?battle->defenderSpellbook:hero.spellbook))return "英雄尚未拥有魔法书";
- if(spell<0||spell>=SpellCount||!(spellTeam_==1?battle->defenderSpells:hero.spells)[spell])return "尚未学会该法术";
+ if(spell<0||spell>=SpellCount||!(spellTeam_==1?battle->defenderSpells:heroKnownSpells(hero))[spell])return "尚未学会该法术";
  if(!Spells[spell].implemented)return "此法术效果尚未开放";
  if(Spells[spell].adventure)return "战斗中不能使用冒险法术";
  auto&combat=*battle;const auto&def=Spells[spell];
@@ -155,7 +155,7 @@ std::string Game::cast(int spell,Point point,Point sacrifice) {
  int cost=spellCost(spell);if(casterMana()<cost)return "魔法值不足";
  if(def.kind==SpellKind::Resurrection||def.kind==SpellKind::Sacrifice||def.kind==SpellKind::Clone||def.kind==SpellKind::Summon)return castReinforcement(spell,point,sacrifice);
  if(def.kind==SpellKind::Special&&spell!=Earthquake)return castBattleSpecial(spell,point,sacrifice);
- if(spell==Earthquake){if(!combat.siege.fort)return "只能在攻城战中施放。";bool intact=std::any_of(combat.siege.hp.begin(),combat.siege.hp.end(),[](int hp){return hp>0;});if(!intact)return "城防已经全部摧毁。";int active=current()->id;casterMana()-=cost;casterRound()=combat.round;for(int i=0;i<def.values[spellMastery(spell)];++i){std::vector<int>parts;for(int j=0;j<8;++j)if(combat.siege.hp[j]>0)parts.push_back(j);if(parts.empty())break;--combat.siege.hp[parts[size_t(random()*parts.size())]];}combat.log.push_back("地动山摇破坏了城防。");emit({GameEventType::SpellCast,-1,spell,point});finishCast(active,spell);return {};}
+ if(spell==Earthquake){if(!combat.siege.fort)return "只能在攻城战中施放。";bool intact=std::any_of(combat.siege.hp.begin(),combat.siege.hp.end(),[](int hp){return hp>0;});if(!intact)return "城防已经全部摧毁。";int active=current()->id;casterMana()-=cost;int channel=0;for(const auto&u:combat.units)if(u.hp>0&&u.team!=spellTeam_)channel=std::max(channel,creatureAbility(u.unit).channel);if(channel&&combatHero(1-spellTeam_)){int&receiving=spellTeam_?hero.mana:combat.defenderMana;receiving=std::min(1000000,receiving+cost*channel/100);}casterRound()=combat.round;for(int i=0;i<def.values[spellMastery(spell)];++i){std::vector<int>parts;for(int j=0;j<8;++j)if(combat.siege.hp[j]>0)parts.push_back(j);if(parts.empty())break;--combat.siege.hp[parts[size_t(random()*parts.size())]];}combat.log.push_back("地动山摇破坏了城防。");emit({GameEventType::SpellCast,-1,spell,point});finishCast(active,spell);return {};}
 
  if(!spellAutomatic(spell)&&(def.target==SpellTarget::Single||def.target==SpellTarget::Chain)){
   auto*target=combatAt(point);if(!target)return "请选择一支部队";
@@ -163,20 +163,20 @@ std::string Game::cast(int spell,Point point,Point sacrifice) {
  }
  auto targets=spellTargets(spell,point);if(targets.empty())return "没有可受此法术影响的部队";
  int active=current()->id,mastery=spellMastery(spell),raw=casterPower()*def.power+def.values[mastery];
- casterMana()-=cost;casterRound()=combat.round;emit({GameEventType::SpellCast,-1,spell,point});combat.log.push_back((spellTeam_==1?std::string("对方英雄"):hero.name)+"施放"+def.name+(spellMass(spell)?"（群体）。":"。"));
+ casterMana()-=cost;int channel=0;for(const auto&u:combat.units)if(u.hp>0&&u.team!=spellTeam_)channel=std::max(channel,creatureAbility(u.unit).channel);if(channel&&combatHero(1-spellTeam_)){int&receiving=spellTeam_?hero.mana:combat.defenderMana;receiving=std::min(1000000,receiving+cost*channel/100);}casterRound()=combat.round;emit({GameEventType::SpellCast,-1,spell,point});combat.log.push_back((spellTeam_==1?std::string("对方英雄"):hero.name)+"施放"+def.name+(spellMass(spell)?"（群体）。":"。"));
  std::vector<int>reflected;
  auto apply=[&](int id,int baseDamage){
   auto&target=*std::find_if(combat.units.begin(),combat.units.end(),[id](const auto&unit){return unit.id==id;});const auto&unit=Units[target.unit];
   if(target.hp<=0&&spell!=Dispel)return true;
-  if(def.enemy&&def.target==SpellTarget::Single&&!spellMass(spell)&&spellEffect(target,MagicMirror)>0&&random()*100<spellEffect(target,MagicMirror)){std::vector<int>candidates;for(const auto&u:combat.units)if(u.hp>0&&u.team==spellTeam_&&!spellImmune(u,spell))candidates.push_back(u.id);if(!candidates.empty()){reflected.push_back(candidates[size_t(random()*candidates.size())]);combat.log.push_back("魔法神镜反射了"+def.name+"。");return false;}}
+  if(def.enemy&&def.target==SpellTarget::Single&&!spellMass(spell)&&std::max(creatureAbility(target.unit).mirror,spellEffect(target,MagicMirror))>0&&random()*100<std::max(creatureAbility(target.unit).mirror,spellEffect(target,MagicMirror))){std::vector<int>candidates;for(const auto&u:combat.units)if(u.hp>0&&u.team==spellTeam_&&!spellImmune(u,spell))candidates.push_back(u.id);if(!candidates.empty()){reflected.push_back(candidates[size_t(random()*candidates.size())]);combat.log.push_back("魔法神镜反射了"+def.name+"。");return false;}}
 
-  int resistance=std::max(unit.magicResistance,std::array<int,4>{0,5,10,20}[target.team==0?hero.skills[Resistance]:combat.defenderSkills[Resistance]]);
+  int resistance=magicResistance(target);
   if(def.enemy&&resistance>0&&random()*100<resistance){combat.log.push_back(unit.name+"抵抗了法术。");return false;}
-  if(def.kind==SpellKind::Damage)hurt(target,spellDamage(target,spell,baseDamage));
-  else if(spell==Cure){int healing=std::min(target.count*unit.hp-target.hp,raw);target.hp+=healing;clearEffects(target,true);combat.log.push_back(unit.name+"恢复 "+std::to_string(healing)+" 点生命并解除负面效果。");}
-  else if(spell==Dispel)clearEffects(target,false);
+  if(def.kind==SpellKind::Damage){hurt(target,spellDamage(target,spell,baseDamage));emit({GameEventType::CombatSpellEffect,target.unit,spell,{target.x,target.y},target.id,-1,{},target});}
+  else if(spell==Cure){clearEffects(target,true);clearCreatureEffects(target);int healing=std::min(target.count*stackHealth(target)-target.hp,raw);target.hp+=healing;combat.log.push_back(unit.name+"恢复 "+std::to_string(healing)+" 点生命并解除负面效果。");}
+  else if(spell==Dispel){clearEffects(target,false);clearCreatureEffects(target);}
   else if(spell==DisruptingRay)target.defenseReduction+=std::min(def.values[mastery],std::max(0,defense(target)));
-  else {if(spell==AntiMagic)clearEffects(target,true);target.effects[spell]=std::max(1,casterPower());target.effectMastery[spell]=mastery;if(spell==Hypnotize){target.team=spellTeam_;target.effects[Berserk]=target.effectMastery[Berserk]=0;}if(spell==Berserk)clearHypnosis(target);int counter=spell==Haste?Slow:spell==Slow?Haste:spell==Bless?Curse:spell==Curse?Bless:spell==Bloodlust?Weakness:spell==Weakness?Bloodlust:spell==Mirth?Sorrow:spell==Sorrow?Mirth:spell==Fortune?Misfortune:spell==Misfortune?Fortune:-1;if(counter>=0)target.effects[counter]=target.effectMastery[counter]=0;}
+  else {if(spell==AntiMagic)clearEffects(target,true);target.effects[spell]=std::max(1,casterPower()+(combatHero(spellTeam_)?artifactDuration(*combatHero(spellTeam_)):0));target.effectMastery[spell]=mastery;target.effectBonuses[spell]=combatHero(spellTeam_)?heroSpellEffect(*combatHero(spellTeam_),spell,target.unit,def.values[mastery])-def.values[mastery]:0;if(spell==Bless&&combatHero(spellTeam_)&&combatHero(spellTeam_)->originalId==9)target.effectBonuses[Bless]=300*combatHero(spellTeam_)->level/std::max(1,Units[target.unit].level);if(spell==Hypnotize){target.team=spellTeam_;target.effects[Berserk]=target.effectMastery[Berserk]=0;}if(spell==Berserk)clearHypnosis(target);int counter=spell==Haste?Slow:spell==Slow?Haste:spell==Bless?Curse:spell==Curse?Bless:spell==Bloodlust?Weakness:spell==Weakness?Bloodlust:spell==Mirth?Sorrow:spell==Sorrow?Mirth:spell==Fortune?Misfortune:spell==Misfortune?Fortune:-1;if(counter>=0)target.effects[counter]=target.effectMastery[counter]=target.effectBonuses[counter]=0;}
   if(def.kind==SpellKind::Timed)emit({GameEventType::CombatSpellEffect,target.unit,spell,{target.x,target.y},target.id,-1,{},target});
   return true;
  };
@@ -191,7 +191,7 @@ std::string Game::cast(int spell,Point point,Point sacrifice) {
    if(nearest.empty())break;id=nearest[nearest.size()==1?0:size_t(random()*nearest.size())];
   }
  }else for(int id:targets)apply(id,raw);
- for(int id:reflected){auto&target=*std::find_if(combat.units.begin(),combat.units.end(),[id](auto&u){return u.id==id;});if(def.kind==SpellKind::Damage)hurt(target,spellDamage(target,spell,raw));else if(spell==DisruptingRay)target.defenseReduction+=def.values[mastery];else{target.effects[spell]=std::max(1,casterPower());target.effectMastery[spell]=mastery;}}
+ for(int id:reflected){auto&target=*std::find_if(combat.units.begin(),combat.units.end(),[id](auto&u){return u.id==id;});if(def.kind==SpellKind::Damage)hurt(target,spellDamage(target,spell,raw));else if(spell==DisruptingRay)target.defenseReduction+=def.values[mastery];else{target.effects[spell]=std::max(1,casterPower()+(combatHero(spellTeam_)?artifactDuration(*combatHero(spellTeam_)):0));target.effectMastery[spell]=mastery;target.effectBonuses[spell]=combatHero(spellTeam_)?heroSpellEffect(*combatHero(spellTeam_),spell,target.unit,def.values[mastery])-def.values[mastery]:0;if(spell==Bless&&combatHero(spellTeam_)&&combatHero(spellTeam_)->originalId==9)target.effectBonuses[Bless]=300*combatHero(spellTeam_)->level/std::max(1,Units[target.unit].level);}}
  refreshQueue();finishCast(active,spell);
  return {};
 }

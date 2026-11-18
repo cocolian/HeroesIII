@@ -13,7 +13,7 @@ std::vector<int> Game::portalTowns()const{
 }
 std::string Game::castAdventure(int spell,Point point,int townId){
  if(battle||report||neutralOffer||result||!hero.levelChoices.empty())return "请先完成当前事件。";
- if(spell<0||spell>=SpellCount||!Spells[spell].adventure||!hero.spellbook||!hero.spells[spell]||bannedSpells[spell])return "尚未学会此冒险法术。";
+ if(spell<0||spell>=SpellCount||!Spells[spell].adventure||!hero.spellbook||!heroKnowsSpell(hero,spell)||bannedSpells[spell])return "尚未学会此冒险法术。";
  int cost=spellCost(spell),mastery=spellMastery(spell);if(hero.mana<cost)return "魔法值不足。";
  auto occupied=[&](Point p,int level){return std::any_of(heroes.begin(),heroes.end(),[&](auto&entry){return entry.first!=activeHeroId&&entry.second.level==level&&entry.second.value.pos==p;});};
  auto validLanding=[&](Point p){auto*t=tile(p);if(!t||t->blocked||t->decor!=Decor::None||t->terrain==Terrain::Rock||(t->terrain==Terrain::Water)!=hero.onBoat||occupied(p,mapLevel))return false;auto*o=objectAt(p);return !o||o->type==ObjectType::MapEvent;};

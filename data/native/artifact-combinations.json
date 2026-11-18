@@ -1,0 +1,330 @@
+{
+  "scope": "Twelve original Shadow of Death combinations, including occupied component slots",
+  "recipes": [
+    {
+      "id": 129,
+      "components": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "bonuses": {
+        "alignmentMixGood": {
+          "type": "ALIGNMENT_MIX",
+          "subtype": "alignmentGood",
+          "propagator": "PLAYER",
+          "val": 0,
+          "valueType": "BASE_NUMBER"
+        },
+        "alignmentMixNeutral": {
+          "type": "ALIGNMENT_MIX",
+          "subtype": "alignmentNeutral",
+          "propagator": "PLAYER",
+          "val": 0,
+          "valueType": "BASE_NUMBER"
+        },
+        "prayer": {
+          "subtype": "prayer",
+          "type": "OPENING_BATTLE_SPELL",
+          "val": 10,
+          "valueType": "BASE_NUMBER"
+        }
+      }
+    },
+    {
+      "id": 130,
+      "components": [
+        54,
+        55,
+        56
+      ],
+      "bonuses": {
+        "skeleton": {
+          "type": "IMPROVED_NECROMANCY",
+          "subtype": "skeleton",
+          "addInfo": 0
+        },
+        "walkingDead": {
+          "type": "IMPROVED_NECROMANCY",
+          "subtype": "walkingDead",
+          "addInfo": 1
+        },
+        "wight": {
+          "type": "IMPROVED_NECROMANCY",
+          "subtype": "wight",
+          "addInfo": 2
+        },
+        "lich": {
+          "type": "IMPROVED_NECROMANCY",
+          "subtype": "lich",
+          "addInfo": 3
+        }
+      }
+    },
+    {
+      "id": 131,
+      "components": [
+        94,
+        95,
+        96
+      ],
+      "bonuses": {
+        "health": {
+          "type": "STACK_HEALTH",
+          "val": 25,
+          "valueType": "PERCENT_TO_BASE",
+          "limiters": [
+            {
+              "type": "HAS_ANOTHER_BONUS_LIMITER",
+              "bonusType": "LIVING"
+            }
+          ]
+        },
+        "regeneration": {
+          "type": "HP_REGENERATION",
+          "val": 50,
+          "valueType": "BASE_NUMBER",
+          "limiters": [
+            {
+              "type": "HAS_ANOTHER_BONUS_LIMITER",
+              "bonusType": "LIVING"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 132,
+      "components": [
+        8,
+        14,
+        20,
+        26
+      ],
+      "bonuses": {
+        "slow": {
+          "subtype": "slow",
+          "type": "OPENING_BATTLE_SPELL",
+          "val": 50,
+          "valueType": "BASE_NUMBER"
+        },
+        "curse": {
+          "subtype": "curse",
+          "type": "OPENING_BATTLE_SPELL",
+          "val": 50,
+          "valueType": "BASE_NUMBER"
+        },
+        "weakness": {
+          "subtype": "weakness",
+          "type": "OPENING_BATTLE_SPELL",
+          "val": 50,
+          "valueType": "BASE_NUMBER"
+        },
+        "misfortune": {
+          "subtype": "misfortune",
+          "type": "OPENING_BATTLE_SPELL",
+          "val": 50,
+          "valueType": "BASE_NUMBER"
+        }
+      }
+    },
+    {
+      "id": 133,
+      "components": [
+        118,
+        119,
+        120,
+        121,
+        122
+      ],
+      "bonuses": {
+        "growth": {
+          "type": "CREATURE_GROWTH_PERCENT",
+          "val": 50,
+          "propagator": "PLAYER"
+        }
+      }
+    },
+    {
+      "id": 134,
+      "components": [
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "bonuses": {
+        "immunity": {
+          "type": "LEVEL_SPELL_IMMUNITY",
+          "val": 4,
+          "valueType": "AT_LEAST"
+        },
+        "attack": {
+          "subtype": "attack",
+          "type": "PRIMARY_SKILL",
+          "val": 6,
+          "valueType": "BASE_NUMBER"
+        },
+        "defence": {
+          "subtype": "defence",
+          "type": "PRIMARY_SKILL",
+          "val": 6,
+          "valueType": "BASE_NUMBER"
+        },
+        "spellpower": {
+          "subtype": "spellpower",
+          "type": "PRIMARY_SKILL",
+          "val": 6,
+          "valueType": "BASE_NUMBER"
+        },
+        "knowledge": {
+          "subtype": "knowledge",
+          "type": "PRIMARY_SKILL",
+          "val": 6,
+          "valueType": "BASE_NUMBER"
+        }
+      }
+    },
+    {
+      "id": 135,
+      "components": [
+        12,
+        18,
+        24,
+        30
+      ],
+      "bonuses": {
+        "titanBolt": {
+          "subtype": "titanBolt",
+          "type": "SPELL",
+          "val": 3,
+          "valueType": "BASE_NUMBER"
+        },
+        "grantsSpellBook": {
+          "type": "GRANTS_SPELLBOOK"
+        }
+      }
+    },
+    {
+      "id": 136,
+      "components": [
+        71,
+        123
+      ],
+      "bonuses": {
+        "boarding": {
+          "type": "FREE_SHIP_BOARDING",
+          "val": 0,
+          "valueType": "BASE_NUMBER"
+        }
+      }
+    },
+    {
+      "id": 137,
+      "components": [
+        60,
+        61,
+        62
+      ],
+      "bonuses": {
+        "noDistancePenalty": {
+          "limiters": [
+            "SHOOTER_ONLY"
+          ],
+          "type": "NO_DISTANCE_PENALTY",
+          "val": 0,
+          "valueType": "ADDITIVE_VALUE"
+        },
+        "noWallPenalty": {
+          "limiters": [
+            "SHOOTER_ONLY"
+          ],
+          "type": "NO_WALL_PENALTY",
+          "val": 0,
+          "valueType": "ADDITIVE_VALUE"
+        },
+        "freeShooting": {
+          "limiters": [
+            "SHOOTER_ONLY"
+          ],
+          "type": "FREE_SHOOTING",
+          "val": 0,
+          "valueType": "ADDITIVE_VALUE"
+        }
+      }
+    },
+    {
+      "id": 138,
+      "components": [
+        73,
+        74,
+        75
+      ],
+      "bonuses": {
+        "mana": {
+          "type": "MANA_PERCENTAGE_REGENERATION",
+          "val": 100,
+          "valueType": "BASE_NUMBER"
+        }
+      }
+    },
+    {
+      "id": 139,
+      "components": [
+        76,
+        77,
+        78
+      ],
+      "bonuses": {
+        "duration": {
+          "type": "SPELL_DURATION",
+          "val": 50,
+          "valueType": "BASE_NUMBER"
+        }
+      }
+    },
+    {
+      "id": 140,
+      "components": [
+        109,
+        110,
+        111,
+        113
+      ],
+      "bonuses": {
+        "crystal": {
+          "subtype": "crystal",
+          "type": "GENERATE_RESOURCE",
+          "val": 4,
+          "valueType": "BASE_NUMBER"
+        },
+        "gems": {
+          "subtype": "gems",
+          "type": "GENERATE_RESOURCE",
+          "val": 4,
+          "valueType": "BASE_NUMBER"
+        },
+        "mercury": {
+          "subtype": "mercury",
+          "type": "GENERATE_RESOURCE",
+          "val": 4,
+          "valueType": "BASE_NUMBER"
+        },
+        "sulfur": {
+          "subtype": "sulfur",
+          "type": "GENERATE_RESOURCE",
+          "val": 4,
+          "valueType": "BASE_NUMBER"
+        }
+      }
+    }
+  ]
+}

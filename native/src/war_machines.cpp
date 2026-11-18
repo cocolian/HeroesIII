@@ -16,8 +16,8 @@ void Game::setupWarMachines(){if(!battle)return;auto*target=objectById(battle->t
 }
 bool Game::prepareWarMachine(){auto*u=current();if(!battle||!u||u->origin!=StackOrigin::WarMachine)return false;
  if(u->unit==FirstAidTentUnit){int skill=u->team==0?hero.skills[FirstAid]:battle->defenderSkills[FirstAid];CombatStack*best=nullptr;int missing=0;
-  for(auto&ally:battle->units)if(ally.team==u->team&&ally.origin==StackOrigin::Army&&ally.hp>0){int n=ally.count*Units[ally.unit].hp-ally.hp;if(n>missing){missing=n;best=&ally;}}
-  if(best&&missing>0){int healing=std::min(missing,1+int(random()*25*(skill+1)));best->hp+=healing;battle->log.push_back("急救帐篷恢复了 "+std::to_string(healing)+" 点生命。");emit({GameEventType::CombatSpellEffect,best->unit,Cure,{best->x,best->y},best->id,u->id,{},*best});}
+  for(auto&ally:battle->units)if(ally.team==u->team&&ally.origin==StackOrigin::Army&&ally.hp>0){int n=ally.count*stackHealth(ally)-ally.hp;if(n>missing){missing=n;best=&ally;}}
+  if(best&&missing>0){int healing=std::min(missing,1+int(random()*(combatHero(u->team)?secondaryEffect(*combatHero(u->team),FirstAid,25*(skill+1)):25*(skill+1))));best->hp+=healing;battle->log.push_back("急救帐篷恢复了 "+std::to_string(healing)+" 点生命。");emit({GameEventType::CombatSpellEffect,best->unit,Cure,{best->x,best->y},best->id,u->id,{},*best});}
   u->acted=true;nextAction(false);return true;
  }
  if(u->unit==AmmoCartUnit){nextAction(false);return true;}

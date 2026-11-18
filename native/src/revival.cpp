@@ -31,7 +31,7 @@ bool Game::revivalEligible(const CombatStack&u,int spell)const {
    for(const auto&other:battle->units)if(other.corpse&&other.deathOrder>u.deathOrder){auto cells=footprint(other,{other.x,other.y});if(std::find(cells.begin(),cells.end(),cell)!=cells.end())return false;}
   }
  }
- if(spell!=Sacrifice&&casterPower()*Spells[spell].power+Spells[spell].values[spellMastery(spell)]<Units[u.unit].hp)return false;
+ if(spell!=Sacrifice&&casterPower()*Spells[spell].power+Spells[spell].values[spellMastery(spell)]<stackHealth(u))return false;
  return true;
 }
 
@@ -56,20 +56,20 @@ std::optional<Point> Game::reinforcementPosition(const CombatStack&unit,const Co
 void Game::removeStack(CombatStack&u,bool leaveCorpse){
  u.hp=u.count=u.permanentCount=0;u.corpse=leaveCorpse&&u.origin!=StackOrigin::Clone;
  u.deathOrder=u.corpse?++battle->deathSequence:0;u.cloneTurns=0;u.defending=false;u.defendingBonus=0;
- u.effects={};u.effectMastery={};
+ u.effects={};u.effectMastery={};u.effectBonuses={};
  for(auto&copy:battle->units)if(copy.hp>0&&copy.origin==StackOrigin::Clone&&copy.cloneOf==u.id){
   battle->log.push_back(Units[copy.unit].name+"的镜像随本体消失。");removeStack(copy,false);
  }
 }
 
 void Game::revive(CombatStack&target,int amount,bool permanent,bool cleanse){
- bool dead=target.hp==0;int before=target.count;
- target.hp=int(std::min<int64_t>(int64_t(target.initialCount)*Units[target.unit].hp,int64_t(target.hp)+amount));
- target.count=(target.hp+Units[target.unit].hp-1)/Units[target.unit].hp;
+ bool dead=target.hp==0;int before=target.count;if(cleanse){clearCreatureEffects(target);for(int s=0;s<SpellCount;++s)if(Spells[s].enemy&&!Spells[s].persistent)target.effects[s]=target.effectMastery[s]=target.effectBonuses[s]=0;}
+ target.hp=int(std::min<int64_t>(int64_t(target.initialCount)*stackHealth(target),int64_t(target.hp)+amount));
+ target.count=(target.hp+stackHealth(target)-1)/stackHealth(target);
  if(permanent)target.permanentCount=std::min(target.initialCount,target.permanentCount+target.count-before);
  if(target.hp>0){target.corpse=false;target.deathOrder=0;}
- if(cleanse)for(int s=0;s<SpellCount;s++)if(Spells[s].enemy&&!Spells[s].persistent)target.effects[s]=target.effectMastery[s]=0;
- if(dead&&!target.acted){auto&queue=target.waited&&!battle->waitPhase?battle->waiting:battle->queue;queue.push_back(target.id);}
+
+ if(dead&&!target.acted){auto&queue=target.waited&&!battle->waitPhase?battle->waiting:battle->queue;if(std::find(queue.begin(),queue.end(),target.id)==queue.end())queue.push_back(target.id);}
  battle->log.push_back(Units[target.unit].name+"复生 "+std::to_string(target.count-before)+" 个单位"+(permanent?"（永久）。":"（本场战斗）。"));
 }
 
@@ -97,7 +97,7 @@ std::string Game::castReinforcement(int spell,Point point,Point sacrifice){
    position=reinforcementPosition(created);
   }else{
    if(selected<0)return "请选择可以复制的友军";
-   const auto&source=*byId(b,selected);created.origin=StackOrigin::Clone;created.unit=source.unit;
+   const auto&source=*byId(b,selected);created.casts=creatureAbility(created.unit).casts;created.abilityRound=-1;created.creatureSpell=-1;created.origin=StackOrigin::Clone;created.unit=source.unit;
    created.count=created.initialCount=source.count;created.cloneOf=source.id;created.cloneTurns=std::max(1,casterPower());
    position=reinforcementPosition(created,&source);
   }
@@ -116,10 +116,11 @@ std::string Game::castReinforcement(int spell,Point point,Point sacrifice){
   if(def.kind==SpellKind::Summon)b.summonedType[spellTeam_]=created.unit;
   int id=created.id;b.units.push_back(std::move(created));b.queue.push_back(id);
  }else if(spell==Sacrifice){
-  auto&source=*byId(b,victim);int amount=int(std::min<int64_t>(std::numeric_limits<int>::max(),int64_t(casterPower()+Units[source.unit].hp+def.values[mastery])*source.count));
-  b.log.push_back(Units[source.unit].name+"被牺牲，不留下尸体。");removeStack(source,false);
+  auto&source=*byId(b,victim);int amount=int(std::min<int64_t>(std::numeric_limits<int>::max(),int64_t(casterPower()+stackHealth(source)+def.values[mastery])*source.count));
+  b.log.push_back(Units[source.unit].name+"被牺牲，不留下尸体。");removeStack(source,false);emit({GameEventType::CombatDeath,source.unit,int(source.origin),{source.x,source.y},source.id,-1,{},source});
   revive(*byId(b,selected),amount,true,true);
- }else revive(*byId(b,selected),casterPower()*def.power+def.values[mastery],spell==AnimateDead||mastery>=2,spell==Resurrection);
+ }else {int quantity=casterPower()*def.power+def.values[mastery];if(auto*h=combatHero(spellTeam_))quantity=heroSpellEffect(*h,spell,byId(b,selected)->unit,quantity);revive(*byId(b,selected),quantity,spell==AnimateDead||mastery>=2,spell==Resurrection);}
+ int affected=def.kind==SpellKind::Summon||def.kind==SpellKind::Clone?b.units.back().id:selected;if(auto*changed=byId(b,affected))emit({GameEventType::CombatSpellEffect,changed->unit,spell,{changed->x,changed->y},changed->id,-1,{},*changed});
  finishCast(active,spell);return {};
 }
 }

@@ -6,11 +6,15 @@ namespace {
 const std::array<BattleEffectDef,4> Effects{{
 #include "../generated/battle_effects.inc"
 }};
+const std::array<BattleEffectDef,14> CreatureEffects{{
+#include "../generated/creature_effects.inc"
+}};
 const std::array<BattleEffectDef,SpellCount> SpellEffects{{
 #include "../generated/spell_effects.inc"
 }};
 }
 const BattleEffectDef* battleEffect(GameEventType type,int detail){
+ if(type==GameEventType::CombatCreatureEffect&&detail>=70&&detail<84&&CreatureEffects[detail-70].animation)return &CreatureEffects[detail-70];
  int index=-1;
  if(type==GameEventType::CombatMorale&&detail!=0)index=detail>0?0:1;
  if(type==GameEventType::CombatLuck&&detail>0)index=2;

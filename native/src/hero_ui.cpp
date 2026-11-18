@@ -7,7 +7,7 @@ void Desktop::hero(){
  adventure();buttons_.clear();
  if(!originalImage("heroscr4.pcx",{64,7,672,586}))art("references/hero-original.png",{0,0,800,600},{},false);
  const auto&h=game.hero;
- heroPortrait(game.hero,{82,27,58,64});
+ heroPortrait(game.hero,{82,27,58,64});button({82,27,58,64},"",[]{},true,true,heroSpecialtyDescription(game.hero));
  centerText(h.name,{145,28,218,38},22,GoldColor);centerText(std::to_string(h.level)+" 级 英雄",{145,65,218,25},12);
  const char*labels[]={"攻击","防御","力量","知识"};const int values[]={game.primarySkill(0),game.primarySkill(1),game.primarySkill(2),game.primarySkill(3)};
  constexpr int primaryFrames[]={0,1,2,5};
@@ -32,7 +32,7 @@ void Desktop::hero(){
   {"right_ring",{330,185}},{"left_ring",{499,232}},
   {"misc1",{315,60}},{"misc2",{365,60}},{"misc3",{544,67}},{"misc4",{544,114}},{"misc5",{544,286}}
  };
- for(const auto&[name,p]:equipment){SDL_Rect rect{64+p.x,7+p.y,44,44};auto at=h.equipmentSlots.find(name);int id=at==h.equipmentSlots.end()?-1:at->second;if(id>=0)frame("artifact.def",0,id,rect);button(rect,"",[this,slot=std::string(name)]{say(heroArtifact_>=0?game.equipArtifact(heroArtifact_,slot):game.unequipArtifact(slot));heroArtifact_=-1;persist();},true,true,id>=0?artifactName(id)+"：点击卸下；选中背包宝物后点击此处替换":"空装备栏：先选背包中的宝物，再点击合适栏位装备");}
+ for(const auto&[name,p]:equipment){SDL_Rect rect{64+p.x,7+p.y,44,44};auto at=h.equipmentSlots.find(name);int id=at==h.equipmentSlots.end()?-1:at->second;int lock=h.comboLocks.contains(name)?h.comboLocks.at(name):-1;if(lock>=0){frame("artifact.def",0,145,rect);}else if(id>=0)frame("artifact.def",0,id,rect);button(rect,"",[this,slot=std::string(name)]{say(heroArtifact_>=0?game.equipArtifact(heroArtifact_,slot):game.unequipArtifact(slot));heroArtifact_=-1;persist();},lock<0,true,lock>=0?artifactName(lock)+"占用此栏位；右键点击可拆卸":id>=0?artifactName(id)+"：点击卸下；右键组合或拆卸；选中背包宝物后点击此处替换":"空装备栏：先选背包中的宝物，再点击合适栏位装备");}
  auto backpack=h.artifactIds;for(int worn:h.wornArtifacts){auto at=std::find(backpack.begin(),backpack.end(),worn);if(at!=backpack.end())backpack.erase(at);}std::erase_if(backpack,[](int id){return id<7&&id!=2;});int pages=std::max(1,(int(backpack.size())+4)/5);heroArtifactPage_=std::clamp(heroArtifactPage_,0,pages-1);
  for(int i=0;i<5;++i){int index=heroArtifactPage_*5+i;if(index>=int(backpack.size()))break;int id=backpack[index];SDL_Rect rect{400+i*46,363,44,44};frame("artifact.def",0,id,rect);if(heroArtifact_==id)outline(rect,GoldColor);button(rect,"",[this,id]{if(id==2)say("携带圣杯进入己方城镇，即可建造圣杯建筑。");else heroArtifact_=id;},true,true,artifactName(id)+(id==2?"：携带进入己方城镇后建造圣杯建筑":"：选择后点击装备栏"));}
  if(pages>1){button({379,367,18,32},"◀",[this]{--heroArtifactPage_;},heroArtifactPage_>0);button({634,367,18,32},"▶",[this]{++heroArtifactPage_;},heroArtifactPage_+1<pages);}

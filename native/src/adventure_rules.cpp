@@ -23,7 +23,7 @@ int Game::moveCost(Point from,Point to)const{
  // to lie on that road; merely stepping onto a road is ordinary terrain.
  int penalty=t->terrain==Terrain::Sand||t->terrain==Terrain::Snow?50:t->terrain==Terrain::Swamp?75:t->terrain==Terrain::Rough?25:0;
  const Terrain native[]={Terrain::Grass,Terrain::Grass,Terrain::Snow,Terrain::Lava,Terrain::Dirt,Terrain::Subterranean,Terrain::Rough,Terrain::Swamp,Terrain::Grass};bool nativeArmy=armyCount(hero.army)>0;for(const auto&s:hero.army)if(!s.empty())nativeArmy&=Units[s.unit].faction>=0&&native[Units[s.unit].faction]==t->terrain;
- if(nativeArmy)penalty=0;penalty=std::max(0,penalty-std::array<int,4>{0,25,50,100}[hero.skills[Pathfinding]]);int cost=f->road&&t->road?75:100+penalty;
+ if(nativeArmy||(t->terrain==Terrain::Sand&&std::any_of(hero.army.begin(),hero.army.end(),[](auto&s){return !s.empty()&&(creatureAbility(s.unit).flags&512);})))penalty=0;penalty=std::max(0,penalty-std::array<int,4>{0,25,50,100}[hero.skills[Pathfinding]]);int cost=f->road&&t->road?75:100+penalty;
  return from.x!=to.x&&from.y!=to.y?int(std::floor(cost*std::sqrt(2.))):cost;
 }
 const Object* Game::guardingMonster(Point p,bool visibleOnly)const{
@@ -114,11 +114,11 @@ std::string Game::move(Point p){
  if(object&&object->type==ObjectType::Gate){if(const auto*guard=guardingMonster(p)){return encounterMonster(guard->id);}return applyVisit(object->id);}
  if(object&&object->type==ObjectType::EnemyHero&&object->owner==currentOwner())return meetHero(object->id);
  if(object&&locationBlocksPassage(*object)){if(const auto*guard=guardingMonster(p))return encounterMonster(guard->id,object->id);if(armyCount(object->army)>0){startBattle(object->id);return "守卫迎战！";}return visit(object->id);}
- auto previous=hero.pos;bool waterBefore=tile(previous)->terrain==Terrain::Water,waterAfter=tile(p)->terrain==Terrain::Water;
+ int oldAllowance=movementAllowance();auto previous=hero.pos;bool waterBefore=tile(previous)->terrain==Terrain::Water,waterAfter=tile(p)->terrain==Terrain::Water;
  if(imported()&&waterBefore!=waterAfter){
   if(waterAfter){hero.lastEmbark=previous;hero.onBoat=true;if(object&&object->type==ObjectType::Boat){int id=object->id;std::erase_if(objects,[id](const auto&o){return o.id==id;});object=nullptr;}}
   else{hero.onBoat=false;Object boat;for(const auto&o:objects)boat.id=std::max(boat.id,o.id);++boat.id;boat.type=ObjectType::Boat;boat.pos=boat.anchor=previous;boat.level=mapLevel;boat.sourceClass=8;boat.sprite="avxboat1.def";boat.name="船只";int id=object?object->id:0;objects.push_back(boat);object=id?objectById(id):nullptr;}
-  hero.movement=0;
+  if(wearsArtifact(hero,136)){hero.maxMovement=movementAllowance();hero.movement=int(int64_t(hero.movement)*hero.maxMovement/std::max(1,oldAllowance));}else hero.movement=0;
  }
  hero.pos=p;emit({GameEventType::HeroMove,-1,int(tile(p)->terrain),p});reveal();
  if(const auto*guard=guardingMonster(p)){

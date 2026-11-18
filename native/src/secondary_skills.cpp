@@ -21,15 +21,15 @@ std::string Game::meetHero(int other){
 }
 int Game::necromancyRate(const Hero&who,int owner)const{return necromancyBasisPoints(who,owner)/100;}
 int Game::necromancyBasisPoints(const Hero&who,int owner)const{
- bool cloak=std::find(who.wornArtifacts.begin(),who.wornArtifacts.end(),130)!=who.wornArtifacts.end();int rate=1000*who.skills[Necromancy]+(cloak?3000:0);if(secondarySpecialty(who.originalId)==Necromancy)rate+=50*who.skills[Necromancy]*who.level;if(!rate)return 0;
- for(int item:who.wornArtifacts){if(item==54)rate+=500;else if(item==55)rate+=1000;else if(item==56)rate+=1500;}
+ bool cloak=std::find(who.wornArtifacts.begin(),who.wornArtifacts.end(),130)!=who.wornArtifacts.end();int rate=1000*who.skills[Necromancy];if(secondarySpecialty(who.originalId)==Necromancy)rate+=50*who.skills[Necromancy]*who.level;if(!rate&&!cloak)return 0;
+ for(int item:equippedArtifacts(who)){if(item==54)rate+=500;else if(item==55)rate+=1000;else if(item==56)rate+=1500;}
  for(const auto&o:objects)if(o.type==ObjectType::Town&&o.owner==owner&&settlements.contains(o.id)){const auto&t=o.id==activeTownId?town:settlements.at(o.id);if(t.faction==4){if(t.built[Special2])rate+=1000;if(t.built[GrailBuilding])rate+=2000;}}
  return std::min(10000,rate);
 }
 void Game::resolveBattleSkills(BattleReport&report,const Battle&combat){
  int winner=report.won?0:1;Hero*who=winner==0?&hero:heroes.contains(combat.targetId)?&heroes.at(combat.targetId).value:nullptr;if(!who)return;
  int mastery=who->skills[EagleEye];if(mastery&&who->spellbook)for(int spell=0;spell<SpellCount;++spell){const auto&s=Spells[spell];if(!combat.spellHistory[1-winner][spell]||who->spells[spell]||s.special||s.adventure||bannedSpells[spell]||s.level>mastery+1||s.level>learnLevel(*who))continue;
-  int chance=(30+10*mastery)*(100+(secondarySpecialty(who->originalId)==EagleEye?5*who->level:0));for(int item:who->wornArtifacts)if(item>=63&&item<=65)chance+=500*(item-62);if(random()*10000<std::min(10000,chance)){who->spells[spell]=true;if(winner==0)report.learnedSpells.push_back(spell);message(who->name+"通过鹰眼术学会了"+s.name+"。");}
+  int chance=(30+10*mastery)*(100+(secondarySpecialty(who->originalId)==EagleEye?5*who->level:0));for(int item:equippedArtifacts(*who))if(item>=63&&item<=65)chance+=500*(item-62);if(random()*10000<std::min(10000,chance)){who->spells[spell]=true;if(winner==0)report.learnedSpells.push_back(spell);message(who->name+"通过鹰眼术学会了"+s.name+"。");}
  }
  int owner=winner==0?currentOwner():heroes.at(combat.targetId).owner,rate=necromancyBasisPoints(*who,owner);if(!rate)return;
  int unit=raisedUnit(*who);int base=unit;bool skeleton=std::any_of(who->army.begin(),who->army.end(),[unit](auto&s){return !s.empty()&&s.unit==unit;}),free=std::any_of(who->army.begin(),who->army.end(),[](auto&s){return s.empty();});

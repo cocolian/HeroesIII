@@ -15,9 +15,9 @@ def main():
     run(['/usr/bin/ditto',source,app]);run(['/usr/bin/codesign','--verify','--strict',app])
     link=stage/'Applications'
     if not link.exists():link.symlink_to('/Applications',target_is_directory=True)
-    (stage/'安装说明.txt').write_text(f'''Heroes III {version} · C++ 原生开发测试版\n\n将 HeroesIII.app 拖到 Applications，然后从应用程序打开。\n支持 Apple Silicon 与 Intel，最低 macOS 14；支持 Retina 与 F4 全屏。\n所有运行素材和静态依赖均在应用内，不需要 Homebrew 或本工程。\n用户设置与游戏进度保存在 ~/Library/Application Support/HeroesIII/。\n这是本地临时签名的测试包，尚无 Developer ID 签名或 Apple 公证。\nSeven Lakes 已完成简单难度、阿德拉开局的正常流程通关验证；保留正常读档重试记录。完整原版功能与画面仍在开发中。\n此 Mac 包不能安装到 iPad。iPad 必须用 iPadOS 构建并经过苹果签名。\n''')
+    (stage/'安装说明.txt').write_text(f'''Heroes III {version} · C++ 原生开发测试版\n\n将 HeroesIII.app 拖到 Applications，然后从应用程序打开。\n支持 Apple Silicon 与 Intel，最低 macOS 14；支持 Retina 与 F4 全屏。\n所有运行素材和静态依赖均在应用内，不需要 Homebrew 或本工程。\n用户设置与游戏进度保存在 ~/Library/Application Support/HeroesIII/。\n这是本地临时签名的测试包，尚无 Developer ID 签名或 Apple 公证。\nSeven Lakes 已完成简单难度、阿德拉开局的正常流程通关验证。死人和被埋葬的人已完成 200% 难度、第 63 天、零读档通关验证。完整原版功能与画面仍在开发中。\n此 Mac 包不能安装到 iPad。iPad 必须用 iPadOS 构建并经过苹果签名。\n''')
     with (stage/'安装说明.txt').open('a') as f:
-        f.write('15 张下载地图可在“新游戏 → 选择地图 · 已下载地图”进入；已加入多英雄、电脑经营与基础攻城；复杂剧情、部分英雄／生物特长及逐帧画面对齐仍需继续验证。\n')
+        f.write('15 张下载地图可在“新游戏 → 选择地图 · 已下载地图”进入；已加入多英雄、电脑经营与基础攻城；已补齐经典英雄特长与 12 套组合宝物；复杂剧情、特长交互边界及逐帧画面对齐仍需继续验证。\n')
     names=[]
     if not a.no_dmg:
         dmg=a.output/f'HeroesIII-{version}-macOS-universal.dmg'

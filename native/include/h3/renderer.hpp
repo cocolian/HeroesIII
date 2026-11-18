@@ -14,7 +14,7 @@
 #include <unordered_map>
 
 namespace h3 {
-enum class Scene {Menu,Adventure,Town,Build,Recruit,Army,Split,Hero,Spells,Battle,Level,Report,Help,Codex,Scenario,University,MageGuild,Market,BuildConfirm,Fort,Options,Outcome,Visit,Puzzle,Maps,Tavern,Journal,Meeting,Neutral,TownService,Overview,BattleExit,Necromancy,PortalChoice,WorldSurvey};
+enum class Scene {Menu,Adventure,Town,Build,Recruit,Army,Split,Hero,Spells,Battle,Level,Report,Help,Codex,Scenario,University,MageGuild,Market,BuildConfirm,Fort,Options,Outcome,Visit,Puzzle,Maps,Tavern,Journal,Meeting,Neutral,TownService,Overview,BattleExit,Necromancy,PortalChoice,WorldSurvey,Combination};
 struct Button {
  SDL_Rect rect;std::function<void()> action;bool enabled=true;std::function<bool(Point)> hit;std::string hint;
  Button(SDL_Rect bounds,std::function<void()> callback,bool active=true,std::function<bool(Point)> shape={},std::string description={}):rect(bounds),action(std::move(callback)),enabled(active),hit(std::move(shape)),hint(std::move(description)){}
@@ -26,7 +26,7 @@ public:
  explicit Desktop(std::filesystem::path root,bool hidden=false,std::filesystem::path saveDirectory={},std::filesystem::path inputTrace={},bool startFullscreen=false);~Desktop();int run();void render();bool screenshot(const std::filesystem::path&);void renderTests(const std::filesystem::path&);void graphicsPreview(const std::filesystem::path&,bool townArtOnly=false);void displayPreview(const std::filesystem::path&);void interactionPreview(const std::filesystem::path&);void runtimePreview(const std::filesystem::path&);void siegePreview(const std::filesystem::path&,const std::filesystem::path&);void kingdomPreview(const std::filesystem::path&,const std::filesystem::path&);void scenarioPreview(const std::filesystem::path&);void pointerPreview(const std::filesystem::path&);
  void sitePreview(const std::filesystem::path&,const std::filesystem::path&);
  void mapServicesPreview(const std::filesystem::path&,const std::filesystem::path&);void thievesGuildDialog();
- bool locationDialog();void completionPreview(const std::filesystem::path&);void locationPreview(const std::filesystem::path&,const std::filesystem::path&);
+ bool locationDialog();void completionPreview(const std::filesystem::path&);void combinationDialog();bool artifactContext(Point);void specialtyPreview(const std::filesystem::path&);int combinationId_=-1;bool combinationDisassemble_=false,pendingCreature_=false;void locationPreview(const std::filesystem::path&,const std::filesystem::path&);
  void localizationPreview(const std::filesystem::path&);
  void performancePreview(const std::filesystem::path&,const std::filesystem::path&);
  std::unique_ptr<AsyncSaveWriter> autosave_;
@@ -70,7 +70,7 @@ private:
  SDL_Texture* originalTownClothTexture(const std::string&,int,const std::vector<SDL_Rect>&);
  bool redrawnAnimatedTownBuilding(const TownLayer&);int redrawnAnimatedBuildingsDrawn_=0;
  void townArtworkRenderTests(const std::filesystem::path&);
- bool originalImage(const std::string&,SDL_Rect,std::optional<SDL_Rect> src={});int frameCount(const std::string&,int group=0)const;bool frame(const std::string&,int group,int index,SDL_Rect canvas,bool flip=false,bool blue=false,bool vertical=false,int owner=-2);bool townAnimation(const TownLayer&);bool combatImage(const CombatStack&,int group,bool last=false,bool selected=false,bool targeted=false);void battleCount(const CombatStack&,Point);
+ bool originalImage(const std::string&,SDL_Rect,std::optional<SDL_Rect> src={});int frameCount(const std::string&,int group=0)const;bool frame(const std::string&,int group,int index,SDL_Rect canvas,bool flip=false,bool blue=false,bool vertical=false,int owner=-2,bool petrified=false);bool townAnimation(const TownLayer&);bool combatImage(const CombatStack&,int group,bool last=false,bool selected=false,bool targeted=false);void battleCount(const CombatStack&,Point);
  struct CombatVisual {std::string animation;int group=2,index=0;SDL_Rect canvas{};bool flip=false;};
  std::optional<CombatVisual> combatVisual(const CombatStack&,int group=2,bool last=false)const;
  bool combatBodyContains(const CombatStack&,Point);const CombatStack* battleTargetAt(Point);void battleCellAction(Point);void battleTargetRenderTests(const std::filesystem::path&);

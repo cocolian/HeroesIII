@@ -71,6 +71,11 @@ class OriginalResources:
                 provenance = {'archive': name, 'name': entry.name, 'size': len(data),
                               'sha256': hashlib.sha256(data).hexdigest(), 'edition': edition}
                 self.inventory.append(provenance)
+                # Complete's base archive includes the SoD combination icons.
+                # The older AB copies end at artifact 128 and otherwise hide
+                # those frames behind the selection-border frame.
+                if name == 'h3ab_spr.lod' and key in {'artifact.def', 'artifbon.def'}:
+                    continue
                 self.entries[key] = (lod, provenance)
 
     def read(self, name):

@@ -1,0 +1,132 @@
+{
+  "effects": [
+    {
+      "key": "disease",
+      "animation": "sp05_.def",
+      "frames": 19,
+      "canvas": [
+        72,
+        97
+      ]
+    },
+    {
+      "key": "bind",
+      "animation": "sp02_.def",
+      "frames": 27,
+      "canvas": [
+        74,
+        49
+      ]
+    },
+    {
+      "key": "stoneGaze",
+      "animation": null,
+      "frames": 0,
+      "canvas": [
+        0,
+        0
+      ]
+    },
+    {
+      "key": "paralyze",
+      "animation": "sp10_.def",
+      "frames": 27,
+      "canvas": [
+        86,
+        120
+      ]
+    },
+    {
+      "key": "poison",
+      "animation": "sp11_.def",
+      "frames": 20,
+      "canvas": [
+        124,
+        148
+      ]
+    },
+    {
+      "key": "age",
+      "animation": "sp01_.def",
+      "frames": 20,
+      "canvas": [
+        96,
+        94
+      ]
+    },
+    {
+      "key": "acidBreath",
+      "animation": "c0acid.def",
+      "frames": 20,
+      "canvas": [
+        97,
+        114
+      ]
+    },
+    {
+      "key": "acidBreathDamage",
+      "animation": "c0acid.def",
+      "frames": 20,
+      "canvas": [
+        97,
+        114
+      ]
+    },
+    {
+      "key": "deathStare",
+      "animation": "c07spe0.def",
+      "frames": 20,
+      "canvas": [
+        58,
+        98
+      ]
+    },
+    {
+      "key": "lifeDrain",
+      "animation": "c01spe0.def",
+      "frames": 20,
+      "canvas": [
+        98,
+        95
+      ]
+    },
+    {
+      "key": "rebirth",
+      "animation": "c01spe0.def",
+      "frames": 20,
+      "canvas": [
+        98,
+        95
+      ]
+    },
+    {
+      "key": "thunderbolt",
+      "animation": "c03spa0.def",
+      "frames": 1,
+      "canvas": [
+        106,
+        494
+      ]
+    },
+    {
+      "key": "dispelHelpful",
+      "animation": "c05spw.def",
+      "frames": 15,
+      "canvas": [
+        199,
+        201
+      ]
+    },
+    {
+      "key": "fear",
+      "animation": null,
+      "frames": 0,
+      "canvas": [
+        0,
+        0
+      ]
+    }
+  ],
+  "frameMs": 100,
+  "timingProvisional": true
+}

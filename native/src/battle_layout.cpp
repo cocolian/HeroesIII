@@ -1,6 +1,10 @@
 #include "h3/battle_layout.hpp"
 #include <limits>
 namespace h3 {
+const std::array<BattleProjectileDef,UnitCount> BattleProjectiles={{
+#include "../generated/projectiles.inc"
+}};
+
 #include "../generated/battle_layout.inc"
 Point battleHexTopLeft(Point p){return {36+p.x*44-(p.y&1)*22,86+p.y*42};}
 Point battleHexCenter(Point p){auto top=battleHexTopLeft(p);return {top.x+22,top.y+26};}

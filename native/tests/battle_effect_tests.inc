@@ -4,7 +4,7 @@ run("original morale and luck effect metadata matches every stored frame canvas"
   auto*d=battleEffect(type,detail);CHECK(d);const auto&asset=manifest["def"][d->animation];CHECK(int(asset["groups"]["0"].size())==d->frames);
   for(const auto&f:asset["groups"]["0"]){CHECK(f["canvas"][0]==d->width&&f["canvas"][1]==d->height);CHECK(f["offset"][0].get<int>()>=0&&f["offset"][1].get<int>()>=0);CHECK(f["offset"][0].get<int>()+f["rect"][2].get<int>()<=d->width&&f["offset"][1].get<int>()+f["rect"][3].get<int>()<=d->height);}
  }
- CHECK(!battleEffect(GameEventType::CombatLuck,-1)&&!battleEffect(GameEventType::CombatMorale,0)&&!battleEffect(GameEventType::CombatSpellEffect,MagicArrow));
+ CHECK(!battleEffect(GameEventType::CombatLuck,-1)&&!battleEffect(GameEventType::CombatMorale,0)&&battleEffect(GameEventType::CombatSpellEffect,MagicArrow));
 });
 run("morale and luck sequences play all original frames once without looping",[&]{
  auto g=moraleFixture();auto before=*g.battle;auto u=before.units[0];u.moraleUsed=u.acted=true;

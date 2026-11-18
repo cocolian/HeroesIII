@@ -79,7 +79,7 @@ void AudioEngine::consume(std::span<const GameEvent>events){
  case GameEventType::SpellCast:{if(catalog_.contains("spells")){auto at=catalog_["spells"].find(std::to_string(e.detail));if(at!=catalog_["spells"].end())effect(at->get<std::string>(),1,0,e.scheduled?0:delay);}if(!e.scheduled)delay+=AudioRate/5;break;}
  case GameEventType::CombatLuck:effect("goodluck.wav",1,0,e.scheduled?0:delay);break;
  case GameEventType::CombatMorale:if(e.detail)effect(e.detail>0?"goodmrle.wav":"badmrle.wav",1,0,e.scheduled?0:delay);break;
- case GameEventType::CombatSpellEffect:case GameEventType::CombatEnd:break;
+ case GameEventType::CombatCreatureEffect:{const char*files[]={"disease.wav","bind.wav","paralyze.wav","paralyze.wav","poison.wav","age.wav","acid.wav","acid.wav","deathstr.wav","resurect.wav","resurect.wav","lightblt.wav","dispell.wav","fear.wav"};if(e.detail>=70&&e.detail<84)effect(files[e.detail-70]);break;}case GameEventType::SiegeHit:case GameEventType::CombatSpellEffect:case GameEventType::CombatEnd:break;
  }
 }
 void AudioEngine::ambients(std::span<const AmbientCue>cues){

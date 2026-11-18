@@ -1,0 +1,156 @@
+{
+  "version": "0.52.0",
+  "nativeSourceSha256": "f835c43c9e659aadab5caf2ec6c5e43258d1049032bc97677d2966971d899a99",
+  "rules": {
+    "heroSpecialtyRecords": 156,
+    "creatureRecords": 141,
+    "combinationRecipes": 12,
+    "specialtyRegressionChecks": 390,
+    "connectedAbilityCategories": 43,
+    "partiallyVerifiedAbilityCategories": 10,
+    "classificationOnlyCategories": 3
+  },
+  "tests": {
+    "native": 17,
+    "addressAndUndefinedBehaviorSanitizers": 17,
+    "universalDistribution": 17
+  },
+  "ui": {
+    "fullDeclaredScenes": 478,
+    "fullPngFiles": 478,
+    "specialty": 29,
+    "completion": 36,
+    "locations": 106,
+    "siegeAndEnding": 50,
+    "newUiByteIdenticalAcrossThreeBuilds": 29
+  },
+  "campaigns": {
+    "native": {
+      "completed": true,
+      "day": 63,
+      "difficulty": 4,
+      "faction": 8,
+      "identicalToOriginalRules": false,
+      "map": "dead-and-buried-1",
+      "matchesVideoDifficulty": true,
+      "moves": 1370,
+      "normalGameplayOnly": true,
+      "policy": "threat-and-loss-aware",
+      "reloads": 0,
+      "result": 1,
+      "sourceSha256": "cc23096e678a2e3bd9cf62445d7bba1828924222969b6ca5828d4805886fc162",
+      "startingHero": 131,
+      "videoDays": 19,
+      "visits": 163,
+      "battles": 14,
+      "sieges": 5
+    },
+    "normal": {
+      "completed": true,
+      "day": 97,
+      "difficulty": 1,
+      "faction": 8,
+      "identicalToOriginalRules": false,
+      "map": "dead-and-buried-1",
+      "matchesVideoDifficulty": false,
+      "moves": 2117,
+      "normalGameplayOnly": true,
+      "policy": "threat-and-loss-aware",
+      "reloads": 0,
+      "result": 1,
+      "sourceSha256": "cc23096e678a2e3bd9cf62445d7bba1828924222969b6ca5828d4805886fc162",
+      "startingHero": 131,
+      "videoDays": 19,
+      "visits": 112,
+      "battles": 13,
+      "sieges": 6
+    },
+    "release": {
+      "completed": true,
+      "day": 63,
+      "difficulty": 4,
+      "faction": 8,
+      "identicalToOriginalRules": false,
+      "map": "dead-and-buried-1",
+      "matchesVideoDifficulty": true,
+      "moves": 1370,
+      "normalGameplayOnly": true,
+      "policy": "threat-and-loss-aware",
+      "reloads": 0,
+      "result": 1,
+      "sourceSha256": "cc23096e678a2e3bd9cf62445d7bba1828924222969b6ca5828d4805886fc162",
+      "startingHero": 131,
+      "videoDays": 19,
+      "visits": 163,
+      "battles": 14,
+      "sieges": 5
+    },
+    "asan": {
+      "completed": true,
+      "day": 63,
+      "difficulty": 4,
+      "faction": 8,
+      "identicalToOriginalRules": false,
+      "map": "dead-and-buried-1",
+      "matchesVideoDifficulty": true,
+      "moves": 1370,
+      "normalGameplayOnly": true,
+      "policy": "threat-and-loss-aware",
+      "reloads": 0,
+      "result": 1,
+      "sourceSha256": "cc23096e678a2e3bd9cf62445d7bba1828924222969b6ca5828d4805886fc162",
+      "startingHero": 131,
+      "videoDays": 19,
+      "visits": 163,
+      "battles": 14,
+      "sieges": 5
+    }
+  },
+  "packages": {
+    "version": "0.52.0",
+    "architectures": [
+      "x86_64",
+      "arm64"
+    ],
+    "minimumMacOS": "14.0",
+    "selfContained": true,
+    "sourceFallbackEnabled": false,
+    "developerIdSigned": false,
+    "appleNotarized": false,
+    "files": {
+      "HeroesIII-0.52.0-macOS-universal.dmg": {
+        "bytes": 816021364,
+        "sha256": "ba7af86dab407cb9cc3bb6bf662b23cd824052cc676e88f2fab2b954b399ba26"
+      },
+      "HeroesIII-0.52.0-macOS-universal.pkg": {
+        "bytes": 786613839,
+        "sha256": "6fd6397bf75ac9b8f21d37589c2fdb934f69e58352b3c5c503e86822507ea104"
+      }
+    }
+  },
+  "bundle": {
+    "bundle": "build/distribution/HeroesIII.app",
+    "version": "0.52.0",
+    "minimumMacOS": "14.0",
+    "verifiedAssetFiles": 12178,
+    "runtime": {
+      "bundledData": true,
+      "dataRoot": "build/distribution/HeroesIII.app/Contents/Resources/GameData",
+      "saveDirectory": "/var/folders/43/5f4t56y94s972dbfftrb07m00000gn/T/heroesiii-relocation-26un8932",
+      "sourceFallbackEnabled": false,
+      "startupFullscreen": true
+    },
+    "systemLibrariesOnly": true,
+    "strictSignatureValid": true
+  },
+  "sourceVideo": "https://www.bilibili.com/video/BV1vu41177kZ/",
+  "localEvidence": "references/validation/0.52",
+  "personalSaveUnchanged": true,
+  "limits": [
+    "This is not a complete original-game reproduction.",
+    "Reference video wins on day 19 at 200%; this engine wins on day 63.",
+    "Original-executable timing, lightning beam layers and some creature effect visuals remain uncalibrated.",
+    "All ordinary artifact and immunity interactions are not exhaustively verified.",
+    "Universal binaries were exercised on this Apple Silicon Mac, not an Intel Mac or iPad."
+  ]
+}

@@ -50,9 +50,10 @@ spells=json.loads((root/'data/native/spells.json').read_text())['spells']
 cpp=['// Original timed-spell animation identities and frame canvases.']
 records=[]
 for spell in spells:
- candidates=spell.get('animation',{}).get('affect',[])if spell['kind']=='Timed'else[]
+ animation=spell.get('animation',{});candidates=animation.get('affect',animation.get('hit',[]))
+ candidates=[candidate if isinstance(candidate,str)else candidate.get('defName','')for candidate in candidates]
  names=[candidate.lower()+(""if candidate.lower().endswith('.def')else'.def')for candidate in candidates if isinstance(candidate,str)]
- name=next((name for name in names if name in demo['def']),None)
+ name=next((name for name in reversed(names) if name in demo['def']),None)
  if name:
   asset=demo['def'][name];frames=asset['groups']['0'];w,h=frames[0]['canvas']
   cpp.append('{"%s",%d,%d,%d,100},'%(name,len(frames),w,h));records.append({'spell':spell['id'],'animation':name,'frames':len(frames),'canvas':[w,h]})
