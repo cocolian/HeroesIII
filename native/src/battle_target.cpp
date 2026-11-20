@@ -25,12 +25,20 @@ bool Desktop::combatBodyContains(const CombatStack&unit,Point point){
  }
  return it->second.contains(x,y);
 }
-const CombatStack* Desktop::battleTargetAt(Point point){
+const CombatStack* Desktop::battleTargetAt(Point point,bool includeCount){
  if(!game.battle||battleMotion_.active()||point.x<0||point.y<0||point.x>=800||point.y>=556)return nullptr;
  std::vector<const CombatStack*> order;for(const auto&u:game.battle->units)if(u.hp>0)order.push_back(&u);
  std::stable_sort(order.begin(),order.end(),[](const auto*a,const auto*b){return a->y!=b->y?a->y<b->y:a->x<b->x;});
- // Match the painter order: a foreground creature owns its visible body.
- for(auto it=order.rbegin();it!=order.rend();++it)if(combatBodyContains(**it,point))return *it;
+ // Match the painter order, including the count plate when tapping.
+ for(auto it=order.rbegin();it!=order.rend();++it){
+  const auto& unit=**it;
+  if(includeCount){
+   auto bounds=battleCountBounds(unit,battleHexCenter({unit.x,unit.y}));
+   SDL_Point tap{point.x,point.y};
+   if(SDL_PointInRect(&tap,&bounds))return &unit;
+  }
+  if(combatBodyContains(unit,point))return &unit;
+ }
  if(auto cell=battleHexAt(point))return game.combatAt(*cell);return nullptr;
 }
 void Desktop::battleCellAction(Point cell){

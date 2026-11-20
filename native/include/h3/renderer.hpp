@@ -57,6 +57,8 @@ private:
  std::optional<SDL_Keymod> pointerModifiers_;
  std::map<SDL_FingerID,Point> touchPoints_;std::optional<SDL_FingerID> touchPrimary_;
  Point touchOrigin_{};Uint32 touchStarted_=0;bool touchPinching_=false,background_=false;double touchDistance_=0;
+ struct BattleTouch {int actor, target, round; Point origin; bool dragged=false;};
+ std::optional<BattleTouch> battleTouch_;
  Scene marketReturn_=Scene::Adventure;int marketObject_=0,marketSold_=-1,marketBought_=-1,marketLots_=0;bool marketDragging_=false,giftMode_=false;int giftOwner_=-1;int marketLimit()const;std::string marketCommit();
  bool minimapDragging_=false;bool mouseLeftDown_=false;int pressedButton_=-1;Scene pressedScene_=Scene::Menu;
  std::optional<SDL_Rect> hintBounds_;bool rightHelp_=false;Point hintAnchor_{};uint64_t hintSince_=0;Scene hintScene_=Scene::Menu;std::string hintText_;
@@ -73,7 +75,7 @@ private:
  bool originalImage(const std::string&,SDL_Rect,std::optional<SDL_Rect> src={});int frameCount(const std::string&,int group=0)const;bool frame(const std::string&,int group,int index,SDL_Rect canvas,bool flip=false,bool blue=false,bool vertical=false,int owner=-2,bool petrified=false);bool townAnimation(const TownLayer&);bool combatImage(const CombatStack&,int group,bool last=false,bool selected=false,bool targeted=false);void battleCount(const CombatStack&,Point);
  struct CombatVisual {std::string animation;int group=2,index=0;SDL_Rect canvas{};bool flip=false;};
  std::optional<CombatVisual> combatVisual(const CombatStack&,int group=2,bool last=false)const;
- bool combatBodyContains(const CombatStack&,Point);const CombatStack* battleTargetAt(Point);void battleCellAction(Point);void battleTargetRenderTests(const std::filesystem::path&);
+ bool combatBodyContains(const CombatStack&,Point);const CombatStack* battleTargetAt(Point,bool includeCount=false);static SDL_Rect battleCountBounds(const CombatStack&,Point center);void battleCellAction(Point);void battleTargetRenderTests(const std::filesystem::path&);
  void openMarket(int objectId=0);void market();void marketAmount(int mouseX);SDL_Rect marketTrack()const;void originalButton(SDL_Rect,const std::string&,int normal,std::function<void()>,bool enabled=true,int disabled=-1,const std::string& hint={});void marketIcon(int resource,SDL_Rect);
  void handleEvent(const SDL_Event&);
  void handleNativeEvent(SDL_Event,bool precisePointer=false,SDL_Keymod=KMOD_NONE);Point windowPoint(Point)const;void movePointer(Point);

@@ -5,7 +5,12 @@
 
 namespace h3 {
 namespace {constexpr SDL_Color GoldColor{236,213,130,255};}
-void Desktop::battleCount(const CombatStack&stack,Point p){
+SDL_Rect Desktop::battleCountBounds(const CombatStack& stack,Point center){
+ return {center.x+(stack.team?-52:22),center.y+2,30,17};
+}
+void Desktop::battleCount(const CombatStack&stack,Point center){
+ auto bounds=battleCountBounds(stack,center);
+ Point p{bounds.x,bounds.y};
  auto&plate=images_["#classic-purple-count"];
  if(!plate.texture){
   auto*surface=readSurface("assets/demo/pcx/cmnumwin.png",false,false);
@@ -17,21 +22,32 @@ void Desktop::battleCount(const CombatStack&stack,Point p){
    plate={SDL_CreateTextureFromSurface(renderer_,surface),surface->w,surface->h};SDL_FreeSurface(surface);
   }
  }
- SDL_Rect rect{p.x,p.y,30,11};if(plate.texture)SDL_RenderCopy(renderer_,plate.texture,nullptr,&rect);
+ SDL_Rect rect{p.x,p.y,bounds.w,11};if(plate.texture)SDL_RenderCopy(renderer_,plate.texture,nullptr,&rect);
  centerText(std::to_string(stack.count),rect,9,{255,255,255,255});
  // Keep health separate from quantity, with a fixed battle-start capacity:
  // casualties must not reset the surviving stack to a full health bar.
  const int64_t maximum=int64_t(stack.initialCount)*Units[stack.unit].hp;
  const int64_t remaining=std::clamp<int64_t>(stack.hp,0,maximum);
- box({p.x,p.y+12,30,5},{32,22,17,255});
+ box({p.x,p.y+12,bounds.w,bounds.h-12},{32,22,17,255});
  int width=maximum>0?int(28*remaining/maximum):0;
  if(remaining>0)width=std::max(1,width);
  SDL_Color health=remaining*4<=maximum?SDL_Color{210,55,44,255}:remaining*2<=maximum?SDL_Color{225,171,45,255}:SDL_Color{63,190,79,255};
  if(width)box({p.x+1,p.y+13,width,3},health);
 }
-void Desktop::battleAction(const std::function<std::string()>&action){
- if(battleMotion_.active()||!game.battle)return;Battle before=*game.battle;auto message=action();
- if(message.empty()){auto events=game.takeEvents();battleMotion_.start(before,events,[this](int unit,int group){return frameCount(Units[unit].animation,group);},fixedAnimationTime_.value_or(SDL_GetTicks64()));persist();settle();}
+void Desktop::battleAction(const std::function<std::string()>& action){
+ if(battleMotion_.active()||!game.battle)return;
+ Battle before=*game.battle;
+ auto message=action();
+ if(message.empty()){
+  pendingCreature_=false;
+  battleTouch_.reset();
+  auto events=game.takeEvents();
+  battleMotion_.start(before,events,[this](int unit,int group){
+   return frameCount(Units[unit].animation,group);
+  },fixedAnimationTime_.value_or(SDL_GetTicks64()));
+  persist();
+  settle();
+ }
  say(message);
 }
 void Desktop::battle(){
@@ -65,8 +81,7 @@ void Desktop::battle(){
    else{auto&sheet=image("original/"+definition.asset);SDL_Rect source{0,0,std::min(sheet.w,definition.size==2?150:80),std::min(sheet.h,130)};art("original/"+definition.asset,{center.x-37,center.y-74,74,85},source,true,unit.team==1,clone);}
   }
   if(clone)text("镜像",center.x-15,center.y-85,9,{135,195,255,255});
-  int countX=center.x+(unit.team?-52:22),countY=center.y+2;
-  battleCount(unit,{countX,countY});
+  battleCount(unit,center);
   if(unit.hp>0)if(auto visual=combatVisual(unit)){
    SDL_Rect bounds{};if(SDL_IntersectRect(&visual->canvas,&field,&bounds)){
     int id=unit.id;
@@ -89,8 +104,9 @@ void Desktop::battle(){
  if(!busy&&pendingSpell_<0&&hovered&&b.tacticsTeam<0&&(!active||active->unit!=CatapultUnit)){
   const auto&unit=*hovered;message=Units[unit.unit].name+" × "+std::to_string(unit.count)+"  攻击 "+std::to_string(game.attackSkill(unit,game.canShoot(unit)))+"  防御 "+std::to_string(game.defense(unit))+"  速度 "+std::to_string(game.speed(unit))+"  总生命 "+std::to_string(unit.hp)+"/"+std::to_string(int64_t(unit.initialCount)*game.stackHealth(unit));
  }
- text(message,216,569,10,GoldColor,394);
  bool own=active&&active->team==0&&!autoCombat_;
+ bool showCreatureCast=own&&b.tacticsTeam<0&&!b.noMagic&&game.creatureCastingSpell(*active)>=0;
+ text(message,216,569,10,GoldColor,showCreatureCast?295:394);
  if(b.tacticsTeam>=0){
   originalButton({599,561,198,36},"icm012.def",0,[this]{battleAction([this]{return game.act("end-tactics");});},own,2,"完成战术布阵，开始第一轮战斗（Enter）");
   originalButton({3,561,198,36},"icm011.def",0,[this]{battleAction([this]{return game.act("next-tactics");});},own,2,"选择下一支可以布阵的己方部队");
@@ -102,7 +118,7 @@ void Desktop::battle(){
  originalButton({105,561,48,36},"icm002.def",0,[this]{battleExitSurrender_=false;scene=Scene::BattleExit;},own&&game.canLeaveBattle(false),2);
  originalButton({156,561,48,36},"icm004.def",0,[this]{autoCombat_=!autoCombat_;pendingSpell_=sacrificeTarget_=-1;nextAI_=0;});
  if(autoCombat_)frame("icm004.def",0,1,{156,561,48,36});
- if(active&&game.creatureCastingSpell(*active)>=0){button({602,516,192,29},pendingCreature_?"取消生物施法（G）":"生物施法（G）",[this]{pendingCreature_=!pendingCreature_;pendingSpell_=-1;},own&&b.tacticsTeam<0&&!b.noMagic,false,"生物能力使用自身次数，消耗本支部队行动；不消耗英雄魔法值。");}
+ if(showCreatureCast){button({520,561,119,36},pendingCreature_?"取消生物施法":"生物施法",[this]{pendingCreature_=!pendingCreature_;pendingSpell_=-1;},true,false,"生物能力使用自身次数，消耗本支部队行动；不消耗英雄魔法值。");}
  originalButton({645,561,48,36},"icm005.def",0,[this]{openSpellbook();},own&&b.tacticsTeam<0&&!b.noMagic&&game.hero.spellbook,2);
  originalButton({696,561,48,36},"icm006.def",0,[this]{battleAction([this]{return game.act("wait");});},own&&b.tacticsTeam<0&&!active->waited&&!b.waitPhase&&!b.moralePhase,2);
  originalButton({747,561,48,36},"icm007.def",0,[this]{battleAction([this]{return game.act(game.battle->tacticsTeam>=0?"end-tactics":"defend");});},own,2);
