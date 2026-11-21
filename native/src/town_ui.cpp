@@ -109,7 +109,7 @@ void Desktop::town(){
   buttons_.push_back({cell,[this,unit]{openRecruit(unit,Scene::Town);},true,{},"招募"+Units[unit].name+"：查看当前库存、价格与数量"});
  }
  frame("crest58.def",0,1,{241,386,58,64});
- if(game.visiting())originalImage("hpl128qc.pcx",{241,484,58,64});
+ if(game.visiting())heroPortrait(game.hero,{241,484,58,64});
  townArmyRow(true);townArmyRow(false);
  if(game.constructionState(GrailBuilding)==BuildState::Ready)button({80,388,146,22},"建造圣杯",[this]{say(game.build(GrailBuilding));persist();});
  frame("itpa.def",0,2+game.town.faction*2+(fortLevel==3?18:0),{745,441,48,32});

@@ -18,6 +18,7 @@ Desktop::Desktop(std::filesystem::path root,bool hidden,std::filesystem::path sa
  if(SDL_Init(SDL_INIT_VIDEO|SDL_INIT_TIMER)!=0)throw std::runtime_error(SDL_GetError());if((IMG_Init(IMG_INIT_PNG|IMG_INIT_JPG)&IMG_INIT_PNG)==0)throw std::runtime_error(IMG_GetError());if(TTF_Init()!=0)throw std::runtime_error(TTF_GetError());SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY,"0");
  SDL_SetHint(SDL_HINT_TOUCH_MOUSE_EVENTS,"0");SDL_SetHint(SDL_HINT_MOUSE_TOUCH_EVENTS,"0");
 #ifdef __IPHONEOS__
+ retinaArtwork_=true;
  SDL_SetHint(SDL_HINT_ORIENTATIONS,"LandscapeLeft LandscapeRight");SDL_SetHint(SDL_HINT_IOS_HIDE_HOME_INDICATOR,"2");SDL_DisableScreenSaver();
 #endif
  int initialWidth=1000,initialHeight=750;SDL_Rect usable{};if(!hidden&&SDL_GetDisplayUsableBounds(0,&usable)==0){initialWidth=std::max(640,int(usable.w*.96));initialHeight=std::max(480,int((usable.h-32)*.96));}
@@ -97,7 +98,23 @@ SDL_Surface* Desktop::readSurface(const std::string&name,bool keyed,bool blue){
  }
  return surface;
 }
-void Desktop::art(const std::string&name,SDL_Rect dest,std::optional<SDL_Rect>src,bool keyed,bool flip,bool blue){auto&i=image(name,keyed,blue);if(!i.texture)return;if(name.starts_with("assets/hd/"))SDL_SetTextureScaleMode(i.texture,SDL_ScaleModeLinear);auto crop=src.value_or(SDL_Rect{0,0,i.w,i.h});if(settings_.hdArtwork&&!name.starts_with("assets/demo/battle-ui/")&&crop.w>0&&crop.h>0&&pixelScale_*dest.w/crop.w>1.05&&pixelScale_*dest.h/crop.h>1.05&&enhancedArt(name,dest,crop,keyed,flip,blue))return;SDL_RenderCopyEx(renderer_,i.texture,src?&*src:nullptr,&dest,0,nullptr,flip?SDL_FLIP_HORIZONTAL:SDL_FLIP_NONE);}
+void Desktop::art(const std::string& name,SDL_Rect dest,std::optional<SDL_Rect> src,bool keyed,bool flip,bool blue,bool vertical){
+ auto& imageData=image(name,keyed,blue);
+ if(!imageData.texture)return;
+ const SDL_Rect crop=src.value_or(SDL_Rect{0,0,imageData.w,imageData.h});
+ if(crop.w<=0||crop.h<=0||dest.w<=0||dest.h<=0)return;
+ auto orientation=SDL_RendererFlip((flip?SDL_FLIP_HORIZONTAL:0)|(vertical?SDL_FLIP_VERTICAL:0));
+ const bool nativeHD=name.starts_with("assets/hd/");
+ const bool grid=name.starts_with("assets/demo/battle-ui/");
+ const bool smooth=smoothRetinaArtwork()&&!grid;
+ const double scaleX=pixelScale_*dest.w/crop.w,scaleY=pixelScale_*dest.h/crop.h;
+ const bool cropped=src&&(crop.x||crop.y||crop.w!=imageData.w||crop.h!=imageData.h);
+ const bool needsCrop=smooth&&cropped&&(std::abs(scaleX-1.)>.01||std::abs(scaleY-1.)>.01);
+ const bool needsDesktopUpscaler=!smooth&&settings_.hdArtwork&&!grid&&scaleX>1.05&&scaleY>1.05;
+ if((needsCrop||needsDesktopUpscaler)&&enhancedArt(name,dest,crop,keyed,orientation,blue))return;
+ SDL_SetTextureScaleMode(imageData.texture,nativeHD||smooth?SDL_ScaleModeLinear:SDL_ScaleModeNearest);
+ SDL_RenderCopyEx(renderer_,imageData.texture,src?&*src:nullptr,&dest,0,nullptr,orientation);
+}
 bool Desktop::originalImage(const std::string&name,SDL_Rect dest,std::optional<SDL_Rect>src){
  if(game.imported()&&ownerArt_.contains("interface")&&ownerArt_["interface"].contains(lower(name))){auto color=ownerName(0);const auto&files=ownerArt_["interface"][lower(name)]["files"];if(files.contains(color)){auto file=files[color].get<std::string>();if(image(file,false).texture){art(file,dest,src,false);return true;}}}
  if(settings_.hdArtwork&&!src&&hd_.contains("images")&&hd_["images"].contains(lower(name))){auto file=hd_["images"][lower(name)].get<std::string>();if(file.starts_with("assets/hd/")&&std::filesystem::exists(root_/file)&&image(file,false).texture){art(file,dest,{},false);return true;}}
@@ -131,10 +148,11 @@ bool Desktop::frame(const std::string&name,int group,int index,SDL_Rect canvas,b
   auto&stone=images_[file+"#petrified"];if(!stone.texture){auto*surface=readSurface(file,false,false);if(!surface)return false;SDL_LockSurface(surface);for(int y=0;y<surface->h;++y)for(int x=0;x<surface->w;++x){auto*p=static_cast<Uint8*>(surface->pixels)+y*surface->pitch+x*4;int gray=(77*p[0]+150*p[1]+29*p[2])/256;p[0]=p[1]=p[2]=Uint8(std::min(255,gray+20));}SDL_UnlockSurface(surface);stone.w=surface->w;stone.h=surface->h;stone.texture=SDL_CreateTextureFromSurface(renderer_,surface);SDL_FreeSurface(surface);if(!stone.texture)return false;SDL_SetTextureBlendMode(stone.texture,SDL_BLENDMODE_BLEND);SDL_SetTextureScaleMode(stone.texture,SDL_ScaleModeNearest);}
   SDL_RenderCopyEx(renderer_,stone.texture,&source,&destination,0,nullptr,SDL_RendererFlip((vertical?SDL_FLIP_VERTICAL:0)|(flip?SDL_FLIP_HORIZONTAL:0)));return true;
  }
- if(vertical||name=="tshrc.def"||name=="tshre.def"){
+ if(!smoothRetinaArtwork()&&(vertical||name=="tshrc.def"||name=="tshre.def")){
   auto&texture=image(file,false,blue);
+  SDL_SetTextureScaleMode(texture.texture,SDL_ScaleModeNearest);
   if(SDL_RenderCopyEx(renderer_,texture.texture,&source,&destination,0,nullptr,SDL_RendererFlip((vertical?SDL_FLIP_VERTICAL:0)|(flip?SDL_FLIP_HORIZONTAL:0)))!=0)throw std::runtime_error(SDL_GetError());
- }else art(file,destination,source,false,flip,blue);
+ }else art(file,destination,source,false,flip,blue,vertical);
  return true;
 }
 bool Desktop::townAnimation(const TownLayer&layer){

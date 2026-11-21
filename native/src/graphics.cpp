@@ -20,11 +20,18 @@ SDL_Texture*Desktop::cacheArtwork(const std::string&key,SDL_Surface*surface){
  while(enhancedBytes_+bytes>TextureBudget&&!enhanced_.empty()){auto oldest=std::min_element(enhanced_.begin(),enhanced_.end(),[](const auto&a,const auto&b){return a.second.used<b.second.used;});enhancedBytes_-=oldest->second.bytes;SDL_DestroyTexture(oldest->second.texture);enhanced_.erase(oldest);}
  enhanced_.emplace(key,ArtTexture{texture,bytes,++artUse_});enhancedBytes_+=bytes;return texture;
 }
-bool Desktop::enhancedArt(const std::string&name,SDL_Rect destination,SDL_Rect crop,bool keyed,bool flip,bool blue){
+bool Desktop::enhancedArt(const std::string&name,SDL_Rect destination,SDL_Rect crop,bool keyed,SDL_RendererFlip orientation,bool blue){
+ const bool retina=smoothRetinaArtwork();
+ // Isolate atlas frames before filtering so adjacent frames cannot bleed.
+ // The mobile GPU can then sample their native pixels without a 4x cache.
+ const int factor=retina?1:4;
  std::string sourceKey=name+(keyed?"#key":"#raw")+(blue?"#blue":"");
- std::string key=sourceKey+":"+std::to_string(crop.x)+","+std::to_string(crop.y)+","+std::to_string(crop.w)+","+std::to_string(crop.h);
- if(auto found=enhanced_.find(key);found!=enhanced_.end()){found->second.used=++artUse_;SDL_RenderCopyEx(renderer_,found->second.texture,nullptr,&destination,0,nullptr,flip?SDL_FLIP_HORIZONTAL:SDL_FLIP_NONE);return true;}
- size_t bytes=size_t(crop.w)*crop.h*16*4;if(bytes>64*1024*1024)return false;
+ std::string key=(retina?"retina:":"")+sourceKey+":"+std::to_string(crop.x)+","+std::to_string(crop.y)+","+std::to_string(crop.w)+","+std::to_string(crop.h);
+ if(auto found=enhanced_.find(key);found!=enhanced_.end()){
+  found->second.used=++artUse_;
+  return SDL_RenderCopyEx(renderer_,found->second.texture,nullptr,&destination,0,nullptr,orientation)==0;
+ }
+ size_t bytes=size_t(crop.w)*crop.h*factor*factor*sizeof(Rgba);if(bytes>64*1024*1024)return false;
  auto raw=artSources_.find(sourceKey);
  if(raw==artSources_.end()){
   auto*surface=readSurface(name,keyed,blue);if(!surface)return false;size_t size=size_t(surface->pitch)*surface->h;
@@ -35,14 +42,62 @@ bool Desktop::enhancedArt(const std::string&name,SDL_Rect destination,SDL_Rect c
  auto*surface=raw->second.surface;if(crop.x<0||crop.y<0||crop.w<=0||crop.h<=0||crop.x>surface->w-crop.w||crop.y>surface->h-crop.h)return false;
  std::vector<Rgba> pixels(size_t(crop.w)*crop.h);SDL_LockSurface(surface);
  for(int row=0;row<crop.h;row++)std::memcpy(pixels.data()+size_t(row)*crop.w,static_cast<Uint8*>(surface->pixels)+(crop.y+row)*surface->pitch+crop.x*4,size_t(crop.w)*4);
- SDL_UnlockSurface(surface);auto scaled=scaleArtwork(pixels,crop.w,crop.h,4);
- auto*expanded=SDL_CreateRGBSurfaceWithFormatFrom(scaled.data(),crop.w*4,crop.h*4,32,crop.w*16,SDL_PIXELFORMAT_RGBA32);if(!expanded)return false;
+ SDL_UnlockSurface(surface);
+ if(!retina)pixels=scaleArtwork(pixels,crop.w,crop.h,factor);
+ else if(std::any_of(pixels.begin(),pixels.end(),[](Rgba pixel){return pixel.a<=16;}))
+  pixels=extendArtworkEdgeColors(pixels,crop.w,crop.h);
+ const int width=crop.w*factor,height=crop.h*factor;
+ auto*expanded=SDL_CreateRGBSurfaceWithFormatFrom(pixels.data(),width,height,32,width*sizeof(Rgba),SDL_PIXELFORMAT_RGBA32);if(!expanded)return false;
  SDL_Texture*texture=cacheArtwork(key,expanded);SDL_FreeSurface(expanded);if(!texture)return false;
- SDL_RenderCopyEx(renderer_,texture,nullptr,&destination,0,nullptr,flip?SDL_FLIP_HORIZONTAL:SDL_FLIP_NONE);return true;
+ return SDL_RenderCopyEx(renderer_,texture,nullptr,&destination,0,nullptr,orientation)==0;
 }
 void Desktop::graphicsPreview(const std::filesystem::path&directory,bool townArtOnly){saveDir_=directory/"test-saves";std::filesystem::create_directories(directory);fixedAnimationTime_=0;if(townArtOnly){SDL_SetWindowSize(window_,2560,1920);scene=Scene::Town;render();townArtworkRenderTests(directory);}else{graphicsRenderTests(directory);moraleRenderTests(directory);}}
 void Desktop::graphicsRenderTests(const std::filesystem::path&directory){
  auto check=[](bool ok,const char*message){if(!ok)throw std::runtime_error(message);};
+ {
+  // The gutter represents neighboring atlas frames. Filtering an isolated
+  // crop must smooth the interior edge without sampling that gutter.
+  SDL_Surface* atlas=SDL_CreateRGBSurfaceWithFormat(0,4,4,32,SDL_PIXELFORMAT_RGBA32);
+  check(atlas,"Retina test atlas unavailable");
+  SDL_FillRect(atlas,nullptr,SDL_MapRGBA(atlas->format,0,255,0,255));
+  SDL_Rect black{1,1,1,2},white{2,1,1,2};
+  SDL_FillRect(atlas,&black,SDL_MapRGBA(atlas->format,0,0,0,255));
+  SDL_FillRect(atlas,&white,SDL_MapRGBA(atlas->format,255,255,255,255));
+  const std::string key="retina-test-atlas#raw";
+  auto* atlasTexture=SDL_CreateTextureFromSurface(renderer_,atlas);
+  check(atlasTexture,"Retina test texture unavailable");
+  images_[key]={atlasTexture,4,4};
+  artSources_[key]={atlas,64,++artUse_};
+  sourceBytes_+=64;
+  auto* target=SDL_CreateTexture(renderer_,SDL_PIXELFORMAT_RGBA8888,SDL_TEXTUREACCESS_TARGET,32,16);
+  check(target&&SDL_SetRenderTarget(renderer_,target)==0,"Retina test target unavailable");
+  auto savedRetina=retinaArtwork_;
+  auto savedHD=settings_.hdArtwork;
+  auto savedScale=pixelScale_;
+  retinaArtwork_=settings_.hdArtwork=true;
+  pixelScale_=1;
+  SDL_RenderSetScale(renderer_,1,1);
+  SDL_RenderSetClipRect(renderer_,nullptr);
+  SDL_SetRenderDrawColor(renderer_,0,0,0,255);
+  SDL_RenderClear(renderer_);
+  art("retina-test-atlas",{0,0,16,16},SDL_Rect{1,1,2,2},false);
+  art("retina-test-atlas",{16,0,16,16},SDL_Rect{1,1,2,2},false,true,false,true);
+  std::array<Rgba,32*16> pixels;
+  check(SDL_RenderReadPixels(renderer_,nullptr,SDL_PIXELFORMAT_RGBA32,pixels.data(),32*4)==0,
+        "Retina test pixels unavailable");
+  auto edge=pixels[8*32+7];
+  check(edge.r>0&&edge.r<255&&edge.r==edge.g&&edge.g==edge.b,"Retina atlas kept a hard pixel edge");
+  for(const auto& pixel:pixels)check(pixel.r==pixel.g&&pixel.g==pixel.b,"Retina atlas sampled another frame");
+  check(pixels[8*32].r==0&&pixels[8*32+16].r==255,"Retina filtering lost the sprite flip");
+  SDL_SetRenderTarget(renderer_,nullptr);
+  SDL_DestroyTexture(target);
+  SDL_DestroyTexture(atlasTexture);
+  images_.erase(key);
+  clearArtworkCache();
+  retinaArtwork_=savedRetina;
+  settings_.hdArtwork=savedHD;
+  pixelScale_=savedScale;
+ }
  int width=0,height=0;SDL_GetWindowSize(window_,&width,&height);SDL_SetWindowSize(window_,2560,1920);battleMotion_.clear();autoCombat_=false;pendingSpell_=sacrificeTarget_=-1;mouseX_=mouseY_=-1000;focus_=-1;toastUntil_=0;
  // TBCSHALL's later frames contain only an 82x52 flag patch. Its roof and
  // walls outside that patch must remain visible in both quality modes.

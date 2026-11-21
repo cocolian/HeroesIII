@@ -22,7 +22,7 @@ void Desktop::mapSprite(const std::string&name,Point position,bool visitable,int
 }
 std::string Desktop::mapObjectAsset(const Object&o)const{return game.mapObjectAsset(o);}
 void Desktop::adventureObjects(){
- struct Draw {Point pos;std::string asset;bool visitable=true,hero=false;int owner=-2;bool heroFlag=false,boat=false,ground=false;};
+ struct Draw {Point pos;std::string asset;bool visitable=true;int owner=-2;bool heroFlag=false,boat=false,ground=false;};
  std::vector<Draw> draws;
  auto clip=adventureMapRect();auto camera=mapCamera();
  auto onScreen=[&](const std::string&asset,Point p,bool visitable){auto rect=mapSpriteCanvasAt(asset,p,visitable,clip,camera);return SDL_HasIntersection(&rect,&clip);};
@@ -40,13 +40,27 @@ void Desktop::adventureObjects(){
  }
  if(game.imported()){
   auto revealed=[&](Point p){for(int dy=-5;dy<=0;++dy)for(int dx=-7;dx<=0;++dx)if(auto*t=game.tile({p.x+dx,p.y+dy});t&&t->seen)return true;return false;};
-  for(const auto&d:game.decorations)if(d.level==game.mapLevel&&onScreen(d.sprite,d.anchor,false)&&revealed(d.anchor))draws.push_back({d.anchor,d.sprite,false,false,-2,false,false,d.ground});
-  for(const auto&o:game.objects)if(o.level==game.mapLevel&&o.type!=ObjectType::MapEvent){bool boat=game.heroes.contains(o.id)&&game.heroes.at(o.id).value.onBoat;auto asset=boat?"ab01_.def":mapObjectAsset(o);if(onScreen(asset,o.anchor,false)&&revealed(o.anchor))draws.push_back({o.anchor,std::move(asset),false,false,o.type==ObjectType::Town||o.type==ObjectType::Mine||o.type==ObjectType::EnemyHero||(o.sourceClass==42||(Game::dwellingLocation(o.sourceClass)&&o.sourceClass!=78))?o.owner:-2,o.sourceClass==34||o.sourceClass==70,boat,o.ground});}
- }else for(const auto&o:game.objects){auto asset=mapObjectAsset(o);if(visible(asset,o.pos,true))draws.push_back({o.pos,std::move(asset),true,false,o.type==ObjectType::Town||o.type==ObjectType::Mine?o.owner:-2});}
- draws.push_back({game.hero.pos,"",false,true});
- std::sort(draws.begin(),draws.end(),[](const Draw&a,const Draw&b){return std::tuple(!a.ground,a.pos.y,a.pos.x,a.hero,a.asset)<std::tuple(!b.ground,b.pos.y,b.pos.x,b.hero,b.asset);});
+  for(const auto&d:game.decorations)if(d.level==game.mapLevel&&onScreen(d.sprite,d.anchor,false)&&revealed(d.anchor))draws.push_back({d.anchor,d.sprite,false,-2,false,false,d.ground});
+  for(const auto&o:game.objects)if(o.level==game.mapLevel&&o.type!=ObjectType::MapEvent){bool boat=game.heroes.contains(o.id)&&game.heroes.at(o.id).value.onBoat;auto asset=boat?"ab01_.def":mapObjectAsset(o);if(onScreen(asset,o.anchor,false)&&revealed(o.anchor))draws.push_back({o.anchor,std::move(asset),false,o.type==ObjectType::Town||o.type==ObjectType::Mine||o.type==ObjectType::EnemyHero||(o.sourceClass==42||(Game::dwellingLocation(o.sourceClass)&&o.sourceClass!=78))?o.owner:-2,o.sourceClass==34||o.sourceClass==70,boat,o.ground});}
+ }else for(const auto&o:game.objects){auto asset=mapObjectAsset(o);if(visible(asset,o.pos,true))draws.push_back({o.pos,std::move(asset),true,o.type==ObjectType::Town||o.type==ObjectType::Mine?o.owner:-2});}
+ // Keep friendly heroes readable against tall scenery. The selected hero
+ // is drawn last so the player's location stays visible at a visit tile.
+ auto order=[](const Draw& draw){
+  int layer=draw.heroFlag&&draw.owner==0?2:draw.ground?0:1;
+  return std::tuple<int,int,int,const std::string&>{layer,draw.pos.y,draw.pos.x,draw.asset};
+ };
+ std::sort(draws.begin(),draws.end(),[&](const Draw& a,const Draw& b){return order(a)<order(b);});
  bool routeDrawn=false;
- for(const auto&draw:draws){if(!draw.ground&&!routeDrawn){adventureRoute();routeDrawn=true;}if(draw.hero)adventureHero();else{mapSprite(draw.asset,draw.pos,draw.visitable,draw.owner);if(draw.heroFlag)mapSprite(draw.boat?ownerArt_["colors"][ownerName(draw.owner)].value("boatFlag",std::string("abf01g.def")):ownerHeroFlag(draw.owner),draw.pos,false);}}
+ for(const auto& draw:draws){
+  if(!draw.ground&&!routeDrawn){adventureRoute();routeDrawn=true;}
+  mapSprite(draw.asset,draw.pos,draw.visitable,draw.owner);
+  if(draw.heroFlag){
+   auto flag=draw.boat?ownerArt_["colors"][ownerName(draw.owner)].value("boatFlag",std::string("abf01g.def")):ownerHeroFlag(draw.owner);
+   mapSprite(flag,draw.pos,false);
+  }
+ }
+ if(!routeDrawn)adventureRoute();
+ adventureHero();
 }
 Desktop::TerrainVisual Desktop::terrainVisual(Point p)const{
  auto*t=game.tile(p);if(!t)return {};
@@ -115,20 +129,39 @@ void Desktop::mapArtworkRenderTests(const std::filesystem::path&directory){
  shot("map-objects-classic-0000",0);
  auto all=pixels(adventureMapRect()),mill=pixels(mapSpriteCanvas("avmwndd0.def",{14,12}));
  auto water=pixels({mapScreen({29,13}).x-16,mapScreen({29,13}).y-16,32,32});
- // Prove the foreground actually overlaps the hero, then require opaque tree
- // pixels to stay identical with and without that hero behind them.
- auto treeCanvas=mapSpriteCanvas("avlpntr0.def",{8,14},false);auto treeAndHero=pixels(treeCanvas);
- game.hero.pos={4,4};render();auto treeOnly=pixels(treeCanvas);
- game.tile({8,14})->decor=Decor::None;game.hero.pos={8,13};render();auto heroOnly=pixels(treeCanvas);
- game.hero.pos={4,4};render();auto empty=pixels(treeCanvas);game.hero.pos={8,13};game.tile({8,14})->decor=Decor::Tree;
- const auto&tree=demo_["def"]["avlpntr0.def"];const auto&f=tree["groups"]["0"][0];auto*surface=readSurface(tree["pages"][f["page"].get<int>()]["file"],false,false);check(surface!=nullptr,"Original tree mask unavailable");
- int overlaps=0,physicalWidth=int(treeCanvas.w*pixelScale_);
- for(int y=0;y<f["rect"][3].get<int>();++y)for(int x=0;x<f["rect"][2].get<int>();++x){
-  auto*source=static_cast<Uint8*>(surface->pixels)+(y+f["rect"][1].get<int>())*surface->pitch+(x+f["rect"][0].get<int>())*4;if(source[3]!=255)continue;
-  int px=int((x+f["offset"][0].get<int>())*pixelScale_),py=int((y+f["offset"][1].get<int>())*pixelScale_);size_t at=size_t(py)*physicalWidth+px;
-  if(heroOnly[at]!=empty[at]){++overlaps;check(treeAndHero[at]==treeOnly[at],"Hero painted over opaque foreground scenery");}
- }
- SDL_FreeSurface(surface);check(overlaps>10,"Occlusion fixture never overlapped the hero");fixedAnimationTime_=0;render();
+ // Compare the same area with each layer separately to prove that the
+ // scenery really overlaps the hero and that the hero is painted in front.
+ auto verifyForeground=[&](SDL_Rect area,Point at,const auto& showScenery){
+  game.hero.pos=at;showScenery(true);render();auto together=pixels(area);
+  game.hero.pos={4,4};render();auto scenery=pixels(area);
+  showScenery(false);render();auto empty=pixels(area);
+  game.hero.pos=at;render();auto heroOnly=pixels(area);
+  showScenery(true);
+  int overlapping=0,visible=0;
+  for(size_t i=0;i<together.size();++i){
+   if(heroOnly[i]==empty[i]||scenery[i]==empty[i])continue;
+   ++overlapping;
+   visible+=together[i]!=scenery[i];
+  }
+  check(overlapping>10,"Scenery fixture did not overlap the hero");
+  check(visible*2>overlapping,"Scenery hid the foreground hero");
+  return visible;
+ };
+ int overlaps=verifyForeground(mapSpriteCanvas("avlpntr0.def",{8,14},false),{8,13},[&](bool shown){
+  game.tile({8,14})->decor=shown?Decor::Tree:Decor::None;
+ });
+ auto originalObjects=game.objects;
+ int windmillOverlap=verifyForeground(mapSpriteCanvas("avmwndd0.def",{14,12}),{13,11},[&](bool shown){
+  game.objects=originalObjects;
+  if(!shown)std::erase_if(game.objects,[](const Object& object){return object.type==ObjectType::Windmill;});
+ });
+ add(ObjectType::Town,{16,13},"城镇");game.objects.back().owner=0;
+ auto townFixture=game.objects;
+ int townOverlap=verifyForeground(mapSpriteCanvas("avccasx0.def",{16,13}),{15,12},[&](bool shown){
+  game.objects=shown?townFixture:originalObjects;
+ });
+ game.objects=originalObjects;game.hero.pos={8,13};
+ fixedAnimationTime_=0;render();
  std::reverse(game.objects.begin(),game.objects.end());render();check(pixels(adventureMapRect())==all,"Object insertion order changed map occlusion");std::reverse(game.objects.begin(),game.objects.end());
  shot("map-objects-classic-0180",180);check(pixels(mapSpriteCanvas("avmwndd0.def",{14,12}))!=mill,"Windmill animation remained static");
  check(pixels({mapScreen({29,13}).x-16,mapScreen({29,13}).y-16,32,32})!=water,"Water palette did not animate");
@@ -145,7 +178,7 @@ void Desktop::mapArtworkRenderTests(const std::filesystem::path&directory){
  }
  check(game.toJson()==state,"Map rendering consumed RNG or mutated gameplay");
  zoom_=1;settings_.hdArtwork=true;shot("map-objects-hd-0000",0);
- std::ofstream(directory/"map-art-audit.json")<<nlohmann::json{{"source","verified original demo DEF and OBJECTS.TXT"},{"originalCanvasPreserved",true},{"objectOrderIndependent",true},{"opaqueForegroundHidesHero",true},{"verifiedHeroOverlapPixels",overlaps},{"windmillEightFrameLoop",true},{"waterTwelvePhaseLoop",true},{"gameStateAndRngUnchanged",true},{"zooms",sizes},{"referencePixelParityVerified",false}}.dump(2)<<'\n';
+ std::ofstream(directory/"map-art-audit.json")<<nlohmann::json{{"source","verified original demo DEF and OBJECTS.TXT"},{"originalCanvasPreserved",true},{"objectOrderIndependent",true},{"heroDrawnOverScenery",true},{"treeOverlapPixels",overlaps},{"windmillOverlapPixels",windmillOverlap},{"townOverlapPixels",townOverlap},{"windmillEightFrameLoop",true},{"waterTwelvePhaseLoop",true},{"gameStateAndRngUnchanged",true},{"zooms",sizes},{"referencePixelParityVerified",false}}.dump(2)<<'\n';
  game=Game::create();scene=Scene::Town;zoom_=1;heroDirection_={1,0};fixedAnimationTime_=0;SDL_SetWindowSize(window_,oldW,oldH);
 }
 }

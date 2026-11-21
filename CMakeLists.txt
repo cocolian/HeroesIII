@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-project(HeroesIII VERSION 0.52.1 LANGUAGES C CXX)
+project(HeroesIII VERSION 0.52.2 LANGUAGES C CXX)
 if(APPLE)
   enable_language(OBJC OBJCXX)
 endif()
